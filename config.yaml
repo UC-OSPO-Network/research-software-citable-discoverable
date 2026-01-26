@@ -66,13 +66,13 @@ contact: 'tdennis@library.ucla.edu'
 
 # Order of episodes in your lesson
 episodes:
+- why-software-citation.md
 - sharing-software.md
 - open-source-license.md
 - managing-environments-pixi.md
 - adding-citation-file.md
 - making-software-citable.md
 - improving-metadata-discoverability.md
-- why-software-citation.md
 - wrap-up-reflect.md
 
 # Information for Learners
