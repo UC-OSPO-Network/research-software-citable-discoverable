@@ -141,9 +141,7 @@ When publishing your software, include:
   ```bash
   pixi run python script.py
   ```
-
----
-
+  
 :::::::::::::::::::::::::::::::::::::: challenge
 
 ### Challenge: Add a new dependency
