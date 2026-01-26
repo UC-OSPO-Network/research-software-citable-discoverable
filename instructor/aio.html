@@ -245,7 +245,7 @@
 <div class="accordion accordion-flush" id="accordionFlush2">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading2">
-        <a href="sharing-software.html">1. Sharing Research Software Effectively</a>
+        <a href="why-software-citation.html">1. Why Make Software Citable?</a>
     </div>
 <!--/div.accordion-header-->
 
@@ -257,7 +257,7 @@
 <div class="accordion accordion-flush" id="accordionFlush3">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading3">
-        <a href="open-source-license.html">2. Choosing an Open-Source License</a>
+        <a href="sharing-software.html">2. Sharing Research Software Effectively</a>
     </div>
 <!--/div.accordion-header-->
 
@@ -269,7 +269,7 @@
 <div class="accordion accordion-flush" id="accordionFlush4">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading4">
-        <a href="managing-environments-pixi.html">3. Managing Reproducible Environments with pixi</a>
+        <a href="open-source-license.html">3. Choosing an Open-Source License</a>
     </div>
 <!--/div.accordion-header-->
 
@@ -281,7 +281,7 @@
 <div class="accordion accordion-flush" id="accordionFlush5">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading5">
-        <a href="adding-citation-file.html">4. Adding a CITATION.cff File</a>
+        <a href="managing-environments-pixi.html">4. Managing Reproducible Environments with pixi</a>
     </div>
 <!--/div.accordion-header-->
 
@@ -293,7 +293,7 @@
 <div class="accordion accordion-flush" id="accordionFlush6">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading6">
-        <a href="making-software-citable.html">5. Making Your Software Citable</a>
+        <a href="adding-citation-file.html">5. Adding a CITATION.cff File</a>
     </div>
 <!--/div.accordion-header-->
 
@@ -305,7 +305,7 @@
 <div class="accordion accordion-flush" id="accordionFlush7">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading7">
-        <a href="improving-metadata-discoverability.html">6. Improving Metadata and Discoverability</a>
+        <a href="making-software-citable.html">6. Making Your Software Citable</a>
     </div>
 <!--/div.accordion-header-->
 
@@ -317,7 +317,7 @@
 <div class="accordion accordion-flush" id="accordionFlush8">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading8">
-        <a href="why-software-citation.html">7. Why Make Software Citable?</a>
+        <a href="improving-metadata-discoverability.html">7. Improving Metadata and Discoverability</a>
     </div>
 <!--/div.accordion-header-->
 
@@ -393,7 +393,115 @@
     <main id="main-content" class="main-content"><div class="container lesson-content">
         
         
-<section id="aio-sharing-software"><p>Content from <a href="sharing-software.html">Sharing Research Software Effectively</a></p>
+<section id="aio-why-software-citation"><p>Content from <a href="why-software-citation.html">Why Make Software Citable?</a></p>
+<hr>
+<p>Last updated on 2025-12-04 |
+
+        <a href="https://github.com/jt14den/research-software-citable-discoverable/edit/main/episodes/why-software-citation.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
+<p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 15 minutes</p>
+<div class="text-end">
+          <button role="button" aria-pressed="false" tabindex="0" id="expand-code" class="pull-right" data-expand="Expand All Solutions " data-collapse="Collapse All Solutions "> Expand All Solutions <i aria-hidden="true" data-feather="plus"></i></button>
+        </div>
+<div class="overview card">
+<h2 class="card-header">Overview</h2>
+<div class="row g-0">
+<div class="col-md-4">
+<div class="card-body">
+<div class="inner">
+<h3 class="card-title">Questions</h3>
+<ul>
+<li>Why should research software be treated as a scholarly product?</li>
+<li>What are the benefits of making software citable?</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-md-8">
+<div class="card-body">
+<div class="inner bordered">
+<h3 class="card-title">Objectives</h3>
+<ul>
+<li>Explain the importance of software citation for scholarly
+communication</li>
+<li>Identify how citation supports transparency, reproducibility, and
+credit</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<section><h2 class="section-heading" id="introduction">Introduction<a class="anchor" aria-label="anchor" href="#introduction"></a>
+</h2>
+<hr class="half-width">
+<p>Software plays a critical role in research but has historically been
+under-recognized. Treating software as a citable output ensures proper
+attribution, improves transparency, and supports reproducibility.</p>
+<p>Citing software with DOIs and formal metadata allows others to
+reference specific versions and gives creators academic credit.</p>
+<div id="accordionInstructor1" class="accordion instructor-note accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button instructor-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInstructor1" aria-expanded="false" aria-controls="collapseInstructor1">
+  <h3 class="accordion-header" id="headingInstructor1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="edit-2"></i></div> Instructor Note </h3>
+</button>
+<div id="collapseInstructor1" class="accordion-collapse collapse" aria-labelledby="headingInstructor1" data-bs-parent="#accordionInstructor1">
+<div class="accordion-body">
+<p>Ask participants if they’ve ever reused software without citing it,
+or struggled to find or cite code used in a paper. This helps them
+connect to the motivation.</p>
+</div>
+</div>
+</div>
+</div>
+<div id="challenge-1-who-gets-credit" class="callout challenge">
+<div class="callout-square">
+<i class="callout-icon" data-feather="zap"></i>
+</div>
+<span class="callout-header">Challenge</span>
+<div id="challenge-1-who-gets-credit" class="callout-inner">
+<h3 class="callout-title">Challenge 1: Who Gets Credit?</h3>
+<div class="callout-content">
+<p>You’ve created a Python script that was used to generate results in a
+collaborative paper. The paper cites the dataset, but not the script.
+What’s missing?</p>
+</div>
+</div>
+</div>
+<div id="accordionSolution1" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
+  <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
+</button>
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div class="accordion-body">
+<p>The script should be citable so that others can properly credit its
+use. Without citation metadata or a DOI, the software may go
+unrecognized.</p>
+</div>
+</div>
+</div>
+</div>
+<div id="keypoints1" class="callout keypoints">
+<div class="callout-square">
+<i class="callout-icon" data-feather="key"></i>
+</div>
+<span class="callout-header">Key Points</span>
+<div class="callout-inner">
+<div class="callout-content">
+<ul>
+<li>Software is a scholarly product that should be citable</li>
+<li>Citation provides academic credit and supports reproducibility</li>
+<li>DOIs and metadata are essential for persistent, findable
+citation</li>
+</ul>
+</div>
+</div>
+</div>
+<!--
+Place links that you need to refer to multiple times across pages here. Delete
+any links that you are not going to use.
+ -->
+</section></section><section id="aio-sharing-software"><p>Content from <a href="sharing-software.html">Sharing Research Software Effectively</a></p>
 <hr>
 <p>Last updated on 2026-01-26 |
 
@@ -1176,7 +1284,7 @@ Interoperable, Reusable)</li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb9">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -1566,7 +1674,7 @@ and learn how DOIs fit into software citation workflows.</p>
 <button class="accordion-button instructor-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInstructor1" aria-expanded="false" aria-controls="collapseInstructor1">
   <h3 class="accordion-header" id="headingInstructor1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="edit-2"></i></div> Instructor Note </h3>
 </button>
-<div id="collapseInstructor1" class="accordion-collapse collapse" aria-labelledby="headingInstructor1" data-bs-parent="#accordionInstructor1">
+<div id="collapseInstructor1" class="accordion-collapse collapse" data-bs-parent="#accordionInstructor1" aria-labelledby="headingInstructor1">
 <div class="accordion-body">
 <p>Some learners may feel anxious about creating a DOI.<br>
 Reassure them that:</p>
@@ -1659,7 +1767,7 @@ this version?</li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <p>Useful release notes include:</p>
 <ul>
@@ -1719,7 +1827,7 @@ rather than the whole project?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <p>Versioned DOIs:</p>
 <ul>
@@ -2023,114 +2131,6 @@ topics, and Zenodo.<br>
 </li>
 <li>Thoughtful metadata supports FAIR principles and helps others reuse
 your software.</li>
-</ul>
-</div>
-</div>
-</div>
-<!--
-Place links that you need to refer to multiple times across pages here. Delete
-any links that you are not going to use.
- -->
-</section></section><section id="aio-why-software-citation"><p>Content from <a href="why-software-citation.html">Why Make Software Citable?</a></p>
-<hr>
-<p>Last updated on 2025-12-04 |
-
-        <a href="https://github.com/jt14den/research-software-citable-discoverable/edit/main/episodes/why-software-citation.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
-<p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 15 minutes</p>
-<div class="text-end">
-          <button role="button" aria-pressed="false" tabindex="0" id="expand-code" class="pull-right" data-expand="Expand All Solutions " data-collapse="Collapse All Solutions "> Expand All Solutions <i aria-hidden="true" data-feather="plus"></i></button>
-        </div>
-<div class="overview card">
-<h2 class="card-header">Overview</h2>
-<div class="row g-0">
-<div class="col-md-4">
-<div class="card-body">
-<div class="inner">
-<h3 class="card-title">Questions</h3>
-<ul>
-<li>Why should research software be treated as a scholarly product?</li>
-<li>What are the benefits of making software citable?</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="col-md-8">
-<div class="card-body">
-<div class="inner bordered">
-<h3 class="card-title">Objectives</h3>
-<ul>
-<li>Explain the importance of software citation for scholarly
-communication</li>
-<li>Identify how citation supports transparency, reproducibility, and
-credit</li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-</div>
-<section><h2 class="section-heading" id="introduction">Introduction<a class="anchor" aria-label="anchor" href="#introduction"></a>
-</h2>
-<hr class="half-width">
-<p>Software plays a critical role in research but has historically been
-under-recognized. Treating software as a citable output ensures proper
-attribution, improves transparency, and supports reproducibility.</p>
-<p>Citing software with DOIs and formal metadata allows others to
-reference specific versions and gives creators academic credit.</p>
-<div id="accordionInstructor1" class="accordion instructor-note accordion-flush">
-<div class="accordion-item">
-<button class="accordion-button instructor-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInstructor1" aria-expanded="false" aria-controls="collapseInstructor1">
-  <h3 class="accordion-header" id="headingInstructor1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="edit-2"></i></div> Instructor Note </h3>
-</button>
-<div id="collapseInstructor1" class="accordion-collapse collapse" data-bs-parent="#accordionInstructor1" aria-labelledby="headingInstructor1">
-<div class="accordion-body">
-<p>Ask participants if they’ve ever reused software without citing it,
-or struggled to find or cite code used in a paper. This helps them
-connect to the motivation.</p>
-</div>
-</div>
-</div>
-</div>
-<div id="challenge-1-who-gets-credit" class="callout challenge">
-<div class="callout-square">
-<i class="callout-icon" data-feather="zap"></i>
-</div>
-<span class="callout-header">Challenge</span>
-<div id="challenge-1-who-gets-credit" class="callout-inner">
-<h3 class="callout-title">Challenge 1: Who Gets Credit?</h3>
-<div class="callout-content">
-<p>You’ve created a Python script that was used to generate results in a
-collaborative paper. The paper cites the dataset, but not the script.
-What’s missing?</p>
-</div>
-</div>
-</div>
-<div id="accordionSolution1" class="accordion challenge-accordion accordion-flush">
-<div class="accordion-item">
-<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
-  <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
-</button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
-<div class="accordion-body">
-<p>The script should be citable so that others can properly credit its
-use. Without citation metadata or a DOI, the software may go
-unrecognized.</p>
-</div>
-</div>
-</div>
-</div>
-<div id="keypoints1" class="callout keypoints">
-<div class="callout-square">
-<i class="callout-icon" data-feather="key"></i>
-</div>
-<span class="callout-header">Key Points</span>
-<div class="callout-inner">
-<div class="callout-content">
-<ul>
-<li>Software is a scholarly product that should be citable</li>
-<li>Citation provides academic credit and supports reproducibility</li>
-<li>DOIs and metadata are essential for persistent, findable
-citation</li>
 </ul>
 </div>
 </div>
