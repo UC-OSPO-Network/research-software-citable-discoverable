@@ -59,6 +59,7 @@ Could you think about the last time you tried to use someone else's code?
 If you have a public GitHub repository, open it now. If not, visit a repository from your field that you've used or seen cited.
 
 Check for these elements:
+
 - [ ] README explaining purpose and usage
 - [ ] License file
 - [ ] Clear file organization  
