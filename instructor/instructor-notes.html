@@ -413,14 +413,36 @@ connect to the motivation.</p>
 <br></section><section id="sharing-software"><h2 class="section-heading"><a href="sharing-software.html">Sharing Research Software Effectively</a></h2>
 <hr class="half-width">
 <h3 id="sharing-software-headingInstructor1">
-<a href="sharing-software.html#headingInstructor1">Instructor Note</a><a class="anchor" aria-label="anchor" href="#sharing-software-headingInstructor1"></a>
+<a href="sharing-software.html#headingInstructor1">Preparing the Demo Repository</a><a class="anchor" aria-label="anchor" href="#sharing-software-headingInstructor1"></a>
 </h3>
+<p>To demonstrate the “before and after” states of research software,
+use the provided automation script:</p>
+<ol style="list-style-type: decimal">
+<li>
+<strong>Locate the script</strong>: <code>create_demo_repo.sh</code>
+is in the root of the lesson repository.</li>
+<li>
+<strong>Run the script</strong>: Move it to a non-git directory
+(e.g., <code>~/projects/</code>) and run
+<code>bash create_demo_repo.sh</code>.</li>
+<li>
+<strong>Progression</strong>: The script creates branches
+(<code>01-start</code> through <code>06-metadata</code>). You can
+<code>git checkout</code> these branches during the lesson to show
+incremental progress.</li>
+<li>
+<strong>GitHub Hosting</strong>: We recommend pushing this generated
+repository to your GitHub account before the workshop so learners can
+follow along online. Commands for pushing are printed at the end of the
+script.</li>
+</ol>
 <p>Use <strong>progressive disclosure</strong> by showing only the
 top-level structure of the demo repository first.<br>
 If learners are new to GitHub, you may display two contrasting
 examples:<br>
-- a sparse, hard-to-understand repo<br>
-- a clear, well-documented repo</p>
+- a sparse, hard-to-understand repo (checkout branch
+<code>01-start</code>) - a clear, well-documented repo (checkout branch
+<code>06-metadata</code>)</p>
 <hr>
 <br></section><section id="open-source-license"><h2 class="section-heading"><a href="open-source-license.html">Choosing an Open-Source License</a></h2>
 <hr class="half-width"></section><section id="managing-environments-pixi"><h2 class="section-heading"><a href="managing-environments-pixi.html">Managing Reproducible Environments with pixi</a></h2>
@@ -449,6 +471,12 @@ Reassure them that:</p>
 </li>
 <li>they can watch the demo and complete the steps later</li>
 </ul>
+<hr>
+<br><h3 id="making-software-citable-headingInstructor2">
+<a href="making-software-citable.html#headingInstructor2">Instructor Note</a><a class="anchor" aria-label="anchor" href="#making-software-citable-headingInstructor2"></a>
+</h3>
+<p><strong>Critical:</strong> Ensure learners use
+<strong>sandbox.zenodo.org</strong>. Real DOIs cannot be deleted.</p>
 <hr>
 <br></section><section id="improving-metadata-discoverability"><h2 class="section-heading"><a href="improving-metadata-discoverability.html">Improving Metadata and Discoverability</a></h2>
 <hr class="half-width">
@@ -519,8 +547,8 @@ next.</p>
   "url": "https://jt14den.github.io/research-software-citable-discoverable/instructor/instructor-notes.html",
   "identifier": "https://jt14den.github.io/research-software-citable-discoverable/instructor/instructor-notes.html",
   "dateCreated": "2025-12-06",
-  "dateModified": "2026-01-27",
-  "datePublished": "2026-01-27"
+  "dateModified": "2026-02-01",
+  "datePublished": "2026-02-01"
 }
 
   </script><script>

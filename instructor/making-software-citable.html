@@ -265,7 +265,7 @@
         <ul><li><a href="#introduction">Introduction</a></li>
 <li><a href="#what-makes-software-citable">What Makes Software Citable?</a></li>
 <li><a href="#create-a-release-in-github">Create a Release in GitHub</a></li>
-<li><a href="#minting-a-doi-with-zenodo-optional-but-recommended">Minting a DOI with Zenodo (Optional but Recommended)</a></li>
+<li><a href="#minting-a-doi-with-zenodo-sandbox">Minting a DOI with Zenodo Sandbox</a></li>
         </ul></div><!--/div.accordion-body-->
     </div><!--/div.accordion-collapse-->
 
@@ -348,7 +348,7 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Making Your Software Citable</h1>
-        <p>Last updated on 2025-12-06 |
+        <p>Last updated on 2026-02-01 |
 
         <a href="https://github.com/jt14den/research-software-citable-discoverable/edit/main/episodes/making-software-citable.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -416,7 +416,7 @@ and learn how DOIs fit into software citation workflows.</p>
 <button class="accordion-button instructor-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInstructor1" aria-expanded="false" aria-controls="collapseInstructor1">
   <h3 class="accordion-header" id="headingInstructor1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="edit-2"></i></div> Instructor Note </h3>
 </button>
-<div id="collapseInstructor1" class="accordion-collapse collapse" data-bs-parent="#accordionInstructor1" aria-labelledby="headingInstructor1">
+<div id="collapseInstructor1" class="accordion-collapse collapse" aria-labelledby="headingInstructor1" data-bs-parent="#accordionInstructor1">
 <div class="accordion-body">
 <p>Some learners may feel anxious about creating a DOI.<br>
 Reassure them that:</p>
@@ -464,6 +464,32 @@ It serves as the “snapshot” that others can cite.</p>
 <li>Publish the release.</li>
 </ol><p>Your <code>CITATION.cff</code> file will automatically reference this
 tagged version unless you specify otherwise.</p>
+<div id="semantic-versioning-semver" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<span class="callout-header">Callout</span>
+<div id="semantic-versioning-semver" class="callout-inner">
+<h3 class="callout-title">Semantic Versioning (SemVer)</h3>
+<div class="callout-content">
+<p>You might wonder why we chose <code>v0.1.0</code>. This follows
+<strong>Semantic Versioning</strong>
+(<code>MAJOR.MINOR.PATCH</code>):</p>
+<ul><li>
+<strong>MAJOR</strong> version when you make incompatible API
+changes (e.g., <code>1.0.0</code>)</li>
+<li>
+<strong>MINOR</strong> version when you add functionality in a
+backward compatible manner (e.g., <code>0.1.0</code> -&gt;
+<code>0.2.0</code>)</li>
+<li>
+<strong>PATCH</strong> version when you make backward compatible bug
+fixes (e.g., <code>0.1.1</code>)</li>
+</ul><p>Starting with <code>0.x.x</code> indicates your software is in
+initial development and the API is not yet stable.</p>
+</div>
+</div>
+</div>
 <div id="challenge-1-what-belongs-in-a-release" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
@@ -483,7 +509,7 @@ this version?</li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p>Useful release notes include:</p>
 <ul><li>what changed<br></li>
@@ -498,18 +524,35 @@ software’s evolution.</p>
 </div>
 </div>
 </div>
-</section><section><h2 class="section-heading" id="minting-a-doi-with-zenodo-optional-but-recommended">Minting a DOI with Zenodo (Optional but Recommended)<a class="anchor" aria-label="anchor" href="#minting-a-doi-with-zenodo-optional-but-recommended"></a></h2>
-<hr class="half-width"><p>If you want a DOI for your release, GitHub and Zenodo integrate
-easily.</p>
+</section><section><h2 class="section-heading" id="minting-a-doi-with-zenodo-sandbox">Minting a DOI with Zenodo Sandbox<a class="anchor" aria-label="anchor" href="#minting-a-doi-with-zenodo-sandbox"></a></h2>
+<hr class="half-width"><p>To practice minting a DOI without polluting the permanent scholarly
+record, we will use <strong>Zenodo Sandbox</strong>. It works exactly
+like the real Zenodo but is for testing.</p>
 <div class="section level3">
 <h3 id="steps-1">Steps<a class="anchor" aria-label="anchor" href="#steps-1"></a></h3>
-<ol style="list-style-type: decimal"><li>Sign in at <a href="https://zenodo.org" class="external-link uri">https://zenodo.org</a> using your GitHub account.<br></li>
-<li>In Zenodo, enable archiving for your repository.<br></li>
-<li>Create or publish a GitHub release.<br></li>
-<li>Zenodo automatically archives the release and assigns a DOI.<br></li>
-<li>Use this DOI in your papers, documentation, and
-<code>CITATION.cff</code> file.</li>
-</ol><div id="challenge-2-why-are-versioned-dois-important" class="callout challenge">
+<ol style="list-style-type: decimal"><li>Sign in at <a href="https://sandbox.zenodo.org" class="external-link uri">https://sandbox.zenodo.org</a> using your GitHub
+account.<br></li>
+<li>In Zenodo Sandbox, go to <strong>Settings → GitHub</strong> and
+enable archiving for your repository.<br></li>
+<li>Go back to GitHub and <strong>Create a new release</strong> (e.g.,
+<code>v0.2.0</code>).<br></li>
+<li>Zenodo Sandbox will automatically detect the new release and assign
+a “concept” DOI.<br></li>
+<li>You can now start using this DOI in your documentation!</li>
+</ol><div id="accordionInstructor2" class="accordion instructor-note accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button instructor-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInstructor2" aria-expanded="false" aria-controls="collapseInstructor2">
+  <h3 class="accordion-header" id="headingInstructor2">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="edit-2"></i></div> Instructor Note </h3>
+</button>
+<div id="collapseInstructor2" class="accordion-collapse collapse" aria-labelledby="headingInstructor2" data-bs-parent="#accordionInstructor2">
+<div class="accordion-body">
+<p><strong>Critical:</strong> Ensure learners use
+<strong>sandbox.zenodo.org</strong>. Real DOIs cannot be deleted.</p>
+</div>
+</div>
+</div>
+</div>
+<div id="challenge-2-why-are-versioned-dois-important" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
@@ -528,7 +571,7 @@ rather than the whole project?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <p>Versioned DOIs:</p>
 <ul><li>support reproducibility by identifying an exact snapshot<br></li>
@@ -620,8 +663,8 @@ any links that you are not going to use.
   "url": "https://jt14den.github.io/research-software-citable-discoverable/instructor/making-software-citable.html",
   "identifier": "https://jt14den.github.io/research-software-citable-discoverable/instructor/making-software-citable.html",
   "dateCreated": "2025-12-06",
-  "dateModified": "2025-12-06",
-  "datePublished": "2026-01-27"
+  "dateModified": "2026-02-01",
+  "datePublished": "2026-02-01"
 }
 
   </script><script>
