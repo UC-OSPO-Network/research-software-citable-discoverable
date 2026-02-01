@@ -9,7 +9,7 @@ set -e
 #
 #  Description:
 #     This script generates a Git repository named 'software-demo' with a commit history
-#     that perfectly matches the progression of the "Sharing Research Software" lesson.
+#     that matches the progression of the "Sharing Research Software" lesson.
 #
 #     It creates branches for each stage (e.g., '02-license', '04-citation') so you
 #     can easily checkout specific states for live demos or screenshotting.

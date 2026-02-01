@@ -2,7 +2,7 @@
 site: sandpaper::sandpaper_site
 ---
 
-![Research Software Citability and Discoverability](episodes/fig/research-software-hex.svg){
+![Research Software Citability and Discoverability](episodes/fig/research-software-hex.png){
 alt='Hex-style icon representing research software, metadata, and citation'
 style='padding: 2%'}
 
