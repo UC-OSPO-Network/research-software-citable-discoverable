@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 230" width="200" height="230">
+  <polygon points="100,10 190,60 190,170 100,220 10,170 10,60" fill="#003B5C" stroke="#FFD100" stroke-width="5"/>
+  <text x="50%" y="40%" dominant-baseline="middle" text-anchor="middle" font-family="sans-serif" font-size="24" fill="white" font-weight="bold">RESEARCH</text>
+  <text x="50%" y="55%" dominant-baseline="middle" text-anchor="middle" font-family="sans-serif" font-size="24" fill="white" font-weight="bold">SOFTWARE</text>
+  <text x="50%" y="75%" dominant-baseline="middle" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#FFD100">Citable &amp; Discoverable</text>
+</svg>

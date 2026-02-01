@@ -27,10 +27,18 @@ In this lesson, we start with a minimal example repository. As you progress thro
 
 :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: instructor
 
+### Preparing the Demo Repository
+To demonstrate the "before and after" states of research software, use the provided automation script:
+
+1.  **Locate the script**: `create_demo_repo.sh` is in the root of the lesson repository.
+2.  **Run the script**: Move it to a non-git directory (e.g., `~/projects/`) and run `bash create_demo_repo.sh`.
+3.  **Progression**: The script creates branches (`01-start` through `06-metadata`). You can `git checkout` these branches during the lesson to show incremental progress.
+4.  **GitHub Hosting**: We recommend pushing this generated repository to your GitHub account before the workshop so learners can follow along online. Commands for pushing are printed at the end of the script.
+
 Use **progressive disclosure** by showing only the top-level structure of the demo repository first.  
 If learners are new to GitHub, you may display two contrasting examples:  
-- a sparse, hard-to-understand repo  
-- a clear, well-documented repo  
+- a sparse, hard-to-understand repo (checkout branch `01-start`)
+- a clear, well-documented repo (checkout branch `06-metadata`)
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
