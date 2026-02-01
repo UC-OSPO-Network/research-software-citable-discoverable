@@ -93,6 +93,20 @@ It serves as the “snapshot” that others can cite.
 
 Your `CITATION.cff` file will automatically reference this tagged version unless you specify otherwise.
 
+::::::::::::::::::::::::::::::::::::: callout
+
+### Semantic Versioning (SemVer)
+
+You might wonder why we chose `v0.1.0`. This follows **Semantic Versioning** (`MAJOR.MINOR.PATCH`):
+
+- **MAJOR** version when you make incompatible API changes (e.g., `1.0.0`)
+- **MINOR** version when you add functionality in a backward compatible manner (e.g., `0.1.0` -> `0.2.0`)
+- **PATCH** version when you make backward compatible bug fixes (e.g., `0.1.1`)
+
+Starting with `0.x.x` indicates your software is in initial development and the API is not yet stable.
+
+::::::::::::::::::::::::::::::::::::::::::::::::
+
 ::::::::::::::::::::::::::::::::::::: challenge
 
 ## Challenge 1: What belongs in a release?
@@ -116,17 +130,23 @@ Clear release notes help both people and tools interpret your software’s evolu
 :::::::::::::::::::::::::::::::::
 :::::::::::::::::::::::::::::::::
 
-## Minting a DOI with Zenodo (Optional but Recommended)
+## Minting a DOI with Zenodo Sandbox
 
-If you want a DOI for your release, GitHub and Zenodo integrate easily.
+To practice minting a DOI without polluting the permanent scholarly record, we will use **Zenodo Sandbox**. It works exactly like the real Zenodo but is for testing.
 
 ### Steps
 
-1. Sign in at <https://zenodo.org> using your GitHub account.  
-2. In Zenodo, enable archiving for your repository.  
-3. Create or publish a GitHub release.  
-4. Zenodo automatically archives the release and assigns a DOI.  
-5. Use this DOI in your papers, documentation, and `CITATION.cff` file.
+1. Sign in at <https://sandbox.zenodo.org> using your GitHub account.  
+2. In Zenodo Sandbox, go to **Settings → GitHub** and enable archiving for your repository.  
+3. Go back to GitHub and **Create a new release** (e.g., `v0.2.0`).  
+4. Zenodo Sandbox will automatically detect the new release and assign a "concept" DOI.  
+5. You can now start using this DOI in your documentation!
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: instructor
+
+**Critical:** Ensure learners use **sandbox.zenodo.org**. Real DOIs cannot be deleted.
+
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
 ::::::::::::::::::::::::::::::::::::: challenge
 

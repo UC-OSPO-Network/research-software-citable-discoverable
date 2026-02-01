@@ -79,6 +79,19 @@ Your README is the first page many users see. Include:
 
 This connects your metadata across platforms.
 
+## Community Health Files
+
+Beyond technical metadata, files that describe *how* to interact with your project are crucial for its long-term health and "discoverability" as a welcoming project.
+
+**CONTRIBUTING.md**: Explains how others can report bugs, suggest features, or submit code.
+**CODE_OF_CONDUCT.md**: Sets expectations for behavior to ensure a safe and welcoming environment.
+
+UC OSPO provides standard templates for these files:
+- [UC OSPO Contributing Template](https://github.com/UC-OSPO-Network/templates/blob/main/CONTRIBUTING.md)
+- [UC OSPO Code of Conduct Template](https://github.com/UC-OSPO-Network/templates/blob/main/CODE_OF_CONDUCT.md)
+
+Adding these files to your repository root helps GitHub display a "Community Standards" checklist in your insights.
+
 ---
 
 ## Zenodo and DOI metadata
