@@ -62,6 +62,7 @@ cd "$REPO_NAME"
 git init --quiet
 git config user.name "Researcher"
 git config user.email "researcher@example.org"
+git config commit.gpgsign false
 git config init.defaultBranch main
 
 echo "# Research Software Demo
@@ -192,7 +193,7 @@ git branch "05-release"
 # ====================================================================================== 
 #  EPISODE 6: IMPROVING METADATA & DISCOVERABILITY (OSPO Alignment)
 # ====================================================================================== 
-cat <<EOF > CONTRIBUTING.md
+cat <<'EOF' > CONTRIBUTING.md
 # CONTRIBUTING
 
 ## Welcome!
@@ -209,7 +210,7 @@ Since this is a very small project there are just a few kinds of contributions w
 ## Pull Request Lifecycle
 
 1. **Fork and Clone** the repo.
-2. Create a branch from `main`.
+2. Create a branch from \`main\`.
 3. Submit your pull request when you have a working implementation.
 4. We prefer **small, focused pull requests**.
 

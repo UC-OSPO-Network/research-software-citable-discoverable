@@ -24,27 +24,19 @@ exercises: 5
 
 ## Why licensing matters
 
-When researchers publish code without a license, most people assume it is "public."
-Legally, it is not. Copyright law applies automatically. Without a license:
+When researchers publish code without a license, most people assume it is "public." Legally, it is not. Copyright law applies automatically. Without a license, others cannot legally reuse, modify, or redistribute the code.
 
-* others cannot reuse, modify, or redistribute the code
-* collaboration becomes uncertain and risky
-* the sustainability of the project suffers
-
-Clear licensing communicates permission and expectations.
-This reduces friction and supports open, reproducible research.
+Clear licensing communicates permission and expectations, reducing friction and supporting open, reproducible research. Following the [UC OSPO License Guide](https://ucospo.net/oss-resources/template-guides/license-guide/) ensures your project meets institutional standards while maximizing its impact.
 
 ::::::::::::::::::::::::::::::: callout
 
 ### UC Context: Working with Tech Transfer
 
-At UC, software created using university resources is typically owned by The Regents of the University of California. Before releasing code under an open-source license, check with your campus Tech Transfer office to:
+At the University of California, software created using university resources is typically owned by **The Regents of the University of California**. Before releasing code under an open-source license, you must check with your campus **Tech Transfer office** (sometimes called the Office of Intellectual Property or Technology Commercialization). They will:
 
-* Verify ownership
-* Ensure no third-party restrictions apply
-* Select the appropriate license for your project
-
-Each UC campus has specific processes - this lesson focuses on general best practices.
+* Verify ownership and funding requirements.
+* Ensure no third-party restrictions apply (e.g., from proprietary libraries).
+* Help you select the most appropriate license from the [UC-approved list](https://security.ucop.edu/resources/open-source-software-licensing.html).
 
 ::::::::::::::::::::::::::::::::
 
@@ -135,45 +127,38 @@ graph TD
 
 ### UC Resources
 
-* [UC OSS Chart and Companion Guide](https://security.ucop.edu/resources/open-source-software-licensing.html) - Detailed license comparison
-* [UC OSPO License Guide](https://ucospo.net/oss-resources/template-guides/license-guide/) - Templates and guidance
-* Contact your campus Tech Transfer office for project-specific advice
-
-::::::::::::::::::::::::::::::::
+* [UC OSPO License Guide](https://ucospo.net/oss-resources/template-guides/license-guide/) – Guidance on institutional requirements and templates.
+* [UC OSS Chart and Companion Guide](https://security.ucop.edu/resources/open-source-software-licensing.html) – The definitive list of UC-approved "low-risk" licenses.
+* [ChooseALicense.com](https://choosealicense.com/) – A helpful tool for comparing license features.
 
 ::::::::::::::::::::::::::::: challenge
 
 ## Challenge: Add a BSD License to Your Repository
 
-Let's add the UC-recommended BSD 3-Clause license to your demo repository:
+Following UC recommendations, we will add the BSD 3-Clause license to your demo repository:
 
-1. Navigate to your repository on GitHub
-2. Click "Add file" → "Create new file"
-3. Name it `LICENSE`
-4. Click "Choose a license template"
-5. Select **BSD 3-Clause License**
-6. Update the copyright holder to "The Regents of the University of California" (if UC-owned)
-7. Update the year to 2025
-8. Commit the file
+1. Navigate to your repository on GitHub.
+2. Click **Add file** → **Create new file**.
+3. Name it `LICENSE` (or `LICENSE.txt`).
+4. Click **Choose a license template** and select **BSD 3-Clause License**.
+5. **CRITICAL:** Update the copyright holder to: `The Regents of the University of California`.
+6. Update the year to 2026.
+7. Commit the file to your `main` branch.
 
-**Verify:** Refresh your repository page. Do you see "BSD-3-Clause license" displayed?
+**Verify:** Does your repository now display the "BSD-3-Clause" license badge in the sidebar?
 
 :::::::::::::::::::::::: solution
 
-You should see "BSD-3-Clause license" in the repository sidebar. GitHub automatically detects and displays your license.
+GitHub automatically detects the `LICENSE` file and displays it in the sidebar. Your file should look like this:
 
-Your LICENSE file should start with:
 ```
 BSD 3-Clause License
 
-Copyright (c) 2025, The Regents of the University of California
+Copyright (c) 2026, The Regents of the University of California
 All rights reserved.
 ```
 
-If you don't see the license badge:
-- Check the file is named exactly `LICENSE` (no extension)
-- Verify it's in the root directory
-- Confirm you committed the changes
+If the badge doesn't appear, ensure the file is in the root directory and named exactly `LICENSE` or `LICENSE.txt`.
 
 :::::::::::::::::::::::::::::::::
 ::::::::::::::::::::::::::::::::
