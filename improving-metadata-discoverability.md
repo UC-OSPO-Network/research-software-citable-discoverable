@@ -69,28 +69,37 @@ GitHub uses structured metadata to improve search ranking and cross-repository l
 
 **Improve your README:**
 
-Your README is the first page many users see. Include:
+Your README is the first page many users see. A structured, predictable README lowers the barrier to entry. The [UC OSPO README Guide](https://ucospo.net/oss-resources/template-guides/readme-guide/) recommends including these standard sections:
 
-- purpose statement  
-- short example of usage  
-- link to your CITATION.cff  
-- link to your Zenodo DOI  
-- link to your documentation  
+- **About/Overview**: What does this software do?
+- **Features**: Key capabilities (e.g., "Reproducible environment," "Citable").
+- **Getting Started**: Prerequisites and installation steps.
+- **Usage**: A minimal example of how to run the code.
+- **License**: Explicitly stating the license.
+- **Contact**: How to reach the maintainers.
 
-This connects your metadata across platforms.
+It is also critical to link your metadata:
+- Add a **badge** for your Zenodo DOI.
+- Link to your `CITATION.cff` file.
+
+Adopting a standard structure like the [OSPO README Template](https://github.com/UC-OSPO-Network/templates/blob/main/README.md) ensures researchers can quickly evaluate and use your software.
 
 ## Community Health Files
 
-Beyond technical metadata, files that describe *how* to interact with your project are crucial for its long-term health and "discoverability" as a welcoming project.
+Beyond technical metadata, files that describe *how* to interact with your project are crucial for its long-term sustainability and "discoverability" as a welcoming project.
 
-**CONTRIBUTING.md**: Explains how others can report bugs, suggest features, or submit code.
-**CODE_OF_CONDUCT.md**: Sets expectations for behavior to ensure a safe and welcoming environment.
+### Contributing Guide
+The `CONTRIBUTING.md` file is the first place new contributors look to see if a project is open to participation. Following the [UC OSPO Contributing Guide](https://ucospo.net/oss-resources/template-guides/contributing-guide/) ensures you cover essential ground:
 
-UC OSPO provides standard templates for these files:
-- [UC OSPO Contributing Template](https://github.com/UC-OSPO-Network/templates/blob/main/CONTRIBUTING.md)
-- [UC OSPO Code of Conduct Template](https://github.com/UC-OSPO-Network/templates/blob/main/CODE_OF_CONDUCT.md)
+- **Welcome Statement**: Explicitly inviting others to join.
+- **Ways to Contribute**: Identifying non-code contributions (e.g., documentation, testing, issues).
+- **Setup Instructions**: How to get the project running locally.
+- **Pull Request Lifecycle**: What happens after a contribution is submitted.
 
-Adding these files to your repository root helps GitHub display a "Community Standards" checklist in your insights.
+### Code of Conduct
+A `CODE_OF_CONDUCT.md` establishes behavioral expectations and ensures a safe, inclusive environment for all researchers. The [UC OSPO Code of Conduct Guide](https://ucospo.net/oss-resources/template-guides/code-of-conduct-guide/) recommends using a standard like the **Contributor Covenant**.
+
+Adding these files to your repository root helps GitHub display a "Community Standards" checklist in your insights, signaling that your project is professionally managed and ready for collaboration. You can find ready-to-use versions in the [UC OSPO Template Repository](https://github.com/UC-OSPO-Network/templates).
 
 ---
 
