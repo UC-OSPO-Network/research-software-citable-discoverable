@@ -131,6 +131,8 @@ graph TD
 * [UC OSS Chart and Companion Guide](https://security.ucop.edu/resources/open-source-software-licensing.html) – The definitive list of UC-approved "low-risk" licenses.
 * [ChooseALicense.com](https://choosealicense.com/) – A helpful tool for comparing license features.
 
+::::::::::::::::::::::::::::::::
+
 ::::::::::::::::::::::::::::: challenge
 
 ## Challenge: Add a BSD License to Your Repository
