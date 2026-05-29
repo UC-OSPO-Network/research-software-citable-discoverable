@@ -19,11 +19,27 @@ exercises: 5
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
+::::::::::::::::::::::::::::::::::::: callout
+
+### Episode Branch: `01-start`
+
+This episode explores the **initial state** of the demo repository.
+
+**To follow along:**
+```bash
+cd software-demo
+git checkout 01-start
+```
+
+**Catch-up point:** If you're joining this episode partway through, start here.
+
+::::::::::::::::::::::::::::::::::::::::::::::::
+
 ## Introduction
 
 Publishing your research software in a public repository helps others find, understand, reuse, and cite your work. This visibility strengthens the transparency of your research process and increases the likelihood that you receive formal credit.
 
-In this lesson, we start with a minimal example repository. As you progress through the episodes, you will progressively refine them until they are citable, discoverable, and ready for reuse.
+In this lesson, we start with a minimal example repository (branch `01-start`). As you progress through the episodes, you will progressively refine it until it is citable, discoverable, and ready for reuse.
 
 :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: instructor
 

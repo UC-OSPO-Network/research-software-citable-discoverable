@@ -40,17 +40,43 @@ If pixi is not installed, all core lesson activities will still work.
 
 ---
 
-## Lesson Data and Example Repositories
+## Lesson Demo Repository
 
-This lesson uses **small example repositories** hosted on GitHub.  
-They include:
+This lesson uses a **demo repository** called `software-demo` that progresses through different states as you learn.
 
-- a minimal research-software project with missing metadata  
-- a version that includes a CITATION.cff  
-- examples of README, license files, and basic folder structure
+### Clone the Demo Repository
 
-You will be provided links at the start of the workshop.  
-No large datasets or downloads are required.
+Before the workshop, clone the demo repository:
+
+```bash
+git clone https://github.com/jt14den/software-demo.git
+cd software-demo
+```
+
+### Understanding the Branches
+
+The repository has branches for each lesson stage:
+
+- `01-start` — Initial state (minimal project)
+- `02-license` — Added BSD 3-Clause License
+- `03-pixi` — Added pixi environment management
+- `04-citation` — Added CITATION.cff file
+- `05-release` — Tagged release v0.1.0
+- `06-metadata` — Final state (complete documentation)
+
+### Catching Up During the Lesson
+
+If you need to catch up at any point during the workshop:
+
+```bash
+git checkout 02-license    # Jump to the license stage
+git checkout 03-pixi       # Jump to the environment stage
+# etc.
+```
+
+Each episode will tell you which branch to check out if you need to skip ahead.
+
+**Note:** You can always return to the main branch with `git checkout main`
 
 ---
 

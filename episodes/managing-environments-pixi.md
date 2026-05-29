@@ -4,6 +4,18 @@ teaching: 12
 exercises: 3
 ---
 
+::::::::::::::::::::::::::::::::::::: callout
+
+### Optional Episode
+
+This episode covers environment management using `pixi`. It is **optional** — you can skip it and still complete all citation and discoverability steps in the episodes that follow.
+
+If your workshop is focused on the citation and scholarly communication track, move to [Adding a CITATION.cff File](adding-citation-file.md).
+
+**Other environment tools:** `conda`, `mamba`, `pip`/`venv`, and `renv` (for R) all serve the same purpose. The concepts here apply to any environment manager — pixi is used because it handles Python, R, and other languages with a single tool and generates an automatic lockfile.
+
+::::::::::::::::::::::::::::::::::::::::::::::::
+
 :::::::::::::::::::::::::::::::::::::: questions
 
 - Why do software projects need well defined environments?
@@ -21,26 +33,81 @@ exercises: 3
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
+::::::::::::::::::::::::::::::::::::: callout
+
+### Episode Branch: `03-pixi`
+
+This optional episode explores the environment management layer of the demo repository.
+
+**To follow along:**
+```bash
+git checkout 03-pixi     # Branch with pixi.toml and lockfile added
+```
+
+*This branch sits between `02-license` and `04-citation` in the demo repo history, but you can explore it at any point in the lesson.*
+
+::::::::::::::::::::::::::::::::::::::::::::::::
+
 ## Why Environments Matter
 
-Research software often “works on my machine” and nowhere else.  
+**The Problem:** Research software often "works on my machine" and nowhere else.
+
+Code rots. Python updates, packages break, and 6 months from now, your script won't run.
+
 Different operating systems, outdated packages, and mismatched library versions frequently break code.
+
+### ❌ The Vague Way
+
+```toml
+[dependencies]
+python = "*"
+numpy = "*"
+```
+
+`python = "*"` is like saying "I need some food."
+
+**Problems:**
+- Works today, breaks tomorrow
+- Different versions on different machines
+- "Works on my machine" syndrome
+
+### ✅ The Locked Way
+
+```toml
+pixi.lock contains:
+python = "3.11.4"
+numpy = "1.24.3"
++ 47 dependencies
+```
+
+`pixi.lock` is like saying "I need a pepperoni pizza from Mario's, baked at 5:00 PM."
+
+**Benefits:**
+- ✅ Exact versions locked
+- ✅ Same environment everywhere
+- ✅ Reproducible in 5 years
+
+## What Environment Management Captures
 
 Environment management reduces this friction because it captures:
 
-- the exact language versions used  
-- required packages  
-- the dependency set needed to run the software  
-- instructions for reproducing the execution environment  
+- The exact language versions used
+- Required packages
+- The dependency set needed to run the software
+- Instructions for reproducing the execution environment
 
-For researchers, this supports:
+**The Payoff:** We aren't just shipping code; we're shipping the **computer state** needed to run it.
 
-- reproducibility  
-- clearer documentation  
-- better long term maintenance  
-- a stronger foundation for citation and reuse  
+## Why pixi?
 
-`pixi` is a modern, fast environment manager that works for Python, R, and many other languages. We use it in this lesson because it is cross-platform, faster than Conda, and creates lockfiles (`pixi.lock`) automatically, which guarantees that everyone runs the exact same versions of every package.
+`pixi` is a modern, fast environment manager that works for Python, R, and many other languages. We use it in this lesson because it is:
+
+- **Cross-platform:** Works on macOS, Linux, Windows
+- **Fast:** Faster than Conda
+- **Automatic lockfiles:** Creates `pixi.lock` automatically, guaranteeing everyone runs the exact same versions of every package
+- **Multi-language:** Supports Python, R, and more
+
+**FAIR Connection:** Standard formats + clear dependencies = Interoperable & Reusable software
 
 ---
 
@@ -103,6 +170,42 @@ pixi add r-dplyr
 ```
 
 Your `pixi.toml` is now a reproducible record of all dependencies needed for the software.
+
+### What's Inside pixi.toml?
+
+Here's what the file looks like (this will be automatically created for you):
+
+```toml
+[workspace]
+authors = ["Leigh Phan <leighphan@ucla.edu>"]
+channels = ["conda-forge"]
+name = "myproject"
+platforms = ["osx-arm64"]
+version = "0.1.0"
+
+[tasks]
+
+[dependencies]
+python = ">=3.14.3,<3.15"
+numpy = ">=2.4.2,<3"
+r = ">=4.5,<4.6"
+r-dplyr = ">=1.2.0,<2"
+```
+
+**The `pixi.toml` file is now a reproducible record of all dependencies needed for the software.**
+
+When you run `pixi install`, it also creates a `pixi.lock` file with exact versions locked:
+
+```
+pixi.lock contains:
+python = "3.14.3"
+numpy = "2.4.2"
+r = "4.5.4"
+r-dplyr = "1.2.0"
++ 47 other dependencies
+```
+
+This lockfile guarantees **byte-for-byte reproducibility**.
 
 ---
 

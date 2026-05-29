@@ -65,9 +65,9 @@ git config user.email "researcher@example.org"
 git config commit.gpgsign false
 git config init.defaultBranch main
 
-echo "# Research Software Demo
+echo "# Biodiversity Analysis Toolkit
 
-A minimal example repository for the research software lesson.
+Analysis tools for biodiversity research data.
 " > README.md
 
 echo "# environment configuration
@@ -138,10 +138,15 @@ checkpoint "02-license" "Add BSD 3-Clause License and update README"
 # ====================================================================================== 
 cat <<EOF > pixi.toml
 [project]
-name = "software-demo"
+name = "biodiversity-analysis-toolkit"
 version = "0.1.0"
-description = "A minimal example repository for the research software lesson"
-authors = ["Researcher <researcher@example.org>"]
+description = "Analysis tools for biodiversity research data"
+authors = [
+    "Tim Dennis <tdennis@library.ucla.edu>",
+    "Leigh Phan <leighphan@library.ucla.edu>",
+    "Reid Otsuji <rotsuji@ucsd.edu>",
+    "Karla Padilla <kpadilla@ucsd.edu>"
+]
 channels = ["conda-forge"]
 platforms = ["osx-arm64", "linux-64", "win-64", "osx-64"]
 
@@ -165,34 +170,95 @@ echo "pixi.lock merge=ours
 checkpoint "03-pixi" "Initialize pixi environment and add dependencies"
 
 
-# ====================================================================================== 
+# ======================================================================================
 #  EPISODE 4: ADDING A CITATION.CFF FILE
-# ====================================================================================== 
+# ======================================================================================
 cat <<EOF > CITATION.cff
 cff-version: 1.2.0
-title: ResearchSoftwareDemo
-message: "Please cite this software using the metadata below."
+title: "Biodiversity Analysis Toolkit"
+message: "If you use this software, please cite it as below."
 authors:
-  - given-names: Jane
-    family-names: Doe
-    orcid: https://orcid.org/0000-0002-1825-0097
+  - family-names: "Dennis"
+    given-names: "Tim"
+    orcid: "https://orcid.org/0000-0001-6632-3812"
+  - family-names: "Phan"
+    given-names: "Leigh"
+    orcid: "https://orcid.org/0000-0002-8605-1444"
+  - family-names: "Otsuji"
+    given-names: "Reid"
+    orcid: "https://orcid.org/0000-0002-1842-0295"
+  - family-names: "Padilla"
+    given-names: "Karla"
 version: "0.1.0"
+date-released: 2026-02-01
+url: "https://github.com/jt14den/software-demo"
 EOF
 
 checkpoint "04-citation" "Add CITATION.cff"
 
 
-# ====================================================================================== 
+# ======================================================================================
 #  EPISODE 5: MAKING YOUR SOFTWARE CITABLE (RELEASES)
-# ====================================================================================== 
+# ======================================================================================
 echo "--> Creating release tag: v0.1.0"
-git tag v0.1.0
+git tag -a v0.1.0 -m "Release v0.1.0: Initial public version
+
+This release includes:
+- BSD 3-Clause License
+- Reproducible environment (pixi)
+- CITATION.cff for academic credit
+- Complete documentation
+
+Ready for Zenodo archival and DOI minting."
+
 git branch "05-release"
 
 
-# ====================================================================================== 
+# ======================================================================================
 #  EPISODE 6: IMPROVING METADATA & DISCOVERABILITY (OSPO Alignment)
-# ====================================================================================== 
+# ======================================================================================
+
+# Add .zenodo.json for rich metadata
+cat <<EOF > .zenodo.json
+{
+  "title": "Biodiversity Analysis Toolkit",
+  "description": "Analysis tools for biodiversity research data. Demonstrates reproducible research software workflows following FAIR4RS principles.",
+  "version": "0.1.0",
+  "upload_type": "software",
+  "creators": [
+    {
+      "name": "Dennis, Tim",
+      "affiliation": "University of California Los Angeles",
+      "orcid": "0000-0001-6632-3812"
+    },
+    {
+      "name": "Phan, Leigh",
+      "affiliation": "University of California Los Angeles",
+      "orcid": "0000-0002-8605-1444"
+    },
+    {
+      "name": "Otsuji, Reid",
+      "affiliation": "University of California San Diego",
+      "orcid": "0000-0002-1842-0295"
+    },
+    {
+      "name": "Padilla, Karla",
+      "affiliation": "University of California San Diego"
+    }
+  ],
+  "keywords": [
+    "biodiversity",
+    "research-software",
+    "reproducibility",
+    "fair4rs",
+    "python",
+    "data-analysis"
+  ],
+  "license": "BSD-3-Clause",
+  "access_right": "open"
+}
+EOF
+
 cat <<'EOF' > CONTRIBUTING.md
 # CONTRIBUTING
 
@@ -232,42 +298,44 @@ To report a possible violation, please contact the project maintainers.
 EOF
 
 cat <<EOF > README.md
-# Research Software Demo
+# Biodiversity Analysis Toolkit
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.123456.svg)](https://doi.org/10.5281/zenodo.123456)
+[![DOI](https://sandbox.zenodo.org/badge/DOI/10.5072/zenodo.123456.svg)](https://doi.org/10.5072/zenodo.123456)
 [![License](https://img.shields.io/badge/License-BSD_3--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)
 
-A minimal example repository demonstrating research software best practices.
-This project analyzes random data to demonstrate reproducible workflows.
+Analysis tools for biodiversity research data. This project demonstrates reproducible research software workflows.
+
+> **Note:** This is a teaching/demo repository. The DOI above points to Zenodo Sandbox for demonstration purposes.
 
 ## Features
 
-- **Reproducible Environment**: Uses [pixi](https://pixi.sh) for dependency management.
-- **Citable**: Includes CITATION.cff and is archived on Zenodo.
-- **Open Source**: Licensed under BSD 3-Clause.
+- **Reproducible Environment**: Uses [pixi](https://pixi.sh) for cross-platform dependency management
+- **Citable**: Includes CITATION.cff and DOI via Zenodo
+- **Open Source**: Licensed under BSD 3-Clause
 
 ## Getting Started
 
 ### Prerequisites
 
-- [pixi](https://pixi.sh)
+- [pixi](https://pixi.sh) (includes Python and all dependencies)
 
 ### Installation & Usage
 
 1. Clone the repository:
-   ```bash
-   git clone https://github.com/yourusername/software-demo.git
+   \`\`\`bash
+   git clone https://github.com/jt14den/software-demo.git
    cd software-demo
-   ```
+   \`\`\`
 
-2. Run the analysis:
-   ```bash
+2. Install dependencies and run the analysis:
+   \`\`\`bash
+   pixi install
    pixi run python src/analysis.py
-   ```
+   \`\`\`
 
 ## Contributing
 
-Contributions are always welcome! Please see [CONTRIBUTING.md](CONTRIBUTING.md) for tips to get started.
+Contributions are welcome! Please see [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
 
 ## Code of Conduct
 
@@ -275,11 +343,18 @@ Please read and abide by our [Code of Conduct](CODE_OF_CONDUCT.md).
 
 ## Citation
 
-Please cite this software using the metadata in [CITATION.cff](CITATION.cff).
+If you use this software, please cite it using the metadata in [CITATION.cff](CITATION.cff) or via the DOI badge above.
 
 ## License
 
 This project is licensed under the BSD 3-Clause License - see the [LICENSE](LICENSE) file for details.
+
+## Authors
+
+- Tim Dennis (UCLA)
+- Leigh Phan (UCLA)
+- Reid Otsuji (UCSD)
+- Karla Padilla (UCSD)
 
 ## Contact
 
@@ -288,21 +363,37 @@ EOF
 
 cat <<EOF > CITATION.cff
 cff-version: 1.2.0
-title: ResearchSoftwareDemo
-message: "Please cite this software using the metadata below."
+title: "Biodiversity Analysis Toolkit"
+message: "If you use this software, please cite it as below."
 authors:
-  - given-names: Jane
-    family-names: Doe
-    orcid: https://orcid.org/0000-0002-1825-0097
+  - family-names: "Dennis"
+    given-names: "Tim"
+    orcid: "https://orcid.org/0000-0001-6632-3812"
+    affiliation: "University of California Los Angeles"
+  - family-names: "Phan"
+    given-names: "Leigh"
+    orcid: "https://orcid.org/0000-0002-8605-1444"
+    affiliation: "University of California Los Angeles"
+  - family-names: "Otsuji"
+    given-names: "Reid"
+    orcid: "https://orcid.org/0000-0002-1842-0295"
+    affiliation: "University of California San Diego"
+  - family-names: "Padilla"
+    given-names: "Karla"
+    affiliation: "University of California San Diego"
 version: "0.1.0"
-doi: 10.5281/zenodo.123456
+doi: 10.5072/zenodo.123456
 date-released: 2026-02-01
+url: "https://github.com/jt14den/software-demo"
+repository-code: "https://github.com/jt14den/software-demo"
 keywords:
-  - research
-  - software
+  - biodiversity
+  - research-software
   - reproducibility
-  - demo
-abstract: "A demonstration repository for the 'Sharing Research Software' lesson, illustrating best practices for citation, licensing, and environment management."
+  - fair4rs
+  - python
+  - data-analysis
+abstract: "Analysis tools for biodiversity research data. Demonstrates reproducible research software workflows following FAIR4RS principles."
 license: BSD-3-Clause
 EOF
 
@@ -322,22 +413,75 @@ echo ""
 echo "HOW TO USE DURING THE LESSON:"
 echo "---------------------------------------------------------"
 echo "You can move through the lesson stages using 'git checkout':"
-echo "  git checkout 01-start     # Initial state"
-echo "  git checkout 02-license   # Added License"
-echo "  git checkout 03-pixi      # Added Environment"
-echo "  git checkout 04-citation  # Added Citation"
-echo "  git checkout 05-release   # Tagged v0.1.0"
-echo "  git checkout 06-metadata  # Final OSPO state"
+echo "  git checkout 01-start     # Initial state (Slide 3)"
+echo "  git checkout 02-license   # Added License (Slide 6)"
+echo "  git checkout 03-pixi      # Added Environment (Slide 9)"
+echo "  git checkout 04-citation  # Added Citation (Slide 12)"
+echo "  git checkout 05-release   # Tagged v0.1.0 (Slide 15)"
+echo "  git checkout 06-metadata  # Final OSPO state (Slide 19)"
 echo ""
 echo "HOW TO PUSH TO GITHUB:"
 echo "---------------------------------------------------------"
-echo "1. Create a NEW empty repo at https://github.com/new (Name: software-demo)"
-echo "2. Run these commands from inside the $(pwd) folder:"
+echo "1. Create a NEW empty repo at https://github.com/new"
+echo "   Name: software-demo"
+echo "   Description: Demo repository for UC Love Data Week 2026"
+echo "   (Keep it PUBLIC)"
 echo ""
-echo "   git remote add origin https://github.com/YOUR_USERNAME/software-demo.git"
+echo "2. Push from $(pwd):"
+echo ""
+echo "   git remote add origin https://github.com/jt14den/software-demo.git"
 echo "   git push -u origin --all"
 echo "   git push -u origin --tags"
 echo ""
 echo "========================================================="
-echo "INSTRUCTOR NOTE: Remember to share the GitHub URL with learners!"
+echo "HOW TO GET A ZENODO SANDBOX DOI (For Teaching):"
+echo "========================================================="
+echo ""
+echo "IMPORTANT: Use Zenodo SANDBOX for demo repositories!"
+echo ""
+echo "Step 1: Create Zenodo Sandbox Account"
+echo "  - Go to: https://sandbox.zenodo.org"
+echo "  - Sign up with GitHub OAuth (or create account)"
+echo ""
+echo "Step 2: Link GitHub Repository"
+echo "  - In Zenodo Sandbox: Settings → GitHub"
+echo "  - Click 'Connect' and authorize"
+echo "  - Find 'software-demo' and flip the toggle ON"
+echo ""
+echo "Step 3: Create a GitHub Release"
+echo "  - Go to: https://github.com/jt14den/software-demo/releases"
+echo "  - Click 'Draft a new release'"
+echo "  - Choose tag: v0.1.0 (already created)"
+echo "  - Title: 'Release v0.1.0'"
+echo "  - Click 'Publish release'"
+echo ""
+echo "Step 4: Get Your Sandbox DOI"
+echo "  - Zenodo Sandbox automatically creates a record"
+echo "  - Go to: https://sandbox.zenodo.org/me/uploads"
+echo "  - Find your record, get DOI (format: 10.5072/zenodo.XXXXX)"
+echo ""
+echo "Step 5: Update Your Repository"
+echo "  - Copy the real sandbox DOI"
+echo "  - Update CITATION.cff (replace 10.5072/zenodo.123456)"
+echo "  - Update README.md badge URL"
+echo "  - Commit and push changes"
+echo ""
+echo "SAMPLE DOI FORMAT:"
+echo "  Sandbox: 10.5072/zenodo.XXXXX"
+echo "  Production (real): 10.5281/zenodo.XXXXX"
+echo ""
+echo "========================================================="
+echo "QUICK REFERENCE:"
+echo "========================================================="
+echo "Demo repo: https://github.com/jt14den/software-demo"
+echo "Zenodo Sandbox: https://sandbox.zenodo.org"
+echo "Zenodo Production: https://zenodo.org (don't use for demos!)"
+echo ""
+echo "========================================================="
+echo "INSTRUCTOR NOTE:"
+echo "========================================================="
+echo "- Share the GitHub URL with learners"
+echo "- Show the Zenodo linking process during Slide 15"
+echo "- The placeholder DOI (10.5072/zenodo.123456) works for slides"
+echo "- Update with real sandbox DOI before workshop if time permits"
 echo "========================================================="

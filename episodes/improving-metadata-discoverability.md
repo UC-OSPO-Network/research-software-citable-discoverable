@@ -19,6 +19,26 @@ exercises: 5
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
+::::::::::::::::::::::::::::::::::::: callout
+
+### Episode Branch: `05-release` → `06-metadata`
+
+This episode completes the repository with full documentation and metadata.
+
+**Starting point:**
+```bash
+git checkout 05-release  # Start with release tagged
+```
+
+**After this episode:**
+```bash
+git checkout 06-metadata # See the complete FAIR repository
+```
+
+**Catch-up point:** If joining now, run `git checkout 05-release`
+
+::::::::::::::::::::::::::::::::::::::::::::::::
+
 ## Introduction
 
 Clear metadata helps others understand, evaluate, and *find* your software.  
@@ -67,61 +87,170 @@ GitHub uses structured metadata to improve search ranking and cross-repository l
 - methodological tags (`simulation`, `visualization`, `machine-learning`)
 - language tags (`python`, `r`)
 
-**Improve your README:**
+## Writing an Effective README
 
-Your README is the first page many users see. A structured, predictable README lowers the barrier to entry. The [UC OSPO README Guide](https://ucospo.net/oss-resources/template-guides/readme-guide/) recommends including these standard sections:
+### The 30-Second Rule
 
-- **About/Overview**: What does this software do?
-- **Features**: Key capabilities (e.g., "Reproducible environment," "Citable").
-- **Getting Started**: Prerequisites and installation steps.
-- **Usage**: A minimal example of how to run the code.
-- **License**: Explicitly stating the license.
-- **Contact**: How to reach the maintainers.
+**Your README is your software's front door.**
+
+If users can't understand what it does, how to install it, or how to use it in **30 seconds** → they leave.
+
+### README Structure (7 Essential Sections)
+
+The [UC OSPO README Guide](https://ucospo.net/oss-resources/template-guides/readme-guide/) *(UC-specific)* recommends this standard structure:
+
+1. **About**: What does this do? (2-3 sentences)
+2. **Features**: Key capabilities (Reproducible, Citable, Open source)
+3. **Getting Started**: Prerequisites + installation
+4. **Usage**: Minimal working example
+5. **Citation**: Link to CITATION.cff or DOI
+6. **License**: Explicitly state terms (e.g., "BSD-3 - see LICENSE file")
+7. **Contact**: How to get help
+
+### Before vs. After Example
+
+**❌ Before (Branch: 01-start)**
+
+```markdown
+# Biodiversity Analysis Toolkit
+
+A script.
+
+No description. No instructions. No citation. Unusable.
+```
+
+**✅ After (Branch: 06-metadata)**
+
+```markdown
+# Biodiversity Analysis Toolkit
+
+Analysis tools for biodiversity research.
+
+## Features
+- Reproducible (pixi) • Citable (DOI) • Open source (BSD-3)
+
+## Getting Started
+```bash
+pixi install
+pixi run python src/analysis.py
+```
+
+## Citation
+[zenodo.org/badge/DOI/10.5281/zenodo.123456.svg]
+
+License: BDS-3 - see LICENSE file
+```
+
+**Professional. Citable. Usable.**
+
+### README Best Practices: 5 Quick Tips
+
+1. **Clear description** → Answer "What problem does this solve?"
+2. **Show, don't tell** → Include code examples
+3. **Link metadata** → Add DOI badge, link CITATION.cff
+4. **Keep updated** → Refresh when features change
+5. **Use a template** → [UC OSPO Templates](https://github.com/UC-OSPO-Network/templates) *(UC-specific)* or [Awesome README](https://github.com/matiassingers/awesome-readme)
+
+**Every tip maps to FAIR principles.**
+
+::::::::::::::::::::::::::::::::::::: callout
+
+### Don't Reinvent the Wheel
+
+- [Awesome README](https://github.com/matiassingers/awesome-readme) — curated examples from real open-source projects
+- [UC OSPO README Template](https://github.com/UC-OSPO-Network/templates/blob/main/README.md) *(UC-specific)* — ready-to-use template
+
+::::::::::::::::::::::::::::::::::::::::::::::::
 
 It is also critical to link your metadata:
-- Add a **badge** for your Zenodo DOI.
-- Link to your `CITATION.cff` file.
+- Add a **badge** for your Zenodo DOI
+- Link to your `CITATION.cff` file
 
-Adopting a standard structure like the [OSPO README Template](https://github.com/UC-OSPO-Network/templates/blob/main/README.md) ensures researchers can quickly evaluate and use your software.
+A structured README ensures researchers can quickly evaluate and use your software.
 
-## Community Health Files
+## Beyond the README: Community Health Files
 
 Beyond technical metadata, files that describe *how* to interact with your project are crucial for its long-term sustainability and "discoverability" as a welcoming project.
 
-### Contributing Guide
-The `CONTRIBUTING.md` file is the first place new contributors look to see if a project is open to participation. Following the [UC OSPO Contributing Guide](https://ucospo.net/oss-resources/template-guides/contributing-guide/) ensures you cover essential ground:
+GitHub looks for these files:
 
-- **Welcome Statement**: Explicitly inviting others to join.
-- **Ways to Contribute**: Identifying non-code contributions (e.g., documentation, testing, issues).
-- **Setup Instructions**: How to get the project running locally.
-- **Pull Request Lifecycle**: What happens after a contribution is submitted.
+### CONTRIBUTING.md → How to contribute
+The `CONTRIBUTING.md` file is the first place new contributors look to see if a project is open to participation. Following a contributing guide template (the [UC OSPO Contributing Guide](https://ucospo.net/oss-resources/template-guides/contributing-guide/) *(UC-specific)* is one good example) ensures you cover essential ground:
 
-### Code of Conduct
-A `CODE_OF_CONDUCT.md` establishes behavioral expectations and ensures a safe, inclusive environment for all researchers. The [UC OSPO Code of Conduct Guide](https://ucospo.net/oss-resources/template-guides/code-of-conduct-guide/) recommends using a standard like the **Contributor Covenant**.
+- **Welcome Statement**: Explicitly inviting others to join
+- **Ways to Contribute**: Identifying non-code contributions (e.g., documentation, testing, issues)
+- **Setup Instructions**: How to get the project running locally
+- **Pull Request Lifecycle**: What happens after a contribution is submitted
 
-Adding these files to your repository root helps GitHub display a "Community Standards" checklist in your insights, signaling that your project is professionally managed and ready for collaboration. You can find ready-to-use versions in the [UC OSPO Template Repository](https://github.com/UC-OSPO-Network/templates).
+### CODE_OF_CONDUCT.md → Behavioral standards
+A `CODE_OF_CONDUCT.md` establishes behavioral expectations and ensures a safe, inclusive environment for all researchers. The standard choice is the [Contributor Covenant](https://www.contributor-covenant.org/) — widely adopted across open-source projects. *(See also: [UC OSPO Code of Conduct Guide](https://ucospo.net/oss-resources/template-guides/code-of-conduct-guide/) *(UC-specific)*)*
+
+### CHANGELOG.md → Version history
+A `CHANGELOG.md` documents what changed between versions. This helps users understand:
+- What's new in each release
+- What bugs were fixed
+- What breaking changes occurred
+- How the software evolved over time
+
+**Why it matters:** Signals your project is professionally managed and welcoming.
+
+::::::::::::::::::::::::::::::::::::: callout
+
+### Templates Available
+
+- [Choose a License](https://choosealicense.com/) — license selection
+- [Contributor Covenant](https://www.contributor-covenant.org/) — code of conduct template
+- [Keep a Changelog](https://keepachangelog.com/) — changelog format guide
+- [UC OSPO Template Repository](https://github.com/UC-OSPO-Network/templates) *(UC-specific)* — ready-to-use CONTRIBUTING.md, CODE_OF_CONDUCT.md, CHANGELOG.md, README.md
+
+::::::::::::::::::::::::::::::::::::::::::::::::
+
+Adding these files to your repository root helps GitHub display a "Community Standards" checklist in your insights, signaling that your project is professionally managed and ready for collaboration.
 
 ---
 
+## Institutional Repositories: Dataverse, Dryad, and Zenodo
+
+Many institutions use repositories like **Dataverse** or **Dryad** for research data deposits. These are good for datasets but have limited software support — they don't integrate with GitHub releases or mint version-specific DOIs automatically.
+
+For software, **Zenodo is the recommended deposit location** because:
+
+- It integrates directly with GitHub to archive each release automatically
+- It mints a DOI for every version
+- Records flow into DataCite and are indexed by Google Scholar and library catalogs
+- It's free, CERN-operated, and widely recognized by journals and funders
+
+::::::::::::::::::::::::::::::::::::: callout
+
+### What about your institution's repository?
+
+If your institution requires or prefers a local IR (Dataverse instance, DSpace, etc.), you can deposit there *in addition* to Zenodo — not instead of it. Use the Zenodo DOI as the persistent identifier in your CITATION.cff, and note the institutional deposit in your README or Zenodo metadata as a related work.
+
+Some funders (NSF, NIH, Wellcome Trust) have specific deposit requirements. Check your award terms before deciding where the authoritative copy lives.
+
+::::::::::::::::::::::::::::::::::::::::::::::::
+
 ## Zenodo and DOI metadata
 
-Zenodo metadata flows into:
+When you deposit software on Zenodo, the record flows into:
 
-- **DataCite**  
-- Google Scholar  
-- library catalogs  
-- domain repositories that harvest DOIs  
+- **DataCite** — the DOI registration agency for research data and software; DataCite records are harvested by library catalogs, institutional discovery systems, and tools like [OpenAlex](https://openalex.org/) and [Scholix](http://www.scholix.org/)
+- **Google Scholar** — picks up Zenodo records with structured metadata
+- **Library catalogs** — many discovery layers (EBSCO, Ex Libris Primo, OCLC WorldCat) harvest DataCite metadata, meaning your software can appear in a library search alongside journal articles
+- **Domain repositories** that harvest DOIs
+
+What this means practically: the metadata you put into your Zenodo record is the metadata that librarians and discovery systems see. Thin metadata (no description, no keywords, no author ORCIDs) limits findability even if the DOI is valid.
 
 Add or refine:
 
 - authors + ORCIDs  
-- keywords  
-- related works (DOIs, URLs)  
+- keywords (discipline tags, method tags, language tags — same ones you add to GitHub Topics)
+- related works (link to the paper that used this software, the dataset it analyzes, the grant that funded it)
 - funding references  
 - version notes  
-- a readable software description  
+- a readable software description (2-3 sentences — think abstract, not README)
 
-Your goal is *context*. This helps researchers decide quickly whether to reuse your work.
+Your goal is *context*. A researcher or a librarian helping a researcher should be able to read the Zenodo record and decide in 30 seconds whether this software is relevant to them.
 
 ::::::::::::::::::::::::::::::::::::: challenge
 
