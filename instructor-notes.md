@@ -20,7 +20,7 @@ All episodes in order. Suitable when reproducibility and environment management 
 
 ### Citation-focused track (~2.5 hours)
 
-Skip the pixi episode entirely. Suitable for a shorter workshop or when learners just want their code cited — not necessarily reproduced. The FAIR4RS checklist in the wrap-up still works; simply omit the environment/interoperability row or note it as "future work."
+Skip the pixi episode entirely. Suitable for a shorter workshop or when learners just want their code cited, not necessarily reproduced. The FAIR4RS checklist in the wrap-up still works; simply omit the environment/interoperability row or note it as "future work."
 
 ---
 
@@ -45,7 +45,7 @@ The lesson episode order has been updated so pixi now comes *after* the release/
 | Managing Environments (pixi) | `03-pixi` (see note below) |
 | Improving Metadata | `05-release` → work done live, result is `06-metadata` |
 
-**Note on pixi branch:** `03-pixi` sits earlier in the demo repo history than `04-citation`, but that's fine — learners are just exploring it to see what a locked environment looks like. They don't need to build on it. Have them check out `03-pixi` to follow along, then return to `05-release` before the metadata episode.
+**Note on pixi branch:** `03-pixi` sits earlier in the demo repo history than `04-citation`, but that's fine. Learners are just exploring it to see what a locked environment looks like; they don't need to build on it. Have them check out `03-pixi` to follow along, then return to `05-release` before the metadata episode.
 
 ### Citation-focused track: branch navigation
 
@@ -57,7 +57,7 @@ The lesson episode order has been updated so pixi now comes *after* the release/
 | Making Your Software Citable | `04-citation` → result is `05-release` |
 | Improving Metadata | `05-release` → result is `06-metadata` |
 
-**Important:** `04-citation` and later branches contain pixi files (`pixi.toml`, `pixi.lock`) even though learners haven't done the pixi episode. Acknowledge this briefly: *"You'll see some pixi files in the repo — those are from an optional episode on environment management. You can ignore them for now."*
+**Important:** `04-citation` and later branches contain pixi files (`pixi.toml`, `pixi.lock`) even though learners haven't done the pixi episode. Acknowledge this briefly: *"You'll see some pixi files in the repo; those are from an optional episode on environment management. You can ignore them for now."*
 
 ---
 
@@ -67,7 +67,7 @@ The lesson episode order has been updated so pixi now comes *after* the release/
 Learners need to commit the `CITATION.cff` file to the default branch and refresh. GitHub may take a minute to parse it. If it doesn't appear, check that the file is in the root of the repository and named exactly `CITATION.cff`.
 
 **Zenodo Sandbox login**
-Use `sandbox.zenodo.org` — not the real `zenodo.org`. Learners who accidentally create records on the live site cannot delete them. Warn the group before this step.
+Use `sandbox.zenodo.org`, not the real `zenodo.org`. Learners who accidentally create records on the live site cannot delete them. Warn the group before this step.
 
 **YAML indentation errors in CITATION.cff**
 Direct learners to the cffinit web tool (<https://citation-file-format.github.io/cffinit/>) rather than hand-editing YAML. This eliminates most formatting errors.

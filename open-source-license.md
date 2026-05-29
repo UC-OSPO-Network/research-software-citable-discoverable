@@ -46,7 +46,7 @@ git checkout 02-license  # See the result with LICENSE added
 
 When researchers publish code without a license, most people assume it is "public." Legally, it is not. Copyright law applies automatically. Without a license, others cannot legally reuse, modify, or redistribute the code.
 
-Clear licensing communicates permission and expectations, reducing friction and supporting open, reproducible research. Following the [UC OSPO License Guide](https://ucospo.net/oss-resources/template-guides/license-guide/) ensures your project meets institutional standards while maximizing its impact.
+Clear licensing tells others what they can and cannot do with your code, which is the minimum needed for open, reproducible research. The [UC OSPO License Guide](https://ucospo.net/oss-resources/template-guides/license-guide/) covers UC institutional requirements.
 
 ::::::::::::::::::::::::::::::: callout
 
@@ -166,7 +166,7 @@ license:
   - CC-BY-4.0
 ```
 
-Most research repositories don't need this — but if you're sharing a dataset alongside code, it's worth thinking through.
+Most research repositories don't need this, but if you're sharing a dataset alongside code, it's worth thinking through.
 
 :::::::::::::::::::::::::::::::::::::::::::::::::
 

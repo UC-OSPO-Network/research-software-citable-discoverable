@@ -89,7 +89,7 @@ A DOI **enhances** these qualities, but does not define them.
 A DOI is helpful for:
 
 - increasing visibility and discoverability  
-- ensuring long-term persistence  
+- long-term persistence  
 - citing *exact* versions  
 - meeting journal and funder expectations  
 
@@ -100,7 +100,7 @@ But the core citability comes from your metadata and release process.
 ## Create a Release in GitHub
 
 A release captures a specific version of your software.  
-It serves as the “snapshot” that others can cite.
+It is the snapshot that others can cite.
 
 ### Steps
 
@@ -217,7 +217,7 @@ doi: 10.5281/zenodo.123456
 
 ### Going further: Software Heritage
 
-Zenodo archives a snapshot of your code at release time. [Software Heritage](https://www.softwareheritage.org/) goes further — it continuously crawls GitHub, GitLab, and other forges and archives *everything*, assigning a **SWHID** (Software Heritage Identifier) to every file, directory, commit, and release.
+Zenodo archives a snapshot of your code at release time. [Software Heritage](https://www.softwareheritage.org/) goes further: it continuously crawls GitHub, GitLab, and other forges and archives *everything*, assigning a **SWHID** (Software Heritage Identifier) to every file, directory, commit, and release.
 
 A SWHID looks like this:
 
@@ -225,7 +225,7 @@ A SWHID looks like this:
 swh:1:rel:22ece559cc7cc2364edc5e5593d63ae8bd229f9f
 ```
 
-It points to an exact, immutable snapshot that survives forge closures (Gitorious shut down in 2015; Google Code in 2016 — both made thousands of repos unreachable). Your Zenodo DOI is the right identifier for citation; a SWHID is the long-term preservation record.
+It points to an exact, immutable snapshot that survives forge closures (Gitorious shut down in 2015; Google Code in 2016, both making thousands of repos unreachable). Your Zenodo DOI is the right identifier for citation; a SWHID is the long-term preservation record.
 
 **To find and record your SWHID:**
 
