@@ -452,7 +452,7 @@ Fragile.</strong></p>
 <button class="accordion-button instructor-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInstructor1" aria-expanded="false" aria-controls="collapseInstructor1">
   <h3 class="accordion-header" id="headingInstructor1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="edit-2"></i></div> Instructor Note </h3>
 </button>
-<div id="collapseInstructor1" class="accordion-collapse collapse" data-bs-parent="#accordionInstructor1" aria-labelledby="headingInstructor1">
+<div id="collapseInstructor1" class="accordion-collapse collapse" aria-labelledby="headingInstructor1" data-bs-parent="#accordionInstructor1">
 <div class="accordion-body">
 <p>This concrete error message resonates with learners who have
 experienced dependency issues. Pause here to ask: “Has anyone
@@ -477,9 +477,9 @@ it disappears, the science is gone.</p>
 <h3 class="callout-title">How common is this?</h3>
 <div class="callout-content">
 <p>A 2021 analysis found that over <strong>48% of research
-articles</strong> mention software — yet consistent sharing and citation
-remains the exception, not the rule. Most of that software is either
-unavailable, uncredited, or impossible to reproduce.</p>
+articles</strong> mention software, but consistent sharing and citation
+remains the exception. Most of that software is either unavailable,
+uncredited, or impossible to reproduce.</p>
 </div>
 </div>
 </div>
@@ -515,18 +515,18 @@ researchers cite code by dropping a URL into a paper:</p>
 <p><strong>Problems:</strong></p>
 <ul>
 <li>URLs break (link rot)</li>
-<li>No version specified — which run of the code produced which
-result?</li>
-<li>No formal credit — the author’s name isn’t even visible</li>
+<li>No version specified (which run of the code produced which
+result?)</li>
+<li>No formal credit; the author’s name isn’t even visible</li>
 <li>Cannot appear in citation metrics</li>
 </ul>
 <p><strong>This isn’t hypothetical. Forges close.</strong></p>
 <ul>
 <li>
-<strong>Gitorious</strong> shut down in 2015 — thousands of projects
-became unreachable overnight</li>
+<strong>Gitorious</strong> shut down in 2015, making thousands of
+projects unreachable overnight</li>
 <li>
-<strong>Google Code</strong> shut down in 2016 — same result</li>
+<strong>Google Code</strong> shut down in 2016, same result</li>
 <li>A username change, a repo rename, or a deleted account breaks any
 URL-based citation just as completely</li>
 </ul>
@@ -541,12 +541,12 @@ Zenodo. <a href="https://doi.org/10.5281/zenodo.123456" class="external-link uri
 </blockquote>
 <p><strong>Why this works:</strong></p>
 <ul>
-<li>DOI is permanent — survives username changes, repo moves, even
-GitHub disappearing</li>
-<li>Version is explicit — someone can reproduce the exact run</li>
+<li>DOI is permanent; it survives username changes, repo moves, even if
+GitHub disappears</li>
+<li>Version is explicit, so someone can reproduce the exact run</li>
 <li>Author gets formal credit and citation metrics</li>
 </ul>
-<p>The fix is a <code>CITATION.cff</code> file and a DOI — both of which
+<p>The fix is a <code>CITATION.cff</code> file and a DOI, both of which
 you’ll create in this lesson.</p>
 </div>
 </section><section><h2 class="section-heading" id="the-fix-fair4rs-principles">The Fix: FAIR4RS Principles<a class="anchor" aria-label="anchor" href="#the-fix-fair4rs-principles"></a>
@@ -672,7 +672,7 @@ it?</li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p>Common challenges include:</p>
 <ul>
@@ -706,7 +706,7 @@ What’s missing, and what would a proper software citation look like?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <p>The script should be citable as a distinct research output. Without
 citation metadata or a DOI, the software contribution goes unrecognized
@@ -1123,10 +1123,10 @@ any links that you are not going to use.
 it is “public.” Legally, it is not. Copyright law applies automatically.
 Without a license, others cannot legally reuse, modify, or redistribute
 the code.</p>
-<p>Clear licensing communicates permission and expectations, reducing
-friction and supporting open, reproducible research. Following the <a href="https://ucospo.net/oss-resources/template-guides/license-guide/" class="external-link">UC
-OSPO License Guide</a> ensures your project meets institutional
-standards while maximizing its impact.</p>
+<p>Clear licensing tells others what they can and cannot do with your
+code, which is the minimum needed for open, reproducible research. The
+<a href="https://ucospo.net/oss-resources/template-guides/license-guide/" class="external-link">UC
+OSPO License Guide</a> covers UC institutional requirements.</p>
 <div id="institutional-context-who-owns-your-software" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
@@ -1315,7 +1315,7 @@ accepts a list:</p>
 <span id="cb4-2"><a href="#cb4-2" tabindex="-1" aria-label="code-block-4-2"></a><span class="at">  </span><span class="kw">-</span><span class="at"> BSD-3-Clause</span></span>
 <span id="cb4-3"><a href="#cb4-3" tabindex="-1" aria-label="code-block-4-3"></a><span class="at">  </span><span class="kw">-</span><span class="at"> CC-BY-4.0</span></span></code></pre>
 </div>
-<p>Most research repositories don’t need this — but if you’re sharing a
+<p>Most research repositories don’t need this, but if you’re sharing a
 dataset alongside code, it’s worth thinking through.</p>
 </div>
 </div>
@@ -1670,14 +1670,14 @@ managers</li>
 <h3 id="option-2-create-it-manually">Option 2: Create it manually<a class="anchor" aria-label="anchor" href="#option-2-create-it-manually"></a>
 </h3>
 <p>If you prefer to write it yourself:</p>
-<p><strong>Step 1 — Create the file</strong></p>
+<p><strong>Step 1: Create the file</strong></p>
 <p>In the root of your repository:</p>
 <div class="codewrapper sourceCode" id="cb3">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" tabindex="-1" aria-label="code-block-3-1"></a><span class="fu">touch</span> CITATION.cff</span></code></pre>
 </div>
-<p><strong>Step 2 — Add minimal metadata</strong></p>
+<p><strong>Step 2: Add minimal metadata</strong></p>
 <p>Here’s a complete example from the slides:</p>
 <div class="codewrapper sourceCode" id="cb4">
 <h3 class="code-label">YAML<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -1703,8 +1703,8 @@ version field until Episode 4 when you create releases.</p>
 <hr class="half-width">
 <p>Many researchers want users to cite a journal article
 <em>alongside</em> or <em>instead of</em> the raw software repository.
-The <code>preferred-citation</code> field handles this — it tells
-GitHub, Zotero, and other tools which reference to show first.</p>
+The <code>preferred-citation</code> field handles this: it tells GitHub,
+Zotero, and other tools which reference to show first.</p>
 <div class="codewrapper sourceCode" id="cb5">
 <h3 class="code-label">YAML<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -1730,7 +1730,7 @@ GitHub, Zotero, and other tools which reference to show first.</p>
 </div>
 <p>Without <code>preferred-citation</code>, GitHub shows the software
 repository citation by default. Adding it ensures that anyone clicking
-“Cite this repository” gets your paper’s citation instead — which is
+“Cite this repository” gets your paper’s citation instead, which is
 usually what you want for impact tracking.</p>
 <div id="no-paper-yet-skip-it." class="callout">
 <div class="callout-square">
@@ -1747,7 +1747,7 @@ without it.</p>
 </div>
 </div>
 <div class="section level3">
-<h3 id="step-3-commit-and-refresh">Step 3 — Commit and refresh<a class="anchor" aria-label="anchor" href="#step-3-commit-and-refresh"></a>
+<h3 id="step-3-commit-and-refresh">Step 3: Commit and refresh<a class="anchor" aria-label="anchor" href="#step-3-commit-and-refresh"></a>
 </h3>
 <p>After you commit the file, GitHub:</p>
 <ul>
@@ -2000,7 +2000,7 @@ them.</p>
 <ul>
 <li>increasing visibility and discoverability<br>
 </li>
-<li>ensuring long-term persistence<br>
+<li>long-term persistence<br>
 </li>
 <li>citing <em>exact</em> versions<br>
 </li>
@@ -2015,7 +2015,7 @@ process.</p>
 </h2>
 <hr class="half-width">
 <p>A release captures a specific version of your software.<br>
-It serves as the “snapshot” that others can cite.</p>
+It is the snapshot that others can cite.</p>
 <div class="section level3">
 <h3 id="steps">Steps<a class="anchor" aria-label="anchor" href="#steps"></a>
 </h3>
@@ -2190,14 +2190,14 @@ setup</p>
 <h3 class="callout-title">Going further: Software Heritage</h3>
 <div class="callout-content">
 <p>Zenodo archives a snapshot of your code at release time. <a href="https://www.softwareheritage.org/" class="external-link">Software Heritage</a> goes
-further — it continuously crawls GitHub, GitLab, and other forges and
+further: it continuously crawls GitHub, GitLab, and other forges and
 archives <em>everything</em>, assigning a <strong>SWHID</strong>
 (Software Heritage Identifier) to every file, directory, commit, and
 release.</p>
 <p>A SWHID looks like this:</p>
 <pre><code>swh:1:rel:22ece559cc7cc2364edc5e5593d63ae8bd229f9f</code></pre>
 <p>It points to an exact, immutable snapshot that survives forge
-closures (Gitorious shut down in 2015; Google Code in 2016 — both made
+closures (Gitorious shut down in 2015; Google Code in 2016, both making
 thousands of repos unreachable). Your Zenodo DOI is the right identifier
 for citation; a SWHID is the long-term preservation record.</p>
 <p><strong>To find and record your SWHID:</strong></p>
@@ -2313,16 +2313,15 @@ any links that you are not going to use.
 <h3 class="callout-title">Optional Episode</h3>
 <div class="callout-content">
 <p>This episode covers environment management using <code>pixi</code>.
-It is <strong>optional</strong> — you can skip it and move directly to
-<a href="improving-metadata-discoverability.html">Improving Metadata and
+It is <strong>optional</strong>; you can skip it and move directly to <a href="improving-metadata-discoverability.html">Improving Metadata and
 Discoverability</a>.</p>
 <p>If you skip this episode, you will still complete all citation steps.
 The <code>pixi.toml</code> and <code>pixi.lock</code> files you see in
-the demo repo branches were added here — you can ignore them.</p>
+the demo repo branches were added here; you can ignore them.</p>
 <p><strong>Other environment tools:</strong> <code>conda</code>,
 <code>mamba</code>, <code>pip</code>/<code>venv</code>, and
 <code>renv</code> (for R) all serve the same purpose. The concepts here
-apply to any environment manager — pixi is used because it handles
+apply to any environment manager; pixi is used because it handles
 Python, R, and other languages with a single tool and generates an
 automatic lockfile.</p>
 </div>
@@ -2397,7 +2396,7 @@ it at any point in the lesson.</em></p>
 order. The demo repository branch <code>03-pixi</code> sits earlier in
 the repo history (between <code>02-license</code> and
 <code>04-citation</code>), so the branch number and lesson position
-don’t match — that’s expected.</p>
+don’t match, which is expected.</p>
 <p><strong>How to handle the branch:</strong></p>
 <p>Have learners check out <code>03-pixi</code> to follow along. They
 are exploring it as a standalone example, not building on it. After this
@@ -2417,12 +2416,12 @@ the metadata episode.</p>
 already have pixi files in their repo (they were baked into the branch).
 Acknowledge this briefly when they encounter <code>pixi.toml</code> or
 <code>pixi.lock</code> in the metadata episode: <em>“Those files are
-from the optional environment management episode — you can leave them
+from the optional environment management episode; you can leave them
 as-is.”</em></p>
 <p><strong>Pixi not installed?</strong> Learners can follow the concepts
-without a working pixi installation. The key idea — that a lockfile pins
-exact dependency versions — is the transferable lesson, not the tool
-itself.</p>
+without a working pixi installation. The key idea is that a lockfile
+pins exact dependency versions. That’s the transferable lesson, not the
+tool itself.</p>
 </div>
 </div>
 </div>
@@ -2552,7 +2551,7 @@ environment.</p>
 <strong>ignore</strong>.</p>
 <p>For <code>pixi</code>, this is critical because it creates a hidden
 folder <code>.pixi/</code> containing thousands of environment files.
-You <strong>never</strong> want to commit this folder to GitHub—it is
+You <strong>never</strong> want to commit this folder to GitHub. It is
 large, platform-specific, and can be regenerated by anyone using your
 <code>pixi.lock</code> file.</p>
 <p><strong>Always check your <code>.gitignore</code></strong> to ensure
@@ -2988,10 +2987,10 @@ README</a>
 <ul>
 <li>
 <a href="https://github.com/matiassingers/awesome-readme" class="external-link">Awesome
-README</a> — curated examples from real open-source projects</li>
+README</a>: curated examples from real open-source projects</li>
 <li>
 <a href="https://github.com/UC-OSPO-Network/templates/blob/main/README.md" class="external-link">UC
-OSPO README Template</a> <em>(UC-specific)</em> — ready-to-use
+OSPO README Template</a> <em>(UC-specific)</em>: ready-to-use
 template</li>
 </ul>
 </div>
@@ -3009,8 +3008,8 @@ your software.</p>
 </h2>
 <hr class="half-width">
 <p>Beyond technical metadata, files that describe <em>how</em> to
-interact with your project are crucial for its long-term sustainability
-and “discoverability” as a welcoming project.</p>
+interact with your project matter for long-term sustainability and for
+signaling that the project is welcoming.</p>
 <p>GitHub looks for these files:</p>
 <div class="section level3">
 <h3 id="contributing-md-how-to-contribute">CONTRIBUTING.md → How to contribute<a class="anchor" aria-label="anchor" href="#contributing-md-how-to-contribute"></a>
@@ -3040,7 +3039,7 @@ contribution is submitted</li>
 </h3>
 <p>A <code>CODE_OF_CONDUCT.md</code> establishes behavioral expectations
 and ensures a safe, inclusive environment for all researchers. The
-standard choice is the <a href="https://www.contributor-covenant.org/" class="external-link">Contributor Covenant</a> —
+standard choice is the <a href="https://www.contributor-covenant.org/" class="external-link">Contributor Covenant</a>,
 widely adopted across open-source projects. <em>(See also: <a href="https://ucospo.net/oss-resources/template-guides/code-of-conduct-guide/" class="external-link">UC
 OSPO Code of Conduct Guide</a> </em>(UC-specific)<em>)</em></p>
 </div>
@@ -3067,17 +3066,17 @@ professionally managed and welcoming.</p>
 <div class="callout-content">
 <ul>
 <li>
-<a href="https://choosealicense.com/" class="external-link">Choose a License</a> — license
+<a href="https://choosealicense.com/" class="external-link">Choose a License</a>: license
 selection</li>
 <li>
 <a href="https://www.contributor-covenant.org/" class="external-link">Contributor
-Covenant</a> — code of conduct template</li>
+Covenant</a>: code of conduct template</li>
 <li>
-<a href="https://keepachangelog.com/" class="external-link">Keep a Changelog</a> —
+<a href="https://keepachangelog.com/" class="external-link">Keep a Changelog</a>:
 changelog format guide</li>
 <li>
 <a href="https://github.com/UC-OSPO-Network/templates" class="external-link">UC OSPO
-Template Repository</a> <em>(UC-specific)</em> — ready-to-use
+Template Repository</a> <em>(UC-specific)</em>: ready-to-use
 CONTRIBUTING.md, CODE_OF_CONDUCT.md, CHANGELOG.md, README.md</li>
 </ul>
 </div>
@@ -3093,7 +3092,7 @@ project is professionally managed and ready for collaboration.</p>
 <hr class="half-width">
 <p>Many institutions use repositories like <strong>Dataverse</strong> or
 <strong>Dryad</strong> for research data deposits. These are good for
-datasets but have limited software support — they don’t integrate with
+datasets but have limited software support; they don’t integrate with
 GitHub releases or mint version-specific DOIs automatically.</p>
 <p>For software, <strong>Zenodo is the recommended deposit
 location</strong> because:</p>
@@ -3116,7 +3115,7 @@ funders</li>
 <div class="callout-content">
 <p>If your institution requires or prefers a local IR (Dataverse
 instance, DSpace, etc.), you can deposit there <em>in addition</em> to
-Zenodo — not instead of it. Use the Zenodo DOI as the persistent
+Zenodo, not instead of it. Use the Zenodo DOI as the persistent
 identifier in your CITATION.cff, and note the institutional deposit in
 your README or Zenodo metadata as a related work.</p>
 <p>Some funders (NSF, NIH, Wellcome Trust) have specific deposit
@@ -3131,15 +3130,15 @@ authoritative copy lives.</p>
 <p>When you deposit software on Zenodo, the record flows into:</p>
 <ul>
 <li>
-<strong>DataCite</strong> — the DOI registration agency for research
+<strong>DataCite</strong>: the DOI registration agency for research
 data and software; DataCite records are harvested by library catalogs,
 institutional discovery systems, and tools like <a href="https://openalex.org/" class="external-link">OpenAlex</a> and <a href="http://www.scholix.org/" class="external-link">Scholix</a>
 </li>
 <li>
-<strong>Google Scholar</strong> — picks up Zenodo records with
+<strong>Google Scholar</strong>: picks up Zenodo records with
 structured metadata</li>
 <li>
-<strong>Library catalogs</strong> — many discovery layers (EBSCO, Ex
+<strong>Library catalogs</strong>: many discovery layers (EBSCO, Ex
 Libris Primo, OCLC WorldCat) harvest DataCite metadata, meaning your
 software can appear in a library search alongside journal articles</li>
 <li>
@@ -3153,15 +3152,15 @@ findability even if the DOI is valid.</p>
 <ul>
 <li>authors + ORCIDs<br>
 </li>
-<li>keywords (discipline tags, method tags, language tags — same ones
-you add to GitHub Topics)</li>
+<li>keywords (discipline tags, method tags, language tags; use the same
+ones you add to GitHub Topics)</li>
 <li>related works (link to the paper that used this software, the
 dataset it analyzes, the grant that funded it)</li>
 <li>funding references<br>
 </li>
 <li>version notes<br>
 </li>
-<li>a readable software description (2-3 sentences — think abstract, not
+<li>a readable software description (2-3 sentences; think abstract, not
 README)</li>
 </ul>
 <p>Your goal is <em>context</em>. A researcher or a librarian helping a
@@ -3362,7 +3361,7 @@ action you’ll take with your own project.</p>
 <button class="accordion-button instructor-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInstructor1" aria-expanded="false" aria-controls="collapseInstructor1">
   <h3 class="accordion-header" id="headingInstructor1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="edit-2"></i></div> Instructor Note </h3>
 </button>
-<div id="collapseInstructor1" class="accordion-collapse collapse" data-bs-parent="#accordionInstructor1" aria-labelledby="headingInstructor1">
+<div id="collapseInstructor1" class="accordion-collapse collapse" aria-labelledby="headingInstructor1" data-bs-parent="#accordionInstructor1">
 <div class="accordion-body">
 <p>Give learners a few minutes of quiet reflection, then facilitate a
 group discussion. Invite volunteers to share a step they plan to take
@@ -3389,7 +3388,7 @@ current or future project?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p>Answers may vary: making a repo public, adding a license, archiving
 on Zenodo, writing a README, creating a CITATION file, etc.</p>
@@ -3415,7 +3414,7 @@ software more FAIR.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <p>Examples:</p>
 <ul>
@@ -3481,22 +3480,21 @@ software more FAIR.</p>
 </h3>
 <ul>
 <li>
-<strong>Open Source Initiative (OSI)</strong>: <a href="https://opensource.org/licenses" class="external-link uri">https://opensource.org/licenses</a> — authoritative license
-registry</li>
+<strong>Open Source Initiative (OSI)</strong>: <a href="https://opensource.org/licenses" class="external-link uri">https://opensource.org/licenses</a> (authoritative license
+registry)</li>
 <li>
-<strong>FAIR4RS Principles</strong>: <a href="https://doi.org/10.15497/RDA00068" class="external-link uri">https://doi.org/10.15497/RDA00068</a> — the RDA/FORCE11/ReSA
-paper</li>
+<strong>FAIR4RS Principles</strong>: <a href="https://doi.org/10.15497/RDA00068" class="external-link uri">https://doi.org/10.15497/RDA00068</a> (RDA/FORCE11/ReSA
+paper)</li>
 <li>
-<strong>Software Citation Principles</strong>: <a href="https://doi.org/10.7717/peerj-cs.86" class="external-link uri">https://doi.org/10.7717/peerj-cs.86</a> — Smith et
-al. 2016</li>
+<strong>Software Citation Principles</strong>: <a href="https://doi.org/10.7717/peerj-cs.86" class="external-link uri">https://doi.org/10.7717/peerj-cs.86</a> (Smith et
+al. 2016)</li>
 <li>
-<strong>CODE Beyond FAIR</strong>: <a href="https://doi.org/10.1038/s41597-026-06705-6" class="external-link uri">https://doi.org/10.1038/s41597-026-06705-6</a> — Di Cosmo et
-al. 2026 roadmap for research software reusability; covers Software
-Heritage, institutional roles, and the library’s part in software
-metadata</li>
+<strong>CODE Beyond FAIR</strong>: <a href="https://doi.org/10.1038/s41597-026-06705-6" class="external-link uri">https://doi.org/10.1038/s41597-026-06705-6</a> (Di Cosmo et
+al. 2026; covers Software Heritage, institutional roles, and the
+library’s part in software metadata)</li>
 <li>
-<strong>Software Heritage Archive</strong>: <a href="https://www.softwareheritage.org/" class="external-link uri">https://www.softwareheritage.org/</a> — universal source
-code archive; assigns SWHIDs for long-term preservation</li>
+<strong>Software Heritage Archive</strong>: <a href="https://www.softwareheritage.org/" class="external-link uri">https://www.softwareheritage.org/</a> (universal source code
+archive; assigns SWHIDs for long-term preservation)</li>
 </ul>
 <div id="keypoints1" class="callout keypoints">
 <div class="callout-square">

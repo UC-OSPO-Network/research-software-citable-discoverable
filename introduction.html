@@ -414,9 +414,9 @@ it disappears, the science is gone.</p>
 <h3 class="callout-title">How common is this?</h3>
 <div class="callout-content">
 <p>A 2021 analysis found that over <strong>48% of research
-articles</strong> mention software — yet consistent sharing and citation
-remains the exception, not the rule. Most of that software is either
-unavailable, uncredited, or impossible to reproduce.</p>
+articles</strong> mention software, but consistent sharing and citation
+remains the exception. Most of that software is either unavailable,
+uncredited, or impossible to reproduce.</p>
 </div>
 </div>
 </div>
@@ -446,16 +446,16 @@ researchers cite code by dropping a URL into a paper:</p>
 </blockquote>
 <p><strong>Problems:</strong></p>
 <ul><li>URLs break (link rot)</li>
-<li>No version specified — which run of the code produced which
-result?</li>
-<li>No formal credit — the author’s name isn’t even visible</li>
+<li>No version specified (which run of the code produced which
+result?)</li>
+<li>No formal credit; the author’s name isn’t even visible</li>
 <li>Cannot appear in citation metrics</li>
 </ul><p><strong>This isn’t hypothetical. Forges close.</strong></p>
 <ul><li>
-<strong>Gitorious</strong> shut down in 2015 — thousands of projects
-became unreachable overnight</li>
+<strong>Gitorious</strong> shut down in 2015, making thousands of
+projects unreachable overnight</li>
 <li>
-<strong>Google Code</strong> shut down in 2016 — same result</li>
+<strong>Google Code</strong> shut down in 2016, same result</li>
 <li>A username change, a repo rename, or a deleted account breaks any
 URL-based citation just as completely</li>
 </ul><p>That citation is now dead.</p>
@@ -467,11 +467,11 @@ URL-based citation just as completely</li>
 Zenodo. <a href="https://doi.org/10.5281/zenodo.123456" class="external-link uri">https://doi.org/10.5281/zenodo.123456</a></p>
 </blockquote>
 <p><strong>Why this works:</strong></p>
-<ul><li>DOI is permanent — survives username changes, repo moves, even
-GitHub disappearing</li>
-<li>Version is explicit — someone can reproduce the exact run</li>
+<ul><li>DOI is permanent; it survives username changes, repo moves, even if
+GitHub disappears</li>
+<li>Version is explicit, so someone can reproduce the exact run</li>
 <li>Author gets formal credit and citation metrics</li>
-</ul><p>The fix is a <code>CITATION.cff</code> file and a DOI — both of which
+</ul><p>The fix is a <code>CITATION.cff</code> file and a DOI, both of which
 you’ll create in this lesson.</p>
 </div>
 </section><section><h2 class="section-heading" id="the-fix-fair4rs-principles">The Fix: FAIR4RS Principles<a class="anchor" aria-label="anchor" href="#the-fix-fair4rs-principles"></a></h2>
@@ -583,7 +583,7 @@ it?</li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p>Common challenges include:</p>
 <ul><li>No documentation of dependencies or versions</li>
@@ -615,7 +615,7 @@ What’s missing, and what would a proper software citation look like?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <p>The script should be citable as a distinct research output. Without
 citation metadata or a DOI, the software contribution goes unrecognized

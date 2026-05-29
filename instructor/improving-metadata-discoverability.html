@@ -565,10 +565,10 @@ README</a>
 <div class="callout-content">
 <ul><li>
 <a href="https://github.com/matiassingers/awesome-readme" class="external-link">Awesome
-README</a> — curated examples from real open-source projects</li>
+README</a>: curated examples from real open-source projects</li>
 <li>
 <a href="https://github.com/UC-OSPO-Network/templates/blob/main/README.md" class="external-link">UC
-OSPO README Template</a> <em>(UC-specific)</em> — ready-to-use
+OSPO README Template</a> <em>(UC-specific)</em>: ready-to-use
 template</li>
 </ul></div>
 </div>
@@ -581,8 +581,8 @@ your software.</p>
 </div>
 </section><section><h2 class="section-heading" id="beyond-the-readme-community-health-files">Beyond the README: Community Health Files<a class="anchor" aria-label="anchor" href="#beyond-the-readme-community-health-files"></a></h2>
 <hr class="half-width"><p>Beyond technical metadata, files that describe <em>how</em> to
-interact with your project are crucial for its long-term sustainability
-and “discoverability” as a welcoming project.</p>
+interact with your project matter for long-term sustainability and for
+signaling that the project is welcoming.</p>
 <p>GitHub looks for these files:</p>
 <div class="section level3">
 <h3 id="contributing-md-how-to-contribute">CONTRIBUTING.md → How to contribute<a class="anchor" aria-label="anchor" href="#contributing-md-how-to-contribute"></a></h3>
@@ -608,7 +608,7 @@ contribution is submitted</li>
 <h3 id="code_of_conduct-md-behavioral-standards">CODE_OF_CONDUCT.md → Behavioral standards<a class="anchor" aria-label="anchor" href="#code_of_conduct-md-behavioral-standards"></a></h3>
 <p>A <code>CODE_OF_CONDUCT.md</code> establishes behavioral expectations
 and ensures a safe, inclusive environment for all researchers. The
-standard choice is the <a href="https://www.contributor-covenant.org/" class="external-link">Contributor Covenant</a> —
+standard choice is the <a href="https://www.contributor-covenant.org/" class="external-link">Contributor Covenant</a>,
 widely adopted across open-source projects. <em>(See also: <a href="https://ucospo.net/oss-resources/template-guides/code-of-conduct-guide/" class="external-link">UC
 OSPO Code of Conduct Guide</a> </em>(UC-specific)<em>)</em></p>
 </div>
@@ -631,17 +631,17 @@ professionally managed and welcoming.</p>
 <h3 class="callout-title">Templates Available</h3>
 <div class="callout-content">
 <ul><li>
-<a href="https://choosealicense.com/" class="external-link">Choose a License</a> — license
+<a href="https://choosealicense.com/" class="external-link">Choose a License</a>: license
 selection</li>
 <li>
 <a href="https://www.contributor-covenant.org/" class="external-link">Contributor
-Covenant</a> — code of conduct template</li>
+Covenant</a>: code of conduct template</li>
 <li>
-<a href="https://keepachangelog.com/" class="external-link">Keep a Changelog</a> —
+<a href="https://keepachangelog.com/" class="external-link">Keep a Changelog</a>:
 changelog format guide</li>
 <li>
 <a href="https://github.com/UC-OSPO-Network/templates" class="external-link">UC OSPO
-Template Repository</a> <em>(UC-specific)</em> — ready-to-use
+Template Repository</a> <em>(UC-specific)</em>: ready-to-use
 CONTRIBUTING.md, CODE_OF_CONDUCT.md, CHANGELOG.md, README.md</li>
 </ul></div>
 </div>
@@ -653,7 +653,7 @@ project is professionally managed and ready for collaboration.</p>
 </section><section><h2 class="section-heading" id="institutional-repositories-dataverse-dryad-and-zenodo">Institutional Repositories: Dataverse, Dryad, and Zenodo<a class="anchor" aria-label="anchor" href="#institutional-repositories-dataverse-dryad-and-zenodo"></a></h2>
 <hr class="half-width"><p>Many institutions use repositories like <strong>Dataverse</strong> or
 <strong>Dryad</strong> for research data deposits. These are good for
-datasets but have limited software support — they don’t integrate with
+datasets but have limited software support; they don’t integrate with
 GitHub releases or mint version-specific DOIs automatically.</p>
 <p>For software, <strong>Zenodo is the recommended deposit
 location</strong> because:</p>
@@ -674,7 +674,7 @@ funders</li>
 <div class="callout-content">
 <p>If your institution requires or prefers a local IR (Dataverse
 instance, DSpace, etc.), you can deposit there <em>in addition</em> to
-Zenodo — not instead of it. Use the Zenodo DOI as the persistent
+Zenodo, not instead of it. Use the Zenodo DOI as the persistent
 identifier in your CITATION.cff, and note the institutional deposit in
 your README or Zenodo metadata as a related work.</p>
 <p>Some funders (NSF, NIH, Wellcome Trust) have specific deposit
@@ -686,15 +686,15 @@ authoritative copy lives.</p>
 </section><section><h2 class="section-heading" id="zenodo-and-doi-metadata">Zenodo and DOI metadata<a class="anchor" aria-label="anchor" href="#zenodo-and-doi-metadata"></a></h2>
 <hr class="half-width"><p>When you deposit software on Zenodo, the record flows into:</p>
 <ul><li>
-<strong>DataCite</strong> — the DOI registration agency for research
+<strong>DataCite</strong>: the DOI registration agency for research
 data and software; DataCite records are harvested by library catalogs,
 institutional discovery systems, and tools like <a href="https://openalex.org/" class="external-link">OpenAlex</a> and <a href="http://www.scholix.org/" class="external-link">Scholix</a>
 </li>
 <li>
-<strong>Google Scholar</strong> — picks up Zenodo records with
+<strong>Google Scholar</strong>: picks up Zenodo records with
 structured metadata</li>
 <li>
-<strong>Library catalogs</strong> — many discovery layers (EBSCO, Ex
+<strong>Library catalogs</strong>: many discovery layers (EBSCO, Ex
 Libris Primo, OCLC WorldCat) harvest DataCite metadata, meaning your
 software can appear in a library search alongside journal articles</li>
 <li>
@@ -705,13 +705,13 @@ metadata (no description, no keywords, no author ORCIDs) limits
 findability even if the DOI is valid.</p>
 <p>Add or refine:</p>
 <ul><li>authors + ORCIDs<br></li>
-<li>keywords (discipline tags, method tags, language tags — same ones
-you add to GitHub Topics)</li>
+<li>keywords (discipline tags, method tags, language tags; use the same
+ones you add to GitHub Topics)</li>
 <li>related works (link to the paper that used this software, the
 dataset it analyzes, the grant that funded it)</li>
 <li>funding references<br></li>
 <li>version notes<br></li>
-<li>a readable software description (2-3 sentences — think abstract, not
+<li>a readable software description (2-3 sentences; think abstract, not
 README)</li>
 </ul><p>Your goal is <em>context</em>. A researcher or a librarian helping a
 researcher should be able to read the Zenodo record and decide in 30

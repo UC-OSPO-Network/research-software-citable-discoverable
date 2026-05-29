@@ -496,14 +496,14 @@ managers</li>
 <div class="section level3">
 <h3 id="option-2-create-it-manually">Option 2: Create it manually<a class="anchor" aria-label="anchor" href="#option-2-create-it-manually"></a></h3>
 <p>If you prefer to write it yourself:</p>
-<p><strong>Step 1 — Create the file</strong></p>
+<p><strong>Step 1: Create the file</strong></p>
 <p>In the root of your repository:</p>
 <div class="codewrapper sourceCode" id="cb3">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" tabindex="-1" aria-label="code-block-3-1"></a><span class="fu">touch</span> CITATION.cff</span></code></pre>
 </div>
-<p><strong>Step 2 — Add minimal metadata</strong></p>
+<p><strong>Step 2: Add minimal metadata</strong></p>
 <p>Here’s a complete example from the slides:</p>
 <div class="codewrapper sourceCode" id="cb4">
 <h3 class="code-label">YAML<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -527,8 +527,8 @@ version field until Episode 4 when you create releases.</p>
 </section><section><h2 class="section-heading" id="linking-to-a-published-paper">Linking to a published paper<a class="anchor" aria-label="anchor" href="#linking-to-a-published-paper"></a></h2>
 <hr class="half-width"><p>Many researchers want users to cite a journal article
 <em>alongside</em> or <em>instead of</em> the raw software repository.
-The <code>preferred-citation</code> field handles this — it tells
-GitHub, Zotero, and other tools which reference to show first.</p>
+The <code>preferred-citation</code> field handles this: it tells GitHub,
+Zotero, and other tools which reference to show first.</p>
 <div class="codewrapper sourceCode" id="cb5">
 <h3 class="code-label">YAML<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -554,7 +554,7 @@ GitHub, Zotero, and other tools which reference to show first.</p>
 </div>
 <p>Without <code>preferred-citation</code>, GitHub shows the software
 repository citation by default. Adding it ensures that anyone clicking
-“Cite this repository” gets your paper’s citation instead — which is
+“Cite this repository” gets your paper’s citation instead, which is
 usually what you want for impact tracking.</p>
 <div id="no-paper-yet-skip-it." class="callout">
 <div class="callout-square">
@@ -571,7 +571,7 @@ without it.</p>
 </div>
 </div>
 <div class="section level3">
-<h3 id="step-3-commit-and-refresh">Step 3 — Commit and refresh<a class="anchor" aria-label="anchor" href="#step-3-commit-and-refresh"></a></h3>
+<h3 id="step-3-commit-and-refresh">Step 3: Commit and refresh<a class="anchor" aria-label="anchor" href="#step-3-commit-and-refresh"></a></h3>
 <p>After you commit the file, GitHub:</p>
 <ul><li>parses and validates it</li>
 <li>displays a “Cite this repository” panel</li>
