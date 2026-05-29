@@ -244,13 +244,13 @@ A proper citation would include: author(s), software title, version, repository 
 
 Starting from the minimal `01-start` state, you will progressively add each component:
 
-**Episode 1:** Sharing the demo repository (understanding `01-start`)
-**Episode 2:** Adding an open-source license (`02-license`)
-**Episode 3:** Managing environments with pixi (`03-pixi`) *(optional)*
-**Episode 4:** Creating a CITATION.cff file (`04-citation`)
-**Episode 5:** Minting a DOI and creating releases (`05-release`)
-**Episode 6:** Improving metadata and discoverability (`06-metadata`)
-**Episode 7:** Wrap-up and reflection
+- **Episode 1:** Sharing the demo repository (understanding `01-start`)
+- **Episode 2:** Adding an open-source license (`02-license`)
+- **Episode 3:** Managing environments with pixi (`03-pixi`) *(optional)*
+- **Episode 4:** Creating a CITATION.cff file (`04-citation`)
+- **Episode 5:** Minting a DOI and creating releases (`05-release`)
+- **Episode 6:** Improving metadata and discoverability (`06-metadata`)
+- **Episode 7:** Wrap-up and reflection
 
 Each episode builds on the previous one, following the branch progression in the demo repository.
 
