@@ -1,7 +1,7 @@
 ---
 title: "Managing Reproducible Environments with pixi"
-teaching: 12
-exercises: 3
+teaching: 15
+exercises: 5
 ---
 
 ::::::::::::::::::::::::::::::::::::: callout

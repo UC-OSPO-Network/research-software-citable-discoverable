@@ -1,7 +1,7 @@
 ---
 title: "Introduction: The \"Works on My Machine\" Trap"
 teaching: 15
-exercises: 5
+exercises: 10
 ---
 
 :::::::::::::::::::::::::::::::::::::: questions

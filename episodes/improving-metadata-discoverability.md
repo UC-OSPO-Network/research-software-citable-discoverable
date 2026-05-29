@@ -1,7 +1,7 @@
 ---
 title: "Improving Metadata and Discoverability"
-teaching: 10
-exercises: 5
+teaching: 15
+exercises: 10
 ---
 
 :::::::::::::::::::::::::::::::::::::: questions

@@ -1,6 +1,6 @@
 ---
 title: "Making Your Software Citable"
-teaching: 10
+teaching: 15
 exercises: 5
 ---
 

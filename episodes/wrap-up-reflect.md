@@ -1,7 +1,7 @@
 ---
 title: "Wrap-Up and Reflection"
 teaching: 5
-exercises: 5
+exercises: 10
 ---
 
 :::::::::::::::::::::::::::::::::::::: questions

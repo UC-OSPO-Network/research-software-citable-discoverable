@@ -61,25 +61,6 @@ The lesson episode order has been updated so pixi now comes *after* the release/
 
 ---
 
-## Timing Guidance
-
-| Episode | Teaching | Exercises | Total |
-|---|---|---|---|
-| Introduction | 15 min | 0 | 15 min |
-| Sharing Software | 8 min | 5 min | 13 min |
-| Open Source License | 8 min | 5 min | 13 min |
-| Adding a CITATION.cff File | 8 min | 5 min | 13 min |
-| Making Your Software Citable | 10 min | 5 min | 15 min |
-| Managing Environments (optional) | 12 min | 3 min | 15 min |
-| Improving Metadata | 10 min | 5 min | 15 min |
-| Wrap-up | 5 min | 0 | 5 min |
-| **Full track total** | | | **~104 min** |
-| **Citation-focused total** | | | **~89 min** |
-
-Add buffer time for setup issues, especially GitHub authentication and Zenodo Sandbox login.
-
----
-
 ## Common Sticking Points
 
 **GitHub "Cite this repository" button not appearing**
