@@ -180,8 +180,6 @@ Most research repositories don't need this — but if you're sharing a dataset a
 
 :::::::::::::::::::::::::::::::::
 
-::::::::::::::::::::::::::::::::
-
 ::::::::::::::::::::::::::::: challenge
 
 ## Challenge: Add a BSD License to Your Repository
