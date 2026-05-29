@@ -52,7 +52,8 @@ To demonstrate the "before and after" states of research software, use the provi
 4.  **GitHub Hosting**: We recommend pushing this generated repository to your GitHub account before the workshop so learners can follow along online. Commands for pushing are printed at the end of the script.
 
 Use **progressive disclosure** by showing only the top-level structure of the demo repository first.  
-If learners are new to GitHub, you may display two contrasting examples:  
+If learners are new to GitHub, you may display two contrasting examples:
+
 - a sparse, hard-to-understand repo (checkout branch `01-start`)
 - a clear, well-documented repo (checkout branch `06-metadata`)
 
@@ -129,6 +130,7 @@ Full references available on the [Reference page](../learners/reference.md#refer
 Open the **software-demo** repository you downloaded.
 
 Spend 2 minutes exploring, then answer:
+
 - Could you run this code today? What's missing?
 - Would you know who created it or how to credit them?
 - Could you legally reuse or modify it?

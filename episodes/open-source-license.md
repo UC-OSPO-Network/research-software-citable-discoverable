@@ -154,6 +154,7 @@ Software licenses (BSD, MIT, Apache) are written for *executable code*. If your 
 The standard choice for research outputs is **Creative Commons Attribution 4.0 (CC BY 4.0)**, which allows broad reuse with attribution.
 
 A common pattern:
+
 - `/src` or your code files → `BSD-3-Clause` or `MIT`
 - `/data` or `/docs` → `CC-BY-4.0`
 

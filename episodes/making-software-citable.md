@@ -156,17 +156,20 @@ To practice minting a DOI without polluting the permanent scholarly record, we w
 ### The Complete 6-Step Workflow
 
 **Step 1: Log in to Zenodo with GitHub**
+
 - Visit <https://sandbox.zenodo.org>
 - Click "Log in with GitHub"
 - Authorize Zenodo to access your repositories
 
 **Step 2: Enable your repository (toggle ON)**
+
 - Go to **Settings → GitHub** in Zenodo Sandbox
 - Find your repository in the list
 - Toggle the switch to **ON** (green)
 - This tells Zenodo to watch for new releases
 
 **Step 3: Create GitHub Release (tag v1.0.0)**
+
 - Go to your GitHub repository
 - Click **Releases → Draft a new release**
 - Create a tag: `v1.0.0`
@@ -174,12 +177,14 @@ To practice minting a DOI without polluting the permanent scholarly record, we w
 - Click **Publish release**
 
 **Step 4: Zenodo auto-archives and mints DOI**
+
 - Zenodo automatically detects your new release
 - Creates an archived snapshot
 - Assigns a permanent DOI
 - Wait a few minutes for processing
 
 **Step 5: Add DOI badge to your README**
+
 - Copy the DOI badge from your Zenodo record
 - Add it to the top of your README:
 ```markdown
@@ -187,6 +192,7 @@ To practice minting a DOI without polluting the permanent scholarly record, we w
 ```
 
 **Step 6: Update your CFF file with your DOI**
+
 - Add the DOI to your `CITATION.cff`:
 ```yaml
 doi: 10.5281/zenodo.123456

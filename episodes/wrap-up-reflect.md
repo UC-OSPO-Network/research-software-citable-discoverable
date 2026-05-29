@@ -32,12 +32,14 @@ Congratulations! You've transformed fragile research software into a FAIR softwa
 ### From Fragile to FAIR
 
 **Before (Branch: 01-start):**
+
 - ❌ No LICENSE
 - ❌ No environment
 - ❌ No citation
 - ❌ No DOI
 
 **After (Branch: 06-metadata):**
+
 - ✅ LICENSE (BSD-3)
 - ✅ Environment (pixi.toml)
 - ✅ CITATION.cff
