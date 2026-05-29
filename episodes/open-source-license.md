@@ -1,7 +1,7 @@
 ---
 title: "Choosing an Open-Source License"
-teaching: 10
-exercises: 10
+teaching: 16
+exercises: 14
 ---
 
 :::::::::::::::::::::::::::::::::::::: questions
