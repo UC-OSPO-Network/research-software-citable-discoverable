@@ -163,6 +163,7 @@ License: BDS-3 - see LICENSE file
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 It is also critical to link your metadata:
+
 - Add a **badge** for your Zenodo DOI
 - Link to your `CITATION.cff` file
 
@@ -187,6 +188,7 @@ A `CODE_OF_CONDUCT.md` establishes behavioral expectations and ensures a safe, i
 
 ### CHANGELOG.md → Version history
 A `CHANGELOG.md` documents what changed between versions. This helps users understand:
+
 - What's new in each release
 - What bugs were fixed
 - What breaking changes occurred

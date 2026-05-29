@@ -103,12 +103,14 @@ You have two options:
 The CITATION.cff community provides a web-based wizard:
 
 **Use cffinit:**
+
 - Visit: <https://citation-file-format.github.io/cffinit/>
 - Fill out the form with your software details
 - Download the generated `CITATION.cff` file
 - Add it to your repository root
 
 **Benefits:**
+
 - Interactive form guides you through required fields
 - Validates your file automatically
 - No need to memorize YAML syntax

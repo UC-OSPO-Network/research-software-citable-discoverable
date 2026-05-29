@@ -91,6 +91,7 @@ numpy = "*"
 `python = "*"` is like saying "I need some food."
 
 **Problems:**
+
 - Works today, breaks tomorrow
 - Different versions on different machines
 - "Works on my machine" syndrome
@@ -107,6 +108,7 @@ numpy = "1.24.3"
 `pixi.lock` is like saying "I need a pepperoni pizza from Mario's, baked at 5:00 PM."
 
 **Benefits:**
+
 - ✅ Exact versions locked
 - ✅ Same environment everywhere
 - ✅ Reproducible in 5 years

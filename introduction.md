@@ -84,6 +84,7 @@ Even when software works, it often doesn't get credited. Most researchers cite c
 > "We used the analysis script from https://github.com/jt14den/software-demo"
 
 **Problems:**
+
 - URLs break (link rot)
 - No version specified — which run of the code produced which result?
 - No formal credit — the author's name isn't even visible
@@ -102,6 +103,7 @@ That citation is now dead.
 > Dennis, T. (2025). *Biodiversity Analysis Toolkit* (v0.1.0). Zenodo. https://doi.org/10.5281/zenodo.123456
 
 **Why this works:**
+
 - DOI is permanent — survives username changes, repo moves, even GitHub disappearing
 - Version is explicit — someone can reproduce the exact run
 - Author gets formal credit and citation metrics
@@ -149,6 +151,7 @@ git checkout 01-start
 ```
 
 You'll see:
+
 - ❌ No LICENSE
 - ❌ Vague environment (`python = "*"`)
 - ❌ No citation information
@@ -164,6 +167,7 @@ git checkout 06-metadata
 ```
 
 Notice what's been added:
+
 - ✅ **LICENSE** (BSD-3-Clause)
 - ✅ **pixi.toml** (documented environment)
 - ✅ **CITATION.cff** (citation metadata)
@@ -185,6 +189,7 @@ Want to see a production research software project that follows these principles
 <https://github.com/spack/spack>
 
 Check their repository and notice:
+
 - ✅ README with clear description and getting started guide
 - ✅ LICENSE (MIT and Apache-2.0)
 - ✅ CITATION.cff file
