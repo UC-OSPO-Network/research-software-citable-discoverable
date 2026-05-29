@@ -66,14 +66,15 @@ contact: 'tdennis@library.ucla.edu'
 
 # Order of episodes in your lesson
 episodes:
-- why-software-citation.md
-- sharing-software.md
-- open-source-license.md
-- managing-environments-pixi.md
-- adding-citation-file.md
-- making-software-citable.md
-- improving-metadata-discoverability.md
-- wrap-up-reflect.md
+- introduction.md               # Episode 0: Problem framing, FAIR4RS, software citation — 15 min teaching
+- sharing-software.md           # Episode 1: Exploring 01-start branch
+- open-source-license.md        # Episode 2: Adding LICENSE → 02-license branch
+- adding-citation-file.md       # Episode 3: Adding CITATION.cff → 04-citation branch
+- making-software-citable.md    # Episode 4: Creating release → 05-release branch
+- managing-environments-pixi.md # Episode 5: Adding pixi → 03-pixi branch (OPTIONAL — reproducibility deep-dive)
+- improving-metadata-discoverability.md # Episode 6: Final improvements → 06-metadata branch
+- wrap-up-reflect.md            # Episode 7: Reflection and next steps
+# why-software-citation.md — merged into introduction.md (2026-05-26)
 
 # Information for Learners
 learners:

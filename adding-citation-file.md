@@ -1,7 +1,7 @@
 ---
 title: "Adding a CITATION.cff File"
-teaching: 8
-exercises: 5
+teaching: 10
+exercises: 10
 ---
 
 :::::::::::::::::::::::::::::::::::::: questions
@@ -17,6 +17,28 @@ exercises: 5
 - Explain the role of CITATION.cff in software citation.
 - Create and customize a CITATION.cff file in a GitHub repository.
 - Understand how the file connects to later steps like releases and DOIs.
+
+::::::::::::::::::::::::::::::::::::::::::::::::
+
+::::::::::::::::::::::::::::::::::::: callout
+
+### Episode Branch: `02-license` → `04-citation`
+
+This episode adds a CITATION.cff file.
+
+**Starting point:**
+```bash
+git checkout 02-license  # Start with LICENSE added
+```
+
+**After this episode:**
+```bash
+git checkout 04-citation # See the result with CITATION.cff added
+```
+
+**Catch-up point:** If joining now, run `git checkout 02-license`
+
+*Note: the `04-citation` branch also contains pixi environment files from the optional reproducibility episode. You can ignore those files for now.*
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -72,9 +94,31 @@ The point is to start small and publish useful metadata early.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
-## Add a CITATION.cff file to your repository
+## How to Create a CITATION.cff File
 
-### Step 1 — Create the file
+You have two options:
+
+### Option 1: Use cffinit (Recommended for beginners)
+
+The CITATION.cff community provides a web-based wizard:
+
+**Use cffinit:**
+- Visit: <https://citation-file-format.github.io/cffinit/>
+- Fill out the form with your software details
+- Download the generated `CITATION.cff` file
+- Add it to your repository root
+
+**Benefits:**
+- Interactive form guides you through required fields
+- Validates your file automatically
+- No need to memorize YAML syntax
+- More information on CFF: <https://citation-file-format.github.io/>
+
+### Option 2: Create it manually
+
+If you prefer to write it yourself:
+
+**Step 1 — Create the file**
 
 In the root of your repository:
 
@@ -82,20 +126,62 @@ In the root of your repository:
 touch CITATION.cff
 ```
 
-### Step 2 — Add minimal metadata
+**Step 2 — Add minimal metadata**
+
+Here's a complete example from the slides:
 
 ```yaml
 cff-version: 1.2.0
-title: MyResearchSoftware
-message: "Please cite this software using the metadata below."
+message: "If you use this software, please cite it as below."
 authors:
-  - given-names: Jane
-    family-names: Doe
-    orcid: https://orcid.org/0000-0002-1825-0097
-version: "0.1.0"
+  - family-names: "Dennis"
+    given-names: "Tim"
+    orcid: "https://orcid.org/0000-0002-1234-5678"
+title: "Biodiversity Analysis Toolkit"
+version: 0.1.0
+date-released: 2025-01-15
+url: "https://github.com/jt14den/software-demo"
 ```
 
-If your software does not yet have version tags, you may omit the version field until Episode 4.
+**GitHub creates a "Cite this repository" button automatically!**
+
+If your software does not yet have version tags, you may omit the version field until Episode 4 when you create releases.
+
+## Linking to a published paper
+
+Many researchers want users to cite a journal article *alongside* or *instead of* the raw software repository. The `preferred-citation` field handles this — it tells GitHub, Zotero, and other tools which reference to show first.
+
+```yaml
+cff-version: 1.2.0
+message: "If you use this software, please cite the paper below."
+authors:
+  - family-names: "Dennis"
+    given-names: "Tim"
+    orcid: "https://orcid.org/0000-0002-1234-5678"
+title: "Biodiversity Analysis Toolkit"
+version: 0.1.0
+date-released: 2025-01-15
+url: "https://github.com/jt14den/software-demo"
+preferred-citation:
+  type: article
+  title: "Biodiversity Analysis at Scale: Methods and Software"
+  authors:
+    - family-names: "Dennis"
+      given-names: "Tim"
+  journal: "Journal of Open Source Software"
+  year: 2025
+  doi: "10.21105/joss.00000"
+```
+
+Without `preferred-citation`, GitHub shows the software repository citation by default. Adding it ensures that anyone clicking "Cite this repository" gets your paper's citation instead — which is usually what you want for impact tracking.
+
+::::::::::::::::::::::::::::::::::::: callout
+
+### No paper yet? Skip it.
+
+Leave out `preferred-citation` if you don't have a published article. You can add it later. The rest of the file works fine without it.
+
+::::::::::::::::::::::::::::::::::::::::::::::::
 
 ### Step 3 — Commit and refresh
 

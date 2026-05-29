@@ -1,6 +1,6 @@
 ---
 title: "Making Your Software Citable"
-teaching: 10
+teaching: 15
 exercises: 5
 ---
 
@@ -17,6 +17,26 @@ exercises: 5
 - Describe why software citation matters in research.
 - Create a versioned release in GitHub.
 - Understand when and why to mint a DOI with Zenodo.
+
+::::::::::::::::::::::::::::::::::::::::::::::::
+
+::::::::::::::::::::::::::::::::::::: callout
+
+### Episode Branch: `04-citation` → `05-release`
+
+This episode creates a release and tag.
+
+**Starting point:**
+```bash
+git checkout 04-citation # Start with LICENSE and CITATION.cff
+```
+
+**After this episode:**
+```bash
+git checkout 05-release  # See the result with v0.1.0 tag
+```
+
+**Catch-up point:** If joining now, run `git checkout 04-citation`
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -37,7 +57,6 @@ So far in this lesson, you have:
 
 - shared a public repository  
 - added a license  
-- created reproducible environments with `pixi`  
 - added a `CITATION.cff` file  
 
 In this episode, you will create a **GitHub release** and learn how DOIs fit into software citation workflows.
@@ -134,13 +153,89 @@ Clear release notes help both people and tools interpret your software’s evolu
 
 To practice minting a DOI without polluting the permanent scholarly record, we will use **Zenodo Sandbox**. It works exactly like the real Zenodo but is for testing.
 
-### Steps
+### The Complete 6-Step Workflow
 
-1. Sign in at <https://sandbox.zenodo.org> using your GitHub account.  
-2. In Zenodo Sandbox, go to **Settings → GitHub** and enable archiving for your repository.  
-3. Go back to GitHub and **Create a new release** (e.g., `v0.2.0`).  
-4. Zenodo Sandbox will automatically detect the new release and assign a "concept" DOI.  
-5. You can now start using this DOI in your documentation!
+**Step 1: Log in to Zenodo with GitHub**
+- Visit <https://sandbox.zenodo.org>
+- Click "Log in with GitHub"
+- Authorize Zenodo to access your repositories
+
+**Step 2: Enable your repository (toggle ON)**
+- Go to **Settings → GitHub** in Zenodo Sandbox
+- Find your repository in the list
+- Toggle the switch to **ON** (green)
+- This tells Zenodo to watch for new releases
+
+**Step 3: Create GitHub Release (tag v1.0.0)**
+- Go to your GitHub repository
+- Click **Releases → Draft a new release**
+- Create a tag: `v1.0.0`
+- Add release notes describing what's in this version
+- Click **Publish release**
+
+**Step 4: Zenodo auto-archives and mints DOI**
+- Zenodo automatically detects your new release
+- Creates an archived snapshot
+- Assigns a permanent DOI
+- Wait a few minutes for processing
+
+**Step 5: Add DOI badge to your README**
+- Copy the DOI badge from your Zenodo record
+- Add it to the top of your README:
+```markdown
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.123456.svg)](https://doi.org/10.5281/zenodo.123456)
+```
+
+**Step 6: Update your CFF file with your DOI**
+- Add the DOI to your `CITATION.cff`:
+```yaml
+doi: 10.5281/zenodo.123456
+```
+
+**Result:** You now have LICENSE, CITATION.cff, and DOI.
+
+::::::::::::::::::::::::::::::::::::: callout
+
+### Now You Have Everything
+
+✅ **F - Findable:** Added DOI, CITATION.cff, rich metadata
+✅ **A - Accessible:** Public GitHub, archived on Zenodo
+✅ **I - Interoperable:** Standard formats (YAML, CFF)
+✅ **R - Reusable:** LICENSE (BSD-3), README with setup
+
+::::::::::::::::::::::::::::::::::::::::::::::::
+
+**Even if GitHub disappears, your DOI still works.**
+
+::::::::::::::::::::::::::::::::::::: callout
+
+### Going further: Software Heritage
+
+Zenodo archives a snapshot of your code at release time. [Software Heritage](https://www.softwareheritage.org/) goes further — it continuously crawls GitHub, GitLab, and other forges and archives *everything*, assigning a **SWHID** (Software Heritage Identifier) to every file, directory, commit, and release.
+
+A SWHID looks like this:
+
+```
+swh:1:rel:22ece559cc7cc2364edc5e5593d63ae8bd229f9f
+```
+
+It points to an exact, immutable snapshot that survives forge closures (Gitorious shut down in 2015; Google Code in 2016 — both made thousands of repos unreachable). Your Zenodo DOI is the right identifier for citation; a SWHID is the long-term preservation record.
+
+**To find and record your SWHID:**
+
+1. Go to <https://archive.softwareheritage.org/>
+2. Paste your GitHub repository URL into the search box
+3. If your repo is already archived, copy the SWHID for your release
+4. If it hasn't been crawled yet, click **Save code now** to trigger immediate archival
+5. Once archived, add the SWHID to your `CITATION.cff`:
+
+```yaml
+repository-artifact: "swh:1:rel:22ece559cc7cc2364edc5e5593d63ae8bd229f9f"
+```
+
+This approach is recommended in the 2026 *CODE Beyond FAIR* roadmap (Di Cosmo et al., *Scientific Data*).
+
+::::::::::::::::::::::::::::::::::::::::::::::::
 
 :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: instructor
 

@@ -1,7 +1,7 @@
 ---
 title: "Choosing an Open-Source License"
-teaching: 8
-exercises: 5
+teaching: 10
+exercises: 10
 ---
 
 :::::::::::::::::::::::::::::::::::::: questions
@@ -22,6 +22,26 @@ exercises: 5
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
+::::::::::::::::::::::::::::::::::::: callout
+
+### Episode Branch: `01-start` → `02-license`
+
+This episode adds a LICENSE file to the repository.
+
+**Starting point:**
+```bash
+git checkout 01-start    # Start from the beginning
+```
+
+**After this episode:**
+```bash
+git checkout 02-license  # See the result with LICENSE added
+```
+
+**Catch-up point:** If joining now, run `git checkout 01-start`
+
+::::::::::::::::::::::::::::::::::::::::::::::::
+
 ## Why licensing matters
 
 When researchers publish code without a license, most people assume it is "public." Legally, it is not. Copyright law applies automatically. Without a license, others cannot legally reuse, modify, or redistribute the code.
@@ -30,13 +50,13 @@ Clear licensing communicates permission and expectations, reducing friction and 
 
 ::::::::::::::::::::::::::::::: callout
 
-### UC Context: Working with Tech Transfer
+### Institutional Context: Who Owns Your Software?
 
-At the University of California, software created using university resources is typically owned by **The Regents of the University of California**. Before releasing code under an open-source license, you must check with your campus **Tech Transfer office** (sometimes called the Office of Intellectual Property or Technology Commercialization). They will:
+At most universities, software created using institutional resources is owned by the institution, not the individual researcher. Before releasing code under an open-source license, check with your **Technology Transfer or Intellectual Property office**. They will verify ownership, funding requirements, and any third-party restrictions.
 
-* Verify ownership and funding requirements.
-* Ensure no third-party restrictions apply (e.g., from proprietary libraries).
-* Help you select the most appropriate license from the [UC-approved list](https://security.ucop.edu/resources/open-source-software-licensing.html).
+**If you are at a UC campus:** software is typically owned by *The Regents of the University of California*. Your campus Tech Transfer office can help you select from the [UC-approved license list](https://security.ucop.edu/resources/open-source-software-licensing.html). *(UC-specific)*
+
+**At other institutions:** check with your research computing, library, or legal office. Most will have a similar process and a list of preferred licenses.
 
 ::::::::::::::::::::::::::::::::
 
@@ -52,7 +72,7 @@ These allow broad reuse with minimal restrictions.
 Anyone can copy, modify, or redistribute the code.
 They are common in research because they're simple and maximize flexibility.
 
-**The UC system recommends BSD licenses** as the first choice for most projects because they:
+**BSD licenses are a common first choice at many research institutions** because they:
 
 * originated at UC Berkeley
 * are simple to understand
@@ -75,15 +95,15 @@ The UC system does **not recommend GPL 3.0** for university-owned software due t
 
 ::::::::::::::::::::::::::::::::
 
-## How to choose a license for your UC project
+## How to choose a license
 
-The UC Open Source Software Workgroup identified five "low-risk" licenses suitable for most projects. Here's a decision guide:
+Five "low-risk" licenses are suitable for most research projects. Here's a decision guide:
 
 ``` mermaid
 graph TD
     Start[Starting a new UC research software project?] --> Check{Do you have<br/>special requirements?}
     
-    Check -->|No special needs| BSD[Use BSD 3-Clause<br/>✓ UC's primary recommendation<br/>✓ Simple and protective<br/>✓ Widely compatible]
+    Check -->|No special needs| BSD[Use BSD 3-Clause<br/>✓ Common research default<br/>✓ Simple and protective<br/>✓ Widely compatible]
     
     Check -->|Need simpler text| MIT[Use MIT License<br/>✓ Nearly identical to BSD<br/>✓ Shorter, easier to read<br/>✓ Very popular]
     
@@ -114,36 +134,63 @@ graph TD
 
 ### Quick reference
 
-| Your need | Recommended license | Why |
-|-----------|-------------------|-----|
-| Default / most projects | BSD 3-Clause | UC's standard recommendation |
-| Simplest possible | MIT | Minimal text, very popular |
-| Industry collaboration | Apache 2.0 | Explicit patent terms |
-| Educational focus | ECL 2.0 | Education-specific variant |
+| Your need | Recommended license | SPDX identifier | Why |
+|-----------|-------------------|-----------------|-----|
+| Default / most projects | BSD 3-Clause | `BSD-3-Clause` | Common default at research institutions |
+| Simplest possible | MIT | `MIT` | Minimal text, very popular |
+| Industry collaboration | Apache 2.0 | `Apache-2.0` | Explicit patent terms |
+| Educational focus | ECL 2.0 | `ECL-2.0` | Education-specific variant |
 
-**Always consult your campus Tech Transfer office before releasing UC-owned software.**
+The **SPDX identifier** is the short, machine-readable code used by GitHub, Zenodo, and your `CITATION.cff` file to communicate your license automatically. When GitHub shows a license badge in the sidebar, it's reading the SPDX identifier.
+
+**Always consult your institution's Tech Transfer or IP office before releasing software created with institutional resources.**
+
+::::::::::::::::::::::::::::::::::::: callout
+
+### What about data and documentation?
+
+Software licenses (BSD, MIT, Apache) are written for *executable code*. If your repository also contains datasets, figures, or documentation, those files need a separate license.
+
+The standard choice for research outputs is **Creative Commons Attribution 4.0 (CC BY 4.0)**, which allows broad reuse with attribution.
+
+A common pattern:
+- `/src` or your code files → `BSD-3-Clause` or `MIT`
+- `/data` or `/docs` → `CC-BY-4.0`
+
+You can note this split in your README and in `CITATION.cff` under the `license` field, which accepts a list:
+
+```yaml
+license:
+  - BSD-3-Clause
+  - CC-BY-4.0
+```
+
+Most research repositories don't need this — but if you're sharing a dataset alongside code, it's worth thinking through.
+
+:::::::::::::::::::::::::::::::::::::::::::::::::
 
 :::::::::::::::::::::::::::::: callout
 
-### UC Resources
+### Resources
 
-* [UC OSPO License Guide](https://ucospo.net/oss-resources/template-guides/license-guide/) – Guidance on institutional requirements and templates.
-* [UC OSS Chart and Companion Guide](https://security.ucop.edu/resources/open-source-software-licensing.html) – The definitive list of UC-approved "low-risk" licenses.
-* [ChooseALicense.com](https://choosealicense.com/) – A helpful tool for comparing license features.
+* [ChooseALicense.com](https://choosealicense.com/) – Compare features across all common licenses.
+* [SPDX License List](https://spdx.org/licenses/) – Authoritative registry of license identifiers used in CITATION.cff and package metadata.
+* [UC OSPO License Guide](https://ucospo.net/oss-resources/template-guides/license-guide/) *(UC-specific)* – UC institutional requirements and templates.
+* [UC OSS Chart and Companion Guide](https://security.ucop.edu/resources/open-source-software-licensing.html) *(UC-specific)* – UC-approved "low-risk" license list.
 
-::::::::::::::::::::::::::::::::
+:::::::::::::::::::::::::::::::::
 
 ::::::::::::::::::::::::::::: challenge
 
 ## Challenge: Add a BSD License to Your Repository
 
-Following UC recommendations, we will add the BSD 3-Clause license to your demo repository:
+We will add the BSD 3-Clause license to your demo repository:
 
 1. Navigate to your repository on GitHub.
 2. Click **Add file** → **Create new file**.
 3. Name it `LICENSE` (or `LICENSE.txt`).
 4. Click **Choose a license template** and select **BSD 3-Clause License**.
-5. **CRITICAL:** Update the copyright holder to: `The Regents of the University of California`.
+5. Update the copyright holder to reflect who owns the software. At UC campuses this is `The Regents of the University of California`; at other institutions check with your Tech Transfer office. *(If this is a personal project, use your own name.)*
 6. Update the year to 2026.
 7. Commit the file to your `main` branch.
 
@@ -211,9 +258,9 @@ In this episode, you added a BSD license to a repository following UC recommenda
 ::::::::::::::: keypoints
 
 * Without a license, software is legally restricted and not reusable
-* UC recommends BSD 3-Clause as the default license for most projects
+* BSD 3-Clause is a common default at research institutions; MIT and Apache 2.0 are strong alternatives
 * Permissive licenses (BSD, MIT, Apache 2.0) maximize flexibility and adoption
-* Always consult your campus Tech Transfer office for UC-owned software
+* Always consult your institution's Tech Transfer or IP office before releasing institutionally-owned software
 * GitHub makes adding standard licenses straightforward
 
 :::::::::::::::
