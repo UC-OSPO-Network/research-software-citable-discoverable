@@ -2,41 +2,44 @@
 title: Setup
 ---
 
-## Software and Accounts Needed
+## Which track is your workshop running?
 
-Before starting the lesson, please make sure you have access to:
+Check with your instructor before installing anything.
 
-- **A GitHub account** — required for editing files, adding a CITATION.cff, and improving repository metadata  
-- **Git** — for basic version control tasks and interacting with repositories  
-- **A text editor** (such as VS Code, VS Codium, Atom, Sublime, or a built-in editor)  
-- **pixi (optional but recommended)** — a lightweight tool for creating reproducible environments if you want to test packaging or run example code  
-- **A web browser** — for GitHub-based workflows
+**Citation-focused track** — covers licensing, CITATION.cff, releases, DOIs, and metadata. This is the default. No pixi needed.
 
-This lesson does **not** require heavy coding, installation of full scientific environments, or running large datasets.  
-All essential tasks can be performed directly in GitHub’s web interface.
-
-Learners who want to experiment with environment files or run small examples locally may choose to install pixi.
+**Full track** — adds an optional episode on reproducible environment management with pixi. Only install pixi if your instructor confirms you are running the full track.
 
 ---
 
-## Recommended Tools
+## Required for all tracks
 
-### Visual Studio Code (VS Code)
-A convenient editor with integrated terminal support.  
-Download from: https://code.visualstudio.com/
+- **A GitHub account** — for editing files, adding a CITATION.cff, and improving repository metadata
+- **Git** — for basic version control and interacting with the demo repository
+- **A web browser** — most lesson activities work entirely in GitHub’s web interface
+
+A text editor (VS Code, VS Codium, Sublime, etc.) is useful but not required — GitHub’s built-in editor works for everything in this lesson.
+
+---
+
+## Full track only: pixi
+
+**Only install pixi if your instructor has confirmed you are doing the full track.**
+
+pixi is a fast, modern environment and package manager used in the optional reproducibility episode. If you are on the citation-focused track, skip this section entirely.
+
+---
+
+## Installation
 
 ### Git
-Most systems already include Git. If not, installation instructions are available at:  
-https://git-scm.com/downloads
+Most systems already include Git. If not:
+- All platforms: <https://git-scm.com/downloads>
+- Windows users may prefer **Git for Windows**, which includes Git Bash
 
-Windows users may prefer **Git for Windows**, which includes Git Bash.
-
-### pixi (optional)
-pixi is a fast, modern environment and package manager that helps create reproducible project environments.  
-Installation instructions:  
-https://pixi.sh/latest/
-
-If pixi is not installed, all core lesson activities will still work.
+### pixi (full track only)
+Install only if your instructor confirmed you are on the full track:
+<https://pixi.sh/latest/>
 
 ---
 
@@ -82,20 +85,17 @@ Each episode will tell you which branch to check out if you need to skip ahead.
 
 ## What To Check Before the Workshop
 
-Please ensure the following commands work in your terminal:
+Confirm Git is installed:
 
-``` bash
+```bash
 git --version
 ```
 
-If you choose to install pixi:
+**Full track only** — confirm pixi is installed:
 
-``` bash
+```bash
 pixi --version
 ```
-
-
-These commands confirm Git and pixi are correctly installed.
 
 ---
 
@@ -116,9 +116,9 @@ You do **not** need SSH keys or personal access tokens for this lesson.
 
 ### Instructor Notes
 
-**Timing:**  
-- Allow 5–10 minutes at the beginning to confirm learners can access GitHub and open a repository.  
-- An additional 5 minutes may be needed if learners choose to install pixi.
+**Timing:**
+- Allow 5–10 minutes at the start to confirm GitHub access.
+- If running the full track, allow an additional 5 minutes for pixi installation issues. Verify pixi is installed before the workshop — do not let learners discover it is missing mid-episode.
 
 **Verification:**  
 Ask learners to visit a GitHub repository, click “Edit”, and confirm they can commit changes to a fork.  
