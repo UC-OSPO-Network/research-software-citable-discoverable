@@ -157,8 +157,8 @@ License: BDS-3 - see LICENSE file
 
 ### Don't Reinvent the Wheel
 
-- [Awesome README](https://github.com/matiassingers/awesome-readme) — curated examples from real open-source projects
-- [UC OSPO README Template](https://github.com/UC-OSPO-Network/templates/blob/main/README.md) *(UC-specific)* — ready-to-use template
+- [Awesome README](https://github.com/matiassingers/awesome-readme): curated examples from real open-source projects
+- [UC OSPO README Template](https://github.com/UC-OSPO-Network/templates/blob/main/README.md) *(UC-specific)*: ready-to-use template
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -171,7 +171,7 @@ A structured README ensures researchers can quickly evaluate and use your softwa
 
 ## Beyond the README: Community Health Files
 
-Beyond technical metadata, files that describe *how* to interact with your project are crucial for its long-term sustainability and "discoverability" as a welcoming project.
+Beyond technical metadata, files that describe *how* to interact with your project matter for long-term sustainability and for signaling that the project is welcoming.
 
 GitHub looks for these files:
 
@@ -184,7 +184,7 @@ The `CONTRIBUTING.md` file is the first place new contributors look to see if a 
 - **Pull Request Lifecycle**: What happens after a contribution is submitted
 
 ### CODE_OF_CONDUCT.md → Behavioral standards
-A `CODE_OF_CONDUCT.md` establishes behavioral expectations and ensures a safe, inclusive environment for all researchers. The standard choice is the [Contributor Covenant](https://www.contributor-covenant.org/) — widely adopted across open-source projects. *(See also: [UC OSPO Code of Conduct Guide](https://ucospo.net/oss-resources/template-guides/code-of-conduct-guide/) *(UC-specific)*)*
+A `CODE_OF_CONDUCT.md` establishes behavioral expectations and ensures a safe, inclusive environment for all researchers. The standard choice is the [Contributor Covenant](https://www.contributor-covenant.org/), widely adopted across open-source projects. *(See also: [UC OSPO Code of Conduct Guide](https://ucospo.net/oss-resources/template-guides/code-of-conduct-guide/) *(UC-specific)*)*
 
 ### CHANGELOG.md → Version history
 A `CHANGELOG.md` documents what changed between versions. This helps users understand:
@@ -200,10 +200,10 @@ A `CHANGELOG.md` documents what changed between versions. This helps users under
 
 ### Templates Available
 
-- [Choose a License](https://choosealicense.com/) — license selection
-- [Contributor Covenant](https://www.contributor-covenant.org/) — code of conduct template
-- [Keep a Changelog](https://keepachangelog.com/) — changelog format guide
-- [UC OSPO Template Repository](https://github.com/UC-OSPO-Network/templates) *(UC-specific)* — ready-to-use CONTRIBUTING.md, CODE_OF_CONDUCT.md, CHANGELOG.md, README.md
+- [Choose a License](https://choosealicense.com/): license selection
+- [Contributor Covenant](https://www.contributor-covenant.org/): code of conduct template
+- [Keep a Changelog](https://keepachangelog.com/): changelog format guide
+- [UC OSPO Template Repository](https://github.com/UC-OSPO-Network/templates) *(UC-specific)*: ready-to-use CONTRIBUTING.md, CODE_OF_CONDUCT.md, CHANGELOG.md, README.md
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -213,7 +213,7 @@ Adding these files to your repository root helps GitHub display a "Community Sta
 
 ## Institutional Repositories: Dataverse, Dryad, and Zenodo
 
-Many institutions use repositories like **Dataverse** or **Dryad** for research data deposits. These are good for datasets but have limited software support — they don't integrate with GitHub releases or mint version-specific DOIs automatically.
+Many institutions use repositories like **Dataverse** or **Dryad** for research data deposits. These are good for datasets but have limited software support; they don't integrate with GitHub releases or mint version-specific DOIs automatically.
 
 For software, **Zenodo is the recommended deposit location** because:
 
@@ -226,7 +226,7 @@ For software, **Zenodo is the recommended deposit location** because:
 
 ### What about your institution's repository?
 
-If your institution requires or prefers a local IR (Dataverse instance, DSpace, etc.), you can deposit there *in addition* to Zenodo — not instead of it. Use the Zenodo DOI as the persistent identifier in your CITATION.cff, and note the institutional deposit in your README or Zenodo metadata as a related work.
+If your institution requires or prefers a local IR (Dataverse instance, DSpace, etc.), you can deposit there *in addition* to Zenodo, not instead of it. Use the Zenodo DOI as the persistent identifier in your CITATION.cff, and note the institutional deposit in your README or Zenodo metadata as a related work.
 
 Some funders (NSF, NIH, Wellcome Trust) have specific deposit requirements. Check your award terms before deciding where the authoritative copy lives.
 
@@ -236,9 +236,9 @@ Some funders (NSF, NIH, Wellcome Trust) have specific deposit requirements. Chec
 
 When you deposit software on Zenodo, the record flows into:
 
-- **DataCite** — the DOI registration agency for research data and software; DataCite records are harvested by library catalogs, institutional discovery systems, and tools like [OpenAlex](https://openalex.org/) and [Scholix](http://www.scholix.org/)
-- **Google Scholar** — picks up Zenodo records with structured metadata
-- **Library catalogs** — many discovery layers (EBSCO, Ex Libris Primo, OCLC WorldCat) harvest DataCite metadata, meaning your software can appear in a library search alongside journal articles
+- **DataCite**: the DOI registration agency for research data and software; DataCite records are harvested by library catalogs, institutional discovery systems, and tools like [OpenAlex](https://openalex.org/) and [Scholix](http://www.scholix.org/)
+- **Google Scholar**: picks up Zenodo records with structured metadata
+- **Library catalogs**: many discovery layers (EBSCO, Ex Libris Primo, OCLC WorldCat) harvest DataCite metadata, meaning your software can appear in a library search alongside journal articles
 - **Domain repositories** that harvest DOIs
 
 What this means practically: the metadata you put into your Zenodo record is the metadata that librarians and discovery systems see. Thin metadata (no description, no keywords, no author ORCIDs) limits findability even if the DOI is valid.
@@ -246,11 +246,11 @@ What this means practically: the metadata you put into your Zenodo record is the
 Add or refine:
 
 - authors + ORCIDs  
-- keywords (discipline tags, method tags, language tags — same ones you add to GitHub Topics)
+- keywords (discipline tags, method tags, language tags; use the same ones you add to GitHub Topics)
 - related works (link to the paper that used this software, the dataset it analyzes, the grant that funded it)
 - funding references  
 - version notes  
-- a readable software description (2-3 sentences — think abstract, not README)
+- a readable software description (2-3 sentences; think abstract, not README)
 
 Your goal is *context*. A researcher or a librarian helping a researcher should be able to read the Zenodo record and decide in 30 seconds whether this software is relevant to them.
 

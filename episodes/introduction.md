@@ -58,7 +58,7 @@ This concrete error message resonates with learners who have experienced depende
 
 ### How common is this?
 
-A 2021 analysis found that over **48% of research articles** mention software — yet consistent sharing and citation remains the exception, not the rule. Most of that software is either unavailable, uncredited, or impossible to reproduce.
+A 2021 analysis found that over **48% of research articles** mention software, but consistent sharing and citation remains the exception. Most of that software is either unavailable, uncredited, or impossible to reproduce.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -86,14 +86,14 @@ Even when software works, it often doesn't get credited. Most researchers cite c
 **Problems:**
 
 - URLs break (link rot)
-- No version specified — which run of the code produced which result?
-- No formal credit — the author's name isn't even visible
+- No version specified (which run of the code produced which result?)
+- No formal credit; the author's name isn't even visible
 - Cannot appear in citation metrics
 
 **This isn't hypothetical. Forges close.**
 
-- **Gitorious** shut down in 2015 — thousands of projects became unreachable overnight
-- **Google Code** shut down in 2016 — same result
+- **Gitorious** shut down in 2015, making thousands of projects unreachable overnight
+- **Google Code** shut down in 2016, same result
 - A username change, a repo rename, or a deleted account breaks any URL-based citation just as completely
 
 That citation is now dead.
@@ -104,11 +104,11 @@ That citation is now dead.
 
 **Why this works:**
 
-- DOI is permanent — survives username changes, repo moves, even GitHub disappearing
-- Version is explicit — someone can reproduce the exact run
+- DOI is permanent; it survives username changes, repo moves, even if GitHub disappears
+- Version is explicit, so someone can reproduce the exact run
 - Author gets formal credit and citation metrics
 
-The fix is a `CITATION.cff` file and a DOI — both of which you'll create in this lesson.
+The fix is a `CITATION.cff` file and a DOI, both of which you'll create in this lesson.
 
 ## The Fix: FAIR4RS Principles
 

@@ -6,19 +6,19 @@ title: Setup
 
 Check with your instructor before installing anything.
 
-**Citation-focused track** — covers licensing, CITATION.cff, releases, DOIs, and metadata. This is the default. No pixi needed.
+**Citation-focused track**: covers licensing, CITATION.cff, releases, DOIs, and metadata. This is the default. No pixi needed.
 
-**Full track** — adds an optional episode on reproducible environment management with pixi. Only install pixi if your instructor confirms you are running the full track.
+**Full track**: adds an optional episode on reproducible environment management with pixi. Only install pixi if your instructor confirms you are running the full track.
 
 ---
 
 ## Required for all tracks
 
-- **A GitHub account** — for editing files, adding a CITATION.cff, and improving repository metadata
-- **Git** — for basic version control and interacting with the demo repository
-- **A web browser** — most lesson activities work entirely in GitHub’s web interface
+- **A GitHub account**: for editing files, adding a CITATION.cff, and improving repository metadata
+- **Git**: for basic version control and interacting with the demo repository
+- **A web browser**: most lesson activities work entirely in GitHub’s web interface
 
-A text editor (VS Code, VS Codium, Sublime, etc.) is useful but not required — GitHub’s built-in editor works for everything in this lesson.
+A text editor (VS Code, VS Codium, Sublime, etc.) is useful but not required; GitHub’s built-in editor works for everything in this lesson.
 
 ---
 
@@ -60,12 +60,12 @@ cd software-demo
 
 The repository has branches for each lesson stage:
 
-- `01-start` — Initial state (minimal project)
-- `02-license` — Added BSD 3-Clause License
-- `03-pixi` — Added pixi environment management
-- `04-citation` — Added CITATION.cff file
-- `05-release` — Tagged release v0.1.0
-- `06-metadata` — Final state (complete documentation)
+- `01-start`: initial state (minimal project)
+- `02-license`: LICENSE file added
+- `03-pixi`: pixi environment management added
+- `04-citation`: CITATION.cff added
+- `05-release`: tagged release v0.1.0
+- `06-metadata`: final state (complete documentation)
 
 ### Catching Up During the Lesson
 
@@ -91,7 +91,7 @@ Confirm Git is installed:
 git --version
 ```
 
-**Full track only** — confirm pixi is installed:
+**Full track only**: confirm pixi is installed:
 
 ```bash
 pixi --version
@@ -118,7 +118,7 @@ You do **not** need SSH keys or personal access tokens for this lesson.
 
 **Timing:**
 - Allow 5–10 minutes at the start to confirm GitHub access.
-- If running the full track, allow an additional 5 minutes for pixi installation issues. Verify pixi is installed before the workshop — do not let learners discover it is missing mid-episode.
+- If running the full track, allow an additional 5 minutes for pixi installation issues. Verify pixi is installed before the workshop; do not let learners discover it is missing mid-episode.
 
 **Verification:**  
 Ask learners to visit a GitHub repository, click “Edit”, and confirm they can commit changes to a fork.  

@@ -120,7 +120,7 @@ The CITATION.cff community provides a web-based wizard:
 
 If you prefer to write it yourself:
 
-**Step 1 — Create the file**
+**Step 1: Create the file**
 
 In the root of your repository:
 
@@ -128,7 +128,7 @@ In the root of your repository:
 touch CITATION.cff
 ```
 
-**Step 2 — Add minimal metadata**
+**Step 2: Add minimal metadata**
 
 Here's a complete example from the slides:
 
@@ -151,7 +151,7 @@ If your software does not yet have version tags, you may omit the version field 
 
 ## Linking to a published paper
 
-Many researchers want users to cite a journal article *alongside* or *instead of* the raw software repository. The `preferred-citation` field handles this — it tells GitHub, Zotero, and other tools which reference to show first.
+Many researchers want users to cite a journal article *alongside* or *instead of* the raw software repository. The `preferred-citation` field handles this: it tells GitHub, Zotero, and other tools which reference to show first.
 
 ```yaml
 cff-version: 1.2.0
@@ -175,7 +175,7 @@ preferred-citation:
   doi: "10.21105/joss.00000"
 ```
 
-Without `preferred-citation`, GitHub shows the software repository citation by default. Adding it ensures that anyone clicking "Cite this repository" gets your paper's citation instead — which is usually what you want for impact tracking.
+Without `preferred-citation`, GitHub shows the software repository citation by default. Adding it ensures that anyone clicking "Cite this repository" gets your paper's citation instead, which is usually what you want for impact tracking.
 
 ::::::::::::::::::::::::::::::::::::: callout
 
@@ -185,7 +185,7 @@ Leave out `preferred-citation` if you don't have a published article. You can ad
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
-### Step 3 — Commit and refresh
+### Step 3: Commit and refresh
 
 After you commit the file, GitHub:
 

@@ -109,11 +109,11 @@ Examples:
 - **UC Open Source Program Office (OSPO) Network**: <https://ucospo.net/>
 
 ### General Open Source Resources
-- **Open Source Initiative (OSI)**: <https://opensource.org/licenses> — authoritative license registry
-- **FAIR4RS Principles**: <https://doi.org/10.15497/RDA00068> — the RDA/FORCE11/ReSA paper
-- **Software Citation Principles**: <https://doi.org/10.7717/peerj-cs.86> — Smith et al. 2016
-- **CODE Beyond FAIR**: <https://doi.org/10.1038/s41597-026-06705-6> — Di Cosmo et al. 2026 roadmap for research software reusability; covers Software Heritage, institutional roles, and the library's part in software metadata
-- **Software Heritage Archive**: <https://www.softwareheritage.org/> — universal source code archive; assigns SWHIDs for long-term preservation
+- **Open Source Initiative (OSI)**: <https://opensource.org/licenses> (authoritative license registry)
+- **FAIR4RS Principles**: <https://doi.org/10.15497/RDA00068> (RDA/FORCE11/ReSA paper)
+- **Software Citation Principles**: <https://doi.org/10.7717/peerj-cs.86> (Smith et al. 2016)
+- **CODE Beyond FAIR**: <https://doi.org/10.1038/s41597-026-06705-6> (Di Cosmo et al. 2026; covers Software Heritage, institutional roles, and the library's part in software metadata)
+- **Software Heritage Archive**: <https://www.softwareheritage.org/> (universal source code archive; assigns SWHIDs for long-term preservation)
 
 ::::::::::::::::::::::::::::::::::::: keypoints
 
