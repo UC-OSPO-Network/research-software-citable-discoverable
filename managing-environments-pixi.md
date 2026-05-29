@@ -1,6 +1,6 @@
 ---
 title: "Managing Reproducible Environments with pixi"
-teaching: 15
+teaching: 19
 exercises: 5
 ---
 

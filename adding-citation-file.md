@@ -1,7 +1,7 @@
 ---
 title: "Adding a CITATION.cff File"
-teaching: 10
-exercises: 10
+teaching: 15
+exercises: 13
 ---
 
 :::::::::::::::::::::::::::::::::::::: questions

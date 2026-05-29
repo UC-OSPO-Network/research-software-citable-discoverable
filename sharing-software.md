@@ -1,6 +1,6 @@
 ---
 title: "Sharing Research Software Effectively"
-teaching: 8
+teaching: 5
 exercises: 10
 ---
 
