@@ -236,7 +236,7 @@
 <div class="accordion accordion-flush" id="accordionFlush2">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading2">
-        <a href="why-software-citation.html">1. Why Make Software Citable?</a>
+        <a href="introduction.html">1. Introduction: The "Works on My Machine" Trap</a>
     </div>
 <!--/div.accordion-header-->
 
@@ -272,7 +272,7 @@
 <div class="accordion accordion-flush" id="accordionFlush5">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading5">
-        <a href="managing-environments-pixi.html">4. Managing Reproducible Environments with pixi</a>
+        <a href="adding-citation-file.html">4. Adding a CITATION.cff File</a>
     </div>
 <!--/div.accordion-header-->
 
@@ -284,7 +284,7 @@
 <div class="accordion accordion-flush" id="accordionFlush6">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading6">
-        <a href="adding-citation-file.html">5. Adding a CITATION.cff File</a>
+        <a href="making-software-citable.html">5. Making Your Software Citable</a>
     </div>
 <!--/div.accordion-header-->
 
@@ -296,7 +296,7 @@
 <div class="accordion accordion-flush" id="accordionFlush7">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading7">
-        <a href="making-software-citable.html">6. Making Your Software Citable</a>
+        <a href="managing-environments-pixi.html">6. Managing Reproducible Environments with pixi</a>
     </div>
 <!--/div.accordion-header-->
 
@@ -384,14 +384,176 @@
         <h1>Instructor Notes</h1>
         
 
-<p>This is a placeholder file. Please add content here.</p>
+<section><h2 class="section-heading" id="lesson-overview">Lesson Overview<a class="anchor" aria-label="anchor" href="#lesson-overview"></a>
+</h2>
+<hr class="half-width">
+<p>This lesson teaches researchers how to make software citable and
+discoverable. The core arc is:</p>
+<p><strong>Sharing → License → CITATION.cff → Release/DOI →
+Metadata</strong></p>
+<p>The environment management episode (pixi) is
+<strong>optional</strong> and sits after the release/DOI episode in the
+default lesson order. Decide before your workshop which track you are
+running.</p>
+<hr></section><section><h2 class="section-heading" id="choosing-a-track">Choosing a Track<a class="anchor" aria-label="anchor" href="#choosing-a-track"></a>
+</h2>
+<hr class="half-width">
+<div class="section level3">
+<h3 id="full-track-3-5-hours">Full track (~3.5 hours)<a class="anchor" aria-label="anchor" href="#full-track-3-5-hours"></a>
+</h3>
+<p>All episodes in order. Suitable when reproducibility and environment
+management are part of the workshop goals, or when your audience
+includes researchers who maintain code others need to run.</p>
+</div>
+<div class="section level3">
+<h3 id="citation-focused-track-2-5-hours">Citation-focused track (~2.5 hours)<a class="anchor" aria-label="anchor" href="#citation-focused-track-2-5-hours"></a>
+</h3>
+<p>Skip the pixi episode entirely. Suitable for a shorter workshop or
+when learners just want their code cited — not necessarily reproduced.
+The FAIR4RS checklist in the wrap-up still works; simply omit the
+environment/interoperability row or note it as “future work.”</p>
+<hr>
+</div>
+</section><section><h2 class="section-heading" id="the-branch-structure-and-pixi">The Branch Structure and Pixi<a class="anchor" aria-label="anchor" href="#the-branch-structure-and-pixi"></a>
+</h2>
+<hr class="half-width">
+<p>The demo repository (<code>UC-OSPO-Network/software-demo</code>) uses
+numbered branches that reflect the original episode order, where pixi
+came <em>before</em> the citation file:</p>
+<pre><code>01-start → 02-license → 03-pixi → 04-citation → 05-release → 06-metadata</code></pre>
+<p>The lesson episode order has been updated so pixi now comes
+<em>after</em> the release/DOI episode. This creates a mismatch between
+branch numbers and lesson order that instructors need to manage.</p>
+<div class="section level3">
+<h3 id="full-track-branch-navigation">Full track: branch navigation<a class="anchor" aria-label="anchor" href="#full-track-branch-navigation"></a>
+</h3>
+<table class="table">
+<colgroup>
+<col width="50%">
+<col width="50%">
+</colgroup>
+<thead><tr>
+<th>Lesson episode</th>
+<th>Branch to check out</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>Sharing Software</td>
+<td><code>01-start</code></td>
+</tr>
+<tr>
+<td>Open Source License</td>
+<td><code>02-license</code></td>
+</tr>
+<tr>
+<td>Adding a CITATION.cff File</td>
+<td>
+<code>02-license</code> → work done live, result is
+<code>04-citation</code>
+</td>
+</tr>
+<tr>
+<td>Making Your Software Citable</td>
+<td>
+<code>04-citation</code> → work done live, result is
+<code>05-release</code>
+</td>
+</tr>
+<tr>
+<td>Managing Environments (pixi)</td>
+<td>
+<code>03-pixi</code> (see note below)</td>
+</tr>
+<tr>
+<td>Improving Metadata</td>
+<td>
+<code>05-release</code> → work done live, result is
+<code>06-metadata</code>
+</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Note on pixi branch:</strong> <code>03-pixi</code> sits
+earlier in the demo repo history than <code>04-citation</code>, but
+that’s fine — learners are just exploring it to see what a locked
+environment looks like. They don’t need to build on it. Have them check
+out <code>03-pixi</code> to follow along, then return to
+<code>05-release</code> before the metadata episode.</p>
+</div>
+<div class="section level3">
+<h3 id="citation-focused-track-branch-navigation">Citation-focused track: branch navigation<a class="anchor" aria-label="anchor" href="#citation-focused-track-branch-navigation"></a>
+</h3>
+<table class="table">
+<colgroup>
+<col width="50%">
+<col width="50%">
+</colgroup>
+<thead><tr>
+<th>Lesson episode</th>
+<th>Branch to check out</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>Sharing Software</td>
+<td><code>01-start</code></td>
+</tr>
+<tr>
+<td>Open Source License</td>
+<td><code>02-license</code></td>
+</tr>
+<tr>
+<td>Adding a CITATION.cff File</td>
+<td>
+<code>02-license</code> → result is <code>04-citation</code>
+</td>
+</tr>
+<tr>
+<td>Making Your Software Citable</td>
+<td>
+<code>04-citation</code> → result is <code>05-release</code>
+</td>
+</tr>
+<tr>
+<td>Improving Metadata</td>
+<td>
+<code>05-release</code> → result is <code>06-metadata</code>
+</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Important:</strong> <code>04-citation</code> and later
+branches contain pixi files (<code>pixi.toml</code>,
+<code>pixi.lock</code>) even though learners haven’t done the pixi
+episode. Acknowledge this briefly: <em>“You’ll see some pixi files in
+the repo — those are from an optional episode on environment management.
+You can ignore them for now.”</em></p>
+<hr>
+</div>
+</section><section><h2 class="section-heading" id="common-sticking-points">Common Sticking Points<a class="anchor" aria-label="anchor" href="#common-sticking-points"></a>
+</h2>
+<hr class="half-width">
+<p><strong>GitHub “Cite this repository” button not appearing</strong>
+Learners need to commit the <code>CITATION.cff</code> file to the
+default branch and refresh. GitHub may take a minute to parse it. If it
+doesn’t appear, check that the file is in the root of the repository and
+named exactly <code>CITATION.cff</code>.</p>
+<p><strong>Zenodo Sandbox login</strong> Use
+<code>sandbox.zenodo.org</code> — not the real <code>zenodo.org</code>.
+Learners who accidentally create records on the live site cannot delete
+them. Warn the group before this step.</p>
+<p><strong>YAML indentation errors in CITATION.cff</strong> Direct
+learners to the cffinit web tool (<a href="https://citation-file-format.github.io/cffinit/" class="external-link uri">https://citation-file-format.github.io/cffinit/</a>) rather
+than hand-editing YAML. This eliminates most formatting errors.</p>
+<p><strong>Pixi not installed</strong> Pixi is optional and learners do
+not need it installed to complete the citation-focused track. If running
+the full track, verify pixi installation during setup. The pixi episode
+callout already marks it optional so learners who skip it can rejoin
+cleanly.</p>
 <!--
 Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use.
  -->
-
-
-      <section id="aggregate-instructor-notes"></section>
+</section><section id="aggregate-instructor-notes"></section>
 </div>
     </main>
 </div>
@@ -441,8 +603,8 @@ any links that you are not going to use.
   "url": "https://UC-OSPO-Network.github.io/research-software-citable-discoverable/instructor-notes.html",
   "identifier": "https://UC-OSPO-Network.github.io/research-software-citable-discoverable/instructor-notes.html",
   "dateCreated": "2025-12-06",
-  "dateModified": "2026-05-27",
-  "datePublished": "2026-05-27"
+  "dateModified": "2026-05-29",
+  "datePublished": "2026-05-29"
 }
 
   </script><script>

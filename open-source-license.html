@@ -118,7 +118,7 @@
     <a id="search-button" class="btn btn-primary" href="aio.html" role="button" aria-label="Search the All In One page">Search the All In One page</a>
   </div><!--/div.container-fluid -->
 </nav><aside class="col-md-12 lesson-progress"><div class="progress ucospo">
-    <div class="progress-bar ucospo" role="progressbar" style="width: 27%" aria-valuenow="27" aria-valuemin="0" aria-valuemax="100" aria-label="Lesson Progress">27%</div>
+    <div class="progress-bar ucospo" role="progressbar" style="width: 26%" aria-valuenow="26" aria-valuemin="0" aria-valuemax="100" aria-label="Lesson Progress">26%</div>
   </div>
 </aside><div class="container">
       <div class="row">
@@ -199,7 +199,7 @@
 <div class="accordion accordion-flush" id="accordionFlush2">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading2">
-        <a href="why-software-citation.html">1. Why Make Software Citable?</a>
+        <a href="introduction.html">1. Introduction: The "Works on My Machine" Trap</a>
     </div><!--/div.accordion-header-->
 
   </div><!--/div.accordion-item-->
@@ -229,7 +229,7 @@
       <div class="accordion-body">
         <ul><li><a href="#why-licensing-matters">Why licensing matters</a></li>
 <li><a href="#understanding-license-categories">Understanding license categories</a></li>
-<li><a href="#how-to-choose-a-license-for-your-uc-project">How to choose a license for your UC project</a></li>
+<li><a href="#how-to-choose-a-license">How to choose a license</a></li>
 <li><a href="#communicating-your-license">Communicating your license</a></li>
 <li><a href="#summary">Summary</a></li>
         </ul></div><!--/div.accordion-body-->
@@ -241,7 +241,7 @@
 <div class="accordion accordion-flush" id="accordionFlush5">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading5">
-        <a href="managing-environments-pixi.html">4. Managing Reproducible Environments with pixi</a>
+        <a href="adding-citation-file.html">4. Adding a CITATION.cff File</a>
     </div><!--/div.accordion-header-->
 
   </div><!--/div.accordion-item-->
@@ -250,7 +250,7 @@
 <div class="accordion accordion-flush" id="accordionFlush6">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading6">
-        <a href="adding-citation-file.html">5. Adding a CITATION.cff File</a>
+        <a href="making-software-citable.html">5. Making Your Software Citable</a>
     </div><!--/div.accordion-header-->
 
   </div><!--/div.accordion-item-->
@@ -259,7 +259,7 @@
 <div class="accordion accordion-flush" id="accordionFlush7">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading7">
-        <a href="making-software-citable.html">6. Making Your Software Citable</a>
+        <a href="managing-environments-pixi.html">6. Managing Reproducible Environments with pixi</a>
     </div><!--/div.accordion-header-->
 
   </div><!--/div.accordion-item-->
@@ -326,7 +326,7 @@
   <div class="col-xl-8 col-lg-12 primary-content">
     <nav class="lesson-content mx-md-4" aria-label="Previous and Next Chapter Top"><!-- content for small screens --><div class="d-block d-sm-block d-md-none">
         <a class="chapter-link" href="sharing-software.html" rel="prev"><i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>Previous</a>
-        <a class="chapter-link float-end" href="managing-environments-pixi.html" rel="next">Next<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
+        <a class="chapter-link float-end" href="adding-citation-file.html" rel="next">Next<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
       </div>
       <!-- content for large screens -->
       <div class="d-none d-sm-none d-md-block">
@@ -334,14 +334,14 @@
           <i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>
           Previous: Sharing Research
         </a>
-        <a class="chapter-link float-end" href="managing-environments-pixi.html" rel="next">
-          Next: Managing...
+        <a class="chapter-link float-end" href="adding-citation-file.html" rel="next">
+          Next: Adding a...
           <i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i>
         </a>
       </div>
     </nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Choosing an Open-Source License</h1>
-        <p>Last updated on 2026-05-27 |
+        <p>Last updated on 2026-05-29 |
 
         <a href="https://github.com/UC-OSPO-Network/research-software-citable-discoverable/edit/main/episodes/open-source-license.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -380,6 +380,34 @@
 </div>
 </div>
 </div>
+<div id="episode-branch-01-start-02-license" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<span class="callout-header">Callout</span>
+<div id="episode-branch-01-start-02-license" class="callout-inner">
+<h3 class="callout-title">Episode Branch: <code>01-start</code> →
+<code>02-license</code>
+</h3>
+<div class="callout-content">
+<p>This episode adds a LICENSE file to the repository.</p>
+<p><strong>Starting point:</strong></p>
+<div class="codewrapper sourceCode" id="cb1">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" tabindex="-1" aria-label="code-block-1-1"></a><span class="fu">git</span> checkout 01-start    <span class="co"># Start from the beginning</span></span></code></pre>
+</div>
+<p><strong>After this episode:</strong></p>
+<div class="codewrapper sourceCode" id="cb2">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" tabindex="-1" aria-label="code-block-2-1"></a><span class="fu">git</span> checkout 02-license  <span class="co"># See the result with LICENSE added</span></span></code></pre>
+</div>
+<p><strong>Catch-up point:</strong> If joining now, run
+<code>git checkout 01-start</code></p>
+</div>
+</div>
+</div>
 <section><h2 class="section-heading" id="why-licensing-matters">Why licensing matters<a class="anchor" aria-label="anchor" href="#why-licensing-matters"></a></h2>
 <hr class="half-width"><p>When researchers publish code without a license, most people assume
 it is “public.” Legally, it is not. Copyright law applies automatically.
@@ -389,26 +417,29 @@ the code.</p>
 friction and supporting open, reproducible research. Following the <a href="https://ucospo.net/oss-resources/template-guides/license-guide/" class="external-link">UC
 OSPO License Guide</a> ensures your project meets institutional
 standards while maximizing its impact.</p>
-<div id="uc-context-working-with-tech-transfer" class="callout">
+<div id="institutional-context-who-owns-your-software" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
 <span class="callout-header">Callout</span>
-<div id="uc-context-working-with-tech-transfer" class="callout-inner">
-<h3 class="callout-title">UC Context: Working with Tech Transfer</h3>
+<div id="institutional-context-who-owns-your-software" class="callout-inner">
+<h3 class="callout-title">Institutional Context: Who Owns Your
+Software?</h3>
 <div class="callout-content">
-<p>At the University of California, software created using university
-resources is typically owned by <strong>The Regents of the University of
-California</strong>. Before releasing code under an open-source license,
-you must check with your campus <strong>Tech Transfer office</strong>
-(sometimes called the Office of Intellectual Property or Technology
-Commercialization). They will:</p>
-<ul><li>Verify ownership and funding requirements.</li>
-<li>Ensure no third-party restrictions apply (e.g., from proprietary
-libraries).</li>
-<li>Help you select the most appropriate license from the <a href="https://security.ucop.edu/resources/open-source-software-licensing.html" class="external-link">UC-approved
-list</a>.</li>
-</ul></div>
+<p>At most universities, software created using institutional resources
+is owned by the institution, not the individual researcher. Before
+releasing code under an open-source license, check with your
+<strong>Technology Transfer or Intellectual Property office</strong>.
+They will verify ownership, funding requirements, and any third-party
+restrictions.</p>
+<p><strong>If you are at a UC campus:</strong> software is typically
+owned by <em>The Regents of the University of California</em>. Your
+campus Tech Transfer office can help you select from the <a href="https://security.ucop.edu/resources/open-source-software-licensing.html" class="external-link">UC-approved
+license list</a>. <em>(UC-specific)</em></p>
+<p><strong>At other institutions:</strong> check with your research
+computing, library, or legal office. Most will have a similar process
+and a list of preferred licenses.</p>
+</div>
 </div>
 </div>
 </section><section><h2 class="section-heading" id="understanding-license-categories">Understanding license categories<a class="anchor" aria-label="anchor" href="#understanding-license-categories"></a></h2>
@@ -419,8 +450,8 @@ list</a>.</li>
 <p>These allow broad reuse with minimal restrictions. Anyone can copy,
 modify, or redistribute the code. They are common in research because
 they’re simple and maximize flexibility.</p>
-<p><strong>The UC system recommends BSD licenses</strong> as the first
-choice for most projects because they:</p>
+<p><strong>BSD licenses are a common first choice at many research
+institutions</strong> because they:</p>
 <ul><li>originated at UC Berkeley</li>
 <li>are simple to understand</li>
 <li>protect both the institution and authors</li>
@@ -448,13 +479,13 @@ Tech Transfer office about GPL 2.0 or alternatives.</p>
 </div>
 </div>
 </div>
-</section><section><h2 class="section-heading" id="how-to-choose-a-license-for-your-uc-project">How to choose a license for your UC project<a class="anchor" aria-label="anchor" href="#how-to-choose-a-license-for-your-uc-project"></a></h2>
-<hr class="half-width"><p>The UC Open Source Software Workgroup identified five “low-risk”
-licenses suitable for most projects. Here’s a decision guide:</p>
+</section><section><h2 class="section-heading" id="how-to-choose-a-license">How to choose a license<a class="anchor" aria-label="anchor" href="#how-to-choose-a-license"></a></h2>
+<hr class="half-width"><p>Five “low-risk” licenses are suitable for most research projects.
+Here’s a decision guide:</p>
 <pre class="mermaid"><code>graph TD
     Start[Starting a new UC research software project?] --&gt; Check{Do you have&lt;br/&gt;special requirements?}
 
-    Check --&gt;|No special needs| BSD[Use BSD 3-Clause&lt;br/&gt;✓ UC's primary recommendation&lt;br/&gt;✓ Simple and protective&lt;br/&gt;✓ Widely compatible]
+    Check --&gt;|No special needs| BSD[Use BSD 3-Clause&lt;br/&gt;✓ Common research default&lt;br/&gt;✓ Simple and protective&lt;br/&gt;✓ Widely compatible]
 
     Check --&gt;|Need simpler text| MIT[Use MIT License&lt;br/&gt;✓ Nearly identical to BSD&lt;br/&gt;✓ Shorter, easier to read&lt;br/&gt;✓ Very popular]
 
@@ -483,42 +514,88 @@ licenses suitable for most projects. Here’s a decision guide:</p>
     style TTO fill:#87CEEB</code></pre>
 <div class="section level3">
 <h3 id="quick-reference">Quick reference<a class="anchor" aria-label="anchor" href="#quick-reference"></a></h3>
-<table class="table"><colgroup><col width="31%"><col width="54%"><col width="14%"></colgroup><thead><tr><th>Your need</th>
+<table style="width:100%;" class="table"><colgroup><col width="21%"><col width="36%"><col width="32%"><col width="9%"></colgroup><thead><tr><th>Your need</th>
 <th>Recommended license</th>
+<th>SPDX identifier</th>
 <th>Why</th>
 </tr></thead><tbody><tr><td>Default / most projects</td>
 <td>BSD 3-Clause</td>
-<td>UC’s standard recommendation</td>
+<td><code>BSD-3-Clause</code></td>
+<td>Common default at research institutions</td>
 </tr><tr><td>Simplest possible</td>
 <td>MIT</td>
+<td><code>MIT</code></td>
 <td>Minimal text, very popular</td>
 </tr><tr><td>Industry collaboration</td>
 <td>Apache 2.0</td>
+<td><code>Apache-2.0</code></td>
 <td>Explicit patent terms</td>
 </tr><tr><td>Educational focus</td>
 <td>ECL 2.0</td>
+<td><code>ECL-2.0</code></td>
 <td>Education-specific variant</td>
-</tr></tbody></table><p><strong>Always consult your campus Tech Transfer office before
-releasing UC-owned software.</strong></p>
-<div id="uc-resources" class="callout">
+</tr></tbody></table><p>The <strong>SPDX identifier</strong> is the short, machine-readable
+code used by GitHub, Zenodo, and your <code>CITATION.cff</code> file to
+communicate your license automatically. When GitHub shows a license
+badge in the sidebar, it’s reading the SPDX identifier.</p>
+<p><strong>Always consult your institution’s Tech Transfer or IP office
+before releasing software created with institutional
+resources.</strong></p>
+<div id="what-about-data-and-documentation" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
 <span class="callout-header">Callout</span>
-<div id="uc-resources" class="callout-inner">
-<h3 class="callout-title">UC Resources</h3>
+<div id="what-about-data-and-documentation" class="callout-inner">
+<h3 class="callout-title">What about data and documentation?</h3>
+<div class="callout-content">
+<p>Software licenses (BSD, MIT, Apache) are written for <em>executable
+code</em>. If your repository also contains datasets, figures, or
+documentation, those files need a separate license.</p>
+<p>The standard choice for research outputs is <strong>Creative Commons
+Attribution 4.0 (CC BY 4.0)</strong>, which allows broad reuse with
+attribution.</p>
+<p>A common pattern: - <code>/src</code> or your code files →
+<code>BSD-3-Clause</code> or <code>MIT</code> - <code>/data</code> or
+<code>/docs</code> → <code>CC-BY-4.0</code></p>
+<p>You can note this split in your README and in
+<code>CITATION.cff</code> under the <code>license</code> field, which
+accepts a list:</p>
+<div class="codewrapper sourceCode" id="cb4">
+<h3 class="code-label">YAML<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode yaml" tabindex="0"><code class="sourceCode yaml"><span id="cb4-1"><a href="#cb4-1" tabindex="-1" aria-label="code-block-4-1"></a><span class="fu">license</span><span class="kw">:</span></span>
+<span id="cb4-2"><a href="#cb4-2" tabindex="-1" aria-label="code-block-4-2"></a><span class="at">  </span><span class="kw">-</span><span class="at"> BSD-3-Clause</span></span>
+<span id="cb4-3"><a href="#cb4-3" tabindex="-1" aria-label="code-block-4-3"></a><span class="at">  </span><span class="kw">-</span><span class="at"> CC-BY-4.0</span></span></code></pre>
+</div>
+<p>Most research repositories don’t need this — but if you’re sharing a
+dataset alongside code, it’s worth thinking through.</p>
+</div>
+</div>
+</div>
+<div id="resources" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<span class="callout-header">Callout</span>
+<div id="resources" class="callout-inner">
+<h3 class="callout-title">Resources</h3>
 <div class="callout-content">
 <ul><li>
+<a href="https://choosealicense.com/" class="external-link">ChooseALicense.com</a> –
+Compare features across all common licenses.</li>
+<li>
+<a href="https://spdx.org/licenses/" class="external-link">SPDX License List</a> –
+Authoritative registry of license identifiers used in CITATION.cff and
+package metadata.</li>
+<li>
 <a href="https://ucospo.net/oss-resources/template-guides/license-guide/" class="external-link">UC
-OSPO License Guide</a> – Guidance on institutional requirements and
-templates.</li>
+OSPO License Guide</a> <em>(UC-specific)</em> – UC institutional
+requirements and templates.</li>
 <li>
 <a href="https://security.ucop.edu/resources/open-source-software-licensing.html" class="external-link">UC
-OSS Chart and Companion Guide</a> – The definitive list of UC-approved
-“low-risk” licenses.</li>
-<li>
-<a href="https://choosealicense.com/" class="external-link">ChooseALicense.com</a> – A
-helpful tool for comparing license features.</li>
+OSS Chart and Companion Guide</a> <em>(UC-specific)</em> – UC-approved
+“low-risk” license list.</li>
 </ul></div>
 </div>
 </div>
@@ -531,17 +608,19 @@ helpful tool for comparing license features.</li>
 <h3 class="callout-title">Challenge: Add a BSD License to Your
 Repository</h3>
 <div class="callout-content">
-<p>Following UC recommendations, we will add the BSD 3-Clause license to
-your demo repository:</p>
+<p>We will add the BSD 3-Clause license to your demo repository:</p>
 <ol style="list-style-type: decimal"><li>Navigate to your repository on GitHub.</li>
 <li>Click <strong>Add file</strong> → <strong>Create new
 file</strong>.</li>
 <li>Name it <code>LICENSE</code> (or <code>LICENSE.txt</code>).</li>
 <li>Click <strong>Choose a license template</strong> and select
 <strong>BSD 3-Clause License</strong>.</li>
-<li>
-<strong>CRITICAL:</strong> Update the copyright holder to:
-<code>The Regents of the University of California</code>.</li>
+<li>Update the copyright holder to reflect who owns the software. At UC
+campuses this is
+<code>The Regents of the University of California</code>; at other
+institutions check with your Tech Transfer office. <em>(If this is a
+personal project, use your own name.)</em>
+</li>
 <li>Update the year to 2026.</li>
 <li>Commit the file to your <code>main</code> branch.</li>
 </ol><p><strong>Verify:</strong> Does your repository now display the
@@ -554,7 +633,7 @@ file</strong>.</li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <p>GitHub automatically detects the <code>LICENSE</code> file and
 displays it in the sidebar. Your file should look like this:</p>
@@ -573,12 +652,12 @@ and named exactly <code>LICENSE</code> or <code>LICENSE.txt</code>.</p>
 <hr class="half-width"><p>After adding a LICENSE file, reference it in your README so users
 immediately understand usage terms.</p>
 <p>Add this section near the top of your README:</p>
-<div class="codewrapper sourceCode" id="cb3">
+<div class="codewrapper sourceCode" id="cb6">
 <h3 class="code-label">MARKDOWN<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode markdown" tabindex="0"><code class="sourceCode markdown"><span id="cb3-1"><a href="#cb3-1" tabindex="-1" aria-label="code-block-3-1"></a><span class="fu">## License</span></span>
-<span id="cb3-2"><a href="#cb3-2" tabindex="-1" aria-label="code-block-3-2"></a></span>
-<span id="cb3-3"><a href="#cb3-3" tabindex="-1" aria-label="code-block-3-3"></a>This project is licensed under the BSD 3-Clause License - see the <span class="co">[</span><span class="ot">LICENSE</span><span class="co">](LICENSE)</span> file for details.</span></code></pre>
+<pre class="sourceCode markdown" tabindex="0"><code class="sourceCode markdown"><span id="cb6-1"><a href="#cb6-1" tabindex="-1" aria-label="code-block-6-1"></a><span class="fu">## License</span></span>
+<span id="cb6-2"><a href="#cb6-2" tabindex="-1" aria-label="code-block-6-2"></a></span>
+<span id="cb6-3"><a href="#cb6-3" tabindex="-1" aria-label="code-block-6-3"></a>This project is licensed under the BSD 3-Clause License - see the <span class="co">[</span><span class="ot">LICENSE</span><span class="co">](LICENSE)</span> file for details.</span></code></pre>
 </div>
 <p><strong>Why this matters:</strong> Users reading your README on
 platforms other than GitHub (Zenodo, email, exported PDFs) will see your
@@ -606,7 +685,7 @@ with collaborators.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <p><strong>Scenario 1:</strong> BSD 3-Clause (UC’s default
 recommendation, maximum flexibility and adoption)</p>
@@ -633,12 +712,12 @@ repository following UC recommendations.</p>
 <div class="callout-content">
 <ul><li>Without a license, software is legally restricted and not
 reusable</li>
-<li>UC recommends BSD 3-Clause as the default license for most
-projects</li>
+<li>BSD 3-Clause is a common default at research institutions; MIT and
+Apache 2.0 are strong alternatives</li>
 <li>Permissive licenses (BSD, MIT, Apache 2.0) maximize flexibility and
 adoption</li>
-<li>Always consult your campus Tech Transfer office for UC-owned
-software</li>
+<li>Always consult your institution’s Tech Transfer or IP office before
+releasing institutionally-owned software</li>
 <li>GitHub makes adding standard licenses straightforward</li>
 </ul></div>
 </div>
@@ -650,7 +729,7 @@ any links that you are not going to use.
 </section></div> <!-- / div.lesson-content -->
     </main><!-- / main#main-content.main-content --><nav class="bottom-pagination mx-md-4" aria-label="Previous and Next Chapter Bottom"><div class="d-block d-sm-block d-md-none">
         <a class="chapter-link" href="sharing-software.html"><i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>Previous</a>
-        <a class="chapter-link float-end" href="managing-environments-pixi.html">Next<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
+        <a class="chapter-link float-end" href="adding-citation-file.html">Next<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
       </div>
       <!-- content for large screens -->
       <div class="d-none d-sm-none d-md-block">
@@ -658,8 +737,8 @@ any links that you are not going to use.
           <i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>
           Previous: Sharing Research
         </a>
-        <a class="chapter-link float-end" href="managing-environments-pixi.html" rel="next">
-          Next: Managing...
+        <a class="chapter-link float-end" href="adding-citation-file.html" rel="next">
+          Next: Adding a...
           <i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i>
         </a>
       </div>
@@ -707,8 +786,8 @@ any links that you are not going to use.
   "url": "https://UC-OSPO-Network.github.io/research-software-citable-discoverable/open-source-license.html",
   "identifier": "https://UC-OSPO-Network.github.io/research-software-citable-discoverable/open-source-license.html",
   "dateCreated": "2025-12-06",
-  "dateModified": "2026-05-27",
-  "datePublished": "2026-05-27"
+  "dateModified": "2026-05-29",
+  "datePublished": "2026-05-29"
 }
 
   </script><script>

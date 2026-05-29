@@ -237,7 +237,7 @@
 <div class="accordion accordion-flush" id="accordionFlush2">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading2">
-        <a href="why-software-citation.html">1. Why Make Software Citable?</a>
+        <a href="introduction.html">1. Introduction: The "Works on My Machine" Trap</a>
     </div>
 <!--/div.accordion-header-->
 
@@ -273,7 +273,7 @@
 <div class="accordion accordion-flush" id="accordionFlush5">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading5">
-        <a href="managing-environments-pixi.html">4. Managing Reproducible Environments with pixi</a>
+        <a href="adding-citation-file.html">4. Adding a CITATION.cff File</a>
     </div>
 <!--/div.accordion-header-->
 
@@ -285,7 +285,7 @@
 <div class="accordion accordion-flush" id="accordionFlush6">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading6">
-        <a href="adding-citation-file.html">5. Adding a CITATION.cff File</a>
+        <a href="making-software-citable.html">5. Making Your Software Citable</a>
     </div>
 <!--/div.accordion-header-->
 
@@ -297,7 +297,7 @@
 <div class="accordion accordion-flush" id="accordionFlush7">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading7">
-        <a href="making-software-citable.html">6. Making Your Software Citable</a>
+        <a href="managing-environments-pixi.html">6. Managing Reproducible Environments with pixi</a>
     </div>
 <!--/div.accordion-header-->
 
@@ -385,13 +385,23 @@
     <main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Key Points</h1>
         
-<section id="why-software-citation"><h2 class="section-heading"><a href="why-software-citation.html">Why Make Software Citable?</a></h2>
+<section id="introduction"><h2 class="section-heading"><a href="introduction.html">Introduction: The "Works on My Machine" Trap</a></h2>
 <hr class="half-width">
 <ul>
-<li>Software is a scholarly product that should be citable</li>
-<li>Citation provides academic credit and supports reproducibility</li>
-<li>DOIs and metadata are essential for persistent, findable
-citation</li>
+<li>Research software often fails due to the “works on my machine”
+trap</li>
+<li>The bus factor problem means knowledge is lost when people
+leave</li>
+<li>Software citations using URLs break over time; DOIs are permanent
+and version-specific</li>
+<li>FAIR4RS principles (Findable, Accessible, Interoperable, Reusable)
+provide a framework</li>
+<li>Making software FAIR requires: LICENSE, environment files, citation
+metadata, and documentation</li>
+<li>A CITATION.cff file is the simplest way to make software
+citable</li>
+<li>The demo repository progresses through branches: 01-start →
+06-metadata</li>
 </ul></section><section id="sharing-software"><h2 class="section-heading"><a href="sharing-software.html">Sharing Research Software Effectively</a></h2>
 <hr class="half-width">
 <ul>
@@ -408,25 +418,13 @@ incrementally improved.</li>
 <ul>
 <li>Without a license, software is legally restricted and not
 reusable</li>
-<li>UC recommends BSD 3-Clause as the default license for most
-projects</li>
+<li>BSD 3-Clause is a common default at research institutions; MIT and
+Apache 2.0 are strong alternatives</li>
 <li>Permissive licenses (BSD, MIT, Apache 2.0) maximize flexibility and
 adoption</li>
-<li>Always consult your campus Tech Transfer office for UC-owned
-software</li>
+<li>Always consult your institution’s Tech Transfer or IP office before
+releasing institutionally-owned software</li>
 <li>GitHub makes adding standard licenses straightforward</li>
-</ul></section><section id="managing-environments-pixi"><h2 class="section-heading"><a href="managing-environments-pixi.html">Managing Reproducible Environments with pixi</a></h2>
-<hr class="half-width">
-<ul>
-<li>Reproducible environments reduce troubleshooting and support more
-reusable software.</li>
-<li>
-<code>pixi</code> provides fast, cross platform environment
-management.</li>
-<li>The <code>pixi.toml</code> file acts as documentation that supports
-citation and FAIR4RS principles.</li>
-<li>Use <code>pixi run</code> to execute Python or R code inside a
-reproducible environment.</li>
 </ul></section><section id="adding-citation-file"><h2 class="section-heading"><a href="adding-citation-file.html">Adding a CITATION.cff File</a></h2>
 <hr class="half-width">
 <ul>
@@ -447,6 +445,18 @@ stable version.<br>
 reproducibility.<br>
 </li>
 <li>Zenodo can automatically mint a DOI for each GitHub release.</li>
+</ul></section><section id="managing-environments-pixi"><h2 class="section-heading"><a href="managing-environments-pixi.html">Managing Reproducible Environments with pixi</a></h2>
+<hr class="half-width">
+<ul>
+<li>Reproducible environments reduce troubleshooting and support more
+reusable software.</li>
+<li>
+<code>pixi</code> provides fast, cross platform environment
+management.</li>
+<li>The <code>pixi.toml</code> file acts as documentation that supports
+citation and FAIR4RS principles.</li>
+<li>Use <code>pixi run</code> to execute Python or R code inside a
+reproducible environment.</li>
 </ul></section><section id="improving-metadata-discoverability"><h2 class="section-heading"><a href="improving-metadata-discoverability.html">Improving Metadata and Discoverability</a></h2>
 <hr class="half-width">
 <ul>
@@ -461,11 +471,15 @@ your software.</li>
 </ul></section><section id="wrap-up-reflect"><h2 class="section-heading"><a href="wrap-up-reflect.html">Wrap-Up and Reflection</a></h2>
 <hr class="half-width">
 <ul>
+<li>You’ve successfully made your software FAIR: Findable, Accessible,
+Interoperable, and Reusable</li>
 <li>Even small actions can significantly improve your software’s
 impact</li>
 <li>Making code citable and discoverable benefits both you and the
 research community</li>
 <li>Start with one change, then build from there</li>
+<li>Use the UC OSPO resources and templates to streamline the
+process</li>
 </ul></section>
 </div>
     </main>
@@ -516,8 +530,8 @@ research community</li>
   "url": "https://UC-OSPO-Network.github.io/research-software-citable-discoverable/instructor/key-points.html",
   "identifier": "https://UC-OSPO-Network.github.io/research-software-citable-discoverable/instructor/key-points.html",
   "dateCreated": "2025-12-06",
-  "dateModified": "2026-05-27",
-  "datePublished": "2026-05-27"
+  "dateModified": "2026-05-29",
+  "datePublished": "2026-05-29"
 }
 
   </script><script>

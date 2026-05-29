@@ -118,7 +118,7 @@
     <a id="search-button" class="btn btn-primary" href="aio.html" role="button" aria-label="Search the All In One page">Search the All In One page</a>
   </div><!--/div.container-fluid -->
 </nav><aside class="col-md-12 lesson-progress"><div class="progress ucospo">
-    <div class="progress-bar ucospo" role="progressbar" style="width: 77%" aria-valuenow="77" aria-valuemin="0" aria-valuemax="100" aria-label="Lesson Progress">77%</div>
+    <div class="progress-bar ucospo" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" aria-label="Lesson Progress">75%</div>
   </div>
 </aside><div class="container">
       <div class="row">
@@ -199,7 +199,7 @@
 <div class="accordion accordion-flush" id="accordionFlush2">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading2">
-        <a href="why-software-citation.html">1. Why Make Software Citable?</a>
+        <a href="introduction.html">1. Introduction: The "Works on My Machine" Trap</a>
     </div><!--/div.accordion-header-->
 
   </div><!--/div.accordion-item-->
@@ -226,7 +226,7 @@
 <div class="accordion accordion-flush" id="accordionFlush5">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading5">
-        <a href="managing-environments-pixi.html">4. Managing Reproducible Environments with pixi</a>
+        <a href="adding-citation-file.html">4. Adding a CITATION.cff File</a>
     </div><!--/div.accordion-header-->
 
   </div><!--/div.accordion-item-->
@@ -235,7 +235,7 @@
 <div class="accordion accordion-flush" id="accordionFlush6">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading6">
-        <a href="adding-citation-file.html">5. Adding a CITATION.cff File</a>
+        <a href="making-software-citable.html">5. Making Your Software Citable</a>
     </div><!--/div.accordion-header-->
 
   </div><!--/div.accordion-item-->
@@ -244,7 +244,7 @@
 <div class="accordion accordion-flush" id="accordionFlush7">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading7">
-        <a href="making-software-citable.html">6. Making Your Software Citable</a>
+        <a href="managing-environments-pixi.html">6. Managing Reproducible Environments with pixi</a>
     </div><!--/div.accordion-header-->
 
   </div><!--/div.accordion-item-->
@@ -266,7 +266,10 @@
         <ul><li><a href="#introduction">Introduction</a></li>
 <li><a href="#what-counts-as-useful-metadata">What counts as useful metadata?</a></li>
 <li><a href="#github-specific-discoverability-features">GitHub-specific discoverability features</a></li>
-<li><a href="#community-health-files">Community Health Files</a></li>
+<li><a href="#writing-an-effective-readme">Writing an Effective README</a></li>
+<li><a href="#citation">Citation</a></li>
+<li><a href="#beyond-the-readme-community-health-files">Beyond the README: Community Health Files</a></li>
+<li><a href="#institutional-repositories-dataverse-dryad-and-zenodo">Institutional Repositories: Dataverse, Dryad, and Zenodo</a></li>
 <li><a href="#zenodo-and-doi-metadata">Zenodo and DOI metadata</a></li>
         </ul></div><!--/div.accordion-body-->
     </div><!--/div.accordion-collapse-->
@@ -325,14 +328,14 @@
         <!-- START: inst/pkgdown/templates/content-instructor.html -->
   <div class="col-xl-8 col-lg-12 primary-content">
     <nav class="lesson-content mx-md-4" aria-label="Previous and Next Chapter Top"><!-- content for small screens --><div class="d-block d-sm-block d-md-none">
-        <a class="chapter-link" href="making-software-citable.html" rel="prev"><i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>Previous</a>
+        <a class="chapter-link" href="managing-environments-pixi.html" rel="prev"><i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>Previous</a>
         <a class="chapter-link float-end" href="wrap-up-reflect.html" rel="next">Next<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
       </div>
       <!-- content for large screens -->
       <div class="d-none d-sm-none d-md-block">
-        <a class="chapter-link" href="making-software-citable.html" rel="prev">
+        <a class="chapter-link" href="managing-environments-pixi.html" rel="prev">
           <i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>
-          Previous: Making Your Software
+          Previous: Managing
         </a>
         <a class="chapter-link float-end" href="wrap-up-reflect.html" rel="next">
           Next: Wrap-Up and...
@@ -341,7 +344,7 @@
       </div>
     </nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Improving Metadata and Discoverability</h1>
-        <p>Last updated on 2026-05-27 |
+        <p>Last updated on 2026-05-29 |
 
         <a href="https://github.com/UC-OSPO-Network/research-software-citable-discoverable/edit/main/episodes/improving-metadata-discoverability.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -378,6 +381,35 @@ fields.</li>
 for consistency.</li>
 </ul></div>
 </div>
+</div>
+</div>
+</div>
+<div id="episode-branch-05-release-06-metadata" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<span class="callout-header">Callout</span>
+<div id="episode-branch-05-release-06-metadata" class="callout-inner">
+<h3 class="callout-title">Episode Branch: <code>05-release</code> →
+<code>06-metadata</code>
+</h3>
+<div class="callout-content">
+<p>This episode completes the repository with full documentation and
+metadata.</p>
+<p><strong>Starting point:</strong></p>
+<div class="codewrapper sourceCode" id="cb1">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" tabindex="-1" aria-label="code-block-1-1"></a><span class="fu">git</span> checkout 05-release  <span class="co"># Start with release tagged</span></span></code></pre>
+</div>
+<p><strong>After this episode:</strong></p>
+<div class="codewrapper sourceCode" id="cb2">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" tabindex="-1" aria-label="code-block-2-1"></a><span class="fu">git</span> checkout 06-metadata <span class="co"># See the complete FAIR repository</span></span></code></pre>
+</div>
+<p><strong>Catch-up point:</strong> If joining now, run
+<code>git checkout 05-release</code></p>
 </div>
 </div>
 </div>
@@ -427,82 +459,245 @@ cross-repository linking.</p>
 <li>methodological tags (<code>simulation</code>,
 <code>visualization</code>, <code>machine-learning</code>)</li>
 <li>language tags (<code>python</code>, <code>r</code>)</li>
-</ul><p><strong>Improve your README:</strong></p>
-<p>Your README is the first page many users see. A structured,
-predictable README lowers the barrier to entry. The <a href="https://ucospo.net/oss-resources/template-guides/readme-guide/" class="external-link">UC
-OSPO README Guide</a> recommends including these standard sections:</p>
+</ul></section><section><h2 class="section-heading" id="writing-an-effective-readme">Writing an Effective README<a class="anchor" aria-label="anchor" href="#writing-an-effective-readme"></a></h2>
+<hr class="half-width"><div class="section level3">
+<h3 id="the-30-second-rule">The 30-Second Rule<a class="anchor" aria-label="anchor" href="#the-30-second-rule"></a></h3>
+<p><strong>Your README is your software’s front door.</strong></p>
+<p>If users can’t understand what it does, how to install it, or how to
+use it in <strong>30 seconds</strong> → they leave.</p>
+</div>
+<div class="section level3">
+<h3 id="readme-structure-7-essential-sections">README Structure (7 Essential Sections)<a class="anchor" aria-label="anchor" href="#readme-structure-7-essential-sections"></a></h3>
+<p>The <a href="https://ucospo.net/oss-resources/template-guides/readme-guide/" class="external-link">UC
+OSPO README Guide</a> <em>(UC-specific)</em> recommends this standard
+structure:</p>
+<ol style="list-style-type: decimal"><li>
+<strong>About</strong>: What does this do? (2-3 sentences)</li>
+<li>
+<strong>Features</strong>: Key capabilities (Reproducible, Citable,
+Open source)</li>
+<li>
+<strong>Getting Started</strong>: Prerequisites + installation</li>
+<li>
+<strong>Usage</strong>: Minimal working example</li>
+<li>
+<strong>Citation</strong>: Link to CITATION.cff or DOI</li>
+<li>
+<strong>License</strong>: Explicitly state terms (e.g., “BSD-3 - see
+LICENSE file”)</li>
+<li>
+<strong>Contact</strong>: How to get help</li>
+</ol></div>
+<div class="section level3">
+<h3 id="before-vs--after-example">Before vs. After Example<a class="anchor" aria-label="anchor" href="#before-vs--after-example"></a></h3>
+<p><strong>❌ Before (Branch: 01-start)</strong></p>
+<div class="codewrapper sourceCode" id="cb3">
+<h3 class="code-label">MARKDOWN<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode markdown" tabindex="0"><code class="sourceCode markdown"><span id="cb3-1"><a href="#cb3-1" tabindex="-1" aria-label="code-block-3-1"></a><span class="fu"># Biodiversity Analysis Toolkit</span></span>
+<span id="cb3-2"><a href="#cb3-2" tabindex="-1" aria-label="code-block-3-2"></a></span>
+<span id="cb3-3"><a href="#cb3-3" tabindex="-1" aria-label="code-block-3-3"></a>A script.</span>
+<span id="cb3-4"><a href="#cb3-4" tabindex="-1" aria-label="code-block-3-4"></a></span>
+<span id="cb3-5"><a href="#cb3-5" tabindex="-1" aria-label="code-block-3-5"></a>No description. No instructions. No citation. Unusable.</span></code></pre>
+</div>
+<p><strong>✅ After (Branch: 06-metadata)</strong></p>
+<div class="codewrapper sourceCode" id="cb4">
+<h3 class="code-label">MARKDOWN<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode markdown" tabindex="0"><code class="sourceCode markdown"><span id="cb4-1"><a href="#cb4-1" tabindex="-1" aria-label="code-block-4-1"></a><span class="fu"># Biodiversity Analysis Toolkit</span></span>
+<span id="cb4-2"><a href="#cb4-2" tabindex="-1" aria-label="code-block-4-2"></a></span>
+<span id="cb4-3"><a href="#cb4-3" tabindex="-1" aria-label="code-block-4-3"></a>Analysis tools for biodiversity research.</span>
+<span id="cb4-4"><a href="#cb4-4" tabindex="-1" aria-label="code-block-4-4"></a></span>
+<span id="cb4-5"><a href="#cb4-5" tabindex="-1" aria-label="code-block-4-5"></a><span class="fu">## Features</span></span>
+<span id="cb4-6"><a href="#cb4-6" tabindex="-1" aria-label="code-block-4-6"></a><span class="ss">- </span>Reproducible (pixi) • Citable (DOI) • Open source (BSD-3)</span>
+<span id="cb4-7"><a href="#cb4-7" tabindex="-1" aria-label="code-block-4-7"></a></span>
+<span id="cb4-8"><a href="#cb4-8" tabindex="-1" aria-label="code-block-4-8"></a><span class="fu">## Getting Started</span></span>
+<span id="cb4-9"><a href="#cb4-9" tabindex="-1" aria-label="code-block-4-9"></a><span class="in">```bash</span></span>
+<span id="cb4-10"><a href="#cb4-10" tabindex="-1" aria-label="code-block-4-10"></a><span class="ex">pixi</span> install</span>
+<span id="cb4-11"><a href="#cb4-11" tabindex="-1" aria-label="code-block-4-11"></a><span class="ex">pixi</span> run python src/analysis.py</span></code></pre>
+</div>
+</div>
+</section><section><h2 class="section-heading" id="citation">Citation<a class="anchor" aria-label="anchor" href="#citation"></a></h2>
+<hr class="half-width"><p>[zenodo.org/badge/DOI/10.5281/zenodo.123456.svg]</p>
+<p>License: BDS-3 - see LICENSE file ```</p>
+<p><strong>Professional. Citable. Usable.</strong></p>
+<div class="section level3">
+<h3 id="readme-best-practices-5-quick-tips">README Best Practices: 5 Quick Tips<a class="anchor" aria-label="anchor" href="#readme-best-practices-5-quick-tips"></a></h3>
+<ol style="list-style-type: decimal"><li>
+<strong>Clear description</strong> → Answer “What problem does this
+solve?”</li>
+<li>
+<strong>Show, don’t tell</strong> → Include code examples</li>
+<li>
+<strong>Link metadata</strong> → Add DOI badge, link
+CITATION.cff</li>
+<li>
+<strong>Keep updated</strong> → Refresh when features change</li>
+<li>
+<strong>Use a template</strong> → <a href="https://github.com/UC-OSPO-Network/templates" class="external-link">UC OSPO
+Templates</a> <em>(UC-specific)</em> or <a href="https://github.com/matiassingers/awesome-readme" class="external-link">Awesome
+README</a>
+</li>
+</ol><p><strong>Every tip maps to FAIR principles.</strong></p>
+<div id="dont-reinvent-the-wheel" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<span class="callout-header">Callout</span>
+<div id="dont-reinvent-the-wheel" class="callout-inner">
+<h3 class="callout-title">Don’t Reinvent the Wheel</h3>
+<div class="callout-content">
 <ul><li>
-<strong>About/Overview</strong>: What does this software do?</li>
+<a href="https://github.com/matiassingers/awesome-readme" class="external-link">Awesome
+README</a> — curated examples from real open-source projects</li>
 <li>
-<strong>Features</strong>: Key capabilities (e.g., “Reproducible
-environment,” “Citable”).</li>
-<li>
-<strong>Getting Started</strong>: Prerequisites and installation
-steps.</li>
-<li>
-<strong>Usage</strong>: A minimal example of how to run the
-code.</li>
-<li>
-<strong>License</strong>: Explicitly stating the license.</li>
-<li>
-<strong>Contact</strong>: How to reach the maintainers.</li>
-</ul><p>It is also critical to link your metadata: - Add a
-<strong>badge</strong> for your Zenodo DOI. - Link to your
-<code>CITATION.cff</code> file.</p>
-<p>Adopting a standard structure like the <a href="https://github.com/UC-OSPO-Network/templates/blob/main/README.md" class="external-link">OSPO
-README Template</a> ensures researchers can quickly evaluate and use
+<a href="https://github.com/UC-OSPO-Network/templates/blob/main/README.md" class="external-link">UC
+OSPO README Template</a> <em>(UC-specific)</em> — ready-to-use
+template</li>
+</ul></div>
+</div>
+</div>
+<p>It is also critical to link your metadata: - Add a
+<strong>badge</strong> for your Zenodo DOI - Link to your
+<code>CITATION.cff</code> file</p>
+<p>A structured README ensures researchers can quickly evaluate and use
 your software.</p>
-</section><section><h2 class="section-heading" id="community-health-files">Community Health Files<a class="anchor" aria-label="anchor" href="#community-health-files"></a></h2>
+</div>
+</section><section><h2 class="section-heading" id="beyond-the-readme-community-health-files">Beyond the README: Community Health Files<a class="anchor" aria-label="anchor" href="#beyond-the-readme-community-health-files"></a></h2>
 <hr class="half-width"><p>Beyond technical metadata, files that describe <em>how</em> to
 interact with your project are crucial for its long-term sustainability
 and “discoverability” as a welcoming project.</p>
+<p>GitHub looks for these files:</p>
 <div class="section level3">
-<h3 id="contributing-guide">Contributing Guide<a class="anchor" aria-label="anchor" href="#contributing-guide"></a></h3>
+<h3 id="contributing-md-how-to-contribute">CONTRIBUTING.md → How to contribute<a class="anchor" aria-label="anchor" href="#contributing-md-how-to-contribute"></a></h3>
 <p>The <code>CONTRIBUTING.md</code> file is the first place new
 contributors look to see if a project is open to participation.
-Following the <a href="https://ucospo.net/oss-resources/template-guides/contributing-guide/" class="external-link">UC
-OSPO Contributing Guide</a> ensures you cover essential ground:</p>
+Following a contributing guide template (the <a href="https://ucospo.net/oss-resources/template-guides/contributing-guide/" class="external-link">UC
+OSPO Contributing Guide</a> <em>(UC-specific)</em> is one good example)
+ensures you cover essential ground:</p>
 <ul><li>
 <strong>Welcome Statement</strong>: Explicitly inviting others to
-join.</li>
+join</li>
 <li>
 <strong>Ways to Contribute</strong>: Identifying non-code
-contributions (e.g., documentation, testing, issues).</li>
+contributions (e.g., documentation, testing, issues)</li>
 <li>
 <strong>Setup Instructions</strong>: How to get the project running
-locally.</li>
+locally</li>
 <li>
 <strong>Pull Request Lifecycle</strong>: What happens after a
-contribution is submitted.</li>
+contribution is submitted</li>
 </ul></div>
 <div class="section level3">
-<h3 id="code-of-conduct">Code of Conduct<a class="anchor" aria-label="anchor" href="#code-of-conduct"></a></h3>
+<h3 id="code_of_conduct-md-behavioral-standards">CODE_OF_CONDUCT.md → Behavioral standards<a class="anchor" aria-label="anchor" href="#code_of_conduct-md-behavioral-standards"></a></h3>
 <p>A <code>CODE_OF_CONDUCT.md</code> establishes behavioral expectations
-and ensures a safe, inclusive environment for all researchers. The <a href="https://ucospo.net/oss-resources/template-guides/code-of-conduct-guide/" class="external-link">UC
-OSPO Code of Conduct Guide</a> recommends using a standard like the
-<strong>Contributor Covenant</strong>.</p>
+and ensures a safe, inclusive environment for all researchers. The
+standard choice is the <a href="https://www.contributor-covenant.org/" class="external-link">Contributor Covenant</a> —
+widely adopted across open-source projects. <em>(See also: <a href="https://ucospo.net/oss-resources/template-guides/code-of-conduct-guide/" class="external-link">UC
+OSPO Code of Conduct Guide</a> </em>(UC-specific)<em>)</em></p>
+</div>
+<div class="section level3">
+<h3 id="changelog-md-version-history">CHANGELOG.md → Version history<a class="anchor" aria-label="anchor" href="#changelog-md-version-history"></a></h3>
+<p>A <code>CHANGELOG.md</code> documents what changed between versions.
+This helps users understand: - What’s new in each release - What bugs
+were fixed - What breaking changes occurred - How the software evolved
+over time</p>
+<p><strong>Why it matters:</strong> Signals your project is
+professionally managed and welcoming.</p>
+<div id="templates-available" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<span class="callout-header">Callout</span>
+<div id="templates-available" class="callout-inner">
+<h3 class="callout-title">Templates Available</h3>
+<div class="callout-content">
+<ul><li>
+<a href="https://choosealicense.com/" class="external-link">Choose a License</a> — license
+selection</li>
+<li>
+<a href="https://www.contributor-covenant.org/" class="external-link">Contributor
+Covenant</a> — code of conduct template</li>
+<li>
+<a href="https://keepachangelog.com/" class="external-link">Keep a Changelog</a> —
+changelog format guide</li>
+<li>
+<a href="https://github.com/UC-OSPO-Network/templates" class="external-link">UC OSPO
+Template Repository</a> <em>(UC-specific)</em> — ready-to-use
+CONTRIBUTING.md, CODE_OF_CONDUCT.md, CHANGELOG.md, README.md</li>
+</ul></div>
+</div>
+</div>
 <p>Adding these files to your repository root helps GitHub display a
 “Community Standards” checklist in your insights, signaling that your
-project is professionally managed and ready for collaboration. You can
-find ready-to-use versions in the <a href="https://github.com/UC-OSPO-Network/templates" class="external-link">UC OSPO Template
-Repository</a>.</p>
+project is professionally managed and ready for collaboration.</p>
 <hr></div>
+</section><section><h2 class="section-heading" id="institutional-repositories-dataverse-dryad-and-zenodo">Institutional Repositories: Dataverse, Dryad, and Zenodo<a class="anchor" aria-label="anchor" href="#institutional-repositories-dataverse-dryad-and-zenodo"></a></h2>
+<hr class="half-width"><p>Many institutions use repositories like <strong>Dataverse</strong> or
+<strong>Dryad</strong> for research data deposits. These are good for
+datasets but have limited software support — they don’t integrate with
+GitHub releases or mint version-specific DOIs automatically.</p>
+<p>For software, <strong>Zenodo is the recommended deposit
+location</strong> because:</p>
+<ul><li>It integrates directly with GitHub to archive each release
+automatically</li>
+<li>It mints a DOI for every version</li>
+<li>Records flow into DataCite and are indexed by Google Scholar and
+library catalogs</li>
+<li>It’s free, CERN-operated, and widely recognized by journals and
+funders</li>
+</ul><div id="what-about-your-institutions-repository" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<span class="callout-header">Callout</span>
+<div id="what-about-your-institutions-repository" class="callout-inner">
+<h3 class="callout-title">What about your institution’s repository?</h3>
+<div class="callout-content">
+<p>If your institution requires or prefers a local IR (Dataverse
+instance, DSpace, etc.), you can deposit there <em>in addition</em> to
+Zenodo — not instead of it. Use the Zenodo DOI as the persistent
+identifier in your CITATION.cff, and note the institutional deposit in
+your README or Zenodo metadata as a related work.</p>
+<p>Some funders (NSF, NIH, Wellcome Trust) have specific deposit
+requirements. Check your award terms before deciding where the
+authoritative copy lives.</p>
+</div>
+</div>
+</div>
 </section><section><h2 class="section-heading" id="zenodo-and-doi-metadata">Zenodo and DOI metadata<a class="anchor" aria-label="anchor" href="#zenodo-and-doi-metadata"></a></h2>
-<hr class="half-width"><p>Zenodo metadata flows into:</p>
+<hr class="half-width"><p>When you deposit software on Zenodo, the record flows into:</p>
 <ul><li>
-<strong>DataCite</strong><br></li>
-<li>Google Scholar<br></li>
-<li>library catalogs<br></li>
-<li>domain repositories that harvest DOIs</li>
-</ul><p>Add or refine:</p>
+<strong>DataCite</strong> — the DOI registration agency for research
+data and software; DataCite records are harvested by library catalogs,
+institutional discovery systems, and tools like <a href="https://openalex.org/" class="external-link">OpenAlex</a> and <a href="http://www.scholix.org/" class="external-link">Scholix</a>
+</li>
+<li>
+<strong>Google Scholar</strong> — picks up Zenodo records with
+structured metadata</li>
+<li>
+<strong>Library catalogs</strong> — many discovery layers (EBSCO, Ex
+Libris Primo, OCLC WorldCat) harvest DataCite metadata, meaning your
+software can appear in a library search alongside journal articles</li>
+<li>
+<strong>Domain repositories</strong> that harvest DOIs</li>
+</ul><p>What this means practically: the metadata you put into your Zenodo
+record is the metadata that librarians and discovery systems see. Thin
+metadata (no description, no keywords, no author ORCIDs) limits
+findability even if the DOI is valid.</p>
+<p>Add or refine:</p>
 <ul><li>authors + ORCIDs<br></li>
-<li>keywords<br></li>
-<li>related works (DOIs, URLs)<br></li>
+<li>keywords (discipline tags, method tags, language tags — same ones
+you add to GitHub Topics)</li>
+<li>related works (link to the paper that used this software, the
+dataset it analyzes, the grant that funded it)</li>
 <li>funding references<br></li>
 <li>version notes<br></li>
-<li>a readable software description</li>
-</ul><p>Your goal is <em>context</em>. This helps researchers decide quickly
-whether to reuse your work.</p>
+<li>a readable software description (2-3 sentences — think abstract, not
+README)</li>
+</ul><p>Your goal is <em>context</em>. A researcher or a librarian helping a
+researcher should be able to read the Zenodo record and decide in 30
+seconds whether this software is relevant to them.</p>
 <div id="challenge-1-identify-useful-metadata" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
@@ -521,7 +716,7 @@ discoverability.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <p>Examples:</p>
 <ul><li>ORCID IDs for each author<br></li>
@@ -551,7 +746,7 @@ metadata:</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <ol style="list-style-type: decimal"><li>Open your Zenodo record.<br></li>
 <li>Select “Edit.”<br></li>
@@ -589,14 +784,14 @@ any links that you are not going to use.
  -->
 </section></div> <!-- / div.lesson-content -->
     </main><!-- / main#main-content.main-content --><nav class="bottom-pagination mx-md-4" aria-label="Previous and Next Chapter Bottom"><div class="d-block d-sm-block d-md-none">
-        <a class="chapter-link" href="making-software-citable.html"><i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>Previous</a>
+        <a class="chapter-link" href="managing-environments-pixi.html"><i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>Previous</a>
         <a class="chapter-link float-end" href="wrap-up-reflect.html">Next<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
       </div>
       <!-- content for large screens -->
       <div class="d-none d-sm-none d-md-block">
-        <a class="chapter-link" href="making-software-citable.html" rel="prev">
+        <a class="chapter-link" href="managing-environments-pixi.html" rel="prev">
           <i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>
-          Previous: Making Your Software
+          Previous: Managing
         </a>
         <a class="chapter-link float-end" href="wrap-up-reflect.html" rel="next">
           Next: Wrap-Up and...
@@ -647,8 +842,8 @@ any links that you are not going to use.
   "url": "https://UC-OSPO-Network.github.io/research-software-citable-discoverable/improving-metadata-discoverability.html",
   "identifier": "https://UC-OSPO-Network.github.io/research-software-citable-discoverable/improving-metadata-discoverability.html",
   "dateCreated": "2025-12-06",
-  "dateModified": "2026-05-27",
-  "datePublished": "2026-05-27"
+  "dateModified": "2026-05-29",
+  "datePublished": "2026-05-29"
 }
 
   </script><script>

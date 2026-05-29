@@ -236,7 +236,7 @@
 <div class="accordion accordion-flush" id="accordionFlush2">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading2">
-        <a href="why-software-citation.html">1. Why Make Software Citable?</a>
+        <a href="introduction.html">1. Introduction: The "Works on My Machine" Trap</a>
     </div>
 <!--/div.accordion-header-->
 
@@ -272,7 +272,7 @@
 <div class="accordion accordion-flush" id="accordionFlush5">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading5">
-        <a href="managing-environments-pixi.html">4. Managing Reproducible Environments with pixi</a>
+        <a href="adding-citation-file.html">4. Adding a CITATION.cff File</a>
     </div>
 <!--/div.accordion-header-->
 
@@ -284,7 +284,7 @@
 <div class="accordion accordion-flush" id="accordionFlush6">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading6">
-        <a href="adding-citation-file.html">5. Adding a CITATION.cff File</a>
+        <a href="making-software-citable.html">5. Making Your Software Citable</a>
     </div>
 <!--/div.accordion-header-->
 
@@ -296,7 +296,7 @@
 <div class="accordion accordion-flush" id="accordionFlush7">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading7">
-        <a href="making-software-citable.html">6. Making Your Software Citable</a>
+        <a href="managing-environments-pixi.html">6. Managing Reproducible Environments with pixi</a>
     </div>
 <!--/div.accordion-header-->
 
@@ -383,11 +383,11 @@
     <main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>All in One View</h1>
         
-<section id="aio-why-software-citation"><p>Content from <a href="why-software-citation.html">Why Make Software Citable?</a></p>
+<section id="aio-introduction"><p>Content from <a href="introduction.html">Introduction: The "Works on My Machine" Trap</a></p>
 <hr>
-<p>Last updated on 2025-12-04 |
+<p>Last updated on 2026-05-29 |
 
-        <a href="https://github.com/UC-OSPO-Network/research-software-citable-discoverable/edit/main/episodes/why-software-citation.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
+        <a href="https://github.com/UC-OSPO-Network/research-software-citable-discoverable/edit/main/episodes/introduction.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
           <button role="button" aria-pressed="false" tabindex="0" id="expand-code" class="pull-right" data-expand="Expand All Solutions " data-collapse="Collapse All Solutions "> Expand All Solutions <i aria-hidden="true" data-feather="plus"></i></button>
         </div>
@@ -399,8 +399,9 @@
 <div class="inner">
 <h3 class="card-title">Questions</h3>
 <ul>
-<li>Why should research software be treated as a scholarly product?</li>
-<li>What are the benefits of making software citable?</li>
+<li>Why does research software often fail to run on other machines?</li>
+<li>What is the “bus factor” problem in research software?</li>
+<li>How do FAIR4RS principles address these challenges?</li>
 </ul>
 </div>
 </div>
@@ -410,36 +411,224 @@
 <div class="inner bordered">
 <h3 class="card-title">Objectives</h3>
 <ul>
-<li>Explain the importance of software citation for scholarly
-communication</li>
-<li>Identify how citation supports transparency, reproducibility, and
-credit</li>
+<li>Recognize common barriers to software reuse and reproducibility</li>
+<li>Understand how FAIR4RS principles apply to research software</li>
+<li>Identify the key components needed to make software citable and
+discoverable</li>
+<li>See what a “complete” FAIR research software project looks like</li>
 </ul>
 </div>
 </div>
 </div>
 </div>
 </div>
-<section><h2 class="section-heading" id="introduction">Introduction<a class="anchor" aria-label="anchor" href="#introduction"></a>
+<section><h2 class="section-heading" id="the-works-on-my-machine-trap">The “Works on My Machine” Trap<a class="anchor" aria-label="anchor" href="#the-works-on-my-machine-trap"></a>
 </h2>
 <hr class="half-width">
-<p>Software plays a critical role in research but has historically been
-under-recognized. Treating software as a citable output ensures proper
-attribution, improves transparency, and supports reproducibility.</p>
-<p>Citing software with DOIs and formal metadata allows others to
-reference specific versions and gives creators academic credit.</p>
+<p>You send your code to a colleague…</p>
+<ul>
+<li>“It crashes on line 1” 😞</li>
+<li>“I can’t install the dependencies”</li>
+<li>“Which Python version did you use?”</li>
+</ul>
+<p>Here’s what they see:</p>
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code>$ python src/analysis.py
 
-<div id="challenge-1-who-gets-credit" class="callout challenge">
+Traceback (most recent call last):
+  File "analysis.py", line 1, in &lt;module&gt;
+    import numpy as np
+ModuleNotFoundError: No module named 'numpy'</code></pre>
+</div>
+<p><strong>This is where most research software lives.
+Fragile.</strong></p>
+
+</section><section><h2 class="section-heading" id="the-bus-factor-problem">The Bus Factor Problem<a class="anchor" aria-label="anchor" href="#the-bus-factor-problem"></a>
+</h2>
+<hr class="half-width">
+<p><strong>The Problem:</strong> Code works perfectly on ONE laptop. If
+it disappears, the science is gone.</p>
+<p><strong>The Bus Factor:</strong> The number of people who need to be
+“hit by a bus” before your project becomes unmaintainable.</p>
+<div id="how-common-is-this" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<span class="callout-header">Callout</span>
+<div id="how-common-is-this" class="callout-inner">
+<h3 class="callout-title">How common is this?</h3>
+<div class="callout-content">
+<p>A 2021 analysis found that over <strong>48% of research
+articles</strong> mention software — yet consistent sharing and citation
+remains the exception, not the rule. Most of that software is either
+unavailable, uncredited, or impossible to reproduce.</p>
+</div>
+</div>
+</div>
+<div id="why-this-matters-for-research" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<span class="callout-header">Callout</span>
+<div id="why-this-matters-for-research" class="callout-inner">
+<h3 class="callout-title">Why This Matters for Research</h3>
+<div class="callout-content">
+<p>Research software that lives only on one person’s machine:</p>
+<ul>
+<li>Cannot be verified or reproduced</li>
+<li>Cannot be built upon by others</li>
+<li>Cannot receive proper academic credit</li>
+<li>Disappears when that person moves on</li>
+</ul>
+</div>
+</div>
+</div>
+</section><section><h2 class="section-heading" id="the-software-citation-problem">The Software Citation Problem<a class="anchor" aria-label="anchor" href="#the-software-citation-problem"></a>
+</h2>
+<hr class="half-width">
+<p>Even when software works, it often doesn’t get credited. Most
+researchers cite code by dropping a URL into a paper:</p>
+<div class="section level3">
+<h3 id="the-wrong-way">The wrong way<a class="anchor" aria-label="anchor" href="#the-wrong-way"></a>
+</h3>
+<blockquote>
+<p>“We used the analysis script from <a href="https://github.com/jt14den/software-demo" class="external-link uri">https://github.com/jt14den/software-demo</a>”</p>
+</blockquote>
+<p><strong>Problems:</strong> - URLs break (link rot) - No version
+specified — which run of the code produced which result? - No formal
+credit — the author’s name isn’t even visible - Cannot appear in
+citation metrics</p>
+<p><strong>This isn’t hypothetical. Forges close.</strong></p>
+<ul>
+<li>
+<strong>Gitorious</strong> shut down in 2015 — thousands of projects
+became unreachable overnight</li>
+<li>
+<strong>Google Code</strong> shut down in 2016 — same result</li>
+<li>A username change, a repo rename, or a deleted account breaks any
+URL-based citation just as completely</li>
+</ul>
+<p>That citation is now dead.</p>
+</div>
+<div class="section level3">
+<h3 id="the-right-way">The right way<a class="anchor" aria-label="anchor" href="#the-right-way"></a>
+</h3>
+<blockquote>
+<p>Dennis, T. (2025). <em>Biodiversity Analysis Toolkit</em> (v0.1.0).
+Zenodo. <a href="https://doi.org/10.5281/zenodo.123456" class="external-link uri">https://doi.org/10.5281/zenodo.123456</a></p>
+</blockquote>
+<p><strong>Why this works:</strong> - DOI is permanent — survives
+username changes, repo moves, even GitHub disappearing - Version is
+explicit — someone can reproduce the exact run - Author gets formal
+credit and citation metrics</p>
+<p>The fix is a <code>CITATION.cff</code> file and a DOI — both of which
+you’ll create in this lesson.</p>
+</div>
+</section><section><h2 class="section-heading" id="the-fix-fair4rs-principles">The Fix: FAIR4RS Principles<a class="anchor" aria-label="anchor" href="#the-fix-fair4rs-principles"></a>
+</h2>
+<hr class="half-width">
+<p>The solution is to apply <strong>FAIR Principles for Research
+Software (FAIR4RS)</strong>:</p>
+<p><strong>F - Findable:</strong> Software and metadata are easy to
+discover → DOI, CITATION.cff, metadata</p>
+<p><strong>A - Accessible:</strong> Retrievable via standard protocols →
+Public GitHub, git clone, Zenodo</p>
+<p><strong>I - Interoperable:</strong> Exchanges data with other tools →
+Standard formats, documented dependencies</p>
+<p><strong>R - Reusable:</strong> Can be executed AND modified →
+LICENSE, README, environment files</p>
+<div id="what-youre-doing-today" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<span class="callout-header">Callout</span>
+<div id="what-youre-doing-today" class="callout-inner">
+<h3 class="callout-title">What You’re Doing TODAY</h3>
+<div class="callout-content">
+<p>In this workshop, you will transform a fragile research script into a
+FAIR software project by adding:</p>
+<p>✅ <strong>License</strong> - So others can legally use your work ✅
+<strong>Environment</strong> - So it runs on any machine ✅
+<strong>Citation</strong> - So you get academic credit ✅
+<strong>README</strong> - So people can find and use it</p>
+</div>
+</div>
+</div>
+</section><section><h2 class="section-heading" id="what-done-right-looks-like">What “Done Right” Looks Like<a class="anchor" aria-label="anchor" href="#what-done-right-looks-like"></a>
+</h2>
+<hr class="half-width">
+<div class="section level3">
+<h3 id="the-before-state-branch-01-start">The “Before” State (Branch: 01-start)<a class="anchor" aria-label="anchor" href="#the-before-state-branch-01-start"></a>
+</h3>
+<p>Check out the initial state of our demo repository:</p>
+<div class="codewrapper sourceCode" id="cb2">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" tabindex="-1" aria-label="code-block-2-1"></a><span class="bu">cd</span> software-demo</span>
+<span id="cb2-2"><a href="#cb2-2" tabindex="-1" aria-label="code-block-2-2"></a><span class="fu">git</span> checkout 01-start</span></code></pre>
+</div>
+<p>You’ll see: - ❌ No LICENSE - ❌ Vague environment
+(<code>python = "*"</code>) - ❌ No citation information - ❌ No DOI -
+❌ Minimal README</p>
+</div>
+<div class="section level3">
+<h3 id="the-after-state-branch-06-metadata">The “After” State (Branch: 06-metadata)<a class="anchor" aria-label="anchor" href="#the-after-state-branch-06-metadata"></a>
+</h3>
+<p>Now look at the final state:</p>
+<div class="codewrapper sourceCode" id="cb3">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" tabindex="-1" aria-label="code-block-3-1"></a><span class="fu">git</span> checkout 06-metadata</span></code></pre>
+</div>
+<p>Notice what’s been added: - ✅ <strong>LICENSE</strong>
+(BSD-3-Clause) - ✅ <strong>pixi.toml</strong> (documented environment)
+- ✅ <strong>CITATION.cff</strong> (citation metadata) - ✅
+<strong>README.md</strong> (complete documentation) - ✅
+<strong>CONTRIBUTING.md</strong> (contribution guidelines) - ✅
+<strong>CODE_OF_CONDUCT.md</strong> (community standards) - ✅
+<strong>.zenodo.json</strong> (Zenodo metadata) - ✅ DOI badge in
+README</p>
+<p><strong>This is what makes software Findable, Accessible,
+Interoperable, and Reusable.</strong></p>
+<div id="real-world-example-spack" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<span class="callout-header">Callout</span>
+<div id="real-world-example-spack" class="callout-inner">
+<h3 class="callout-title">Real-World Example: Spack</h3>
+<div class="callout-content">
+<p>Want to see a production research software project that follows these
+principles?</p>
+<p><strong>Spack</strong> is used by national labs, universities, and
+supercomputing centers: <a href="https://github.com/spack/spack" class="external-link uri">https://github.com/spack/spack</a></p>
+<p>Check their repository and notice: - ✅ README with clear description
+and getting started guide - ✅ LICENSE (MIT and Apache-2.0) - ✅
+CITATION.cff file - ✅ Documentation - ✅ Code of conduct and
+Contributing guide</p>
+</div>
+</div>
+</div>
+<div id="challenge-reflect-on-your-own-code" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
 <span class="callout-header">Challenge</span>
-<div id="challenge-1-who-gets-credit" class="callout-inner">
-<h3 class="callout-title">Challenge 1: Who Gets Credit?</h3>
+<div id="challenge-reflect-on-your-own-code" class="callout-inner">
+<h3 class="callout-title">Challenge: Reflect on Your Own Code</h3>
 <div class="callout-content">
-<p>You’ve created a Python script that was used to generate results in a
-collaborative paper. The paper cites the dataset, but not the script.
-What’s missing?</p>
+<p>Think about a script or analysis you’ve written recently:</p>
+<ol style="list-style-type: decimal">
+<li>Could someone else run it on their machine today? What would they
+need?</li>
+<li>If you moved to a new institution, could you still access and use
+it?</li>
+<li>If someone wanted to cite your code in a paper, how would they do
+it?</li>
+</ol>
+<p>Share one challenge you’ve faced with code sharing or reuse.</p>
 </div>
 </div>
 </div>
@@ -448,15 +637,71 @@ What’s missing?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
-<p>The script should be citable so that others can properly credit its
-use. Without citation metadata or a DOI, the software may go
-unrecognized.</p>
+<p>Common challenges include:</p>
+<ul>
+<li>No documentation of dependencies or versions</li>
+<li>Code only works with specific file paths on your machine</li>
+<li>Missing LICENSE file (so others legally can’t reuse it)</li>
+<li>No citation information available</li>
+<li>Undocumented assumptions about the computing environment</li>
+</ul>
+<p>All of these will be addressed in this lesson!</p>
 </div>
 </div>
 </div>
 </div>
+<div id="challenge-2-who-gets-credit" class="callout challenge">
+<div class="callout-square">
+<i class="callout-icon" data-feather="zap"></i>
+</div>
+<span class="callout-header">Challenge</span>
+<div id="challenge-2-who-gets-credit" class="callout-inner">
+<h3 class="callout-title">Challenge 2: Who Gets Credit?</h3>
+<div class="callout-content">
+<p>You created a Python script used to generate results in a
+collaborative paper. The paper cites the dataset but not the script.
+What’s missing, and what would a proper software citation look like?</p>
+</div>
+</div>
+</div>
+<div id="accordionSolution2" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
+  <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
+</button>
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div class="accordion-body">
+<p>The script should be citable as a distinct research output. Without
+citation metadata or a DOI, the software contribution goes unrecognized
+and nobody can find or reproduce the exact version used.</p>
+<p>A proper citation would include: author(s), software title, version,
+repository or archive URL, and a persistent identifier (DOI). A
+<code>CITATION.cff</code> file in the repository provides all of this
+automatically.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section><section><h2 class="section-heading" id="what-well-build-together">What We’ll Build Together<a class="anchor" aria-label="anchor" href="#what-well-build-together"></a>
+</h2>
+<hr class="half-width">
+<p>Starting from the minimal <code>01-start</code> state, you will
+progressively add each component:</p>
+<p><strong>Episode 1:</strong> Sharing the demo repository
+(understanding <code>01-start</code>) <strong>Episode 2:</strong> Adding
+an open-source license (<code>02-license</code>) <strong>Episode
+3:</strong> Managing environments with pixi (<code>03-pixi</code>)
+<em>(optional)</em> <strong>Episode 4:</strong> Creating a CITATION.cff
+file (<code>04-citation</code>) <strong>Episode 5:</strong> Minting a
+DOI and creating releases (<code>05-release</code>) <strong>Episode
+6:</strong> Improving metadata and discoverability
+(<code>06-metadata</code>) <strong>Episode 7:</strong> Wrap-up and
+reflection</p>
+<p>Each episode builds on the previous one, following the branch
+progression in the demo repository.</p>
 <div id="keypoints1" class="callout keypoints">
 <div class="callout-square">
 <i class="callout-icon" data-feather="key"></i>
@@ -465,10 +710,20 @@ unrecognized.</p>
 <div class="callout-inner">
 <div class="callout-content">
 <ul>
-<li>Software is a scholarly product that should be citable</li>
-<li>Citation provides academic credit and supports reproducibility</li>
-<li>DOIs and metadata are essential for persistent, findable
-citation</li>
+<li>Research software often fails due to the “works on my machine”
+trap</li>
+<li>The bus factor problem means knowledge is lost when people
+leave</li>
+<li>Software citations using URLs break over time; DOIs are permanent
+and version-specific</li>
+<li>FAIR4RS principles (Findable, Accessible, Interoperable, Reusable)
+provide a framework</li>
+<li>Making software FAIR requires: LICENSE, environment files, citation
+metadata, and documentation</li>
+<li>A CITATION.cff file is the simplest way to make software
+citable</li>
+<li>The demo repository progresses through branches: 01-start →
+06-metadata</li>
 </ul>
 </div>
 </div>
@@ -479,7 +734,7 @@ any links that you are not going to use.
  -->
 </section></section><section id="aio-sharing-software"><p>Content from <a href="sharing-software.html">Sharing Research Software Effectively</a></p>
 <hr>
-<p>Last updated on 2026-02-01 |
+<p>Last updated on 2026-05-29 |
 
         <a href="https://github.com/UC-OSPO-Network/research-software-citable-discoverable/edit/main/episodes/sharing-software.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -517,6 +772,29 @@ the lesson.</li>
 </div>
 </div>
 </div>
+<div id="episode-branch-01-start" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<span class="callout-header">Callout</span>
+<div id="episode-branch-01-start" class="callout-inner">
+<h3 class="callout-title">Episode Branch: <code>01-start</code>
+</h3>
+<div class="callout-content">
+<p>This episode explores the <strong>initial state</strong> of the demo
+repository.</p>
+<p><strong>To follow along:</strong></p>
+<div class="codewrapper sourceCode" id="cb1">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" tabindex="-1" aria-label="code-block-1-1"></a><span class="bu">cd</span> software-demo</span>
+<span id="cb1-2"><a href="#cb1-2" tabindex="-1" aria-label="code-block-1-2"></a><span class="fu">git</span> checkout 01-start</span></code></pre>
+</div>
+<p><strong>Catch-up point:</strong> If you’re joining this episode
+partway through, start here.</p>
+</div>
+</div>
+</div>
 <section><h2 class="section-heading" id="introduction">Introduction<a class="anchor" aria-label="anchor" href="#introduction"></a>
 </h2>
 <hr class="half-width">
@@ -524,23 +802,24 @@ the lesson.</li>
 find, understand, reuse, and cite your work. This visibility strengthens
 the transparency of your research process and increases the likelihood
 that you receive formal credit.</p>
-<p>In this lesson, we start with a minimal example repository. As you
-progress through the episodes, you will progressively refine them until
-they are citable, discoverable, and ready for reuse.</p>
+<p>In this lesson, we start with a minimal example repository (branch
+<code>01-start</code>). As you progress through the episodes, you will
+progressively refine it until it is citable, discoverable, and ready for
+reuse.</p>
 
 </section><section><h2 class="section-heading" id="the-starting-point">The Starting Point<a class="anchor" aria-label="anchor" href="#the-starting-point"></a>
 </h2>
 <hr class="half-width">
 <p>Learners will download or clone the <strong>“before” state</strong>
 of the example repository:</p>
-<div class="codewrapper sourceCode" id="cb1">
+<div class="codewrapper sourceCode" id="cb2">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" tabindex="-1" aria-label="code-block-1-1"></a><span class="ex">software-demo/</span></span>
-<span id="cb1-2"><a href="#cb1-2" tabindex="-1" aria-label="code-block-1-2"></a><span class="ex">├──</span> README.md</span>
-<span id="cb1-3"><a href="#cb1-3" tabindex="-1" aria-label="code-block-1-3"></a><span class="ex">├──</span> src/</span>
-<span id="cb1-4"><a href="#cb1-4" tabindex="-1" aria-label="code-block-1-4"></a><span class="ex">│</span> └── analysis.py</span>
-<span id="cb1-5"><a href="#cb1-5" tabindex="-1" aria-label="code-block-1-5"></a><span class="ex">└──</span> environment.toml <span class="co">#(pixi environment file)</span></span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" tabindex="-1" aria-label="code-block-2-1"></a><span class="ex">software-demo/</span></span>
+<span id="cb2-2"><a href="#cb2-2" tabindex="-1" aria-label="code-block-2-2"></a><span class="ex">├──</span> README.md</span>
+<span id="cb2-3"><a href="#cb2-3" tabindex="-1" aria-label="code-block-2-3"></a><span class="ex">├──</span> src/</span>
+<span id="cb2-4"><a href="#cb2-4" tabindex="-1" aria-label="code-block-2-4"></a><span class="ex">│</span> └── analysis.py</span>
+<span id="cb2-5"><a href="#cb2-5" tabindex="-1" aria-label="code-block-2-5"></a><span class="ex">└──</span> environment.toml <span class="co">#(pixi environment file)</span></span></code></pre>
 </div>
 <p>This repository intentionally <em>lacks</em> many elements of good
 research software practice.<br>
@@ -579,7 +858,7 @@ work first?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p>Useful elements commonly include:</p>
 <ul>
@@ -646,7 +925,7 @@ them? - Could you legally reuse or modify it?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <p>Learners may observe:</p>
 <ul>
@@ -691,7 +970,7 @@ any links that you are not going to use.
  -->
 </section></section><section id="aio-open-source-license"><p>Content from <a href="open-source-license.html">Choosing an Open-Source License</a></p>
 <hr>
-<p>Last updated on 2026-05-27 |
+<p>Last updated on 2026-05-29 |
 
         <a href="https://github.com/UC-OSPO-Network/research-software-citable-discoverable/edit/main/episodes/open-source-license.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -728,6 +1007,34 @@ any links that you are not going to use.
 </div>
 </div>
 </div>
+<div id="episode-branch-01-start-02-license" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<span class="callout-header">Callout</span>
+<div id="episode-branch-01-start-02-license" class="callout-inner">
+<h3 class="callout-title">Episode Branch: <code>01-start</code> →
+<code>02-license</code>
+</h3>
+<div class="callout-content">
+<p>This episode adds a LICENSE file to the repository.</p>
+<p><strong>Starting point:</strong></p>
+<div class="codewrapper sourceCode" id="cb1">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" tabindex="-1" aria-label="code-block-1-1"></a><span class="fu">git</span> checkout 01-start    <span class="co"># Start from the beginning</span></span></code></pre>
+</div>
+<p><strong>After this episode:</strong></p>
+<div class="codewrapper sourceCode" id="cb2">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" tabindex="-1" aria-label="code-block-2-1"></a><span class="fu">git</span> checkout 02-license  <span class="co"># See the result with LICENSE added</span></span></code></pre>
+</div>
+<p><strong>Catch-up point:</strong> If joining now, run
+<code>git checkout 01-start</code></p>
+</div>
+</div>
+</div>
 <section><h2 class="section-heading" id="why-licensing-matters">Why licensing matters<a class="anchor" aria-label="anchor" href="#why-licensing-matters"></a>
 </h2>
 <hr class="half-width">
@@ -739,27 +1046,28 @@ the code.</p>
 friction and supporting open, reproducible research. Following the <a href="https://ucospo.net/oss-resources/template-guides/license-guide/" class="external-link">UC
 OSPO License Guide</a> ensures your project meets institutional
 standards while maximizing its impact.</p>
-<div id="uc-context-working-with-tech-transfer" class="callout">
+<div id="institutional-context-who-owns-your-software" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
 <span class="callout-header">Callout</span>
-<div id="uc-context-working-with-tech-transfer" class="callout-inner">
-<h3 class="callout-title">UC Context: Working with Tech Transfer</h3>
+<div id="institutional-context-who-owns-your-software" class="callout-inner">
+<h3 class="callout-title">Institutional Context: Who Owns Your
+Software?</h3>
 <div class="callout-content">
-<p>At the University of California, software created using university
-resources is typically owned by <strong>The Regents of the University of
-California</strong>. Before releasing code under an open-source license,
-you must check with your campus <strong>Tech Transfer office</strong>
-(sometimes called the Office of Intellectual Property or Technology
-Commercialization). They will:</p>
-<ul>
-<li>Verify ownership and funding requirements.</li>
-<li>Ensure no third-party restrictions apply (e.g., from proprietary
-libraries).</li>
-<li>Help you select the most appropriate license from the <a href="https://security.ucop.edu/resources/open-source-software-licensing.html" class="external-link">UC-approved
-list</a>.</li>
-</ul>
+<p>At most universities, software created using institutional resources
+is owned by the institution, not the individual researcher. Before
+releasing code under an open-source license, check with your
+<strong>Technology Transfer or Intellectual Property office</strong>.
+They will verify ownership, funding requirements, and any third-party
+restrictions.</p>
+<p><strong>If you are at a UC campus:</strong> software is typically
+owned by <em>The Regents of the University of California</em>. Your
+campus Tech Transfer office can help you select from the <a href="https://security.ucop.edu/resources/open-source-software-licensing.html" class="external-link">UC-approved
+license list</a>. <em>(UC-specific)</em></p>
+<p><strong>At other institutions:</strong> check with your research
+computing, library, or legal office. Most will have a similar process
+and a list of preferred licenses.</p>
 </div>
 </div>
 </div>
@@ -774,8 +1082,8 @@ list</a>.</li>
 <p>These allow broad reuse with minimal restrictions. Anyone can copy,
 modify, or redistribute the code. They are common in research because
 they’re simple and maximize flexibility.</p>
-<p><strong>The UC system recommends BSD licenses</strong> as the first
-choice for most projects because they:</p>
+<p><strong>BSD licenses are a common first choice at many research
+institutions</strong> because they:</p>
 <ul>
 <li>originated at UC Berkeley</li>
 <li>are simple to understand</li>
@@ -806,15 +1114,15 @@ Tech Transfer office about GPL 2.0 or alternatives.</p>
 </div>
 </div>
 </div>
-</section><section><h2 class="section-heading" id="how-to-choose-a-license-for-your-uc-project">How to choose a license for your UC project<a class="anchor" aria-label="anchor" href="#how-to-choose-a-license-for-your-uc-project"></a>
+</section><section><h2 class="section-heading" id="how-to-choose-a-license">How to choose a license<a class="anchor" aria-label="anchor" href="#how-to-choose-a-license"></a>
 </h2>
 <hr class="half-width">
-<p>The UC Open Source Software Workgroup identified five “low-risk”
-licenses suitable for most projects. Here’s a decision guide:</p>
+<p>Five “low-risk” licenses are suitable for most research projects.
+Here’s a decision guide:</p>
 <pre class="mermaid"><code>graph TD
     Start[Starting a new UC research software project?] --&gt; Check{Do you have&lt;br/&gt;special requirements?}
 
-    Check --&gt;|No special needs| BSD[Use BSD 3-Clause&lt;br/&gt;✓ UC's primary recommendation&lt;br/&gt;✓ Simple and protective&lt;br/&gt;✓ Widely compatible]
+    Check --&gt;|No special needs| BSD[Use BSD 3-Clause&lt;br/&gt;✓ Common research default&lt;br/&gt;✓ Simple and protective&lt;br/&gt;✓ Widely compatible]
 
     Check --&gt;|Need simpler text| MIT[Use MIT License&lt;br/&gt;✓ Nearly identical to BSD&lt;br/&gt;✓ Shorter, easier to read&lt;br/&gt;✓ Very popular]
 
@@ -844,62 +1152,109 @@ licenses suitable for most projects. Here’s a decision guide:</p>
 <div class="section level3">
 <h3 id="quick-reference">Quick reference<a class="anchor" aria-label="anchor" href="#quick-reference"></a>
 </h3>
-<table class="table">
+<table style="width:100%;" class="table">
 <colgroup>
-<col width="31%">
-<col width="54%">
-<col width="14%">
+<col width="21%">
+<col width="36%">
+<col width="32%">
+<col width="9%">
 </colgroup>
 <thead><tr>
 <th>Your need</th>
 <th>Recommended license</th>
+<th>SPDX identifier</th>
 <th>Why</th>
 </tr></thead>
 <tbody>
 <tr>
 <td>Default / most projects</td>
 <td>BSD 3-Clause</td>
-<td>UC’s standard recommendation</td>
+<td><code>BSD-3-Clause</code></td>
+<td>Common default at research institutions</td>
 </tr>
 <tr>
 <td>Simplest possible</td>
 <td>MIT</td>
+<td><code>MIT</code></td>
 <td>Minimal text, very popular</td>
 </tr>
 <tr>
 <td>Industry collaboration</td>
 <td>Apache 2.0</td>
+<td><code>Apache-2.0</code></td>
 <td>Explicit patent terms</td>
 </tr>
 <tr>
 <td>Educational focus</td>
 <td>ECL 2.0</td>
+<td><code>ECL-2.0</code></td>
 <td>Education-specific variant</td>
 </tr>
 </tbody>
 </table>
-<p><strong>Always consult your campus Tech Transfer office before
-releasing UC-owned software.</strong></p>
-<div id="uc-resources" class="callout">
+<p>The <strong>SPDX identifier</strong> is the short, machine-readable
+code used by GitHub, Zenodo, and your <code>CITATION.cff</code> file to
+communicate your license automatically. When GitHub shows a license
+badge in the sidebar, it’s reading the SPDX identifier.</p>
+<p><strong>Always consult your institution’s Tech Transfer or IP office
+before releasing software created with institutional
+resources.</strong></p>
+<div id="what-about-data-and-documentation" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
 <span class="callout-header">Callout</span>
-<div id="uc-resources" class="callout-inner">
-<h3 class="callout-title">UC Resources</h3>
+<div id="what-about-data-and-documentation" class="callout-inner">
+<h3 class="callout-title">What about data and documentation?</h3>
+<div class="callout-content">
+<p>Software licenses (BSD, MIT, Apache) are written for <em>executable
+code</em>. If your repository also contains datasets, figures, or
+documentation, those files need a separate license.</p>
+<p>The standard choice for research outputs is <strong>Creative Commons
+Attribution 4.0 (CC BY 4.0)</strong>, which allows broad reuse with
+attribution.</p>
+<p>A common pattern: - <code>/src</code> or your code files →
+<code>BSD-3-Clause</code> or <code>MIT</code> - <code>/data</code> or
+<code>/docs</code> → <code>CC-BY-4.0</code></p>
+<p>You can note this split in your README and in
+<code>CITATION.cff</code> under the <code>license</code> field, which
+accepts a list:</p>
+<div class="codewrapper sourceCode" id="cb4">
+<h3 class="code-label">YAML<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode yaml" tabindex="0"><code class="sourceCode yaml"><span id="cb4-1"><a href="#cb4-1" tabindex="-1" aria-label="code-block-4-1"></a><span class="fu">license</span><span class="kw">:</span></span>
+<span id="cb4-2"><a href="#cb4-2" tabindex="-1" aria-label="code-block-4-2"></a><span class="at">  </span><span class="kw">-</span><span class="at"> BSD-3-Clause</span></span>
+<span id="cb4-3"><a href="#cb4-3" tabindex="-1" aria-label="code-block-4-3"></a><span class="at">  </span><span class="kw">-</span><span class="at"> CC-BY-4.0</span></span></code></pre>
+</div>
+<p>Most research repositories don’t need this — but if you’re sharing a
+dataset alongside code, it’s worth thinking through.</p>
+</div>
+</div>
+</div>
+<div id="resources" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<span class="callout-header">Callout</span>
+<div id="resources" class="callout-inner">
+<h3 class="callout-title">Resources</h3>
 <div class="callout-content">
 <ul>
 <li>
+<a href="https://choosealicense.com/" class="external-link">ChooseALicense.com</a> –
+Compare features across all common licenses.</li>
+<li>
+<a href="https://spdx.org/licenses/" class="external-link">SPDX License List</a> –
+Authoritative registry of license identifiers used in CITATION.cff and
+package metadata.</li>
+<li>
 <a href="https://ucospo.net/oss-resources/template-guides/license-guide/" class="external-link">UC
-OSPO License Guide</a> – Guidance on institutional requirements and
-templates.</li>
+OSPO License Guide</a> <em>(UC-specific)</em> – UC institutional
+requirements and templates.</li>
 <li>
 <a href="https://security.ucop.edu/resources/open-source-software-licensing.html" class="external-link">UC
-OSS Chart and Companion Guide</a> – The definitive list of UC-approved
-“low-risk” licenses.</li>
-<li>
-<a href="https://choosealicense.com/" class="external-link">ChooseALicense.com</a> – A
-helpful tool for comparing license features.</li>
+OSS Chart and Companion Guide</a> <em>(UC-specific)</em> – UC-approved
+“low-risk” license list.</li>
 </ul>
 </div>
 </div>
@@ -913,8 +1268,7 @@ helpful tool for comparing license features.</li>
 <h3 class="callout-title">Challenge: Add a BSD License to Your
 Repository</h3>
 <div class="callout-content">
-<p>Following UC recommendations, we will add the BSD 3-Clause license to
-your demo repository:</p>
+<p>We will add the BSD 3-Clause license to your demo repository:</p>
 <ol style="list-style-type: decimal">
 <li>Navigate to your repository on GitHub.</li>
 <li>Click <strong>Add file</strong> → <strong>Create new
@@ -922,9 +1276,12 @@ file</strong>.</li>
 <li>Name it <code>LICENSE</code> (or <code>LICENSE.txt</code>).</li>
 <li>Click <strong>Choose a license template</strong> and select
 <strong>BSD 3-Clause License</strong>.</li>
-<li>
-<strong>CRITICAL:</strong> Update the copyright holder to:
-<code>The Regents of the University of California</code>.</li>
+<li>Update the copyright holder to reflect who owns the software. At UC
+campuses this is
+<code>The Regents of the University of California</code>; at other
+institutions check with your Tech Transfer office. <em>(If this is a
+personal project, use your own name.)</em>
+</li>
 <li>Update the year to 2026.</li>
 <li>Commit the file to your <code>main</code> branch.</li>
 </ol>
@@ -938,7 +1295,7 @@ file</strong>.</li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <p>GitHub automatically detects the <code>LICENSE</code> file and
 displays it in the sidebar. Your file should look like this:</p>
@@ -959,12 +1316,12 @@ and named exactly <code>LICENSE</code> or <code>LICENSE.txt</code>.</p>
 <p>After adding a LICENSE file, reference it in your README so users
 immediately understand usage terms.</p>
 <p>Add this section near the top of your README:</p>
-<div class="codewrapper sourceCode" id="cb3">
+<div class="codewrapper sourceCode" id="cb6">
 <h3 class="code-label">MARKDOWN<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode markdown" tabindex="0"><code class="sourceCode markdown"><span id="cb3-1"><a href="#cb3-1" tabindex="-1" aria-label="code-block-3-1"></a><span class="fu">## License</span></span>
-<span id="cb3-2"><a href="#cb3-2" tabindex="-1" aria-label="code-block-3-2"></a></span>
-<span id="cb3-3"><a href="#cb3-3" tabindex="-1" aria-label="code-block-3-3"></a>This project is licensed under the BSD 3-Clause License - see the <span class="co">[</span><span class="ot">LICENSE</span><span class="co">](LICENSE)</span> file for details.</span></code></pre>
+<pre class="sourceCode markdown" tabindex="0"><code class="sourceCode markdown"><span id="cb6-1"><a href="#cb6-1" tabindex="-1" aria-label="code-block-6-1"></a><span class="fu">## License</span></span>
+<span id="cb6-2"><a href="#cb6-2" tabindex="-1" aria-label="code-block-6-2"></a></span>
+<span id="cb6-3"><a href="#cb6-3" tabindex="-1" aria-label="code-block-6-3"></a>This project is licensed under the BSD 3-Clause License - see the <span class="co">[</span><span class="ot">LICENSE</span><span class="co">](LICENSE)</span> file for details.</span></code></pre>
 </div>
 <p><strong>Why this matters:</strong> Users reading your README on
 platforms other than GitHub (Zenodo, email, exported PDFs) will see your
@@ -992,7 +1349,7 @@ with collaborators.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <p><strong>Scenario 1:</strong> BSD 3-Clause (UC’s default
 recommendation, maximum flexibility and adoption)</p>
@@ -1022,281 +1379,13 @@ repository following UC recommendations.</p>
 <ul>
 <li>Without a license, software is legally restricted and not
 reusable</li>
-<li>UC recommends BSD 3-Clause as the default license for most
-projects</li>
+<li>BSD 3-Clause is a common default at research institutions; MIT and
+Apache 2.0 are strong alternatives</li>
 <li>Permissive licenses (BSD, MIT, Apache 2.0) maximize flexibility and
 adoption</li>
-<li>Always consult your campus Tech Transfer office for UC-owned
-software</li>
+<li>Always consult your institution’s Tech Transfer or IP office before
+releasing institutionally-owned software</li>
 <li>GitHub makes adding standard licenses straightforward</li>
-</ul>
-</div>
-</div>
-</div>
-<!--
-Place links that you need to refer to multiple times across pages here. Delete
-any links that you are not going to use.
- -->
-</section></section><section id="aio-managing-environments-pixi"><p>Content from <a href="managing-environments-pixi.html">Managing Reproducible Environments with pixi</a></p>
-<hr>
-<p>Last updated on 2026-02-01 |
-
-        <a href="https://github.com/UC-OSPO-Network/research-software-citable-discoverable/edit/main/episodes/managing-environments-pixi.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
-<div class="text-end">
-          <button role="button" aria-pressed="false" tabindex="0" id="expand-code" class="pull-right" data-expand="Expand All Solutions " data-collapse="Collapse All Solutions "> Expand All Solutions <i aria-hidden="true" data-feather="plus"></i></button>
-        </div>
-<div class="overview card">
-<h2 class="card-header">Overview</h2>
-<div class="row g-0">
-<div class="col-md-4">
-<div class="card-body">
-<div class="inner">
-<h3 class="card-title">Questions</h3>
-<ul>
-<li>Why do software projects need well defined environments?</li>
-<li>How can <code>pixi</code> help learners run the same code the
-developer used?</li>
-<li>How does environment management improve the reproducibility and
-citability of research software?</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="col-md-8">
-<div class="card-body">
-<div class="inner bordered">
-<h3 class="card-title">Objectives</h3>
-<ul>
-<li>Explain why environment definition is central to reproducible
-research.</li>
-<li>Create a minimal <code>pixi.toml</code> file for a project.</li>
-<li>Use <code>pixi</code> to run Python or R code inside a clean,
-isolated environment.</li>
-<li>Describe how environment files support FAIR software and citation
-practices.</li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-</div>
-<section><h2 class="section-heading" id="why-environments-matter">Why Environments Matter<a class="anchor" aria-label="anchor" href="#why-environments-matter"></a>
-</h2>
-<hr class="half-width">
-<p>Research software often “works on my machine” and nowhere else.<br>
-Different operating systems, outdated packages, and mismatched library
-versions frequently break code.</p>
-<p>Environment management reduces this friction because it captures:</p>
-<ul>
-<li>the exact language versions used<br>
-</li>
-<li>required packages<br>
-</li>
-<li>the dependency set needed to run the software<br>
-</li>
-<li>instructions for reproducing the execution environment</li>
-</ul>
-<p>For researchers, this supports:</p>
-<ul>
-<li>reproducibility<br>
-</li>
-<li>clearer documentation<br>
-</li>
-<li>better long term maintenance<br>
-</li>
-<li>a stronger foundation for citation and reuse</li>
-</ul>
-<p><code>pixi</code> is a modern, fast environment manager that works
-for Python, R, and many other languages. We use it in this lesson
-because it is cross-platform, faster than Conda, and creates lockfiles
-(<code>pixi.lock</code>) automatically, which guarantees that everyone
-runs the exact same versions of every package.</p>
-<hr></section><section><h2 class="section-heading" id="installing-pixi">Installing pixi<a class="anchor" aria-label="anchor" href="#installing-pixi"></a>
-</h2>
-<hr class="half-width">
-<p>Full installation docs: <a href="https://pixi.sh" class="external-link uri">https://pixi.sh</a></p>
-<p>Common installation for macOS or Linux:</p>
-<div class="codewrapper sourceCode" id="cb1">
-<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" tabindex="-1" aria-label="code-block-1-1"></a><span class="ex">curl</span> <span class="at">-fsSL</span> https://pixi.sh/install.sh <span class="kw">|</span> <span class="fu">bash</span></span></code></pre>
-</div>
-<p>Windows users can install via MSI installer or
-<code>winget</code>.</p>
-<div id="callout1" class="callout">
-<div class="callout-square">
-<i class="callout-icon" data-feather="bell"></i>
-</div>
-<span class="callout-header">Callout</span>
-<div class="callout-inner">
-<div class="callout-content">
-<p><code>pixi</code> includes its own language runtimes.<br>
-Learners do not need preinstalled Python, R, compilers, or system
-packages.</p>
-</div>
-</div>
-</div>
-</section><section><h2 class="section-heading" id="creating-a-new-pixi-project">Creating a New pixi Project<a class="anchor" aria-label="anchor" href="#creating-a-new-pixi-project"></a>
-</h2>
-<hr class="half-width">
-<p>Create a directory and initialize a pixi project:</p>
-<div class="codewrapper sourceCode" id="cb2">
-<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" tabindex="-1" aria-label="code-block-2-1"></a><span class="fu">mkdir</span> myproject</span>
-<span id="cb2-2"><a href="#cb2-2" tabindex="-1" aria-label="code-block-2-2"></a><span class="bu">cd</span> myproject</span>
-<span id="cb2-3"><a href="#cb2-3" tabindex="-1" aria-label="code-block-2-3"></a><span class="ex">pixi</span> init</span></code></pre>
-</div>
-<p>This creates a <code>pixi.toml</code> file, which documents your
-environment.</p>
-<div class="section level3">
-<h3 id="keeping-repositories-clean--gitignore">Keeping Repositories Clean (.gitignore)<a class="anchor" aria-label="anchor" href="#keeping-repositories-clean--gitignore"></a>
-</h3>
-<p>When you run <code>pixi init</code>, it automatically creates a
-<code>.gitignore</code> file. This file tells Git which files to
-<strong>ignore</strong>.</p>
-<p>For <code>pixi</code>, this is critical because it creates a hidden
-folder <code>.pixi/</code> containing thousands of environment files.
-You <strong>never</strong> want to commit this folder to GitHub—it is
-large, platform-specific, and can be regenerated by anyone using your
-<code>pixi.lock</code> file.</p>
-<p><strong>Always check your <code>.gitignore</code></strong> to ensure
-generated files (like <code>.DS_Store</code>, <code>__pycache__</code>,
-or data outputs) are not accidentally shared.</p>
-<p>Add Python:</p>
-<div class="codewrapper sourceCode" id="cb3">
-<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" tabindex="-1" aria-label="code-block-3-1"></a><span class="ex">pixi</span> add python</span></code></pre>
-</div>
-<p>Add the NumPy package:</p>
-<div class="codewrapper sourceCode" id="cb4">
-<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" tabindex="-1" aria-label="code-block-4-1"></a><span class="ex">pixi</span> add numpy</span></code></pre>
-</div>
-<p>Add R and one package:</p>
-<div class="codewrapper sourceCode" id="cb5">
-<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" tabindex="-1" aria-label="code-block-5-1"></a><span class="ex">pixi</span> add r</span>
-<span id="cb5-2"><a href="#cb5-2" tabindex="-1" aria-label="code-block-5-2"></a><span class="ex">pixi</span> add r-dplyr</span></code></pre>
-</div>
-<p>Your <code>pixi.toml</code> is now a reproducible record of all
-dependencies needed for the software.</p>
-<hr>
-</div>
-</section><section><h2 class="section-heading" id="running-code-with-pixi">Running Code With pixi<a class="anchor" aria-label="anchor" href="#running-code-with-pixi"></a>
-</h2>
-<hr class="half-width">
-<p>Run Python code:</p>
-<div class="codewrapper sourceCode" id="cb6">
-<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" tabindex="-1" aria-label="code-block-6-1"></a><span class="ex">pixi</span> run python script.py</span></code></pre>
-</div>
-<p>Run R code:</p>
-<div class="codewrapper sourceCode" id="cb7">
-<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" tabindex="-1" aria-label="code-block-7-1"></a><span class="ex">pixi</span> run Rscript analysis.R</span></code></pre>
-</div>
-<p>Every command is executed <em>inside</em> the environment described
-by <code>pixi.toml</code>.</p>
-<p>This makes it easier for others to test, cite, extend, and build upon
-your work.</p>
-<hr></section><section><h2 class="section-heading" id="how-environments-support-citation-and-reuse">How Environments Support Citation and Reuse<a class="anchor" aria-label="anchor" href="#how-environments-support-citation-and-reuse"></a>
-</h2>
-<hr class="half-width">
-<p>A reusable research software project contains not only code, but:</p>
-<ul>
-<li>licensing<br>
-</li>
-<li>authorship and citation metadata (<code>CITATION.cff</code>)<br>
-</li>
-<li>version information<br>
-</li>
-<li>a documented environment</li>
-</ul>
-<p>Including <code>pixi.toml</code> in your repository or DOI deposit
-helps future readers:</p>
-<ul>
-<li>recreate the execution environment<br>
-</li>
-<li>verify results<br>
-</li>
-<li>adapt your code for new analyses<br>
-</li>
-<li>evaluate whether the software is FAIR (Findable, Accessible,
-Interoperable, Reusable)</li>
-</ul>
-<p>When publishing your software, include:</p>
-<ul>
-<li><p>the <code>pixi.toml</code> file<br></p></li>
-<li>
-<p>instructions such as:</p>
-<div class="codewrapper sourceCode" id="cb8">
-<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" tabindex="-1" aria-label="code-block-8-1"></a><span class="ex">pixi</span> run python script.py</span></code></pre>
-</div>
-</li>
-</ul>
-<div id="challenge-add-a-new-dependency" class="callout challenge">
-<div class="callout-square">
-<i class="callout-icon" data-feather="zap"></i>
-</div>
-<span class="callout-header">Challenge</span>
-<div id="challenge-add-a-new-dependency" class="callout-inner">
-<h3 class="callout-title">Challenge: Add a new dependency</h3>
-<div class="callout-content">
-<p>Use <code>pixi</code> to add <code>pandas</code> or
-<code>r-ggplot2</code> to your project.</p>
-<p>What changed in your <code>pixi.toml</code> file?</p>
-</div>
-</div>
-</div>
-<div id="accordionSolution1" class="accordion challenge-accordion accordion-flush">
-<div class="accordion-item">
-<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
-  <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
-</button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
-<div class="accordion-body">
-<div class="codewrapper sourceCode" id="cb9">
-<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" tabindex="-1" aria-label="code-block-9-1"></a><span class="ex">pixi</span> add pandas</span></code></pre>
-</div>
-<p>or:</p>
-<div class="codewrapper sourceCode" id="cb10">
-<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" tabindex="-1" aria-label="code-block-10-1"></a><span class="ex">pixi</span> add r-ggplot2</span></code></pre>
-</div>
-<p>You should see the new package listed under
-<code>[project.dependencies]</code> in your <code>pixi.toml</code>.</p>
-</div>
-</div>
-</div>
-</div>
-<div id="keypoints1" class="callout keypoints">
-<div class="callout-square">
-<i class="callout-icon" data-feather="key"></i>
-</div>
-<span class="callout-header">Key Points</span>
-<div class="callout-inner">
-<div class="callout-content">
-<ul>
-<li>Reproducible environments reduce troubleshooting and support more
-reusable software.</li>
-<li>
-<code>pixi</code> provides fast, cross platform environment
-management.</li>
-<li>The <code>pixi.toml</code> file acts as documentation that supports
-citation and FAIR4RS principles.</li>
-<li>Use <code>pixi run</code> to execute Python or R code inside a
-reproducible environment.</li>
 </ul>
 </div>
 </div>
@@ -1307,7 +1396,7 @@ any links that you are not going to use.
  -->
 </section></section><section id="aio-adding-citation-file"><p>Content from <a href="adding-citation-file.html">Adding a CITATION.cff File</a></p>
 <hr>
-<p>Last updated on 2025-12-06 |
+<p>Last updated on 2026-05-29 |
 
         <a href="https://github.com/UC-OSPO-Network/research-software-citable-discoverable/edit/main/episodes/adding-citation-file.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -1342,6 +1431,37 @@ DOIs.</li>
 </ul>
 </div>
 </div>
+</div>
+</div>
+</div>
+<div id="episode-branch-02-license-04-citation" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<span class="callout-header">Callout</span>
+<div id="episode-branch-02-license-04-citation" class="callout-inner">
+<h3 class="callout-title">Episode Branch: <code>02-license</code> →
+<code>04-citation</code>
+</h3>
+<div class="callout-content">
+<p>This episode adds a CITATION.cff file.</p>
+<p><strong>Starting point:</strong></p>
+<div class="codewrapper sourceCode" id="cb1">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" tabindex="-1" aria-label="code-block-1-1"></a><span class="fu">git</span> checkout 02-license  <span class="co"># Start with LICENSE added</span></span></code></pre>
+</div>
+<p><strong>After this episode:</strong></p>
+<div class="codewrapper sourceCode" id="cb2">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" tabindex="-1" aria-label="code-block-2-1"></a><span class="fu">git</span> checkout 04-citation <span class="co"># See the result with CITATION.cff added</span></span></code></pre>
+</div>
+<p><strong>Catch-up point:</strong> If joining now, run
+<code>git checkout 02-license</code></p>
+<p><em>Note: the <code>04-citation</code> branch also contains pixi
+environment files from the optional reproducibility episode. You can
+ignore those files for now.</em></p>
 </div>
 </div>
 </div>
@@ -1416,36 +1536,100 @@ managers</li>
 </div>
 </div>
 </div>
-</section><section><h2 class="section-heading" id="add-a-citation-cff-file-to-your-repository">Add a CITATION.cff file to your repository<a class="anchor" aria-label="anchor" href="#add-a-citation-cff-file-to-your-repository"></a>
+</section><section><h2 class="section-heading" id="how-to-create-a-citation-cff-file">How to Create a CITATION.cff File<a class="anchor" aria-label="anchor" href="#how-to-create-a-citation-cff-file"></a>
 </h2>
 <hr class="half-width">
+<p>You have two options:</p>
 <div class="section level3">
-<h3 id="step-1-create-the-file">Step 1 — Create the file<a class="anchor" aria-label="anchor" href="#step-1-create-the-file"></a>
+<h3 id="option-1-use-cffinit-recommended-for-beginners">Option 1: Use cffinit (Recommended for beginners)<a class="anchor" aria-label="anchor" href="#option-1-use-cffinit-recommended-for-beginners"></a>
 </h3>
+<p>The CITATION.cff community provides a web-based wizard:</p>
+<p><strong>Use cffinit:</strong> - Visit: <a href="https://citation-file-format.github.io/cffinit/" class="external-link uri">https://citation-file-format.github.io/cffinit/</a> - Fill
+out the form with your software details - Download the generated
+<code>CITATION.cff</code> file - Add it to your repository root</p>
+<p><strong>Benefits:</strong> - Interactive form guides you through
+required fields - Validates your file automatically - No need to
+memorize YAML syntax - More information on CFF: <a href="https://citation-file-format.github.io/" class="external-link uri">https://citation-file-format.github.io/</a></p>
+</div>
+<div class="section level3">
+<h3 id="option-2-create-it-manually">Option 2: Create it manually<a class="anchor" aria-label="anchor" href="#option-2-create-it-manually"></a>
+</h3>
+<p>If you prefer to write it yourself:</p>
+<p><strong>Step 1 — Create the file</strong></p>
 <p>In the root of your repository:</p>
-<div class="codewrapper sourceCode" id="cb1">
+<div class="codewrapper sourceCode" id="cb3">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" tabindex="-1" aria-label="code-block-1-1"></a><span class="fu">touch</span> CITATION.cff</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" tabindex="-1" aria-label="code-block-3-1"></a><span class="fu">touch</span> CITATION.cff</span></code></pre>
 </div>
-</div>
-<div class="section level3">
-<h3 id="step-2-add-minimal-metadata">Step 2 — Add minimal metadata<a class="anchor" aria-label="anchor" href="#step-2-add-minimal-metadata"></a>
-</h3>
-<div class="codewrapper sourceCode" id="cb2">
+<p><strong>Step 2 — Add minimal metadata</strong></p>
+<p>Here’s a complete example from the slides:</p>
+<div class="codewrapper sourceCode" id="cb4">
 <h3 class="code-label">YAML<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode yaml" tabindex="0"><code class="sourceCode yaml"><span id="cb2-1"><a href="#cb2-1" tabindex="-1" aria-label="code-block-2-1"></a><span class="fu">cff-version</span><span class="kw">:</span><span class="at"> </span><span class="fl">1.2.0</span></span>
-<span id="cb2-2"><a href="#cb2-2" tabindex="-1" aria-label="code-block-2-2"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> MyResearchSoftware</span></span>
-<span id="cb2-3"><a href="#cb2-3" tabindex="-1" aria-label="code-block-2-3"></a><span class="fu">message</span><span class="kw">:</span><span class="at"> </span><span class="st">"Please cite this software using the metadata below."</span></span>
-<span id="cb2-4"><a href="#cb2-4" tabindex="-1" aria-label="code-block-2-4"></a><span class="fu">authors</span><span class="kw">:</span></span>
-<span id="cb2-5"><a href="#cb2-5" tabindex="-1" aria-label="code-block-2-5"></a><span class="at">  </span><span class="kw">-</span><span class="at"> </span><span class="fu">given-names</span><span class="kw">:</span><span class="at"> Jane</span></span>
-<span id="cb2-6"><a href="#cb2-6" tabindex="-1" aria-label="code-block-2-6"></a><span class="at">    </span><span class="fu">family-names</span><span class="kw">:</span><span class="at"> Doe</span></span>
-<span id="cb2-7"><a href="#cb2-7" tabindex="-1" aria-label="code-block-2-7"></a><span class="at">    </span><span class="fu">orcid</span><span class="kw">:</span><span class="at"> https://orcid.org/0000-0002-1825-0097</span></span>
-<span id="cb2-8"><a href="#cb2-8" tabindex="-1" aria-label="code-block-2-8"></a><span class="fu">version</span><span class="kw">:</span><span class="at"> </span><span class="st">"0.1.0"</span></span></code></pre>
+<pre class="sourceCode yaml" tabindex="0"><code class="sourceCode yaml"><span id="cb4-1"><a href="#cb4-1" tabindex="-1" aria-label="code-block-4-1"></a><span class="fu">cff-version</span><span class="kw">:</span><span class="at"> </span><span class="fl">1.2.0</span></span>
+<span id="cb4-2"><a href="#cb4-2" tabindex="-1" aria-label="code-block-4-2"></a><span class="fu">message</span><span class="kw">:</span><span class="at"> </span><span class="st">"If you use this software, please cite it as below."</span></span>
+<span id="cb4-3"><a href="#cb4-3" tabindex="-1" aria-label="code-block-4-3"></a><span class="fu">authors</span><span class="kw">:</span></span>
+<span id="cb4-4"><a href="#cb4-4" tabindex="-1" aria-label="code-block-4-4"></a><span class="at">  </span><span class="kw">-</span><span class="at"> </span><span class="fu">family-names</span><span class="kw">:</span><span class="at"> </span><span class="st">"Dennis"</span></span>
+<span id="cb4-5"><a href="#cb4-5" tabindex="-1" aria-label="code-block-4-5"></a><span class="at">    </span><span class="fu">given-names</span><span class="kw">:</span><span class="at"> </span><span class="st">"Tim"</span></span>
+<span id="cb4-6"><a href="#cb4-6" tabindex="-1" aria-label="code-block-4-6"></a><span class="at">    </span><span class="fu">orcid</span><span class="kw">:</span><span class="at"> </span><span class="st">"https://orcid.org/0000-0002-1234-5678"</span></span>
+<span id="cb4-7"><a href="#cb4-7" tabindex="-1" aria-label="code-block-4-7"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"Biodiversity Analysis Toolkit"</span></span>
+<span id="cb4-8"><a href="#cb4-8" tabindex="-1" aria-label="code-block-4-8"></a><span class="fu">version</span><span class="kw">:</span><span class="at"> </span><span class="fl">0.1.0</span></span>
+<span id="cb4-9"><a href="#cb4-9" tabindex="-1" aria-label="code-block-4-9"></a><span class="fu">date-released</span><span class="kw">:</span><span class="at"> 2025-01-15</span></span>
+<span id="cb4-10"><a href="#cb4-10" tabindex="-1" aria-label="code-block-4-10"></a><span class="fu">url</span><span class="kw">:</span><span class="at"> </span><span class="st">"https://github.com/jt14den/software-demo"</span></span></code></pre>
 </div>
+<p><strong>GitHub creates a “Cite this repository” button
+automatically!</strong></p>
 <p>If your software does not yet have version tags, you may omit the
-version field until Episode 4.</p>
+version field until Episode 4 when you create releases.</p>
+</div>
+</section><section><h2 class="section-heading" id="linking-to-a-published-paper">Linking to a published paper<a class="anchor" aria-label="anchor" href="#linking-to-a-published-paper"></a>
+</h2>
+<hr class="half-width">
+<p>Many researchers want users to cite a journal article
+<em>alongside</em> or <em>instead of</em> the raw software repository.
+The <code>preferred-citation</code> field handles this — it tells
+GitHub, Zotero, and other tools which reference to show first.</p>
+<div class="codewrapper sourceCode" id="cb5">
+<h3 class="code-label">YAML<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode yaml" tabindex="0"><code class="sourceCode yaml"><span id="cb5-1"><a href="#cb5-1" tabindex="-1" aria-label="code-block-5-1"></a><span class="fu">cff-version</span><span class="kw">:</span><span class="at"> </span><span class="fl">1.2.0</span></span>
+<span id="cb5-2"><a href="#cb5-2" tabindex="-1" aria-label="code-block-5-2"></a><span class="fu">message</span><span class="kw">:</span><span class="at"> </span><span class="st">"If you use this software, please cite the paper below."</span></span>
+<span id="cb5-3"><a href="#cb5-3" tabindex="-1" aria-label="code-block-5-3"></a><span class="fu">authors</span><span class="kw">:</span></span>
+<span id="cb5-4"><a href="#cb5-4" tabindex="-1" aria-label="code-block-5-4"></a><span class="at">  </span><span class="kw">-</span><span class="at"> </span><span class="fu">family-names</span><span class="kw">:</span><span class="at"> </span><span class="st">"Dennis"</span></span>
+<span id="cb5-5"><a href="#cb5-5" tabindex="-1" aria-label="code-block-5-5"></a><span class="at">    </span><span class="fu">given-names</span><span class="kw">:</span><span class="at"> </span><span class="st">"Tim"</span></span>
+<span id="cb5-6"><a href="#cb5-6" tabindex="-1" aria-label="code-block-5-6"></a><span class="at">    </span><span class="fu">orcid</span><span class="kw">:</span><span class="at"> </span><span class="st">"https://orcid.org/0000-0002-1234-5678"</span></span>
+<span id="cb5-7"><a href="#cb5-7" tabindex="-1" aria-label="code-block-5-7"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"Biodiversity Analysis Toolkit"</span></span>
+<span id="cb5-8"><a href="#cb5-8" tabindex="-1" aria-label="code-block-5-8"></a><span class="fu">version</span><span class="kw">:</span><span class="at"> </span><span class="fl">0.1.0</span></span>
+<span id="cb5-9"><a href="#cb5-9" tabindex="-1" aria-label="code-block-5-9"></a><span class="fu">date-released</span><span class="kw">:</span><span class="at"> 2025-01-15</span></span>
+<span id="cb5-10"><a href="#cb5-10" tabindex="-1" aria-label="code-block-5-10"></a><span class="fu">url</span><span class="kw">:</span><span class="at"> </span><span class="st">"https://github.com/jt14den/software-demo"</span></span>
+<span id="cb5-11"><a href="#cb5-11" tabindex="-1" aria-label="code-block-5-11"></a><span class="fu">preferred-citation</span><span class="kw">:</span></span>
+<span id="cb5-12"><a href="#cb5-12" tabindex="-1" aria-label="code-block-5-12"></a><span class="at">  </span><span class="fu">type</span><span class="kw">:</span><span class="at"> article</span></span>
+<span id="cb5-13"><a href="#cb5-13" tabindex="-1" aria-label="code-block-5-13"></a><span class="at">  </span><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"Biodiversity Analysis at Scale: Methods and Software"</span></span>
+<span id="cb5-14"><a href="#cb5-14" tabindex="-1" aria-label="code-block-5-14"></a><span class="at">  </span><span class="fu">authors</span><span class="kw">:</span></span>
+<span id="cb5-15"><a href="#cb5-15" tabindex="-1" aria-label="code-block-5-15"></a><span class="at">    </span><span class="kw">-</span><span class="at"> </span><span class="fu">family-names</span><span class="kw">:</span><span class="at"> </span><span class="st">"Dennis"</span></span>
+<span id="cb5-16"><a href="#cb5-16" tabindex="-1" aria-label="code-block-5-16"></a><span class="at">      </span><span class="fu">given-names</span><span class="kw">:</span><span class="at"> </span><span class="st">"Tim"</span></span>
+<span id="cb5-17"><a href="#cb5-17" tabindex="-1" aria-label="code-block-5-17"></a><span class="at">  </span><span class="fu">journal</span><span class="kw">:</span><span class="at"> </span><span class="st">"Journal of Open Source Software"</span></span>
+<span id="cb5-18"><a href="#cb5-18" tabindex="-1" aria-label="code-block-5-18"></a><span class="at">  </span><span class="fu">year</span><span class="kw">:</span><span class="at"> </span><span class="dv">2025</span></span>
+<span id="cb5-19"><a href="#cb5-19" tabindex="-1" aria-label="code-block-5-19"></a><span class="at">  </span><span class="fu">doi</span><span class="kw">:</span><span class="at"> </span><span class="st">"10.21105/joss.00000"</span></span></code></pre>
+</div>
+<p>Without <code>preferred-citation</code>, GitHub shows the software
+repository citation by default. Adding it ensures that anyone clicking
+“Cite this repository” gets your paper’s citation instead — which is
+usually what you want for impact tracking.</p>
+<div id="no-paper-yet-skip-it." class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<span class="callout-header">Callout</span>
+<div id="no-paper-yet-skip-it." class="callout-inner">
+<h3 class="callout-title">No paper yet? Skip it.</h3>
+<div class="callout-content">
+<p>Leave out <code>preferred-citation</code> if you don’t have a
+published article. You can add it later. The rest of the file works fine
+without it.</p>
+</div>
+</div>
 </div>
 <div class="section level3">
 <h3 id="step-3-commit-and-refresh">Step 3 — Commit and refresh<a class="anchor" aria-label="anchor" href="#step-3-commit-and-refresh"></a>
@@ -1521,15 +1705,15 @@ lesson).</p>
 <div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <p>A valid minimal example:</p>
-<div class="codewrapper sourceCode" id="cb3">
+<div class="codewrapper sourceCode" id="cb6">
 <h3 class="code-label">YAML<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode yaml" tabindex="0"><code class="sourceCode yaml"><span id="cb3-1"><a href="#cb3-1" tabindex="-1" aria-label="code-block-3-1"></a><span class="fu">cff-version</span><span class="kw">:</span><span class="at"> </span><span class="fl">1.2.0</span></span>
-<span id="cb3-2"><a href="#cb3-2" tabindex="-1" aria-label="code-block-3-2"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> ExampleProject</span></span>
-<span id="cb3-3"><a href="#cb3-3" tabindex="-1" aria-label="code-block-3-3"></a><span class="fu">message</span><span class="kw">:</span><span class="at"> </span><span class="st">"Please cite this software."</span></span>
-<span id="cb3-4"><a href="#cb3-4" tabindex="-1" aria-label="code-block-3-4"></a><span class="fu">authors</span><span class="kw">:</span></span>
-<span id="cb3-5"><a href="#cb3-5" tabindex="-1" aria-label="code-block-3-5"></a><span class="at">  </span><span class="kw">-</span><span class="at"> </span><span class="fu">given-names</span><span class="kw">:</span><span class="at"> Alex</span></span>
-<span id="cb3-6"><a href="#cb3-6" tabindex="-1" aria-label="code-block-3-6"></a><span class="at">    </span><span class="fu">family-names</span><span class="kw">:</span><span class="at"> Researcher</span></span></code></pre>
+<pre class="sourceCode yaml" tabindex="0"><code class="sourceCode yaml"><span id="cb6-1"><a href="#cb6-1" tabindex="-1" aria-label="code-block-6-1"></a><span class="fu">cff-version</span><span class="kw">:</span><span class="at"> </span><span class="fl">1.2.0</span></span>
+<span id="cb6-2"><a href="#cb6-2" tabindex="-1" aria-label="code-block-6-2"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> ExampleProject</span></span>
+<span id="cb6-3"><a href="#cb6-3" tabindex="-1" aria-label="code-block-6-3"></a><span class="fu">message</span><span class="kw">:</span><span class="at"> </span><span class="st">"Please cite this software."</span></span>
+<span id="cb6-4"><a href="#cb6-4" tabindex="-1" aria-label="code-block-6-4"></a><span class="fu">authors</span><span class="kw">:</span></span>
+<span id="cb6-5"><a href="#cb6-5" tabindex="-1" aria-label="code-block-6-5"></a><span class="at">  </span><span class="kw">-</span><span class="at"> </span><span class="fu">given-names</span><span class="kw">:</span><span class="at"> Alex</span></span>
+<span id="cb6-6"><a href="#cb6-6" tabindex="-1" aria-label="code-block-6-6"></a><span class="at">    </span><span class="fu">family-names</span><span class="kw">:</span><span class="at"> Researcher</span></span></code></pre>
 </div>
 </div>
 </div>
@@ -1559,7 +1743,7 @@ any links that you are not going to use.
 </div>
 </section></section><section id="aio-making-software-citable"><p>Content from <a href="making-software-citable.html">Making Your Software Citable</a></p>
 <hr>
-<p>Last updated on 2026-02-01 |
+<p>Last updated on 2026-05-29 |
 
         <a href="https://github.com/UC-OSPO-Network/research-software-citable-discoverable/edit/main/episodes/making-software-citable.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -1594,6 +1778,34 @@ any links that you are not going to use.
 </div>
 </div>
 </div>
+<div id="episode-branch-04-citation-05-release" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<span class="callout-header">Callout</span>
+<div id="episode-branch-04-citation-05-release" class="callout-inner">
+<h3 class="callout-title">Episode Branch: <code>04-citation</code> →
+<code>05-release</code>
+</h3>
+<div class="callout-content">
+<p>This episode creates a release and tag.</p>
+<p><strong>Starting point:</strong></p>
+<div class="codewrapper sourceCode" id="cb1">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" tabindex="-1" aria-label="code-block-1-1"></a><span class="fu">git</span> checkout 04-citation <span class="co"># Start with LICENSE and CITATION.cff</span></span></code></pre>
+</div>
+<p><strong>After this episode:</strong></p>
+<div class="codewrapper sourceCode" id="cb2">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" tabindex="-1" aria-label="code-block-2-1"></a><span class="fu">git</span> checkout 05-release  <span class="co"># See the result with v0.1.0 tag</span></span></code></pre>
+</div>
+<p><strong>Catch-up point:</strong> If joining now, run
+<code>git checkout 04-citation</code></p>
+</div>
+</div>
+</div>
 <section><h2 class="section-heading" id="introduction">Introduction<a class="anchor" aria-label="anchor" href="#introduction"></a>
 </h2>
 <hr class="half-width">
@@ -1622,8 +1834,6 @@ giving each version a persistent identifier.</p>
 <li>shared a public repository<br>
 </li>
 <li>added a license<br>
-</li>
-<li>created reproducible environments with <code>pixi</code><br>
 </li>
 <li>added a <code>CITATION.cff</code> file</li>
 </ul>
@@ -1764,23 +1974,96 @@ software’s evolution.</p>
 record, we will use <strong>Zenodo Sandbox</strong>. It works exactly
 like the real Zenodo but is for testing.</p>
 <div class="section level3">
-<h3 id="steps-1">Steps<a class="anchor" aria-label="anchor" href="#steps-1"></a>
+<h3 id="the-complete-6-step-workflow">The Complete 6-Step Workflow<a class="anchor" aria-label="anchor" href="#the-complete-6-step-workflow"></a>
 </h3>
+<p><strong>Step 1: Log in to Zenodo with GitHub</strong> - Visit <a href="https://sandbox.zenodo.org" class="external-link uri">https://sandbox.zenodo.org</a> - Click “Log in with GitHub”
+- Authorize Zenodo to access your repositories</p>
+<p><strong>Step 2: Enable your repository (toggle ON)</strong> - Go to
+<strong>Settings → GitHub</strong> in Zenodo Sandbox - Find your
+repository in the list - Toggle the switch to <strong>ON</strong>
+(green) - This tells Zenodo to watch for new releases</p>
+<p><strong>Step 3: Create GitHub Release (tag v1.0.0)</strong> - Go to
+your GitHub repository - Click <strong>Releases → Draft a new
+release</strong> - Create a tag: <code>v1.0.0</code> - Add release notes
+describing what’s in this version - Click <strong>Publish
+release</strong></p>
+<p><strong>Step 4: Zenodo auto-archives and mints DOI</strong> - Zenodo
+automatically detects your new release - Creates an archived snapshot -
+Assigns a permanent DOI - Wait a few minutes for processing</p>
+<p><strong>Step 5: Add DOI badge to your README</strong> - Copy the DOI
+badge from your Zenodo record - Add it to the top of your README:</p>
+<div class="codewrapper sourceCode" id="cb3">
+<h3 class="code-label">MARKDOWN<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode markdown" tabindex="0"><code class="sourceCode markdown"><span id="cb3-1"><a href="#cb3-1" tabindex="-1" aria-label="code-block-3-1"></a><span class="co">[</span><span class="al">![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.123456.svg)</span><span class="co">](https://doi.org/10.5281/zenodo.123456)</span></span></code></pre>
+</div>
+<p><strong>Step 6: Update your CFF file with your DOI</strong> - Add the
+DOI to your <code>CITATION.cff</code>:</p>
+<div class="codewrapper sourceCode" id="cb4">
+<h3 class="code-label">YAML<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode yaml" tabindex="0"><code class="sourceCode yaml"><span id="cb4-1"><a href="#cb4-1" tabindex="-1" aria-label="code-block-4-1"></a><span class="fu">doi</span><span class="kw">:</span><span class="at"> 10.5281/zenodo.123456</span></span></code></pre>
+</div>
+<p><strong>Result:</strong> You now have LICENSE, CITATION.cff, and
+DOI.</p>
+<div id="now-you-have-everything" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<span class="callout-header">Callout</span>
+<div id="now-you-have-everything" class="callout-inner">
+<h3 class="callout-title">Now You Have Everything</h3>
+<div class="callout-content">
+<p>✅ <strong>F - Findable:</strong> Added DOI, CITATION.cff, rich
+metadata ✅ <strong>A - Accessible:</strong> Public GitHub, archived on
+Zenodo ✅ <strong>I - Interoperable:</strong> Standard formats (YAML,
+CFF) ✅ <strong>R - Reusable:</strong> LICENSE (BSD-3), README with
+setup</p>
+</div>
+</div>
+</div>
+<p><strong>Even if GitHub disappears, your DOI still works.</strong></p>
+<div id="going-further-software-heritage" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<span class="callout-header">Callout</span>
+<div id="going-further-software-heritage" class="callout-inner">
+<h3 class="callout-title">Going further: Software Heritage</h3>
+<div class="callout-content">
+<p>Zenodo archives a snapshot of your code at release time. <a href="https://www.softwareheritage.org/" class="external-link">Software Heritage</a> goes
+further — it continuously crawls GitHub, GitLab, and other forges and
+archives <em>everything</em>, assigning a <strong>SWHID</strong>
+(Software Heritage Identifier) to every file, directory, commit, and
+release.</p>
+<p>A SWHID looks like this:</p>
+<pre><code>swh:1:rel:22ece559cc7cc2364edc5e5593d63ae8bd229f9f</code></pre>
+<p>It points to an exact, immutable snapshot that survives forge
+closures (Gitorious shut down in 2015; Google Code in 2016 — both made
+thousands of repos unreachable). Your Zenodo DOI is the right identifier
+for citation; a SWHID is the long-term preservation record.</p>
+<p><strong>To find and record your SWHID:</strong></p>
 <ol style="list-style-type: decimal">
-<li>Sign in at <a href="https://sandbox.zenodo.org" class="external-link uri">https://sandbox.zenodo.org</a> using your GitHub
-account.<br>
+<li>Go to <a href="https://archive.softwareheritage.org/" class="external-link uri">https://archive.softwareheritage.org/</a>
 </li>
-<li>In Zenodo Sandbox, go to <strong>Settings → GitHub</strong> and
-enable archiving for your repository.<br>
-</li>
-<li>Go back to GitHub and <strong>Create a new release</strong> (e.g.,
-<code>v0.2.0</code>).<br>
-</li>
-<li>Zenodo Sandbox will automatically detect the new release and assign
-a “concept” DOI.<br>
-</li>
-<li>You can now start using this DOI in your documentation!</li>
+<li>Paste your GitHub repository URL into the search box</li>
+<li>If your repo is already archived, copy the SWHID for your
+release</li>
+<li>If it hasn’t been crawled yet, click <strong>Save code now</strong>
+to trigger immediate archival</li>
+<li>Once archived, add the SWHID to your <code>CITATION.cff</code>:</li>
 </ol>
+<div class="codewrapper sourceCode" id="cb6">
+<h3 class="code-label">YAML<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode yaml" tabindex="0"><code class="sourceCode yaml"><span id="cb6-1"><a href="#cb6-1" tabindex="-1" aria-label="code-block-6-1"></a><span class="fu">repository-artifact</span><span class="kw">:</span><span class="at"> </span><span class="st">"swh:1:rel:22ece559cc7cc2364edc5e5593d63ae8bd229f9f"</span></span></code></pre>
+</div>
+<p>This approach is recommended in the 2026 <em>CODE Beyond FAIR</em>
+roadmap (Di Cosmo et al., <em>Scientific Data</em>).</p>
+</div>
+</div>
+</div>
+
 <div id="challenge-2-why-are-versioned-dois-important" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
@@ -1842,9 +2125,400 @@ Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use.
  -->
 </div>
+</section></section><section id="aio-managing-environments-pixi"><p>Content from <a href="managing-environments-pixi.html">Managing Reproducible Environments with pixi</a></p>
+<hr>
+<p>Last updated on 2026-05-29 |
+
+        <a href="https://github.com/UC-OSPO-Network/research-software-citable-discoverable/edit/main/episodes/managing-environments-pixi.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
+<div class="text-end">
+          <button role="button" aria-pressed="false" tabindex="0" id="expand-code" class="pull-right" data-expand="Expand All Solutions " data-collapse="Collapse All Solutions "> Expand All Solutions <i aria-hidden="true" data-feather="plus"></i></button>
+        </div>
+<div id="optional-episode" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<span class="callout-header">Callout</span>
+<div id="optional-episode" class="callout-inner">
+<h3 class="callout-title">Optional Episode</h3>
+<div class="callout-content">
+<p>This episode covers environment management using <code>pixi</code>.
+It is <strong>optional</strong> — you can skip it and move directly to
+<a href="improving-metadata-discoverability.html">Improving Metadata and
+Discoverability</a>.</p>
+<p>If you skip this episode, you will still complete all citation steps.
+The <code>pixi.toml</code> and <code>pixi.lock</code> files you see in
+the demo repo branches were added here — you can ignore them.</p>
+<p><strong>Other environment tools:</strong> <code>conda</code>,
+<code>mamba</code>, <code>pip</code>/<code>venv</code>, and
+<code>renv</code> (for R) all serve the same purpose. The concepts here
+apply to any environment manager — pixi is used because it handles
+Python, R, and other languages with a single tool and generates an
+automatic lockfile.</p>
+</div>
+</div>
+</div>
+<div class="overview card">
+<h2 class="card-header">Overview</h2>
+<div class="row g-0">
+<div class="col-md-4">
+<div class="card-body">
+<div class="inner">
+<h3 class="card-title">Questions</h3>
+<ul>
+<li>Why do software projects need well defined environments?</li>
+<li>How can <code>pixi</code> help learners run the same code the
+developer used?</li>
+<li>How does environment management improve the reproducibility and
+citability of research software?</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-md-8">
+<div class="card-body">
+<div class="inner bordered">
+<h3 class="card-title">Objectives</h3>
+<ul>
+<li>Explain why environment definition is central to reproducible
+research.</li>
+<li>Create a minimal <code>pixi.toml</code> file for a project.</li>
+<li>Use <code>pixi</code> to run Python or R code inside a clean,
+isolated environment.</li>
+<li>Describe how environment files support FAIR software and citation
+practices.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="episode-branch-03-pixi" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<span class="callout-header">Callout</span>
+<div id="episode-branch-03-pixi" class="callout-inner">
+<h3 class="callout-title">Episode Branch: <code>03-pixi</code>
+</h3>
+<div class="callout-content">
+<p>This optional episode explores the environment management layer of
+the demo repository.</p>
+<p><strong>To follow along:</strong></p>
+<div class="codewrapper sourceCode" id="cb1">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" tabindex="-1" aria-label="code-block-1-1"></a><span class="fu">git</span> checkout 03-pixi     <span class="co"># Branch with pixi.toml and lockfile added</span></span></code></pre>
+</div>
+<p><em>This branch sits between <code>02-license</code> and
+<code>04-citation</code> in the demo repo history, but you can explore
+it at any point in the lesson.</em></p>
+</div>
+</div>
+</div>
+<section><h2 class="section-heading" id="why-environments-matter">Why Environments Matter<a class="anchor" aria-label="anchor" href="#why-environments-matter"></a>
+</h2>
+<hr class="half-width">
+<p><strong>The Problem:</strong> Research software often “works on my
+machine” and nowhere else.</p>
+<p>Code rots. Python updates, packages break, and 6 months from now,
+your script won’t run.</p>
+<p>Different operating systems, outdated packages, and mismatched
+library versions frequently break code.</p>
+<div class="section level3">
+<h3 id="the-vague-way">❌ The Vague Way<a class="anchor" aria-label="anchor" href="#the-vague-way"></a>
+</h3>
+<div class="codewrapper sourceCode" id="cb3">
+<h3 class="code-label">TOML<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode toml" tabindex="0"><code class="sourceCode toml"><span id="cb3-1"><a href="#cb3-1" tabindex="-1" aria-label="code-block-3-1"></a><span class="kw">[dependencies]</span></span>
+<span id="cb3-2"><a href="#cb3-2" tabindex="-1" aria-label="code-block-3-2"></a><span class="dt">python</span> <span class="op">=</span> <span class="st">"*"</span></span>
+<span id="cb3-3"><a href="#cb3-3" tabindex="-1" aria-label="code-block-3-3"></a><span class="dt">numpy</span> <span class="op">=</span> <span class="st">"*"</span></span></code></pre>
+</div>
+<p><code>python = "*"</code> is like saying “I need some food.”</p>
+<p><strong>Problems:</strong> - Works today, breaks tomorrow - Different
+versions on different machines - “Works on my machine” syndrome</p>
+</div>
+<div class="section level3">
+<h3 id="the-locked-way">✅ The Locked Way<a class="anchor" aria-label="anchor" href="#the-locked-way"></a>
+</h3>
+<div class="codewrapper sourceCode" id="cb4">
+<h3 class="code-label">TOML<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode toml" tabindex="0"><code class="sourceCode toml"><span id="cb4-1"><a href="#cb4-1" tabindex="-1" aria-label="code-block-4-1"></a><span class="dt">pixi.lock</span> <span class="dt">contains</span><span class="er">:</span></span>
+<span id="cb4-2"><a href="#cb4-2" tabindex="-1" aria-label="code-block-4-2"></a><span class="dt">python</span> <span class="op">=</span> <span class="st">"3.11.4"</span></span>
+<span id="cb4-3"><a href="#cb4-3" tabindex="-1" aria-label="code-block-4-3"></a><span class="dt">numpy</span> <span class="op">=</span> <span class="st">"1.24.3"</span></span>
+<span id="cb4-4"><a href="#cb4-4" tabindex="-1" aria-label="code-block-4-4"></a><span class="er">+</span> <span class="dt">47</span> <span class="dt">dependencies</span></span></code></pre>
+</div>
+<p><code>pixi.lock</code> is like saying “I need a pepperoni pizza from
+Mario’s, baked at 5:00 PM.”</p>
+<p><strong>Benefits:</strong> - ✅ Exact versions locked - ✅ Same
+environment everywhere - ✅ Reproducible in 5 years</p>
+</div>
+</section><section><h2 class="section-heading" id="what-environment-management-captures">What Environment Management Captures<a class="anchor" aria-label="anchor" href="#what-environment-management-captures"></a>
+</h2>
+<hr class="half-width">
+<p>Environment management reduces this friction because it captures:</p>
+<ul>
+<li>The exact language versions used</li>
+<li>Required packages</li>
+<li>The dependency set needed to run the software</li>
+<li>Instructions for reproducing the execution environment</li>
+</ul>
+<p><strong>The Payoff:</strong> We aren’t just shipping code; we’re
+shipping the <strong>computer state</strong> needed to run it.</p>
+</section><section><h2 class="section-heading" id="why-pixi">Why pixi?<a class="anchor" aria-label="anchor" href="#why-pixi"></a>
+</h2>
+<hr class="half-width">
+<p><code>pixi</code> is a modern, fast environment manager that works
+for Python, R, and many other languages. We use it in this lesson
+because it is:</p>
+<ul>
+<li>
+<strong>Cross-platform:</strong> Works on macOS, Linux, Windows</li>
+<li>
+<strong>Fast:</strong> Faster than Conda</li>
+<li>
+<strong>Automatic lockfiles:</strong> Creates <code>pixi.lock</code>
+automatically, guaranteeing everyone runs the exact same versions of
+every package</li>
+<li>
+<strong>Multi-language:</strong> Supports Python, R, and more</li>
+</ul>
+<p><strong>FAIR Connection:</strong> Standard formats + clear
+dependencies = Interoperable &amp; Reusable software</p>
+<hr></section><section><h2 class="section-heading" id="installing-pixi">Installing pixi<a class="anchor" aria-label="anchor" href="#installing-pixi"></a>
+</h2>
+<hr class="half-width">
+<p>Full installation docs: <a href="https://pixi.sh" class="external-link uri">https://pixi.sh</a></p>
+<p>Common installation for macOS or Linux:</p>
+<div class="codewrapper sourceCode" id="cb5">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" tabindex="-1" aria-label="code-block-5-1"></a><span class="ex">curl</span> <span class="at">-fsSL</span> https://pixi.sh/install.sh <span class="kw">|</span> <span class="fu">bash</span></span></code></pre>
+</div>
+<p>Windows users can install via MSI installer or
+<code>winget</code>.</p>
+<div id="callout3" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<span class="callout-header">Callout</span>
+<div class="callout-inner">
+<div class="callout-content">
+<p><code>pixi</code> includes its own language runtimes.<br>
+Learners do not need preinstalled Python, R, compilers, or system
+packages.</p>
+</div>
+</div>
+</div>
+</section><section><h2 class="section-heading" id="creating-a-new-pixi-project">Creating a New pixi Project<a class="anchor" aria-label="anchor" href="#creating-a-new-pixi-project"></a>
+</h2>
+<hr class="half-width">
+<p>Create a directory and initialize a pixi project:</p>
+<div class="codewrapper sourceCode" id="cb6">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" tabindex="-1" aria-label="code-block-6-1"></a><span class="fu">mkdir</span> myproject</span>
+<span id="cb6-2"><a href="#cb6-2" tabindex="-1" aria-label="code-block-6-2"></a><span class="bu">cd</span> myproject</span>
+<span id="cb6-3"><a href="#cb6-3" tabindex="-1" aria-label="code-block-6-3"></a><span class="ex">pixi</span> init</span></code></pre>
+</div>
+<p>This creates a <code>pixi.toml</code> file, which documents your
+environment.</p>
+<div class="section level3">
+<h3 id="keeping-repositories-clean--gitignore">Keeping Repositories Clean (.gitignore)<a class="anchor" aria-label="anchor" href="#keeping-repositories-clean--gitignore"></a>
+</h3>
+<p>When you run <code>pixi init</code>, it automatically creates a
+<code>.gitignore</code> file. This file tells Git which files to
+<strong>ignore</strong>.</p>
+<p>For <code>pixi</code>, this is critical because it creates a hidden
+folder <code>.pixi/</code> containing thousands of environment files.
+You <strong>never</strong> want to commit this folder to GitHub—it is
+large, platform-specific, and can be regenerated by anyone using your
+<code>pixi.lock</code> file.</p>
+<p><strong>Always check your <code>.gitignore</code></strong> to ensure
+generated files (like <code>.DS_Store</code>, <code>__pycache__</code>,
+or data outputs) are not accidentally shared.</p>
+<p>Add Python:</p>
+<div class="codewrapper sourceCode" id="cb7">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" tabindex="-1" aria-label="code-block-7-1"></a><span class="ex">pixi</span> add python</span></code></pre>
+</div>
+<p>Add the NumPy package:</p>
+<div class="codewrapper sourceCode" id="cb8">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" tabindex="-1" aria-label="code-block-8-1"></a><span class="ex">pixi</span> add numpy</span></code></pre>
+</div>
+<p>Add R and one package:</p>
+<div class="codewrapper sourceCode" id="cb9">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" tabindex="-1" aria-label="code-block-9-1"></a><span class="ex">pixi</span> add r</span>
+<span id="cb9-2"><a href="#cb9-2" tabindex="-1" aria-label="code-block-9-2"></a><span class="ex">pixi</span> add r-dplyr</span></code></pre>
+</div>
+<p>Your <code>pixi.toml</code> is now a reproducible record of all
+dependencies needed for the software.</p>
+</div>
+<div class="section level3">
+<h3 id="whats-inside-pixi-toml">What’s Inside pixi.toml?<a class="anchor" aria-label="anchor" href="#whats-inside-pixi-toml"></a>
+</h3>
+<p>Here’s what the file looks like (this will be automatically created
+for you):</p>
+<div class="codewrapper sourceCode" id="cb10">
+<h3 class="code-label">TOML<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode toml" tabindex="0"><code class="sourceCode toml"><span id="cb10-1"><a href="#cb10-1" tabindex="-1" aria-label="code-block-10-1"></a><span class="kw">[workspace]</span></span>
+<span id="cb10-2"><a href="#cb10-2" tabindex="-1" aria-label="code-block-10-2"></a><span class="dt">authors</span> <span class="op">=</span> <span class="op">[</span><span class="st">"Leigh Phan &lt;leighphan@ucla.edu&gt;"</span><span class="op">]</span></span>
+<span id="cb10-3"><a href="#cb10-3" tabindex="-1" aria-label="code-block-10-3"></a><span class="dt">channels</span> <span class="op">=</span> <span class="op">[</span><span class="st">"conda-forge"</span><span class="op">]</span></span>
+<span id="cb10-4"><a href="#cb10-4" tabindex="-1" aria-label="code-block-10-4"></a><span class="dt">name</span> <span class="op">=</span> <span class="st">"myproject"</span></span>
+<span id="cb10-5"><a href="#cb10-5" tabindex="-1" aria-label="code-block-10-5"></a><span class="dt">platforms</span> <span class="op">=</span> <span class="op">[</span><span class="st">"osx-arm64"</span><span class="op">]</span></span>
+<span id="cb10-6"><a href="#cb10-6" tabindex="-1" aria-label="code-block-10-6"></a><span class="dt">version</span> <span class="op">=</span> <span class="st">"0.1.0"</span></span>
+<span id="cb10-7"><a href="#cb10-7" tabindex="-1" aria-label="code-block-10-7"></a></span>
+<span id="cb10-8"><a href="#cb10-8" tabindex="-1" aria-label="code-block-10-8"></a><span class="kw">[tasks]</span></span>
+<span id="cb10-9"><a href="#cb10-9" tabindex="-1" aria-label="code-block-10-9"></a></span>
+<span id="cb10-10"><a href="#cb10-10" tabindex="-1" aria-label="code-block-10-10"></a><span class="kw">[dependencies]</span></span>
+<span id="cb10-11"><a href="#cb10-11" tabindex="-1" aria-label="code-block-10-11"></a><span class="dt">python</span> <span class="op">=</span> <span class="st">"&gt;=3.14.3,&lt;3.15"</span></span>
+<span id="cb10-12"><a href="#cb10-12" tabindex="-1" aria-label="code-block-10-12"></a><span class="dt">numpy</span> <span class="op">=</span> <span class="st">"&gt;=2.4.2,&lt;3"</span></span>
+<span id="cb10-13"><a href="#cb10-13" tabindex="-1" aria-label="code-block-10-13"></a><span class="dt">r</span> <span class="op">=</span> <span class="st">"&gt;=4.5,&lt;4.6"</span></span>
+<span id="cb10-14"><a href="#cb10-14" tabindex="-1" aria-label="code-block-10-14"></a><span class="dt">r-dplyr</span> <span class="op">=</span> <span class="st">"&gt;=1.2.0,&lt;2"</span></span></code></pre>
+</div>
+<p><strong>The <code>pixi.toml</code> file is now a reproducible record
+of all dependencies needed for the software.</strong></p>
+<p>When you run <code>pixi install</code>, it also creates a
+<code>pixi.lock</code> file with exact versions locked:</p>
+<pre><code>pixi.lock contains:
+python = "3.14.3"
+numpy = "2.4.2"
+r = "4.5.4"
+r-dplyr = "1.2.0"
++ 47 other dependencies</code></pre>
+<p>This lockfile guarantees <strong>byte-for-byte
+reproducibility</strong>.</p>
+<hr>
+</div>
+</section><section><h2 class="section-heading" id="running-code-with-pixi">Running Code With pixi<a class="anchor" aria-label="anchor" href="#running-code-with-pixi"></a>
+</h2>
+<hr class="half-width">
+<p>Run Python code:</p>
+<div class="codewrapper sourceCode" id="cb12">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb12-1"><a href="#cb12-1" tabindex="-1" aria-label="code-block-12-1"></a><span class="ex">pixi</span> run python script.py</span></code></pre>
+</div>
+<p>Run R code:</p>
+<div class="codewrapper sourceCode" id="cb13">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb13-1"><a href="#cb13-1" tabindex="-1" aria-label="code-block-13-1"></a><span class="ex">pixi</span> run Rscript analysis.R</span></code></pre>
+</div>
+<p>Every command is executed <em>inside</em> the environment described
+by <code>pixi.toml</code>.</p>
+<p>This makes it easier for others to test, cite, extend, and build upon
+your work.</p>
+<hr></section><section><h2 class="section-heading" id="how-environments-support-citation-and-reuse">How Environments Support Citation and Reuse<a class="anchor" aria-label="anchor" href="#how-environments-support-citation-and-reuse"></a>
+</h2>
+<hr class="half-width">
+<p>A reusable research software project contains not only code, but:</p>
+<ul>
+<li>licensing<br>
+</li>
+<li>authorship and citation metadata (<code>CITATION.cff</code>)<br>
+</li>
+<li>version information<br>
+</li>
+<li>a documented environment</li>
+</ul>
+<p>Including <code>pixi.toml</code> in your repository or DOI deposit
+helps future readers:</p>
+<ul>
+<li>recreate the execution environment<br>
+</li>
+<li>verify results<br>
+</li>
+<li>adapt your code for new analyses<br>
+</li>
+<li>evaluate whether the software is FAIR (Findable, Accessible,
+Interoperable, Reusable)</li>
+</ul>
+<p>When publishing your software, include:</p>
+<ul>
+<li><p>the <code>pixi.toml</code> file<br></p></li>
+<li>
+<p>instructions such as:</p>
+<div class="codewrapper sourceCode" id="cb14">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb14-1"><a href="#cb14-1" tabindex="-1" aria-label="code-block-14-1"></a><span class="ex">pixi</span> run python script.py</span></code></pre>
+</div>
+</li>
+</ul>
+<div id="challenge-add-a-new-dependency" class="callout challenge">
+<div class="callout-square">
+<i class="callout-icon" data-feather="zap"></i>
+</div>
+<span class="callout-header">Challenge</span>
+<div id="challenge-add-a-new-dependency" class="callout-inner">
+<h3 class="callout-title">Challenge: Add a new dependency</h3>
+<div class="callout-content">
+<p>Use <code>pixi</code> to add <code>pandas</code> or
+<code>r-ggplot2</code> to your project.</p>
+<p>What changed in your <code>pixi.toml</code> file?</p>
+</div>
+</div>
+</div>
+<div id="accordionSolution1" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
+  <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
+</button>
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div class="accordion-body">
+<div class="codewrapper sourceCode" id="cb15">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb15-1"><a href="#cb15-1" tabindex="-1" aria-label="code-block-15-1"></a><span class="ex">pixi</span> add pandas</span></code></pre>
+</div>
+<p>or:</p>
+<div class="codewrapper sourceCode" id="cb16">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb16-1"><a href="#cb16-1" tabindex="-1" aria-label="code-block-16-1"></a><span class="ex">pixi</span> add r-ggplot2</span></code></pre>
+</div>
+<p>You should see the new package listed under
+<code>[project.dependencies]</code> in your <code>pixi.toml</code>.</p>
+</div>
+</div>
+</div>
+</div>
+<div id="keypoints1" class="callout keypoints">
+<div class="callout-square">
+<i class="callout-icon" data-feather="key"></i>
+</div>
+<span class="callout-header">Key Points</span>
+<div class="callout-inner">
+<div class="callout-content">
+<ul>
+<li>Reproducible environments reduce troubleshooting and support more
+reusable software.</li>
+<li>
+<code>pixi</code> provides fast, cross platform environment
+management.</li>
+<li>The <code>pixi.toml</code> file acts as documentation that supports
+citation and FAIR4RS principles.</li>
+<li>Use <code>pixi run</code> to execute Python or R code inside a
+reproducible environment.</li>
+</ul>
+</div>
+</div>
+</div>
+<!--
+Place links that you need to refer to multiple times across pages here. Delete
+any links that you are not going to use.
+ -->
 </section></section><section id="aio-improving-metadata-discoverability"><p>Content from <a href="improving-metadata-discoverability.html">Improving Metadata and Discoverability</a></p>
 <hr>
-<p>Last updated on 2026-05-27 |
+<p>Last updated on 2026-05-29 |
 
         <a href="https://github.com/UC-OSPO-Network/research-software-citable-discoverable/edit/main/episodes/improving-metadata-discoverability.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -1879,6 +2553,35 @@ for consistency.</li>
 </ul>
 </div>
 </div>
+</div>
+</div>
+</div>
+<div id="episode-branch-05-release-06-metadata" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<span class="callout-header">Callout</span>
+<div id="episode-branch-05-release-06-metadata" class="callout-inner">
+<h3 class="callout-title">Episode Branch: <code>05-release</code> →
+<code>06-metadata</code>
+</h3>
+<div class="callout-content">
+<p>This episode completes the repository with full documentation and
+metadata.</p>
+<p><strong>Starting point:</strong></p>
+<div class="codewrapper sourceCode" id="cb1">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" tabindex="-1" aria-label="code-block-1-1"></a><span class="fu">git</span> checkout 05-release  <span class="co"># Start with release tagged</span></span></code></pre>
+</div>
+<p><strong>After this episode:</strong></p>
+<div class="codewrapper sourceCode" id="cb2">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" tabindex="-1" aria-label="code-block-2-1"></a><span class="fu">git</span> checkout 06-metadata <span class="co"># See the complete FAIR repository</span></span></code></pre>
+</div>
+<p><strong>Catch-up point:</strong> If joining now, run
+<code>git checkout 05-release</code></p>
 </div>
 </div>
 </div>
@@ -1947,106 +2650,282 @@ cross-repository linking.</p>
 <li>methodological tags (<code>simulation</code>,
 <code>visualization</code>, <code>machine-learning</code>)</li>
 <li>language tags (<code>python</code>, <code>r</code>)</li>
-</ul>
-<p><strong>Improve your README:</strong></p>
-<p>Your README is the first page many users see. A structured,
-predictable README lowers the barrier to entry. The <a href="https://ucospo.net/oss-resources/template-guides/readme-guide/" class="external-link">UC
-OSPO README Guide</a> recommends including these standard sections:</p>
+</ul></section><section><h2 class="section-heading" id="writing-an-effective-readme">Writing an Effective README<a class="anchor" aria-label="anchor" href="#writing-an-effective-readme"></a>
+</h2>
+<hr class="half-width">
+<div class="section level3">
+<h3 id="the-30-second-rule">The 30-Second Rule<a class="anchor" aria-label="anchor" href="#the-30-second-rule"></a>
+</h3>
+<p><strong>Your README is your software’s front door.</strong></p>
+<p>If users can’t understand what it does, how to install it, or how to
+use it in <strong>30 seconds</strong> → they leave.</p>
+</div>
+<div class="section level3">
+<h3 id="readme-structure-7-essential-sections">README Structure (7 Essential Sections)<a class="anchor" aria-label="anchor" href="#readme-structure-7-essential-sections"></a>
+</h3>
+<p>The <a href="https://ucospo.net/oss-resources/template-guides/readme-guide/" class="external-link">UC
+OSPO README Guide</a> <em>(UC-specific)</em> recommends this standard
+structure:</p>
+<ol style="list-style-type: decimal">
+<li>
+<strong>About</strong>: What does this do? (2-3 sentences)</li>
+<li>
+<strong>Features</strong>: Key capabilities (Reproducible, Citable,
+Open source)</li>
+<li>
+<strong>Getting Started</strong>: Prerequisites + installation</li>
+<li>
+<strong>Usage</strong>: Minimal working example</li>
+<li>
+<strong>Citation</strong>: Link to CITATION.cff or DOI</li>
+<li>
+<strong>License</strong>: Explicitly state terms (e.g., “BSD-3 - see
+LICENSE file”)</li>
+<li>
+<strong>Contact</strong>: How to get help</li>
+</ol>
+</div>
+<div class="section level3">
+<h3 id="before-vs--after-example">Before vs. After Example<a class="anchor" aria-label="anchor" href="#before-vs--after-example"></a>
+</h3>
+<p><strong>❌ Before (Branch: 01-start)</strong></p>
+<div class="codewrapper sourceCode" id="cb3">
+<h3 class="code-label">MARKDOWN<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode markdown" tabindex="0"><code class="sourceCode markdown"><span id="cb3-1"><a href="#cb3-1" tabindex="-1" aria-label="code-block-3-1"></a><span class="fu"># Biodiversity Analysis Toolkit</span></span>
+<span id="cb3-2"><a href="#cb3-2" tabindex="-1" aria-label="code-block-3-2"></a></span>
+<span id="cb3-3"><a href="#cb3-3" tabindex="-1" aria-label="code-block-3-3"></a>A script.</span>
+<span id="cb3-4"><a href="#cb3-4" tabindex="-1" aria-label="code-block-3-4"></a></span>
+<span id="cb3-5"><a href="#cb3-5" tabindex="-1" aria-label="code-block-3-5"></a>No description. No instructions. No citation. Unusable.</span></code></pre>
+</div>
+<p><strong>✅ After (Branch: 06-metadata)</strong></p>
+<div class="codewrapper sourceCode" id="cb4">
+<h3 class="code-label">MARKDOWN<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode markdown" tabindex="0"><code class="sourceCode markdown"><span id="cb4-1"><a href="#cb4-1" tabindex="-1" aria-label="code-block-4-1"></a><span class="fu"># Biodiversity Analysis Toolkit</span></span>
+<span id="cb4-2"><a href="#cb4-2" tabindex="-1" aria-label="code-block-4-2"></a></span>
+<span id="cb4-3"><a href="#cb4-3" tabindex="-1" aria-label="code-block-4-3"></a>Analysis tools for biodiversity research.</span>
+<span id="cb4-4"><a href="#cb4-4" tabindex="-1" aria-label="code-block-4-4"></a></span>
+<span id="cb4-5"><a href="#cb4-5" tabindex="-1" aria-label="code-block-4-5"></a><span class="fu">## Features</span></span>
+<span id="cb4-6"><a href="#cb4-6" tabindex="-1" aria-label="code-block-4-6"></a><span class="ss">- </span>Reproducible (pixi) • Citable (DOI) • Open source (BSD-3)</span>
+<span id="cb4-7"><a href="#cb4-7" tabindex="-1" aria-label="code-block-4-7"></a></span>
+<span id="cb4-8"><a href="#cb4-8" tabindex="-1" aria-label="code-block-4-8"></a><span class="fu">## Getting Started</span></span>
+<span id="cb4-9"><a href="#cb4-9" tabindex="-1" aria-label="code-block-4-9"></a><span class="in">```bash</span></span>
+<span id="cb4-10"><a href="#cb4-10" tabindex="-1" aria-label="code-block-4-10"></a><span class="ex">pixi</span> install</span>
+<span id="cb4-11"><a href="#cb4-11" tabindex="-1" aria-label="code-block-4-11"></a><span class="ex">pixi</span> run python src/analysis.py</span></code></pre>
+</div>
+</div>
+</section><section><h2 class="section-heading" id="citation">Citation<a class="anchor" aria-label="anchor" href="#citation"></a>
+</h2>
+<hr class="half-width">
+<p>[zenodo.org/badge/DOI/10.5281/zenodo.123456.svg]</p>
+<p>License: BDS-3 - see LICENSE file ```</p>
+<p><strong>Professional. Citable. Usable.</strong></p>
+<div class="section level3">
+<h3 id="readme-best-practices-5-quick-tips">README Best Practices: 5 Quick Tips<a class="anchor" aria-label="anchor" href="#readme-best-practices-5-quick-tips"></a>
+</h3>
+<ol style="list-style-type: decimal">
+<li>
+<strong>Clear description</strong> → Answer “What problem does this
+solve?”</li>
+<li>
+<strong>Show, don’t tell</strong> → Include code examples</li>
+<li>
+<strong>Link metadata</strong> → Add DOI badge, link
+CITATION.cff</li>
+<li>
+<strong>Keep updated</strong> → Refresh when features change</li>
+<li>
+<strong>Use a template</strong> → <a href="https://github.com/UC-OSPO-Network/templates" class="external-link">UC OSPO
+Templates</a> <em>(UC-specific)</em> or <a href="https://github.com/matiassingers/awesome-readme" class="external-link">Awesome
+README</a>
+</li>
+</ol>
+<p><strong>Every tip maps to FAIR principles.</strong></p>
+<div id="dont-reinvent-the-wheel" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<span class="callout-header">Callout</span>
+<div id="dont-reinvent-the-wheel" class="callout-inner">
+<h3 class="callout-title">Don’t Reinvent the Wheel</h3>
+<div class="callout-content">
 <ul>
 <li>
-<strong>About/Overview</strong>: What does this software do?</li>
+<a href="https://github.com/matiassingers/awesome-readme" class="external-link">Awesome
+README</a> — curated examples from real open-source projects</li>
 <li>
-<strong>Features</strong>: Key capabilities (e.g., “Reproducible
-environment,” “Citable”).</li>
-<li>
-<strong>Getting Started</strong>: Prerequisites and installation
-steps.</li>
-<li>
-<strong>Usage</strong>: A minimal example of how to run the
-code.</li>
-<li>
-<strong>License</strong>: Explicitly stating the license.</li>
-<li>
-<strong>Contact</strong>: How to reach the maintainers.</li>
+<a href="https://github.com/UC-OSPO-Network/templates/blob/main/README.md" class="external-link">UC
+OSPO README Template</a> <em>(UC-specific)</em> — ready-to-use
+template</li>
 </ul>
+</div>
+</div>
+</div>
 <p>It is also critical to link your metadata: - Add a
-<strong>badge</strong> for your Zenodo DOI. - Link to your
-<code>CITATION.cff</code> file.</p>
-<p>Adopting a standard structure like the <a href="https://github.com/UC-OSPO-Network/templates/blob/main/README.md" class="external-link">OSPO
-README Template</a> ensures researchers can quickly evaluate and use
+<strong>badge</strong> for your Zenodo DOI - Link to your
+<code>CITATION.cff</code> file</p>
+<p>A structured README ensures researchers can quickly evaluate and use
 your software.</p>
-</section><section><h2 class="section-heading" id="community-health-files">Community Health Files<a class="anchor" aria-label="anchor" href="#community-health-files"></a>
+</div>
+</section><section><h2 class="section-heading" id="beyond-the-readme-community-health-files">Beyond the README: Community Health Files<a class="anchor" aria-label="anchor" href="#beyond-the-readme-community-health-files"></a>
 </h2>
 <hr class="half-width">
 <p>Beyond technical metadata, files that describe <em>how</em> to
 interact with your project are crucial for its long-term sustainability
 and “discoverability” as a welcoming project.</p>
+<p>GitHub looks for these files:</p>
 <div class="section level3">
-<h3 id="contributing-guide">Contributing Guide<a class="anchor" aria-label="anchor" href="#contributing-guide"></a>
+<h3 id="contributing-md-how-to-contribute">CONTRIBUTING.md → How to contribute<a class="anchor" aria-label="anchor" href="#contributing-md-how-to-contribute"></a>
 </h3>
 <p>The <code>CONTRIBUTING.md</code> file is the first place new
 contributors look to see if a project is open to participation.
-Following the <a href="https://ucospo.net/oss-resources/template-guides/contributing-guide/" class="external-link">UC
-OSPO Contributing Guide</a> ensures you cover essential ground:</p>
+Following a contributing guide template (the <a href="https://ucospo.net/oss-resources/template-guides/contributing-guide/" class="external-link">UC
+OSPO Contributing Guide</a> <em>(UC-specific)</em> is one good example)
+ensures you cover essential ground:</p>
 <ul>
 <li>
 <strong>Welcome Statement</strong>: Explicitly inviting others to
-join.</li>
+join</li>
 <li>
 <strong>Ways to Contribute</strong>: Identifying non-code
-contributions (e.g., documentation, testing, issues).</li>
+contributions (e.g., documentation, testing, issues)</li>
 <li>
 <strong>Setup Instructions</strong>: How to get the project running
-locally.</li>
+locally</li>
 <li>
 <strong>Pull Request Lifecycle</strong>: What happens after a
-contribution is submitted.</li>
+contribution is submitted</li>
 </ul>
 </div>
 <div class="section level3">
-<h3 id="code-of-conduct">Code of Conduct<a class="anchor" aria-label="anchor" href="#code-of-conduct"></a>
+<h3 id="code_of_conduct-md-behavioral-standards">CODE_OF_CONDUCT.md → Behavioral standards<a class="anchor" aria-label="anchor" href="#code_of_conduct-md-behavioral-standards"></a>
 </h3>
 <p>A <code>CODE_OF_CONDUCT.md</code> establishes behavioral expectations
-and ensures a safe, inclusive environment for all researchers. The <a href="https://ucospo.net/oss-resources/template-guides/code-of-conduct-guide/" class="external-link">UC
-OSPO Code of Conduct Guide</a> recommends using a standard like the
-<strong>Contributor Covenant</strong>.</p>
+and ensures a safe, inclusive environment for all researchers. The
+standard choice is the <a href="https://www.contributor-covenant.org/" class="external-link">Contributor Covenant</a> —
+widely adopted across open-source projects. <em>(See also: <a href="https://ucospo.net/oss-resources/template-guides/code-of-conduct-guide/" class="external-link">UC
+OSPO Code of Conduct Guide</a> </em>(UC-specific)<em>)</em></p>
+</div>
+<div class="section level3">
+<h3 id="changelog-md-version-history">CHANGELOG.md → Version history<a class="anchor" aria-label="anchor" href="#changelog-md-version-history"></a>
+</h3>
+<p>A <code>CHANGELOG.md</code> documents what changed between versions.
+This helps users understand: - What’s new in each release - What bugs
+were fixed - What breaking changes occurred - How the software evolved
+over time</p>
+<p><strong>Why it matters:</strong> Signals your project is
+professionally managed and welcoming.</p>
+<div id="templates-available" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<span class="callout-header">Callout</span>
+<div id="templates-available" class="callout-inner">
+<h3 class="callout-title">Templates Available</h3>
+<div class="callout-content">
+<ul>
+<li>
+<a href="https://choosealicense.com/" class="external-link">Choose a License</a> — license
+selection</li>
+<li>
+<a href="https://www.contributor-covenant.org/" class="external-link">Contributor
+Covenant</a> — code of conduct template</li>
+<li>
+<a href="https://keepachangelog.com/" class="external-link">Keep a Changelog</a> —
+changelog format guide</li>
+<li>
+<a href="https://github.com/UC-OSPO-Network/templates" class="external-link">UC OSPO
+Template Repository</a> <em>(UC-specific)</em> — ready-to-use
+CONTRIBUTING.md, CODE_OF_CONDUCT.md, CHANGELOG.md, README.md</li>
+</ul>
+</div>
+</div>
+</div>
 <p>Adding these files to your repository root helps GitHub display a
 “Community Standards” checklist in your insights, signaling that your
-project is professionally managed and ready for collaboration. You can
-find ready-to-use versions in the <a href="https://github.com/UC-OSPO-Network/templates" class="external-link">UC OSPO Template
-Repository</a>.</p>
+project is professionally managed and ready for collaboration.</p>
 <hr>
+</div>
+</section><section><h2 class="section-heading" id="institutional-repositories-dataverse-dryad-and-zenodo">Institutional Repositories: Dataverse, Dryad, and Zenodo<a class="anchor" aria-label="anchor" href="#institutional-repositories-dataverse-dryad-and-zenodo"></a>
+</h2>
+<hr class="half-width">
+<p>Many institutions use repositories like <strong>Dataverse</strong> or
+<strong>Dryad</strong> for research data deposits. These are good for
+datasets but have limited software support — they don’t integrate with
+GitHub releases or mint version-specific DOIs automatically.</p>
+<p>For software, <strong>Zenodo is the recommended deposit
+location</strong> because:</p>
+<ul>
+<li>It integrates directly with GitHub to archive each release
+automatically</li>
+<li>It mints a DOI for every version</li>
+<li>Records flow into DataCite and are indexed by Google Scholar and
+library catalogs</li>
+<li>It’s free, CERN-operated, and widely recognized by journals and
+funders</li>
+</ul>
+<div id="what-about-your-institutions-repository" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<span class="callout-header">Callout</span>
+<div id="what-about-your-institutions-repository" class="callout-inner">
+<h3 class="callout-title">What about your institution’s repository?</h3>
+<div class="callout-content">
+<p>If your institution requires or prefers a local IR (Dataverse
+instance, DSpace, etc.), you can deposit there <em>in addition</em> to
+Zenodo — not instead of it. Use the Zenodo DOI as the persistent
+identifier in your CITATION.cff, and note the institutional deposit in
+your README or Zenodo metadata as a related work.</p>
+<p>Some funders (NSF, NIH, Wellcome Trust) have specific deposit
+requirements. Check your award terms before deciding where the
+authoritative copy lives.</p>
+</div>
+</div>
 </div>
 </section><section><h2 class="section-heading" id="zenodo-and-doi-metadata">Zenodo and DOI metadata<a class="anchor" aria-label="anchor" href="#zenodo-and-doi-metadata"></a>
 </h2>
 <hr class="half-width">
-<p>Zenodo metadata flows into:</p>
+<p>When you deposit software on Zenodo, the record flows into:</p>
 <ul>
 <li>
-<strong>DataCite</strong><br>
+<strong>DataCite</strong> — the DOI registration agency for research
+data and software; DataCite records are harvested by library catalogs,
+institutional discovery systems, and tools like <a href="https://openalex.org/" class="external-link">OpenAlex</a> and <a href="http://www.scholix.org/" class="external-link">Scholix</a>
 </li>
-<li>Google Scholar<br>
-</li>
-<li>library catalogs<br>
-</li>
-<li>domain repositories that harvest DOIs</li>
+<li>
+<strong>Google Scholar</strong> — picks up Zenodo records with
+structured metadata</li>
+<li>
+<strong>Library catalogs</strong> — many discovery layers (EBSCO, Ex
+Libris Primo, OCLC WorldCat) harvest DataCite metadata, meaning your
+software can appear in a library search alongside journal articles</li>
+<li>
+<strong>Domain repositories</strong> that harvest DOIs</li>
 </ul>
+<p>What this means practically: the metadata you put into your Zenodo
+record is the metadata that librarians and discovery systems see. Thin
+metadata (no description, no keywords, no author ORCIDs) limits
+findability even if the DOI is valid.</p>
 <p>Add or refine:</p>
 <ul>
 <li>authors + ORCIDs<br>
 </li>
-<li>keywords<br>
-</li>
-<li>related works (DOIs, URLs)<br>
-</li>
+<li>keywords (discipline tags, method tags, language tags — same ones
+you add to GitHub Topics)</li>
+<li>related works (link to the paper that used this software, the
+dataset it analyzes, the grant that funded it)</li>
 <li>funding references<br>
 </li>
 <li>version notes<br>
 </li>
-<li>a readable software description</li>
+<li>a readable software description (2-3 sentences — think abstract, not
+README)</li>
 </ul>
-<p>Your goal is <em>context</em>. This helps researchers decide quickly
-whether to reuse your work.</p>
+<p>Your goal is <em>context</em>. A researcher or a librarian helping a
+researcher should be able to read the Zenodo record and decide in 30
+seconds whether this software is relevant to them.</p>
 <div id="challenge-1-identify-useful-metadata" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
@@ -2065,7 +2944,7 @@ discoverability.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <p>Examples:</p>
 <ul>
@@ -2101,7 +2980,7 @@ metadata:</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <ol style="list-style-type: decimal">
 <li>Open your Zenodo record.<br>
@@ -2154,7 +3033,7 @@ any links that you are not going to use.
  -->
 </section></section><section id="aio-wrap-up-reflect"><p>Content from <a href="wrap-up-reflect.html">Wrap-Up and Reflection</a></p>
 <hr>
-<p>Last updated on 2025-12-06 |
+<p>Last updated on 2026-05-29 |
 
         <a href="https://github.com/UC-OSPO-Network/research-software-citable-discoverable/edit/main/episodes/wrap-up-reflect.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -2190,7 +3069,33 @@ projects</li>
 </div>
 </div>
 </div>
-<section><h2 class="section-heading" id="introduction">Introduction<a class="anchor" aria-label="anchor" href="#introduction"></a>
+<section><h2 class="section-heading" id="your-fair4rs-checklist">Your FAIR4RS Checklist<a class="anchor" aria-label="anchor" href="#your-fair4rs-checklist"></a>
+</h2>
+<hr class="half-width">
+<p>Congratulations! You’ve transformed fragile research software into a
+FAIR software project.</p>
+<div class="section level3">
+<h3 id="what-we-covered-today">What We Covered Today:<a class="anchor" aria-label="anchor" href="#what-we-covered-today"></a>
+</h3>
+<p>✅ <strong>F - Findable:</strong> Added DOI, CITATION.cff, rich
+metadata ✅ <strong>A - Accessible:</strong> Public GitHub, archived on
+Zenodo ✅ <strong>I - Interoperable:</strong> Standard formats (YAML,
+CFF), documented dependencies (pixi.toml) ✅ <strong>R -
+Reusable:</strong> LICENSE (BSD-3), README with setup, environment
+reproducibility</p>
+</div>
+<div class="section level3">
+<h3 id="from-fragile-to-fair">From Fragile to FAIR<a class="anchor" aria-label="anchor" href="#from-fragile-to-fair"></a>
+</h3>
+<p><strong>Before (Branch: 01-start):</strong> - ❌ No LICENSE - ❌ No
+environment - ❌ No citation - ❌ No DOI</p>
+<p><strong>After (Branch: 06-metadata):</strong> - ✅ LICENSE (BSD-3) -
+✅ Environment (pixi.toml) - ✅ CITATION.cff - ✅ DOI from Zenodo - ✅
+README with documentation - ✅ Community health files</p>
+<p>Your software is now <strong>citable, discoverable, and
+reusable</strong>.</p>
+</div>
+</section><section><h2 class="section-heading" id="introduction">Introduction<a class="anchor" aria-label="anchor" href="#introduction"></a>
 </h2>
 <hr class="half-width">
 <p>Over this session, you’ve learned how to make your research software
@@ -2218,7 +3123,7 @@ current or future project?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <p>Answers may vary: making a repo public, adding a license, archiving
 on Zenodo, writing a README, creating a CITATION file, etc.</p>
@@ -2244,7 +3149,7 @@ software more FAIR.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <p>Examples:</p>
 <ul>
@@ -2257,6 +3162,76 @@ software more FAIR.</p>
 </div>
 </div>
 </div>
+</section><section><h2 class="section-heading" id="resources-to-take-with-you">Resources to Take With You<a class="anchor" aria-label="anchor" href="#resources-to-take-with-you"></a>
+</h2>
+<hr class="half-width">
+<div class="section level3">
+<h3 id="lesson-materials">Lesson Materials<a class="anchor" aria-label="anchor" href="#lesson-materials"></a>
+</h3>
+<ul>
+<li>Lesson repository: <a href="https://github.com/UC-OSPO-Network/research-software-citable-discoverable" class="external-link uri">https://github.com/UC-OSPO-Network/research-software-citable-discoverable</a>
+</li>
+</ul>
+</div>
+<div class="section level3">
+<h3 id="tools">Tools<a class="anchor" aria-label="anchor" href="#tools"></a>
+</h3>
+<ul>
+<li>
+<strong>CITATION.cff Helper</strong>: <a href="https://citation-file-format.github.io/cff-initializer-javascript/" class="external-link uri">https://citation-file-format.github.io/cff-initializer-javascript/</a>
+</li>
+<li>
+<strong>Zenodo</strong>: <a href="https://zenodo.org" class="external-link uri">https://zenodo.org</a>
+</li>
+<li>
+<strong>Pixi</strong>: <a href="https://pixi.sh" class="external-link uri">https://pixi.sh</a>
+</li>
+<li>
+<strong>Choose a License</strong>: <a href="https://choosealicense.com" class="external-link uri">https://choosealicense.com</a>
+</li>
+</ul>
+</div>
+<div class="section level3">
+<h3 id="uc-specific-resources-for-uc-campus-learners">UC-Specific Resources <em>(for UC campus learners)</em>
+<a class="anchor" aria-label="anchor" href="#uc-specific-resources-for-uc-campus-learners"></a>
+</h3>
+<ul>
+<li>
+<strong>UC OSS Chart</strong>: <a href="https://security.ucop.edu/files/documents/resources/oss-chart.pdf" class="external-link uri">https://security.ucop.edu/files/documents/resources/oss-chart.pdf</a>
+</li>
+<li>
+<strong>UC OSPO License Guide</strong>: <a href="https://ucospo.net/oss-resources/template-guides/license-guide/" class="external-link uri">https://ucospo.net/oss-resources/template-guides/license-guide/</a>
+</li>
+<li>
+<strong>UC OSPO Templates</strong>: <a href="https://github.com/UC-OSPO-Network/templates" class="external-link uri">https://github.com/UC-OSPO-Network/templates</a>
+</li>
+<li>
+<strong>UC Open Source Program Office (OSPO) Network</strong>: <a href="https://ucospo.net/" class="external-link uri">https://ucospo.net/</a>
+</li>
+</ul>
+</div>
+<div class="section level3">
+<h3 id="general-open-source-resources">General Open Source Resources<a class="anchor" aria-label="anchor" href="#general-open-source-resources"></a>
+</h3>
+<ul>
+<li>
+<strong>Open Source Initiative (OSI)</strong>: <a href="https://opensource.org/licenses" class="external-link uri">https://opensource.org/licenses</a> — authoritative license
+registry</li>
+<li>
+<strong>FAIR4RS Principles</strong>: <a href="https://doi.org/10.15497/RDA00068" class="external-link uri">https://doi.org/10.15497/RDA00068</a> — the RDA/FORCE11/ReSA
+paper</li>
+<li>
+<strong>Software Citation Principles</strong>: <a href="https://doi.org/10.7717/peerj-cs.86" class="external-link uri">https://doi.org/10.7717/peerj-cs.86</a> — Smith et
+al. 2016</li>
+<li>
+<strong>CODE Beyond FAIR</strong>: <a href="https://doi.org/10.1038/s41597-026-06705-6" class="external-link uri">https://doi.org/10.1038/s41597-026-06705-6</a> — Di Cosmo et
+al. 2026 roadmap for research software reusability; covers Software
+Heritage, institutional roles, and the library’s part in software
+metadata</li>
+<li>
+<strong>Software Heritage Archive</strong>: <a href="https://www.softwareheritage.org/" class="external-link uri">https://www.softwareheritage.org/</a> — universal source
+code archive; assigns SWHIDs for long-term preservation</li>
+</ul>
 <div id="keypoints1" class="callout keypoints">
 <div class="callout-square">
 <i class="callout-icon" data-feather="key"></i>
@@ -2265,11 +3240,15 @@ software more FAIR.</p>
 <div class="callout-inner">
 <div class="callout-content">
 <ul>
+<li>You’ve successfully made your software FAIR: Findable, Accessible,
+Interoperable, and Reusable</li>
 <li>Even small actions can significantly improve your software’s
 impact</li>
 <li>Making code citable and discoverable benefits both you and the
 research community</li>
 <li>Start with one change, then build from there</li>
+<li>Use the UC OSPO resources and templates to streamline the
+process</li>
 </ul>
 </div>
 </div>
@@ -2278,6 +3257,7 @@ research community</li>
 Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use.
  -->
+</div>
 </section></section>
 </div>
     </main>
@@ -2328,8 +3308,8 @@ any links that you are not going to use.
   "url": "https://UC-OSPO-Network.github.io/research-software-citable-discoverable/aio.html",
   "identifier": "https://UC-OSPO-Network.github.io/research-software-citable-discoverable/aio.html",
   "dateCreated": "2025-12-06",
-  "dateModified": "2026-05-27",
-  "datePublished": "2026-05-27"
+  "dateModified": "2026-05-29",
+  "datePublished": "2026-05-29"
 }
 
   </script><script>

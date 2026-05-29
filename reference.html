@@ -196,7 +196,7 @@
 <div class="accordion accordion-flush" id="accordionFlush2">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading2">
-        <a href="why-software-citation.html">1. Why Make Software Citable?</a>
+        <a href="introduction.html">1. Introduction: The "Works on My Machine" Trap</a>
     </div><!--/div.accordion-header-->
 
   </div><!--/div.accordion-item-->
@@ -223,7 +223,7 @@
 <div class="accordion accordion-flush" id="accordionFlush5">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading5">
-        <a href="managing-environments-pixi.html">4. Managing Reproducible Environments with pixi</a>
+        <a href="adding-citation-file.html">4. Adding a CITATION.cff File</a>
     </div><!--/div.accordion-header-->
 
   </div><!--/div.accordion-item-->
@@ -232,7 +232,7 @@
 <div class="accordion accordion-flush" id="accordionFlush6">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading6">
-        <a href="adding-citation-file.html">5. Adding a CITATION.cff File</a>
+        <a href="making-software-citable.html">5. Making Your Software Citable</a>
     </div><!--/div.accordion-header-->
 
   </div><!--/div.accordion-item-->
@@ -241,7 +241,7 @@
 <div class="accordion accordion-flush" id="accordionFlush7">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading7">
-        <a href="making-software-citable.html">6. Making Your Software Citable</a>
+        <a href="managing-environments-pixi.html">6. Managing Reproducible Environments with pixi</a>
     </div><!--/div.accordion-header-->
 
   </div><!--/div.accordion-item-->
@@ -318,7 +318,7 @@
       </div>
     </nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Reference</h1>
-        <p>Last updated on 2026-05-27 |
+        <p>Last updated on 2026-05-29 |
 
         <a href="https://github.com/UC-OSPO-Network/research-software-citable-discoverable/edit/main/learners/reference.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -331,46 +331,204 @@
         
 
 <section><h2 class="section-heading" id="glossary">Glossary<a class="anchor" aria-label="anchor" href="#glossary"></a></h2>
-<hr class="half-width"><p>This is a placeholder file. Please add content here.</p>
-</section><section><h2 class="section-heading" id="references">References<a class="anchor" aria-label="anchor" href="#references"></a></h2>
+<hr class="half-width"><p><strong>Bus factor</strong> The number of contributors who would need
+to leave (or be “hit by a bus”) before a project becomes unmaintainable.
+A bus factor of 1 means the project depends entirely on one person.</p>
+<p><strong>CITATION.cff</strong> A plain-text file in YAML format placed
+in the root of a repository that provides structured citation metadata —
+title, authors, version, DOI, and more. GitHub reads this file
+automatically and displays a “Cite this repository” button with
+ready-made citations in multiple formats (BibTeX, APA, CFF).</p>
+<p><strong>CFF (Citation File Format)</strong> The file format used by
+<code>CITATION.cff</code>. Maintained by the Citation File Format
+community. Supported by GitHub, Zenodo, and reference managers including
+Zotero.</p>
+<p><strong>CODE Beyond FAIR</strong> A 2026 research software roadmap
+(Di Cosmo et al., <em>Scientific Data</em>) that extends FAIR principles
+for software. The CODE pillars are: <strong>C</strong>ollaborate,
+<strong>O</strong>pen, <strong>D</strong>ocument,
+<strong>E</strong>xecute. Recommends Software Heritage archiving
+alongside DOI-based citation.</p>
+<p><strong>DataCite</strong> The DOI registration agency for research
+data and software. When you mint a DOI on Zenodo, DataCite registers it.
+DataCite metadata is harvested by library catalogs, OpenAlex, and other
+scholarly discovery systems.</p>
+<p><strong>DOI (Digital Object Identifier)</strong> A persistent
+identifier assigned to a specific version of a resource. Unlike URLs,
+DOIs are permanent — they resolve even if the underlying repository
+moves or the hosting platform closes. Recommended for software citation
+because they point to an exact, archived snapshot.</p>
+<p><strong>FAIR4RS</strong> The FAIR Principles for Research Software,
+adapted from the FAIR data principles. Software should be:
+<strong>F</strong>indable (has DOI, metadata, CITATION.cff),
+<strong>A</strong>ccessible (public repository, standard protocols),
+<strong>I</strong>nteroperable (standard formats, documented
+dependencies), <strong>R</strong>eusable (license, README, reproducible
+environment).</p>
+<p><strong>Link rot</strong> The failure of a URL-based citation when
+the target URL changes, moves, or disappears. Common causes include
+username changes, repository renames, account deletions, and platform
+shutdowns. Gitorious (2015) and Google Code (2016) are documented
+examples where platform closures made thousands of citations
+unreachable.</p>
+<p><strong>Lockfile</strong> A file generated by an environment manager
+(e.g., <code>pixi.lock</code>, <code>conda-lock.yml</code>) that records
+the exact version of every dependency, including transitive
+dependencies. A lockfile enables byte-for-byte environment
+reproducibility across machines and time.</p>
+<p><strong>ORCID</strong> Open Researcher and Contributor ID. A
+persistent identifier for individual researchers, analogous to a DOI for
+people. Including ORCIDs in <code>CITATION.cff</code> and Zenodo
+metadata ensures author credit is unambiguous regardless of name changes
+or institutional affiliations.</p>
+<p><strong>pixi</strong> A modern, cross-platform environment manager
+supporting Python, R, and other languages. Uses <code>pixi.toml</code>
+to declare dependencies and generates a <code>pixi.lock</code> file for
+reproducibility. See also: conda, mamba, pip/venv, renv (R).</p>
+<p><strong>Research software</strong> Software created or used in a
+research context — including analysis scripts, data processing
+pipelines, simulation models, and tools that support research workflows.
+Distinct from general-purpose software in that it is often created by
+researchers rather than professional software developers, and its
+outputs are part of the scientific record.</p>
+<p><strong>Semantic versioning (SemVer)</strong> A versioning convention
+using <code>MAJOR.MINOR.PATCH</code> (e.g., <code>v1.2.0</code>). MAJOR
+increments signal breaking changes; MINOR signal new features; PATCH
+signal bug fixes. Starting at <code>0.x.x</code> indicates the software
+is in initial development.</p>
+<p><strong>Software Heritage</strong> A universal source code archive
+that continuously crawls GitHub, GitLab, and other forges and preserves
+everything. Assigns SWHIDs (see below) to every file, directory, commit,
+and release. Free, non-profit (Inria/UNESCO), designed specifically for
+long-term software preservation.</p>
+<p><strong>SWHID (Software Heritage Identifier)</strong> A persistent
+identifier assigned by Software Heritage to an exact, immutable snapshot
+of source code. Complements a Zenodo DOI: the DOI is for citation
+(version-level); the SWHID is for long-term preservation and points to
+the precise code state. Can be added to <code>CITATION.cff</code> under
+<code>repository-artifact</code>.</p>
+<p><strong>Zenodo</strong> A free, open-access repository operated by
+CERN. Integrates with GitHub to automatically archive each release and
+mint a version-specific DOI. Zenodo records flow into DataCite and are
+indexed by Google Scholar and library catalogs.</p>
+<p><strong>Zenodo Sandbox</strong> A test environment for Zenodo
+(<code>sandbox.zenodo.org</code>) that works identically to the
+production service but does not create permanent DOIs. Used in this
+lesson for practice so learners do not pollute the permanent scholarly
+record.</p>
+<hr></section><section><h2 class="section-heading" id="references">References<a class="anchor" aria-label="anchor" href="#references"></a></h2>
 <hr class="half-width"><div class="section level3">
-<h3 id="readme-best-practices">README Best Practices<a class="anchor" aria-label="anchor" href="#readme-best-practices"></a></h3>
-<p><strong>General Guides:</strong></p>
-<ul><li>
-<a href="https://www.yegor256.com/2019/04/23/elegant-readme.html" class="external-link">Elegant
-READMEs</a> - Yegor Bugayenko</li>
+<h3 id="foundational-principles">Foundational Principles<a class="anchor" aria-label="anchor" href="#foundational-principles"></a></h3>
+<ul><li>Chue Hong, N. P. et al. (2022). <em>FAIR Principles for Research
+Software (FAIR4RS Principles)</em>. RDA/FORCE11/ReSA. <a href="https://doi.org/10.15497/RDA00068" class="external-link uri">https://doi.org/10.15497/RDA00068</a>
+</li>
+<li>Smith, A. M. et al. (2016). <em>Software citation principles</em>.
+PeerJ Computer Science, 2, e86. <a href="https://doi.org/10.7717/peerj-cs.86" class="external-link uri">https://doi.org/10.7717/peerj-cs.86</a>
+</li>
+<li>Di Cosmo, R. et al. (2026). <em>CODE Beyond FAIR: Research Software
+Roadmap</em>. Scientific Data. <a href="https://doi.org/10.1038/s41597-026-06705-6" class="external-link uri">https://doi.org/10.1038/s41597-026-06705-6</a>
+</li>
+<li>Wilkinson, M. D. et al. (2016). <em>The FAIR Guiding Principles for
+scientific data management and stewardship</em>. Scientific Data, 3,
+160018. <a href="https://doi.org/10.1038/sdata.2016.18" class="external-link uri">https://doi.org/10.1038/sdata.2016.18</a>
+</li>
+</ul></div>
+<div class="section level3">
+<h3 id="software-citation">Software Citation<a class="anchor" aria-label="anchor" href="#software-citation"></a></h3>
+<ul><li>Druskat, S. et al. (2021). <em>Citation File Format (CFF)</em>. <a href="https://doi.org/10.5281/zenodo.5171937" class="external-link uri">https://doi.org/10.5281/zenodo.5171937</a>
+</li>
+<li>Citation File Format documentation: <a href="https://citation-file-format.github.io/" class="external-link uri">https://citation-file-format.github.io/</a>
+</li>
+<li>CFF INIT (web-based CITATION.cff generator): <a href="https://citation-file-format.github.io/cff-initializer-javascript/" class="external-link uri">https://citation-file-format.github.io/cff-initializer-javascript/</a>
+</li>
+<li>GitHub: <em>Make your software citable</em>: <a href="https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-citation-files" class="external-link uri">https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-citation-files</a>
+</li>
+</ul></div>
+<div class="section level3">
+<h3 id="software-preservation">Software Preservation<a class="anchor" aria-label="anchor" href="#software-preservation"></a></h3>
+<ul><li>Software Heritage: <a href="https://www.softwareheritage.org/" class="external-link uri">https://www.softwareheritage.org/</a>
+</li>
 <li>
-<a href="https://github.com/hackergrrl/art-of-readme" class="external-link">Art of
-README</a> - Stephen Whitmore</li>
+<em>Save Code Now</em> (how to request immediate archiving): <a href="https://save.softwareheritage.org/" class="external-link uri">https://save.softwareheritage.org/</a>
+</li>
+<li>Zenodo: <a href="https://zenodo.org/" class="external-link uri">https://zenodo.org/</a>
+</li>
+<li>Zenodo Sandbox: <a href="https://sandbox.zenodo.org/" class="external-link uri">https://sandbox.zenodo.org/</a>
+</li>
 <li>
-<a href="https://thoughtbot.com/blog/how-to-write-a-great-readme" class="external-link">How To
-Write A Great README</a> - Caleb Thompson (thoughtbot)</li>
-<li>
-<a href="https://tom.preston-werner.com/2010/08/23/readme-driven-development.html" class="external-link">Readme
-Driven Development</a> - Tom Preston-Werner</li>
-</ul><p><strong>Collections and Examples:</strong></p>
+<em>Zenodo GitHub integration guide</em>: <a href="https://docs.github.com/en/repositories/archiving-a-github-repository/referencing-and-citing-content" class="external-link uri">https://docs.github.com/en/repositories/archiving-a-github-repository/referencing-and-citing-content</a>
+</li>
+</ul></div>
+<div class="section level3">
+<h3 id="licensing">Licensing<a class="anchor" aria-label="anchor" href="#licensing"></a></h3>
+<ul><li>Choose a License: <a href="https://choosealicense.com/" class="external-link uri">https://choosealicense.com/</a>
+</li>
+<li>SPDX License List: <a href="https://spdx.org/licenses/" class="external-link uri">https://spdx.org/licenses/</a>
+</li>
+<li>Open Source Initiative (OSI) approved licenses: <a href="https://opensource.org/licenses" class="external-link uri">https://opensource.org/licenses</a>
+</li>
+<li>UC OSPO License Guide <em>(UC-specific)</em>: <a href="https://ucospo.net/oss-resources/template-guides/license-guide/" class="external-link uri">https://ucospo.net/oss-resources/template-guides/license-guide/</a>
+</li>
+<li>UC Open Source Software licensing chart <em>(UC-specific)</em>: <a href="https://security.ucop.edu/resources/open-source-software-licensing.html" class="external-link uri">https://security.ucop.edu/resources/open-source-software-licensing.html</a>
+</li>
+</ul></div>
+<div class="section level3">
+<h3 id="environment-management">Environment Management<a class="anchor" aria-label="anchor" href="#environment-management"></a></h3>
+<ul><li>pixi documentation: <a href="https://pixi.sh" class="external-link uri">https://pixi.sh</a>
+</li>
+<li>conda documentation: <a href="https://docs.conda.io/" class="external-link uri">https://docs.conda.io/</a>
+</li>
+<li>renv (R): <a href="https://rstudio.github.io/renv/" class="external-link uri">https://rstudio.github.io/renv/</a>
+</li>
+</ul></div>
+<div class="section level3">
+<h3 id="readme-and-repository-documentation">README and Repository Documentation<a class="anchor" aria-label="anchor" href="#readme-and-repository-documentation"></a></h3>
 <ul><li>
 <a href="https://github.com/matiassingers/awesome-readme" class="external-link">Awesome
-README</a> - Curated list of awesome READMEs</li>
+README</a> — curated examples from real open-source projects</li>
 <li>
-<a href="https://www.freecodecamp.org/news/what-i-learned-from-an-old-github-project-that-won-3-000-stars-in-a-week-628349a5ee14/" class="external-link">What
-I learned from an old GitHub project that won 3,000 Stars in a Week</a>
-- KyuWoo Choi</li>
-</ul><p><strong>Adoption Barriers:</strong> - <a href="https://changelog.com/posts/top-ten-reasons-why-i-wont-use-your-open-source-project" class="external-link">Top
-ten reasons why I won’t use your open source project</a> - Adam
-Stacoviak</p>
-</div>
+<a href="https://www.yegor256.com/2019/04/23/elegant-readme.html" class="external-link">Elegant
+READMEs</a> — Yegor Bugayenko</li>
+<li>
+<a href="https://github.com/hackergrrl/art-of-readme" class="external-link">Art of
+README</a> — Stephen Whitmore</li>
+<li>
+<a href="https://tom.preston-werner.com/2010/08/23/readme-driven-development.html" class="external-link">Readme
+Driven Development</a> — Tom Preston-Werner</li>
+<li>UC OSPO README Guide <em>(UC-specific)</em>: <a href="https://ucospo.net/oss-resources/template-guides/readme-guide/" class="external-link uri">https://ucospo.net/oss-resources/template-guides/readme-guide/</a>
+</li>
+<li>UC OSPO Template Repository <em>(UC-specific)</em>: <a href="https://github.com/UC-OSPO-Network/templates" class="external-link uri">https://github.com/UC-OSPO-Network/templates</a>
+</li>
+</ul></div>
 <div class="section level3">
-<h3 id="software-documentation">Software Documentation<a class="anchor" aria-label="anchor" href="#software-documentation"></a></h3>
-<ul><li>
-<a href="https://matklad.github.io/2021/02/06/ARCHITECTURE.md.html" class="external-link">ARCHITECTURE.md</a>
-- Alex Kladov</li>
-<li>
-<a href="https://johnjago.com/great-docs/" class="external-link">Two open source projects
-with great documentation</a> - John Jago</li>
-<li>
-<a href="https://www.youtube.com/watch?v=example" class="external-link">Build a Better
-README</a> - Jason A. Crome, The Perl and Raku Conference 2024</li>
+<h3 id="community-health-files">Community Health Files<a class="anchor" aria-label="anchor" href="#community-health-files"></a></h3>
+<ul><li>Contributor Covenant (code of conduct template): <a href="https://www.contributor-covenant.org/" class="external-link uri">https://www.contributor-covenant.org/</a>
+</li>
+<li>Keep a Changelog (changelog format guide): <a href="https://keepachangelog.com/" class="external-link uri">https://keepachangelog.com/</a>
+</li>
+<li>GitHub community health documentation: <a href="https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions" class="external-link uri">https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions</a>
+</li>
+</ul></div>
+<div class="section level3">
+<h3 id="metadata-and-discoverability">Metadata and Discoverability<a class="anchor" aria-label="anchor" href="#metadata-and-discoverability"></a></h3>
+<ul><li>DataCite Metadata Schema: <a href="https://schema.datacite.org/" class="external-link uri">https://schema.datacite.org/</a>
+</li>
+<li>OpenAlex (open scholarly graph): <a href="https://openalex.org/" class="external-link uri">https://openalex.org/</a>
+</li>
+<li>GitHub Topics documentation: <a href="https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/classifying-your-repository-with-topics" class="external-link uri">https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/classifying-your-repository-with-topics</a>
+</li>
+</ul></div>
+<div class="section level3">
+<h3 id="further-reading">Further Reading<a class="anchor" aria-label="anchor" href="#further-reading"></a></h3>
+<ul><li>Barker, M. et al. (2022). <em>Introducing the FAIR Principles for
+research software</em>. Scientific Data, 9, 622. <a href="https://doi.org/10.1038/s41597-022-01710-x" class="external-link uri">https://doi.org/10.1038/s41597-022-01710-x</a>
+</li>
+<li>Katz, D. S. et al. (2021). <em>Taking a fresh look at FAIR for
+research software</em>. Patterns, 2(3). <a href="https://doi.org/10.1016/j.patter.2021.100222" class="external-link uri">https://doi.org/10.1016/j.patter.2021.100222</a>
+</li>
+<li>Hasselbring, W. et al. (2020). <em>FAIR and open computer science
+research software</em>. <a href="https://arxiv.org/abs/1911.04244" class="external-link uri">https://arxiv.org/abs/1911.04244</a>
+</li>
 </ul><!--
 Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use.
@@ -430,8 +588,8 @@ any links that you are not going to use.
   "url": "https://UC-OSPO-Network.github.io/research-software-citable-discoverable/reference.html",
   "identifier": "https://UC-OSPO-Network.github.io/research-software-citable-discoverable/reference.html",
   "dateCreated": "2025-12-06",
-  "dateModified": "2026-05-27",
-  "datePublished": "2026-05-27"
+  "dateModified": "2026-05-29",
+  "datePublished": "2026-05-29"
 }
 
   </script><script>

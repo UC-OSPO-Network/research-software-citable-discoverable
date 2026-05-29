@@ -118,7 +118,7 @@
     <a id="search-button" class="btn btn-primary" href="aio.html" role="button" aria-label="Search the All In One page">Search the All In One page</a>
   </div><!--/div.container-fluid -->
 </nav><aside class="col-md-12 lesson-progress"><div class="progress ucospo">
-    <div class="progress-bar ucospo" role="progressbar" style="width: 52%" aria-valuenow="52" aria-valuemin="0" aria-valuemax="100" aria-label="Lesson Progress">52%</div>
+    <div class="progress-bar ucospo" role="progressbar" style="width: 39%" aria-valuenow="39" aria-valuemin="0" aria-valuemax="100" aria-label="Lesson Progress">39%</div>
   </div>
 </aside><div class="container">
       <div class="row">
@@ -199,7 +199,7 @@
 <div class="accordion accordion-flush" id="accordionFlush2">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading2">
-        <a href="why-software-citation.html">1. Why Make Software Citable?</a>
+        <a href="introduction.html">1. Introduction: The "Works on My Machine" Trap</a>
     </div><!--/div.accordion-header-->
 
   </div><!--/div.accordion-item-->
@@ -223,22 +223,13 @@
   </div><!--/div.accordion-item-->
 </div><!--/div.accordion-flush-->
 
-<div class="accordion accordion-flush" id="accordionFlush5">
-  <div class="accordion-item">
-    <div class="accordion-header" id="flush-heading5">
-        <a href="managing-environments-pixi.html">4. Managing Reproducible Environments with pixi</a>
-    </div><!--/div.accordion-header-->
-
-  </div><!--/div.accordion-item-->
-</div><!--/div.accordion-flush-->
-
 <div class="accordion accordion-flush" id="accordionFlushcurrent">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-headingcurrent">
       <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapsecurrent" aria-expanded="true" aria-controls="flush-collapsecurrent">
         <span class="visually-hidden">Current Chapter</span>
         <span class="current-chapter">
-        5. Adding a CITATION.cff File
+        4. Adding a CITATION.cff File
         </span>
       </button>
     </div><!--/div.accordion-header-->
@@ -247,9 +238,19 @@
       <div class="accordion-body">
         <ul><li><a href="#introduction">Introduction</a></li>
 <li><a href="#what-belongs-in-a-citation.cff-file">What belongs in a CITATION.cff file?</a></li>
-<li><a href="#add-a-citation.cff-file-to-your-repository">Add a CITATION.cff file to your repository</a></li>
+<li><a href="#how-to-create-a-citation.cff-file">How to Create a CITATION.cff File</a></li>
+<li><a href="#linking-to-a-published-paper">Linking to a published paper</a></li>
         </ul></div><!--/div.accordion-body-->
     </div><!--/div.accordion-collapse-->
+
+  </div><!--/div.accordion-item-->
+</div><!--/div.accordion-flush-->
+
+<div class="accordion accordion-flush" id="accordionFlush6">
+  <div class="accordion-item">
+    <div class="accordion-header" id="flush-heading6">
+        <a href="making-software-citable.html">5. Making Your Software Citable</a>
+    </div><!--/div.accordion-header-->
 
   </div><!--/div.accordion-item-->
 </div><!--/div.accordion-flush-->
@@ -257,7 +258,7 @@
 <div class="accordion accordion-flush" id="accordionFlush7">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading7">
-        <a href="making-software-citable.html">6. Making Your Software Citable</a>
+        <a href="managing-environments-pixi.html">6. Managing Reproducible Environments with pixi</a>
     </div><!--/div.accordion-header-->
 
   </div><!--/div.accordion-item-->
@@ -323,14 +324,14 @@
         <!-- START: inst/pkgdown/templates/content-instructor.html -->
   <div class="col-xl-8 col-lg-12 primary-content">
     <nav class="lesson-content mx-md-4" aria-label="Previous and Next Chapter Top"><!-- content for small screens --><div class="d-block d-sm-block d-md-none">
-        <a class="chapter-link" href="managing-environments-pixi.html" rel="prev"><i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>Previous</a>
+        <a class="chapter-link" href="open-source-license.html" rel="prev"><i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>Previous</a>
         <a class="chapter-link float-end" href="making-software-citable.html" rel="next">Next<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
       </div>
       <!-- content for large screens -->
       <div class="d-none d-sm-none d-md-block">
-        <a class="chapter-link" href="managing-environments-pixi.html" rel="prev">
+        <a class="chapter-link" href="open-source-license.html" rel="prev">
           <i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>
-          Previous: Managing
+          Previous: Choosing an
         </a>
         <a class="chapter-link float-end" href="making-software-citable.html" rel="next">
           Next: Making Your Software...
@@ -339,7 +340,7 @@
       </div>
     </nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Adding a CITATION.cff File</h1>
-        <p>Last updated on 2025-12-06 |
+        <p>Last updated on 2026-05-29 |
 
         <a href="https://github.com/UC-OSPO-Network/research-software-citable-discoverable/edit/main/episodes/adding-citation-file.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -376,6 +377,37 @@ repository.</li>
 DOIs.</li>
 </ul></div>
 </div>
+</div>
+</div>
+</div>
+<div id="episode-branch-02-license-04-citation" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<span class="callout-header">Callout</span>
+<div id="episode-branch-02-license-04-citation" class="callout-inner">
+<h3 class="callout-title">Episode Branch: <code>02-license</code> →
+<code>04-citation</code>
+</h3>
+<div class="callout-content">
+<p>This episode adds a CITATION.cff file.</p>
+<p><strong>Starting point:</strong></p>
+<div class="codewrapper sourceCode" id="cb1">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" tabindex="-1" aria-label="code-block-1-1"></a><span class="fu">git</span> checkout 02-license  <span class="co"># Start with LICENSE added</span></span></code></pre>
+</div>
+<p><strong>After this episode:</strong></p>
+<div class="codewrapper sourceCode" id="cb2">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" tabindex="-1" aria-label="code-block-2-1"></a><span class="fu">git</span> checkout 04-citation <span class="co"># See the result with CITATION.cff added</span></span></code></pre>
+</div>
+<p><strong>Catch-up point:</strong> If joining now, run
+<code>git checkout 02-license</code></p>
+<p><em>Note: the <code>04-citation</code> branch also contains pixi
+environment files from the optional reproducibility episode. You can
+ignore those files for now.</em></p>
 </div>
 </div>
 </div>
@@ -426,32 +458,94 @@ managers</li>
 </ul></div>
 </div>
 </div>
-</section><section><h2 class="section-heading" id="add-a-citation-cff-file-to-your-repository">Add a CITATION.cff file to your repository<a class="anchor" aria-label="anchor" href="#add-a-citation-cff-file-to-your-repository"></a></h2>
-<hr class="half-width"><div class="section level3">
-<h3 id="step-1-create-the-file">Step 1 — Create the file<a class="anchor" aria-label="anchor" href="#step-1-create-the-file"></a></h3>
-<p>In the root of your repository:</p>
-<div class="codewrapper sourceCode" id="cb1">
-<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" tabindex="-1" aria-label="code-block-1-1"></a><span class="fu">touch</span> CITATION.cff</span></code></pre>
-</div>
+</section><section><h2 class="section-heading" id="how-to-create-a-citation-cff-file">How to Create a CITATION.cff File<a class="anchor" aria-label="anchor" href="#how-to-create-a-citation-cff-file"></a></h2>
+<hr class="half-width"><p>You have two options:</p>
+<div class="section level3">
+<h3 id="option-1-use-cffinit-recommended-for-beginners">Option 1: Use cffinit (Recommended for beginners)<a class="anchor" aria-label="anchor" href="#option-1-use-cffinit-recommended-for-beginners"></a></h3>
+<p>The CITATION.cff community provides a web-based wizard:</p>
+<p><strong>Use cffinit:</strong> - Visit: <a href="https://citation-file-format.github.io/cffinit/" class="external-link uri">https://citation-file-format.github.io/cffinit/</a> - Fill
+out the form with your software details - Download the generated
+<code>CITATION.cff</code> file - Add it to your repository root</p>
+<p><strong>Benefits:</strong> - Interactive form guides you through
+required fields - Validates your file automatically - No need to
+memorize YAML syntax - More information on CFF: <a href="https://citation-file-format.github.io/" class="external-link uri">https://citation-file-format.github.io/</a></p>
 </div>
 <div class="section level3">
-<h3 id="step-2-add-minimal-metadata">Step 2 — Add minimal metadata<a class="anchor" aria-label="anchor" href="#step-2-add-minimal-metadata"></a></h3>
-<div class="codewrapper sourceCode" id="cb2">
+<h3 id="option-2-create-it-manually">Option 2: Create it manually<a class="anchor" aria-label="anchor" href="#option-2-create-it-manually"></a></h3>
+<p>If you prefer to write it yourself:</p>
+<p><strong>Step 1 — Create the file</strong></p>
+<p>In the root of your repository:</p>
+<div class="codewrapper sourceCode" id="cb3">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" tabindex="-1" aria-label="code-block-3-1"></a><span class="fu">touch</span> CITATION.cff</span></code></pre>
+</div>
+<p><strong>Step 2 — Add minimal metadata</strong></p>
+<p>Here’s a complete example from the slides:</p>
+<div class="codewrapper sourceCode" id="cb4">
 <h3 class="code-label">YAML<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode yaml" tabindex="0"><code class="sourceCode yaml"><span id="cb2-1"><a href="#cb2-1" tabindex="-1" aria-label="code-block-2-1"></a><span class="fu">cff-version</span><span class="kw">:</span><span class="at"> </span><span class="fl">1.2.0</span></span>
-<span id="cb2-2"><a href="#cb2-2" tabindex="-1" aria-label="code-block-2-2"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> MyResearchSoftware</span></span>
-<span id="cb2-3"><a href="#cb2-3" tabindex="-1" aria-label="code-block-2-3"></a><span class="fu">message</span><span class="kw">:</span><span class="at"> </span><span class="st">"Please cite this software using the metadata below."</span></span>
-<span id="cb2-4"><a href="#cb2-4" tabindex="-1" aria-label="code-block-2-4"></a><span class="fu">authors</span><span class="kw">:</span></span>
-<span id="cb2-5"><a href="#cb2-5" tabindex="-1" aria-label="code-block-2-5"></a><span class="at">  </span><span class="kw">-</span><span class="at"> </span><span class="fu">given-names</span><span class="kw">:</span><span class="at"> Jane</span></span>
-<span id="cb2-6"><a href="#cb2-6" tabindex="-1" aria-label="code-block-2-6"></a><span class="at">    </span><span class="fu">family-names</span><span class="kw">:</span><span class="at"> Doe</span></span>
-<span id="cb2-7"><a href="#cb2-7" tabindex="-1" aria-label="code-block-2-7"></a><span class="at">    </span><span class="fu">orcid</span><span class="kw">:</span><span class="at"> https://orcid.org/0000-0002-1825-0097</span></span>
-<span id="cb2-8"><a href="#cb2-8" tabindex="-1" aria-label="code-block-2-8"></a><span class="fu">version</span><span class="kw">:</span><span class="at"> </span><span class="st">"0.1.0"</span></span></code></pre>
+<pre class="sourceCode yaml" tabindex="0"><code class="sourceCode yaml"><span id="cb4-1"><a href="#cb4-1" tabindex="-1" aria-label="code-block-4-1"></a><span class="fu">cff-version</span><span class="kw">:</span><span class="at"> </span><span class="fl">1.2.0</span></span>
+<span id="cb4-2"><a href="#cb4-2" tabindex="-1" aria-label="code-block-4-2"></a><span class="fu">message</span><span class="kw">:</span><span class="at"> </span><span class="st">"If you use this software, please cite it as below."</span></span>
+<span id="cb4-3"><a href="#cb4-3" tabindex="-1" aria-label="code-block-4-3"></a><span class="fu">authors</span><span class="kw">:</span></span>
+<span id="cb4-4"><a href="#cb4-4" tabindex="-1" aria-label="code-block-4-4"></a><span class="at">  </span><span class="kw">-</span><span class="at"> </span><span class="fu">family-names</span><span class="kw">:</span><span class="at"> </span><span class="st">"Dennis"</span></span>
+<span id="cb4-5"><a href="#cb4-5" tabindex="-1" aria-label="code-block-4-5"></a><span class="at">    </span><span class="fu">given-names</span><span class="kw">:</span><span class="at"> </span><span class="st">"Tim"</span></span>
+<span id="cb4-6"><a href="#cb4-6" tabindex="-1" aria-label="code-block-4-6"></a><span class="at">    </span><span class="fu">orcid</span><span class="kw">:</span><span class="at"> </span><span class="st">"https://orcid.org/0000-0002-1234-5678"</span></span>
+<span id="cb4-7"><a href="#cb4-7" tabindex="-1" aria-label="code-block-4-7"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"Biodiversity Analysis Toolkit"</span></span>
+<span id="cb4-8"><a href="#cb4-8" tabindex="-1" aria-label="code-block-4-8"></a><span class="fu">version</span><span class="kw">:</span><span class="at"> </span><span class="fl">0.1.0</span></span>
+<span id="cb4-9"><a href="#cb4-9" tabindex="-1" aria-label="code-block-4-9"></a><span class="fu">date-released</span><span class="kw">:</span><span class="at"> 2025-01-15</span></span>
+<span id="cb4-10"><a href="#cb4-10" tabindex="-1" aria-label="code-block-4-10"></a><span class="fu">url</span><span class="kw">:</span><span class="at"> </span><span class="st">"https://github.com/jt14den/software-demo"</span></span></code></pre>
 </div>
+<p><strong>GitHub creates a “Cite this repository” button
+automatically!</strong></p>
 <p>If your software does not yet have version tags, you may omit the
-version field until Episode 4.</p>
+version field until Episode 4 when you create releases.</p>
+</div>
+</section><section><h2 class="section-heading" id="linking-to-a-published-paper">Linking to a published paper<a class="anchor" aria-label="anchor" href="#linking-to-a-published-paper"></a></h2>
+<hr class="half-width"><p>Many researchers want users to cite a journal article
+<em>alongside</em> or <em>instead of</em> the raw software repository.
+The <code>preferred-citation</code> field handles this — it tells
+GitHub, Zotero, and other tools which reference to show first.</p>
+<div class="codewrapper sourceCode" id="cb5">
+<h3 class="code-label">YAML<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode yaml" tabindex="0"><code class="sourceCode yaml"><span id="cb5-1"><a href="#cb5-1" tabindex="-1" aria-label="code-block-5-1"></a><span class="fu">cff-version</span><span class="kw">:</span><span class="at"> </span><span class="fl">1.2.0</span></span>
+<span id="cb5-2"><a href="#cb5-2" tabindex="-1" aria-label="code-block-5-2"></a><span class="fu">message</span><span class="kw">:</span><span class="at"> </span><span class="st">"If you use this software, please cite the paper below."</span></span>
+<span id="cb5-3"><a href="#cb5-3" tabindex="-1" aria-label="code-block-5-3"></a><span class="fu">authors</span><span class="kw">:</span></span>
+<span id="cb5-4"><a href="#cb5-4" tabindex="-1" aria-label="code-block-5-4"></a><span class="at">  </span><span class="kw">-</span><span class="at"> </span><span class="fu">family-names</span><span class="kw">:</span><span class="at"> </span><span class="st">"Dennis"</span></span>
+<span id="cb5-5"><a href="#cb5-5" tabindex="-1" aria-label="code-block-5-5"></a><span class="at">    </span><span class="fu">given-names</span><span class="kw">:</span><span class="at"> </span><span class="st">"Tim"</span></span>
+<span id="cb5-6"><a href="#cb5-6" tabindex="-1" aria-label="code-block-5-6"></a><span class="at">    </span><span class="fu">orcid</span><span class="kw">:</span><span class="at"> </span><span class="st">"https://orcid.org/0000-0002-1234-5678"</span></span>
+<span id="cb5-7"><a href="#cb5-7" tabindex="-1" aria-label="code-block-5-7"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"Biodiversity Analysis Toolkit"</span></span>
+<span id="cb5-8"><a href="#cb5-8" tabindex="-1" aria-label="code-block-5-8"></a><span class="fu">version</span><span class="kw">:</span><span class="at"> </span><span class="fl">0.1.0</span></span>
+<span id="cb5-9"><a href="#cb5-9" tabindex="-1" aria-label="code-block-5-9"></a><span class="fu">date-released</span><span class="kw">:</span><span class="at"> 2025-01-15</span></span>
+<span id="cb5-10"><a href="#cb5-10" tabindex="-1" aria-label="code-block-5-10"></a><span class="fu">url</span><span class="kw">:</span><span class="at"> </span><span class="st">"https://github.com/jt14den/software-demo"</span></span>
+<span id="cb5-11"><a href="#cb5-11" tabindex="-1" aria-label="code-block-5-11"></a><span class="fu">preferred-citation</span><span class="kw">:</span></span>
+<span id="cb5-12"><a href="#cb5-12" tabindex="-1" aria-label="code-block-5-12"></a><span class="at">  </span><span class="fu">type</span><span class="kw">:</span><span class="at"> article</span></span>
+<span id="cb5-13"><a href="#cb5-13" tabindex="-1" aria-label="code-block-5-13"></a><span class="at">  </span><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"Biodiversity Analysis at Scale: Methods and Software"</span></span>
+<span id="cb5-14"><a href="#cb5-14" tabindex="-1" aria-label="code-block-5-14"></a><span class="at">  </span><span class="fu">authors</span><span class="kw">:</span></span>
+<span id="cb5-15"><a href="#cb5-15" tabindex="-1" aria-label="code-block-5-15"></a><span class="at">    </span><span class="kw">-</span><span class="at"> </span><span class="fu">family-names</span><span class="kw">:</span><span class="at"> </span><span class="st">"Dennis"</span></span>
+<span id="cb5-16"><a href="#cb5-16" tabindex="-1" aria-label="code-block-5-16"></a><span class="at">      </span><span class="fu">given-names</span><span class="kw">:</span><span class="at"> </span><span class="st">"Tim"</span></span>
+<span id="cb5-17"><a href="#cb5-17" tabindex="-1" aria-label="code-block-5-17"></a><span class="at">  </span><span class="fu">journal</span><span class="kw">:</span><span class="at"> </span><span class="st">"Journal of Open Source Software"</span></span>
+<span id="cb5-18"><a href="#cb5-18" tabindex="-1" aria-label="code-block-5-18"></a><span class="at">  </span><span class="fu">year</span><span class="kw">:</span><span class="at"> </span><span class="dv">2025</span></span>
+<span id="cb5-19"><a href="#cb5-19" tabindex="-1" aria-label="code-block-5-19"></a><span class="at">  </span><span class="fu">doi</span><span class="kw">:</span><span class="at"> </span><span class="st">"10.21105/joss.00000"</span></span></code></pre>
+</div>
+<p>Without <code>preferred-citation</code>, GitHub shows the software
+repository citation by default. Adding it ensures that anyone clicking
+“Cite this repository” gets your paper’s citation instead — which is
+usually what you want for impact tracking.</p>
+<div id="no-paper-yet-skip-it." class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<span class="callout-header">Callout</span>
+<div id="no-paper-yet-skip-it." class="callout-inner">
+<h3 class="callout-title">No paper yet? Skip it.</h3>
+<div class="callout-content">
+<p>Leave out <code>preferred-citation</code> if you don’t have a
+published article. You can add it later. The rest of the file works fine
+without it.</p>
+</div>
+</div>
 </div>
 <div class="section level3">
 <h3 id="step-3-commit-and-refresh">Step 3 — Commit and refresh<a class="anchor" aria-label="anchor" href="#step-3-commit-and-refresh"></a></h3>
@@ -518,15 +612,15 @@ lesson).</p>
 <div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <p>A valid minimal example:</p>
-<div class="codewrapper sourceCode" id="cb3">
+<div class="codewrapper sourceCode" id="cb6">
 <h3 class="code-label">YAML<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode yaml" tabindex="0"><code class="sourceCode yaml"><span id="cb3-1"><a href="#cb3-1" tabindex="-1" aria-label="code-block-3-1"></a><span class="fu">cff-version</span><span class="kw">:</span><span class="at"> </span><span class="fl">1.2.0</span></span>
-<span id="cb3-2"><a href="#cb3-2" tabindex="-1" aria-label="code-block-3-2"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> ExampleProject</span></span>
-<span id="cb3-3"><a href="#cb3-3" tabindex="-1" aria-label="code-block-3-3"></a><span class="fu">message</span><span class="kw">:</span><span class="at"> </span><span class="st">"Please cite this software."</span></span>
-<span id="cb3-4"><a href="#cb3-4" tabindex="-1" aria-label="code-block-3-4"></a><span class="fu">authors</span><span class="kw">:</span></span>
-<span id="cb3-5"><a href="#cb3-5" tabindex="-1" aria-label="code-block-3-5"></a><span class="at">  </span><span class="kw">-</span><span class="at"> </span><span class="fu">given-names</span><span class="kw">:</span><span class="at"> Alex</span></span>
-<span id="cb3-6"><a href="#cb3-6" tabindex="-1" aria-label="code-block-3-6"></a><span class="at">    </span><span class="fu">family-names</span><span class="kw">:</span><span class="at"> Researcher</span></span></code></pre>
+<pre class="sourceCode yaml" tabindex="0"><code class="sourceCode yaml"><span id="cb6-1"><a href="#cb6-1" tabindex="-1" aria-label="code-block-6-1"></a><span class="fu">cff-version</span><span class="kw">:</span><span class="at"> </span><span class="fl">1.2.0</span></span>
+<span id="cb6-2"><a href="#cb6-2" tabindex="-1" aria-label="code-block-6-2"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> ExampleProject</span></span>
+<span id="cb6-3"><a href="#cb6-3" tabindex="-1" aria-label="code-block-6-3"></a><span class="fu">message</span><span class="kw">:</span><span class="at"> </span><span class="st">"Please cite this software."</span></span>
+<span id="cb6-4"><a href="#cb6-4" tabindex="-1" aria-label="code-block-6-4"></a><span class="fu">authors</span><span class="kw">:</span></span>
+<span id="cb6-5"><a href="#cb6-5" tabindex="-1" aria-label="code-block-6-5"></a><span class="at">  </span><span class="kw">-</span><span class="at"> </span><span class="fu">given-names</span><span class="kw">:</span><span class="at"> Alex</span></span>
+<span id="cb6-6"><a href="#cb6-6" tabindex="-1" aria-label="code-block-6-6"></a><span class="at">    </span><span class="fu">family-names</span><span class="kw">:</span><span class="at"> Researcher</span></span></code></pre>
 </div>
 </div>
 </div>
@@ -554,14 +648,14 @@ any links that you are not going to use.
 </div>
 </section></div> <!-- / div.lesson-content -->
     </main><!-- / main#main-content.main-content --><nav class="bottom-pagination mx-md-4" aria-label="Previous and Next Chapter Bottom"><div class="d-block d-sm-block d-md-none">
-        <a class="chapter-link" href="managing-environments-pixi.html"><i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>Previous</a>
+        <a class="chapter-link" href="open-source-license.html"><i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>Previous</a>
         <a class="chapter-link float-end" href="making-software-citable.html">Next<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
       </div>
       <!-- content for large screens -->
       <div class="d-none d-sm-none d-md-block">
-        <a class="chapter-link" href="managing-environments-pixi.html" rel="prev">
+        <a class="chapter-link" href="open-source-license.html" rel="prev">
           <i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>
-          Previous: Managing
+          Previous: Choosing an
         </a>
         <a class="chapter-link float-end" href="making-software-citable.html" rel="next">
           Next: Making Your Software...
@@ -612,8 +706,8 @@ any links that you are not going to use.
   "url": "https://UC-OSPO-Network.github.io/research-software-citable-discoverable/adding-citation-file.html",
   "identifier": "https://UC-OSPO-Network.github.io/research-software-citable-discoverable/adding-citation-file.html",
   "dateCreated": "2025-12-06",
-  "dateModified": "2025-12-06",
-  "datePublished": "2026-05-27"
+  "dateModified": "2026-05-29",
+  "datePublished": "2026-05-29"
 }
 
   </script><script>
