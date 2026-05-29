@@ -511,7 +511,7 @@ this version?</li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p>Useful release notes include:</p>
 <ul><li>what changed<br></li>
@@ -532,30 +532,41 @@ record, we will use <strong>Zenodo Sandbox</strong>. It works exactly
 like the real Zenodo but is for testing.</p>
 <div class="section level3">
 <h3 id="the-complete-6-step-workflow">The Complete 6-Step Workflow<a class="anchor" aria-label="anchor" href="#the-complete-6-step-workflow"></a></h3>
-<p><strong>Step 1: Log in to Zenodo with GitHub</strong> - Visit <a href="https://sandbox.zenodo.org" class="external-link uri">https://sandbox.zenodo.org</a> - Click “Log in with GitHub”
-- Authorize Zenodo to access your repositories</p>
-<p><strong>Step 2: Enable your repository (toggle ON)</strong> - Go to
-<strong>Settings → GitHub</strong> in Zenodo Sandbox - Find your
-repository in the list - Toggle the switch to <strong>ON</strong>
-(green) - This tells Zenodo to watch for new releases</p>
-<p><strong>Step 3: Create GitHub Release (tag v1.0.0)</strong> - Go to
-your GitHub repository - Click <strong>Releases → Draft a new
-release</strong> - Create a tag: <code>v1.0.0</code> - Add release notes
-describing what’s in this version - Click <strong>Publish
-release</strong></p>
-<p><strong>Step 4: Zenodo auto-archives and mints DOI</strong> - Zenodo
-automatically detects your new release - Creates an archived snapshot -
-Assigns a permanent DOI - Wait a few minutes for processing</p>
-<p><strong>Step 5: Add DOI badge to your README</strong> - Copy the DOI
-badge from your Zenodo record - Add it to the top of your README:</p>
-<div class="codewrapper sourceCode" id="cb3">
+<p><strong>Step 1: Log in to Zenodo with GitHub</strong></p>
+<ul><li>Visit <a href="https://sandbox.zenodo.org" class="external-link uri">https://sandbox.zenodo.org</a>
+</li>
+<li>Click “Log in with GitHub”</li>
+<li>Authorize Zenodo to access your repositories</li>
+</ul><p><strong>Step 2: Enable your repository (toggle ON)</strong></p>
+<ul><li>Go to <strong>Settings → GitHub</strong> in Zenodo Sandbox</li>
+<li>Find your repository in the list</li>
+<li>Toggle the switch to <strong>ON</strong> (green)</li>
+<li>This tells Zenodo to watch for new releases</li>
+</ul><p><strong>Step 3: Create GitHub Release (tag v1.0.0)</strong></p>
+<ul><li>Go to your GitHub repository</li>
+<li>Click <strong>Releases → Draft a new release</strong>
+</li>
+<li>Create a tag: <code>v1.0.0</code>
+</li>
+<li>Add release notes describing what’s in this version</li>
+<li>Click <strong>Publish release</strong>
+</li>
+</ul><p><strong>Step 4: Zenodo auto-archives and mints DOI</strong></p>
+<ul><li>Zenodo automatically detects your new release</li>
+<li>Creates an archived snapshot</li>
+<li>Assigns a permanent DOI</li>
+<li>Wait a few minutes for processing</li>
+</ul><p><strong>Step 5: Add DOI badge to your README</strong></p>
+<ul><li>Copy the DOI badge from your Zenodo record</li>
+<li>Add it to the top of your README:</li>
+</ul><div class="codewrapper sourceCode" id="cb3">
 <h3 class="code-label">MARKDOWN<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="sourceCode markdown" tabindex="0"><code class="sourceCode markdown"><span id="cb3-1"><a href="#cb3-1" tabindex="-1" aria-label="code-block-3-1"></a><span class="co">[</span><span class="al">![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.123456.svg)</span><span class="co">](https://doi.org/10.5281/zenodo.123456)</span></span></code></pre>
 </div>
-<p><strong>Step 6: Update your CFF file with your DOI</strong> - Add the
-DOI to your <code>CITATION.cff</code>:</p>
-<div class="codewrapper sourceCode" id="cb4">
+<p><strong>Step 6: Update your CFF file with your DOI</strong></p>
+<ul><li>Add the DOI to your <code>CITATION.cff</code>:</li>
+</ul><div class="codewrapper sourceCode" id="cb4">
 <h3 class="code-label">YAML<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="sourceCode yaml" tabindex="0"><code class="sourceCode yaml"><span id="cb4-1"><a href="#cb4-1" tabindex="-1" aria-label="code-block-4-1"></a><span class="fu">doi</span><span class="kw">:</span><span class="at"> 10.5281/zenodo.123456</span></span></code></pre>
@@ -637,7 +648,7 @@ rather than the whole project?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <p>Versioned DOIs:</p>
 <ul><li>support reproducibility by identifying an exact snapshot<br></li>

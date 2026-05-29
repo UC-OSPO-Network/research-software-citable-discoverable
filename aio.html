@@ -496,10 +496,14 @@ researchers cite code by dropping a URL into a paper:</p>
 <blockquote>
 <p>“We used the analysis script from <a href="https://github.com/jt14den/software-demo" class="external-link uri">https://github.com/jt14den/software-demo</a>”</p>
 </blockquote>
-<p><strong>Problems:</strong> - URLs break (link rot) - No version
-specified — which run of the code produced which result? - No formal
-credit — the author’s name isn’t even visible - Cannot appear in
-citation metrics</p>
+<p><strong>Problems:</strong></p>
+<ul>
+<li>URLs break (link rot)</li>
+<li>No version specified — which run of the code produced which
+result?</li>
+<li>No formal credit — the author’s name isn’t even visible</li>
+<li>Cannot appear in citation metrics</li>
+</ul>
 <p><strong>This isn’t hypothetical. Forges close.</strong></p>
 <ul>
 <li>
@@ -519,10 +523,13 @@ URL-based citation just as completely</li>
 <p>Dennis, T. (2025). <em>Biodiversity Analysis Toolkit</em> (v0.1.0).
 Zenodo. <a href="https://doi.org/10.5281/zenodo.123456" class="external-link uri">https://doi.org/10.5281/zenodo.123456</a></p>
 </blockquote>
-<p><strong>Why this works:</strong> - DOI is permanent — survives
-username changes, repo moves, even GitHub disappearing - Version is
-explicit — someone can reproduce the exact run - Author gets formal
-credit and citation metrics</p>
+<p><strong>Why this works:</strong></p>
+<ul>
+<li>DOI is permanent — survives username changes, repo moves, even
+GitHub disappearing</li>
+<li>Version is explicit — someone can reproduce the exact run</li>
+<li>Author gets formal credit and citation metrics</li>
+</ul>
 <p>The fix is a <code>CITATION.cff</code> file and a DOI — both of which
 you’ll create in this lesson.</p>
 </div>
@@ -569,9 +576,14 @@ FAIR software project by adding:</p>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" tabindex="-1" aria-label="code-block-2-1"></a><span class="bu">cd</span> software-demo</span>
 <span id="cb2-2"><a href="#cb2-2" tabindex="-1" aria-label="code-block-2-2"></a><span class="fu">git</span> checkout 01-start</span></code></pre>
 </div>
-<p>You’ll see: - ❌ No LICENSE - ❌ Vague environment
-(<code>python = "*"</code>) - ❌ No citation information - ❌ No DOI -
-❌ Minimal README</p>
+<p>You’ll see:</p>
+<ul>
+<li>❌ No LICENSE</li>
+<li>❌ Vague environment (<code>python = "*"</code>)</li>
+<li>❌ No citation information</li>
+<li>❌ No DOI</li>
+<li>❌ Minimal README</li>
+</ul>
 </div>
 <div class="section level3">
 <h3 id="the-after-state-branch-06-metadata">The “After” State (Branch: 06-metadata)<a class="anchor" aria-label="anchor" href="#the-after-state-branch-06-metadata"></a>
@@ -582,14 +594,17 @@ FAIR software project by adding:</p>
 </h3>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" tabindex="-1" aria-label="code-block-3-1"></a><span class="fu">git</span> checkout 06-metadata</span></code></pre>
 </div>
-<p>Notice what’s been added: - ✅ <strong>LICENSE</strong>
-(BSD-3-Clause) - ✅ <strong>pixi.toml</strong> (documented environment)
-- ✅ <strong>CITATION.cff</strong> (citation metadata) - ✅
-<strong>README.md</strong> (complete documentation) - ✅
-<strong>CONTRIBUTING.md</strong> (contribution guidelines) - ✅
-<strong>CODE_OF_CONDUCT.md</strong> (community standards) - ✅
-<strong>.zenodo.json</strong> (Zenodo metadata) - ✅ DOI badge in
-README</p>
+<p>Notice what’s been added:</p>
+<ul>
+<li>✅ <strong>LICENSE</strong> (BSD-3-Clause)</li>
+<li>✅ <strong>pixi.toml</strong> (documented environment)</li>
+<li>✅ <strong>CITATION.cff</strong> (citation metadata)</li>
+<li>✅ <strong>README.md</strong> (complete documentation)</li>
+<li>✅ <strong>CONTRIBUTING.md</strong> (contribution guidelines)</li>
+<li>✅ <strong>CODE_OF_CONDUCT.md</strong> (community standards)</li>
+<li>✅ <strong>.zenodo.json</strong> (Zenodo metadata)</li>
+<li>✅ DOI badge in README</li>
+</ul>
 <p><strong>This is what makes software Findable, Accessible,
 Interoperable, and Reusable.</strong></p>
 <div id="real-world-example-spack" class="callout">
@@ -604,10 +619,14 @@ Interoperable, and Reusable.</strong></p>
 principles?</p>
 <p><strong>Spack</strong> is used by national labs, universities, and
 supercomputing centers: <a href="https://github.com/spack/spack" class="external-link uri">https://github.com/spack/spack</a></p>
-<p>Check their repository and notice: - ✅ README with clear description
-and getting started guide - ✅ LICENSE (MIT and Apache-2.0) - ✅
-CITATION.cff file - ✅ Documentation - ✅ Code of conduct and
-Contributing guide</p>
+<p>Check their repository and notice:</p>
+<ul>
+<li>✅ README with clear description and getting started guide</li>
+<li>✅ LICENSE (MIT and Apache-2.0)</li>
+<li>✅ CITATION.cff file</li>
+<li>✅ Documentation</li>
+<li>✅ Code of conduct and Contributing guide</li>
+</ul>
 </div>
 </div>
 </div>
@@ -858,7 +877,7 @@ work first?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p>Useful elements commonly include:</p>
 <ul>
@@ -913,9 +932,12 @@ Repository</h3>
 <div class="callout-content">
 <p>Open the <strong>software-demo</strong> repository you
 downloaded.</p>
-<p>Spend 2 minutes exploring, then answer: - Could you run this code
-today? What’s missing? - Would you know who created it or how to credit
-them? - Could you legally reuse or modify it?</p>
+<p>Spend 2 minutes exploring, then answer:</p>
+<ul>
+<li>Could you run this code today? What’s missing?</li>
+<li>Would you know who created it or how to credit them?</li>
+<li>Could you legally reuse or modify it?</li>
+</ul>
 <p>We’ll address these gaps together over the next episodes.</p>
 </div>
 </div>
@@ -925,7 +947,7 @@ them? - Could you legally reuse or modify it?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <p>Learners may observe:</p>
 <ul>
@@ -1213,9 +1235,17 @@ documentation, those files need a separate license.</p>
 <p>The standard choice for research outputs is <strong>Creative Commons
 Attribution 4.0 (CC BY 4.0)</strong>, which allows broad reuse with
 attribution.</p>
-<p>A common pattern: - <code>/src</code> or your code files →
-<code>BSD-3-Clause</code> or <code>MIT</code> - <code>/data</code> or
-<code>/docs</code> → <code>CC-BY-4.0</code></p>
+<p>A common pattern:</p>
+<ul>
+<li>
+<code>/src</code> or your code files → <code>BSD-3-Clause</code> or
+<code>MIT</code>
+</li>
+<li>
+<code>/data</code> or <code>/docs</code> →
+<code>CC-BY-4.0</code>
+</li>
+</ul>
 <p>You can note this split in your README and in
 <code>CITATION.cff</code> under the <code>license</code> field, which
 accepts a list:</p>
@@ -1295,7 +1325,7 @@ personal project, use your own name.)</em>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p>GitHub automatically detects the <code>LICENSE</code> file and
 displays it in the sidebar. Your file should look like this:</p>
@@ -1349,7 +1379,7 @@ with collaborators.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <p><strong>Scenario 1:</strong> BSD 3-Clause (UC’s default
 recommendation, maximum flexibility and adoption)</p>
@@ -1544,12 +1574,22 @@ managers</li>
 <h3 id="option-1-use-cffinit-recommended-for-beginners">Option 1: Use cffinit (Recommended for beginners)<a class="anchor" aria-label="anchor" href="#option-1-use-cffinit-recommended-for-beginners"></a>
 </h3>
 <p>The CITATION.cff community provides a web-based wizard:</p>
-<p><strong>Use cffinit:</strong> - Visit: <a href="https://citation-file-format.github.io/cffinit/" class="external-link uri">https://citation-file-format.github.io/cffinit/</a> - Fill
-out the form with your software details - Download the generated
-<code>CITATION.cff</code> file - Add it to your repository root</p>
-<p><strong>Benefits:</strong> - Interactive form guides you through
-required fields - Validates your file automatically - No need to
-memorize YAML syntax - More information on CFF: <a href="https://citation-file-format.github.io/" class="external-link uri">https://citation-file-format.github.io/</a></p>
+<p><strong>Use cffinit:</strong></p>
+<ul>
+<li>Visit: <a href="https://citation-file-format.github.io/cffinit/" class="external-link uri">https://citation-file-format.github.io/cffinit/</a>
+</li>
+<li>Fill out the form with your software details</li>
+<li>Download the generated <code>CITATION.cff</code> file</li>
+<li>Add it to your repository root</li>
+</ul>
+<p><strong>Benefits:</strong></p>
+<ul>
+<li>Interactive form guides you through required fields</li>
+<li>Validates your file automatically</li>
+<li>No need to memorize YAML syntax</li>
+<li>More information on CFF: <a href="https://citation-file-format.github.io/" class="external-link uri">https://citation-file-format.github.io/</a>
+</li>
+</ul>
 </div>
 <div class="section level3">
 <h3 id="option-2-create-it-manually">Option 2: Create it manually<a class="anchor" aria-label="anchor" href="#option-2-create-it-manually"></a>
@@ -1666,7 +1706,7 @@ lesson).</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p>Typical missing pieces include:</p>
 <ul>
@@ -1702,7 +1742,7 @@ lesson).</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <p>A valid minimal example:</p>
 <div class="codewrapper sourceCode" id="cb6">
@@ -1946,7 +1986,7 @@ this version?</li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p>Useful release notes include:</p>
 <ul>
@@ -1976,29 +2016,52 @@ like the real Zenodo but is for testing.</p>
 <div class="section level3">
 <h3 id="the-complete-6-step-workflow">The Complete 6-Step Workflow<a class="anchor" aria-label="anchor" href="#the-complete-6-step-workflow"></a>
 </h3>
-<p><strong>Step 1: Log in to Zenodo with GitHub</strong> - Visit <a href="https://sandbox.zenodo.org" class="external-link uri">https://sandbox.zenodo.org</a> - Click “Log in with GitHub”
-- Authorize Zenodo to access your repositories</p>
-<p><strong>Step 2: Enable your repository (toggle ON)</strong> - Go to
-<strong>Settings → GitHub</strong> in Zenodo Sandbox - Find your
-repository in the list - Toggle the switch to <strong>ON</strong>
-(green) - This tells Zenodo to watch for new releases</p>
-<p><strong>Step 3: Create GitHub Release (tag v1.0.0)</strong> - Go to
-your GitHub repository - Click <strong>Releases → Draft a new
-release</strong> - Create a tag: <code>v1.0.0</code> - Add release notes
-describing what’s in this version - Click <strong>Publish
-release</strong></p>
-<p><strong>Step 4: Zenodo auto-archives and mints DOI</strong> - Zenodo
-automatically detects your new release - Creates an archived snapshot -
-Assigns a permanent DOI - Wait a few minutes for processing</p>
-<p><strong>Step 5: Add DOI badge to your README</strong> - Copy the DOI
-badge from your Zenodo record - Add it to the top of your README:</p>
+<p><strong>Step 1: Log in to Zenodo with GitHub</strong></p>
+<ul>
+<li>Visit <a href="https://sandbox.zenodo.org" class="external-link uri">https://sandbox.zenodo.org</a>
+</li>
+<li>Click “Log in with GitHub”</li>
+<li>Authorize Zenodo to access your repositories</li>
+</ul>
+<p><strong>Step 2: Enable your repository (toggle ON)</strong></p>
+<ul>
+<li>Go to <strong>Settings → GitHub</strong> in Zenodo Sandbox</li>
+<li>Find your repository in the list</li>
+<li>Toggle the switch to <strong>ON</strong> (green)</li>
+<li>This tells Zenodo to watch for new releases</li>
+</ul>
+<p><strong>Step 3: Create GitHub Release (tag v1.0.0)</strong></p>
+<ul>
+<li>Go to your GitHub repository</li>
+<li>Click <strong>Releases → Draft a new release</strong>
+</li>
+<li>Create a tag: <code>v1.0.0</code>
+</li>
+<li>Add release notes describing what’s in this version</li>
+<li>Click <strong>Publish release</strong>
+</li>
+</ul>
+<p><strong>Step 4: Zenodo auto-archives and mints DOI</strong></p>
+<ul>
+<li>Zenodo automatically detects your new release</li>
+<li>Creates an archived snapshot</li>
+<li>Assigns a permanent DOI</li>
+<li>Wait a few minutes for processing</li>
+</ul>
+<p><strong>Step 5: Add DOI badge to your README</strong></p>
+<ul>
+<li>Copy the DOI badge from your Zenodo record</li>
+<li>Add it to the top of your README:</li>
+</ul>
 <div class="codewrapper sourceCode" id="cb3">
 <h3 class="code-label">MARKDOWN<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="sourceCode markdown" tabindex="0"><code class="sourceCode markdown"><span id="cb3-1"><a href="#cb3-1" tabindex="-1" aria-label="code-block-3-1"></a><span class="co">[</span><span class="al">![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.123456.svg)</span><span class="co">](https://doi.org/10.5281/zenodo.123456)</span></span></code></pre>
 </div>
-<p><strong>Step 6: Update your CFF file with your DOI</strong> - Add the
-DOI to your <code>CITATION.cff</code>:</p>
+<p><strong>Step 6: Update your CFF file with your DOI</strong></p>
+<ul>
+<li>Add the DOI to your <code>CITATION.cff</code>:</li>
+</ul>
 <div class="codewrapper sourceCode" id="cb4">
 <h3 class="code-label">YAML<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -2083,7 +2146,7 @@ rather than the whole project?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <p>Versioned DOIs:</p>
 <ul>
@@ -2235,8 +2298,12 @@ library versions frequently break code.</p>
 <span id="cb3-3"><a href="#cb3-3" tabindex="-1" aria-label="code-block-3-3"></a><span class="dt">numpy</span> <span class="op">=</span> <span class="st">"*"</span></span></code></pre>
 </div>
 <p><code>python = "*"</code> is like saying “I need some food.”</p>
-<p><strong>Problems:</strong> - Works today, breaks tomorrow - Different
-versions on different machines - “Works on my machine” syndrome</p>
+<p><strong>Problems:</strong></p>
+<ul>
+<li>Works today, breaks tomorrow</li>
+<li>Different versions on different machines</li>
+<li>“Works on my machine” syndrome</li>
+</ul>
 </div>
 <div class="section level3">
 <h3 id="the-locked-way">✅ The Locked Way<a class="anchor" aria-label="anchor" href="#the-locked-way"></a>
@@ -2251,8 +2318,12 @@ versions on different machines - “Works on my machine” syndrome</p>
 </div>
 <p><code>pixi.lock</code> is like saying “I need a pepperoni pizza from
 Mario’s, baked at 5:00 PM.”</p>
-<p><strong>Benefits:</strong> - ✅ Exact versions locked - ✅ Same
-environment everywhere - ✅ Reproducible in 5 years</p>
+<p><strong>Benefits:</strong></p>
+<ul>
+<li>✅ Exact versions locked</li>
+<li>✅ Same environment everywhere</li>
+<li>✅ Reproducible in 5 years</li>
+</ul>
 </div>
 </section><section><h2 class="section-heading" id="what-environment-management-captures">What Environment Management Captures<a class="anchor" aria-label="anchor" href="#what-environment-management-captures"></a>
 </h2>
@@ -2762,9 +2833,11 @@ template</li>
 </div>
 </div>
 </div>
-<p>It is also critical to link your metadata: - Add a
-<strong>badge</strong> for your Zenodo DOI - Link to your
-<code>CITATION.cff</code> file</p>
+<p>It is also critical to link your metadata:</p>
+<ul>
+<li>Add a <strong>badge</strong> for your Zenodo DOI</li>
+<li>Link to your <code>CITATION.cff</code> file</li>
+</ul>
 <p>A structured README ensures researchers can quickly evaluate and use
 your software.</p>
 </div>
@@ -2811,9 +2884,13 @@ OSPO Code of Conduct Guide</a> </em>(UC-specific)<em>)</em></p>
 <h3 id="changelog-md-version-history">CHANGELOG.md → Version history<a class="anchor" aria-label="anchor" href="#changelog-md-version-history"></a>
 </h3>
 <p>A <code>CHANGELOG.md</code> documents what changed between versions.
-This helps users understand: - What’s new in each release - What bugs
-were fixed - What breaking changes occurred - How the software evolved
-over time</p>
+This helps users understand:</p>
+<ul>
+<li>What’s new in each release</li>
+<li>What bugs were fixed</li>
+<li>What breaking changes occurred</li>
+<li>How the software evolved over time</li>
+</ul>
 <p><strong>Why it matters:</strong> Signals your project is
 professionally managed and welcoming.</p>
 <div id="templates-available" class="callout">
@@ -3087,11 +3164,22 @@ reproducibility</p>
 <div class="section level3">
 <h3 id="from-fragile-to-fair">From Fragile to FAIR<a class="anchor" aria-label="anchor" href="#from-fragile-to-fair"></a>
 </h3>
-<p><strong>Before (Branch: 01-start):</strong> - ❌ No LICENSE - ❌ No
-environment - ❌ No citation - ❌ No DOI</p>
-<p><strong>After (Branch: 06-metadata):</strong> - ✅ LICENSE (BSD-3) -
-✅ Environment (pixi.toml) - ✅ CITATION.cff - ✅ DOI from Zenodo - ✅
-README with documentation - ✅ Community health files</p>
+<p><strong>Before (Branch: 01-start):</strong></p>
+<ul>
+<li>❌ No LICENSE</li>
+<li>❌ No environment</li>
+<li>❌ No citation</li>
+<li>❌ No DOI</li>
+</ul>
+<p><strong>After (Branch: 06-metadata):</strong></p>
+<ul>
+<li>✅ LICENSE (BSD-3)</li>
+<li>✅ Environment (pixi.toml)</li>
+<li>✅ CITATION.cff</li>
+<li>✅ DOI from Zenodo</li>
+<li>✅ README with documentation</li>
+<li>✅ Community health files</li>
+</ul>
 <p>Your software is now <strong>citable, discoverable, and
 reusable</strong>.</p>
 </div>

@@ -459,11 +459,13 @@ researchers cite code by dropping a URL into a paper:</p>
 <blockquote>
 <p>“We used the analysis script from <a href="https://github.com/jt14den/software-demo" class="external-link uri">https://github.com/jt14den/software-demo</a>”</p>
 </blockquote>
-<p><strong>Problems:</strong> - URLs break (link rot) - No version
-specified — which run of the code produced which result? - No formal
-credit — the author’s name isn’t even visible - Cannot appear in
-citation metrics</p>
-<p><strong>This isn’t hypothetical. Forges close.</strong></p>
+<p><strong>Problems:</strong></p>
+<ul><li>URLs break (link rot)</li>
+<li>No version specified — which run of the code produced which
+result?</li>
+<li>No formal credit — the author’s name isn’t even visible</li>
+<li>Cannot appear in citation metrics</li>
+</ul><p><strong>This isn’t hypothetical. Forges close.</strong></p>
 <ul><li>
 <strong>Gitorious</strong> shut down in 2015 — thousands of projects
 became unreachable overnight</li>
@@ -479,11 +481,12 @@ URL-based citation just as completely</li>
 <p>Dennis, T. (2025). <em>Biodiversity Analysis Toolkit</em> (v0.1.0).
 Zenodo. <a href="https://doi.org/10.5281/zenodo.123456" class="external-link uri">https://doi.org/10.5281/zenodo.123456</a></p>
 </blockquote>
-<p><strong>Why this works:</strong> - DOI is permanent — survives
-username changes, repo moves, even GitHub disappearing - Version is
-explicit — someone can reproduce the exact run - Author gets formal
-credit and citation metrics</p>
-<p>The fix is a <code>CITATION.cff</code> file and a DOI — both of which
+<p><strong>Why this works:</strong></p>
+<ul><li>DOI is permanent — survives username changes, repo moves, even
+GitHub disappearing</li>
+<li>Version is explicit — someone can reproduce the exact run</li>
+<li>Author gets formal credit and citation metrics</li>
+</ul><p>The fix is a <code>CITATION.cff</code> file and a DOI — both of which
 you’ll create in this lesson.</p>
 </div>
 </section><section><h2 class="section-heading" id="the-fix-fair4rs-principles">The Fix: FAIR4RS Principles<a class="anchor" aria-label="anchor" href="#the-fix-fair4rs-principles"></a></h2>
@@ -524,10 +527,13 @@ FAIR software project by adding:</p>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" tabindex="-1" aria-label="code-block-2-1"></a><span class="bu">cd</span> software-demo</span>
 <span id="cb2-2"><a href="#cb2-2" tabindex="-1" aria-label="code-block-2-2"></a><span class="fu">git</span> checkout 01-start</span></code></pre>
 </div>
-<p>You’ll see: - ❌ No LICENSE - ❌ Vague environment
-(<code>python = "*"</code>) - ❌ No citation information - ❌ No DOI -
-❌ Minimal README</p>
-</div>
+<p>You’ll see:</p>
+<ul><li>❌ No LICENSE</li>
+<li>❌ Vague environment (<code>python = "*"</code>)</li>
+<li>❌ No citation information</li>
+<li>❌ No DOI</li>
+<li>❌ Minimal README</li>
+</ul></div>
 <div class="section level3">
 <h3 id="the-after-state-branch-06-metadata">The “After” State (Branch: 06-metadata)<a class="anchor" aria-label="anchor" href="#the-after-state-branch-06-metadata"></a></h3>
 <p>Now look at the final state:</p>
@@ -536,15 +542,16 @@ FAIR software project by adding:</p>
 </h3>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" tabindex="-1" aria-label="code-block-3-1"></a><span class="fu">git</span> checkout 06-metadata</span></code></pre>
 </div>
-<p>Notice what’s been added: - ✅ <strong>LICENSE</strong>
-(BSD-3-Clause) - ✅ <strong>pixi.toml</strong> (documented environment)
-- ✅ <strong>CITATION.cff</strong> (citation metadata) - ✅
-<strong>README.md</strong> (complete documentation) - ✅
-<strong>CONTRIBUTING.md</strong> (contribution guidelines) - ✅
-<strong>CODE_OF_CONDUCT.md</strong> (community standards) - ✅
-<strong>.zenodo.json</strong> (Zenodo metadata) - ✅ DOI badge in
-README</p>
-<p><strong>This is what makes software Findable, Accessible,
+<p>Notice what’s been added:</p>
+<ul><li>✅ <strong>LICENSE</strong> (BSD-3-Clause)</li>
+<li>✅ <strong>pixi.toml</strong> (documented environment)</li>
+<li>✅ <strong>CITATION.cff</strong> (citation metadata)</li>
+<li>✅ <strong>README.md</strong> (complete documentation)</li>
+<li>✅ <strong>CONTRIBUTING.md</strong> (contribution guidelines)</li>
+<li>✅ <strong>CODE_OF_CONDUCT.md</strong> (community standards)</li>
+<li>✅ <strong>.zenodo.json</strong> (Zenodo metadata)</li>
+<li>✅ DOI badge in README</li>
+</ul><p><strong>This is what makes software Findable, Accessible,
 Interoperable, and Reusable.</strong></p>
 <div id="real-world-example-spack" class="callout">
 <div class="callout-square">
@@ -558,11 +565,13 @@ Interoperable, and Reusable.</strong></p>
 principles?</p>
 <p><strong>Spack</strong> is used by national labs, universities, and
 supercomputing centers: <a href="https://github.com/spack/spack" class="external-link uri">https://github.com/spack/spack</a></p>
-<p>Check their repository and notice: - ✅ README with clear description
-and getting started guide - ✅ LICENSE (MIT and Apache-2.0) - ✅
-CITATION.cff file - ✅ Documentation - ✅ Code of conduct and
-Contributing guide</p>
-</div>
+<p>Check their repository and notice:</p>
+<ul><li>✅ README with clear description and getting started guide</li>
+<li>✅ LICENSE (MIT and Apache-2.0)</li>
+<li>✅ CITATION.cff file</li>
+<li>✅ Documentation</li>
+<li>✅ Code of conduct and Contributing guide</li>
+</ul></div>
 </div>
 </div>
 <div id="challenge-reflect-on-your-own-code" class="callout challenge">
