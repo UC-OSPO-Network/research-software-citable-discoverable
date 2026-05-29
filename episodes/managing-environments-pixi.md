@@ -8,9 +8,9 @@ exercises: 3
 
 ### Optional Episode
 
-This episode covers environment management using `pixi`. It is **optional** — you can skip it and still complete all citation and discoverability steps in the episodes that follow.
+This episode covers environment management using `pixi`. It is **optional** — you can skip it and move directly to [Improving Metadata and Discoverability](improving-metadata-discoverability.md).
 
-If your workshop is focused on the citation and scholarly communication track, move to [Adding a CITATION.cff File](adding-citation-file.md).
+If you skip this episode, you will still complete all citation steps. The `pixi.toml` and `pixi.lock` files you see in the demo repo branches were added here — you can ignore them.
 
 **Other environment tools:** `conda`, `mamba`, `pip`/`venv`, and `renv` (for R) all serve the same purpose. The concepts here apply to any environment manager — pixi is used because it handles Python, R, and other languages with a single tool and generates an automatic lockfile.
 
@@ -47,6 +47,30 @@ git checkout 03-pixi     # Branch with pixi.toml and lockfile added
 *This branch sits between `02-license` and `04-citation` in the demo repo history, but you can explore it at any point in the lesson.*
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: instructor
+
+### Teaching this optional episode
+
+This episode appears after the release/DOI episode in the lesson order. The demo repository branch `03-pixi` sits earlier in the repo history (between `02-license` and `04-citation`), so the branch number and lesson position don't match — that's expected.
+
+**How to handle the branch:**
+
+Have learners check out `03-pixi` to follow along. They are exploring it as a standalone example, not building on it. After this episode, direct them back to `05-release` to continue with the metadata episode.
+
+```bash
+# During this episode
+git checkout 03-pixi
+
+# After this episode, return here to continue
+git checkout 05-release
+```
+
+**If skipping this episode:** Learners who went from `02-license` straight to `04-citation` will already have pixi files in their repo (they were baked into the branch). Acknowledge this briefly when they encounter `pixi.toml` or `pixi.lock` in the metadata episode: *"Those files are from the optional environment management episode — you can leave them as-is."*
+
+**Pixi not installed?** Learners can follow the concepts without a working pixi installation. The key idea — that a lockfile pins exact dependency versions — is the transferable lesson, not the tool itself.
+
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
 ## Why Environments Matter
 
