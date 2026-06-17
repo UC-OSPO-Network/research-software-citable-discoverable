@@ -25,6 +25,12 @@ authors:
     given-names: Karla
     affiliation: UC San Diego, Open Source Program Office
 identifiers:
+  - type: doi
+    value: "10.5281/zenodo.20737729"
+    description: "Concept DOI — resolves to the latest version"
+  - type: doi
+    value: "10.5281/zenodo.20737730"
+    description: "Version DOI for v0.1.0"
   - type: url
     value: "https://github.com/UC-OSPO-Network/research-software-citable-discoverable"
 keywords:

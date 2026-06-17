@@ -3,6 +3,7 @@
 [![Carpentries Incubator](https://img.shields.io/badge/Carpentries-Incubator-blue)](https://github.com/carpentries-incubator/)
 [![Life Cycle: Alpha](https://img.shields.io/badge/Life%20Cycle-Alpha-yellow)](https://cdh.carpentries.org/the-carpentries-incubator.html#stages-of-lesson-development)
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20737729.svg)](https://doi.org/10.5281/zenodo.20737729)
 
 A half-day [Carpentries Incubator][incubator] lesson on making research software findable, citable, and reusable. Learners start with a minimal GitHub repository and leave with a licensed, versioned release, a `CITATION.cff` file, a Zenodo DOI, and improved metadata for discovery.
 
