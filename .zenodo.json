@@ -1,0 +1,51 @@
+{
+  "title": "Sharing Research Software: Reproducible, Citable, and Discoverable",
+  "description": "A half-day Carpentries Incubator lesson on making research software findable, citable, and reusable. Learners start with a minimal GitHub repository and leave with a licensed, versioned release, a CITATION.cff file, a Zenodo DOI, and improved metadata for discovery.",
+  "upload_type": "lesson",
+  "access_right": "open",
+  "license": "cc-by-4.0",
+  "version": "0.1.0",
+  "creators": [
+    {
+      "name": "Dennis, Tim",
+      "orcid": "0000-0001-6632-3812",
+      "affiliation": "UCLA Library, Data Science Center"
+    },
+    {
+      "name": "Phan, Leigh",
+      "orcid": "0000-0002-8605-1444",
+      "affiliation": "UCLA Library, Data Science Center"
+    },
+    {
+      "name": "Otsuji, Reid",
+      "orcid": "0000-0002-1842-0295",
+      "affiliation": "UC San Diego Library"
+    },
+    {
+      "name": "Langdon, Laura",
+      "orcid": "0000-0001-7044-7295",
+      "affiliation": "UC Open Source Program Office Network"
+    },
+    {
+      "name": "Padilla, Karla",
+      "affiliation": "UC San Diego, Open Source Program Office"
+    }
+  ],
+  "keywords": [
+    "research software",
+    "FAIR4RS",
+    "software citation",
+    "discoverability",
+    "documentation",
+    "open science",
+    "reproducibility",
+    "Carpentries Incubator"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/UC-OSPO-Network/research-software-citable-discoverable",
+      "relation": "isSupplementTo",
+      "scheme": "url"
+    }
+  ]
+}

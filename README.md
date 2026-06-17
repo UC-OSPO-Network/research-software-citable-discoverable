@@ -1,7 +1,7 @@
 # Sharing Research Software: Reproducible, Citable, and Discoverable
 
 [![Carpentries Incubator](https://img.shields.io/badge/Carpentries-Incubator-blue)](https://github.com/carpentries-incubator/)
-[![Life Cycle: Pre-Alpha](https://img.shields.io/badge/Life%20Cycle-Pre--Alpha-orange)](https://cdh.carpentries.org/the-carpentries-incubator.html#stages-of-lesson-development)
+[![Life Cycle: Alpha](https://img.shields.io/badge/Life%20Cycle-Alpha-yellow)](https://cdh.carpentries.org/the-carpentries-incubator.html#stages-of-lesson-development)
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
 
 A half-day [Carpentries Incubator][incubator] lesson on making research software findable, citable, and reusable. Learners start with a minimal GitHub repository and leave with a licensed, versioned release, a `CITATION.cff` file, a Zenodo DOI, and improved metadata for discovery.
