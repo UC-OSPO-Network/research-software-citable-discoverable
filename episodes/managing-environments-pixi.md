@@ -30,6 +30,7 @@ If you skip this episode, you will still complete all citation steps. The `pixi.
 - Create a minimal `pixi.toml` file for a project.
 - Use `pixi` to run Python or R code inside a clean, isolated environment.
 - Describe how environment files support FAIR software and citation practices.
+- **Supporting others:** recommend an environment tool that fits a researcher's stack rather than defaulting to one.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -278,7 +279,24 @@ When publishing your software, include:
   ```bash
   pixi run python script.py
   ```
-  
+
+::::::::::::::::::::::::::::::::::::: callout
+
+### Supporting others
+
+This is the episode where you should resist prescribing a tool. We use `pixi` here because it handles Python *and* R in one cross-platform file, which makes it convenient to teach. It is not the one right answer for everyone you advise.
+
+When someone asks "what should I use to make my environment reproducible?", advise on *fit* rather than defaulting:
+
+- **Python-only** project, wants speed and simplicity → `uv` or `pixi`
+- **R-first** project → `renv` is the mainstream choice
+- Team already standardized on **conda** → `conda` / `mamba` / `micromamba`
+- Needs heavier isolation (system libraries, services) → containers / dev containers, with the caveat that the learning curve is steeper
+
+The reusable point you are teaching is the *principle*, not the brand: a documented, locked environment is what makes software runnable later. Match the tool to the person's stack and skill level, and don't make a half-day workshop hinge on any one manager installing cleanly on every laptop.
+
+::::::::::::::::::::::::::::::::::::::::::::::::
+
 :::::::::::::::::::::::::::::::::::::: challenge
 
 ### Challenge: Add a new dependency

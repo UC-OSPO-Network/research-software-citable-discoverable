@@ -19,6 +19,7 @@ exercises: 14
 * Choose an appropriate license for a UC research project
 * Add a license file to a GitHub repository
 * Identify UC resources for licensing decisions
+* **Supporting others:** decide when a licensing question is yours to answer and when to refer it to Tech Transfer / IP
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -180,6 +181,22 @@ Most research repositories don't need this, but if you're sharing a dataset alon
 * [UC OSS Chart and Companion Guide](https://security.ucop.edu/resources/open-source-software-licensing.html) *(UC-specific)* – UC-approved "low-risk" license list.
 
 :::::::::::::::::::::::::::::::::
+
+::::::::::::::::::::::::::::::::::::: callout
+
+### Supporting others
+
+Licensing is the step where advising and *deciding* must stay separate. You can explain the categories, point to the campus default, and walk someone through adding a `LICENSE` file. You are not the office that determines who owns the code.
+
+Refer rather than answer when:
+
+- **Ownership is unclear** (institutional resources, grant funding, multiple institutions, industry partners). This goes to Tech Transfer / IP, not the service desk.
+- The repo pulls in **third-party code or data** with its own license terms that might conflict.
+- Someone wants to **relicense or remove a license** on code that already has contributors.
+
+What you *can* own confidently: knowing your campus default (BSD-3-Clause at UC), knowing the approved-license list exists, and making sure the ownership question gets asked before code goes public. The most useful thing you do here is often a warm handoff, not a recommendation.
+
+::::::::::::::::::::::::::::::::::::::::::::::::
 
 ::::::::::::::::::::::::::::: challenge
 
