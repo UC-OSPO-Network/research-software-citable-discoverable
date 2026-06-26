@@ -6,30 +6,7 @@ site: sandpaper::sandpaper_site
 alt='Hex-style icon representing research software, metadata, and citation'
 style='padding: 2%'}
 
-## The Problem: The "Works on My Machine" Trap
-
-You send your code to a colleague and they report:
-
-- "It crashes on line 1" 😞
-- "I can't install the dependencies"
-- "Which Python version did you use?"
-
-```output
-$ python src/analysis.py
-
-Traceback (most recent call last):
-  File "analysis.py", line 1, in <module>
-    import numpy as np
-ModuleNotFoundError: No module named 'numpy'
-```
-
-**This is where most research software lives. Fragile.**
-
-### The Bus Factor Problem
-
-Code works perfectly on ONE laptop. If it disappears, the science is gone.
-
-## The Solution: FAIR4RS Principles
+## About This Lesson
 
 This lesson teaches practical steps to make your software **Findable, Accessible, Interoperable, and Reusable (FAIR)**. You'll learn high-impact, low-effort practices such as adding a CITATION.cff file, choosing an open-source license, documenting dependencies with pixi, and improving metadata for discoverability.
 

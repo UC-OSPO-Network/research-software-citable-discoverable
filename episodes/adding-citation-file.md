@@ -17,6 +17,7 @@ exercises: 13
 - Explain the role of CITATION.cff in software citation.
 - Create and customize a CITATION.cff file in a GitHub repository.
 - Understand how the file connects to later steps like releases and DOIs.
+- **Supporting others:** coach a researcher through a CITATION.cff and recognize when authorship is a referral, not a metadata fix.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -185,6 +186,19 @@ Leave out `preferred-citation` if you don't have a published article. You can ad
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
+::::::::::::::::::::::::::::::::::::: challenge
+
+### Predict: what will GitHub do?
+
+You've created `CITATION.cff` and you're about to commit it to the default branch. Before you do, predict: what changes on the repository's GitHub page?
+
+:::::::::::::::::::::::: solution
+
+GitHub parses the file and adds a **"Cite this repository"** button to the sidebar, offering ready-made citations (APA, BibTeX, and more) generated from your metadata. No DOI is required for this to appear.
+
+:::::::::::::::::::::::::::::::::
+:::::::::::::::::::::::::::::::::
+
 ### Step 3: Commit and refresh
 
 After you commit the file, GitHub:
@@ -194,6 +208,18 @@ After you commit the file, GitHub:
 - provides download options (BibTeX, EndNote, CFF, APA)
 
 This feature works even without a DOI.
+
+::::::::::::::::::::::::::::::::::::: callout
+
+### Supporting others
+
+In a consultation you rarely edit a researcher's files yourself. Your job is to make the workflow easy for them to own:
+
+- Point them to **cffinit** (<https://citation-file-format.github.io/cffinit/>) instead of hand-editing YAML. It validates as they go and prevents most formatting errors.
+- Show the payoff first: the "Cite this repository" panel on a repo that already has the file. People adopt what they can see.
+- Know the boundary. If **authorship or author order is contested**, that is a credit negotiation between collaborators, not a metadata fix. Surface it, don't arbitrate it.
+
+::::::::::::::::::::::::::::::::::::::::::::::::
 
 ::::::::::::::::::::::::::::::::::::::::: challenge
 ## Exercise 1: Identify missing metadata

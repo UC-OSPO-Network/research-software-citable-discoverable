@@ -18,6 +18,20 @@ exercises: 8
 - Understand how FAIR4RS principles apply to research software
 - Identify the key components needed to make software citable and discoverable
 - See what a "complete" FAIR research software project looks like
+- **Supporting others:** explain to a researcher, in their terms, why these practices are worth the effort
+
+::::::::::::::::::::::::::::::::::::::::::::::::
+
+::::::::::::::::::::::::::::::::::::: callout
+
+### Who this lesson is for
+
+You may be here for one of two reasons:
+
+- **You write research software** and want to make your own code citable, reusable, and discoverable.
+- **You support people who do** as a librarian, OSPO member, or research-support specialist who advises others on these practices.
+
+The hands-on steps are the same either way. You will work through a real repository and add the pieces that make software FAIR. What differs is the judgment around each step. Throughout the lesson, watch for **Supporting others** boxes. They translate each technical step into the advising and consultation work that library and OSPO roles do, including when to refer a question rather than answer it yourself.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 

@@ -17,6 +17,7 @@ exercises: 26
 - Describe why software citation matters in research.
 - Create a versioned release in GitHub.
 - Understand when and why to mint a DOI with Zenodo.
+- **Supporting others:** advise which DOI, version or concept, belongs in a given citation.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -153,6 +154,19 @@ Clear release notes help both people and tools interpret your software’s evolu
 
 To practice minting a DOI without polluting the permanent scholarly record, we will use **Zenodo Sandbox**. It works exactly like the real Zenodo but is for testing.
 
+::::::::::::::::::::::::::::::::::::: challenge
+
+### Predict: what happens when you publish?
+
+Your GitHub repository is connected to Zenodo and you publish a new release. Predict: what does Zenodo do, with no further action from you?
+
+:::::::::::::::::::::::: solution
+
+Zenodo detects the release, downloads and archives a snapshot of the repository at that tag, and mints a permanent DOI for it. The archived version no longer depends on GitHub staying online.
+
+:::::::::::::::::::::::::::::::::
+:::::::::::::::::::::::::::::::::
+
 ### The Complete 6-Step Workflow
 
 **Step 1: Log in to Zenodo with GitHub**
@@ -208,6 +222,19 @@ doi: 10.5281/zenodo.123456
 ✅ **A - Accessible:** Public GitHub, archived on Zenodo
 ✅ **I - Interoperable:** Standard formats (YAML, CFF)
 ✅ **R - Reusable:** LICENSE (BSD-3), README with setup
+
+::::::::::::::::::::::::::::::::::::::::::::::::
+
+::::::::::::::::::::::::::::::::::::: callout
+
+### Supporting others
+
+The question researchers actually bring you here is "which DOI do I put in my paper?" Zenodo mints two for every project, and the distinction is worth knowing cold:
+
+- **Version DOI** points to one exact release. Cite this when the precise software state matters for reproducibility, such as the version that produced a paper's results.
+- **Concept DOI** points to the project across all versions and always resolves to the latest. Cite this when you want to refer to the software in general.
+
+A safe default to teach: cite the **version DOI** in a methods section, and use the **concept DOI** in a README or project page. Two more things worth flagging in a consultation: have people practice on **sandbox.zenodo.org** first, because real Zenodo records cannot be deleted; and if a repo has both a `CITATION.cff` and a `.zenodo.json`, Zenodo uses the `.zenodo.json` for the GitHub-archived release metadata.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
