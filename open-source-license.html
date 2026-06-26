@@ -341,7 +341,7 @@
       </div>
     </nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Choosing an Open-Source License</h1>
-        <p>Last updated on 2026-05-29 |
+        <p>Last updated on 2026-06-26 |
 
         <a href="https://github.com/UC-OSPO-Network/research-software-citable-discoverable/edit/main/episodes/open-source-license.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -375,6 +375,9 @@
 <li>Choose an appropriate license for a UC research project</li>
 <li>Add a license file to a GitHub repository</li>
 <li>Identify UC resources for licensing decisions</li>
+<li>
+<strong>Supporting others:</strong> decide when a licensing question
+is yours to answer and when to refer it to Tech Transfer / IP</li>
 </ul></div>
 </div>
 </div>
@@ -605,6 +608,35 @@ OSS Chart and Companion Guide</a> <em>(UC-specific)</em> – UC-approved
 </ul></div>
 </div>
 </div>
+<div id="supporting-others" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<span class="callout-header">Callout</span>
+<div id="supporting-others" class="callout-inner">
+<h3 class="callout-title">Supporting others</h3>
+<div class="callout-content">
+<p>Licensing is the step where advising and <em>deciding</em> must stay
+separate. You can explain the categories, point to the campus default,
+and walk someone through adding a <code>LICENSE</code> file. You are not
+the office that determines who owns the code.</p>
+<p>Refer rather than answer when:</p>
+<ul><li>
+<strong>Ownership is unclear</strong> (institutional resources,
+grant funding, multiple institutions, industry partners). This goes to
+Tech Transfer / IP, not the service desk.</li>
+<li>The repo pulls in <strong>third-party code or data</strong> with its
+own license terms that might conflict.</li>
+<li>Someone wants to <strong>relicense or remove a license</strong> on
+code that already has contributors.</li>
+</ul><p>What you <em>can</em> own confidently: knowing your campus default
+(BSD-3-Clause at UC), knowing the approved-license list exists, and
+making sure the ownership question gets asked before code goes public.
+The most useful thing you do here is often a warm handoff, not a
+recommendation.</p>
+</div>
+</div>
+</div>
 <div id="challenge-add-a-bsd-license-to-your-repository" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
@@ -639,7 +671,7 @@ personal project, use your own name.)</em>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p>GitHub automatically detects the <code>LICENSE</code> file and
 displays it in the sidebar. Your file should look like this:</p>
@@ -691,7 +723,7 @@ with collaborators.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <p><strong>Scenario 1:</strong> BSD 3-Clause (UC’s default
 recommendation, maximum flexibility and adoption)</p>
@@ -792,8 +824,8 @@ any links that you are not going to use.
   "url": "https://UC-OSPO-Network.github.io/research-software-citable-discoverable/open-source-license.html",
   "identifier": "https://UC-OSPO-Network.github.io/research-software-citable-discoverable/open-source-license.html",
   "dateCreated": "2025-12-06",
-  "dateModified": "2026-05-29",
-  "datePublished": "2026-06-23"
+  "dateModified": "2026-06-26",
+  "datePublished": "2026-06-26"
 }
 
   </script><script>

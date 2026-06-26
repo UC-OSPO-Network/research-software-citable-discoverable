@@ -127,6 +127,10 @@
             More <i data-feather="chevron-down"></i>
           </button>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+<li><a class="dropdown-item" href="audience-and-modality-research-findings.html"></a></li>
+<li><a class="dropdown-item" href="audience-and-modality-research-prompt.html"></a></li>
+<li><a class="dropdown-item" href="lesson-improvement-research-findings.html"></a></li>
+<li><a class="dropdown-item" href="lesson-improvement-research-prompt.html"></a></li>
 <hr>
 <li><a class="dropdown-item" href="reference.html">Reference</a></li>
           </ul>
@@ -354,7 +358,11 @@
                       <li>
                         <a href="../instructor/images.html">Extract All Images</a>
                       </li>
-                      <hr>
+                      <li><a href="audience-and-modality-research-findings.html"></a></li>
+<li><a href="audience-and-modality-research-prompt.html"></a></li>
+<li><a href="lesson-improvement-research-findings.html"></a></li>
+<li><a href="lesson-improvement-research-prompt.html"></a></li>
+<hr>
 <li><a class="dropdown-item" href="reference.html">Reference</a></li>
                     </ul>
 </div>
@@ -387,7 +395,7 @@
         
 <section id="aio-introduction"><p>Content from <a href="introduction.html">Introduction: The "Works on My Machine" Trap</a></p>
 <hr>
-<p>Last updated on 2026-05-29 |
+<p>Last updated on 2026-06-26 |
 
         <a href="https://github.com/UC-OSPO-Network/research-software-citable-discoverable/edit/main/episodes/introduction.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 26 minutes</p>
@@ -419,9 +427,40 @@
 <li>Identify the key components needed to make software citable and
 discoverable</li>
 <li>See what a “complete” FAIR research software project looks like</li>
+<li>
+<strong>Supporting others:</strong> explain to a researcher, in
+their terms, why these practices are worth the effort</li>
 </ul>
 </div>
 </div>
+</div>
+</div>
+</div>
+<div id="who-this-lesson-is-for" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<span class="callout-header">Callout</span>
+<div id="who-this-lesson-is-for" class="callout-inner">
+<h3 class="callout-title">Who this lesson is for</h3>
+<div class="callout-content">
+<p>You may be here for one of two reasons:</p>
+<ul>
+<li>
+<strong>You write research software</strong> and want to make your
+own code citable, reusable, and discoverable.</li>
+<li>
+<strong>You support people who do</strong> as a librarian, OSPO
+member, or research-support specialist who advises others on these
+practices.</li>
+</ul>
+<p>The hands-on steps are the same either way. You will work through a
+real repository and add the pieces that make software FAIR. What differs
+is the judgment around each step. Throughout the lesson, watch for
+<strong>Supporting others</strong> boxes. They translate each technical
+step into the advising and consultation work that library and OSPO roles
+do, including when to refer a question rather than answer it
+yourself.</p>
 </div>
 </div>
 </div>
@@ -782,7 +821,7 @@ any links that you are not going to use.
  -->
 </section></section><section id="aio-sharing-software"><p>Content from <a href="sharing-software.html">Sharing Research Software Effectively</a></p>
 <hr>
-<p>Last updated on 2026-05-29 |
+<p>Last updated on 2026-06-26 |
 
         <a href="https://github.com/UC-OSPO-Network/research-software-citable-discoverable/edit/main/episodes/sharing-software.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 15 minutes</p>
@@ -815,6 +854,9 @@ research software.</li>
 repository.</li>
 <li>Recognize the “before” state of the demo repository used throughout
 the lesson.</li>
+<li>
+<strong>Supporting others:</strong> triage an unfamiliar repository
+and name its single highest-value next step.</li>
 </ul>
 </div>
 </div>
@@ -860,7 +902,7 @@ reuse.</p>
 <button class="accordion-button instructor-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInstructor1" aria-expanded="false" aria-controls="collapseInstructor1">
   <h3 class="accordion-header" id="headingInstructor1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="edit-2"></i></div> Preparing the Demo Repository </h3>
 </button>
-<div id="collapseInstructor1" class="accordion-collapse collapse" data-bs-parent="#accordionInstructor1" aria-labelledby="headingInstructor1">
+<div id="collapseInstructor1" class="accordion-collapse collapse" aria-labelledby="headingInstructor1" data-bs-parent="#accordionInstructor1">
 <div class="accordion-body">
 <p>To demonstrate the “before and after” states of research software,
 use the provided automation script:</p>
@@ -915,6 +957,39 @@ of the example repository:</p>
 research software practice.<br>
 By the end of the lesson, it will include licensing, citation metadata,
 improved discoverability information, and versioning.</p>
+<div id="supporting-others" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<span class="callout-header">Callout</span>
+<div id="supporting-others" class="callout-inner">
+<h3 class="callout-title">Supporting others</h3>
+<div class="callout-content">
+<p>Scanning a repository the way we just did is itself a core
+consultation skill. When a researcher brings you their repo, you are
+doing a fast triage, not a full code review. A useful first pass asks
+four questions in order:</p>
+<ul>
+<li>
+<strong>Rights:</strong> is there a license? Can this legally be
+reused at all?</li>
+<li>
+<strong>Credit:</strong> can a stranger tell who made it and how to
+cite it?</li>
+<li>
+<strong>Runnable:</strong> is there any record of what it takes to
+run (dependencies, environment)?</li>
+<li>
+<strong>Findable:</strong> would anyone outside the lab ever
+discover it?</li>
+</ul>
+<p>The goal is to name the <strong>single highest-value next
+step</strong>, not to fix everything. Most repos need one or two changes
+to go from unusable to useful, and your value is helping the researcher
+see which one.</p>
+</div>
+</div>
+</div>
 <div id="challenge-1-what-makes-a-repository-reusable" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
@@ -948,7 +1023,7 @@ work first?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p>Useful elements commonly include:</p>
 <ul>
@@ -1018,7 +1093,7 @@ downloaded.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <p>Learners may observe:</p>
 <ul>
@@ -1063,7 +1138,7 @@ any links that you are not going to use.
  -->
 </section></section><section id="aio-open-source-license"><p>Content from <a href="open-source-license.html">Choosing an Open-Source License</a></p>
 <hr>
-<p>Last updated on 2026-05-29 |
+<p>Last updated on 2026-06-26 |
 
         <a href="https://github.com/UC-OSPO-Network/research-software-citable-discoverable/edit/main/episodes/open-source-license.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 30 minutes</p>
@@ -1095,6 +1170,9 @@ any links that you are not going to use.
 <li>Choose an appropriate license for a UC research project</li>
 <li>Add a license file to a GitHub repository</li>
 <li>Identify UC resources for licensing decisions</li>
+<li>
+<strong>Supporting others:</strong> decide when a licensing question
+is yours to answer and when to refer it to Tech Transfer / IP</li>
 </ul>
 </div>
 </div>
@@ -1361,6 +1439,37 @@ OSS Chart and Companion Guide</a> <em>(UC-specific)</em> – UC-approved
 </div>
 </div>
 </div>
+<div id="supporting-others" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<span class="callout-header">Callout</span>
+<div id="supporting-others" class="callout-inner">
+<h3 class="callout-title">Supporting others</h3>
+<div class="callout-content">
+<p>Licensing is the step where advising and <em>deciding</em> must stay
+separate. You can explain the categories, point to the campus default,
+and walk someone through adding a <code>LICENSE</code> file. You are not
+the office that determines who owns the code.</p>
+<p>Refer rather than answer when:</p>
+<ul>
+<li>
+<strong>Ownership is unclear</strong> (institutional resources,
+grant funding, multiple institutions, industry partners). This goes to
+Tech Transfer / IP, not the service desk.</li>
+<li>The repo pulls in <strong>third-party code or data</strong> with its
+own license terms that might conflict.</li>
+<li>Someone wants to <strong>relicense or remove a license</strong> on
+code that already has contributors.</li>
+</ul>
+<p>What you <em>can</em> own confidently: knowing your campus default
+(BSD-3-Clause at UC), knowing the approved-license list exists, and
+making sure the ownership question gets asked before code goes public.
+The most useful thing you do here is often a warm handoff, not a
+recommendation.</p>
+</div>
+</div>
+</div>
 <div id="challenge-add-a-bsd-license-to-your-repository" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
@@ -1397,7 +1506,7 @@ personal project, use your own name.)</em>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p>GitHub automatically detects the <code>LICENSE</code> file and
 displays it in the sidebar. Your file should look like this:</p>
@@ -1451,7 +1560,7 @@ with collaborators.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <p><strong>Scenario 1:</strong> BSD 3-Clause (UC’s default
 recommendation, maximum flexibility and adoption)</p>
@@ -1498,7 +1607,7 @@ any links that you are not going to use.
  -->
 </section></section><section id="aio-adding-citation-file"><p>Content from <a href="adding-citation-file.html">Adding a CITATION.cff File</a></p>
 <hr>
-<p>Last updated on 2026-05-29 |
+<p>Last updated on 2026-06-26 |
 
         <a href="https://github.com/UC-OSPO-Network/research-software-citable-discoverable/edit/main/episodes/adding-citation-file.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 28 minutes</p>
@@ -1531,6 +1640,10 @@ citations?</li>
 repository.</li>
 <li>Understand how the file connects to later steps like releases and
 DOIs.</li>
+<li>
+<strong>Supporting others:</strong> coach a researcher through a
+CITATION.cff and recognize when authorship is a referral, not a metadata
+fix.</li>
 </ul>
 </div>
 </div>
@@ -1591,7 +1704,7 @@ time.</p>
 <button class="accordion-button instructor-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInstructor1" aria-expanded="false" aria-controls="collapseInstructor1">
   <h3 class="accordion-header" id="headingInstructor1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="edit-2"></i></div> Instructor Note </h3>
 </button>
-<div id="collapseInstructor1" class="accordion-collapse collapse" data-bs-parent="#accordionInstructor1" aria-labelledby="headingInstructor1">
+<div id="collapseInstructor1" class="accordion-collapse collapse" aria-labelledby="headingInstructor1" data-bs-parent="#accordionInstructor1">
 <div class="accordion-body">
 <p>Show learners what the citation panel looks like on a GitHub
 repository that already has a <code>CITATION.cff</code> file. This gives
@@ -1759,6 +1872,35 @@ without it.</p>
 </div>
 </div>
 </div>
+<div id="predict-what-will-github-do" class="callout challenge">
+<div class="callout-square">
+<i class="callout-icon" data-feather="zap"></i>
+</div>
+<span class="callout-header">Challenge</span>
+<div id="predict-what-will-github-do" class="callout-inner">
+<h3 class="callout-title">Predict: what will GitHub do?</h3>
+<div class="callout-content">
+<p>You’ve created <code>CITATION.cff</code> and you’re about to commit
+it to the default branch. Before you do, predict: what changes on the
+repository’s GitHub page?</p>
+</div>
+</div>
+</div>
+<div id="accordionSolution1" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
+  <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
+</button>
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div class="accordion-body">
+<p>GitHub parses the file and adds a <strong>“Cite this
+repository”</strong> button to the sidebar, offering ready-made
+citations (APA, BibTeX, and more) generated from your metadata. No DOI
+is required for this to appear.</p>
+</div>
+</div>
+</div>
+</div>
 <div class="section level3">
 <h3 id="step-3-commit-and-refresh">Step 3: Commit and refresh<a class="anchor" aria-label="anchor" href="#step-3-commit-and-refresh"></a>
 </h3>
@@ -1769,6 +1911,29 @@ without it.</p>
 <li>provides download options (BibTeX, EndNote, CFF, APA)</li>
 </ul>
 <p>This feature works even without a DOI.</p>
+<div id="supporting-others" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<span class="callout-header">Callout</span>
+<div id="supporting-others" class="callout-inner">
+<h3 class="callout-title">Supporting others</h3>
+<div class="callout-content">
+<p>In a consultation you rarely edit a researcher’s files yourself. Your
+job is to make the workflow easy for them to own:</p>
+<ul>
+<li>Point them to <strong>cffinit</strong> (<a href="https://citation-file-format.github.io/cffinit/" class="external-link uri">https://citation-file-format.github.io/cffinit/</a>) instead
+of hand-editing YAML. It validates as they go and prevents most
+formatting errors.</li>
+<li>Show the payoff first: the “Cite this repository” panel on a repo
+that already has the file. People adopt what they can see.</li>
+<li>Know the boundary. If <strong>authorship or author order is
+contested</strong>, that is a credit negotiation between collaborators,
+not a metadata fix. Surface it, don’t arbitrate it.</li>
+</ul>
+</div>
+</div>
+</div>
 <div id="exercise-1-identify-missing-metadata" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
@@ -1789,12 +1954,12 @@ lesson).</p>
 </div>
 </div>
 </div>
-<div id="accordionSolution1" class="accordion challenge-accordion accordion-flush">
+<div id="accordionSolution2" class="accordion challenge-accordion accordion-flush">
 <div class="accordion-item">
-<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
-  <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
+  <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <p>Typical missing pieces include:</p>
 <ul>
@@ -1825,12 +1990,12 @@ lesson).</p>
 </div>
 </div>
 </div>
-<div id="accordionSolution2" class="accordion challenge-accordion accordion-flush">
+<div id="accordionSolution3" class="accordion challenge-accordion accordion-flush">
 <div class="accordion-item">
-<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
-  <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution3" aria-expanded="false" aria-controls="collapseSolution3">
+  <h4 class="accordion-header" id="headingSolution3"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
 <div class="accordion-body">
 <p>A valid minimal example:</p>
 <div class="codewrapper sourceCode" id="cb6">
@@ -1871,7 +2036,7 @@ any links that you are not going to use.
 </div>
 </section></section><section id="aio-making-software-citable"><p>Content from <a href="making-software-citable.html">Making Your Software Citable</a></p>
 <hr>
-<p>Last updated on 2026-05-29 |
+<p>Last updated on 2026-06-26 |
 
         <a href="https://github.com/UC-OSPO-Network/research-software-citable-discoverable/edit/main/episodes/making-software-citable.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 32 minutes</p>
@@ -1901,6 +2066,9 @@ any links that you are not going to use.
 <li>Describe why software citation matters in research.</li>
 <li>Create a versioned release in GitHub.</li>
 <li>Understand when and why to mint a DOI with Zenodo.</li>
+<li>
+<strong>Supporting others:</strong> advise which DOI, version or
+concept, belongs in a given citation.</li>
 </ul>
 </div>
 </div>
@@ -2121,6 +2289,34 @@ software’s evolution.</p>
 <p>To practice minting a DOI without polluting the permanent scholarly
 record, we will use <strong>Zenodo Sandbox</strong>. It works exactly
 like the real Zenodo but is for testing.</p>
+<div id="predict-what-happens-when-you-publish" class="callout challenge">
+<div class="callout-square">
+<i class="callout-icon" data-feather="zap"></i>
+</div>
+<span class="callout-header">Challenge</span>
+<div id="predict-what-happens-when-you-publish" class="callout-inner">
+<h3 class="callout-title">Predict: what happens when you publish?</h3>
+<div class="callout-content">
+<p>Your GitHub repository is connected to Zenodo and you publish a new
+release. Predict: what does Zenodo do, with no further action from
+you?</p>
+</div>
+</div>
+</div>
+<div id="accordionSolution2" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
+  <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
+</button>
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div class="accordion-body">
+<p>Zenodo detects the release, downloads and archives a snapshot of the
+repository at that tag, and mints a permanent DOI for it. The archived
+version no longer depends on GitHub staying online.</p>
+</div>
+</div>
+</div>
+</div>
 <div class="section level3">
 <h3 id="the-complete-6-step-workflow">The Complete 6-Step Workflow<a class="anchor" aria-label="anchor" href="#the-complete-6-step-workflow"></a>
 </h3>
@@ -2193,6 +2389,38 @@ setup</p>
 </div>
 </div>
 </div>
+<div id="supporting-others" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<span class="callout-header">Callout</span>
+<div id="supporting-others" class="callout-inner">
+<h3 class="callout-title">Supporting others</h3>
+<div class="callout-content">
+<p>The question researchers actually bring you here is “which DOI do I
+put in my paper?” Zenodo mints two for every project, and the
+distinction is worth knowing cold:</p>
+<ul>
+<li>
+<strong>Version DOI</strong> points to one exact release. Cite this
+when the precise software state matters for reproducibility, such as the
+version that produced a paper’s results.</li>
+<li>
+<strong>Concept DOI</strong> points to the project across all
+versions and always resolves to the latest. Cite this when you want to
+refer to the software in general.</li>
+</ul>
+<p>A safe default to teach: cite the <strong>version DOI</strong> in a
+methods section, and use the <strong>concept DOI</strong> in a README or
+project page. Two more things worth flagging in a consultation: have
+people practice on <strong>sandbox.zenodo.org</strong> first, because
+real Zenodo records cannot be deleted; and if a repo has both a
+<code>CITATION.cff</code> and a <code>.zenodo.json</code>, Zenodo uses
+the <code>.zenodo.json</code> for the GitHub-archived release
+metadata.</p>
+</div>
+</div>
+</div>
 <p><strong>Even if GitHub disappears, your DOI still works.</strong></p>
 <div id="going-further-software-heritage" class="callout">
 <div class="callout-square">
@@ -2261,12 +2489,12 @@ rather than the whole project?</p>
 </div>
 </div>
 </div>
-<div id="accordionSolution2" class="accordion challenge-accordion accordion-flush">
+<div id="accordionSolution3" class="accordion challenge-accordion accordion-flush">
 <div class="accordion-item">
-<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
-  <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution3" aria-expanded="false" aria-controls="collapseSolution3">
+  <h4 class="accordion-header" id="headingSolution3"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
 <div class="accordion-body">
 <p>Versioned DOIs:</p>
 <ul>
@@ -2310,7 +2538,7 @@ any links that you are not going to use.
 </div>
 </section></section><section id="aio-managing-environments-pixi"><p>Content from <a href="managing-environments-pixi.html">Managing Reproducible Environments with pixi</a></p>
 <hr>
-<p>Last updated on 2026-05-29 |
+<p>Last updated on 2026-06-26 |
 
         <a href="https://github.com/UC-OSPO-Network/research-software-citable-discoverable/edit/main/episodes/managing-environments-pixi.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 24 minutes</p>
@@ -2369,6 +2597,9 @@ research.</li>
 isolated environment.</li>
 <li>Describe how environment files support FAIR software and citation
 practices.</li>
+<li>
+<strong>Supporting others:</strong> recommend an environment tool
+that fits a researcher’s stack rather than defaulting to one.</li>
 </ul>
 </div>
 </div>
@@ -2685,6 +2916,42 @@ Interoperable, Reusable)</li>
 </div>
 </li>
 </ul>
+<div id="supporting-others" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<span class="callout-header">Callout</span>
+<div id="supporting-others" class="callout-inner">
+<h3 class="callout-title">Supporting others</h3>
+<div class="callout-content">
+<p>This is the episode where you should resist prescribing a tool. We
+use <code>pixi</code> here because it handles Python <em>and</em> R in
+one cross-platform file, which makes it convenient to teach. It is not
+the one right answer for everyone you advise.</p>
+<p>When someone asks “what should I use to make my environment
+reproducible?”, advise on <em>fit</em> rather than defaulting:</p>
+<ul>
+<li>
+<strong>Python-only</strong> project, wants speed and simplicity →
+<code>uv</code> or <code>pixi</code>
+</li>
+<li>
+<strong>R-first</strong> project → <code>renv</code> is the
+mainstream choice</li>
+<li>Team already standardized on <strong>conda</strong> →
+<code>conda</code> / <code>mamba</code> / <code>micromamba</code>
+</li>
+<li>Needs heavier isolation (system libraries, services) → containers /
+dev containers, with the caveat that the learning curve is steeper</li>
+</ul>
+<p>The reusable point you are teaching is the <em>principle</em>, not
+the brand: a documented, locked environment is what makes software
+runnable later. Match the tool to the person’s stack and skill level,
+and don’t make a half-day workshop hinge on any one manager installing
+cleanly on every laptop.</p>
+</div>
+</div>
+</div>
 <div id="challenge-add-a-new-dependency" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
@@ -2750,7 +3017,7 @@ any links that you are not going to use.
  -->
 </section></section><section id="aio-improving-metadata-discoverability"><p>Content from <a href="improving-metadata-discoverability.html">Improving Metadata and Discoverability</a></p>
 <hr>
-<p>Last updated on 2026-05-29 |
+<p>Last updated on 2026-06-26 |
 
         <a href="https://github.com/UC-OSPO-Network/research-software-citable-discoverable/edit/main/episodes/improving-metadata-discoverability.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 37 minutes</p>
@@ -2783,6 +3050,9 @@ reuse.</li>
 fields.</li>
 <li>Connect metadata across CITATION.cff, GitHub, and your DOI record
 for consistency.</li>
+<li>
+<strong>Supporting others:</strong> audit a repository’s metadata
+and prioritize the single highest-value fix.</li>
 </ul>
 </div>
 </div>
@@ -3179,6 +3449,41 @@ README)</li>
 <p>Your goal is <em>context</em>. A researcher or a librarian helping a
 researcher should be able to read the Zenodo record and decide in 30
 seconds whether this software is relevant to them.</p>
+<div id="supporting-others" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<span class="callout-header">Callout</span>
+<div id="supporting-others" class="callout-inner">
+<h3 class="callout-title">Supporting others</h3>
+<div class="callout-content">
+<p>Metadata work is where libraries already have deep expertise, so this
+is the most natural consultation territory in the lesson. The trap is
+trying to perfect everything at once. In practice you are doing triage:
+identifying the <strong>single highest-value fix</strong> for the time
+the researcher actually has.</p>
+<p>A rough priority order when a record or repo is thin:</p>
+<ol style="list-style-type: decimal">
+<li>A readable <strong>description</strong> (most discovery systems show
+this first; an empty one is the biggest single loss).</li>
+<li>
+<strong>Author ORCIDs</strong>, so credit attaches to people, not
+just names.</li>
+<li>
+<strong>Keywords</strong> reused consistently across GitHub Topics,
+<code>CITATION.cff</code>, and Zenodo.</li>
+<li>
+<strong>Related works</strong> linking the software to its paper,
+dataset, and grant.</li>
+</ol>
+<p>Because this metadata is harvested by DataCite, library discovery
+layers, and Google Scholar, the librarian framing is concrete: thin
+metadata means the software never surfaces in the catalog alongside the
+article. You are not just tidying a record, you are deciding whether it
+is findable at all.</p>
+</div>
+</div>
+</div>
 <div id="challenge-1-identify-useful-metadata" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
@@ -3286,7 +3591,7 @@ any links that you are not going to use.
  -->
 </section></section><section id="aio-wrap-up-reflect"><p>Content from <a href="wrap-up-reflect.html">Wrap-Up and Reflection</a></p>
 <hr>
-<p>Last updated on 2026-05-29 |
+<p>Last updated on 2026-06-26 |
 
         <a href="https://github.com/UC-OSPO-Network/research-software-citable-discoverable/edit/main/episodes/wrap-up-reflect.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 17 minutes</p>
@@ -3317,6 +3622,9 @@ projects?</li>
 <li>Reflect on the practical steps taken during the session</li>
 <li>Identify at least one improvement to apply in your own software
 projects</li>
+<li>
+<strong>Supporting others:</strong> assemble a reusable consultation
+checklist and campus referral map</li>
 </ul>
 </div>
 </div>
@@ -3374,7 +3682,7 @@ action you’ll take with your own project.</p>
 <button class="accordion-button instructor-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInstructor1" aria-expanded="false" aria-controls="collapseInstructor1">
   <h3 class="accordion-header" id="headingInstructor1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="edit-2"></i></div> Instructor Note </h3>
 </button>
-<div id="collapseInstructor1" class="accordion-collapse collapse" data-bs-parent="#accordionInstructor1" aria-labelledby="headingInstructor1">
+<div id="collapseInstructor1" class="accordion-collapse collapse" aria-labelledby="headingInstructor1" data-bs-parent="#accordionInstructor1">
 <div class="accordion-body">
 <p>Give learners a few minutes of quiet reflection, then facilitate a
 group discussion. Invite volunteers to share a step they plan to take
@@ -3401,7 +3709,7 @@ current or future project?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p>Answers may vary: making a repo public, adding a license, archiving
 on Zenodo, writing a README, creating a CITATION file, etc.</p>
@@ -3427,7 +3735,7 @@ software more FAIR.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <p>Examples:</p>
 <ul>
@@ -3436,6 +3744,105 @@ software more FAIR.</p>
 <li>Register your ORCID on Zenodo</li>
 <li>Create a GitHub release</li>
 </ul>
+</div>
+</div>
+</div>
+</div>
+<div id="supporting-others-taking-this-back-to-your-desk" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<span class="callout-header">Callout</span>
+<div id="supporting-others-taking-this-back-to-your-desk" class="callout-inner">
+<h3 class="callout-title">Supporting others: taking this back to your
+desk</h3>
+<div class="callout-content">
+<p>If you came to this lesson to support researchers rather than to
+publish your own code, your “next step” is a service, not a single repo.
+Two things make that practical.</p>
+<p><strong>A 5-minute consultation checklist.</strong> When a researcher
+brings you a repository, walk it in this order and name the one
+highest-value fix:</p>
+<ul class="task-list">
+<li><label><input type="checkbox"><strong>License</strong> present,
+and ownership question asked? (Refer to Tech Transfer if
+unclear.)</label></li>
+<li><label><input type="checkbox"><strong>CITATION.cff</strong>
+present and rendering GitHub’s “Cite this repository”
+panel?</label></li>
+<li><label><input type="checkbox"><strong>Release + DOI</strong> for
+the version that matters? (Version vs. concept DOI clear?)</label></li>
+<li><label><input type="checkbox"><strong>README</strong> that a
+stranger understands in 30 seconds?</label></li>
+<li><label><input type="checkbox"><strong>Metadata</strong>:
+description, ORCIDs, keywords, related works?</label></li>
+</ul>
+<p><strong>A campus referral map.</strong> You are the router, not the
+single point of expertise. Know who owns each escalation before you need
+them:</p>
+<ul>
+<li>
+<strong>Ownership / IP / commercialization</strong> → Technology
+Transfer / IP office</li>
+<li>
+<strong>Sensitive or restricted data in a repo</strong> → research
+compliance / IRB / data governance</li>
+<li>
+<strong>Institutional repository, preservation, DOIs at
+scale</strong> → library repository / scholarly comms team</li>
+<li>
+<strong>Open-source strategy, policy, community</strong> → your
+campus OSPO</li>
+<li>
+<strong>Contested authorship or credit</strong> → surface to the
+collaborators; do not arbitrate</li>
+</ul>
+<p>Fill in the actual names and contacts for your campus and you have a
+reusable service, not a one-off answer.</p>
+</div>
+</div>
+</div>
+<div id="challenge-3-build-your-campus-playbook-supporting-others" class="callout challenge">
+<div class="callout-square">
+<i class="callout-icon" data-feather="zap"></i>
+</div>
+<span class="callout-header">Challenge</span>
+<div id="challenge-3-build-your-campus-playbook-supporting-others" class="callout-inner">
+<h3 class="callout-title">Challenge 3: Build your campus playbook
+<em>(supporting others)</em>
+</h3>
+<div class="callout-content">
+<p>If you are here to support researchers, your take-home artifact is a
+reusable playbook, not a single repo. Using the checklist and referral
+map above as a template, write down:</p>
+<ol style="list-style-type: decimal">
+<li>The <strong>5 triage questions</strong> you would ask of any
+repository a researcher brings you.</li>
+<li>For each referral category (IP/ownership, sensitive data,
+institutional repository, OSPO, contested authorship), the
+<strong>actual office or person</strong> at your institution it routes
+to.</li>
+<li>One <strong>“I can answer this myself” vs. “I refer this”</strong>
+line you feel least sure about, to follow up on later.</li>
+</ol>
+<p>Pair up and trade playbooks: can your partner tell, from your map,
+where to send a real question? Revise anything that isn’t clear enough
+to hand to a colleague.</p>
+</div>
+</div>
+</div>
+<div id="accordionSolution3" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution3" aria-expanded="false" aria-controls="collapseSolution3">
+  <h4 class="accordion-header" id="headingSolution3"> Show me the solution </h4>
+</button>
+<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
+<div class="accordion-body">
+<p>There is no single right answer; the artifact is the point. A strong
+playbook names real contacts (not just “Tech Transfer” but the office
+and a link), and is specific enough that another person on your team
+could use it without you in the room. If you could not fill a referral
+line, that gap is itself a useful finding to take back.</p>
 </div>
 </div>
 </div>
@@ -3585,8 +3992,8 @@ any links that you are not going to use.
   "url": "https://UC-OSPO-Network.github.io/research-software-citable-discoverable/instructor/aio.html",
   "identifier": "https://UC-OSPO-Network.github.io/research-software-citable-discoverable/instructor/aio.html",
   "dateCreated": "2025-12-06",
-  "dateModified": "2026-06-23",
-  "datePublished": "2026-06-23"
+  "dateModified": "2026-06-26",
+  "datePublished": "2026-06-26"
 }
 
   </script><script>
