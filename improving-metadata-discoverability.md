@@ -16,6 +16,7 @@ exercises: 12
 - Identify key metadata elements that increase visibility and reuse.
 - Enhance discoverability using GitHub features and Zenodo metadata fields.
 - Connect metadata across CITATION.cff, GitHub, and your DOI record for consistency.
+- **Supporting others:** audit a repository's metadata and prioritize the single highest-value fix.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -253,6 +254,23 @@ Add or refine:
 - a readable software description (2-3 sentences; think abstract, not README)
 
 Your goal is *context*. A researcher or a librarian helping a researcher should be able to read the Zenodo record and decide in 30 seconds whether this software is relevant to them.
+
+::::::::::::::::::::::::::::::::::::: callout
+
+### Supporting others
+
+Metadata work is where libraries already have deep expertise, so this is the most natural consultation territory in the lesson. The trap is trying to perfect everything at once. In practice you are doing triage: identifying the **single highest-value fix** for the time the researcher actually has.
+
+A rough priority order when a record or repo is thin:
+
+1. A readable **description** (most discovery systems show this first; an empty one is the biggest single loss).
+2. **Author ORCIDs**, so credit attaches to people, not just names.
+3. **Keywords** reused consistently across GitHub Topics, `CITATION.cff`, and Zenodo.
+4. **Related works** linking the software to its paper, dataset, and grant.
+
+Because this metadata is harvested by DataCite, library discovery layers, and Google Scholar, the librarian framing is concrete: thin metadata means the software never surfaces in the catalog alongside the article. You are not just tidying a record, you are deciding whether it is findable at all.
+
+::::::::::::::::::::::::::::::::::::::::::::::::
 
 ::::::::::::::::::::::::::::::::::::: challenge
 

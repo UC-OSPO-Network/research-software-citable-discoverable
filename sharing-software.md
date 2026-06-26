@@ -16,6 +16,7 @@ exercises: 10
 - Describe why public repositories increase visibility and credit for research software.
 - Identify the essential components of a well-structured repository.
 - Recognize the “before” state of the demo repository used throughout the lesson.
+- **Supporting others:** triage an unfamiliar repository and name its single highest-value next step.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -74,6 +75,20 @@ software-demo/
 This repository intentionally *lacks* many elements of good research software practice.  
 By the end of the lesson, it will include licensing, citation metadata, improved discoverability information, and versioning.
 
+::::::::::::::::::::::::::::::::::::: callout
+
+### Supporting others
+
+Scanning a repository the way we just did is itself a core consultation skill. When a researcher brings you their repo, you are doing a fast triage, not a full code review. A useful first pass asks four questions in order:
+
+- **Rights:** is there a license? Can this legally be reused at all?
+- **Credit:** can a stranger tell who made it and how to cite it?
+- **Runnable:** is there any record of what it takes to run (dependencies, environment)?
+- **Findable:** would anyone outside the lab ever discover it?
+
+The goal is to name the **single highest-value next step**, not to fix everything. Most repos need one or two changes to go from unusable to useful, and your value is helping the researcher see which one.
+
+::::::::::::::::::::::::::::::::::::::::::::::::
 
 ::::::::::::::::::::::::::::::::::::: challenge
 

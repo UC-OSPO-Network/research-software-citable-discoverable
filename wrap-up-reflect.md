@@ -15,6 +15,7 @@ exercises: 13
 
 * Reflect on the practical steps taken during the session
 * Identify at least one improvement to apply in your own software projects
+* **Supporting others:** assemble a reusable consultation checklist and campus referral map
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -87,6 +88,51 @@ Examples:
 * Write a short README
 * Register your ORCID on Zenodo
 * Create a GitHub release
+
+:::::::::::::::::::::::::::::::::
+:::::::::::::::::::::::::::::::::
+
+::::::::::::::::::::::::::::::::::::: callout
+
+### Supporting others: taking this back to your desk
+
+If you came to this lesson to support researchers rather than to publish your own code, your "next step" is a service, not a single repo. Two things make that practical.
+
+**A 5-minute consultation checklist.** When a researcher brings you a repository, walk it in this order and name the one highest-value fix:
+
+- [ ] **License** present, and ownership question asked? (Refer to Tech Transfer if unclear.)
+- [ ] **CITATION.cff** present and rendering GitHub's "Cite this repository" panel?
+- [ ] **Release + DOI** for the version that matters? (Version vs. concept DOI clear?)
+- [ ] **README** that a stranger understands in 30 seconds?
+- [ ] **Metadata**: description, ORCIDs, keywords, related works?
+
+**A campus referral map.** You are the router, not the single point of expertise. Know who owns each escalation before you need them:
+
+- **Ownership / IP / commercialization** → Technology Transfer / IP office
+- **Sensitive or restricted data in a repo** → research compliance / IRB / data governance
+- **Institutional repository, preservation, DOIs at scale** → library repository / scholarly comms team
+- **Open-source strategy, policy, community** → your campus OSPO
+- **Contested authorship or credit** → surface to the collaborators; do not arbitrate
+
+Fill in the actual names and contacts for your campus and you have a reusable service, not a one-off answer.
+
+::::::::::::::::::::::::::::::::::::::::::::::::
+
+::::::::::::::::::::::::::::::::: challenge
+
+## Challenge 3: Build your campus playbook *(supporting others)*
+
+If you are here to support researchers, your take-home artifact is a reusable playbook, not a single repo. Using the checklist and referral map above as a template, write down:
+
+1. The **5 triage questions** you would ask of any repository a researcher brings you.
+2. For each referral category (IP/ownership, sensitive data, institutional repository, OSPO, contested authorship), the **actual office or person** at your institution it routes to.
+3. One **"I can answer this myself" vs. "I refer this"** line you feel least sure about, to follow up on later.
+
+Pair up and trade playbooks: can your partner tell, from your map, where to send a real question? Revise anything that isn't clear enough to hand to a colleague.
+
+:::::::::::::::::::::::: solution
+
+There is no single right answer; the artifact is the point. A strong playbook names real contacts (not just "Tech Transfer" but the office and a link), and is specific enough that another person on your team could use it without you in the room. If you could not fill a referral line, that gap is itself a useful finding to take back.
 
 :::::::::::::::::::::::::::::::::
 :::::::::::::::::::::::::::::::::
