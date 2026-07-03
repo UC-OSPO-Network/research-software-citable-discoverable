@@ -20,7 +20,7 @@ exercises: 10
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
-::::::::::::::::::::::::::::::::::::: callout
+::::::::::::::::::::::::::::::::::::: prereq
 
 ### Episode Branch: `01-start`
 
@@ -134,7 +134,7 @@ Missing pieces often include absent documentation, unclear purpose, or no licens
 
 ::::::::::::::::::::::::::::::::::::: callout
 
-## Learn More About Effective READMEs
+### Learn More About Effective READMEs
 
 Want to dive deeper into README best practices?
 

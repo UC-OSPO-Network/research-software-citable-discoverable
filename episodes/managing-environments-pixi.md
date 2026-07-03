@@ -34,7 +34,7 @@ If you skip this episode, you will still complete all citation steps. The `pixi.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
-::::::::::::::::::::::::::::::::::::: callout
+::::::::::::::::::::::::::::::::::::: prereq
 
 ### Episode Branch: `03-pixi`
 
@@ -155,6 +155,8 @@ curl -fsSL https://pixi.sh/install.sh | bash
 Windows users can install via MSI installer or `winget`.
 
 ::::::::::::::::::::::::::::::::::::: callout
+
+### No preinstalled languages needed
 
 `pixi` includes its own language runtimes.  
 Learners do not need preinstalled Python, R, compilers, or system packages.

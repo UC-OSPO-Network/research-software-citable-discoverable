@@ -162,7 +162,7 @@ The solution is to apply **FAIR Principles for Research Software (FAIR4RS)**:
 **R - Reusable:** Can be executed AND modified
 → LICENSE, README, environment files
 
-::::::::::::::::::::::::::::::::::::: callout
+::::::::::::::::::::::::::::::::::::: checklist
 
 ### What You're Doing TODAY
 

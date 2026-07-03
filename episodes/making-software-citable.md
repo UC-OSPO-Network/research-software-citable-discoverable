@@ -21,7 +21,7 @@ exercises: 26
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
-::::::::::::::::::::::::::::::::::::: callout
+::::::::::::::::::::::::::::::::::::: prereq
 
 ### Episode Branch: `04-citation` → `05-release`
 
@@ -160,6 +160,14 @@ Clear release notes help both people and tools interpret your software’s evolu
 
 To practice minting a DOI without polluting the permanent scholarly record, we will use **Zenodo Sandbox**. It works exactly like the real Zenodo but is for testing.
 
+::::::::::::::::::::::::::::::::::::: caution
+
+### Practice on the sandbox, not real Zenodo
+
+Real Zenodo records are permanent: a published DOI cannot be deleted. Use <https://sandbox.zenodo.org> for this exercise, and switch to real Zenodo only when you are depositing software you actually want on the scholarly record.
+
+::::::::::::::::::::::::::::::::::::::::::::::::
+
 ::::::::::::::::::::::::::::::::::::: challenge
 
 ### Predict: what happens when you publish?
@@ -246,7 +254,7 @@ A safe default to teach: cite the **version DOI** in a methods section, and use 
 
 **Even if GitHub disappears, your DOI still works.** The GitHub-Zenodo link works like deposit: each release is archived at CERN, independent of GitHub's fate. The workshop can burn down; the deposited copy survives.
 
-::::::::::::::::::::::::::::::::::::: callout
+::::::::::::::::::::::::::::::::::::: spoiler
 
 ### Going further: Software Heritage
 

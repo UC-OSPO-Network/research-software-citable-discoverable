@@ -23,7 +23,7 @@ exercises: 14
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
-::::::::::::::::::::::::::::::::::::: callout
+::::::::::::::::::::::::::::::::::::: prereq
 
 ### Episode Branch: `01-start` → `02-license`
 
@@ -65,7 +65,7 @@ Or put it in circulation terms: unlicensed public code is a volume you can see i
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
-::::::::::::::::::::::::::::::: callout
+::::::::::::::::::::::::::::::: caution
 
 ### Institutional Context: Who Owns Your Software?
 
@@ -106,7 +106,7 @@ These require that derivative works also remain open-source.
 This protects openness across the lifecycle of a project.
 They add one condition to the permissive deal: "and anything you build from it must stay open too."
 
-::::::::::::::::::::::::::::::: callout
+::::::::::::::::::::::::::::::: caution
 
 ### Note on GPL 3.0
 
@@ -164,7 +164,7 @@ The **SPDX identifier** is the short, machine-readable code used by GitHub, Zeno
 
 **Always consult your institution's Tech Transfer or IP office before releasing software created with institutional resources.**
 
-::::::::::::::::::::::::::::::::::::: callout
+::::::::::::::::::::::::::::::::::::: spoiler
 
 ### What about data and documentation?
 

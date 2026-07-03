@@ -68,17 +68,12 @@ Give learners a few minutes of quiet reflection, then facilitate a group discuss
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
-::::::::::::::::::::::::::::::::::::: challenge
+::::::::::::::::::::::::::::::::::::: discussion
 
-## Challenge 1: Choose Your Next Step
+## Discussion: Choose Your Next Step
 
-Which of the practices from today’s session will you apply to a current or future project?
+Which of the practices from today’s session will you apply to a current or future project? Share your pick with the group: making a repo public, adding a license, archiving on Zenodo, writing a README, creating a CITATION file, or something else.
 
-:::::::::::::::::::::::: solution
-
-Answers may vary: making a repo public, adding a license, archiving on Zenodo, writing a README, creating a CITATION file, etc.
-
-:::::::::::::::::::::::::::::::::
 :::::::::::::::::::::::::::::::::
 
 ::::::::::::::::::::::::::::::::: challenge
