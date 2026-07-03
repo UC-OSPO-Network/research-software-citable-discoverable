@@ -35,6 +35,16 @@ The hands-on steps are the same either way. You will work through a real reposit
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
+## Software Is the Missing Scholarly Output
+
+Libraries solved this problem once already. When a journal article is published, a whole system catches it: a persistent identifier, a catalog record, a citation format, a preservation copy. Datasets got the same treatment over the last fifteen years. Software, the third thing modern research runs on, mostly hasn't. This lesson is about extending the system you already run, identifiers, metadata, preservation, discoverability, to the one research output it has been quietly missing.
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: instructor
+
+**Why this framing works with researchers:** they do not adopt these practices because they are virtuous. They adopt them because journals are starting to require citable code deposits, because funders ask, and because a DOI turns invisible labor into a countable, citable output for their CV. Lead with that: this is credit they are currently leaving on the table.
+
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
 ## The "Works on My Machine" Trap
 
 You send your code to a colleague...
@@ -68,6 +78,8 @@ This concrete error message resonates with learners who have experienced depende
 
 **The Bus Factor:** The number of people who need to be "hit by a bus" before your project becomes unmaintainable.
 
+Restated for collections people: how many people would have to leave before this software becomes unrecoverable? For most research code the answer is one. It lives on one laptop, in one person's head, under one person's account. A library would never accept a collection with a bus factor of one, and that is exactly what an un-deposited, un-documented repository is.
+
 ::::::::::::::::::::::::::::::::::::: callout
 
 ### How common is this?
@@ -89,6 +101,14 @@ Research software that lives only on one person's machine:
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
+::::::::::::::::::::::::::::::::::::: callout
+
+### Software is the instrument
+
+Nobody publishes results from a telescope without saying which telescope, which configuration, which night. Software is the instrument for computational work. "We used a script," with no version, license, or identifier, is a methods section with the instrument blacked out.
+
+::::::::::::::::::::::::::::::::::::::::::::::::
+
 ## The Software Citation Problem
 
 Even when software works, it often doesn't get credited. Most researchers cite code by dropping a URL into a paper:
@@ -103,6 +123,8 @@ Even when software works, it often doesn't get credited. Most researchers cite c
 - No version specified (which run of the code produced which result?)
 - No formal credit; the author's name isn't even visible
 - Cannot appear in citation metrics
+
+A URL is a shelf location, not a catalog record. Citing code this way is like citing a book as "third shelf, Powell Library reading room." It tells you where the thing sat on one particular day. Move the book, close the room, and the reference is dead.
 
 **This isn't hypothetical. Forges close.**
 

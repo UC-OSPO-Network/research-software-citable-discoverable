@@ -45,9 +45,25 @@ git checkout 02-license  # See the result with LICENSE added
 
 ## Why licensing matters
 
-When researchers publish code without a license, most people assume it is "public." Legally, it is not. Copyright law applies automatically. Without a license, others cannot legally reuse, modify, or redistribute the code.
+Here is the counterintuitive fact this episode turns on: code posted publicly on GitHub with no license is not open. Copyright attaches automatically, so "no license" means "all rights reserved," and anyone who reuses that code is technically infringing. The visible repo is an invitation nobody can legally accept. A license file is one small text file, usually chosen from a short approved list, and it is the difference between "look but don't touch" and actually reusable.
 
 Clear licensing tells others what they can and cannot do with your code, which is the minimum needed for open, reproducible research. The [UC OSPO License Guide](https://ucospo.net/oss-resources/template-guides/license-guide/) covers UC institutional requirements.
+
+::::::::::::::::::::::::::::::::::::: callout
+
+### An orphan work with a live author
+
+Every librarian has met this object: the digitized photograph with no rights information, the orphan work nobody can clear. It sits in the collection, findable and useless, because no one can say yes to reuse. An unlicensed repo is the software version of an orphan work, except the author is right there and could fix it in five minutes.
+
+Or put it in circulation terms: unlicensed public code is a volume you can see in the catalog but that the lending library will not release. Access without permission to use is not access in any way that matters for research.
+
+::::::::::::::::::::::::::::::::::::::::::::::::
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: instructor
+
+**Why this episode matters to researchers:** licensing is where reuse and credit actually begin. An unlicensed repo cannot be legally built on, which means it will not accumulate the users, forks, and citations that make software count as a scholarly contribution. This is also the one episode with a hard referral boundary: you can explain categories and point to the campus default, but ownership questions go to Tech Transfer. Knowing where that line sits is itself the expertise.
+
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
 ::::::::::::::::::::::::::::::: callout
 
@@ -63,7 +79,7 @@ At most universities, software created using institutional resources is owned by
 
 ## Understanding license categories
 
-Open-source licenses fall into two broad groups.
+Learners often fear a wall of legal text here, but the real decision is usually binary. Open-source licenses fall into two broad groups, and for most research code the whole choice takes less time than choosing a journal.
 
 ### Permissive licenses
 
@@ -72,6 +88,7 @@ Open-source licenses fall into two broad groups.
 These allow broad reuse with minimal restrictions.
 Anyone can copy, modify, or redistribute the code.
 They are common in research because they're simple and maximize flexibility.
+Think of them as roughly a CC BY for code: "reuse this, just keep my name on it."
 
 **BSD licenses are a common first choice at many research institutions** because they:
 
@@ -87,6 +104,7 @@ They are common in research because they're simple and maximize flexibility.
 
 These require that derivative works also remain open-source.
 This protects openness across the lifecycle of a project.
+They add one condition to the permissive deal: "and anything you build from it must stay open too."
 
 ::::::::::::::::::::::::::::::: callout
 

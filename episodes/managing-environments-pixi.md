@@ -71,9 +71,13 @@ git checkout 05-release
 
 **Pixi not installed?** Learners can follow the concepts without a working pixi installation. The key idea is that a lockfile pins exact dependency versions. That's the transferable lesson, not the tool itself.
 
+**If you skip the hands-on entirely,** keep the concept in the room: the R in FAIR quietly depends on this. A deposit that cannot be executed is preserved the way a locked diary is preserved. The question "is there a record of what this needs to run" belongs in the consultation checklist even if the mechanics get referred to research computing.
+
 ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
 ## Why Environments Matter
+
+Digital preservation learned this lesson the hard way: keeping the file is not enough if nobody records what is needed to open it. A WordPerfect document with no format metadata is preserved and unreadable at the same time. Code has the same failure mode. A script depends on specific versions of specific packages, and if that goes unrecorded, the code you carefully licensed, cited, and deposited will not actually run for the person who finds it. An environment file with a lockfile is format metadata for execution: it records, exactly, what this code needs.
 
 **The Problem:** Research software often "works on my machine" and nowhere else.
 
@@ -89,7 +93,7 @@ python = "*"
 numpy = "*"
 ```
 
-`python = "*"` is like saying "I need some food."
+`python = "*"` is like saying "I need some food." In citation terms, it is a bibliography entry that reads "a dictionary." Which one? Printed when?
 
 **Problems:**
 
@@ -293,7 +297,7 @@ When someone asks "what should I use to make my environment reproducible?", advi
 - Team already standardized on **conda** → `conda` / `mamba` / `micromamba`
 - Needs heavier isolation (system libraries, services) → containers / dev containers, with the caveat that the learning curve is steeper
 
-The reusable point you are teaching is the *principle*, not the brand: a documented, locked environment is what makes software runnable later. Match the tool to the person's stack and skill level, and don't make a half-day workshop hinge on any one manager installing cleanly on every laptop.
+The reusable point you are teaching is the *principle*, not the brand: a documented, locked environment is what makes software runnable later. The advising skill is recognizing whether any such record exists, the way you would check whether a deposit includes format information, not championing a particular tool. Match the tool to the person's stack and skill level, and don't make a half-day workshop hinge on any one manager installing cleanly on every laptop.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 

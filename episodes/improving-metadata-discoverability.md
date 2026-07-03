@@ -42,6 +42,8 @@ git checkout 06-metadata # See the complete FAIR repository
 
 ## Introduction
 
+A Zenodo record with a bare title and no keywords is a catalog record with no subject headings: retrievable if you already know it exists, invisible if you don't. Most research software sits behind exactly that kind of record. This episode is the one where the lesson lands fully inside a library audience's expertise, because making things findable through description is what libraries do. The systems are GitHub topics, Zenodo fields, and a README instead of a catalog, but the judgment, what would a seeker search for and does this record contain it, is unchanged.
+
 Clear metadata helps others understand, evaluate, and *find* your software.  
 It also reduces the cognitive effort for future users because essential information is organized and easy to locate.
 
@@ -59,6 +61,8 @@ This episode brings these together. You will describe your project in consistent
 Encourage learners to compare well-described repositories with sparse ones.  
 Highlight how even small metadata additions increase visibility in GitHub search, Zenodo indexing, and DataCite services.
 
+**Why this episode matters:** this is where a librarian in the room can visibly outperform the researchers, which matters for how the campus sees the service. Researchers usually treat metadata as a form to rush through; a scholcomm professional treats it as the mechanism of discovery. The pitch to the researcher is blunt: the work is finished, and five minutes of description determines whether anyone ever finds it.
+
 ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
 ## What counts as useful metadata?
@@ -75,7 +79,7 @@ Good metadata answers predictable questions with minimal effort from the reader:
   - funding source  
   - project website  
 
-You may add these in multiple places, but they should remain consistent.
+You may add these in multiple places, but they should remain consistent. This is authority control: the title, authors, and description should read the same in the README, the CITATION.cff, and the Zenodo record, for the same reason a name reads the same across catalog records. When they drift, indexes treat one piece of software as several, and its citations scatter.
 
 
 ## GitHub-specific discoverability features
@@ -95,6 +99,8 @@ GitHub uses structured metadata to improve search ranking and cross-repository l
 **Your README is your software's front door.**
 
 If users can't understand what it does, how to install it, or how to use it in **30 seconds** → they leave.
+
+A collection without a finding aid can only be used by someone with time to read every box. A repo without a real README can only be used by its author. The 30-second rule is scope-and-content note discipline applied to code.
 
 ### README Structure (7 Essential Sections)
 
@@ -264,7 +270,7 @@ Metadata work is where libraries already have deep expertise, so this is the mos
 A rough priority order when a record or repo is thin:
 
 1. A readable **description** (most discovery systems show this first; an empty one is the biggest single loss).
-2. **Author ORCIDs**, so credit attaches to people, not just names.
+2. **Author ORCIDs**, so credit attaches to people, not just names. Every J. Chen on Zenodo is indistinguishable without one, and software credit is hard enough to accumulate without splitting it across identities.
 3. **Keywords** reused consistently across GitHub Topics, `CITATION.cff`, and Zenodo.
 4. **Related works** linking the software to its paper, dataset, and grant.
 

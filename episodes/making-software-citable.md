@@ -43,6 +43,8 @@ git checkout 05-release  # See the result with v0.1.0 tag
 
 ## Introduction
 
+A GitHub repository is a workshop, not an archive. The code changes daily, the URL can break, and "the version we used" means nothing without a marker. This episode adds the two things scholarly infrastructure needs to take software seriously: a **release**, which freezes a named version, and a **Zenodo DOI**, which gives that frozen version a persistent identifier and a preservation copy outside GitHub entirely. After this step, the software can be cited the way an article is cited, and the citation still resolves in twenty years.
+
 Software is a research product.  
 Like articles and datasets, it should be **cited** so others can acknowledge your work, find the exact version you used, and understand how your software contributed to their results.
 
@@ -71,6 +73,8 @@ Reassure them that:
 - Zenodo is free and widely used  
 - they can watch the demo and complete the steps later
 
+**Why this episode matters to researchers:** this is where journal and funder requirements actually bite. "The journal wants a citable code deposit" means, concretely, a tagged release with a DOI, and after this episode you can say that sentence and demonstrate the twenty-minute path to compliance. The DOI is also the moment their software starts accruing countable citations, the currency their review committees already understand.
+
 ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
 ## What Makes Software Citable?
@@ -95,6 +99,8 @@ A DOI is helpful for:
 - meeting journal and funder expectations  
 
 But the core citability comes from your metadata and release process.
+
+A useful way to hold the difference: a DOI is a permanent address, a URL is a sticky note. The GitHub URL points at wherever the code happens to live today. Rename the repo, change the username, or watch the platform fold (Gitorious did, Google Code did) and the note falls off. The DOI is registered infrastructure, the same DataCite plumbing behind dataset DOIs, and it resolves no matter where the object moves.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -229,7 +235,7 @@ doi: 10.5281/zenodo.123456
 
 ### Supporting others
 
-The question researchers actually bring you here is "which DOI do I put in my paper?" Zenodo mints two for every project, and the distinction is worth knowing cold:
+The question researchers actually bring you here is "which DOI do I put in my paper?" Zenodo mints two for every project, and the distinction is worth knowing cold. Librarians already have this distinction: it is the work versus the edition, "cite the exact edition you quoted" versus "refer to the work as a whole."
 
 - **Version DOI** points to one exact release. Cite this when the precise software state matters for reproducibility, such as the version that produced a paper's results.
 - **Concept DOI** points to the project across all versions and always resolves to the latest. Cite this when you want to refer to the software in general.
@@ -238,7 +244,7 @@ A safe default to teach: cite the **version DOI** in a methods section, and use 
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
-**Even if GitHub disappears, your DOI still works.**
+**Even if GitHub disappears, your DOI still works.** The GitHub-Zenodo link works like deposit: each release is archived at CERN, independent of GitHub's fate. The workshop can burn down; the deposited copy survives.
 
 ::::::::::::::::::::::::::::::::::::: callout
 
