@@ -1,7 +1,7 @@
 ---
 title: "Making Your Software Citable"
-teaching: 6
-exercises: 26
+teaching: 22
+exercises: 13
 ---
 
 :::::::::::::::::::::::::::::::::::::: questions
@@ -16,28 +16,8 @@ exercises: 26
 
 - Describe why software citation matters in research.
 - Create a versioned release in GitHub.
-- Understand when and why to mint a DOI with Zenodo.
+- Explain when and why to mint a DOI with Zenodo.
 - **Supporting others:** advise which DOI, version or concept, belongs in a given citation.
-
-::::::::::::::::::::::::::::::::::::::::::::::::
-
-::::::::::::::::::::::::::::::::::::: prereq
-
-### Episode Branch: `04-citation` → `05-release`
-
-This episode creates a release and tag.
-
-**Starting point:**
-```bash
-git checkout 04-citation # Start with LICENSE and CITATION.cff
-```
-
-**After this episode:**
-```bash
-git checkout 05-release  # See the result with v0.1.0 tag
-```
-
-**Catch-up point:** If joining now, run `git checkout 04-citation`
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 

@@ -1,6 +1,6 @@
 ---
 title: "Sharing Research Software Effectively"
-teaching: 5
+teaching: 12
 exercises: 10
 ---
 
@@ -20,29 +20,13 @@ exercises: 10
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
-::::::::::::::::::::::::::::::::::::: prereq
-
-### Episode Branch: `01-start`
-
-This episode explores the **initial state** of the demo repository.
-
-**To follow along:**
-```bash
-cd software-demo
-git checkout 01-start
-```
-
-**Catch-up point:** If you're joining this episode partway through, start here.
-
-::::::::::::::::::::::::::::::::::::::::::::::::
-
 ## Introduction
 
 Every archivist knows the unprocessed accession: boxes that made it into the building but not into the collection, technically held, practically invisible. Most research software on GitHub is in exactly that state. It is public, which is not the same as shared. No license, no citation information, no description a stranger could act on. An open repository with none of those is like leaving the reading room unlocked and calling it access: people can technically get in, and nothing helps them once they do.
 
 Publishing in a public repository is still the right first step. It is what makes finding, understanding, reusing, and citing your work possible, and it is where visibility and formal credit begin. This episode is the collection assessment: look at a bare repository the way you would look at a new accession, and learn to name the one addition that would move it from "present" to "usable."
 
-In this lesson, we start with a minimal example repository (branch `01-start`). As you progress through the episodes, you will progressively refine it until it is citable, discoverable, and ready for reuse.
+In this lesson, we start with a minimal example repository (your fork's `main` branch, the starting state). As you progress through the episodes, you will progressively refine it until it is citable, discoverable, and ready for reuse.
 
 :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: instructor
 
@@ -52,32 +36,29 @@ In this lesson, we start with a minimal example repository (branch `01-start`). 
 
 :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: instructor
 
-### Preparing the Demo Repository
-To demonstrate the "before and after" states of research software, use the provided automation script:
+### Preparing to teach this episode
 
-1.  **Locate the script**: `create_demo_repo.sh` is in the root of the lesson repository.
-2.  **Run the script**: Move it to a non-git directory (e.g., `~/projects/`) and run `bash create_demo_repo.sh`.
-3.  **Progression**: The script creates branches (`01-start` through `06-metadata`). You can `git checkout` these branches during the lesson to show incremental progress.
-4.  **GitHub Hosting**: We recommend pushing this generated repository to your GitHub account before the workshop so learners can follow along online. Commands for pushing are printed at the end of the script.
+Teach from **your own fork** of the demo repository, exactly as learners do, so everyone is looking at the same starting state. See the **Instructor Notes** for the one-time fork setup. During the lesson you demonstrate each step live in your fork's web interface and learners mirror it in theirs.
 
-Use **progressive disclosure** by showing only the top-level structure of the demo repository first.  
-If learners are new to GitHub, you may display two contrasting examples:
+To show the "before and after" contrast, use the branch dropdown in the browser:
 
-- a sparse, hard-to-understand repo (checkout branch `01-start`)
-- a clear, well-documented repo (checkout branch `06-metadata`)
+- **Before** — the `main` branch: a sparse, hard-to-reuse project
+- **After** — the `after-metadata` branch: a clear, licensed, citable, well-documented project
+
+Use **progressive disclosure**: show only the top-level file listing first, then open individual files as you discuss them. No terminal or `git checkout` is needed; the reference branches are there to view and compare against, not to build on.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
 ## The Starting Point
 
-Learners will download or clone the **“before” state** of the example repository:
+Open your fork and look at the **"before" state** on the `main` branch:
 
 ```bash
 software-demo/
 ├── README.md
-├── src/
-│ └── analysis.py
-└── environment.toml #(pixi environment file)
+├── requirements.txt
+└── src/
+    └── analysis.py
 ```
 
 This repository intentionally *lacks* many elements of good research software practice.  

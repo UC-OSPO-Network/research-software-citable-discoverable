@@ -1,7 +1,7 @@
 ---
 title: "Managing Reproducible Environments with pixi"
-teaching: 19
-exercises: 5
+teaching: 20
+exercises: 10
 ---
 
 ::::::::::::::::::::::::::::::::::::: callout
@@ -10,7 +10,7 @@ exercises: 5
 
 This episode covers environment management using `pixi`. It is **optional**; you can skip it and move directly to [Improving Metadata and Discoverability](improving-metadata-discoverability.md).
 
-If you skip this episode, you will still complete all citation steps. The `pixi.toml` and `pixi.lock` files you see in the demo repo branches were added here; you can ignore them.
+If you skip this episode, you still complete every citation step. Unlike the rest of the lesson, which runs entirely in the browser, this episode requires tools installed on your own computer (**pixi** and a **terminal**) and a local clone of your fork. Its files live only in the `optional-pixi` reference branch, not in your main project, so skipping it leaves nothing unfinished. Confirm with your instructor that you're running the full track before installing anything.
 
 **Other environment tools:** `conda`, `mamba`, `pip`/`venv`, and `renv` (for R) all serve the same purpose. The concepts here apply to any environment manager; pixi is used because it handles Python, R, and other languages with a single tool and generates an automatic lockfile.
 
@@ -34,40 +34,13 @@ If you skip this episode, you will still complete all citation steps. The `pixi.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
-::::::::::::::::::::::::::::::::::::: prereq
-
-### Episode Branch: `03-pixi`
-
-This optional episode explores the environment management layer of the demo repository.
-
-**To follow along:**
-```bash
-git checkout 03-pixi     # Branch with pixi.toml and lockfile added
-```
-
-*This branch sits between `02-license` and `04-citation` in the demo repo history, but you can explore it at any point in the lesson.*
-
-::::::::::::::::::::::::::::::::::::::::::::::::
-
 :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: instructor
 
 ### Teaching this optional episode
 
-This episode appears after the release/DOI episode in the lesson order. The demo repository branch `03-pixi` sits earlier in the repo history (between `02-license` and `04-citation`), so the branch number and lesson position don't match, which is expected.
+This episode is last in the lesson order and is the only one that leaves the browser: it needs pixi and a terminal on the learner's own machine, plus a local clone of their fork. Because the rest of the lesson is browser-only, confirm during setup which learners are prepared for the full track. Anyone who only wants their code cited can stop after the metadata episode with a complete, citable repository.
 
-**How to handle the branch:**
-
-Have learners check out `03-pixi` to follow along. They are exploring it as a standalone example, not building on it. After this episode, direct them back to `05-release` to continue with the metadata episode.
-
-```bash
-# During this episode
-git checkout 03-pixi
-
-# After this episode, return here to continue
-git checkout 05-release
-```
-
-**If skipping this episode:** Learners who went from `02-license` straight to `04-citation` will already have pixi files in their repo (they were baked into the branch). Acknowledge this briefly when they encounter `pixi.toml` or `pixi.lock` in the metadata episode: *"Those files are from the optional environment management episode; you can leave them as-is."*
+The `optional-pixi` reference branch builds on `after-metadata`, so it shows pixi added to an already-finished project. Have learners view it in the browser for the target `pixi.toml` and lockfile, then work along in their local clone. Nothing in the main project chain depends on pixi, so skipping this episode leaves no loose ends in anyone's repository.
 
 **Pixi not installed?** Learners can follow the concepts without a working pixi installation. The key idea is that a lockfile pins exact dependency versions. That's the transferable lesson, not the tool itself.
 
@@ -327,6 +300,19 @@ You should see the new package listed under `[project.dependencies]` in your `pi
 
 :::::::::::::::::::::::::::::::::::::::::::::::
 :::::::::::::::::::::::::::::::::::::::::::::::
+
+::::::::::::::::::::::::::::::::::::: challenge
+
+### Predict: what does the lockfile add?
+
+Your `pixi.toml` lists `python` and `numpy` with no version numbers. You commit both `pixi.toml` and the generated `pixi.lock`. A year later, a colleague clones the repo and runs `pixi install`. What does `pixi.lock` guarantee that `pixi.toml` alone would not?
+
+:::::::::::::::::::::::: solution
+
+`pixi.toml` records only *which* packages you want. Resolved a year apart, it could pull a newer numpy or Python build than you used. `pixi.lock` records the *exact* resolved versions, including transitive dependencies and per-platform builds, so your colleague reconstructs the same environment you had. The `.toml` is the intent; the `.lock` is the reproducible record. That is why both belong in version control.
+
+:::::::::::::::::::::::::::::::::
+::::::::::::::::::::::::::::::::::::::::::::::::
 
 ::::::::::::::::::::::::::::::::::::: keypoints
 

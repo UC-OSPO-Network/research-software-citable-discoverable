@@ -1,7 +1,7 @@
 ---
 title: "Improving Metadata and Discoverability"
-teaching: 25
-exercises: 12
+teaching: 20
+exercises: 10
 ---
 
 :::::::::::::::::::::::::::::::::::::: questions
@@ -17,26 +17,6 @@ exercises: 12
 - Enhance discoverability using GitHub features and Zenodo metadata fields.
 - Connect metadata across CITATION.cff, GitHub, and your DOI record for consistency.
 - **Supporting others:** audit a repository's metadata and prioritize the single highest-value fix.
-
-::::::::::::::::::::::::::::::::::::::::::::::::
-
-::::::::::::::::::::::::::::::::::::: prereq
-
-### Episode Branch: `05-release` → `06-metadata`
-
-This episode completes the repository with full documentation and metadata.
-
-**Starting point:**
-```bash
-git checkout 05-release  # Start with release tagged
-```
-
-**After this episode:**
-```bash
-git checkout 06-metadata # See the complete FAIR repository
-```
-
-**Catch-up point:** If joining now, run `git checkout 05-release`
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -116,7 +96,7 @@ The [UC OSPO README Guide](https://ucospo.net/oss-resources/template-guides/read
 
 ### Before vs. After Example
 
-**❌ Before (Branch: 01-start)**
+**❌ Before (`main`, starting state)**
 
 ```markdown
 # Biodiversity Analysis Toolkit
@@ -126,7 +106,7 @@ A script.
 No description. No instructions. No citation. Unusable.
 ```
 
-**✅ After (Branch: 06-metadata)**
+**✅ After (`after-metadata`)**
 
 ```markdown
 # Biodiversity Analysis Toolkit
@@ -317,6 +297,24 @@ After generating a DOI in the earlier episode, expand its metadata:
 
 :::::::::::::::::::::::::::::::::
 :::::::::::::::::::::::::::::::::
+
+::::::::::::::::::::::::::::::::::::: challenge
+
+### Which change makes it discoverable?
+
+A researcher's tool has been public on GitHub for a year, but no one outside their lab has ever found it. The repository has a one-line README, no topics, and a Zenodo deposit with only a title. Which **single** change will do the most to make the software discoverable?
+
+A. Add collaborators so the repository is "more public"
+B. Add descriptive GitHub topics, plus matching keywords and a description on the Zenodo record
+C. Push more frequent commits so the repository looks active
+D. Rename the repository to something shorter and catchier
+
+:::::::::::::::::::::::: solution
+
+**B.** Discovery happens through *description*, not access level or activity. Topics, keywords, and descriptions are what GitHub search, Zenodo, and DataCite-fed indexes actually match a query against. The repo is already public, so **A** adds nothing to discoverability; commit frequency (**C**) does not affect search ranking for discovery; and a shorter name (**D**) is cosmetic. This is the same reason a catalog record with no subject headings is nearly invisible: findability comes from the metadata, not from the object's mere existence.
+
+:::::::::::::::::::::::::::::::::
+::::::::::::::::::::::::::::::::::::::::::::::::
 
 ::::::::::::::::::::::::::::::::::::: keypoints
 

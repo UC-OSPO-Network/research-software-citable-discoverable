@@ -2,141 +2,148 @@
 title: Setup
 ---
 
+## How this lesson works
+
+Almost everything in this lesson happens in your **web browser**, in your own copy (a "fork")
+of a small demo repository. You'll add one thing per episode: a license, a citation file, a
+release with a DOI, then richer metadata. You commit each change to the `main` branch of your
+fork, and by the end you have a complete, citable repository you built yourself.
+
+Only the final, **optional** episode on reproducible environments with pixi needs software
+installed on your computer. If you're not doing that episode, you never leave the browser.
+
 ## Which track is your workshop running?
 
 Check with your instructor before installing anything.
 
-**Citation-focused track**: covers licensing, CITATION.cff, releases, DOIs, and metadata. This is the default. No pixi needed.
-
-**Full track**: adds an optional episode on reproducible environment management with pixi. Only install pixi if your instructor confirms you are running the full track.
+- **Citation-focused track (default):** licensing, CITATION.cff, releases, DOIs, and metadata.
+  Browser only. No installs.
+- **Full track:** adds the optional pixi episode at the end. This one requires a local install
+  (pixi + a terminal). Only set that up if your instructor confirms the full track.
 
 ---
 
 ## Required for all tracks
 
-- **A GitHub account**: for editing files, adding a CITATION.cff, and improving repository metadata
-- **Git**: for basic version control and interacting with the demo repository
-- **A web browser**: most lesson activities work entirely in GitHub’s web interface
+- **A GitHub account.** Free at <https://github.com/join>. This is all you need for the core lesson.
+- **A web browser.** All core activities use GitHub's web interface: creating files, adding a
+  CITATION.cff, drafting a release, and editing metadata.
 
-A text editor (VS Code, VS Codium, Sublime, etc.) is useful but not required; GitHub’s built-in editor works for everything in this lesson.
-
----
-
-## Full track only: pixi
-
-**Only install pixi if your instructor has confirmed you are doing the full track.**
-
-pixi is a fast, modern environment and package manager used in the optional reproducibility episode. If you are on the citation-focused track, skip this section entirely.
+A text editor (VS Code, VS Codium, Sublime, etc.) is handy but not required; GitHub's built-in
+editor works for everything in the core track.
 
 ---
 
-## Installation
+## Fork the demo repository
 
-### Git
-Most systems already include Git. If not:
-- All platforms: <https://git-scm.com/downloads>
-- Windows users may prefer **Git for Windows**, which includes Git Bash
+The lesson uses a demo repository called **`software-demo`**. You'll work in your own fork of it.
 
-### pixi (full track only)
-Install only if your instructor confirmed you are on the full track:
-<https://pixi.sh/latest/>
+1. Sign in to GitHub.
+2. Go to <https://github.com/UC-OSPO-Network/software-demo>.
+3. Click **Fork** (top right), then **Create fork**. The default settings are fine; you only
+   need the `main` branch.
+4. You now have your own copy at `https://github.com/YOUR-USERNAME/software-demo`. When it opens,
+   `main` is the **starting state**: a bare project with no license, citation file, release, or
+   metadata. That's intentional. You'll fix it over the course of the lesson.
 
----
+That's the whole setup for the citation-focused track.
 
-## Lesson Demo Repository
+::::::::::::::::::::::::::::::::::::: callout
 
-This lesson uses a **demo repository** called `software-demo` that progresses through different states as you learn.
+### Checking your work: reference branches
 
-### Clone the Demo Repository
+The **upstream** repository (`UC-OSPO-Network/software-demo`) keeps view-only **reference
+branches** that show the target state after each episode:
 
-Before the workshop, clone the demo repository:
+| Branch | Shows the repo after… |
+|---|---|
+| `main` | the starting state (what you fork) |
+| `after-license` | Episode 2, license added |
+| `after-citation` | Episode 3, CITATION.cff added |
+| `after-release` | Episode 4, release + DOI |
+| `after-metadata` | Episode 5, full metadata (the finished repo) |
+| `optional-pixi` | the optional pixi episode |
 
-```bash
-git clone https://github.com/jt14den/software-demo.git
-cd software-demo
-```
+If you fall behind or want to compare, open the upstream repo, switch to the matching branch in
+the branch dropdown, and look at the files. Because each episode adds an **independent** piece,
+falling behind never blocks you: you can always catch up later by copying a file you missed from
+its reference branch. You don't edit the reference branches; they're an answer key.
 
-### Understanding the Branches
-
-The repository has branches for each lesson stage:
-
-- `01-start`: initial state (minimal project)
-- `02-license`: LICENSE file added
-- `03-pixi`: pixi environment management added
-- `04-citation`: CITATION.cff added
-- `05-release`: tagged release v0.1.0
-- `06-metadata`: final state (complete documentation)
-
-### Catching Up During the Lesson
-
-If you need to catch up at any point during the workshop:
-
-```bash
-git checkout 02-license    # Jump to the license stage
-git checkout 03-pixi       # Jump to the environment stage
-# etc.
-```
-
-Each episode will tell you which branch to check out if you need to skip ahead.
-
-**Note:** You can always return to the main branch with `git checkout main`
+::::::::::::::::::::::::::::::::::::::::::::::::
 
 ---
 
-## What To Check Before the Workshop
+## Full track only: pixi (optional episode)
 
-Confirm Git is installed:
+**Only do this if your instructor confirmed the full track.** The optional pixi episode is the
+one part of the lesson that runs on your own machine instead of the browser.
+
+You will need:
+
+- **Git.** Most systems already include it. If not: <https://git-scm.com/downloads>
+  (Windows users may prefer **Git for Windows**, which includes Git Bash).
+- **pixi**, a fast, modern environment and package manager: <https://pixi.sh/latest/>
+- **A local clone of your fork**, so you can run pixi against it:
+
+  ```bash
+  git clone https://github.com/YOUR-USERNAME/software-demo.git
+  cd software-demo
+  ```
+
+---
+
+## What to check before the workshop
+
+- You can sign in to GitHub in your browser.
+- You have forked `software-demo` and can see it under your account.
+
+**Full track only**, also confirm:
 
 ```bash
 git --version
-```
-
-**Full track only**: confirm pixi is installed:
-
-```bash
 pixi --version
 ```
 
 ---
 
-## Authentication Notes
+::::::::::::::::::::::::::::::::::::: callout
 
-GitHub now supports streamlined login through the browser.  
-If you're prompted to authenticate:
+### Authentication note (full track)
 
-- follow the link that appears in the terminal  
-- sign in using your GitHub credentials  
-- return to the terminal when authorization completes
+GitHub supports streamlined login through the browser. If you're prompted to authenticate when
+cloning, follow the link that appears, sign in, and return to the terminal. You do **not** need
+SSH keys or personal access tokens for this lesson.
 
-You do **not** need SSH keys or personal access tokens for this lesson.
-
----
+::::::::::::::::::::::::::::::::::::::::::::::::
 
 ::::::::::::::::::::: instructor
 
 ### Instructor Notes
 
 **Timing:**
-- Allow 5–10 minutes at the start to confirm GitHub access.
-- If running the full track, allow an additional 5 minutes for pixi installation issues. Verify pixi is installed before the workshop; do not let learners discover it is missing mid-episode.
 
-**Verification:**  
-Ask learners to visit a GitHub repository, click “Edit”, and confirm they can commit changes to a fork.  
-For those using local tools, verify that:
+- Allow 5–10 minutes at the start to confirm everyone has a GitHub account and a fork of
+  `software-demo`. This is the single most common blocker; do it before Episode 1.
+- Full-track learners need pixi installed ahead of time. Verify during setup, not mid-episode.
 
-git --version
+**Verification:**
+Ask learners to open their fork, click **Add file → Create new file**, and confirm they can commit
+to their `main` branch. For full-track learners, verify `git --version` and `pixi --version` return
+valid values locally.
 
-returns a valid value.
+**Common issues:**
 
-**Common Issues:**  
-- Windows users may need to configure Git Bash as the terminal in VS Code.  
-- Some institutional devices may require sign-in through a browser for GitHub access.  
-- If pixi is installed but not found, VS Code may need to be restarted so PATH updates are recognized.
+- Some institutional devices require browser sign-in for GitHub access.
+- Windows full-track users may need to configure Git Bash as the terminal in VS Code.
+- If pixi is installed but not found, VS Code may need a restart so PATH updates are recognized.
 
-**Troubleshooting Resources:**  
-- Git documentation: https://git-scm.com/docs  
-- VS Code terminal guide: https://code.visualstudio.com/docs/terminal/basics  
-- pixi installation guide: https://pixi.sh/latest/  
-- GitHub authentication help: https://docs.github.com/en/get-started
+See the [Instructor Notes](../instructors/instructor-notes.md) for the full fork-alignment setup,
+including how to teach from your own fork so you and the learners share the same starting state.
 
-::::::::::::::::::::::::::::::::::
+**Troubleshooting resources:**
+
+- GitHub getting started: <https://docs.github.com/en/get-started>
+- Git documentation: <https://git-scm.com/docs>
+- pixi installation guide: <https://pixi.sh/latest/>
+
+:::::::::::::::::::::::::::::::::

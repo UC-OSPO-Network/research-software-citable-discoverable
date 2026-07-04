@@ -1,7 +1,7 @@
 ---
 title: "Wrap-Up and Reflection"
-teaching: 4
-exercises: 13
+teaching: 8
+exercises: 12
 ---
 
 :::::::::::::::::::::::::::::::::::::: questions
@@ -36,21 +36,21 @@ Congratulations! You've transformed fragile research software into a FAIR softwa
 
 ### From Fragile to FAIR
 
-**Before (Branch: 01-start):**
+**Before (`main`, starting state):**
 
 - ❌ No LICENSE
-- ❌ No environment
 - ❌ No citation
 - ❌ No DOI
+- ❌ Minimal README
 
-**After (Branch: 06-metadata):**
+**After (`after-metadata`):**
 
 - ✅ LICENSE (BSD-3)
-- ✅ Environment (pixi.toml)
 - ✅ CITATION.cff
 - ✅ DOI from Zenodo
 - ✅ README with documentation
 - ✅ Community health files
+- ✅ Reproducible environment *(optional pixi episode, on `optional-pixi`)*
 
 Your software is now **citable, discoverable, and reusable**.
 

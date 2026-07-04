@@ -67,13 +67,15 @@ contact: 'tdennis@library.ucla.edu'
 # Order of episodes in your lesson
 episodes:
 - introduction.md               # Episode 0: Problem framing, FAIR4RS, software citation — 15 min teaching
-- sharing-software.md           # Episode 1: Exploring 01-start branch
-- open-source-license.md        # Episode 2: Adding LICENSE → 02-license branch
-- adding-citation-file.md       # Episode 3: Adding CITATION.cff → 04-citation branch
-- making-software-citable.md    # Episode 4: Creating release → 05-release branch
-- managing-environments-pixi.md # Episode 5: Adding pixi → 03-pixi branch (OPTIONAL — reproducibility deep-dive)
-- improving-metadata-discoverability.md # Episode 6: Final improvements → 06-metadata branch
+- sharing-software.md           # Episode 1: Explore the demo repo (start state vs. finished state)
+- open-source-license.md        # Episode 2: Add a LICENSE
+- adding-citation-file.md       # Episode 3: Add CITATION.cff
+- making-software-citable.md    # Episode 4: Create a release and mint a DOI (Zenodo)
+- improving-metadata-discoverability.md # Episode 5: Improve metadata and discoverability
+- managing-environments-pixi.md # Episode 6: Reproducible environments with pixi (OPTIONAL, last — requires local install)
 - wrap-up-reflect.md            # Episode 7: Reflection and next steps
+# Branch references removed from comments 2026-07-03: reference-branch naming is being
+# reworked for the GitHub-native (fork + web) workflow. See issues #4, #5, #6.
 # why-software-citation.md — merged into introduction.md (2026-05-26)
 
 # Information for Learners

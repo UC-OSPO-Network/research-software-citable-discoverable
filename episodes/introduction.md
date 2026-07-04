@@ -1,7 +1,7 @@
 ---
 title: "Introduction: The \"Works on My Machine\" Trap"
 teaching: 18
-exercises: 8
+exercises: 7
 ---
 
 :::::::::::::::::::::::::::::::::::::: questions
@@ -15,10 +15,9 @@ exercises: 8
 ::::::::::::::::::::::::::::::::::::: objectives
 
 - Recognize common barriers to software reuse and reproducibility
-- Understand how FAIR4RS principles apply to research software
-- Identify the key components needed to make software citable and discoverable
-- See what a "complete" FAIR research software project looks like
-- **Supporting others:** explain to a researcher, in their terms, why these practices are worth the effort
+- Explain how FAIR4RS principles apply to research software
+- Identify the key components that make software citable and discoverable
+- Explain to a researcher, in their terms, why these practices are worth the effort
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -32,6 +31,14 @@ You may be here for one of two reasons:
 - **You support people who do** as a librarian, OSPO member, or research-support specialist who advises others on these practices.
 
 The hands-on steps are the same either way. You will work through a real repository and add the pieces that make software FAIR. What differs is the judgment around each step. Throughout the lesson, watch for **Supporting others** boxes. They translate each technical step into the advising and consultation work that library and OSPO roles do, including when to refer a question rather than answer it yourself.
+
+::::::::::::::::::::::::::::::::::::::::::::::::
+
+::::::::::::::::::::::::::::::::::::: callout
+
+### New to any of these terms?
+
+Every specialized term in this lesson — bus factor, FAIR4RS, DOI, CFF, ORCID, SWHID, and more — is defined on the [Reference / Glossary page](../learners/reference.md). Keep it open in a tab as you work.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -115,7 +122,7 @@ Even when software works, it often doesn't get credited. Most researchers cite c
 
 ### The wrong way
 
-> "We used the analysis script from https://github.com/jt14den/software-demo"
+> "We used the analysis script from https://github.com/UC-OSPO-Network/software-demo"
 
 **Problems:**
 
@@ -177,41 +184,29 @@ In this workshop, you will transform a fragile research script into a FAIR softw
 
 ## What "Done Right" Looks Like
 
-### The "Before" State (Branch: 01-start)
+### The "Before" State (`main`)
 
-Check out the initial state of our demo repository:
-
-```bash
-cd software-demo
-git checkout 01-start
-```
-
-You'll see:
+Open your fork of the demo repository. Its `main` branch is the starting state:
 
 - ❌ No LICENSE
-- ❌ Vague environment (`python = "*"`)
 - ❌ No citation information
 - ❌ No DOI
 - ❌ Minimal README
+- ❌ No community or metadata files
 
-### The "After" State (Branch: 06-metadata)
+### The "After" State (`after-metadata`)
 
-Now look at the final state:
-
-```bash
-git checkout 06-metadata
-```
-
-Notice what's been added:
+In the branch dropdown, switch to the `after-metadata` reference branch to see the finished repository:
 
 - ✅ **LICENSE** (BSD-3-Clause)
-- ✅ **pixi.toml** (documented environment)
 - ✅ **CITATION.cff** (citation metadata)
 - ✅ **README.md** (complete documentation)
 - ✅ **CONTRIBUTING.md** (contribution guidelines)
 - ✅ **CODE_OF_CONDUCT.md** (community standards)
 - ✅ **.zenodo.json** (Zenodo metadata)
 - ✅ DOI badge in README
+
+A documented, reproducible **environment** is the one FAIR piece not shown here. It's covered in the optional pixi episode and lives on the `optional-pixi` branch.
 
 **This is what makes software Findable, Accessible, Interoperable, and Reusable.**
 
@@ -278,17 +273,17 @@ A proper citation would include: author(s), software title, version, repository 
 
 ## What We'll Build Together
 
-Starting from the minimal `01-start` state, you will progressively add each component:
+Starting from the bare `main` state in your fork, you'll progressively add each component:
 
-- **Episode 1:** Sharing the demo repository (understanding `01-start`)
-- **Episode 2:** Adding an open-source license (`02-license`)
-- **Episode 3:** Managing environments with pixi (`03-pixi`) *(optional)*
-- **Episode 4:** Creating a CITATION.cff file (`04-citation`)
-- **Episode 5:** Minting a DOI and creating releases (`05-release`)
-- **Episode 6:** Improving metadata and discoverability (`06-metadata`)
+- **Episode 1:** Sharing research software (exploring the starting repository)
+- **Episode 2:** Adding an open-source license
+- **Episode 3:** Creating a CITATION.cff file
+- **Episode 4:** Minting a DOI and creating releases
+- **Episode 5:** Improving metadata and discoverability
+- **Episode 6:** Managing environments with pixi *(optional, requires a local install)*
 - **Episode 7:** Wrap-up and reflection
 
-Each episode builds on the previous one, following the branch progression in the demo repository.
+Each episode adds one piece to your fork's `main` branch. View-only reference branches (`after-license`, `after-citation`, `after-release`, `after-metadata`) let you check your work at any point.
 
 ::::::::::::::::::::::::::::::::::::: keypoints
 
@@ -298,6 +293,6 @@ Each episode builds on the previous one, following the branch progression in the
 - FAIR4RS principles (Findable, Accessible, Interoperable, Reusable) provide a framework
 - Making software FAIR requires: LICENSE, environment files, citation metadata, and documentation
 - A CITATION.cff file is the simplest way to make software citable
-- The demo repository progresses through branches: 01-start → 06-metadata
+- You build up your own fork step by step; view-only reference branches show the target state at each stage
 
 ::::::::::::::::::::::::::::::::::::::::::::::::

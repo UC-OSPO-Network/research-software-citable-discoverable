@@ -1,7 +1,7 @@
 ---
 title: "Choosing an Open-Source License"
-teaching: 16
-exercises: 14
+teaching: 18
+exercises: 12
 ---
 
 :::::::::::::::::::::::::::::::::::::: questions
@@ -14,32 +14,11 @@ exercises: 14
 
 ::::::::::::::::::::::::::::::::::::: objectives
 
-* Explain why unlicensed software is legally restricted
+* Explain why unlicensed software is not legally reusable
 * Describe the main categories of open-source licenses
-* Choose an appropriate license for a UC research project
+* Choose an appropriate license for a UC research project, using UC resources
 * Add a license file to a GitHub repository
-* Identify UC resources for licensing decisions
 * **Supporting others:** decide when a licensing question is yours to answer and when to refer it to Tech Transfer / IP
-
-::::::::::::::::::::::::::::::::::::::::::::::::
-
-::::::::::::::::::::::::::::::::::::: prereq
-
-### Episode Branch: `01-start` → `02-license`
-
-This episode adds a LICENSE file to the repository.
-
-**Starting point:**
-```bash
-git checkout 01-start    # Start from the beginning
-```
-
-**After this episode:**
-```bash
-git checkout 02-license  # See the result with LICENSE added
-```
-
-**Catch-up point:** If joining now, run `git checkout 01-start`
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 

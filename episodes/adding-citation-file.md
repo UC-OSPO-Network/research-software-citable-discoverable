@@ -1,7 +1,7 @@
 ---
 title: "Adding a CITATION.cff File"
-teaching: 15
-exercises: 13
+teaching: 18
+exercises: 12
 ---
 
 :::::::::::::::::::::::::::::::::::::: questions
@@ -16,30 +16,8 @@ exercises: 13
 
 - Explain the role of CITATION.cff in software citation.
 - Create and customize a CITATION.cff file in a GitHub repository.
-- Understand how the file connects to later steps like releases and DOIs.
+- Describe how the file connects to later steps like releases and DOIs.
 - **Supporting others:** coach a researcher through a CITATION.cff and recognize when authorship is a referral, not a metadata fix.
-
-::::::::::::::::::::::::::::::::::::::::::::::::
-
-::::::::::::::::::::::::::::::::::::: prereq
-
-### Episode Branch: `02-license` → `04-citation`
-
-This episode adds a CITATION.cff file.
-
-**Starting point:**
-```bash
-git checkout 02-license  # Start with LICENSE added
-```
-
-**After this episode:**
-```bash
-git checkout 04-citation # See the result with CITATION.cff added
-```
-
-**Catch-up point:** If joining now, run `git checkout 02-license`
-
-*Note: the `04-citation` branch also contains pixi environment files from the optional reproducibility episode. You can ignore those files for now.*
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -149,7 +127,7 @@ authors:
 title: "Biodiversity Analysis Toolkit"
 version: 0.1.0
 date-released: 2025-01-15
-url: "https://github.com/jt14den/software-demo"
+url: "https://github.com/UC-OSPO-Network/software-demo"
 ```
 
 **GitHub creates a "Cite this repository" button automatically!**
@@ -170,7 +148,7 @@ authors:
 title: "Biodiversity Analysis Toolkit"
 version: 0.1.0
 date-released: 2025-01-15
-url: "https://github.com/jt14den/software-demo"
+url: "https://github.com/UC-OSPO-Network/software-demo"
 preferred-citation:
   type: article
   title: "Biodiversity Analysis at Scale: Methods and Software"
@@ -278,7 +256,7 @@ authors:
 :::::::::::::::::::::::::::::::::
 :::::::::::::::::::::::::::::::::
 
-:::::::::::::::::::::::::::::::::keypoints 
+::::::::::::::::::::::::::::::::: keypoints
 - A CITATION.cff file is the foundation of software citation.
 - It can be added before releases, DOIs, or version tags.
 - GitHub displays machine-readable citations automatically when this file is present.
