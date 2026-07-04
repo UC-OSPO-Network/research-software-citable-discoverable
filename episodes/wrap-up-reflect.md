@@ -31,7 +31,7 @@ Congratulations! You've transformed fragile research software into a FAIR softwa
 
 ✅ **F - Findable:** Added DOI, CITATION.cff, rich metadata
 ✅ **A - Accessible:** Public GitHub, archived on Zenodo
-✅ **I - Interoperable:** Standard formats (YAML, CFF), documented dependencies (pixi.toml)
+✅ **I - Interoperable:** Standard formats (YAML, CFF), documented dependencies (`requirements.txt`, or `pixi.toml` on the full track)
 ✅ **R - Reusable:** LICENSE (BSD-3), README with setup, environment reproducibility
 
 ### From Fragile to FAIR

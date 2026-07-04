@@ -114,18 +114,18 @@ No description. No instructions. No citation. Unusable.
 Analysis tools for biodiversity research.
 
 ## Features
-- Reproducible (pixi) • Citable (DOI) • Open source (BSD-3)
+- Citable (DOI) • Open source (BSD-3) • Documented
 
 ## Getting Started
 ```bash
-pixi install
-pixi run python src/analysis.py
+pip install -r requirements.txt
+python src/analysis.py
 ```
 
 ## Citation
 [zenodo.org/badge/DOI/10.5281/zenodo.123456.svg]
 
-License: BDS-3 - see LICENSE file
+License: BSD-3 - see LICENSE file
 ```
 
 **Professional. Citable. Usable.**
@@ -136,7 +136,7 @@ License: BDS-3 - see LICENSE file
 2. **Show, don't tell** → Include code examples
 3. **Link metadata** → Add DOI badge, link CITATION.cff
 4. **Keep updated** → Refresh when features change
-5. **Use a template** → [UC OSPO Templates](https://github.com/UC-OSPO-Network/templates) *(UC-specific)* or [Awesome README](https://github.com/matiassingers/awesome-readme)
+5. **Use a template** → [UC OSPO Templates][uc-templates] *(UC-specific)* or [Awesome README][awesome-readme]
 
 **Every tip maps to FAIR principles.**
 
@@ -144,7 +144,7 @@ License: BDS-3 - see LICENSE file
 
 ### Don't Reinvent the Wheel
 
-- [Awesome README](https://github.com/matiassingers/awesome-readme): curated examples from real open-source projects
+- [Awesome README][awesome-readme]: curated examples from real open-source projects
 - [UC OSPO README Template](https://github.com/UC-OSPO-Network/templates/blob/main/README.md) *(UC-specific)*: ready-to-use template
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
@@ -171,7 +171,7 @@ The `CONTRIBUTING.md` file is the first place new contributors look to see if a 
 - **Pull Request Lifecycle**: What happens after a contribution is submitted
 
 ### CODE_OF_CONDUCT.md → Behavioral standards
-A `CODE_OF_CONDUCT.md` establishes behavioral expectations and ensures a safe, inclusive environment for all researchers. The standard choice is the [Contributor Covenant](https://www.contributor-covenant.org/), widely adopted across open-source projects. *(See also: [UC OSPO Code of Conduct Guide](https://ucospo.net/oss-resources/template-guides/code-of-conduct-guide/) *(UC-specific)*)*
+A `CODE_OF_CONDUCT.md` establishes behavioral expectations and ensures a safe, inclusive environment for all researchers. The standard choice is the [Contributor Covenant][contributor-covenant], widely adopted across open-source projects. *(See also: [UC OSPO Code of Conduct Guide](https://ucospo.net/oss-resources/template-guides/code-of-conduct-guide/) *(UC-specific)*)*
 
 ### CHANGELOG.md → Version history
 A `CHANGELOG.md` documents what changed between versions. This helps users understand:
@@ -187,10 +187,10 @@ A `CHANGELOG.md` documents what changed between versions. This helps users under
 
 ### Templates Available
 
-- [Choose a License](https://choosealicense.com/): license selection
-- [Contributor Covenant](https://www.contributor-covenant.org/): code of conduct template
+- [Choose a License][choosealicense]: license selection
+- [Contributor Covenant][contributor-covenant]: code of conduct template
 - [Keep a Changelog](https://keepachangelog.com/): changelog format guide
-- [UC OSPO Template Repository](https://github.com/UC-OSPO-Network/templates) *(UC-specific)*: ready-to-use CONTRIBUTING.md, CODE_OF_CONDUCT.md, CHANGELOG.md, README.md
+- [UC OSPO Template Repository][uc-templates] *(UC-specific)*: ready-to-use CONTRIBUTING.md, CODE_OF_CONDUCT.md, CHANGELOG.md, README.md
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 

@@ -46,13 +46,15 @@ After completing this lesson, learners will be able to:
 
 ## Prerequisites
 
-Before beginning this lesson, learners should be able to:
+For the core lesson you need only a **GitHub account** and a **web browser**. Before beginning, it helps to be able to:
 
-- navigate GitHub in a web browser (view files, edit files, open issues).
-- understand basic Git concepts such as commits and repositories.
-- edit plain-text files in any text editor.
+- navigate GitHub in a web browser (view and edit files, open issues).
+- recognize basic Git concepts such as commits and repositories — you will *not* run Git locally.
+- edit plain-text files.
 
 You don't need any prior experience with software packaging, metadata standards, or licensing.
+
+The **optional** final episode on reproducible environments with pixi is the only part that requires software installed on your computer. See [Setup](learners/setup.md) for both tracks.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
