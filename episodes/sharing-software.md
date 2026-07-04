@@ -120,7 +120,7 @@ Missing pieces often include absent documentation, unclear purpose, or no licens
 Want to dive deeper into README best practices?
 
 - [Elegant READMEs](https://www.yegor256.com/2019/04/23/elegant-readme.html) - practical guide on writing clear, maintainable documentation
-- [Awesome README](https://github.com/matiassingers/awesome-readme) - curated examples from real projects
+- [Awesome README][awesome-readme] - curated examples from real projects
 
 Full references available on the [Reference page](../learners/reference.md#references).
 

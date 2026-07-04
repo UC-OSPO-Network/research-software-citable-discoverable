@@ -26,7 +26,7 @@ exercises: 12
 
 Here is the counterintuitive fact this episode turns on: code posted publicly on GitHub with no license is not open. Copyright attaches automatically, so "no license" means "all rights reserved," and anyone who reuses that code is technically infringing. The visible repo is an invitation nobody can legally accept. A license file is one small text file, usually chosen from a short approved list, and it is the difference between "look but don't touch" and actually reusable.
 
-Clear licensing tells others what they can and cannot do with your code, which is the minimum needed for open, reproducible research. The [UC OSPO License Guide](https://ucospo.net/oss-resources/template-guides/license-guide/) covers UC institutional requirements.
+Clear licensing tells others what they can and cannot do with your code, which is the minimum needed for open, reproducible research. The [UC OSPO License Guide][uc-license-guide] covers UC institutional requirements.
 
 ::::::::::::::::::::::::::::::::::::: callout
 
@@ -50,7 +50,7 @@ Or put it in circulation terms: unlicensed public code is a volume you can see i
 
 At most universities, software created using institutional resources is owned by the institution, not the individual researcher. Before releasing code under an open-source license, check with your **Technology Transfer or Intellectual Property office**. They will verify ownership, funding requirements, and any third-party restrictions.
 
-**If you are at a UC campus:** software is typically owned by *The Regents of the University of California*. Your campus Tech Transfer office can help you select from the [UC-approved license list](https://security.ucop.edu/resources/open-source-software-licensing.html). *(UC-specific)*
+**If you are at a UC campus:** software is typically owned by *The Regents of the University of California*. Your campus Tech Transfer office can help you select from the [UC-approved license list][uc-oss-chart]. *(UC-specific)*
 
 **At other institutions:** check with your research computing, library, or legal office. Most will have a similar process and a list of preferred licenses.
 
@@ -172,10 +172,10 @@ Most research repositories don't need this, but if you're sharing a dataset alon
 
 ### Resources
 
-* [ChooseALicense.com](https://choosealicense.com/) – Compare features across all common licenses.
+* [ChooseALicense.com][choosealicense] – Compare features across all common licenses.
 * [SPDX License List](https://spdx.org/licenses/) – Authoritative registry of license identifiers used in CITATION.cff and package metadata.
-* [UC OSPO License Guide](https://ucospo.net/oss-resources/template-guides/license-guide/) *(UC-specific)* – UC institutional requirements and templates.
-* [UC OSS Chart and Companion Guide](https://security.ucop.edu/resources/open-source-software-licensing.html) *(UC-specific)* – UC-approved "low-risk" license list.
+* [UC OSPO License Guide][uc-license-guide] *(UC-specific)* – UC institutional requirements and templates.
+* [UC OSS Chart and Companion Guide][uc-oss-chart] *(UC-specific)* – UC-approved "low-risk" license list.
 
 :::::::::::::::::::::::::::::::::
 
