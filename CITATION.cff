@@ -3,7 +3,7 @@ title: "Making Research Software Citable and Discoverable"
 message: >-
   Please cite this lesson if you use or adapt it in your research,
   teaching, or training materials.
-type: lesson
+type: software
 authors:
   - family-names: Dennis
     given-names: Tim
@@ -46,7 +46,7 @@ version: 0.1.0
 date-released: "2026-06-17"
 
 references:
-  - type: lesson
+  - type: generic
     title: "Building Better Research Software"
     authors:
       - given-names: Sarah

@@ -1,10 +1,7 @@
-<!-- 
-Place links that you need to refer to multiple times across pages here. Delete
-any links that you are not going to use. 
- -->
+<!--
+Place links you refer to across multiple pages here as reference-style
+definitions, then use [text][key] in episodes. This lesson currently uses inline
+links, so this file is intentionally minimal.
+-->
 
-[pandoc]: https://pandoc.org/MANUAL.html
-[r-markdown]: https://rmarkdown.rstudio.com/
-[rstudio]: https://www.rstudio.com/
-[carpentries-workbench]: https://carpentries.github.io/sandpaper-docs/
 

@@ -52,3 +52,6 @@ po/*~
 # mac
 .DS_Store
 .gitignore
+
+# Deck project archived out of the built site; belongs in its own repo (do not commit here)
+dev/slide_assets/
