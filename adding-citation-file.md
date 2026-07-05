@@ -81,58 +81,80 @@ If you have ever edited a repository record, filled in a Dublin Core field, or t
 
 ## How to Create a CITATION.cff File
 
-You have two options:
+You will do this entirely in GitHub's web interface, in your fork. No terminal required. GitHub has this built in: name a new file `CITATION.cff` and it hands you a starter template to edit.
 
-### Option 1: Use cffinit (Recommended for beginners)
+### Create the file on GitHub
 
-The CITATION.cff community provides a web-based wizard:
+In your fork of `software-demo`:
 
-**Use cffinit:**
+1. Click **Add file → Create new file**.
+2. Name the file exactly `CITATION.cff` (it must live in the repository root, and the name is case-sensitive). As soon as you do, GitHub recognizes it and shows a banner with an **Insert example** button.
+3. Click **Insert example**. GitHub drops a valid, ready-to-edit template into the editor.
+4. Edit the placeholders: replace `YOUR_NAME_HERE`, add real **ORCIDs**, and set the `title`, `version`, `date-released`, and `url` to match your repository.
+5. Click **Commit changes…** and commit to your `main` branch.
 
-- Visit: <https://citation-file-format.github.io/cffinit/>
-- Fill out the form with your software details
-- Download the generated `CITATION.cff` file
-- Add it to your repository root
+![Name a new file `CITATION.cff`, click **Insert example** to drop in GitHub's template, edit the placeholder names and ORCIDs, then commit to `main`.](fig/create-citation-cff.png){alt="GitHub's create-new-file editor with the filename CITATION.cff, the Insert example button, the template in the edit pane, and the Commit changes button all highlighted and numbered one through four."}
 
-**Benefits:**
-
-- Interactive form guides you through required fields
-- Validates your file automatically
-- No need to memorize YAML syntax
-- More information on CFF: <https://citation-file-format.github.io/>
-
-### Option 2: Create it manually
-
-If you prefer to write it yourself:
-
-**Step 1: Create the file**
-
-In the root of your repository:
-
-```bash
-touch CITATION.cff
-```
-
-**Step 2: Add minimal metadata**
-
-Here's a complete example from the slides:
+The inserted template looks like this before you edit it:
 
 ```yaml
 cff-version: 1.2.0
 message: "If you use this software, please cite it as below."
 authors:
-  - family-names: "Dennis"
-    given-names: "Tim"
-    orcid: "https://orcid.org/0000-0002-1234-5678"
-title: "Biodiversity Analysis Toolkit"
-version: 0.1.0
-date-released: 2025-01-15
-url: "https://github.com/UC-OSPO-Network/software-demo"
+  - family-names: "YOUR_NAME_HERE"
+    given-names: "YOUR_NAME_HERE"
+    orcid: "https://orcid.org/0000-0000-0000-0000"
+title: "your-repository-name"
+version: 1.0.0
+doi: 10.5281/zenodo.1234
+date-released: 2026-07-05
+url: "https://github.com/YOUR-USERNAME/your-repository-name"
 ```
 
-**GitHub creates a "Cite this repository" button automatically!**
+::::::::::::::::::::::::::::::::::::: callout
 
-If your software does not yet have version tags, you may omit the version field until Episode 4 when you create releases.
+### Prefer a guided form? Use cffinit
+
+[**cffinit**](https://citation-file-format.github.io/cffinit/) is a web wizard that walks you field by field and validates as you type. It is worth using when your metadata is more involved: many authors, a `preferred-citation` for an associated paper, keywords, or a license you want recorded precisely. Fill out the form, copy the generated file, and paste it into the same `CITATION.cff` you create on GitHub. More on the format: <https://citation-file-format.github.io/>.
+
+::::::::::::::::::::::::::::::::::::::::::::::::
+
+A finished file looks like this:
+
+```yaml
+cff-version: 1.2.0
+title: "Biodiversity Analysis Toolkit"
+message: "If you use this software, please cite it as below."
+authors:
+  - family-names: "Dennis"
+    given-names: "Tim"
+    orcid: "https://orcid.org/0000-0001-6632-3812"
+  - family-names: "Phan"
+    given-names: "Leigh"
+    orcid: "https://orcid.org/0000-0002-8605-1444"
+  - family-names: "Otsuji"
+    given-names: "Reid"
+    orcid: "https://orcid.org/0000-0002-1842-0295"
+  - family-names: "Padilla"
+    given-names: "Karla"
+version: "0.1.0"
+doi: 10.5072/zenodo.123456
+date-released: 2026-02-01
+url: "https://github.com/UC-OSPO-Network/software-demo"
+repository-code: "https://github.com/UC-OSPO-Network/software-demo"
+```
+
+**Once you commit it to the default branch, GitHub adds a "Cite this repository" button automatically.**
+
+If your software does not yet have version tags, you may omit the `version` field until Episode 4 when you create releases.
+
+::::::::::::::::::::::::::::::::::::: callout
+
+### Check your work
+
+Compare your fork against the [`after-citation` reference branch][branch-after-citation] on the [demo repository][demo-repo]. It shows the target state after this episode: a `CITATION.cff` in the root and a "Cite this repository" button in the sidebar.
+
+::::::::::::::::::::::::::::::::::::::::::::::::
 
 ## Linking to a published paper
 
@@ -190,6 +212,8 @@ After you commit the file, GitHub:
 - parses and validates it
 - displays a “Cite this repository” panel
 - provides download options (BibTeX, EndNote, CFF, APA)
+
+![Once `CITATION.cff` is on the default branch, GitHub adds a **Cite this repository** link to the About sidebar that opens ready-made APA and BibTeX citations.](fig/cite-this-repository.png){alt="A GitHub repository sidebar with the 'Cite this repository' link highlighted and its citation panel open, showing APA and BibTeX tabs."}
 
 This feature works even without a DOI.
 

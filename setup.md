@@ -29,6 +29,8 @@ The lesson uses a demo repository called **`software-demo`**, and you work in yo
 3. Click **Fork**, then **Create fork**. The default settings are fine; you only need the `main` branch.
 4. You now have your own copy at `https://github.com/YOUR-USERNAME/software-demo`. Its `main` branch is the bare **starting state** — no license, citation file, release, or metadata. That is intentional; you will build it up over the lesson.
 
+![On GitHub's "Create a new fork" page, keep **Copy the main branch only** checked and click **Create fork**.](fig/fork-repository.png){alt="GitHub Create a new fork page for software-demo, with the 'Copy the main branch only' checkbox and the green 'Create fork' button highlighted."}
+
 ::::::::::::::::::::::::::::::::::::: callout
 
 ### Checking your work: reference branches

@@ -42,8 +42,8 @@ Teach from **your own fork** of the demo repository, exactly as learners do, so 
 
 To show the "before and after" contrast, use the branch dropdown in the browser:
 
-- **Before** — the `main` branch: a sparse, hard-to-reuse project
-- **After** — the `after-metadata` branch: a clear, licensed, citable, well-documented project
+- **Before** — the [`main` branch][branch-main]: a sparse, hard-to-reuse project
+- **After** — the [`after-metadata` branch][branch-after-metadata]: a clear, licensed, citable, well-documented project
 
 Use **progressive disclosure**: show only the top-level file listing first, then open individual files as you discuss them. No terminal or `git checkout` is needed; the reference branches are there to view and compare against, not to build on.
 

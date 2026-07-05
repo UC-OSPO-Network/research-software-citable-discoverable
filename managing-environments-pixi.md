@@ -10,7 +10,7 @@ exercises: 10
 
 This episode covers environment management using `pixi`. It is **optional**; you can skip it and move directly to [Improving Metadata and Discoverability](improving-metadata-discoverability.md).
 
-If you skip this episode, you still complete every citation step. Unlike the rest of the lesson, which runs entirely in the browser, this episode requires tools installed on your own computer (**pixi** and a **terminal**) and a local clone of your fork. Its files live only in the `optional-pixi` reference branch, not in your main project, so skipping it leaves nothing unfinished. Confirm with your instructor that you're running the full track before installing anything.
+If you skip this episode, you still complete every citation step. Unlike the rest of the lesson, which runs entirely in the browser, this episode requires tools installed on your own computer (**pixi** and a **terminal**) and a local clone of your fork. Its files live only in the [`optional-pixi` reference branch][branch-optional-pixi], not in your main project, so skipping it leaves nothing unfinished. Confirm with your instructor that you're running the full track before installing anything.
 
 **Other environment tools:** `conda`, `mamba`, `pip`/`venv`, and `renv` (for R) all serve the same purpose. The concepts here apply to any environment manager; pixi is used because it handles Python, R, and other languages with a single tool and generates an automatic lockfile.
 
@@ -40,7 +40,7 @@ If you skip this episode, you still complete every citation step. Unlike the res
 
 This episode is last in the lesson order and is the only one that leaves the browser: it needs pixi and a terminal on the learner's own machine, plus a local clone of their fork. Because the rest of the lesson is browser-only, confirm during setup which learners are prepared for the full track. Anyone who only wants their code cited can stop after the metadata episode with a complete, citable repository.
 
-The `optional-pixi` reference branch builds on `after-metadata`, so it shows pixi added to an already-finished project. Have learners view it in the browser for the target `pixi.toml` and lockfile, then work along in their local clone. Nothing in the main project chain depends on pixi, so skipping this episode leaves no loose ends in anyone's repository.
+The [`optional-pixi` reference branch][branch-optional-pixi] builds on [`after-metadata`][branch-after-metadata], so it shows pixi added to an already-finished project. Have learners view it in the browser for the target `pixi.toml` and lockfile, then work along in their local clone. Nothing in the main project chain depends on pixi, so skipping this episode leaves no loose ends in anyone's repository.
 
 **Pixi not installed?** Learners can follow the concepts without a working pixi installation. The key idea is that a lockfile pins exact dependency versions. That's the transferable lesson, not the tool itself.
 

@@ -169,6 +169,8 @@ Zenodo detects the release, downloads and archives a snapshot of the repository 
 - Click "Log in with GitHub"
 - Authorize Zenodo to access your repositories
 
+![Zenodo's GitHub page walks you through the same three steps: flip the switch on a repository, create a release, and get a DOI badge.](fig/zenodo-get-started.png){alt="Zenodo Sandbox 'Get started' panel showing three numbered steps: Flip the switch, Create a release, and Get the badge."}
+
 **Step 2: Enable your repository (toggle ON)**
 
 - Go to **Settings → GitHub** in Zenodo Sandbox
@@ -176,13 +178,18 @@ Zenodo detects the release, downloads and archives a snapshot of the repository 
 - Toggle the switch to **ON** (green)
 - This tells Zenodo to watch for new releases
 
-**Step 3: Create GitHub Release (tag v1.0.0)**
+![In Zenodo Sandbox under **Settings → GitHub**, find your repository and flip its switch to ON so Zenodo archives each new release.](fig/zenodo-github-toggle.png){alt="Zenodo Sandbox GitHub repositories list with the software-demo row highlighted and its toggle switched ON."}
+
+**Step 3: Create GitHub Release (tag v0.1.0)**
 
 - Go to your GitHub repository
 - Click **Releases → Draft a new release**
-- Create a tag: `v1.0.0`
+- Create a tag: `v0.1.0`
 - Add release notes describing what's in this version
 - Click **Publish release**
+
+![On GitHub's "Draft a new release" form: choose or create a tag such as `v0.1.0`, add a release title, describe what's in the release, then click **Publish release** (below the fold).](fig/draft-a-release.png){alt="GitHub's Draft a new release form with the tag selector, release title field, and release notes editor highlighted and numbered one through three."}
+
 
 **Step 4: Zenodo auto-archives and mints DOI**
 
@@ -220,6 +227,14 @@ doi: 10.5281/zenodo.123456
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 ::::::::::::::::::::::::::::::::::::: callout
+
+::::::::::::::::::::::::::::::::::::: callout
+
+### Check your work
+
+Compare your fork against the [`after-release` reference branch][branch-after-release] on the [demo repository][demo-repo]. It shows the target state after this episode: a tagged release and a `CITATION.cff` updated with the DOI.
+
+::::::::::::::::::::::::::::::::::::::::::::::::
 
 ### Supporting others
 
