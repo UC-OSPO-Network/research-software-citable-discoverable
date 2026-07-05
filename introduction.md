@@ -1,26 +1,37 @@
 ---
-title: "Introduction: The \"Works on My Machine\" Trap"
+title: "Introduction: Software as a Citable Research Output"
 teaching: 18
-exercises: 8
+exercises: 7
 ---
 
 :::::::::::::::::::::::::::::::::::::: questions
 
-- Why does research software often fail to run on other machines?
-- What is the "bus factor" problem in research software?
-- How do FAIR4RS principles address these challenges?
+- Why is research software so often uncredited and hard to find?
+- Why isn't a GitHub URL a real software citation?
+- How do FAIR4RS principles make software citable and discoverable?
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 ::::::::::::::::::::::::::::::::::::: objectives
 
-- Recognize common barriers to software reuse and reproducibility
-- Understand how FAIR4RS principles apply to research software
-- Identify the key components needed to make software citable and discoverable
-- See what a "complete" FAIR research software project looks like
+- Explain why research software is often uncredited, unfindable, and at risk of loss
+- Explain how FAIR4RS principles apply to research software
+- Identify the key components that make software citable and discoverable
 - **Supporting others:** explain to a researcher, in their terms, why these practices are worth the effort
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
+
+## Software Is the Missing Scholarly Output
+
+A faculty member emails: *"The journal accepted my paper, but they want a citable version of the code, with a DOI. How do I do that?"*
+
+Ten years ago the same question arrived about datasets, and the library built the answer. When a journal article is published, a whole system catches it: a persistent identifier, a catalog record, a citation format, a preservation copy. Datasets got that treatment over the last fifteen years. Software — the third thing modern research runs on — mostly hasn't. This lesson is about extending the system you already run, identifiers, metadata, preservation, and discoverability, to the one research output it has been quietly missing.
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: instructor
+
+**Why this framing works with researchers:** they do not adopt these practices because they are virtuous. They adopt them because journals are starting to require citable code deposits, because funders ask, and because a DOI turns invisible labor into a countable, citable output for their CV. Lead with that: this is credit they are currently leaving on the table.
+
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
 ::::::::::::::::::::::::::::::::::::: callout
 
@@ -35,38 +46,13 @@ The hands-on steps are the same either way. You will work through a real reposit
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
-## The "Works on My Machine" Trap
+::::::::::::::::::::::::::::::::::::: callout
 
-You send your code to a colleague...
+### New to any of these terms?
 
-- "It crashes on line 1" 😞
-- "I can't install the dependencies"
-- "Which Python version did you use?"
+Every specialized term in this lesson — bus factor, FAIR4RS, DOI, CFF, ORCID, SWHID, and more — is defined on the [Reference / Glossary page](../learners/reference.md). Keep it open in a tab as you work.
 
-Here's what they see:
-
-```output
-$ python src/analysis.py
-
-Traceback (most recent call last):
-  File "analysis.py", line 1, in <module>
-    import numpy as np
-ModuleNotFoundError: No module named 'numpy'
-```
-
-**This is where most research software lives. Fragile.**
-
-:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: instructor
-
-This concrete error message resonates with learners who have experienced dependency issues. Pause here to ask: "Has anyone experienced this problem?" This builds connection and motivation.
-
-::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-
-## The Bus Factor Problem
-
-**The Problem:** Code works perfectly on ONE laptop. If it disappears, the science is gone.
-
-**The Bus Factor:** The number of people who need to be "hit by a bus" before your project becomes unmaintainable.
+::::::::::::::::::::::::::::::::::::::::::::::::
 
 ::::::::::::::::::::::::::::::::::::: callout
 
@@ -76,26 +62,13 @@ A 2021 analysis found that over **48% of research articles** mention software, b
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
-::::::::::::::::::::::::::::::::::::: callout
+## A GitHub URL Isn't a Citation
 
-### Why This Matters for Research
-
-Research software that lives only on one person's machine:
-
-- Cannot be verified or reproduced
-- Cannot be built upon by others
-- Cannot receive proper academic credit
-- Disappears when that person moves on
-
-::::::::::::::::::::::::::::::::::::::::::::::::
-
-## The Software Citation Problem
-
-Even when software works, it often doesn't get credited. Most researchers cite code by dropping a URL into a paper:
+Even when software runs perfectly, it usually doesn't get credited. Most researchers "cite" code by dropping a URL into a paper:
 
 ### The wrong way
 
-> "We used the analysis script from https://github.com/jt14den/software-demo"
+> "We used the analysis script from https://github.com/UC-OSPO-Network/software-demo"
 
 **Problems:**
 
@@ -104,13 +77,13 @@ Even when software works, it often doesn't get credited. Most researchers cite c
 - No formal credit; the author's name isn't even visible
 - Cannot appear in citation metrics
 
+A URL is a shelf location, not a catalog record. Citing code this way is like citing a book as "third shelf, Powell Library reading room." It tells you where the thing sat on one particular day. Move the book, close the room, and the reference is dead.
+
 **This isn't hypothetical. Forges close.**
 
 - **Gitorious** shut down in 2015, making thousands of projects unreachable overnight
 - **Google Code** shut down in 2016, same result
 - A username change, a repo rename, or a deleted account breaks any URL-based citation just as completely
-
-That citation is now dead.
 
 ### The right way
 
@@ -124,6 +97,53 @@ That citation is now dead.
 
 The fix is a `CITATION.cff` file and a DOI, both of which you'll create in this lesson.
 
+::::::::::::::::::::::::::::::::::::: callout
+
+### Software is the instrument
+
+Nobody publishes results from a telescope without saying which telescope, which configuration, which night. Software is the instrument for computational work. "We used a script," with no version, license, or identifier, is a methods section with the instrument blacked out.
+
+::::::::::::::::::::::::::::::::::::::::::::::::
+
+## Software Has a Durability Problem
+
+Credit is the first problem; survival is the second. Most research code lives on one laptop, in one person's head, under one person's account.
+
+**The Bus Factor:** the number of people who need to be "hit by a bus" before a project becomes unmaintainable. For most research code the answer is one.
+
+Restated for collections people: how many people would have to leave before this software becomes unrecoverable? A library would never accept a collection with a bus factor of one, and that is exactly what an un-deposited, un-documented repository is. Depositing a release into an archive like Zenodo is the software equivalent of accessioning: it moves the object out of a personal account and into a preservation system that outlives the individual.
+
+::::::::::::::::::::::::::::::::::::: callout
+
+### Why this matters for research
+
+Research software that lives only on one person's machine:
+
+- Cannot be verified or reproduced
+- Cannot be built upon by others
+- Cannot receive proper academic credit
+- Disappears when that person moves on
+
+::::::::::::::::::::::::::::::::::::::::::::::::
+
+## Can Anyone Actually Run It?
+
+There is a third problem, and it is the one researchers feel first: software that runs on its author's machine and nowhere else. With undocumented dependencies and an unstated language version, a colleague who tries to run it sees something like:
+
+```output
+$ python src/analysis.py
+
+ModuleNotFoundError: No module named 'numpy'
+```
+
+For reuse to be *real*, someone has to be able to run the code, not just find and cite it. This is the reproducibility layer of the problem, and it is the focus of the **optional** environment episode at the end of the lesson. The core lesson makes software **citable and discoverable**; the optional episode makes it **runnable**.
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: instructor
+
+Most librarians and support staff in the room will not have hit this exact error themselves, so don't lean on it as a shared war story. Frame it instead as the barrier researchers describe when code "doesn't work," and flag that the mechanics live in the optional pixi episode, so a citation-focused workshop can acknowledge the problem and move on.
+
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
 ## The Fix: FAIR4RS Principles
 
 The solution is to apply **FAIR Principles for Research Software (FAIR4RS)**:
@@ -132,7 +152,7 @@ The solution is to apply **FAIR Principles for Research Software (FAIR4RS)**:
 → DOI, CITATION.cff, metadata
 
 **A - Accessible:** Retrievable via standard protocols
-→ Public GitHub, git clone, Zenodo
+→ Public GitHub, archived on Zenodo
 
 **I - Interoperable:** Exchanges data with other tools
 → Standard formats, documented dependencies
@@ -140,56 +160,44 @@ The solution is to apply **FAIR Principles for Research Software (FAIR4RS)**:
 **R - Reusable:** Can be executed AND modified
 → LICENSE, README, environment files
 
-::::::::::::::::::::::::::::::::::::: callout
+::::::::::::::::::::::::::::::::::::: checklist
 
 ### What You're Doing TODAY
 
-In this workshop, you will transform a fragile research script into a FAIR software project by adding:
+In this workshop, you will turn a bare research repository into a citable, discoverable software project by adding:
 
-✅ **License** - So others can legally use your work
-✅ **Environment** - So it runs on any machine
-✅ **Citation** - So you get academic credit
-✅ **README** - So people can find and use it
+✅ **License** — so others can legally reuse your work
+✅ **Citation (CITATION.cff + DOI)** — so you get academic credit
+✅ **README & metadata** — so people can find and understand it
+✅ **Environment** *(optional)* — so it also runs on any machine
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 ## What "Done Right" Looks Like
 
-### The "Before" State (Branch: 01-start)
+### The "Before" State (`main`)
 
-Check out the initial state of our demo repository:
-
-```bash
-cd software-demo
-git checkout 01-start
-```
-
-You'll see:
+Open your fork of the demo repository. Its `main` branch is the starting state:
 
 - ❌ No LICENSE
-- ❌ Vague environment (`python = "*"`)
 - ❌ No citation information
 - ❌ No DOI
 - ❌ Minimal README
+- ❌ No community or metadata files
 
-### The "After" State (Branch: 06-metadata)
+### The "After" State (`after-metadata`)
 
-Now look at the final state:
-
-```bash
-git checkout 06-metadata
-```
-
-Notice what's been added:
+In the branch dropdown, switch to the `after-metadata` reference branch to see the finished repository:
 
 - ✅ **LICENSE** (BSD-3-Clause)
-- ✅ **pixi.toml** (documented environment)
 - ✅ **CITATION.cff** (citation metadata)
 - ✅ **README.md** (complete documentation)
 - ✅ **CONTRIBUTING.md** (contribution guidelines)
 - ✅ **CODE_OF_CONDUCT.md** (community standards)
 - ✅ **.zenodo.json** (Zenodo metadata)
 - ✅ DOI badge in README
+
+A documented, reproducible **environment** is the one FAIR piece not shown here. It's covered in the optional pixi episode and lives on the `optional-pixi` branch.
 
 **This is what makes software Findable, Accessible, Interoperable, and Reusable.**
 
@@ -214,34 +222,7 @@ Check their repository and notice:
 
 ::::::::::::::::::::::::::::::::::::: challenge
 
-## Challenge: Reflect on Your Own Code
-
-Think about a script or analysis you've written recently:
-
-1. Could someone else run it on their machine today? What would they need?
-2. If you moved to a new institution, could you still access and use it?
-3. If someone wanted to cite your code in a paper, how would they do it?
-
-Share one challenge you've faced with code sharing or reuse.
-
-:::::::::::::::::::::::: solution
-
-Common challenges include:
-
-- No documentation of dependencies or versions
-- Code only works with specific file paths on your machine
-- Missing LICENSE file (so others legally can't reuse it)
-- No citation information available
-- Undocumented assumptions about the computing environment
-
-All of these will be addressed in this lesson!
-
-:::::::::::::::::::::::::::::::::
-:::::::::::::::::::::::::::::::::
-
-::::::::::::::::::::::::::::::::::::: challenge
-
-## Challenge 2: Who Gets Credit?
+## Challenge: Who Gets Credit?
 
 You created a Python script used to generate results in a collaborative paper. The paper cites the dataset but not the script. What's missing, and what would a proper software citation look like?
 
@@ -254,28 +235,54 @@ A proper citation would include: author(s), software title, version, repository 
 :::::::::::::::::::::::::::::::::
 :::::::::::::::::::::::::::::::::
 
+::::::::::::::::::::::::::::::::::::: challenge
+
+## Challenge 2: Reflect on a Repository
+
+Think about a repository you've written, inherited, or been asked about:
+
+1. If someone wanted to cite it in a paper, how would they do it today?
+2. If the author moved to a new institution, could you still find and access it?
+3. Could someone else run it on their machine? What would they need?
+
+Share one challenge you've seen with software citation, sharing, or reuse.
+
+:::::::::::::::::::::::: solution
+
+Common gaps include:
+
+- No citation information available (no CITATION.cff, no DOI)
+- Missing LICENSE file (so others legally can't reuse it)
+- The only copy lives in one personal account
+- No documentation of dependencies or versions
+
+All of these will be addressed in this lesson.
+
+:::::::::::::::::::::::::::::::::
+:::::::::::::::::::::::::::::::::
+
 ## What We'll Build Together
 
-Starting from the minimal `01-start` state, you will progressively add each component:
+Starting from the bare `main` state in your fork, you'll progressively add each component:
 
-- **Episode 1:** Sharing the demo repository (understanding `01-start`)
-- **Episode 2:** Adding an open-source license (`02-license`)
-- **Episode 3:** Managing environments with pixi (`03-pixi`) *(optional)*
-- **Episode 4:** Creating a CITATION.cff file (`04-citation`)
-- **Episode 5:** Minting a DOI and creating releases (`05-release`)
-- **Episode 6:** Improving metadata and discoverability (`06-metadata`)
+- **Episode 1:** Sharing research software (exploring the starting repository)
+- **Episode 2:** Adding an open-source license
+- **Episode 3:** Creating a CITATION.cff file
+- **Episode 4:** Minting a DOI and creating releases
+- **Episode 5:** Improving metadata and discoverability
+- **Episode 6:** Managing environments with pixi *(optional, requires a local install)*
 - **Episode 7:** Wrap-up and reflection
 
-Each episode builds on the previous one, following the branch progression in the demo repository.
+Each episode adds one piece to your fork's `main` branch. View-only reference branches (`after-license`, `after-citation`, `after-release`, `after-metadata`) let you check your work at any point.
 
 ::::::::::::::::::::::::::::::::::::: keypoints
 
-- Research software often fails due to the "works on my machine" trap
-- The bus factor problem means knowledge is lost when people leave
-- Software citations using URLs break over time; DOIs are permanent and version-specific
-- FAIR4RS principles (Findable, Accessible, Interoperable, Reusable) provide a framework
-- Making software FAIR requires: LICENSE, environment files, citation metadata, and documentation
-- A CITATION.cff file is the simplest way to make software citable
-- The demo repository progresses through branches: 01-start → 06-metadata
+- Software is a research output the scholarly system has mostly failed to catch: uncredited, hard to find, and easily lost
+- A GitHub URL is not a citation: URLs rot, pin no version, and give no formal credit, while a DOI is permanent and version-specific
+- Undeposited software has a "bus factor" problem, and forges do shut down, so durability requires archiving
+- FAIR4RS principles (Findable, Accessible, Interoperable, Reusable) provide the framework
+- Making software citable and discoverable centers on a LICENSE, a CITATION.cff file, a release with a DOI, and rich metadata
+- Reproducible environments ("works on my machine") are the optional final layer
+- You build up your own fork step by step; view-only reference branches show the target state at each stage
 
 ::::::::::::::::::::::::::::::::::::::::::::::::

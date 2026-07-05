@@ -19,7 +19,7 @@ A conference-style slide deck of this material exists as a **separate artifact**
 - **Slides (PDF, view/print):** [2026-UCLDW-sharing-software.pdf](https://github.com/UC-OSPO-Network/research-software-citable-discoverable/blob/main/instructors/2026-UCLDW-sharing-software.pdf)
 - **Slides (PowerPoint, editable source):** [2026-UCLDW-sharing-software.pptx](https://github.com/UC-OSPO-Network/research-software-citable-discoverable/blob/main/instructors/2026-UCLDW-sharing-software.pptx)
 
-The deck and this lesson are maintained independently. The slides are the canonical *delivery* artifact (designed in PowerPoint); the episodes are the canonical *hands-on workbook*. Earlier draft slide material (Marp, scripts, asset captures) lives in `slide_assets/` and is not maintained.
+The deck and this lesson are maintained independently. The slides are the canonical *delivery* artifact (designed in PowerPoint); the episodes are the canonical *hands-on workbook*. Earlier draft slide material (Marp, scripts, asset captures) is archived under `dev/slide_assets/` (kept out of the built site) and is not maintained.
 
 ---
 
@@ -52,50 +52,49 @@ Seeded **Predict** challenges (e.g., "what will GitHub do when you commit `CITAT
 
 ## Choosing a Track
 
-### Full track (~3.5 hours)
+Episode timings sum to about **3.25 hours** for the citation-focused track and **3.75 hours** for the full track. These are content minutes (teaching + exercises); add breaks, setup, and Q&A to get wall-clock time, so budget a **half day** either way. The per-episode `teaching`/`exercises` values are a starting point calibrated against mature Carpentries lessons; adjust them after your first run.
 
-All episodes in order. Suitable when reproducibility and environment management are part of the workshop goals, or when your audience includes researchers who maintain code others need to run.
+### Full track (~3.75 hours)
 
-### Citation-focused track (~2.5 hours)
+All episodes in order, including the optional pixi episode at the end. Suitable when reproducibility and environment management are part of the workshop goals, or when your audience includes researchers who maintain code others need to run.
 
-Skip the pixi episode entirely. Suitable for a shorter workshop or when learners just want their code cited, not necessarily reproduced. The FAIR4RS checklist in the wrap-up still works; simply omit the environment/interoperability row or note it as "future work."
+### Citation-focused track (~3.25 hours)
+
+Skip the pixi episode entirely. Suitable when learners just want their code cited, not necessarily reproduced. The FAIR4RS checklist in the wrap-up still works; omit the environment/interoperability row or note it as "future work."
 
 ---
 
-## The Branch Structure and Pixi
+## Set up: teach from your own fork
 
-The demo repository (`UC-OSPO-Network/software-demo`) uses numbered branches that reflect the original episode order, where pixi came *before* the citation file:
+The whole lesson runs in the browser on a fork of `UC-OSPO-Network/software-demo`. Set yourself up exactly the way learners do, so you and the room share the same starting state and the same clicks.
 
-```
-01-start → 02-license → 03-pixi → 04-citation → 05-release → 06-metadata
-```
+**Before the workshop:**
 
-The lesson episode order has been updated so pixi now comes *after* the release/DOI episode. This creates a mismatch between branch numbers and lesson order that instructors need to manage.
+1. Fork `UC-OSPO-Network/software-demo` to your own account (or a throwaway teaching account). The `main`-only default is fine.
+2. Confirm your fork's `main` is the bare **starting state**: `README.md`, `requirements.txt`, and `src/analysis.py`, with no license, citation, release, or metadata.
+3. Have the upstream repo open in a second browser tab so you can show the `after-*` reference branches on demand.
+4. If you're teaching the full (pixi) track, also clone your fork locally and confirm `pixi --version`.
 
-### Full track: branch navigation
+**During the workshop**, demonstrate each step live in your fork and let learners mirror it in theirs. Everyone commits to their own `main`. Because you forked the same starting state, your screen and theirs stay in sync.
 
-| Lesson episode | Branch to check out |
+> **Use a fresh fork for each teaching.** Delete and re-fork (or reset) between workshops so you always start from the bare state, not last session's finished repo.
+
+## The reference branches
+
+The upstream repository keeps view-only **reference branches** showing the target state after each episode. Learners never build on them; they're an answer key and a catch-up aid.
+
+| Reference branch | State it shows |
 |---|---|
-| Sharing Software | `01-start` |
-| Open Source License | `02-license` |
-| Adding a CITATION.cff File | `02-license` → work done live, result is `04-citation` |
-| Making Your Software Citable | `04-citation` → work done live, result is `05-release` |
-| Managing Environments (pixi) | `03-pixi` (see note below) |
-| Improving Metadata | `05-release` → work done live, result is `06-metadata` |
+| `main` | starting state (what everyone forks) |
+| `after-license` | after Episode 2 (license added) |
+| `after-citation` | after Episode 3 (CITATION.cff added) |
+| `after-release` | after Episode 4 (release + DOI) |
+| `after-metadata` | after Episode 5 (full metadata, the finished repo) |
+| `optional-pixi` | the optional pixi episode (branches off `after-metadata`) |
 
-**Note on pixi branch:** `03-pixi` sits earlier in the demo repo history than `04-citation`, but that's fine. Learners are just exploring it to see what a locked environment looks like; they don't need to build on it. Have them check out `03-pixi` to follow along, then return to `05-release` before the metadata episode.
+**Why there's no per-episode "check out this branch" step anymore.** In the old command-line version, learners `git checkout`ed a branch to teleport their working state forward when they fell behind. The web workflow has no equivalent, and it doesn't need one: each episode adds an **independent** file (license, then citation, then release, then metadata), so a learner who misses one is never *blocked*, just less complete. To catch up, they open the relevant reference branch upstream and copy the one file they're missing into their own `main`. Point this out once, early, then let the reference branches sit in the background.
 
-### Citation-focused track: branch navigation
-
-| Lesson episode | Branch to check out |
-|---|---|
-| Sharing Software | `01-start` |
-| Open Source License | `02-license` |
-| Adding a CITATION.cff File | `02-license` → result is `04-citation` |
-| Making Your Software Citable | `04-citation` → result is `05-release` |
-| Improving Metadata | `05-release` → result is `06-metadata` |
-
-**Important:** `04-citation` and later branches contain pixi files (`pixi.toml`, `pixi.lock`) even though learners haven't done the pixi episode. Acknowledge this briefly: *"You'll see some pixi files in the repo; those are from an optional episode on environment management. You can ignore them for now."*
+**Pixi is out of the main chain.** Unlike the old demo repo, the `after-*` branches contain **no** pixi files. Pixi lives only on `optional-pixi`, which branches off `after-metadata`. So learners on the citation-focused track never see stray `pixi.toml`/`pixi.lock` files, and there's nothing to explain away.
 
 ---
 

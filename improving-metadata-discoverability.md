@@ -1,7 +1,7 @@
 ---
 title: "Improving Metadata and Discoverability"
-teaching: 25
-exercises: 12
+teaching: 20
+exercises: 10
 ---
 
 :::::::::::::::::::::::::::::::::::::: questions
@@ -20,27 +20,9 @@ exercises: 12
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
-::::::::::::::::::::::::::::::::::::: callout
-
-### Episode Branch: `05-release` → `06-metadata`
-
-This episode completes the repository with full documentation and metadata.
-
-**Starting point:**
-```bash
-git checkout 05-release  # Start with release tagged
-```
-
-**After this episode:**
-```bash
-git checkout 06-metadata # See the complete FAIR repository
-```
-
-**Catch-up point:** If joining now, run `git checkout 05-release`
-
-::::::::::::::::::::::::::::::::::::::::::::::::
-
 ## Introduction
+
+A Zenodo record with a bare title and no keywords is a catalog record with no subject headings: retrievable if you already know it exists, invisible if you don't. Most research software sits behind exactly that kind of record. This episode is the one where the lesson lands fully inside a library audience's expertise, because making things findable through description is what libraries do. The systems are GitHub topics, Zenodo fields, and a README instead of a catalog, but the judgment, what would a seeker search for and does this record contain it, is unchanged.
 
 Clear metadata helps others understand, evaluate, and *find* your software.  
 It also reduces the cognitive effort for future users because essential information is organized and easy to locate.
@@ -59,6 +41,8 @@ This episode brings these together. You will describe your project in consistent
 Encourage learners to compare well-described repositories with sparse ones.  
 Highlight how even small metadata additions increase visibility in GitHub search, Zenodo indexing, and DataCite services.
 
+**Why this episode matters:** this is where a librarian in the room can visibly outperform the researchers, which matters for how the campus sees the service. Researchers usually treat metadata as a form to rush through; a scholcomm professional treats it as the mechanism of discovery. The pitch to the researcher is blunt: the work is finished, and five minutes of description determines whether anyone ever finds it.
+
 ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
 ## What counts as useful metadata?
@@ -75,7 +59,7 @@ Good metadata answers predictable questions with minimal effort from the reader:
   - funding source  
   - project website  
 
-You may add these in multiple places, but they should remain consistent.
+You may add these in multiple places, but they should remain consistent. This is authority control: the title, authors, and description should read the same in the README, the CITATION.cff, and the Zenodo record, for the same reason a name reads the same across catalog records. When they drift, indexes treat one piece of software as several, and its citations scatter.
 
 
 ## GitHub-specific discoverability features
@@ -96,6 +80,8 @@ GitHub uses structured metadata to improve search ranking and cross-repository l
 
 If users can't understand what it does, how to install it, or how to use it in **30 seconds** → they leave.
 
+A collection without a finding aid can only be used by someone with time to read every box. A repo without a real README can only be used by its author. The 30-second rule is scope-and-content note discipline applied to code.
+
 ### README Structure (7 Essential Sections)
 
 The [UC OSPO README Guide](https://ucospo.net/oss-resources/template-guides/readme-guide/) *(UC-specific)* recommends this standard structure:
@@ -110,7 +96,7 @@ The [UC OSPO README Guide](https://ucospo.net/oss-resources/template-guides/read
 
 ### Before vs. After Example
 
-**❌ Before (Branch: 01-start)**
+**❌ Before (`main`, starting state)**
 
 ```markdown
 # Biodiversity Analysis Toolkit
@@ -120,7 +106,7 @@ A script.
 No description. No instructions. No citation. Unusable.
 ```
 
-**✅ After (Branch: 06-metadata)**
+**✅ After (`after-metadata`)**
 
 ```markdown
 # Biodiversity Analysis Toolkit
@@ -128,18 +114,18 @@ No description. No instructions. No citation. Unusable.
 Analysis tools for biodiversity research.
 
 ## Features
-- Reproducible (pixi) • Citable (DOI) • Open source (BSD-3)
+- Citable (DOI) • Open source (BSD-3) • Documented
 
 ## Getting Started
 ```bash
-pixi install
-pixi run python src/analysis.py
+pip install -r requirements.txt
+python src/analysis.py
 ```
 
 ## Citation
 [zenodo.org/badge/DOI/10.5281/zenodo.123456.svg]
 
-License: BDS-3 - see LICENSE file
+License: BSD-3 - see LICENSE file
 ```
 
 **Professional. Citable. Usable.**
@@ -150,7 +136,7 @@ License: BDS-3 - see LICENSE file
 2. **Show, don't tell** → Include code examples
 3. **Link metadata** → Add DOI badge, link CITATION.cff
 4. **Keep updated** → Refresh when features change
-5. **Use a template** → [UC OSPO Templates](https://github.com/UC-OSPO-Network/templates) *(UC-specific)* or [Awesome README](https://github.com/matiassingers/awesome-readme)
+5. **Use a template** → [UC OSPO Templates][uc-templates] *(UC-specific)* or [Awesome README][awesome-readme]
 
 **Every tip maps to FAIR principles.**
 
@@ -158,7 +144,7 @@ License: BDS-3 - see LICENSE file
 
 ### Don't Reinvent the Wheel
 
-- [Awesome README](https://github.com/matiassingers/awesome-readme): curated examples from real open-source projects
+- [Awesome README][awesome-readme]: curated examples from real open-source projects
 - [UC OSPO README Template](https://github.com/UC-OSPO-Network/templates/blob/main/README.md) *(UC-specific)*: ready-to-use template
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
@@ -185,7 +171,7 @@ The `CONTRIBUTING.md` file is the first place new contributors look to see if a 
 - **Pull Request Lifecycle**: What happens after a contribution is submitted
 
 ### CODE_OF_CONDUCT.md → Behavioral standards
-A `CODE_OF_CONDUCT.md` establishes behavioral expectations and ensures a safe, inclusive environment for all researchers. The standard choice is the [Contributor Covenant](https://www.contributor-covenant.org/), widely adopted across open-source projects. *(See also: [UC OSPO Code of Conduct Guide](https://ucospo.net/oss-resources/template-guides/code-of-conduct-guide/) *(UC-specific)*)*
+A `CODE_OF_CONDUCT.md` establishes behavioral expectations and ensures a safe, inclusive environment for all researchers. The standard choice is the [Contributor Covenant][contributor-covenant], widely adopted across open-source projects. *(See also: [UC OSPO Code of Conduct Guide](https://ucospo.net/oss-resources/template-guides/code-of-conduct-guide/) *(UC-specific)*)*
 
 ### CHANGELOG.md → Version history
 A `CHANGELOG.md` documents what changed between versions. This helps users understand:
@@ -201,10 +187,10 @@ A `CHANGELOG.md` documents what changed between versions. This helps users under
 
 ### Templates Available
 
-- [Choose a License](https://choosealicense.com/): license selection
-- [Contributor Covenant](https://www.contributor-covenant.org/): code of conduct template
+- [Choose a License][choosealicense]: license selection
+- [Contributor Covenant][contributor-covenant]: code of conduct template
 - [Keep a Changelog](https://keepachangelog.com/): changelog format guide
-- [UC OSPO Template Repository](https://github.com/UC-OSPO-Network/templates) *(UC-specific)*: ready-to-use CONTRIBUTING.md, CODE_OF_CONDUCT.md, CHANGELOG.md, README.md
+- [UC OSPO Template Repository][uc-templates] *(UC-specific)*: ready-to-use CONTRIBUTING.md, CODE_OF_CONDUCT.md, CHANGELOG.md, README.md
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -264,7 +250,7 @@ Metadata work is where libraries already have deep expertise, so this is the mos
 A rough priority order when a record or repo is thin:
 
 1. A readable **description** (most discovery systems show this first; an empty one is the biggest single loss).
-2. **Author ORCIDs**, so credit attaches to people, not just names.
+2. **Author ORCIDs**, so credit attaches to people, not just names. Every J. Chen on Zenodo is indistinguishable without one, and software credit is hard enough to accumulate without splitting it across identities.
 3. **Keywords** reused consistently across GitHub Topics, `CITATION.cff`, and Zenodo.
 4. **Related works** linking the software to its paper, dataset, and grant.
 
@@ -311,6 +297,24 @@ After generating a DOI in the earlier episode, expand its metadata:
 
 :::::::::::::::::::::::::::::::::
 :::::::::::::::::::::::::::::::::
+
+::::::::::::::::::::::::::::::::::::: challenge
+
+### Which change makes it discoverable?
+
+A researcher's tool has been public on GitHub for a year, but no one outside their lab has ever found it. The repository has a one-line README, no topics, and a Zenodo deposit with only a title. Which **single** change will do the most to make the software discoverable?
+
+A. Add collaborators so the repository is "more public"
+B. Add descriptive GitHub topics, plus matching keywords and a description on the Zenodo record
+C. Push more frequent commits so the repository looks active
+D. Rename the repository to something shorter and catchier
+
+:::::::::::::::::::::::: solution
+
+**B.** Discovery happens through *description*, not access level or activity. Topics, keywords, and descriptions are what GitHub search, Zenodo, and DataCite-fed indexes actually match a query against. The repo is already public, so **A** adds nothing to discoverability; commit frequency (**C**) does not affect search ranking for discovery; and a shorter name (**D**) is cosmetic. This is the same reason a catalog record with no subject headings is nearly invisible: findability comes from the metadata, not from the object's mere existence.
+
+:::::::::::::::::::::::::::::::::
+::::::::::::::::::::::::::::::::::::::::::::::::
 
 ::::::::::::::::::::::::::::::::::::: keypoints
 
