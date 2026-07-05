@@ -175,10 +175,10 @@ Treat this as a preview, not a lecture. Learners will understand Findable, Acces
 
 In this workshop, you will turn a bare research repository into a citable, discoverable software project by adding:
 
-✅ **License** — so others can legally reuse your work
-✅ **Citation (CITATION.cff + DOI)** — so you get academic credit
-✅ **README & metadata** — so people can find and understand it
-✅ **Environment** *(optional)* — so it also runs on any machine
+- ✅ **License** — so others can legally reuse your work
+- ✅ **Citation (CITATION.cff + DOI)** — so you get academic credit
+- ✅ **README & metadata** — so people can find and understand it
+- ✅ **Environment** *(optional)* — so it also runs on any machine
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 

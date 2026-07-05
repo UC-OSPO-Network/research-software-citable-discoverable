@@ -21,7 +21,7 @@ exercises: 12
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
-## Introduction
+## A catalog record for your software
 
 When someone wants to cite a book, nobody emails the author to ask how. The catalog record answers it. Software has lacked that record, so people improvise: they cite a URL, or the paper the code appeared in, or nothing. A **CITATION.cff** file is the catalog record for a repository, a short structured-metadata file that says exactly who to credit and how. Once it exists, GitHub grows a "Cite this repository" button, and the guesswork ends.
 
@@ -327,9 +327,35 @@ authors:
 :::::::::::::::::::::::::::::::::
 :::::::::::::::::::::::::::::::::
 
+::::::::::::::::::::::::::::::::: challenge
+
+## Challenge: Is a citation file enough?
+
+You now have a `CITATION.cff` and GitHub's "Cite this repository" button. That is a real and necessary first step: anyone can cite the software in a consistent form, and the metadata is machine-readable. But before the next episode, think about what this citation still does **not** guarantee. Consider three questions:
+
+1. If someone cites your repository today and you change the code tomorrow, does their citation still point to the code they actually used?
+2. If the repository is renamed, the account is deleted, or GitHub itself goes away, does the citation still resolve to anything?
+3. Can a reader retrieve the **exact** version of the software that produced a specific paper's results?
+
+What is missing, and what would fix it?
+
+:::::::::::::::::::::::: solution
+
+A `CITATION.cff` makes software citable *in principle*, but the citation is not yet **durable** or **version-specific**:
+
+- It points at a **moving target**, the default branch, so the code being "cited" keeps changing.
+- It depends on the **repository staying at that URL**. A GitHub URL is not a persistent identifier; it rots.
+- It does not **pin the exact snapshot** behind a published result, so a reader cannot reliably reproduce or verify what was used.
+
+The fix is a **tagged release archived to a repository like Zenodo**, which mints a **DOI**: a persistent identifier for an *immutable* snapshot. The DOI is what connects the software into the scholarly credit and indexing apparatus (DataCite, ORCID, library catalogs) and lets a citation resolve to one exact version, permanently. Put another way: `CITATION.cff` says *how* to cite the software; a release and DOI give the citation something durable *to point at*. That is the next episode.
+
+:::::::::::::::::::::::::::::::::
+:::::::::::::::::::::::::::::::::
+
 ::::::::::::::::::::::::::::::::: keypoints
 - A CITATION.cff file is the foundation of software citation.
 - It can be added before releases, DOIs, or version tags.
 - GitHub displays machine-readable citations automatically when this file is present.
 - Start simple and expand over time as your project develops.
+- A citation file is necessary but not sufficient: a release and DOI make the citation durable and tied to an exact version. That is the next step.
 ::::::::::::::::::::::::::::::::::::::::::::::::

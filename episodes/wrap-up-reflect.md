@@ -54,7 +54,7 @@ Congratulations! You've transformed fragile research software into a FAIR softwa
 
 Your software is now **citable, discoverable, and reusable**.
 
-## Introduction
+## Reflecting on what you built
 
 Over this session, you've learned how to make your research software more visible, citable, and impactful. These small, practical steps support scholarly communication, reproducibility, and the FAIR principles.
 

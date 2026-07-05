@@ -21,7 +21,7 @@ exercises: 13
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
-## Introduction
+## Why a repository is not an archive
 
 A GitHub repository is a workshop, not an archive. The code changes daily, the URL can break, and "the version we used" means nothing without a marker. This episode adds the two things scholarly infrastructure needs to take software seriously: a **release**, which freezes a named version, and a **Zenodo DOI**, which gives that frozen version a persistent identifier and a preservation copy outside GitHub entirely. After this step, the software can be cited the way an article is cited, and the citation still resolves in twenty years.
 
@@ -252,10 +252,10 @@ This point is subtle and important, so slow down. Say: "GitHub is the live worki
 
 ### Now You Have Everything
 
-✅ **F - Findable:** Added DOI, CITATION.cff, rich metadata
-✅ **A - Accessible:** Public GitHub, archived on Zenodo
-✅ **I - Interoperable:** Standard formats (YAML, CFF)
-✅ **R - Reusable:** LICENSE (BSD-3), README with setup
+- ✅ **F - Findable:** Added DOI, CITATION.cff, rich metadata
+- ✅ **A - Accessible:** Public GitHub, archived on Zenodo
+- ✅ **I - Interoperable:** Standard formats (YAML, CFF)
+- ✅ **R - Reusable:** LICENSE (BSD-3), README with setup
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 

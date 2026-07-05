@@ -20,7 +20,7 @@ exercises: 10
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
-## Introduction
+## Findability comes from description
 
 A Zenodo record with a bare title and no keywords is a catalog record with no subject headings: retrievable if you already know it exists, invisible if you don't. Most research software sits behind exactly that kind of record. This episode is the one where the lesson lands fully inside a library audience's expertise, because making things findable through description is what libraries do. The systems are GitHub topics, Zenodo fields, and a README instead of a catalog, but the judgment, what would a seeker search for and does this record contain it, is unchanged.
 
