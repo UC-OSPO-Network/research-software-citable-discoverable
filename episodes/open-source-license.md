@@ -209,6 +209,8 @@ We will add the BSD 3-Clause license to your demo repository:
 6. Update the year to 2026.
 7. Commit the file to your `main` branch.
 
+![Name the new file `LICENSE.md`, then click **Choose a license template** to insert the full BSD 3-Clause text.](fig/create-new-file.png){alt="GitHub's create-new-file page in the software-demo repository, with the filename field set to LICENSE.md and the 'Choose a license template' button both highlighted."}
+
 **Verify:** Does your repository now display the "BSD-3-Clause" license badge in the sidebar?
 
 :::::::::::::::::::::::: solution
@@ -226,6 +228,14 @@ If the badge doesn't appear, ensure the file is in the root directory and named 
 
 :::::::::::::::::::::::::::::::::
 ::::::::::::::::::::::::::::::::
+
+::::::::::::::::::::::::::::::::::::: callout
+
+### Check your work
+
+Compare your fork against the [`after-license` reference branch][branch-after-license] on the [demo repository][demo-repo]. It shows the target state after this episode: a `LICENSE` file in the root and the BSD-3-Clause badge in the sidebar.
+
+::::::::::::::::::::::::::::::::::::::::::::::::
 
 ## Communicating your license
 

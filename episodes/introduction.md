@@ -187,7 +187,7 @@ Open your fork of the demo repository. Its `main` branch is the starting state:
 
 ### The "After" State (`after-metadata`)
 
-In the branch dropdown, switch to the `after-metadata` reference branch to see the finished repository:
+In the branch dropdown, switch to the [`after-metadata` reference branch][branch-after-metadata] to see the finished repository:
 
 - ✅ **LICENSE** (BSD-3-Clause)
 - ✅ **CITATION.cff** (citation metadata)
@@ -197,7 +197,7 @@ In the branch dropdown, switch to the `after-metadata` reference branch to see t
 - ✅ **.zenodo.json** (Zenodo metadata)
 - ✅ DOI badge in README
 
-A documented, reproducible **environment** is the one FAIR piece not shown here. It's covered in the optional pixi episode and lives on the `optional-pixi` branch.
+A documented, reproducible **environment** is the one FAIR piece not shown here. It's covered in the optional pixi episode and lives on the [`optional-pixi` branch][branch-optional-pixi].
 
 **This is what makes software Findable, Accessible, Interoperable, and Reusable.**
 
@@ -273,7 +273,7 @@ Starting from the bare `main` state in your fork, you'll progressively add each 
 - **Episode 6:** Managing environments with pixi *(optional, requires a local install)*
 - **Episode 7:** Wrap-up and reflection
 
-Each episode adds one piece to your fork's `main` branch. View-only reference branches (`after-license`, `after-citation`, `after-release`, `after-metadata`) let you check your work at any point.
+Each episode adds one piece to your fork's `main` branch. View-only reference branches ([`after-license`][branch-after-license], [`after-citation`][branch-after-citation], [`after-release`][branch-after-release], [`after-metadata`][branch-after-metadata]) let you check your work at any point.
 
 ::::::::::::::::::::::::::::::::::::: keypoints
 

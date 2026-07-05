@@ -55,3 +55,7 @@ po/*~
 
 # Deck project archived out of the built site; belongs in its own repo (do not commit here)
 dev/slide_assets/
+
+# Local design/planning scratch notes (kept out of the lesson; dev/research/ is tracked)
+dev/design/
+dev/notes/
