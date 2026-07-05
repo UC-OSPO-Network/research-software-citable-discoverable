@@ -118,7 +118,7 @@
     <a id="search-button" class="btn btn-primary" href="aio.html" role="button" aria-label="Search the All In One page">Search the All In One page</a>
   </div><!--/div.container-fluid -->
 </nav><aside class="col-md-12 lesson-progress"><div class="progress ucospo">
-    <div class="progress-bar ucospo" role="progressbar" style="width: 47%" aria-valuenow="47" aria-valuemin="0" aria-valuemax="100" aria-label="Lesson Progress">47%</div>
+    <div class="progress-bar ucospo" role="progressbar" style="width: 48%" aria-valuenow="48" aria-valuemin="0" aria-valuemax="100" aria-label="Lesson Progress">48%</div>
   </div>
 </aside><div class="container">
       <div class="row">
@@ -199,7 +199,7 @@
 <div class="accordion accordion-flush" id="accordionFlush2">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading2">
-        <a href="introduction.html">1. Introduction: The "Works on My Machine" Trap</a>
+        <a href="introduction.html">1. Introduction: Software as a Citable Research Output</a>
     </div><!--/div.accordion-header-->
 
   </div><!--/div.accordion-item-->
@@ -258,7 +258,7 @@
 <div class="accordion accordion-flush" id="accordionFlush7">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading7">
-        <a href="managing-environments-pixi.html">6. Managing Reproducible Environments with pixi</a>
+        <a href="improving-metadata-discoverability.html">6. Improving Metadata and Discoverability</a>
     </div><!--/div.accordion-header-->
 
   </div><!--/div.accordion-item-->
@@ -267,7 +267,7 @@
 <div class="accordion accordion-flush" id="accordionFlush8">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading8">
-        <a href="improving-metadata-discoverability.html">7. Improving Metadata and Discoverability</a>
+        <a href="managing-environments-pixi.html">7. Managing Reproducible Environments with pixi</a>
     </div><!--/div.accordion-header-->
 
   </div><!--/div.accordion-item-->
@@ -325,7 +325,7 @@
   <div class="col-xl-8 col-lg-12 primary-content">
     <nav class="lesson-content mx-md-4" aria-label="Previous and Next Chapter Top"><!-- content for small screens --><div class="d-block d-sm-block d-md-none">
         <a class="chapter-link" href="adding-citation-file.html" rel="prev"><i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>Previous</a>
-        <a class="chapter-link float-end" href="managing-environments-pixi.html" rel="next">Next<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
+        <a class="chapter-link float-end" href="improving-metadata-discoverability.html" rel="next">Next<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
       </div>
       <!-- content for large screens -->
       <div class="d-none d-sm-none d-md-block">
@@ -333,14 +333,14 @@
           <i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>
           Previous: Adding a
         </a>
-        <a class="chapter-link float-end" href="managing-environments-pixi.html" rel="next">
-          Next: Managing...
+        <a class="chapter-link float-end" href="improving-metadata-discoverability.html" rel="next">
+          Next: Improving Metadata...
           <i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i>
         </a>
       </div>
     </nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Making Your Software Citable</h1>
-        <p>Last updated on 2026-06-26 |
+        <p>Last updated on 2026-07-05 |
 
         <a href="https://github.com/UC-OSPO-Network/research-software-citable-discoverable/edit/main/episodes/making-software-citable.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -371,7 +371,7 @@
 <h3 class="card-title">Objectives</h3>
 <ul><li>Describe why software citation matters in research.</li>
 <li>Create a versioned release in GitHub.</li>
-<li>Understand when and why to mint a DOI with Zenodo.</li>
+<li>Explain when and why to mint a DOI with Zenodo.</li>
 <li>
 <strong>Supporting others:</strong> advise which DOI, version or
 concept, belongs in a given citation.</li>
@@ -380,36 +380,17 @@ concept, belongs in a given citation.</li>
 </div>
 </div>
 </div>
-<div id="episode-branch-04-citation-05-release" class="callout">
-<div class="callout-square">
-<i class="callout-icon" data-feather="bell"></i>
-</div>
-<span class="callout-header">Callout</span>
-<div id="episode-branch-04-citation-05-release" class="callout-inner">
-<h3 class="callout-title">Episode Branch: <code>04-citation</code> →
-<code>05-release</code>
-</h3>
-<div class="callout-content">
-<p>This episode creates a release and tag.</p>
-<p><strong>Starting point:</strong></p>
-<div class="codewrapper sourceCode" id="cb1">
-<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" tabindex="-1" aria-label="code-block-1-1"></a><span class="fu">git</span> checkout 04-citation <span class="co"># Start with LICENSE and CITATION.cff</span></span></code></pre>
-</div>
-<p><strong>After this episode:</strong></p>
-<div class="codewrapper sourceCode" id="cb2">
-<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" tabindex="-1" aria-label="code-block-2-1"></a><span class="fu">git</span> checkout 05-release  <span class="co"># See the result with v0.1.0 tag</span></span></code></pre>
-</div>
-<p><strong>Catch-up point:</strong> If joining now, run
-<code>git checkout 04-citation</code></p>
-</div>
-</div>
-</div>
 <section><h2 class="section-heading" id="introduction">Introduction<a class="anchor" aria-label="anchor" href="#introduction"></a></h2>
-<hr class="half-width"><p>Software is a research product.<br>
+<hr class="half-width"><p>A GitHub repository is a workshop, not an archive. The code changes
+daily, the URL can break, and “the version we used” means nothing
+without a marker. This episode adds the two things scholarly
+infrastructure needs to take software seriously: a
+<strong>release</strong>, which freezes a named version, and a
+<strong>Zenodo DOI</strong>, which gives that frozen version a
+persistent identifier and a preservation copy outside GitHub entirely.
+After this step, the software can be cited the way an article is cited,
+and the citation still resolves in twenty years.</p>
+<p>Software is a research product.<br>
 Like articles and datasets, it should be <strong>cited</strong> so
 others can acknowledge your work, find the exact version you used, and
 understand how your software contributed to their results.</p>
@@ -454,6 +435,12 @@ them.</p>
 <li>meeting journal and funder expectations</li>
 </ul><p>But the core citability comes from your metadata and release
 process.</p>
+<p>A useful way to hold the difference: a DOI is a permanent address, a
+URL is a sticky note. The GitHub URL points at wherever the code happens
+to live today. Rename the repo, change the username, or watch the
+platform fold (Gitorious did, Google Code did) and the note falls off.
+The DOI is registered infrastructure, the same DataCite plumbing behind
+dataset DOIs, and it resolves no matter where the object moves.</p>
 </div>
 </div>
 </div>
@@ -514,7 +501,7 @@ this version?</li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p>Useful release notes include:</p>
 <ul><li>what changed<br></li>
@@ -533,6 +520,21 @@ software’s evolution.</p>
 <hr class="half-width"><p>To practice minting a DOI without polluting the permanent scholarly
 record, we will use <strong>Zenodo Sandbox</strong>. It works exactly
 like the real Zenodo but is for testing.</p>
+<div id="practice-on-the-sandbox-not-real-zenodo" class="callout caution">
+<div class="callout-square">
+<i class="callout-icon" data-feather="alert-triangle"></i>
+</div>
+<span class="callout-header">Caution</span>
+<div id="practice-on-the-sandbox-not-real-zenodo" class="callout-inner">
+<h3 class="callout-title">Practice on the sandbox, not real Zenodo</h3>
+<div class="callout-content">
+<p>Real Zenodo records are permanent: a published DOI cannot be deleted.
+Use <a href="https://sandbox.zenodo.org" class="external-link uri">https://sandbox.zenodo.org</a> for this exercise, and switch
+to real Zenodo only when you are depositing software you actually want
+on the scholarly record.</p>
+</div>
+</div>
+</div>
 <div id="predict-what-happens-when-you-publish" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
@@ -552,7 +554,7 @@ you?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <p>Zenodo detects the release, downloads and archives a snapshot of the
 repository at that tag, and mints a permanent DOI for it. The archived
@@ -590,17 +592,17 @@ version no longer depends on GitHub staying online.</p>
 </ul><p><strong>Step 5: Add DOI badge to your README</strong></p>
 <ul><li>Copy the DOI badge from your Zenodo record</li>
 <li>Add it to the top of your README:</li>
-</ul><div class="codewrapper sourceCode" id="cb3">
+</ul><div class="codewrapper sourceCode" id="cb1">
 <h3 class="code-label">MARKDOWN<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode markdown" tabindex="0"><code class="sourceCode markdown"><span id="cb3-1"><a href="#cb3-1" tabindex="-1" aria-label="code-block-3-1"></a><span class="co">[</span><span class="al">![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.123456.svg)</span><span class="co">](https://doi.org/10.5281/zenodo.123456)</span></span></code></pre>
+<pre class="sourceCode markdown" tabindex="0"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" tabindex="-1" aria-label="code-block-1-1"></a><span class="co">[</span><span class="al">![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.123456.svg)</span><span class="co">](https://doi.org/10.5281/zenodo.123456)</span></span></code></pre>
 </div>
 <p><strong>Step 6: Update your CFF file with your DOI</strong></p>
 <ul><li>Add the DOI to your <code>CITATION.cff</code>:</li>
-</ul><div class="codewrapper sourceCode" id="cb4">
+</ul><div class="codewrapper sourceCode" id="cb2">
 <h3 class="code-label">YAML<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode yaml" tabindex="0"><code class="sourceCode yaml"><span id="cb4-1"><a href="#cb4-1" tabindex="-1" aria-label="code-block-4-1"></a><span class="fu">doi</span><span class="kw">:</span><span class="at"> 10.5281/zenodo.123456</span></span></code></pre>
+<pre class="sourceCode yaml" tabindex="0"><code class="sourceCode yaml"><span id="cb2-1"><a href="#cb2-1" tabindex="-1" aria-label="code-block-2-1"></a><span class="fu">doi</span><span class="kw">:</span><span class="at"> 10.5281/zenodo.123456</span></span></code></pre>
 </div>
 <p><strong>Result:</strong> You now have LICENSE, CITATION.cff, and
 DOI.</p>
@@ -630,7 +632,9 @@ setup</p>
 <div class="callout-content">
 <p>The question researchers actually bring you here is “which DOI do I
 put in my paper?” Zenodo mints two for every project, and the
-distinction is worth knowing cold:</p>
+distinction is worth knowing cold. Librarians already have this
+distinction: it is the work versus the edition, “cite the exact edition
+you quoted” versus “refer to the work as a whole.”</p>
 <ul><li>
 <strong>Version DOI</strong> points to one exact release. Cite this
 when the precise software state matters for reproducibility, such as the
@@ -650,15 +654,17 @@ metadata.</p>
 </div>
 </div>
 </div>
-<p><strong>Even if GitHub disappears, your DOI still works.</strong></p>
-<div id="going-further-software-heritage" class="callout">
-<div class="callout-square">
-<i class="callout-icon" data-feather="bell"></i>
-</div>
-<span class="callout-header">Callout</span>
-<div id="going-further-software-heritage" class="callout-inner">
-<h3 class="callout-title">Going further: Software Heritage</h3>
-<div class="callout-content">
+<p><strong>Even if GitHub disappears, your DOI still works.</strong> The
+GitHub-Zenodo link works like deposit: each release is archived at CERN,
+independent of GitHub’s fate. The workshop can burn down; the deposited
+copy survives.</p>
+<div id="accordionSpoiler1" class="accordion spoiler-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler1" aria-expanded="false" aria-controls="collapseSpoiler1">
+  <h3 class="accordion-header" id="headingSpoiler1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> Going further: Software Heritage </h3>
+</button>
+<div id="collapseSpoiler1" class="accordion-collapse collapse" aria-labelledby="headingSpoiler1" data-bs-parent="#accordionSpoiler1">
+<div class="accordion-body">
 <p>Zenodo archives a snapshot of your code at release time. <a href="https://www.softwareheritage.org/" class="external-link">Software Heritage</a> goes
 further: it continuously crawls GitHub, GitLab, and other forges and
 archives <em>everything</em>, assigning a <strong>SWHID</strong>
@@ -679,13 +685,14 @@ release</li>
 <li>If it hasn’t been crawled yet, click <strong>Save code now</strong>
 to trigger immediate archival</li>
 <li>Once archived, add the SWHID to your <code>CITATION.cff</code>:</li>
-</ol><div class="codewrapper sourceCode" id="cb6">
+</ol><div class="codewrapper sourceCode" id="cb4">
 <h3 class="code-label">YAML<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode yaml" tabindex="0"><code class="sourceCode yaml"><span id="cb6-1"><a href="#cb6-1" tabindex="-1" aria-label="code-block-6-1"></a><span class="fu">repository-artifact</span><span class="kw">:</span><span class="at"> </span><span class="st">"swh:1:rel:22ece559cc7cc2364edc5e5593d63ae8bd229f9f"</span></span></code></pre>
+<pre class="sourceCode yaml" tabindex="0"><code class="sourceCode yaml"><span id="cb4-1"><a href="#cb4-1" tabindex="-1" aria-label="code-block-4-1"></a><span class="fu">repository-artifact</span><span class="kw">:</span><span class="at"> </span><span class="st">"swh:1:rel:22ece559cc7cc2364edc5e5593d63ae8bd229f9f"</span></span></code></pre>
 </div>
 <p>This approach is recommended in the 2026 <em>CODE Beyond FAIR</em>
 roadmap (Di Cosmo et al., <em>Scientific Data</em>).</p>
+</div>
 </div>
 </div>
 </div>
@@ -709,7 +716,7 @@ rather than the whole project?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution3" aria-expanded="false" aria-controls="collapseSolution3">
   <h4 class="accordion-header" id="headingSolution3"> Show me the solution </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
 <div class="accordion-body">
 <p>Versioned DOIs:</p>
 <ul><li>support reproducibility by identifying an exact snapshot<br></li>
@@ -737,14 +744,24 @@ reproducibility.<br></li>
 </div>
 </div>
 <!--
-Place links that you need to refer to multiple times across pages here. Delete
-any links that you are not going to use.
- -->
+Shared link definitions, available to every episode in the lesson. The Workbench
+makes these keys usable from any .md file, so a URL used on multiple pages is
+defined here ONCE. Reference them in an episode with:
+
+    [display text][key]     e.g.  [UC OSPO License Guide][uc-license-guide]
+    [key][]                 uses the key itself as the link text
+
+Add a link here once it is used on 2+ pages, then update it in this one place.
+Note: this only affects markdown links [text](url); it does not apply to URLs
+inside code blocks or to autolinks written as <https://example.org>.
+-->
+<!-- UC OSPO / UC resources -->
+<!-- General open-source references -->
 </div>
 </section></div> <!-- / div.lesson-content -->
     </main><!-- / main#main-content.main-content --><nav class="bottom-pagination mx-md-4" aria-label="Previous and Next Chapter Bottom"><div class="d-block d-sm-block d-md-none">
         <a class="chapter-link" href="adding-citation-file.html"><i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>Previous</a>
-        <a class="chapter-link float-end" href="managing-environments-pixi.html">Next<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
+        <a class="chapter-link float-end" href="improving-metadata-discoverability.html">Next<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
       </div>
       <!-- content for large screens -->
       <div class="d-none d-sm-none d-md-block">
@@ -752,8 +769,8 @@ any links that you are not going to use.
           <i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>
           Previous: Adding a
         </a>
-        <a class="chapter-link float-end" href="managing-environments-pixi.html" rel="next">
-          Next: Managing...
+        <a class="chapter-link float-end" href="improving-metadata-discoverability.html" rel="next">
+          Next: Improving Metadata...
           <i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i>
         </a>
       </div>
@@ -801,8 +818,8 @@ any links that you are not going to use.
   "url": "https://UC-OSPO-Network.github.io/research-software-citable-discoverable/making-software-citable.html",
   "identifier": "https://UC-OSPO-Network.github.io/research-software-citable-discoverable/making-software-citable.html",
   "dateCreated": "2025-12-06",
-  "dateModified": "2026-06-26",
-  "datePublished": "2026-06-30"
+  "dateModified": "2026-07-05",
+  "datePublished": "2026-07-05"
 }
 
   </script><script>

@@ -127,10 +127,6 @@
             More <i data-feather="chevron-down"></i>
           </button>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-<li><a class="dropdown-item" href="audience-and-modality-research-findings.html"></a></li>
-<li><a class="dropdown-item" href="audience-and-modality-research-prompt.html"></a></li>
-<li><a class="dropdown-item" href="lesson-improvement-research-findings.html"></a></li>
-<li><a class="dropdown-item" href="lesson-improvement-research-prompt.html"></a></li>
 <hr>
 <li><a class="dropdown-item" href="reference.html">Reference</a></li>
           </ul>
@@ -241,7 +237,7 @@
 <div class="accordion accordion-flush" id="accordionFlush2">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading2">
-        <a href="introduction.html">1. Introduction: The "Works on My Machine" Trap</a>
+        <a href="introduction.html">1. Introduction: Software as a Citable Research Output</a>
     </div>
 <!--/div.accordion-header-->
 
@@ -301,7 +297,7 @@
 <div class="accordion accordion-flush" id="accordionFlush7">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading7">
-        <a href="managing-environments-pixi.html">6. Managing Reproducible Environments with pixi</a>
+        <a href="improving-metadata-discoverability.html">6. Improving Metadata and Discoverability</a>
     </div>
 <!--/div.accordion-header-->
 
@@ -313,7 +309,7 @@
 <div class="accordion accordion-flush" id="accordionFlush8">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading8">
-        <a href="improving-metadata-discoverability.html">7. Improving Metadata and Discoverability</a>
+        <a href="managing-environments-pixi.html">7. Managing Reproducible Environments with pixi</a>
     </div>
 <!--/div.accordion-header-->
 
@@ -358,11 +354,7 @@
                       <li>
                         <a href="../instructor/images.html">Extract All Images</a>
                       </li>
-                      <li><a href="audience-and-modality-research-findings.html"></a></li>
-<li><a href="audience-and-modality-research-prompt.html"></a></li>
-<li><a href="lesson-improvement-research-findings.html"></a></li>
-<li><a href="lesson-improvement-research-prompt.html"></a></li>
-<hr>
+                      <hr>
 <li><a class="dropdown-item" href="reference.html">Reference</a></li>
                     </ul>
 </div>
@@ -423,8 +415,9 @@ a short, talk-based version of this content.</p>
 <p>The deck and this lesson are maintained independently. The slides are
 the canonical <em>delivery</em> artifact (designed in PowerPoint); the
 episodes are the canonical <em>hands-on workbook</em>. Earlier draft
-slide material (Marp, scripts, asset captures) lives in
-<code>slide_assets/</code> and is not maintained.</p>
+slide material (Marp, scripts, asset captures) is archived under
+<code>dev/slide_assets/</code> (kept out of the built site) and is not
+maintained.</p>
 <hr></section><section><h2 class="section-heading" id="reading-the-room-researchers-vs--support-staff">Reading the Room: Researchers vs. Support Staff<a class="anchor" aria-label="anchor" href="#reading-the-room-researchers-vs--support-staff"></a>
 </h2>
 <hr class="half-width">
@@ -493,138 +486,121 @@ prediction first. Aim for one every 5 to 10 minutes.</p>
 </section><section><h2 class="section-heading" id="choosing-a-track">Choosing a Track<a class="anchor" aria-label="anchor" href="#choosing-a-track"></a>
 </h2>
 <hr class="half-width">
+<p>Episode timings sum to about <strong>3.25 hours</strong> for the
+citation-focused track and <strong>3.75 hours</strong> for the full
+track. These are content minutes (teaching + exercises); add breaks,
+setup, and Q&amp;A to get wall-clock time, so budget a <strong>half
+day</strong> either way. The per-episode
+<code>teaching</code>/<code>exercises</code> values are a starting point
+calibrated against mature Carpentries lessons; adjust them after your
+first run.</p>
 <div class="section level3">
-<h3 id="full-track-3-5-hours">Full track (~3.5 hours)<a class="anchor" aria-label="anchor" href="#full-track-3-5-hours"></a>
+<h3 id="full-track-3-75-hours">Full track (~3.75 hours)<a class="anchor" aria-label="anchor" href="#full-track-3-75-hours"></a>
 </h3>
-<p>All episodes in order. Suitable when reproducibility and environment
-management are part of the workshop goals, or when your audience
-includes researchers who maintain code others need to run.</p>
+<p>All episodes in order, including the optional pixi episode at the
+end. Suitable when reproducibility and environment management are part
+of the workshop goals, or when your audience includes researchers who
+maintain code others need to run.</p>
 </div>
 <div class="section level3">
-<h3 id="citation-focused-track-2-5-hours">Citation-focused track (~2.5 hours)<a class="anchor" aria-label="anchor" href="#citation-focused-track-2-5-hours"></a>
+<h3 id="citation-focused-track-3-25-hours">Citation-focused track (~3.25 hours)<a class="anchor" aria-label="anchor" href="#citation-focused-track-3-25-hours"></a>
 </h3>
-<p>Skip the pixi episode entirely. Suitable for a shorter workshop or
-when learners just want their code cited, not necessarily reproduced.
-The FAIR4RS checklist in the wrap-up still works; simply omit the
-environment/interoperability row or note it as “future work.”</p>
+<p>Skip the pixi episode entirely. Suitable when learners just want
+their code cited, not necessarily reproduced. The FAIR4RS checklist in
+the wrap-up still works; omit the environment/interoperability row or
+note it as “future work.”</p>
 <hr>
 </div>
-</section><section><h2 class="section-heading" id="the-branch-structure-and-pixi">The Branch Structure and Pixi<a class="anchor" aria-label="anchor" href="#the-branch-structure-and-pixi"></a>
+</section><section><h2 class="section-heading" id="set-up-teach-from-your-own-fork">Set up: teach from your own fork<a class="anchor" aria-label="anchor" href="#set-up-teach-from-your-own-fork"></a>
 </h2>
 <hr class="half-width">
-<p>The demo repository (<code>UC-OSPO-Network/software-demo</code>) uses
-numbered branches that reflect the original episode order, where pixi
-came <em>before</em> the citation file:</p>
-<pre><code>01-start → 02-license → 03-pixi → 04-citation → 05-release → 06-metadata</code></pre>
-<p>The lesson episode order has been updated so pixi now comes
-<em>after</em> the release/DOI episode. This creates a mismatch between
-branch numbers and lesson order that instructors need to manage.</p>
-<div class="section level3">
-<h3 id="full-track-branch-navigation">Full track: branch navigation<a class="anchor" aria-label="anchor" href="#full-track-branch-navigation"></a>
-</h3>
+<p>The whole lesson runs in the browser on a fork of
+<code>UC-OSPO-Network/software-demo</code>. Set yourself up exactly the
+way learners do, so you and the room share the same starting state and
+the same clicks.</p>
+<p><strong>Before the workshop:</strong></p>
+<ol style="list-style-type: decimal">
+<li>Fork <code>UC-OSPO-Network/software-demo</code> to your own account
+(or a throwaway teaching account). The <code>main</code>-only default is
+fine.</li>
+<li>Confirm your fork’s <code>main</code> is the bare <strong>starting
+state</strong>: <code>README.md</code>, <code>requirements.txt</code>,
+and <code>src/analysis.py</code>, with no license, citation, release, or
+metadata.</li>
+<li>Have the upstream repo open in a second browser tab so you can show
+the <code>after-*</code> reference branches on demand.</li>
+<li>If you’re teaching the full (pixi) track, also clone your fork
+locally and confirm <code>pixi --version</code>.</li>
+</ol>
+<p><strong>During the workshop</strong>, demonstrate each step live in
+your fork and let learners mirror it in theirs. Everyone commits to
+their own <code>main</code>. Because you forked the same starting state,
+your screen and theirs stay in sync.</p>
+<blockquote>
+<p><strong>Use a fresh fork for each teaching.</strong> Delete and
+re-fork (or reset) between workshops so you always start from the bare
+state, not last session’s finished repo.</p>
+</blockquote>
+</section><section><h2 class="section-heading" id="the-reference-branches">The reference branches<a class="anchor" aria-label="anchor" href="#the-reference-branches"></a>
+</h2>
+<hr class="half-width">
+<p>The upstream repository keeps view-only <strong>reference
+branches</strong> showing the target state after each episode. Learners
+never build on them; they’re an answer key and a catch-up aid.</p>
 <table class="table">
 <colgroup>
 <col width="50%">
 <col width="50%">
 </colgroup>
 <thead><tr>
-<th>Lesson episode</th>
-<th>Branch to check out</th>
+<th>Reference branch</th>
+<th>State it shows</th>
 </tr></thead>
 <tbody>
 <tr>
-<td>Sharing Software</td>
-<td><code>01-start</code></td>
+<td><code>main</code></td>
+<td>starting state (what everyone forks)</td>
 </tr>
 <tr>
-<td>Open Source License</td>
-<td><code>02-license</code></td>
+<td><code>after-license</code></td>
+<td>after Episode 2 (license added)</td>
 </tr>
 <tr>
-<td>Adding a CITATION.cff File</td>
-<td>
-<code>02-license</code> → work done live, result is
-<code>04-citation</code>
-</td>
+<td><code>after-citation</code></td>
+<td>after Episode 3 (CITATION.cff added)</td>
 </tr>
 <tr>
-<td>Making Your Software Citable</td>
-<td>
-<code>04-citation</code> → work done live, result is
-<code>05-release</code>
-</td>
+<td><code>after-release</code></td>
+<td>after Episode 4 (release + DOI)</td>
 </tr>
 <tr>
-<td>Managing Environments (pixi)</td>
-<td>
-<code>03-pixi</code> (see note below)</td>
+<td><code>after-metadata</code></td>
+<td>after Episode 5 (full metadata, the finished repo)</td>
 </tr>
 <tr>
-<td>Improving Metadata</td>
-<td>
-<code>05-release</code> → work done live, result is
-<code>06-metadata</code>
-</td>
+<td><code>optional-pixi</code></td>
+<td>the optional pixi episode (branches off
+<code>after-metadata</code>)</td>
 </tr>
 </tbody>
 </table>
-<p><strong>Note on pixi branch:</strong> <code>03-pixi</code> sits
-earlier in the demo repo history than <code>04-citation</code>, but
-that’s fine. Learners are just exploring it to see what a locked
-environment looks like; they don’t need to build on it. Have them check
-out <code>03-pixi</code> to follow along, then return to
-<code>05-release</code> before the metadata episode.</p>
-</div>
-<div class="section level3">
-<h3 id="citation-focused-track-branch-navigation">Citation-focused track: branch navigation<a class="anchor" aria-label="anchor" href="#citation-focused-track-branch-navigation"></a>
-</h3>
-<table class="table">
-<colgroup>
-<col width="50%">
-<col width="50%">
-</colgroup>
-<thead><tr>
-<th>Lesson episode</th>
-<th>Branch to check out</th>
-</tr></thead>
-<tbody>
-<tr>
-<td>Sharing Software</td>
-<td><code>01-start</code></td>
-</tr>
-<tr>
-<td>Open Source License</td>
-<td><code>02-license</code></td>
-</tr>
-<tr>
-<td>Adding a CITATION.cff File</td>
-<td>
-<code>02-license</code> → result is <code>04-citation</code>
-</td>
-</tr>
-<tr>
-<td>Making Your Software Citable</td>
-<td>
-<code>04-citation</code> → result is <code>05-release</code>
-</td>
-</tr>
-<tr>
-<td>Improving Metadata</td>
-<td>
-<code>05-release</code> → result is <code>06-metadata</code>
-</td>
-</tr>
-</tbody>
-</table>
-<p><strong>Important:</strong> <code>04-citation</code> and later
-branches contain pixi files (<code>pixi.toml</code>,
-<code>pixi.lock</code>) even though learners haven’t done the pixi
-episode. Acknowledge this briefly: <em>“You’ll see some pixi files in
-the repo; those are from an optional episode on environment management.
-You can ignore them for now.”</em></p>
-<hr>
-</div>
-</section><section><h2 class="section-heading" id="common-sticking-points">Common Sticking Points<a class="anchor" aria-label="anchor" href="#common-sticking-points"></a>
+<p><strong>Why there’s no per-episode “check out this branch” step
+anymore.</strong> In the old command-line version, learners
+<code>git checkout</code>ed a branch to teleport their working state
+forward when they fell behind. The web workflow has no equivalent, and
+it doesn’t need one: each episode adds an <strong>independent</strong>
+file (license, then citation, then release, then metadata), so a learner
+who misses one is never <em>blocked</em>, just less complete. To catch
+up, they open the relevant reference branch upstream and copy the one
+file they’re missing into their own <code>main</code>. Point this out
+once, early, then let the reference branches sit in the background.</p>
+<p><strong>Pixi is out of the main chain.</strong> Unlike the old demo
+repo, the <code>after-*</code> branches contain <strong>no</strong> pixi
+files. Pixi lives only on <code>optional-pixi</code>, which branches off
+<code>after-metadata</code>. So learners on the citation-focused track
+never see stray <code>pixi.toml</code>/<code>pixi.lock</code> files, and
+there’s nothing to explain away.</p>
+<hr></section><section><h2 class="section-heading" id="common-sticking-points">Common Sticking Points<a class="anchor" aria-label="anchor" href="#common-sticking-points"></a>
 </h2>
 <hr class="half-width">
 <p><strong>GitHub “Cite this repository” button not appearing</strong>
@@ -645,57 +621,89 @@ the full track, verify pixi installation during setup. The pixi episode
 callout already marks it optional so learners who skip it can rejoin
 cleanly.</p>
 <!--
-Place links that you need to refer to multiple times across pages here. Delete
-any links that you are not going to use.
- -->
-</section><section id="aggregate-instructor-notes"><section id="introduction"><h2 class="section-heading"><a href="introduction.html">Introduction: The "Works on My Machine" Trap</a></h2>
+Shared link definitions, available to every episode in the lesson. The Workbench
+makes these keys usable from any .md file, so a URL used on multiple pages is
+defined here ONCE. Reference them in an episode with:
+
+    [display text][key]     e.g.  [UC OSPO License Guide][uc-license-guide]
+    [key][]                 uses the key itself as the link text
+
+Add a link here once it is used on 2+ pages, then update it in this one place.
+Note: this only affects markdown links [text](url); it does not apply to URLs
+inside code blocks or to autolinks written as <https://example.org>.
+-->
+<!-- UC OSPO / UC resources -->
+<!-- General open-source references -->
+</section><section id="aggregate-instructor-notes"><section id="introduction"><h2 class="section-heading"><a href="introduction.html">Introduction: Software as a Citable Research Output</a></h2>
 <hr class="half-width">
 <h3 id="introduction-headingInstructor1">
 <a href="introduction.html#headingInstructor1">Instructor Note</a><a class="anchor" aria-label="anchor" href="#introduction-headingInstructor1"></a>
 </h3>
-<p>This concrete error message resonates with learners who have
-experienced dependency issues. Pause here to ask: “Has anyone
-experienced this problem?” This builds connection and motivation.</p>
+<p><strong>Why this framing works with researchers:</strong> they do not
+adopt these practices because they are virtuous. They adopt them because
+journals are starting to require citable code deposits, because funders
+ask, and because a DOI turns invisible labor into a countable, citable
+output for their CV. Lead with that: this is credit they are currently
+leaving on the table.</p>
+<hr>
+<br><h3 id="introduction-headingInstructor2">
+<a href="introduction.html#headingInstructor2">Instructor Note</a><a class="anchor" aria-label="anchor" href="#introduction-headingInstructor2"></a>
+</h3>
+<p>Most librarians and support staff in the room will not have hit this
+exact error themselves, so don’t lean on it as a shared war story. Frame
+it instead as the barrier researchers describe when code “doesn’t work,”
+and flag that the mechanics live in the optional pixi episode, so a
+citation-focused workshop can acknowledge the problem and move on.</p>
 <hr>
 <br></section><section id="sharing-software"><h2 class="section-heading"><a href="sharing-software.html">Sharing Research Software Effectively</a></h2>
 <hr class="half-width">
 <h3 id="sharing-software-headingInstructor1">
-<a href="sharing-software.html#headingInstructor1">Preparing the Demo Repository</a><a class="anchor" aria-label="anchor" href="#sharing-software-headingInstructor1"></a>
+<a href="sharing-software.html#headingInstructor1">Instructor Note</a><a class="anchor" aria-label="anchor" href="#sharing-software-headingInstructor1"></a>
 </h3>
-<p>To demonstrate the “before and after” states of research software,
-use the provided automation script:</p>
-<ol style="list-style-type: decimal">
-<li>
-<strong>Locate the script</strong>: <code>create_demo_repo.sh</code>
-is in the root of the lesson repository.</li>
-<li>
-<strong>Run the script</strong>: Move it to a non-git directory
-(e.g., <code>~/projects/</code>) and run
-<code>bash create_demo_repo.sh</code>.</li>
-<li>
-<strong>Progression</strong>: The script creates branches
-(<code>01-start</code> through <code>06-metadata</code>). You can
-<code>git checkout</code> these branches during the lesson to show
-incremental progress.</li>
-<li>
-<strong>GitHub Hosting</strong>: We recommend pushing this generated
-repository to your GitHub account before the workshop so learners can
-follow along online. Commands for pushing are printed at the end of the
-script.</li>
-</ol>
-<p>Use <strong>progressive disclosure</strong> by showing only the
-top-level structure of the demo repository first.<br>
-If learners are new to GitHub, you may display two contrasting
-examples:</p>
+<p><strong>Why this episode matters to researchers:</strong> reviewers
+now ask “where is the code,” and a bare repo is a worse answer than it
+looks, because it invites follow-up questions it cannot answer. The
+four-question triage below is also your own take-home tool; it is the
+five-minute consultation format the whole lesson builds toward.</p>
+<hr>
+<br><h3 id="sharing-software-headingInstructor2">
+<a href="sharing-software.html#headingInstructor2">Preparing to teach this episode</a><a class="anchor" aria-label="anchor" href="#sharing-software-headingInstructor2"></a>
+</h3>
+<p>Teach from <strong>your own fork</strong> of the demo repository,
+exactly as learners do, so everyone is looking at the same starting
+state. See the <strong>Instructor Notes</strong> for the one-time fork
+setup. During the lesson you demonstrate each step live in your fork’s
+web interface and learners mirror it in theirs.</p>
+<p>To show the “before and after” contrast, use the branch dropdown in
+the browser:</p>
 <ul>
-<li>a sparse, hard-to-understand repo (checkout branch
-<code>01-start</code>)</li>
-<li>a clear, well-documented repo (checkout branch
-<code>06-metadata</code>)</li>
+<li>
+<strong>Before</strong> — the <code>main</code> branch: a sparse,
+hard-to-reuse project</li>
+<li>
+<strong>After</strong> — the <code>after-metadata</code> branch: a
+clear, licensed, citable, well-documented project</li>
 </ul>
+<p>Use <strong>progressive disclosure</strong>: show only the top-level
+file listing first, then open individual files as you discuss them. No
+terminal or <code>git checkout</code> is needed; the reference branches
+are there to view and compare against, not to build on.</p>
 <hr>
 <br></section><section id="open-source-license"><h2 class="section-heading"><a href="open-source-license.html">Choosing an Open-Source License</a></h2>
-<hr class="half-width"></section><section id="adding-citation-file"><h2 class="section-heading"><a href="adding-citation-file.html">Adding a CITATION.cff File</a></h2>
+<hr class="half-width">
+<h3 id="open-source-license-headingInstructor1">
+<a href="open-source-license.html#headingInstructor1">Instructor Note</a><a class="anchor" aria-label="anchor" href="#open-source-license-headingInstructor1"></a>
+</h3>
+<p><strong>Why this episode matters to researchers:</strong> licensing
+is where reuse and credit actually begin. An unlicensed repo cannot be
+legally built on, which means it will not accumulate the users, forks,
+and citations that make software count as a scholarly contribution. This
+is also the one episode with a hard referral boundary: you can explain
+categories and point to the campus default, but ownership questions go
+to Tech Transfer. Knowing where that line sits is itself the
+expertise.</p>
+<hr>
+<br></section><section id="adding-citation-file"><h2 class="section-heading"><a href="adding-citation-file.html">Adding a CITATION.cff File</a></h2>
 <hr class="half-width">
 <h3 id="adding-citation-file-headingInstructor1">
 <a href="adding-citation-file.html#headingInstructor1">Instructor Note</a><a class="anchor" aria-label="anchor" href="#adding-citation-file-headingInstructor1"></a>
@@ -705,6 +713,12 @@ repository that already has a <code>CITATION.cff</code> file. This gives
 them a clear target and reduces cognitive load.</p>
 <p>Reassure learners that a tiny file is fine. They can refine it later
 as their software matures.</p>
+<p><strong>Why this episode matters to researchers:</strong> this is the
+single highest-return step in the lesson. One small file, committed
+once, and every future citation of the software is correct, complete,
+and countable. It is also the step where a scholcomm professional can
+sit beside a researcher as the expert, because the hard part is metadata
+judgment, not code.</p>
 <hr>
 <br></section><section id="making-software-citable"><h2 class="section-heading"><a href="making-software-citable.html">Making Your Software Citable</a></h2>
 <hr class="half-width">
@@ -720,48 +734,19 @@ Reassure them that:</p>
 </li>
 <li>they can watch the demo and complete the steps later</li>
 </ul>
+<p><strong>Why this episode matters to researchers:</strong> this is
+where journal and funder requirements actually bite. “The journal wants
+a citable code deposit” means, concretely, a tagged release with a DOI,
+and after this episode you can say that sentence and demonstrate the
+twenty-minute path to compliance. The DOI is also the moment their
+software starts accruing countable citations, the currency their review
+committees already understand.</p>
 <hr>
 <br><h3 id="making-software-citable-headingInstructor2">
 <a href="making-software-citable.html#headingInstructor2">Instructor Note</a><a class="anchor" aria-label="anchor" href="#making-software-citable-headingInstructor2"></a>
 </h3>
 <p><strong>Critical:</strong> Ensure learners use
 <strong>sandbox.zenodo.org</strong>. Real DOIs cannot be deleted.</p>
-<hr>
-<br></section><section id="managing-environments-pixi"><h2 class="section-heading"><a href="managing-environments-pixi.html">Managing Reproducible Environments with pixi</a></h2>
-<hr class="half-width">
-<h3 id="managing-environments-pixi-headingInstructor1">
-<a href="managing-environments-pixi.html#headingInstructor1">Teaching this optional episode</a><a class="anchor" aria-label="anchor" href="#managing-environments-pixi-headingInstructor1"></a>
-</h3>
-<p>This episode appears after the release/DOI episode in the lesson
-order. The demo repository branch <code>03-pixi</code> sits earlier in
-the repo history (between <code>02-license</code> and
-<code>04-citation</code>), so the branch number and lesson position
-don’t match, which is expected.</p>
-<p><strong>How to handle the branch:</strong></p>
-<p>Have learners check out <code>03-pixi</code> to follow along. They
-are exploring it as a standalone example, not building on it. After this
-episode, direct them back to <code>05-release</code> to continue with
-the metadata episode.</p>
-<div class="codewrapper sourceCode" id="cb2">
-<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" tabindex="-1" aria-label="code-block-2-1"></a><span class="co"># During this episode</span></span>
-<span id="cb2-2"><a href="#cb2-2" tabindex="-1" aria-label="code-block-2-2"></a><span class="fu">git</span> checkout 03-pixi</span>
-<span id="cb2-3"><a href="#cb2-3" tabindex="-1" aria-label="code-block-2-3"></a></span>
-<span id="cb2-4"><a href="#cb2-4" tabindex="-1" aria-label="code-block-2-4"></a><span class="co"># After this episode, return here to continue</span></span>
-<span id="cb2-5"><a href="#cb2-5" tabindex="-1" aria-label="code-block-2-5"></a><span class="fu">git</span> checkout 05-release</span></code></pre>
-</div>
-<p><strong>If skipping this episode:</strong> Learners who went from
-<code>02-license</code> straight to <code>04-citation</code> will
-already have pixi files in their repo (they were baked into the branch).
-Acknowledge this briefly when they encounter <code>pixi.toml</code> or
-<code>pixi.lock</code> in the metadata episode: <em>“Those files are
-from the optional environment management episode; you can leave them
-as-is.”</em></p>
-<p><strong>Pixi not installed?</strong> Learners can follow the concepts
-without a working pixi installation. The key idea is that a lockfile
-pins exact dependency versions. That’s the transferable lesson, not the
-tool itself.</p>
 <hr>
 <br></section><section id="improving-metadata-discoverability"><h2 class="section-heading"><a href="improving-metadata-discoverability.html">Improving Metadata and Discoverability</a></h2>
 <hr class="half-width">
@@ -772,6 +757,41 @@ tool itself.</p>
 ones.<br>
 Highlight how even small metadata additions increase visibility in
 GitHub search, Zenodo indexing, and DataCite services.</p>
+<p><strong>Why this episode matters:</strong> this is where a librarian
+in the room can visibly outperform the researchers, which matters for
+how the campus sees the service. Researchers usually treat metadata as a
+form to rush through; a scholcomm professional treats it as the
+mechanism of discovery. The pitch to the researcher is blunt: the work
+is finished, and five minutes of description determines whether anyone
+ever finds it.</p>
+<hr>
+<br></section><section id="managing-environments-pixi"><h2 class="section-heading"><a href="managing-environments-pixi.html">Managing Reproducible Environments with pixi</a></h2>
+<hr class="half-width">
+<h3 id="managing-environments-pixi-headingInstructor1">
+<a href="managing-environments-pixi.html#headingInstructor1">Teaching this optional episode</a><a class="anchor" aria-label="anchor" href="#managing-environments-pixi-headingInstructor1"></a>
+</h3>
+<p>This episode is last in the lesson order and is the only one that
+leaves the browser: it needs pixi and a terminal on the learner’s own
+machine, plus a local clone of their fork. Because the rest of the
+lesson is browser-only, confirm during setup which learners are prepared
+for the full track. Anyone who only wants their code cited can stop
+after the metadata episode with a complete, citable repository.</p>
+<p>The <code>optional-pixi</code> reference branch builds on
+<code>after-metadata</code>, so it shows pixi added to an
+already-finished project. Have learners view it in the browser for the
+target <code>pixi.toml</code> and lockfile, then work along in their
+local clone. Nothing in the main project chain depends on pixi, so
+skipping this episode leaves no loose ends in anyone’s repository.</p>
+<p><strong>Pixi not installed?</strong> Learners can follow the concepts
+without a working pixi installation. The key idea is that a lockfile
+pins exact dependency versions. That’s the transferable lesson, not the
+tool itself.</p>
+<p><strong>If you skip the hands-on entirely,</strong> keep the concept
+in the room: the R in FAIR quietly depends on this. A deposit that
+cannot be executed is preserved the way a locked diary is preserved. The
+question “is there a record of what this needs to run” belongs in the
+consultation checklist even if the mechanics get referred to research
+computing.</p>
 <hr>
 <br></section><section id="wrap-up-reflect"><h2 class="section-heading"><a href="wrap-up-reflect.html">Wrap-Up and Reflection</a></h2>
 <hr class="half-width">
@@ -781,6 +801,13 @@ GitHub search, Zenodo indexing, and DataCite services.</p>
 <p>Give learners a few minutes of quiet reflection, then facilitate a
 group discussion. Invite volunteers to share a step they plan to take
 next.</p>
+<p><strong>Closing pitch worth saying out loud:</strong> for
+instructors, the deliverable is not the demo repo, it is a service, a
+consultation format and a referral map usable the week you get home. For
+researchers, it is a repeatable habit that costs under an hour per
+project: every future paper’s code can either be a dead URL in five
+years or a citable, findable output on your record, and the difference
+is the checklist you now hold.</p>
 <hr>
 <br></section></section>
 </div>
@@ -832,8 +859,8 @@ next.</p>
   "url": "https://UC-OSPO-Network.github.io/research-software-citable-discoverable/instructor/instructor-notes.html",
   "identifier": "https://UC-OSPO-Network.github.io/research-software-citable-discoverable/instructor/instructor-notes.html",
   "dateCreated": "2025-12-06",
-  "dateModified": "2026-06-30",
-  "datePublished": "2026-06-30"
+  "dateModified": "2026-07-05",
+  "datePublished": "2026-07-05"
 }
 
   </script><script>

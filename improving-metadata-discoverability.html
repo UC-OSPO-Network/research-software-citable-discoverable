@@ -118,7 +118,7 @@
     <a id="search-button" class="btn btn-primary" href="aio.html" role="button" aria-label="Search the All In One page">Search the All In One page</a>
   </div><!--/div.container-fluid -->
 </nav><aside class="col-md-12 lesson-progress"><div class="progress ucospo">
-    <div class="progress-bar ucospo" role="progressbar" style="width: 74%" aria-valuenow="74" aria-valuemin="0" aria-valuemax="100" aria-label="Lesson Progress">74%</div>
+    <div class="progress-bar ucospo" role="progressbar" style="width: 64%" aria-valuenow="64" aria-valuemin="0" aria-valuemax="100" aria-label="Lesson Progress">64%</div>
   </div>
 </aside><div class="container">
       <div class="row">
@@ -199,7 +199,7 @@
 <div class="accordion accordion-flush" id="accordionFlush2">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading2">
-        <a href="introduction.html">1. Introduction: The "Works on My Machine" Trap</a>
+        <a href="introduction.html">1. Introduction: Software as a Citable Research Output</a>
     </div><!--/div.accordion-header-->
 
   </div><!--/div.accordion-item-->
@@ -241,22 +241,13 @@
   </div><!--/div.accordion-item-->
 </div><!--/div.accordion-flush-->
 
-<div class="accordion accordion-flush" id="accordionFlush7">
-  <div class="accordion-item">
-    <div class="accordion-header" id="flush-heading7">
-        <a href="managing-environments-pixi.html">6. Managing Reproducible Environments with pixi</a>
-    </div><!--/div.accordion-header-->
-
-  </div><!--/div.accordion-item-->
-</div><!--/div.accordion-flush-->
-
 <div class="accordion accordion-flush" id="accordionFlushcurrent">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-headingcurrent">
       <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapsecurrent" aria-expanded="true" aria-controls="flush-collapsecurrent">
         <span class="visually-hidden">Current Chapter</span>
         <span class="current-chapter">
-        7. Improving Metadata and Discoverability
+        6. Improving Metadata and Discoverability
         </span>
       </button>
     </div><!--/div.accordion-header-->
@@ -273,6 +264,15 @@
 <li><a href="#zenodo-and-doi-metadata">Zenodo and DOI metadata</a></li>
         </ul></div><!--/div.accordion-body-->
     </div><!--/div.accordion-collapse-->
+
+  </div><!--/div.accordion-item-->
+</div><!--/div.accordion-flush-->
+
+<div class="accordion accordion-flush" id="accordionFlush8">
+  <div class="accordion-item">
+    <div class="accordion-header" id="flush-heading8">
+        <a href="managing-environments-pixi.html">7. Managing Reproducible Environments with pixi</a>
+    </div><!--/div.accordion-header-->
 
   </div><!--/div.accordion-item-->
 </div><!--/div.accordion-flush-->
@@ -328,23 +328,23 @@
         <!-- START: inst/pkgdown/templates/content-instructor.html -->
   <div class="col-xl-8 col-lg-12 primary-content">
     <nav class="lesson-content mx-md-4" aria-label="Previous and Next Chapter Top"><!-- content for small screens --><div class="d-block d-sm-block d-md-none">
-        <a class="chapter-link" href="managing-environments-pixi.html" rel="prev"><i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>Previous</a>
-        <a class="chapter-link float-end" href="wrap-up-reflect.html" rel="next">Next<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
+        <a class="chapter-link" href="making-software-citable.html" rel="prev"><i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>Previous</a>
+        <a class="chapter-link float-end" href="managing-environments-pixi.html" rel="next">Next<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
       </div>
       <!-- content for large screens -->
       <div class="d-none d-sm-none d-md-block">
-        <a class="chapter-link" href="managing-environments-pixi.html" rel="prev">
+        <a class="chapter-link" href="making-software-citable.html" rel="prev">
           <i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>
-          Previous: Managing
+          Previous: Making Your Software
         </a>
-        <a class="chapter-link float-end" href="wrap-up-reflect.html" rel="next">
-          Next: Wrap-Up and...
+        <a class="chapter-link float-end" href="managing-environments-pixi.html" rel="next">
+          Next: Managing...
           <i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i>
         </a>
       </div>
     </nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Improving Metadata and Discoverability</h1>
-        <p>Last updated on 2026-06-26 |
+        <p>Last updated on 2026-07-05 |
 
         <a href="https://github.com/UC-OSPO-Network/research-software-citable-discoverable/edit/main/episodes/improving-metadata-discoverability.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -387,37 +387,17 @@ and prioritize the single highest-value fix.</li>
 </div>
 </div>
 </div>
-<div id="episode-branch-05-release-06-metadata" class="callout">
-<div class="callout-square">
-<i class="callout-icon" data-feather="bell"></i>
-</div>
-<span class="callout-header">Callout</span>
-<div id="episode-branch-05-release-06-metadata" class="callout-inner">
-<h3 class="callout-title">Episode Branch: <code>05-release</code> →
-<code>06-metadata</code>
-</h3>
-<div class="callout-content">
-<p>This episode completes the repository with full documentation and
-metadata.</p>
-<p><strong>Starting point:</strong></p>
-<div class="codewrapper sourceCode" id="cb1">
-<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" tabindex="-1" aria-label="code-block-1-1"></a><span class="fu">git</span> checkout 05-release  <span class="co"># Start with release tagged</span></span></code></pre>
-</div>
-<p><strong>After this episode:</strong></p>
-<div class="codewrapper sourceCode" id="cb2">
-<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" tabindex="-1" aria-label="code-block-2-1"></a><span class="fu">git</span> checkout 06-metadata <span class="co"># See the complete FAIR repository</span></span></code></pre>
-</div>
-<p><strong>Catch-up point:</strong> If joining now, run
-<code>git checkout 05-release</code></p>
-</div>
-</div>
-</div>
 <section><h2 class="section-heading" id="introduction">Introduction<a class="anchor" aria-label="anchor" href="#introduction"></a></h2>
-<hr class="half-width"><p>Clear metadata helps others understand, evaluate, and <em>find</em>
+<hr class="half-width"><p>A Zenodo record with a bare title and no keywords is a catalog record
+with no subject headings: retrievable if you already know it exists,
+invisible if you don’t. Most research software sits behind exactly that
+kind of record. This episode is the one where the lesson lands fully
+inside a library audience’s expertise, because making things findable
+through description is what libraries do. The systems are GitHub topics,
+Zenodo fields, and a README instead of a catalog, but the judgment, what
+would a seeker search for and does this record contain it, is
+unchanged.</p>
+<p>Clear metadata helps others understand, evaluate, and <em>find</em>
 your software.<br>
 It also reduces the cognitive effort for future users because essential
 information is organized and easy to locate.</p>
@@ -451,7 +431,11 @@ abstract)</li>
 <li>project website</li>
 </ul></li>
 </ul><p>You may add these in multiple places, but they should remain
-consistent.</p>
+consistent. This is authority control: the title, authors, and
+description should read the same in the README, the CITATION.cff, and
+the Zenodo record, for the same reason a name reads the same across
+catalog records. When they drift, indexes treat one piece of software as
+several, and its citations scatter.</p>
 </section><section><h2 class="section-heading" id="github-specific-discoverability-features">GitHub-specific discoverability features<a class="anchor" aria-label="anchor" href="#github-specific-discoverability-features"></a></h2>
 <hr class="half-width"><p>GitHub uses structured metadata to improve search ranking and
 cross-repository linking.</p>
@@ -468,6 +452,10 @@ cross-repository linking.</p>
 <p><strong>Your README is your software’s front door.</strong></p>
 <p>If users can’t understand what it does, how to install it, or how to
 use it in <strong>30 seconds</strong> → they leave.</p>
+<p>A collection without a finding aid can only be used by someone with
+time to read every box. A repo without a real README can only be used by
+its author. The 30-second rule is scope-and-content note discipline
+applied to code.</p>
 </div>
 <div class="section level3">
 <h3 id="readme-structure-7-essential-sections">README Structure (7 Essential Sections)<a class="anchor" aria-label="anchor" href="#readme-structure-7-essential-sections"></a></h3>
@@ -493,36 +481,36 @@ LICENSE file”)</li>
 </ol></div>
 <div class="section level3">
 <h3 id="before-vs--after-example">Before vs. After Example<a class="anchor" aria-label="anchor" href="#before-vs--after-example"></a></h3>
-<p><strong>❌ Before (Branch: 01-start)</strong></p>
-<div class="codewrapper sourceCode" id="cb3">
+<p><strong>❌ Before (<code>main</code>, starting state)</strong></p>
+<div class="codewrapper sourceCode" id="cb1">
 <h3 class="code-label">MARKDOWN<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode markdown" tabindex="0"><code class="sourceCode markdown"><span id="cb3-1"><a href="#cb3-1" tabindex="-1" aria-label="code-block-3-1"></a><span class="fu"># Biodiversity Analysis Toolkit</span></span>
-<span id="cb3-2"><a href="#cb3-2" tabindex="-1" aria-label="code-block-3-2"></a></span>
-<span id="cb3-3"><a href="#cb3-3" tabindex="-1" aria-label="code-block-3-3"></a>A script.</span>
-<span id="cb3-4"><a href="#cb3-4" tabindex="-1" aria-label="code-block-3-4"></a></span>
-<span id="cb3-5"><a href="#cb3-5" tabindex="-1" aria-label="code-block-3-5"></a>No description. No instructions. No citation. Unusable.</span></code></pre>
+<pre class="sourceCode markdown" tabindex="0"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" tabindex="-1" aria-label="code-block-1-1"></a><span class="fu"># Biodiversity Analysis Toolkit</span></span>
+<span id="cb1-2"><a href="#cb1-2" tabindex="-1" aria-label="code-block-1-2"></a></span>
+<span id="cb1-3"><a href="#cb1-3" tabindex="-1" aria-label="code-block-1-3"></a>A script.</span>
+<span id="cb1-4"><a href="#cb1-4" tabindex="-1" aria-label="code-block-1-4"></a></span>
+<span id="cb1-5"><a href="#cb1-5" tabindex="-1" aria-label="code-block-1-5"></a>No description. No instructions. No citation. Unusable.</span></code></pre>
 </div>
-<p><strong>✅ After (Branch: 06-metadata)</strong></p>
-<div class="codewrapper sourceCode" id="cb4">
+<p><strong>✅ After (<code>after-metadata</code>)</strong></p>
+<div class="codewrapper sourceCode" id="cb2">
 <h3 class="code-label">MARKDOWN<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode markdown" tabindex="0"><code class="sourceCode markdown"><span id="cb4-1"><a href="#cb4-1" tabindex="-1" aria-label="code-block-4-1"></a><span class="fu"># Biodiversity Analysis Toolkit</span></span>
-<span id="cb4-2"><a href="#cb4-2" tabindex="-1" aria-label="code-block-4-2"></a></span>
-<span id="cb4-3"><a href="#cb4-3" tabindex="-1" aria-label="code-block-4-3"></a>Analysis tools for biodiversity research.</span>
-<span id="cb4-4"><a href="#cb4-4" tabindex="-1" aria-label="code-block-4-4"></a></span>
-<span id="cb4-5"><a href="#cb4-5" tabindex="-1" aria-label="code-block-4-5"></a><span class="fu">## Features</span></span>
-<span id="cb4-6"><a href="#cb4-6" tabindex="-1" aria-label="code-block-4-6"></a><span class="ss">- </span>Reproducible (pixi) • Citable (DOI) • Open source (BSD-3)</span>
-<span id="cb4-7"><a href="#cb4-7" tabindex="-1" aria-label="code-block-4-7"></a></span>
-<span id="cb4-8"><a href="#cb4-8" tabindex="-1" aria-label="code-block-4-8"></a><span class="fu">## Getting Started</span></span>
-<span id="cb4-9"><a href="#cb4-9" tabindex="-1" aria-label="code-block-4-9"></a><span class="in">```bash</span></span>
-<span id="cb4-10"><a href="#cb4-10" tabindex="-1" aria-label="code-block-4-10"></a><span class="ex">pixi</span> install</span>
-<span id="cb4-11"><a href="#cb4-11" tabindex="-1" aria-label="code-block-4-11"></a><span class="ex">pixi</span> run python src/analysis.py</span></code></pre>
+<pre class="sourceCode markdown" tabindex="0"><code class="sourceCode markdown"><span id="cb2-1"><a href="#cb2-1" tabindex="-1" aria-label="code-block-2-1"></a><span class="fu"># Biodiversity Analysis Toolkit</span></span>
+<span id="cb2-2"><a href="#cb2-2" tabindex="-1" aria-label="code-block-2-2"></a></span>
+<span id="cb2-3"><a href="#cb2-3" tabindex="-1" aria-label="code-block-2-3"></a>Analysis tools for biodiversity research.</span>
+<span id="cb2-4"><a href="#cb2-4" tabindex="-1" aria-label="code-block-2-4"></a></span>
+<span id="cb2-5"><a href="#cb2-5" tabindex="-1" aria-label="code-block-2-5"></a><span class="fu">## Features</span></span>
+<span id="cb2-6"><a href="#cb2-6" tabindex="-1" aria-label="code-block-2-6"></a><span class="ss">- </span>Citable (DOI) • Open source (BSD-3) • Documented</span>
+<span id="cb2-7"><a href="#cb2-7" tabindex="-1" aria-label="code-block-2-7"></a></span>
+<span id="cb2-8"><a href="#cb2-8" tabindex="-1" aria-label="code-block-2-8"></a><span class="fu">## Getting Started</span></span>
+<span id="cb2-9"><a href="#cb2-9" tabindex="-1" aria-label="code-block-2-9"></a><span class="in">```bash</span></span>
+<span id="cb2-10"><a href="#cb2-10" tabindex="-1" aria-label="code-block-2-10"></a><span class="ex">pip</span> install <span class="at">-r</span> requirements.txt</span>
+<span id="cb2-11"><a href="#cb2-11" tabindex="-1" aria-label="code-block-2-11"></a><span class="ex">python</span> src/analysis.py</span></code></pre>
 </div>
 </div>
 </section><section><h2 class="section-heading" id="citation">Citation<a class="anchor" aria-label="anchor" href="#citation"></a></h2>
 <hr class="half-width"><p>[zenodo.org/badge/DOI/10.5281/zenodo.123456.svg]</p>
-<p>License: BDS-3 - see LICENSE file ```</p>
+<p>License: BSD-3 - see LICENSE file ```</p>
 <p><strong>Professional. Citable. Usable.</strong></p>
 <div class="section level3">
 <h3 id="readme-best-practices-5-quick-tips">README Best Practices: 5 Quick Tips<a class="anchor" aria-label="anchor" href="#readme-best-practices-5-quick-tips"></a></h3>
@@ -721,7 +709,9 @@ the researcher actually has.</p>
 this first; an empty one is the biggest single loss).</li>
 <li>
 <strong>Author ORCIDs</strong>, so credit attaches to people, not
-just names.</li>
+just names. Every J. Chen on Zenodo is indistinguishable without one,
+and software credit is hard enough to accumulate without splitting it
+across identities.</li>
 <li>
 <strong>Keywords</strong> reused consistently across GitHub Topics,
 <code>CITATION.cff</code>, and Zenodo.</li>
@@ -800,6 +790,46 @@ metadata:</p>
 </div>
 </div>
 </div>
+<div id="which-change-makes-it-discoverable" class="callout challenge">
+<div class="callout-square">
+<i class="callout-icon" data-feather="zap"></i>
+</div>
+<span class="callout-header">Challenge</span>
+<div id="which-change-makes-it-discoverable" class="callout-inner">
+<h3 class="callout-title">Which change makes it discoverable?</h3>
+<div class="callout-content">
+<p>A researcher’s tool has been public on GitHub for a year, but no one
+outside their lab has ever found it. The repository has a one-line
+README, no topics, and a Zenodo deposit with only a title. Which
+<strong>single</strong> change will do the most to make the software
+discoverable?</p>
+<p>A. Add collaborators so the repository is “more public” B. Add
+descriptive GitHub topics, plus matching keywords and a description on
+the Zenodo record C. Push more frequent commits so the repository looks
+active D. Rename the repository to something shorter and catchier</p>
+</div>
+</div>
+</div>
+<div id="accordionSolution3" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution3" aria-expanded="false" aria-controls="collapseSolution3">
+  <h4 class="accordion-header" id="headingSolution3"> Show me the solution </h4>
+</button>
+<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
+<div class="accordion-body">
+<p><strong>B.</strong> Discovery happens through <em>description</em>,
+not access level or activity. Topics, keywords, and descriptions are
+what GitHub search, Zenodo, and DataCite-fed indexes actually match a
+query against. The repo is already public, so <strong>A</strong> adds
+nothing to discoverability; commit frequency (<strong>C</strong>) does
+not affect search ranking for discovery; and a shorter name
+(<strong>D</strong>) is cosmetic. This is the same reason a catalog
+record with no subject headings is nearly invisible: findability comes
+from the metadata, not from the object’s mere existence.</p>
+</div>
+</div>
+</div>
+</div>
 <div id="keypoints1" class="callout keypoints">
 <div class="callout-square">
 <i class="callout-icon" data-feather="key"></i>
@@ -817,22 +847,32 @@ your software.</li>
 </div>
 </div>
 <!--
-Place links that you need to refer to multiple times across pages here. Delete
-any links that you are not going to use.
- -->
+Shared link definitions, available to every episode in the lesson. The Workbench
+makes these keys usable from any .md file, so a URL used on multiple pages is
+defined here ONCE. Reference them in an episode with:
+
+    [display text][key]     e.g.  [UC OSPO License Guide][uc-license-guide]
+    [key][]                 uses the key itself as the link text
+
+Add a link here once it is used on 2+ pages, then update it in this one place.
+Note: this only affects markdown links [text](url); it does not apply to URLs
+inside code blocks or to autolinks written as <https://example.org>.
+-->
+<!-- UC OSPO / UC resources -->
+<!-- General open-source references -->
 </section></div> <!-- / div.lesson-content -->
     </main><!-- / main#main-content.main-content --><nav class="bottom-pagination mx-md-4" aria-label="Previous and Next Chapter Bottom"><div class="d-block d-sm-block d-md-none">
-        <a class="chapter-link" href="managing-environments-pixi.html"><i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>Previous</a>
-        <a class="chapter-link float-end" href="wrap-up-reflect.html">Next<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
+        <a class="chapter-link" href="making-software-citable.html"><i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>Previous</a>
+        <a class="chapter-link float-end" href="managing-environments-pixi.html">Next<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
       </div>
       <!-- content for large screens -->
       <div class="d-none d-sm-none d-md-block">
-        <a class="chapter-link" href="managing-environments-pixi.html" rel="prev">
+        <a class="chapter-link" href="making-software-citable.html" rel="prev">
           <i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>
-          Previous: Managing
+          Previous: Making Your Software
         </a>
-        <a class="chapter-link float-end" href="wrap-up-reflect.html" rel="next">
-          Next: Wrap-Up and...
+        <a class="chapter-link float-end" href="managing-environments-pixi.html" rel="next">
+          Next: Managing...
           <i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i>
         </a>
       </div>
@@ -880,8 +920,8 @@ any links that you are not going to use.
   "url": "https://UC-OSPO-Network.github.io/research-software-citable-discoverable/improving-metadata-discoverability.html",
   "identifier": "https://UC-OSPO-Network.github.io/research-software-citable-discoverable/improving-metadata-discoverability.html",
   "dateCreated": "2025-12-06",
-  "dateModified": "2026-06-26",
-  "datePublished": "2026-06-30"
+  "dateModified": "2026-07-05",
+  "datePublished": "2026-07-05"
 }
 
   </script><script>

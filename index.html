@@ -197,13 +197,8 @@
 
     <div id="flush-collapsecurrent" class="accordion-collapse collapse show" data-bs-parent="#accordionFlushcurrent">
       <div class="accordion-body">
-        <ul><li><a href="#which-track-is-your-workshop-running">Which track is your workshop running?</a></li>
-<li><a href="#required-for-all-tracks">Required for all tracks</a></li>
-<li><a href="#full-track-only-pixi">Full track only: pixi</a></li>
-<li><a href="#installation">Installation</a></li>
-<li><a href="#lesson-demo-repository">Lesson Demo Repository</a></li>
-<li><a href="#what-to-check-before-the-workshop">What To Check Before the Workshop</a></li>
-<li><a href="#authentication-notes">Authentication Notes</a></li>
+        <ul><li><a href="#citation-focused-track-browser-only">Citation-focused track — browser only</a></li>
+<li><a href="#full-track-only-local-setup-for-the-optional-pixi-episode">Full track only — local setup for the optional pixi episode</a></li>
         </ul></div><!--/div.accordion-body-->
     </div><!--/div.accordion-collapse-->
 
@@ -213,7 +208,7 @@
 <div class="accordion accordion-flush" id="accordionFlush2">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading2">
-        <a href="introduction.html">1. Introduction: The "Works on My Machine" Trap</a>
+        <a href="introduction.html">1. Introduction: Software as a Citable Research Output</a>
     </div><!--/div.accordion-header-->
 
   </div><!--/div.accordion-item-->
@@ -258,7 +253,7 @@
 <div class="accordion accordion-flush" id="accordionFlush7">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading7">
-        <a href="managing-environments-pixi.html">6. Managing Reproducible Environments with pixi</a>
+        <a href="improving-metadata-discoverability.html">6. Improving Metadata and Discoverability</a>
     </div><!--/div.accordion-header-->
 
   </div><!--/div.accordion-item-->
@@ -267,7 +262,7 @@
 <div class="accordion accordion-flush" id="accordionFlush8">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading8">
-        <a href="improving-metadata-discoverability.html">7. Improving Metadata and Discoverability</a>
+        <a href="managing-environments-pixi.html">7. Managing Reproducible Environments with pixi</a>
     </div><!--/div.accordion-header-->
 
   </div><!--/div.accordion-item-->
@@ -328,19 +323,23 @@
       </div>
       <!-- content for large screens -->
       <div class="d-none d-sm-none d-md-block">
-        <a class="chapter-link float-end" href="introduction.html" rel="next">Next: Introduction: The... <i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
+        <a class="chapter-link float-end" href="introduction.html" rel="next">Next: Introduction:... <i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
       </div>
     </nav><main id="main-content" class="main-content"><h1 class="schedule-heading">Summary and Setup</h1>
       
 
-<figure><img src="fig/research-software-hex.png" style="padding: 2%" alt="Hex-style icon representing research software, metadata, and citation" class="figure mx-auto d-block"><div class="figcaption">Research Software Citability and
-Discoverability</div>
+<figure><img src="fig/research-software-hex.svg" style="padding: 2%; max-width: 760px" alt='Diagram titled "Core Elements of Citable and Discoverable Research Software": six hexagons in two groups. Blue (Citable): Release and DOI, CITATION.cff, and License. Green (Discoverable): Metadata and Topics, README and Docs, and Public Archive.' class="figure mx-auto d-block"><div class="figcaption">Diagram titled “Core Elements of Citable and
+Discoverable Research Software”: six hexagons in two groups. Blue
+(Citable): Release and DOI, CITATION.cff, and License. Green
+(Discoverable): Metadata and Topics, README and Docs, and Public
+Archive.</div>
 </figure><section><h2 class="section-heading" id="about-this-lesson">About This Lesson<a class="anchor" aria-label="anchor" href="#about-this-lesson"></a></h2>
 <hr class="half-width"><p>This lesson teaches practical steps to make your software
 <strong>Findable, Accessible, Interoperable, and Reusable
 (FAIR)</strong>. You’ll learn high-impact, low-effort practices such as
-adding a CITATION.cff file, choosing an open-source license, documenting
-dependencies with pixi, and improving metadata for discoverability.</p>
+adding a CITATION.cff file, choosing an open-source license, minting a
+DOI, and improving metadata for discoverability, plus an optional
+episode on documenting dependencies with pixi.</p>
 <p>The lesson is intended for researchers who write code as part of
 their work but do not necessarily identify as software developers.
 Graduate students, research staff, and librarians who support research
@@ -348,6 +347,32 @@ software will also find the material useful.</p>
 <p>Learners will make small, meaningful improvements to an existing
 GitHub repository and see how these practices increase attribution,
 transparency, and research impact.</p>
+<div id="how-this-lesson-works" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<span class="callout-header">Callout</span>
+<div id="how-this-lesson-works" class="callout-inner">
+<h3 class="callout-title">How This Lesson Works</h3>
+<div class="callout-content">
+<p>You’ll work in your web browser, in your <strong>own fork</strong> of
+a small demo repository. Each episode adds one piece to your fork: a
+license, a citation file, a release with a DOI, then richer metadata. By
+the end you’ll have a complete, citable repository you built
+yourself.</p>
+<p>The upstream repository keeps a set of view-only <strong>reference
+branches</strong> (<code>after-license</code>,
+<code>after-citation</code>, <code>after-release</code>,
+<code>after-metadata</code>) showing the target state after each
+episode. If you fall behind or want to check your work, open the
+matching branch in GitHub’s branch dropdown and compare.</p>
+<p>The only episode that needs software installed on your computer is
+the <strong>optional</strong> pixi episode at the end. Everything else
+runs in the browser. See <a href="index.html#setup">Setup</a> to get
+ready.</p>
+</div>
+</div>
+</div>
 </section><section><h2 class="section-heading" id="learning-objectives">Learning Objectives<a class="anchor" aria-label="anchor" href="#learning-objectives"></a></h2>
 <hr class="half-width"><p>After completing this lesson, learners will be able to:</p>
 <ul><li>explain why research software should be cited and attributed.</li>
@@ -369,13 +394,20 @@ and impact of their software.</li>
 <div id="prerequisites" class="callout-inner">
 <h3 class="callout-title">Prerequisites</h3>
 <div class="callout-content">
-<p>Before beginning this lesson, learners should be able to:</p>
-<ul><li>navigate GitHub in a web browser (view files, edit files, open
+<p>For the core lesson you need only a <strong>GitHub account</strong>
+and a <strong>web browser</strong>. Before beginning, it helps to be
+able to:</p>
+<ul><li>navigate GitHub in a web browser (view and edit files, open
 issues).</li>
-<li>understand basic Git concepts such as commits and repositories.</li>
-<li>edit plain-text files in any text editor.</li>
+<li>recognize basic Git concepts such as commits and repositories — you
+will <em>not</em> run Git locally.</li>
+<li>edit plain-text files.</li>
 </ul><p>You don’t need any prior experience with software packaging, metadata
 standards, or licensing.</p>
+<p>The <strong>optional</strong> final episode on reproducible
+environments with pixi is the only part that requires software installed
+on your computer. See <a href="index.html#setup">Setup</a> for both
+tracks.</p>
 </div>
 </div>
 </div>
@@ -398,122 +430,268 @@ automatically generated from the repository’s CITATION.cff file.</p>
 </div>
 </div>
 <!--
-Place links that you need to refer to multiple times across pages here. Delete
-any links that you are not going to use.
- -->
-</section><section id="setup"><section><h2 class="section-heading" id="which-track-is-your-workshop-running">Which track is your workshop running?<a class="anchor" aria-label="anchor" href="#which-track-is-your-workshop-running"></a></h2>
-<hr class="half-width"><p>Check with your instructor before installing anything.</p>
-<p><strong>Citation-focused track</strong>: covers licensing,
-CITATION.cff, releases, DOIs, and metadata. This is the default. No pixi
-needed.</p>
-<p><strong>Full track</strong>: adds an optional episode on reproducible
-environment management with pixi. Only install pixi if your instructor
-confirms you are running the full track.</p>
-<hr></section><section><h2 class="section-heading" id="required-for-all-tracks">Required for all tracks<a class="anchor" aria-label="anchor" href="#required-for-all-tracks"></a></h2>
-<hr class="half-width"><ul><li>
-<strong>A GitHub account</strong>: for editing files, adding a
-CITATION.cff, and improving repository metadata</li>
-<li>
-<strong>Git</strong>: for basic version control and interacting with
-the demo repository</li>
-<li>
-<strong>A web browser</strong>: most lesson activities work entirely
-in GitHub’s web interface</li>
-</ul><p>A text editor (VS Code, VS Codium, Sublime, etc.) is useful but not
-required; GitHub’s built-in editor works for everything in this
-lesson.</p>
-<hr></section><section><h2 class="section-heading" id="full-track-only-pixi">Full track only: pixi<a class="anchor" aria-label="anchor" href="#full-track-only-pixi"></a></h2>
-<hr class="half-width"><p><strong>Only install pixi if your instructor has confirmed you are
-doing the full track.</strong></p>
-<p>pixi is a fast, modern environment and package manager used in the
-optional reproducibility episode. If you are on the citation-focused
-track, skip this section entirely.</p>
-<hr></section><section><h2 class="section-heading" id="installation">Installation<a class="anchor" aria-label="anchor" href="#installation"></a></h2>
-<hr class="half-width"><div class="section level3">
-<h3 id="git">Git<a class="anchor" aria-label="anchor" href="#git"></a></h3>
-<p>Most systems already include Git. If not: - All platforms: <a href="https://git-scm.com/downloads" class="external-link uri">https://git-scm.com/downloads</a> - Windows users may prefer
-<strong>Git for Windows</strong>, which includes Git Bash</p>
-</div>
-<div class="section level3">
-<h3 id="pixi-full-track-only">pixi (full track only)<a class="anchor" aria-label="anchor" href="#pixi-full-track-only"></a></h3>
-<p>Install only if your instructor confirmed you are on the full track:
-<a href="https://pixi.sh/latest/" class="external-link uri">https://pixi.sh/latest/</a></p>
-<hr></div>
-</section><section><h2 class="section-heading" id="lesson-demo-repository">Lesson Demo Repository<a class="anchor" aria-label="anchor" href="#lesson-demo-repository"></a></h2>
-<hr class="half-width"><p>This lesson uses a <strong>demo repository</strong> called
-<code>software-demo</code> that progresses through different states as
-you learn.</p>
-<div class="section level3">
-<h3 id="clone-the-demo-repository">Clone the Demo Repository<a class="anchor" aria-label="anchor" href="#clone-the-demo-repository"></a></h3>
-<p>Before the workshop, clone the demo repository:</p>
-<div class="codewrapper sourceCode" id="cb1">
-<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" tabindex="-1" aria-label="code-block-1-1"></a><span class="fu">git</span> clone https://github.com/jt14den/software-demo.git</span>
-<span id="cb1-2"><a href="#cb1-2" tabindex="-1" aria-label="code-block-1-2"></a><span class="bu">cd</span> software-demo</span></code></pre>
-</div>
-</div>
-<div class="section level3">
-<h3 id="understanding-the-branches">Understanding the Branches<a class="anchor" aria-label="anchor" href="#understanding-the-branches"></a></h3>
-<p>The repository has branches for each lesson stage:</p>
+Shared link definitions, available to every episode in the lesson. The Workbench
+makes these keys usable from any .md file, so a URL used on multiple pages is
+defined here ONCE. Reference them in an episode with:
+
+    [display text][key]     e.g.  [UC OSPO License Guide][uc-license-guide]
+    [key][]                 uses the key itself as the link text
+
+Add a link here once it is used on 2+ pages, then update it in this one place.
+Note: this only affects markdown links [text](url); it does not apply to URLs
+inside code blocks or to autolinks written as <https://example.org>.
+-->
+<!-- UC OSPO / UC resources -->
+<!-- General open-source references -->
+</section><section id="setup"><p>This lesson runs almost entirely in your <strong>web
+browser</strong>. For most of it you need nothing more than a
+<strong>GitHub account</strong>. Only the optional final episode
+(reproducible environments with pixi) asks you to install software on
+your own computer.</p>
+<p>Check with your instructor which track your workshop is running
+<strong>before</strong> you install anything.</p>
 <ul><li>
-<code>01-start</code>: initial state (minimal project)</li>
+<strong>Citation-focused track (default):</strong> licensing,
+CITATION.cff, releases, DOIs, and metadata. Browser only.</li>
 <li>
-<code>02-license</code>: LICENSE file added</li>
-<li>
-<code>03-pixi</code>: pixi environment management added</li>
-<li>
-<code>04-citation</code>: CITATION.cff added</li>
-<li>
-<code>05-release</code>: tagged release v0.1.0</li>
-<li>
-<code>06-metadata</code>: final state (complete documentation)</li>
-</ul></div>
+<strong>Full track:</strong> everything above, plus the optional
+pixi episode, which needs a local install.</li>
+</ul><section><h2 class="section-heading" id="citation-focused-track-browser-only">Citation-focused track — browser only<a class="anchor" aria-label="anchor" href="#citation-focused-track-browser-only"></a></h2>
+<hr class="half-width"><p>You will fork a demo repository and add a license, a citation file, a
+release with a DOI, and metadata, all through GitHub’s web
+interface.</p>
+<p>You need:</p>
+<ul><li>
+<strong>A GitHub account</strong> — free at <a href="https://github.com/join" class="external-link uri">https://github.com/join</a>.</li>
+<li><strong>A modern web browser.</strong></li>
+</ul><p>That is all: <strong>no Git, no terminal, and no other
+software</strong> are required for this track. A desktop text editor (VS
+Code, VS Codium, Sublime, …) is optional; GitHub’s built-in editor
+handles everything.</p>
 <div class="section level3">
-<h3 id="catching-up-during-the-lesson">Catching Up During the Lesson<a class="anchor" aria-label="anchor" href="#catching-up-during-the-lesson"></a></h3>
-<p>If you need to catch up at any point during the workshop:</p>
+<h3 id="fork-the-demo-repository-do-this-before-the-workshop">Fork the demo repository (do this before the workshop)<a class="anchor" aria-label="anchor" href="#fork-the-demo-repository-do-this-before-the-workshop"></a></h3>
+<p>The lesson uses a demo repository called
+<strong><code>software-demo</code></strong>, and you work in your own
+fork of it.</p>
+<ol style="list-style-type: decimal"><li>Sign in to GitHub.</li>
+<li>Go to <a href="https://github.com/UC-OSPO-Network/software-demo" class="external-link uri">https://github.com/UC-OSPO-Network/software-demo</a>.</li>
+<li>Click <strong>Fork</strong>, then <strong>Create fork</strong>. The
+default settings are fine; you only need the <code>main</code>
+branch.</li>
+<li>You now have your own copy at
+<code>https://github.com/YOUR-USERNAME/software-demo</code>. Its
+<code>main</code> branch is the bare <strong>starting state</strong> —
+no license, citation file, release, or metadata. That is intentional;
+you will build it up over the lesson.</li>
+</ol><div id="checking-your-work-reference-branches" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<span class="callout-header">Callout</span>
+<div id="checking-your-work-reference-branches" class="callout-inner">
+<h3 class="callout-title">Checking your work: reference branches</h3>
+<div class="callout-content">
+<p>The <strong>upstream</strong> repository
+(<code>UC-OSPO-Network/software-demo</code>) keeps view-only
+<strong>reference branches</strong> that show the target state after
+each episode:</p>
+<table class="table"><thead><tr><th>Branch</th>
+<th>Shows the repo after…</th>
+</tr></thead><tbody><tr><td><code>main</code></td>
+<td>the starting state (what you fork)</td>
+</tr><tr><td><code>after-license</code></td>
+<td>Episode 2, license added</td>
+</tr><tr><td><code>after-citation</code></td>
+<td>Episode 3, CITATION.cff added</td>
+</tr><tr><td><code>after-release</code></td>
+<td>Episode 4, release + DOI</td>
+</tr><tr><td><code>after-metadata</code></td>
+<td>Episode 5, full metadata (the finished repo)</td>
+</tr><tr><td><code>optional-pixi</code></td>
+<td>the optional pixi episode</td>
+</tr></tbody></table><p>If you fall behind or want to compare, open the upstream repo, switch
+to the matching branch in the branch dropdown, and look at the files.
+Because each episode adds an <strong>independent</strong> piece, falling
+behind never blocks you: you can copy a file you missed from its
+reference branch. You never edit the reference branches; they are an
+answer key.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="section level3">
+<h3 id="before-the-workshop-confirm">Before the workshop, confirm<a class="anchor" aria-label="anchor" href="#before-the-workshop-confirm"></a></h3>
+<ul><li>You can sign in to GitHub in your browser.</li>
+<li>You have forked <code>software-demo</code> and can see it under your
+account.</li>
+</ul><p>If both are true, you are ready for the citation-focused track. There
+is nothing to install.</p>
+</div>
+</section><section><h2 class="section-heading" id="full-track-only-local-setup-for-the-optional-pixi-episode">Full track only — local setup for the optional pixi episode<a class="anchor" aria-label="anchor" href="#full-track-only-local-setup-for-the-optional-pixi-episode"></a></h2>
+<hr class="half-width"><div id="caution1" class="callout caution">
+<div class="callout-square">
+<i class="callout-icon" data-feather="alert-triangle"></i>
+</div>
+<span class="callout-header">Caution</span>
+<div class="callout-inner">
+<div class="callout-content">
+<p><strong>Set this up only if your instructor has confirmed the full
+track.</strong> The pixi episode is the one part of the lesson that runs
+on your own machine. If you are on the citation-focused track, skip this
+whole section — you do not need Git, a terminal, or pixi.</p>
+</div>
+</div>
+</div>
+<p>In addition to the GitHub account above, you will need Git, pixi, and
+a local clone of your fork.</p>
+<div class="section level3">
+<h3 id="install-git">1. Install Git<a class="anchor" aria-label="anchor" href="#install-git"></a></h3>
+<div class="tabs">
+<nav><div id="nav-tab-1" class="nav nav-tabs" role="tablist">
+<button class="nav-link active" id="nav-tab-1-Windows" name="Windows" data-bs-toggle="tab" data-bs-target="#nav-tabpanel-1-Windows" type="button" role="tab" aria-controls="nav-tabpanel-1-Windows" aria-selected="true">
+  <h3 class="tab-header" id="nav-tab-heading-1-Windows">
+  Windows
+  </h3>
+</button>
+<button class="nav-link" id="nav-tab-1-macOS" name="macOS" data-bs-toggle="tab" data-bs-target="#nav-tabpanel-1-macOS" type="button" role="tab" aria-controls="nav-tabpanel-1-macOS" aria-selected="false">
+  <h3 class="tab-header" id="nav-tab-heading-1-macOS">
+  macOS
+  </h3>
+</button>
+<button class="nav-link" id="nav-tab-1-Linux" name="Linux" data-bs-toggle="tab" data-bs-target="#nav-tabpanel-1-Linux" type="button" role="tab" aria-controls="nav-tabpanel-1-Linux" aria-selected="false">
+  <h3 class="tab-header" id="nav-tab-heading-1-Linux">
+  Linux
+  </h3>
+</button>
+</div>
+</nav><div id="nav-tabContent-1" class="tab-content">
+<div id="nav-tabpanel-1-Windows" class="tab-pane show active" aria-labelledby="nav-tab-1-Windows" role="tabpanel">
+<p>Download and run <strong>Git for Windows</strong> from <a href="https://git-scm.com/downloads/win" class="external-link uri">https://git-scm.com/downloads/win</a> and accept the default
+options. This also installs <strong>Git Bash</strong>, a terminal you
+can use for the remaining steps.</p>
+</div>
+<div id="nav-tabpanel-1-macOS" class="tab-pane" aria-labelledby="nav-tab-1-macOS" role="tabpanel">
+<p>Git is usually already installed. Open <strong>Terminal</strong> and
+run <code>git --version</code>. If you are prompted to install the
+Command Line Developer Tools, accept. Otherwise install it with <a href="https://brew.sh" class="external-link">Homebrew</a>: <code>brew install git</code>.</p>
+</div>
+<div id="nav-tabpanel-1-Linux" class="tab-pane" aria-labelledby="nav-tab-1-Linux" role="tabpanel">
+<p>Git is usually already installed. If not, use your package manager,
+for example <code>sudo apt install git</code> (Debian/Ubuntu) or
+<code>sudo dnf install git</code> (Fedora).</p>
+</div>
+</div>
+</div>
+</div>
+<div class="section level3">
+<h3 id="install-pixi">2. Install pixi<a class="anchor" aria-label="anchor" href="#install-pixi"></a></h3>
+<p>pixi is a fast, cross-platform environment and package manager.</p>
+<div class="tabs">
+<nav><div id="nav-tab-2" class="nav nav-tabs" role="tablist">
+<button class="nav-link active" id="nav-tab-2-Windows" name="Windows" data-bs-toggle="tab" data-bs-target="#nav-tabpanel-2-Windows" type="button" role="tab" aria-controls="nav-tabpanel-2-Windows" aria-selected="true">
+  <h3 class="tab-header" id="nav-tab-heading-2-Windows">
+  Windows
+  </h3>
+</button>
+<button class="nav-link" id="nav-tab-2-macOS" name="macOS" data-bs-toggle="tab" data-bs-target="#nav-tabpanel-2-macOS" type="button" role="tab" aria-controls="nav-tabpanel-2-macOS" aria-selected="false">
+  <h3 class="tab-header" id="nav-tab-heading-2-macOS">
+  macOS
+  </h3>
+</button>
+<button class="nav-link" id="nav-tab-2-Linux" name="Linux" data-bs-toggle="tab" data-bs-target="#nav-tabpanel-2-Linux" type="button" role="tab" aria-controls="nav-tabpanel-2-Linux" aria-selected="false">
+  <h3 class="tab-header" id="nav-tab-heading-2-Linux">
+  Linux
+  </h3>
+</button>
+</div>
+</nav><div id="nav-tabContent-2" class="tab-content">
+<div id="nav-tabpanel-2-Windows" class="tab-pane show active" aria-labelledby="nav-tab-2-Windows" role="tabpanel">
+<p>In <strong>PowerShell</strong>, run:</p>
+<div class="codewrapper sourceCode" id="cb1">
+<h3 class="code-label">POWERSHELL<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode powershell" tabindex="0"><code class="sourceCode powershell"><span id="cb1-1"><a href="#cb1-1" tabindex="-1" aria-label="code-block-1-1"></a><span class="fu">iwr</span> <span class="op">-</span>useb https<span class="op">://</span>pixi<span class="op">.</span><span class="fu">sh</span><span class="op">/</span>install<span class="op">.</span><span class="fu">ps1</span> <span class="op">|</span> <span class="fu">iex</span></span></code></pre>
+</div>
+<p>Then close and reopen your terminal so <code>pixi</code> is on your
+PATH.</p>
+</div>
+<div id="nav-tabpanel-2-macOS" class="tab-pane" aria-labelledby="nav-tab-2-macOS" role="tabpanel">
+<p>In <strong>Terminal</strong>, run:</p>
 <div class="codewrapper sourceCode" id="cb2">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" tabindex="-1" aria-label="code-block-2-1"></a><span class="fu">git</span> checkout 02-license    <span class="co"># Jump to the license stage</span></span>
-<span id="cb2-2"><a href="#cb2-2" tabindex="-1" aria-label="code-block-2-2"></a><span class="fu">git</span> checkout 03-pixi       <span class="co"># Jump to the environment stage</span></span>
-<span id="cb2-3"><a href="#cb2-3" tabindex="-1" aria-label="code-block-2-3"></a><span class="co"># etc.</span></span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" tabindex="-1" aria-label="code-block-2-1"></a><span class="ex">curl</span> <span class="at">-fsSL</span> https://pixi.sh/install.sh <span class="kw">|</span> <span class="fu">bash</span></span></code></pre>
 </div>
-<p>Each episode will tell you which branch to check out if you need to
-skip ahead.</p>
-<p><strong>Note:</strong> You can always return to the main branch with
-<code>git checkout main</code></p>
-<hr></div>
-</section><section><h2 class="section-heading" id="what-to-check-before-the-workshop">What To Check Before the Workshop<a class="anchor" aria-label="anchor" href="#what-to-check-before-the-workshop"></a></h2>
-<hr class="half-width"><p>Confirm Git is installed:</p>
+<p>Then close and reopen your terminal.</p>
+</div>
+<div id="nav-tabpanel-2-Linux" class="tab-pane" aria-labelledby="nav-tab-2-Linux" role="tabpanel">
+<p>In a terminal, run:</p>
 <div class="codewrapper sourceCode" id="cb3">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" tabindex="-1" aria-label="code-block-3-1"></a><span class="fu">git</span> <span class="at">--version</span></span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" tabindex="-1" aria-label="code-block-3-1"></a><span class="ex">curl</span> <span class="at">-fsSL</span> https://pixi.sh/install.sh <span class="kw">|</span> <span class="fu">bash</span></span></code></pre>
 </div>
-<p><strong>Full track only</strong>: confirm pixi is installed:</p>
+<p>Then close and reopen your terminal.</p>
+</div>
+</div>
+</div>
+<p>Full instructions and troubleshooting: <a href="https://pixi.sh/latest/" class="external-link uri">https://pixi.sh/latest/</a></p>
+</div>
+<div class="section level3">
+<h3 id="clone-your-fork">3. Clone your fork<a class="anchor" aria-label="anchor" href="#clone-your-fork"></a></h3>
 <div class="codewrapper sourceCode" id="cb4">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" tabindex="-1" aria-label="code-block-4-1"></a><span class="ex">pixi</span> <span class="at">--version</span></span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" tabindex="-1" aria-label="code-block-4-1"></a><span class="fu">git</span> clone https://github.com/YOUR-USERNAME/software-demo.git</span>
+<span id="cb4-2"><a href="#cb4-2" tabindex="-1" aria-label="code-block-4-2"></a><span class="bu">cd</span> software-demo</span></code></pre>
 </div>
-<hr></section><section><h2 class="section-heading" id="authentication-notes">Authentication Notes<a class="anchor" aria-label="anchor" href="#authentication-notes"></a></h2>
-<hr class="half-width"><p>GitHub now supports streamlined login through the browser.<br>
-If you’re prompted to authenticate:</p>
-<ul><li>follow the link that appears in the terminal<br></li>
-<li>sign in using your GitHub credentials<br></li>
-<li>return to the terminal when authorization completes</li>
-</ul><p>You do <strong>not</strong> need SSH keys or personal access tokens
-for this lesson.</p>
-<hr><!--
-Place links that you need to refer to multiple times across pages here. Delete
-any links that you are not going to use.
- --></section></section></main><nav class="bottom-pagination mx-md-4" aria-label="Next Chapter"><!-- content for small screens --><div class="d-block d-sm-block d-md-none">
+</div>
+<div class="section level3">
+<h3 id="before-the-workshop-confirm-full-track-only">Before the workshop, confirm (full track only)<a class="anchor" aria-label="anchor" href="#before-the-workshop-confirm-full-track-only"></a></h3>
+<p>Open a terminal and check that both tools respond:</p>
+<div class="codewrapper sourceCode" id="cb5">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" tabindex="-1" aria-label="code-block-5-1"></a><span class="fu">git</span> <span class="at">--version</span></span>
+<span id="cb5-2"><a href="#cb5-2" tabindex="-1" aria-label="code-block-5-2"></a><span class="ex">pixi</span> <span class="at">--version</span></span></code></pre>
+</div>
+<div id="authentication-note" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<span class="callout-header">Callout</span>
+<div id="authentication-note" class="callout-inner">
+<h3 class="callout-title">Authentication note</h3>
+<div class="callout-content">
+<p>If you are prompted to authenticate when you clone, GitHub can sign
+you in through the browser: follow the link that appears in the
+terminal, sign in, and return. You do <strong>not</strong> need SSH keys
+or personal access tokens for this lesson.</p>
+</div>
+</div>
+</div>
+
+<!--
+Shared link definitions, available to every episode in the lesson. The Workbench
+makes these keys usable from any .md file, so a URL used on multiple pages is
+defined here ONCE. Reference them in an episode with:
+
+    [display text][key]     e.g.  [UC OSPO License Guide][uc-license-guide]
+    [key][]                 uses the key itself as the link text
+
+Add a link here once it is used on 2+ pages, then update it in this one place.
+Note: this only affects markdown links [text](url); it does not apply to URLs
+inside code blocks or to autolinks written as <https://example.org>.
+-->
+<!-- UC OSPO / UC resources -->
+<!-- General open-source references -->
+</div>
+</section></section></main><nav class="bottom-pagination mx-md-4" aria-label="Next Chapter"><!-- content for small screens --><div class="d-block d-sm-block d-md-none">
         <a class="chapter-link float-end" href="introduction.html" rel="next">Next<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
       </div>
       <!-- content for large screens -->
       <div class="d-none d-sm-none d-md-block">
-        <a class="chapter-link float-end" href="introduction.html" rel="next">Next: Introduction: The... <i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
+        <a class="chapter-link float-end" href="introduction.html" rel="next">Next: Introduction:... <i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
       </div>
     </nav></div>
 <!-- END  : inst/pkgdown/templates/content-syllabus.html -->
@@ -559,8 +737,8 @@ any links that you are not going to use.
   "url": "https://UC-OSPO-Network.github.io/research-software-citable-discoverable/index.html",
   "identifier": "https://UC-OSPO-Network.github.io/research-software-citable-discoverable/index.html",
   "dateCreated": "2025-12-06",
-  "dateModified": "2026-06-30",
-  "datePublished": "2026-06-30"
+  "dateModified": "2026-07-05",
+  "datePublished": "2026-07-05"
 }
 
   </script><script>
