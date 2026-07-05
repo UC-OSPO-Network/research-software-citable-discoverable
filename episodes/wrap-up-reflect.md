@@ -119,6 +119,14 @@ Fill in the actual names and contacts for your campus and you have a reusable se
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
+::::::::::::::::::::::::::::::::::::: instructor
+
+### Make it a local service map
+
+Have each support-staff learner write down one campus referral they still need to identify after the workshop: Tech Transfer, research computing, the data repository, information security, the grants office, or scholarly communications. Naming a real gap turns the demo into a local service map they can actually use on Monday.
+
+::::::::::::::::::::::::::::::::::::::::::::::::
+
 ::::::::::::::::::::::::::::::::: challenge
 
 ## Challenge 3: Build your campus playbook *(supporting others)*

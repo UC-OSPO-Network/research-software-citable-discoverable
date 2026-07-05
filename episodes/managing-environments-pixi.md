@@ -12,6 +12,14 @@ This episode covers environment management using `pixi`. It is **optional**; you
 
 If you skip this episode, you still complete every citation step. Unlike the rest of the lesson, which runs entirely in the browser, this episode requires tools installed on your own computer (**pixi** and a **terminal**) and a local clone of your fork. Its files live only in the [`optional-pixi` reference branch][branch-optional-pixi], not in your main project, so skipping it leaves nothing unfinished. Confirm with your instructor that you're running the full track before installing anything.
 
+::::::::::::::::::::::::::::::::::::: instructor
+
+### Take a hard fork here
+
+Citation-focused learners are done with the core lesson after the metadata episode; send them off or into a break. Only full-track learners continue, and they need a local clone and pixi installed. Do not make the whole room troubleshoot installations. State clearly who this episode is for before anyone opens a terminal.
+
+::::::::::::::::::::::::::::::::::::::::::::::::
+
 **Other environment tools:** `conda`, `mamba`, `pip`/`venv`, and `renv` (for R) all serve the same purpose. The concepts here apply to any environment manager; pixi is used because it handles Python, R, and other languages with a single tool and generates an automatic lockfile.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
@@ -114,6 +122,14 @@ Environment management reduces this friction because it captures:
 **FAIR Connection:** Standard formats + clear dependencies = Interoperable & Reusable software
 
 ---
+
+::::::::::::::::::::::::::::::::::::: instructor
+
+### Assign a helper to install issues
+
+If you are teaching the full track, assign one helper to pixi install and PATH problems. The lead instructor should keep moving with the concept demo and not stop the main room for individual terminal errors. Installation issues are the single most likely time-sink in this episode.
+
+::::::::::::::::::::::::::::::::::::::::::::::::
 
 ## Installing pixi
 
