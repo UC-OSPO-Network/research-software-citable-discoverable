@@ -20,3 +20,12 @@ inside code blocks or to autolinks written as <https://example.org>.
 [choosealicense]: https://choosealicense.com/
 [awesome-readme]: https://github.com/matiassingers/awesome-readme
 [contributor-covenant]: https://www.contributor-covenant.org/
+
+<!-- Demo repository and its view-only reference branches (the per-episode "answer keys") -->
+[demo-repo]: https://github.com/UC-OSPO-Network/software-demo
+[branch-main]: https://github.com/UC-OSPO-Network/software-demo/tree/main
+[branch-after-license]: https://github.com/UC-OSPO-Network/software-demo/tree/after-license
+[branch-after-citation]: https://github.com/UC-OSPO-Network/software-demo/tree/after-citation
+[branch-after-release]: https://github.com/UC-OSPO-Network/software-demo/tree/after-release
+[branch-after-metadata]: https://github.com/UC-OSPO-Network/software-demo/tree/after-metadata
+[branch-optional-pixi]: https://github.com/UC-OSPO-Network/software-demo/tree/optional-pixi

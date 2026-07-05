@@ -169,12 +169,16 @@ Zenodo detects the release, downloads and archives a snapshot of the repository 
 - Click "Log in with GitHub"
 - Authorize Zenodo to access your repositories
 
+![Zenodo's GitHub page walks you through the same three steps: flip the switch on a repository, create a release, and get a DOI badge.](fig/zenodo-get-started.png){alt="Zenodo Sandbox 'Get started' panel showing three numbered steps: Flip the switch, Create a release, and Get the badge."}
+
 **Step 2: Enable your repository (toggle ON)**
 
 - Go to **Settings → GitHub** in Zenodo Sandbox
 - Find your repository in the list
 - Toggle the switch to **ON** (green)
 - This tells Zenodo to watch for new releases
+
+![In Zenodo Sandbox under **Settings → GitHub**, find your repository and flip its switch to ON so Zenodo archives each new release.](fig/zenodo-github-toggle.png){alt="Zenodo Sandbox GitHub repositories list with the software-demo row highlighted and its toggle switched ON."}
 
 **Step 3: Create GitHub Release (tag v1.0.0)**
 
@@ -183,6 +187,10 @@ Zenodo detects the release, downloads and archives a snapshot of the repository 
 - Create a tag: `v1.0.0`
 - Add release notes describing what's in this version
 - Click **Publish release**
+
+<!-- TODO screenshot: GitHub "Draft a new release" form with tag v0.1.0, release title, and notes filled in. Save as fig/draft-a-release.png, then add:
+![Fill in a tag such as `v0.1.0`, add a title and release notes, then click **Publish release**.](fig/draft-a-release.png){alt="GitHub's Draft a new release form with a version tag, release title, and notes filled in."} -->
+
 
 **Step 4: Zenodo auto-archives and mints DOI**
 
@@ -220,6 +228,14 @@ doi: 10.5281/zenodo.123456
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 ::::::::::::::::::::::::::::::::::::: callout
+
+::::::::::::::::::::::::::::::::::::: callout
+
+### Check your work
+
+Compare your fork against the [`after-release` reference branch][branch-after-release] on the [demo repository][demo-repo]. It shows the target state after this episode: a tagged release and a `CITATION.cff` updated with the DOI.
+
+::::::::::::::::::::::::::::::::::::::::::::::::
 
 ### Supporting others
 

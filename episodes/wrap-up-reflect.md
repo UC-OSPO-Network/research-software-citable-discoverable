@@ -36,21 +36,21 @@ Congratulations! You've transformed fragile research software into a FAIR softwa
 
 ### From Fragile to FAIR
 
-**Before (`main`, starting state):**
+**Before ([`main`][branch-main], starting state):**
 
 - ❌ No LICENSE
 - ❌ No citation
 - ❌ No DOI
 - ❌ Minimal README
 
-**After (`after-metadata`):**
+**After ([`after-metadata`][branch-after-metadata]):**
 
 - ✅ LICENSE (BSD-3)
 - ✅ CITATION.cff
 - ✅ DOI from Zenodo
 - ✅ README with documentation
 - ✅ Community health files
-- ✅ Reproducible environment *(optional pixi episode, on `optional-pixi`)*
+- ✅ Reproducible environment *(optional pixi episode, on [`optional-pixi`][branch-optional-pixi])*
 
 Your software is now **citable, discoverable, and reusable**.
 
@@ -137,6 +137,14 @@ There is no single right answer; the artifact is the point. A strong playbook na
 
 :::::::::::::::::::::::::::::::::
 :::::::::::::::::::::::::::::::::
+
+::::::::::::::::::::::::::::::::::::: callout
+
+### Going further: the next layer
+
+Citable and discoverable is the foundation, not the finish line. Once a project has a license, a citation file, and a DOI, the next questions are about *project health*: is it secure, maintained, and safe to build on? [OpenSSF Scorecards](https://securityscorecards.dev/) scores a repository against those practices and is becoming a common signal across the open-source ecosystem, though it is a separate skill from what we covered here. On the credit side, the [FORCE11 Software Citation Principles](https://doi.org/10.7717/peerj-cs.86) are the standard the `CITATION.cff` work in this lesson rests on. Both are good next stops for anyone building out an academic OSPO's teaching.
+
+::::::::::::::::::::::::::::::::::::::::::::::::
 
 ## Resources to Take With You
 

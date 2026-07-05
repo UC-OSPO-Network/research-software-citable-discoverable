@@ -72,6 +72,8 @@ GitHub uses structured metadata to improve search ranking and cross-repository l
 - methodological tags (`simulation`, `visualization`, `machine-learning`)
 - language tags (`python`, `r`)
 
+![Open the repository's About settings (the gear icon) and add topics in the **Topics** field, separated by spaces.](fig/repository-topics.png){alt="GitHub's 'Edit repository details' dialog with the Topics field highlighted, showing example topics such as biodiversity, ecology, and data-analysis."}
+
 ## Writing an Effective README
 
 ### The 30-Second Rule
@@ -106,9 +108,9 @@ A script.
 No description. No instructions. No citation. Unusable.
 ```
 
-**✅ After (`after-metadata`)**
+**✅ After ([`after-metadata`][branch-after-metadata])**
 
-```markdown
+````markdown
 # Biodiversity Analysis Toolkit
 
 Analysis tools for biodiversity research.
@@ -126,7 +128,7 @@ python src/analysis.py
 [zenodo.org/badge/DOI/10.5281/zenodo.123456.svg]
 
 License: BSD-3 - see LICENSE file
-```
+````
 
 **Professional. Citable. Usable.**
 
