@@ -424,7 +424,7 @@ that fits a researcher’s stack rather than defaulting to one.</li>
 <button class="accordion-button instructor-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInstructor1" aria-expanded="false" aria-controls="collapseInstructor1">
   <h3 class="accordion-header" id="headingInstructor1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="edit-2"></i></div> Teaching this optional episode </h3>
 </button>
-<div id="collapseInstructor1" class="accordion-collapse collapse" aria-labelledby="headingInstructor1" data-bs-parent="#accordionInstructor1">
+<div id="collapseInstructor1" class="accordion-collapse collapse" data-bs-parent="#accordionInstructor1" aria-labelledby="headingInstructor1">
 <div class="accordion-body">
 <p>This episode is last in the lesson order and is the only one that
 leaves the browser: it needs pixi and a terminal on the learner’s own
@@ -499,9 +499,9 @@ Which one? Printed when?</p>
 <p><code>pixi.lock</code> is like saying “I need a pepperoni pizza from
 Mario’s, baked at 5:00 PM.”</p>
 <p><strong>Benefits:</strong></p>
-<ul><li>✅ Exact versions locked</li>
-<li>✅ Same environment everywhere</li>
-<li>✅ Reproducible in 5 years</li>
+<ul><li>✅ Exact resolved versions recorded</li>
+<li>✅ Much closer to the same environment across machines</li>
+<li>✅ A durable record of what you actually ran</li>
 </ul></div>
 </section><section><h2 class="section-heading" id="what-environment-management-captures">What Environment Management Captures<a class="anchor" aria-label="anchor" href="#what-environment-management-captures"></a></h2>
 <hr class="half-width"><p>Environment management reduces this friction because it captures:</p>
@@ -521,8 +521,8 @@ because it is:</p>
 <strong>Fast:</strong> Faster than Conda</li>
 <li>
 <strong>Automatic lockfiles:</strong> Creates <code>pixi.lock</code>
-automatically, guaranteeing everyone runs the exact same versions of
-every package</li>
+automatically, recording the exact resolved versions of every package so
+others can rebuild the same environment</li>
 <li>
 <strong>Multi-language:</strong> Supports Python, R, and more</li>
 </ul><p><strong>FAIR Connection:</strong> Standard formats + clear
@@ -629,8 +629,10 @@ numpy = "2.4.2"
 r = "4.5.4"
 r-dplyr = "1.2.0"
 + 47 other dependencies</code></pre>
-<p>This lockfile guarantees <strong>byte-for-byte
-reproducibility</strong>.</p>
+<p>This lockfile records the exact resolved versions and per-platform
+builds, so anyone can rebuild the same environment. It greatly improves
+reproducibility, though it cannot guarantee that every package will
+still be available, or behave identically, on every future platform.</p>
 <hr></div>
 </section><section><h2 class="section-heading" id="running-code-with-pixi">Running Code With pixi<a class="anchor" aria-label="anchor" href="#running-code-with-pixi"></a></h2>
 <hr class="half-width"><p>Run Python code:</p>
@@ -727,7 +729,7 @@ on any one manager installing cleanly on every laptop.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb13">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -768,7 +770,7 @@ alone would not?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <p><code>pixi.toml</code> records only <em>which</em> packages you want.
 Resolved a year apart, it could pull a newer numpy or Python build than

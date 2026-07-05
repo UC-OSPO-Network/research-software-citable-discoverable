@@ -419,7 +419,7 @@ and learn how DOIs fit into software citation workflows.</p>
 <button class="accordion-button instructor-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInstructor1" aria-expanded="false" aria-controls="collapseInstructor1">
   <h3 class="accordion-header" id="headingInstructor1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="edit-2"></i></div> Instructor Note </h3>
 </button>
-<div id="collapseInstructor1" class="accordion-collapse collapse" data-bs-parent="#accordionInstructor1" aria-labelledby="headingInstructor1">
+<div id="collapseInstructor1" class="accordion-collapse collapse" aria-labelledby="headingInstructor1" data-bs-parent="#accordionInstructor1">
 <div class="accordion-body">
 <p>Some learners may feel anxious about creating a DOI.<br>
 Reassure them that:</p>
@@ -478,8 +478,12 @@ It is the snapshot that others can cite.</p>
 <li>Create a tag such as <code>v0.1.0</code>.<br></li>
 <li>Add release notes summarizing changes.<br></li>
 <li>Publish the release.</li>
-</ol><p>Your <code>CITATION.cff</code> file will automatically reference this
-tagged version unless you specify otherwise.</p>
+</ol><p>Creating a release does not change your <code>CITATION.cff</code>
+file. GitHub builds the “Cite this repository” panel from the file on
+your default branch. After you publish a release, update the
+<code>version</code> and <code>date-released</code> fields in
+<code>CITATION.cff</code> if you want the citation to point at that
+specific release.</p>
 <div id="semantic-versioning-semver" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
@@ -525,7 +529,7 @@ this version?</li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p>Useful release notes include:</p>
 <ul><li>what changed<br></li>
@@ -578,7 +582,7 @@ you?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <p>Zenodo detects the release, downloads and archives a snapshot of the
 repository at that tag, and mints a permanent DOI for it. The archived
@@ -640,6 +644,46 @@ release</strong> (below the fold).</div>
 </div>
 <p><strong>Result:</strong> You now have LICENSE, CITATION.cff, and
 DOI.</p>
+<div id="what-the-doi-actually-archived" class="callout caution">
+<div class="callout-square">
+<i class="callout-icon" data-feather="alert-triangle"></i>
+</div>
+<span class="callout-header">Caution</span>
+<div id="what-the-doi-actually-archived" class="callout-inner">
+<h3 class="callout-title">What the DOI actually archived</h3>
+<div class="callout-content">
+<p>Zenodo archived the repository <strong>as it existed the moment you
+clicked Publish release</strong>. That snapshot is fixed. The
+<code>CITATION.cff</code> edit you just made in Step 6, and any later
+README or metadata changes, update the live GitHub repository and will
+be captured by your <em>next</em> release, not the one already archived.
+If you want the archived snapshot itself to contain the DOI, make a new
+release after updating the file.</p>
+</div>
+</div>
+</div>
+<div id="practice-safely-and-watch-org-permissions" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<span class="callout-header">Callout</span>
+<div id="practice-safely-and-watch-org-permissions" class="callout-inner">
+<h3 class="callout-title">Practice safely, and watch org
+permissions</h3>
+<div class="callout-content">
+<ul><li>
+<strong>Sandbox DOIs are for practice only.</strong> Do not put a
+<code>10.5072/...</code> sandbox DOI in a paper, grant report,
+production README, or a real <code>CITATION.cff</code>. Real Zenodo
+records (and their DOIs) are permanent and cannot be deleted.</li>
+<li>
+<strong>If Zenodo cannot see your repository:</strong> it only lists
+repos you have admin rights on. For an organization repo, an org owner
+may need to approve Zenodo’s access first. For the exercise, forking
+under your personal account avoids this entirely.</li>
+</ul></div>
+</div>
+</div>
 <div id="now-you-have-everything" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
@@ -656,7 +700,7 @@ setup</p>
 </div>
 </div>
 </div>
-<div id="callout5" class="callout">
+<div id="callout6" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
@@ -714,7 +758,7 @@ copy survives.</p>
 <button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler1" aria-expanded="false" aria-controls="collapseSpoiler1">
   <h3 class="accordion-header" id="headingSpoiler1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> Going further: Software Heritage </h3>
 </button>
-<div id="collapseSpoiler1" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler1" aria-labelledby="headingSpoiler1">
+<div id="collapseSpoiler1" class="accordion-collapse collapse" aria-labelledby="headingSpoiler1" data-bs-parent="#accordionSpoiler1">
 <div class="accordion-body">
 <p>Zenodo archives a snapshot of your code at release time. <a href="https://www.softwareheritage.org/" class="external-link">Software Heritage</a> goes
 further: it continuously crawls GitHub, GitLab, and other forges and
@@ -752,7 +796,7 @@ roadmap (Di Cosmo et al., <em>Scientific Data</em>).</p>
 <button class="accordion-button instructor-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInstructor2" aria-expanded="false" aria-controls="collapseInstructor2">
   <h3 class="accordion-header" id="headingInstructor2">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="edit-2"></i></div> Instructor Note </h3>
 </button>
-<div id="collapseInstructor2" class="accordion-collapse collapse" data-bs-parent="#accordionInstructor2" aria-labelledby="headingInstructor2">
+<div id="collapseInstructor2" class="accordion-collapse collapse" aria-labelledby="headingInstructor2" data-bs-parent="#accordionInstructor2">
 <div class="accordion-body">
 <p><strong>Critical:</strong> Ensure learners use
 <strong>sandbox.zenodo.org</strong>. Real DOIs cannot be deleted.</p>
@@ -779,7 +823,7 @@ rather than the whole project?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution3" aria-expanded="false" aria-controls="collapseSolution3">
   <h4 class="accordion-header" id="headingSolution3"> Show me the solution </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
 <div class="accordion-body">
 <p>Versioned DOIs:</p>
 <ul><li>support reproducibility by identifying an exact snapshot<br></li>

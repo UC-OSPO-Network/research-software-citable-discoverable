@@ -488,9 +488,13 @@ example</strong> button.</li>
 <li>Click <strong>Insert example</strong>. GitHub drops a valid,
 ready-to-edit template into the editor.</li>
 <li>Edit the placeholders: replace <code>YOUR_NAME_HERE</code>, add real
-<strong>ORCIDs</strong>, and set the <code>title</code>,
-<code>version</code>, <code>date-released</code>, and <code>url</code>
-to match your repository.</li>
+<strong>ORCIDs</strong>, and set the <code>title</code> and
+<code>url</code> to match your repository.</li>
+<li>
+<strong>Delete the <code>doi</code> line</strong> (you do not have a
+DOI yet, you will add it in the next episode). Delete
+<code>version</code> and <code>date-released</code> too if you have not
+made a release; otherwise set them to match.</li>
 <li>Click <strong>Commit changes…</strong> and commit to your
 <code>main</code> branch.</li>
 </ol><figure><img src="../fig/create-citation-cff.png" alt="GitHub's create-new-file editor with the filename CITATION.cff, the Insert example button, the template in the edit pane, and the Commit changes button all highlighted and numbered one through four." class="figure mx-auto d-block"><div class="figcaption">Name a new file <code>CITATION.cff</code>, click
@@ -550,11 +554,16 @@ create on GitHub. More on the format: <a href="https://citation-file-format.gith
 <span id="cb2-14"><a href="#cb2-14" tabindex="-1" aria-label="code-block-2-14"></a><span class="at">  </span><span class="kw">-</span><span class="at"> </span><span class="fu">family-names</span><span class="kw">:</span><span class="at"> </span><span class="st">"Padilla"</span></span>
 <span id="cb2-15"><a href="#cb2-15" tabindex="-1" aria-label="code-block-2-15"></a><span class="at">    </span><span class="fu">given-names</span><span class="kw">:</span><span class="at"> </span><span class="st">"Karla"</span></span>
 <span id="cb2-16"><a href="#cb2-16" tabindex="-1" aria-label="code-block-2-16"></a><span class="fu">version</span><span class="kw">:</span><span class="at"> </span><span class="st">"0.1.0"</span></span>
-<span id="cb2-17"><a href="#cb2-17" tabindex="-1" aria-label="code-block-2-17"></a><span class="fu">doi</span><span class="kw">:</span><span class="at"> 10.5072/zenodo.123456</span></span>
-<span id="cb2-18"><a href="#cb2-18" tabindex="-1" aria-label="code-block-2-18"></a><span class="fu">date-released</span><span class="kw">:</span><span class="at"> 2026-02-01</span></span>
-<span id="cb2-19"><a href="#cb2-19" tabindex="-1" aria-label="code-block-2-19"></a><span class="fu">url</span><span class="kw">:</span><span class="at"> </span><span class="st">"https://github.com/UC-OSPO-Network/software-demo"</span></span>
-<span id="cb2-20"><a href="#cb2-20" tabindex="-1" aria-label="code-block-2-20"></a><span class="fu">repository-code</span><span class="kw">:</span><span class="at"> </span><span class="st">"https://github.com/UC-OSPO-Network/software-demo"</span></span></code></pre>
+<span id="cb2-17"><a href="#cb2-17" tabindex="-1" aria-label="code-block-2-17"></a><span class="fu">date-released</span><span class="kw">:</span><span class="at"> 2026-02-01</span></span>
+<span id="cb2-18"><a href="#cb2-18" tabindex="-1" aria-label="code-block-2-18"></a><span class="fu">url</span><span class="kw">:</span><span class="at"> </span><span class="st">"https://github.com/UC-OSPO-Network/software-demo"</span></span>
+<span id="cb2-19"><a href="#cb2-19" tabindex="-1" aria-label="code-block-2-19"></a><span class="fu">repository-code</span><span class="kw">:</span><span class="at"> </span><span class="st">"https://github.com/UC-OSPO-Network/software-demo"</span></span></code></pre>
 </div>
+<p>There is deliberately <strong>no <code>doi</code> field yet</strong>:
+you do not have one until you mint it in the next episode. Once you
+create a release and Zenodo assigns a DOI, you will come back and add a
+<code>doi:</code> line. If your project has no tagged version either,
+you can omit <code>version</code> and <code>date-released</code> for now
+and add them at release time.</p>
 <p><strong>Once you commit it to the default branch, GitHub adds a “Cite
 this repository” button automatically.</strong></p>
 <p>If your software does not yet have version tags, you may omit the
@@ -661,6 +670,50 @@ is required for this to appear.</p>
 branch, GitHub adds a <strong>Cite this repository</strong> link to the
 About sidebar that opens ready-made APA and BibTeX citations.</div>
 </figure><p>This feature works even without a DOI.</p>
+<p><strong>Text-only check:</strong> after you commit
+<code>CITATION.cff</code>, refresh the repository page. The About
+sidebar should now show a <strong>“Cite this repository”</strong>
+link.</p>
+<div id="challenge-the-button-isnt-showing" class="callout challenge">
+<div class="callout-square">
+<i class="callout-icon" data-feather="zap"></i>
+</div>
+<span class="callout-header">Challenge</span>
+<div id="challenge-the-button-isnt-showing" class="callout-inner">
+<h3 class="callout-title">Challenge: The button isn’t showing</h3>
+<div class="callout-content">
+<p>A researcher tells you they added a <code>CITATION.cff</code> file
+but GitHub still isn’t showing the “Cite this repository” link. Name the
+things you would check.</p>
+</div>
+</div>
+</div>
+<div id="accordionSolution2" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
+  <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
+</button>
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div class="accordion-body">
+<p>Check, in order:</p>
+<ol style="list-style-type: decimal"><li>
+<strong>Filename and location</strong> — is it named exactly
+<code>CITATION.cff</code> (case-sensitive) and in the repository
+<strong>root</strong>, not a subfolder?</li>
+<li>
+<strong>Branch</strong> — is it committed to the <strong>default
+branch</strong>? GitHub only reads the file from the default
+branch.</li>
+<li>
+<strong>Valid YAML</strong> — does the file parse? A stray
+indentation or missing quote stops GitHub from rendering the panel.
+cffinit validates for you.</li>
+</ol><p>This three-question triage is exactly the kind of quick diagnostic
+you will run in a consultation.</p>
+</div>
+</div>
+</div>
+</div>
 <div id="supporting-others" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
@@ -700,12 +753,12 @@ lesson).</p>
 </div>
 </div>
 </div>
-<div id="accordionSolution2" class="accordion challenge-accordion accordion-flush">
+<div id="accordionSolution3" class="accordion challenge-accordion accordion-flush">
 <div class="accordion-item">
-<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
-  <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution3" aria-expanded="false" aria-controls="collapseSolution3">
+  <h4 class="accordion-header" id="headingSolution3"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
 <div class="accordion-body">
 <p>Typical missing pieces include:</p>
 <ul><li>ORCID IDs</li>
@@ -732,12 +785,12 @@ lesson).</p>
 </ol></div>
 </div>
 </div>
-<div id="accordionSolution3" class="accordion challenge-accordion accordion-flush">
+<div id="accordionSolution4" class="accordion challenge-accordion accordion-flush">
 <div class="accordion-item">
-<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution3" aria-expanded="false" aria-controls="collapseSolution3">
-  <h4 class="accordion-header" id="headingSolution3"> Show me the solution </h4>
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution4" aria-expanded="false" aria-controls="collapseSolution4">
+  <h4 class="accordion-header" id="headingSolution4"> Show me the solution </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
+<div id="collapseSolution4" class="accordion-collapse collapse" aria-labelledby="headingSolution4" data-bs-parent="#accordionSolution4">
 <div class="accordion-body">
 <p>A valid minimal example:</p>
 <div class="codewrapper sourceCode" id="cb4">

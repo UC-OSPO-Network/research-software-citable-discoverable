@@ -505,7 +505,23 @@ Tech Transfer office about GPL 2.0 or alternatives.</p>
 </div>
 </div>
 </section><section><h2 class="section-heading" id="how-to-choose-a-license">How to choose a license<a class="anchor" aria-label="anchor" href="#how-to-choose-a-license"></a></h2>
-<hr class="half-width"><p>Five “low-risk” licenses are suitable for most research projects.
+<hr class="half-width"><div id="accordionInstructor2" class="accordion instructor-note accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button instructor-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInstructor2" aria-expanded="false" aria-controls="collapseInstructor2">
+  <h3 class="accordion-header" id="headingInstructor2">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="edit-2"></i></div> Instructor Note </h3>
+</button>
+<div id="collapseInstructor2" class="accordion-collapse collapse" data-bs-parent="#accordionInstructor2" aria-labelledby="headingInstructor2">
+<div class="accordion-body">
+<p>The decision guide below and the license references in this episode
+center UC policy and the UC OSPO guidance. For a non-UC workshop, swap
+in your own institution’s license guidance and name the local office
+that answers ownership questions (usually a technology transfer or
+research office) in place of the UC pointers.</p>
+</div>
+</div>
+</div>
+</div>
+<p>Five “low-risk” licenses are suitable for most research projects.
 Here’s a decision guide:</p>
 <pre class="mermaid"><code>graph TD
     Start[Starting a new UC research software project?] --&gt; Check{Do you have&lt;br/&gt;special requirements?}
@@ -672,7 +688,7 @@ Repository</h3>
 <ol style="list-style-type: decimal"><li>Navigate to your repository on GitHub.</li>
 <li>Click <strong>Add file</strong> → <strong>Create new
 file</strong>.</li>
-<li>Name it <code>LICENSE</code> (or <code>LICENSE.txt</code>).</li>
+<li>Name it exactly <code>LICENSE</code> (no file extension).</li>
 <li>Click <strong>Choose a license template</strong> and select
 <strong>BSD 3-Clause License</strong>.</li>
 <li>Update the copyright holder to reflect who owns the software. At UC
@@ -683,7 +699,7 @@ personal project, use your own name.)</em>
 </li>
 <li>Update the year to 2026.</li>
 <li>Commit the file to your <code>main</code> branch.</li>
-</ol><figure><img src="../fig/create-new-file.png" alt="GitHub's create-new-file page in the software-demo repository, with the filename field set to LICENSE.md and the 'Choose a license template' button both highlighted." class="figure mx-auto d-block"><div class="figcaption">Name the new file <code>LICENSE.md</code>, then
+</ol><figure><img src="../fig/create-new-file.png" alt="GitHub's create-new-file page in the software-demo repository, with the filename field set to LICENSE and the 'Choose a license template' button both highlighted." class="figure mx-auto d-block"><div class="figcaption">Name the new file <code>LICENSE</code>, then
 click <strong>Choose a license template</strong> to insert the full BSD
 3-Clause text.</div>
 </figure><p><strong>Verify:</strong> Does your repository now display the
@@ -705,7 +721,7 @@ displays it in the sidebar. Your file should look like this:</p>
 Copyright (c) 2026, The Regents of the University of California
 All rights reserved.</code></pre>
 <p>If the badge doesn’t appear, ensure the file is in the root directory
-and named exactly <code>LICENSE</code> or <code>LICENSE.txt</code>.</p>
+and named exactly <code>LICENSE</code>.</p>
 </div>
 </div>
 </div>

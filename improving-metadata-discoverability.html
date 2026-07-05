@@ -629,6 +629,49 @@ CONTRIBUTING.md, CODE_OF_CONDUCT.md, CHANGELOG.md, README.md</li>
 <p>Adding these files to your repository root helps GitHub display a
 “Community Standards” checklist in your insights, signaling that your
 project is professionally managed and ready for collaboration.</p>
+<div id="github-recognizes-certain-filenames" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<span class="callout-header">Callout</span>
+<div id="github-recognizes-certain-filenames" class="callout-inner">
+<h3 class="callout-title">GitHub recognizes certain filenames</h3>
+<div class="callout-content">
+<p>You have now seen this pattern several times: name a file the way
+GitHub expects and the platform does more than store text. It may offer
+a template, add a link to the sidebar, tick an item on the community
+checklist, or route issues, security reports, and citations. A few worth
+knowing:</p>
+<table class="table"><colgroup><col width="50%"><col width="50%"></colgroup><thead><tr><th>File (in the repo root, unless noted)</th>
+<th>What GitHub does</th>
+</tr></thead><tbody><tr><td><code>README.md</code></td>
+<td>Renders as the repository’s landing page</td>
+</tr><tr><td><code>LICENSE</code></td>
+<td>Offers a license-template picker; shows the detected license</td>
+</tr><tr><td><code>CITATION.cff</code></td>
+<td>Adds the “Cite this repository” link with ready-made APA/BibTeX</td>
+</tr><tr><td><code>CODE_OF_CONDUCT.md</code></td>
+<td>Offers a code-of-conduct template; counts toward the community
+profile</td>
+</tr><tr><td><code>CONTRIBUTING.md</code></td>
+<td>Links contributor guidelines when someone opens an issue or PR</td>
+</tr><tr><td><code>SUPPORT.md</code></td>
+<td>Points people to your support channels from the new-issue
+screen</td>
+</tr><tr><td><code>SECURITY.md</code></td>
+<td>Becomes the security policy; “report a vulnerability here, not in a
+public issue”</td>
+</tr><tr><td><code>.github/ISSUE_TEMPLATE/*.yml</code></td>
+<td>Turns “New issue” into a structured intake form</td>
+</tr></tbody></table><p>Two caveats worth passing on in a consultation: most of this only
+appears <strong>after you commit the file to the default
+branch</strong>, and an organization’s policies can disable or constrain
+some features. GitHub also changes these helpers over time, so teach the
+<em>pattern</em> (“the filename is a signal”) rather than the exact
+button.</p>
+</div>
+</div>
+</div>
 <hr></div>
 </section><section><h2 class="section-heading" id="institutional-repositories-dataverse-dryad-and-zenodo">Institutional Repositories: Dataverse, Dryad, and Zenodo<a class="anchor" aria-label="anchor" href="#institutional-repositories-dataverse-dryad-and-zenodo"></a></h2>
 <hr class="half-width"><p>Many institutions use repositories like <strong>Dataverse</strong> or
@@ -683,6 +726,27 @@ software can appear in a library search alongside journal articles</li>
 record is the metadata that librarians and discovery systems see. Thin
 metadata (no description, no keywords, no author ORCIDs) limits
 findability even if the DOI is valid.</p>
+<div id="zenodo.json-overrides-citation.cff" class="callout caution">
+<div class="callout-square">
+<i class="callout-icon" data-feather="alert-triangle"></i>
+</div>
+<span class="callout-header">Caution</span>
+<div id="zenodo.json-overrides-citation.cff" class="callout-inner">
+<h3 class="callout-title">
+<code>.zenodo.json</code> overrides
+<code>CITATION.cff</code>
+</h3>
+<div class="callout-content">
+<p>If a repository contains a <code>.zenodo.json</code> file, Zenodo
+uses <strong>that</strong> file for the metadata of a GitHub-archived
+release and ignores <code>CITATION.cff</code>. The two files can drift
+apart, so if you add a <code>.zenodo.json</code> (some projects do, for
+richer Zenodo fields), keep the authors, title, and keywords consistent
+with your <code>CITATION.cff</code>, or you will publish two different
+citation records for the same software.</p>
+</div>
+</div>
+</div>
 <p>Add or refine:</p>
 <ul><li>authors + ORCIDs<br></li>
 <li>keywords (discipline tags, method tags, language tags; use the same
