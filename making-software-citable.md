@@ -138,6 +138,14 @@ Clear release notes help both people and tools interpret your software’s evolu
 
 ## Minting a DOI with Zenodo Sandbox
 
+::::::::::::::::::::::::::::::::::::: instructor
+
+### Say this out loud before you screen share
+
+Use `sandbox.zenodo.org`, not production Zenodo. Real Zenodo records and DOIs are persistent and cannot be deleted, so they are not appropriate for practice. Say it before you share your screen, and have helpers watch for learners who land on `zenodo.org` by habit.
+
+::::::::::::::::::::::::::::::::::::::::::::::::
+
 To practice minting a DOI without polluting the permanent scholarly record, we will use **Zenodo Sandbox**. It works exactly like the real Zenodo but is for testing.
 
 ::::::::::::::::::::::::::::::::::::: caution
@@ -223,6 +231,14 @@ Zenodo archived the repository **as it existed the moment you clicked Publish re
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
+::::::::::::::::::::::::::::::::::::: instructor
+
+### Do not rush the snapshot idea
+
+This point is subtle and important, so slow down. Say: "GitHub is the live working copy; Zenodo archived what existed at release time." Then ask a learner to restate, in their own words, the difference between a post-release GitHub edit and the already-archived release snapshot. If they can restate it, they have the key mental model of the episode.
+
+::::::::::::::::::::::::::::::::::::::::::::::::
+
 ::::::::::::::::::::::::::::::::::::: callout
 
 ### Practice safely, and watch org permissions
@@ -259,6 +275,14 @@ The question researchers actually bring you here is "which DOI do I put in my pa
 
 - **Version DOI** points to one exact release. Cite this when the precise software state matters for reproducibility, such as the version that produced a paper's results.
 - **Concept DOI** points to the project across all versions and always resolves to the latest. Cite this when you want to refer to the software in general.
+
+::::::::::::::::::::::::::::::::::::: instructor
+
+### Debrief prompt for support-staff learners
+
+Once the DOI appears, ask: "Which DOI would you tell the researcher to put in the methods section, the version DOI or the concept DOI, and why?" Expected answer: the **version DOI** for exact reproducibility (the state that produced the results); the **concept DOI** to refer to the project in general. This turns the mechanic into an advising decision they will actually be asked to make.
+
+::::::::::::::::::::::::::::::::::::::::::::::::
 
 A safe default to teach: cite the **version DOI** in a methods section, and use the **concept DOI** in a README or project page. Two more things worth flagging in a consultation: have people practice on **sandbox.zenodo.org** first, because real Zenodo records cannot be deleted; and if a repo has both a `CITATION.cff` and a `.zenodo.json`, Zenodo uses the `.zenodo.json` for the GitHub-archived release metadata.
 

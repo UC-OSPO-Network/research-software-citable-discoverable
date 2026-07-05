@@ -25,6 +25,14 @@ exercises: 10
 A Zenodo record with a bare title and no keywords is a catalog record with no subject headings: retrievable if you already know it exists, invisible if you don't. Most research software sits behind exactly that kind of record. This episode is the one where the lesson lands fully inside a library audience's expertise, because making things findable through description is what libraries do. The systems are GitHub topics, Zenodo fields, and a README instead of a catalog, but the judgment, what would a seeker search for and does this record contain it, is unchanged.
 
 Clear metadata helps others understand, evaluate, and *find* your software.  
+
+::::::::::::::::::::::::::::::::::::: instructor
+
+### Pacing: what is hands-on if you are short on time
+
+Make **README improvements and GitHub topics** the hands-on work here. Treat `.zenodo.json`, Software Heritage, `CONTRIBUTING.md`, and `CODE_OF_CONDUCT.md` as instructor demo or optional reading. In a half-day workshop, do not make every extension a hands-on task; it is the fastest way to run out of time before the wrap-up.
+
+::::::::::::::::::::::::::::::::::::::::::::::::
 It also reduces the cognitive effort for future users because essential information is organized and easy to locate.
 
 In earlier episodes, you created:
@@ -258,6 +266,14 @@ What this means practically: the metadata you put into your Zenodo record is the
 ### `.zenodo.json` overrides `CITATION.cff`
 
 If a repository contains a `.zenodo.json` file, Zenodo uses **that** file for the metadata of a GitHub-archived release and ignores `CITATION.cff`. The two files can drift apart, so if you add a `.zenodo.json` (some projects do, for richer Zenodo fields), keep the authors, title, and keywords consistent with your `CITATION.cff`, or you will publish two different citation records for the same software.
+
+::::::::::::::::::::::::::::::::::::::::::::::::
+
+::::::::::::::::::::::::::::::::::::: instructor
+
+### Frame `.zenodo.json` as advanced
+
+Do not present `.zenodo.json` as required for all projects. Frame it as an advanced override, used only when Zenodo metadata needs more control than `CITATION.cff` provides. Most learners should leave with `CITATION.cff` as their one citation file.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 

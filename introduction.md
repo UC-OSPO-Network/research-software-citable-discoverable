@@ -161,6 +161,14 @@ The solution is to apply **FAIR Principles for Research Software (FAIR4RS)**:
 **R - Reusable:** Can be executed AND modified
 → LICENSE, README, environment files
 
+::::::::::::::::::::::::::::::::::::: instructor
+
+### Keep FAIR4RS light here
+
+Treat this as a preview, not a lecture. Learners will understand Findable, Accessible, Interoperable, and Reusable much better *after* they create the license, citation metadata, DOI, and README metadata. Name the four principles, point ahead to where each gets built, and move on.
+
+::::::::::::::::::::::::::::::::::::::::::::::::
+
 ::::::::::::::::::::::::::::::::::::: checklist
 
 ### What You're Doing TODAY
