@@ -376,6 +376,22 @@ clone of your fork. Its files live only in the <a href="https://github.com/UC-OS
 reference branch</a>, not in your main project, so skipping it leaves
 nothing unfinished. Confirm with your instructor that you’re running the
 full track before installing anything.</p>
+<div id="accordionInstructor1" class="accordion instructor-note accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button instructor-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInstructor1" aria-expanded="false" aria-controls="collapseInstructor1">
+  <h3 class="accordion-header" id="headingInstructor1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="edit-2"></i></div> Take a hard fork here </h3>
+</button>
+<div id="collapseInstructor1" class="accordion-collapse collapse" data-bs-parent="#accordionInstructor1" aria-labelledby="headingInstructor1">
+<div class="accordion-body">
+<p>Citation-focused learners are done with the core lesson after the
+metadata episode; send them off or into a break. Only full-track
+learners continue, and they need a local clone and pixi installed. Do
+not make the whole room troubleshoot installations. State clearly who
+this episode is for before anyone opens a terminal.</p>
+</div>
+</div>
+</div>
+</div>
 <p><strong>Other environment tools:</strong> <code>conda</code>,
 <code>mamba</code>, <code>pip</code>/<code>venv</code>, and
 <code>renv</code> (for R) all serve the same purpose. The concepts here
@@ -419,12 +435,12 @@ that fits a researcher’s stack rather than defaulting to one.</li>
 </div>
 </div>
 </div>
-<div id="accordionInstructor1" class="accordion instructor-note accordion-flush">
+<div id="accordionInstructor2" class="accordion instructor-note accordion-flush">
 <div class="accordion-item">
-<button class="accordion-button instructor-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInstructor1" aria-expanded="false" aria-controls="collapseInstructor1">
-  <h3 class="accordion-header" id="headingInstructor1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="edit-2"></i></div> Teaching this optional episode </h3>
+<button class="accordion-button instructor-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInstructor2" aria-expanded="false" aria-controls="collapseInstructor2">
+  <h3 class="accordion-header" id="headingInstructor2">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="edit-2"></i></div> Teaching this optional episode </h3>
 </button>
-<div id="collapseInstructor1" class="accordion-collapse collapse" aria-labelledby="headingInstructor1" data-bs-parent="#accordionInstructor1">
+<div id="collapseInstructor2" class="accordion-collapse collapse" data-bs-parent="#accordionInstructor2" aria-labelledby="headingInstructor2">
 <div class="accordion-body">
 <p>This episode is last in the lesson order and is the only one that
 leaves the browser: it needs pixi and a terminal on the learner’s own
@@ -527,7 +543,23 @@ others can rebuild the same environment</li>
 <strong>Multi-language:</strong> Supports Python, R, and more</li>
 </ul><p><strong>FAIR Connection:</strong> Standard formats + clear
 dependencies = Interoperable &amp; Reusable software</p>
-<hr></section><section><h2 class="section-heading" id="installing-pixi">Installing pixi<a class="anchor" aria-label="anchor" href="#installing-pixi"></a></h2>
+<hr><div id="accordionInstructor3" class="accordion instructor-note accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button instructor-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInstructor3" aria-expanded="false" aria-controls="collapseInstructor3">
+  <h3 class="accordion-header" id="headingInstructor3">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="edit-2"></i></div> Assign a helper to install issues </h3>
+</button>
+<div id="collapseInstructor3" class="accordion-collapse collapse" data-bs-parent="#accordionInstructor3" aria-labelledby="headingInstructor3">
+<div class="accordion-body">
+<p>If you are teaching the full track, assign one helper to pixi install
+and PATH problems. The lead instructor should keep moving with the
+concept demo and not stop the main room for individual terminal errors.
+Installation issues are the single most likely time-sink in this
+episode.</p>
+</div>
+</div>
+</div>
+</div>
+</section><section><h2 class="section-heading" id="installing-pixi">Installing pixi<a class="anchor" aria-label="anchor" href="#installing-pixi"></a></h2>
 <hr class="half-width"><p>Full installation docs: <a href="https://pixi.sh" class="external-link uri">https://pixi.sh</a></p>
 <p>Common installation for macOS or Linux:</p>
 <div class="codewrapper sourceCode" id="cb3">
@@ -729,7 +761,7 @@ on any one manager installing cleanly on every laptop.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb13">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -770,7 +802,7 @@ alone would not?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <p><code>pixi.toml</code> records only <em>which</em> packages you want.
 Resolved a year apart, it could pull a newer numpy or Python build than

@@ -669,6 +669,22 @@ and documented dependencies so people and tools can interpret the
 software → Standard formats, documented dependencies</p>
 <p><strong>R - Reusable:</strong> Can be executed AND modified →
 LICENSE, README, environment files</p>
+<div id="accordionInstructor3" class="accordion instructor-note accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button instructor-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInstructor3" aria-expanded="false" aria-controls="collapseInstructor3">
+  <h3 class="accordion-header" id="headingInstructor3">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="edit-2"></i></div> Keep FAIR4RS light here </h3>
+</button>
+<div id="collapseInstructor3" class="accordion-collapse collapse" aria-labelledby="headingInstructor3" data-bs-parent="#accordionInstructor3">
+<div class="accordion-body">
+<p>Treat this as a preview, not a lecture. Learners will understand
+Findable, Accessible, Interoperable, and Reusable much better
+<em>after</em> they create the license, citation metadata, DOI, and
+README metadata. Name the four principles, point ahead to where each
+gets built, and move on.</p>
+</div>
+</div>
+</div>
+</div>
 <div id="what-youre-doing-today" class="callout checklist">
 <div class="callout-square">
 <i class="callout-icon" data-feather="check-square"></i>
@@ -1044,6 +1060,22 @@ checklist transfer directly to your own repository.</p>
 </div>
 </div>
 </div>
+<div id="accordionInstructor3" class="accordion instructor-note accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button instructor-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInstructor3" aria-expanded="false" aria-controls="collapseInstructor3">
+  <h3 class="accordion-header" id="headingInstructor3">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="edit-2"></i></div> Confirm everyone is in their own fork </h3>
+</button>
+<div id="collapseInstructor3" class="accordion-collapse collapse" data-bs-parent="#accordionInstructor3" aria-labelledby="headingInstructor3">
+<div class="accordion-body">
+<p>Before learners begin, ask everyone to confirm the top-left
+repository path says <code>THEIR-USERNAME/software-demo</code>, not
+<code>UC-OSPO-Network/software-demo</code>. Have helpers check
+Zoom/chat/room for anyone still on the upstream repository. Do not
+continue until most learners are in their own fork.</p>
+</div>
+</div>
+</div>
+</div>
 <p>Open your fork and look at the <strong>“before” state</strong> on the
 <code>main</code> branch:</p>
 <div class="codewrapper sourceCode" id="cb1">
@@ -1054,6 +1086,21 @@ checklist transfer directly to your own repository.</p>
 <span id="cb1-3"><a href="#cb1-3" tabindex="-1" aria-label="code-block-1-3"></a><span class="ex">├──</span> requirements.txt</span>
 <span id="cb1-4"><a href="#cb1-4" tabindex="-1" aria-label="code-block-1-4"></a><span class="ex">└──</span> src/</span>
 <span id="cb1-5"><a href="#cb1-5" tabindex="-1" aria-label="code-block-1-5"></a>    <span class="ex">└──</span> analysis.py</span></code></pre>
+</div>
+<div id="accordionInstructor4" class="accordion instructor-note accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button instructor-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInstructor4" aria-expanded="false" aria-controls="collapseInstructor4">
+  <h3 class="accordion-header" id="headingInstructor4">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="edit-2"></i></div> First status check </h3>
+</button>
+<div id="collapseInstructor4" class="accordion-collapse collapse" data-bs-parent="#accordionInstructor4" aria-labelledby="headingInstructor4">
+<div class="accordion-body">
+<p>Ask learners to confirm they can see exactly <code>README.md</code>,
+<code>requirements.txt</code>, and <code>src/analysis.py</code> in their
+fork. This is the best early moment to catch learners who are on the
+wrong repository, wrong branch, or not signed in.</p>
+</div>
+</div>
+</div>
 </div>
 <p>This repository intentionally <em>lacks</em> many elements of good
 research software practice.<br>
@@ -1333,7 +1380,7 @@ matters for research.</p>
 <button class="accordion-button instructor-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInstructor1" aria-expanded="false" aria-controls="collapseInstructor1">
   <h3 class="accordion-header" id="headingInstructor1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="edit-2"></i></div> Instructor Note </h3>
 </button>
-<div id="collapseInstructor1" class="accordion-collapse collapse" data-bs-parent="#accordionInstructor1" aria-labelledby="headingInstructor1">
+<div id="collapseInstructor1" class="accordion-collapse collapse" aria-labelledby="headingInstructor1" data-bs-parent="#accordionInstructor1">
 <div class="accordion-body">
 <p><strong>Why this episode matters to researchers:</strong> licensing
 is where reuse and credit actually begin. An unlicensed repo cannot be
@@ -1429,13 +1476,18 @@ Tech Transfer office about GPL 2.0 or alternatives.</p>
 <button class="accordion-button instructor-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInstructor2" aria-expanded="false" aria-controls="collapseInstructor2">
   <h3 class="accordion-header" id="headingInstructor2">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="edit-2"></i></div> Instructor Note </h3>
 </button>
-<div id="collapseInstructor2" class="accordion-collapse collapse" data-bs-parent="#accordionInstructor2" aria-labelledby="headingInstructor2">
+<div id="collapseInstructor2" class="accordion-collapse collapse" aria-labelledby="headingInstructor2" data-bs-parent="#accordionInstructor2">
 <div class="accordion-body">
 <p>The decision guide below and the license references in this episode
 center UC policy and the UC OSPO guidance. For a non-UC workshop, swap
 in your own institution’s license guidance and name the local office
 that answers ownership questions (usually a technology transfer or
 research office) in place of the UC pointers.</p>
+<p><strong>Timebox the license discussion.</strong> The teaching target
+is not license philosophy; it is recognizing no-license risk, choosing a
+low-risk default for the demo, and knowing when to refer ownership or
+policy questions to Tech Transfer or the local equivalent. If the room
+starts debating MIT vs BSD, name the campus default and move on.</p>
 </div>
 </div>
 </div>
@@ -1527,7 +1579,7 @@ resources.</strong></p>
 <button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler1" aria-expanded="false" aria-controls="collapseSpoiler1">
   <h3 class="accordion-header" id="headingSpoiler1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> What about data and documentation? </h3>
 </button>
-<div id="collapseSpoiler1" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler1" aria-labelledby="headingSpoiler1">
+<div id="collapseSpoiler1" class="accordion-collapse collapse" aria-labelledby="headingSpoiler1" data-bs-parent="#accordionSpoiler1">
 <div class="accordion-body">
 <p>Software licenses (BSD, MIT, Apache) are written for <em>executable
 code</em>. If your repository also contains datasets, figures, or
@@ -1621,6 +1673,22 @@ recommendation.</p>
 </div>
 </div>
 </div>
+<div id="accordionInstructor3" class="accordion instructor-note accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button instructor-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInstructor3" aria-expanded="false" aria-controls="collapseInstructor3">
+  <h3 class="accordion-header" id="headingInstructor3">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="edit-2"></i></div> Expected UI state: the license template chooser </h3>
+</button>
+<div id="collapseInstructor3" class="accordion-collapse collapse" aria-labelledby="headingInstructor3" data-bs-parent="#accordionInstructor3">
+<div class="accordion-body">
+<p>When the filename is <code>LICENSE</code>, GitHub should offer a
+license template chooser (“Choose a license template”). If learners do
+not see it, check the filename, that they are creating the file in the
+repository root, and a browser refresh before troubleshooting anything
+more complex.</p>
+</div>
+</div>
+</div>
+</div>
 <div id="challenge-add-a-bsd-license-to-your-repository" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
@@ -1660,7 +1728,7 @@ click <strong>Choose a license template</strong> to insert the full BSD
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p>GitHub automatically detects the <code>LICENSE</code> file and
 displays it in the sidebar. Your file should look like this:</p>
@@ -1730,7 +1798,7 @@ with collaborators.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <p><strong>Scenario 1:</strong> BSD 3-Clause (UC’s default
 recommendation, maximum flexibility and adoption)</p>
@@ -1865,7 +1933,7 @@ time.</p>
 <button class="accordion-button instructor-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInstructor1" aria-expanded="false" aria-controls="collapseInstructor1">
   <h3 class="accordion-header" id="headingInstructor1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="edit-2"></i></div> Instructor Note </h3>
 </button>
-<div id="collapseInstructor1" class="accordion-collapse collapse" data-bs-parent="#accordionInstructor1" aria-labelledby="headingInstructor1">
+<div id="collapseInstructor1" class="accordion-collapse collapse" aria-labelledby="headingInstructor1" data-bs-parent="#accordionInstructor1">
 <div class="accordion-body">
 <p>Show learners what the citation panel looks like on a GitHub
 repository that already has a <code>CITATION.cff</code> file. This gives
@@ -1948,6 +2016,23 @@ never does.</p>
 terminal required. GitHub has this built in: name a new file
 <code>CITATION.cff</code> and it hands you a starter template to
 edit.</p>
+<div id="accordionInstructor2" class="accordion instructor-note accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button instructor-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInstructor2" aria-expanded="false" aria-controls="collapseInstructor2">
+  <h3 class="accordion-header" id="headingInstructor2">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="edit-2"></i></div> Common stall: perfecting authorship </h3>
+</button>
+<div id="collapseInstructor2" class="accordion-collapse collapse" aria-labelledby="headingInstructor2" data-bs-parent="#accordionInstructor2">
+<div class="accordion-body">
+<p>Learners may try to perfect authorship, contributor roles, or author
+order. For the demo, use the provided values and keep moving. For real
+projects, authorship order is a PI/team decision; the consultant can
+explain the fields and options but should not decide credit. If someone
+asks “who counts as an author?”, flag it as a team conversation, not a
+metadata fix.</p>
+</div>
+</div>
+</div>
+</div>
 <div class="section level3">
 <h3 id="create-the-file-on-github">Create the file on GitHub<a class="anchor" aria-label="anchor" href="#create-the-file-on-github"></a>
 </h3>
@@ -1990,14 +2075,31 @@ placeholder names and ORCIDs, then commit to <code>main</code>.</div>
 <span id="cb1-10"><a href="#cb1-10" tabindex="-1" aria-label="code-block-1-10"></a><span class="fu">date-released</span><span class="kw">:</span><span class="at"> 2026-07-05</span></span>
 <span id="cb1-11"><a href="#cb1-11" tabindex="-1" aria-label="code-block-1-11"></a><span class="fu">url</span><span class="kw">:</span><span class="at"> </span><span class="st">"https://github.com/YOUR-USERNAME/your-repository-name"</span></span></code></pre>
 </div>
-<div id="prefer-a-guided-form-use-cffinit" class="callout">
+<div id="callout2" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
 <span class="callout-header">Callout</span>
-<div id="prefer-a-guided-form-use-cffinit" class="callout-inner">
-<h3 class="callout-title">Prefer a guided form? Use cffinit</h3>
+<div class="callout-inner">
 <div class="callout-content">
+<div id="accordionInstructor3" class="accordion instructor-note accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button instructor-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInstructor3" aria-expanded="false" aria-controls="collapseInstructor3">
+  <h3 class="accordion-header" id="headingInstructor3">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="edit-2"></i></div> YAML recovery path </h3>
+</button>
+<div id="collapseInstructor3" class="accordion-collapse collapse" aria-labelledby="headingInstructor3" data-bs-parent="#accordionInstructor3">
+<div class="accordion-body">
+<p>If more than a few learners hit YAML indentation errors, switch the
+whole room to cffinit rather than debugging individual whitespace
+mistakes. The goal is citation metadata, not YAML mastery. cffinit
+validates as they type and produces a file they can paste.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="section level3">
+<h3 id="prefer-a-guided-form-use-cffinit">Prefer a guided form? Use cffinit<a class="anchor" aria-label="anchor" href="#prefer-a-guided-form-use-cffinit"></a>
+</h3>
 <p><a href="https://citation-file-format.github.io/cffinit/" class="external-link"><strong>cffinit</strong></a>
 is a web wizard that walks you field by field and validates as you type.
 It is worth using when your metadata is more involved: many authors, a
@@ -2005,6 +2107,7 @@ It is worth using when your metadata is more involved: many authors, a
 license you want recorded precisely. Fill out the form, copy the
 generated file, and paste it into the same <code>CITATION.cff</code> you
 create on GitHub. More on the format: <a href="https://citation-file-format.github.io/" class="external-link uri">https://citation-file-format.github.io/</a>.</p>
+</div>
 </div>
 </div>
 </div>
@@ -2107,6 +2210,34 @@ without it.</p>
 </div>
 </div>
 </div>
+<div id="challenge1" class="callout challenge">
+<div class="callout-square">
+<i class="callout-icon" data-feather="zap"></i>
+</div>
+<span class="callout-header">Challenge</span>
+<div class="callout-inner">
+<h3 class="callout-title">Challenge</h3>
+<div class="callout-content">
+
+</div>
+</div>
+</div>
+<div id="accordionInstructor4" class="accordion instructor-note accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button instructor-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInstructor4" aria-expanded="false" aria-controls="collapseInstructor4">
+  <h3 class="accordion-header" id="headingInstructor4">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="edit-2"></i></div> Predict, then reveal </h3>
+</button>
+<div id="collapseInstructor4" class="accordion-collapse collapse" aria-labelledby="headingInstructor4" data-bs-parent="#accordionInstructor4">
+<div class="accordion-body">
+<p>Before learners refresh GitHub after committing
+<code>CITATION.cff</code>, ask them to predict what GitHub will add.
+Then reveal the “Cite this repository” panel. This keeps GitHub’s helper
+behavior visible as a platform pattern rather than a surprise, and sets
+up the “GitHub recognizes certain filenames” idea later.</p>
+</div>
+</div>
+</div>
+</div>
 <div id="predict-what-will-github-do" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
@@ -2126,7 +2257,7 @@ repository’s GitHub page?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p>GitHub parses the file and adds a <strong>“Cite this
 repository”</strong> button to the sidebar, offering ready-made
@@ -2172,7 +2303,7 @@ things you would check.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <p>Check, in order:</p>
 <ol style="list-style-type: decimal">
@@ -2243,7 +2374,7 @@ lesson).</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution3" aria-expanded="false" aria-controls="collapseSolution3">
   <h4 class="accordion-header" id="headingSolution3"> Show me the solution </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
 <div class="accordion-body">
 <p>Typical missing pieces include:</p>
 <ul>
@@ -2279,7 +2410,7 @@ lesson).</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution4" aria-expanded="false" aria-controls="collapseSolution4">
   <h4 class="accordion-header" id="headingSolution4"> Show me the solution </h4>
 </button>
-<div id="collapseSolution4" class="accordion-collapse collapse" data-bs-parent="#accordionSolution4" aria-labelledby="headingSolution4">
+<div id="collapseSolution4" class="accordion-collapse collapse" aria-labelledby="headingSolution4" data-bs-parent="#accordionSolution4">
 <div class="accordion-body">
 <p>A valid minimal example:</p>
 <div class="codewrapper sourceCode" id="cb4">
@@ -2579,6 +2710,22 @@ software’s evolution.</p>
 </section><section><h2 class="section-heading" id="minting-a-doi-with-zenodo-sandbox">Minting a DOI with Zenodo Sandbox<a class="anchor" aria-label="anchor" href="#minting-a-doi-with-zenodo-sandbox"></a>
 </h2>
 <hr class="half-width">
+<div id="accordionInstructor2" class="accordion instructor-note accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button instructor-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInstructor2" aria-expanded="false" aria-controls="collapseInstructor2">
+  <h3 class="accordion-header" id="headingInstructor2">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="edit-2"></i></div> Say this out loud before you screen share </h3>
+</button>
+<div id="collapseInstructor2" class="accordion-collapse collapse" aria-labelledby="headingInstructor2" data-bs-parent="#accordionInstructor2">
+<div class="accordion-body">
+<p>Use <code>sandbox.zenodo.org</code>, not production Zenodo. Real
+Zenodo records and DOIs are persistent and cannot be deleted, so they
+are not appropriate for practice. Say it before you share your screen,
+and have helpers watch for learners who land on <code>zenodo.org</code>
+by habit.</p>
+</div>
+</div>
+</div>
+</div>
 <p>To practice minting a DOI without polluting the permanent scholarly
 record, we will use <strong>Zenodo Sandbox</strong>. It works exactly
 like the real Zenodo but is for testing.</p>
@@ -2709,6 +2856,22 @@ release after updating the file.</p>
 </div>
 </div>
 </div>
+<div id="accordionInstructor3" class="accordion instructor-note accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button instructor-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInstructor3" aria-expanded="false" aria-controls="collapseInstructor3">
+  <h3 class="accordion-header" id="headingInstructor3">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="edit-2"></i></div> Do not rush the snapshot idea </h3>
+</button>
+<div id="collapseInstructor3" class="accordion-collapse collapse" aria-labelledby="headingInstructor3" data-bs-parent="#accordionInstructor3">
+<div class="accordion-body">
+<p>This point is subtle and important, so slow down. Say: “GitHub is the
+live working copy; Zenodo archived what existed at release time.” Then
+ask a learner to restate, in their own words, the difference between a
+post-release GitHub edit and the already-archived release snapshot. If
+they can restate it, they have the key mental model of the episode.</p>
+</div>
+</div>
+</div>
+</div>
 <div id="practice-safely-and-watch-org-permissions" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
@@ -2789,6 +2952,24 @@ version that produced a paper’s results.</li>
 versions and always resolves to the latest. Cite this when you want to
 refer to the software in general.</li>
 </ul>
+<div id="accordionInstructor4" class="accordion instructor-note accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button instructor-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInstructor4" aria-expanded="false" aria-controls="collapseInstructor4">
+  <h3 class="accordion-header" id="headingInstructor4">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="edit-2"></i></div> Debrief prompt for support-staff learners </h3>
+</button>
+<div id="collapseInstructor4" class="accordion-collapse collapse" aria-labelledby="headingInstructor4" data-bs-parent="#accordionInstructor4">
+<div class="accordion-body">
+<p>Once the DOI appears, ask: “Which DOI would you tell the researcher
+to put in the methods section, the version DOI or the concept DOI, and
+why?” Expected answer: the <strong>version DOI</strong> for exact
+reproducibility (the state that produced the results); the
+<strong>concept DOI</strong> to refer to the project in general. This
+turns the mechanic into an advising decision they will actually be asked
+to make.</p>
+</div>
+</div>
+</div>
+</div>
 <p>A safe default to teach: cite the <strong>version DOI</strong> in a
 methods section, and use the <strong>concept DOI</strong> in a README or
 project page. Two more things worth flagging in a consultation: have
@@ -2845,12 +3026,12 @@ roadmap (Di Cosmo et al., <em>Scientific Data</em>).</p>
 </div>
 </div>
 </div>
-<div id="accordionInstructor2" class="accordion instructor-note accordion-flush">
+<div id="accordionInstructor5" class="accordion instructor-note accordion-flush">
 <div class="accordion-item">
-<button class="accordion-button instructor-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInstructor2" aria-expanded="false" aria-controls="collapseInstructor2">
-  <h3 class="accordion-header" id="headingInstructor2">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="edit-2"></i></div> Instructor Note </h3>
+<button class="accordion-button instructor-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInstructor5" aria-expanded="false" aria-controls="collapseInstructor5">
+  <h3 class="accordion-header" id="headingInstructor5">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="edit-2"></i></div> Instructor Note </h3>
 </button>
-<div id="collapseInstructor2" class="accordion-collapse collapse" aria-labelledby="headingInstructor2" data-bs-parent="#accordionInstructor2">
+<div id="collapseInstructor5" class="accordion-collapse collapse" aria-labelledby="headingInstructor5" data-bs-parent="#accordionInstructor5">
 <div class="accordion-body">
 <p><strong>Critical:</strong> Ensure learners use
 <strong>sandbox.zenodo.org</strong>. Real DOIs cannot be deleted.</p>
@@ -2987,9 +3168,26 @@ Zenodo fields, and a README instead of a catalog, but the judgment, what
 would a seeker search for and does this record contain it, is
 unchanged.</p>
 <p>Clear metadata helps others understand, evaluate, and <em>find</em>
-your software.<br>
-It also reduces the cognitive effort for future users because essential
-information is organized and easy to locate.</p>
+your software.</p>
+<div id="accordionInstructor1" class="accordion instructor-note accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button instructor-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInstructor1" aria-expanded="false" aria-controls="collapseInstructor1">
+  <h3 class="accordion-header" id="headingInstructor1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="edit-2"></i></div> Pacing: what is hands-on if you are short on time </h3>
+</button>
+<div id="collapseInstructor1" class="accordion-collapse collapse" aria-labelledby="headingInstructor1" data-bs-parent="#accordionInstructor1">
+<div class="accordion-body">
+<p>Make <strong>README improvements and GitHub topics</strong> the
+hands-on work here. Treat <code>.zenodo.json</code>, Software Heritage,
+<code>CONTRIBUTING.md</code>, and <code>CODE_OF_CONDUCT.md</code> as
+instructor demo or optional reading. In a half-day workshop, do not make
+every extension a hands-on task; it is the fastest way to run out of
+time before the wrap-up.</p>
+</div>
+</div>
+</div>
+</div>
+<p>It also reduces the cognitive effort for future users because
+essential information is organized and easy to locate.</p>
 <p>In earlier episodes, you created:</p>
 <ul>
 <li>a <strong>CITATION.cff</strong> file<br>
@@ -3004,12 +3202,12 @@ information is organized and easy to locate.</p>
 <p>This episode brings these together. You will describe your project in
 consistent ways across platforms so search engines, citation tools, and
 colleagues can discover it.</p>
-<div id="accordionInstructor1" class="accordion instructor-note accordion-flush">
+<div id="accordionInstructor2" class="accordion instructor-note accordion-flush">
 <div class="accordion-item">
-<button class="accordion-button instructor-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInstructor1" aria-expanded="false" aria-controls="collapseInstructor1">
-  <h3 class="accordion-header" id="headingInstructor1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="edit-2"></i></div> Instructor Note </h3>
+<button class="accordion-button instructor-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInstructor2" aria-expanded="false" aria-controls="collapseInstructor2">
+  <h3 class="accordion-header" id="headingInstructor2">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="edit-2"></i></div> Instructor Note </h3>
 </button>
-<div id="collapseInstructor1" class="accordion-collapse collapse" data-bs-parent="#accordionInstructor1" aria-labelledby="headingInstructor1">
+<div id="collapseInstructor2" class="accordion-collapse collapse" aria-labelledby="headingInstructor2" data-bs-parent="#accordionInstructor2">
 <div class="accordion-body">
 <p>Encourage learners to compare well-described repositories with sparse
 ones.<br>
@@ -3436,6 +3634,22 @@ citation records for the same software.</p>
 </div>
 </div>
 </div>
+<div id="accordionInstructor3" class="accordion instructor-note accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button instructor-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInstructor3" aria-expanded="false" aria-controls="collapseInstructor3">
+  <h3 class="accordion-header" id="headingInstructor3">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="edit-2"></i></div> Frame .zenodo.json as advanced </h3>
+</button>
+<div id="collapseInstructor3" class="accordion-collapse collapse" aria-labelledby="headingInstructor3" data-bs-parent="#accordionInstructor3">
+<div class="accordion-body">
+<p>Do not present <code>.zenodo.json</code> as required for all
+projects. Frame it as an advanced override, used only when Zenodo
+metadata needs more control than <code>CITATION.cff</code> provides.
+Most learners should leave with <code>CITATION.cff</code> as their one
+citation file.</p>
+</div>
+</div>
+</div>
+</div>
 <p>Add or refine:</p>
 <ul>
 <li>authors + ORCIDs<br>
@@ -3509,7 +3723,7 @@ discoverability.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p>Examples:</p>
 <ul>
@@ -3545,7 +3759,7 @@ metadata:</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <ol style="list-style-type: decimal">
 <li>Open your Zenodo record.<br>
@@ -3597,7 +3811,7 @@ active D. Rename the repository to something shorter and catchier</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution3" aria-expanded="false" aria-controls="collapseSolution3">
   <h4 class="accordion-header" id="headingSolution3"> Show me the solution </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
 <div class="accordion-body">
 <p><strong>B.</strong> Discovery happens through <em>description</em>,
 not access level or activity. Topics, keywords, and descriptions are
@@ -3675,6 +3889,22 @@ clone of your fork. Its files live only in the <a href="https://github.com/UC-OS
 reference branch</a>, not in your main project, so skipping it leaves
 nothing unfinished. Confirm with your instructor that you’re running the
 full track before installing anything.</p>
+<div id="accordionInstructor1" class="accordion instructor-note accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button instructor-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInstructor1" aria-expanded="false" aria-controls="collapseInstructor1">
+  <h3 class="accordion-header" id="headingInstructor1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="edit-2"></i></div> Take a hard fork here </h3>
+</button>
+<div id="collapseInstructor1" class="accordion-collapse collapse" data-bs-parent="#accordionInstructor1" aria-labelledby="headingInstructor1">
+<div class="accordion-body">
+<p>Citation-focused learners are done with the core lesson after the
+metadata episode; send them off or into a break. Only full-track
+learners continue, and they need a local clone and pixi installed. Do
+not make the whole room troubleshoot installations. State clearly who
+this episode is for before anyone opens a terminal.</p>
+</div>
+</div>
+</div>
+</div>
 <p><strong>Other environment tools:</strong> <code>conda</code>,
 <code>mamba</code>, <code>pip</code>/<code>venv</code>, and
 <code>renv</code> (for R) all serve the same purpose. The concepts here
@@ -3722,12 +3952,12 @@ that fits a researcher’s stack rather than defaulting to one.</li>
 </div>
 </div>
 </div>
-<div id="accordionInstructor1" class="accordion instructor-note accordion-flush">
+<div id="accordionInstructor2" class="accordion instructor-note accordion-flush">
 <div class="accordion-item">
-<button class="accordion-button instructor-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInstructor1" aria-expanded="false" aria-controls="collapseInstructor1">
-  <h3 class="accordion-header" id="headingInstructor1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="edit-2"></i></div> Teaching this optional episode </h3>
+<button class="accordion-button instructor-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInstructor2" aria-expanded="false" aria-controls="collapseInstructor2">
+  <h3 class="accordion-header" id="headingInstructor2">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="edit-2"></i></div> Teaching this optional episode </h3>
 </button>
-<div id="collapseInstructor1" class="accordion-collapse collapse" aria-labelledby="headingInstructor1" data-bs-parent="#accordionInstructor1">
+<div id="collapseInstructor2" class="accordion-collapse collapse" data-bs-parent="#accordionInstructor2" aria-labelledby="headingInstructor2">
 <div class="accordion-body">
 <p>This episode is last in the lesson order and is the only one that
 leaves the browser: it needs pixi and a terminal on the learner’s own
@@ -3846,7 +4076,24 @@ others can rebuild the same environment</li>
 </ul>
 <p><strong>FAIR Connection:</strong> Standard formats + clear
 dependencies = Interoperable &amp; Reusable software</p>
-<hr></section><section><h2 class="section-heading" id="installing-pixi">Installing pixi<a class="anchor" aria-label="anchor" href="#installing-pixi"></a>
+<hr>
+<div id="accordionInstructor3" class="accordion instructor-note accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button instructor-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInstructor3" aria-expanded="false" aria-controls="collapseInstructor3">
+  <h3 class="accordion-header" id="headingInstructor3">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="edit-2"></i></div> Assign a helper to install issues </h3>
+</button>
+<div id="collapseInstructor3" class="accordion-collapse collapse" data-bs-parent="#accordionInstructor3" aria-labelledby="headingInstructor3">
+<div class="accordion-body">
+<p>If you are teaching the full track, assign one helper to pixi install
+and PATH problems. The lead instructor should keep moving with the
+concept demo and not stop the main room for individual terminal errors.
+Installation issues are the single most likely time-sink in this
+episode.</p>
+</div>
+</div>
+</div>
+</div>
+</section><section><h2 class="section-heading" id="installing-pixi">Installing pixi<a class="anchor" aria-label="anchor" href="#installing-pixi"></a>
 </h2>
 <hr class="half-width">
 <p>Full installation docs: <a href="https://pixi.sh" class="external-link uri">https://pixi.sh</a></p>
@@ -4073,7 +4320,7 @@ on any one manager installing cleanly on every laptop.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb13">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -4114,7 +4361,7 @@ alone would not?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <p><code>pixi.toml</code> records only <em>which</em> packages you want.
 Resolved a year apart, it could pull a newer numpy or Python build than
@@ -4385,6 +4632,22 @@ collaborators; do not arbitrate</li>
 </ul>
 <p>Fill in the actual names and contacts for your campus and you have a
 reusable service, not a one-off answer.</p>
+</div>
+</div>
+</div>
+<div id="accordionInstructor2" class="accordion instructor-note accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button instructor-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInstructor2" aria-expanded="false" aria-controls="collapseInstructor2">
+  <h3 class="accordion-header" id="headingInstructor2">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="edit-2"></i></div> Make it a local service map </h3>
+</button>
+<div id="collapseInstructor2" class="accordion-collapse collapse" data-bs-parent="#accordionInstructor2" aria-labelledby="headingInstructor2">
+<div class="accordion-body">
+<p>Have each support-staff learner write down one campus referral they
+still need to identify after the workshop: Tech Transfer, research
+computing, the data repository, information security, the grants office,
+or scholarly communications. Naming a real gap turns the demo into a
+local service map they can actually use on Monday.</p>
+</div>
 </div>
 </div>
 </div>

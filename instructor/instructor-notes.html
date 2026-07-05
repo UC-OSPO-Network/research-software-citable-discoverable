@@ -656,6 +656,15 @@ it instead as the barrier researchers describe when code “doesn’t work,”
 and flag that the mechanics live in the optional pixi episode, so a
 citation-focused workshop can acknowledge the problem and move on.</p>
 <hr>
+<br><h3 id="introduction-headingInstructor3">
+<a href="introduction.html#headingInstructor3">Keep FAIR4RS light here</a><a class="anchor" aria-label="anchor" href="#introduction-headingInstructor3"></a>
+</h3>
+<p>Treat this as a preview, not a lecture. Learners will understand
+Findable, Accessible, Interoperable, and Reusable much better
+<em>after</em> they create the license, citation metadata, DOI, and
+README metadata. Name the four principles, point ahead to where each
+gets built, and move on.</p>
+<hr>
 <br></section><section id="sharing-software"><h2 class="section-heading"><a href="sharing-software.html">Sharing Research Software Effectively</a></h2>
 <hr class="half-width">
 <h3 id="sharing-software-headingInstructor1">
@@ -690,6 +699,23 @@ file listing first, then open individual files as you discuss them. No
 terminal or <code>git checkout</code> is needed; the reference branches
 are there to view and compare against, not to build on.</p>
 <hr>
+<br><h3 id="sharing-software-headingInstructor3">
+<a href="sharing-software.html#headingInstructor3">Confirm everyone is in their own fork</a><a class="anchor" aria-label="anchor" href="#sharing-software-headingInstructor3"></a>
+</h3>
+<p>Before learners begin, ask everyone to confirm the top-left
+repository path says <code>THEIR-USERNAME/software-demo</code>, not
+<code>UC-OSPO-Network/software-demo</code>. Have helpers check
+Zoom/chat/room for anyone still on the upstream repository. Do not
+continue until most learners are in their own fork.</p>
+<hr>
+<br><h3 id="sharing-software-headingInstructor4">
+<a href="sharing-software.html#headingInstructor4">First status check</a><a class="anchor" aria-label="anchor" href="#sharing-software-headingInstructor4"></a>
+</h3>
+<p>Ask learners to confirm they can see exactly <code>README.md</code>,
+<code>requirements.txt</code>, and <code>src/analysis.py</code> in their
+fork. This is the best early moment to catch learners who are on the
+wrong repository, wrong branch, or not signed in.</p>
+<hr>
 <br></section><section id="open-source-license"><h2 class="section-heading"><a href="open-source-license.html">Choosing an Open-Source License</a></h2>
 <hr class="half-width">
 <h3 id="open-source-license-headingInstructor1">
@@ -712,6 +738,20 @@ center UC policy and the UC OSPO guidance. For a non-UC workshop, swap
 in your own institution’s license guidance and name the local office
 that answers ownership questions (usually a technology transfer or
 research office) in place of the UC pointers.</p>
+<p><strong>Timebox the license discussion.</strong> The teaching target
+is not license philosophy; it is recognizing no-license risk, choosing a
+low-risk default for the demo, and knowing when to refer ownership or
+policy questions to Tech Transfer or the local equivalent. If the room
+starts debating MIT vs BSD, name the campus default and move on.</p>
+<hr>
+<br><h3 id="open-source-license-headingInstructor3">
+<a href="open-source-license.html#headingInstructor3">Expected UI state: the license template chooser</a><a class="anchor" aria-label="anchor" href="#open-source-license-headingInstructor3"></a>
+</h3>
+<p>When the filename is <code>LICENSE</code>, GitHub should offer a
+license template chooser (“Choose a license template”). If learners do
+not see it, check the filename, that they are creating the file in the
+repository root, and a browser refresh before troubleshooting anything
+more complex.</p>
 <hr>
 <br></section><section id="adding-citation-file"><h2 class="section-heading"><a href="adding-citation-file.html">Adding a CITATION.cff File</a></h2>
 <hr class="half-width">
@@ -729,6 +769,33 @@ once, and every future citation of the software is correct, complete,
 and countable. It is also the step where a scholcomm professional can
 sit beside a researcher as the expert, because the hard part is metadata
 judgment, not code.</p>
+<hr>
+<br><h3 id="adding-citation-file-headingInstructor2">
+<a href="adding-citation-file.html#headingInstructor2">Common stall: perfecting authorship</a><a class="anchor" aria-label="anchor" href="#adding-citation-file-headingInstructor2"></a>
+</h3>
+<p>Learners may try to perfect authorship, contributor roles, or author
+order. For the demo, use the provided values and keep moving. For real
+projects, authorship order is a PI/team decision; the consultant can
+explain the fields and options but should not decide credit. If someone
+asks “who counts as an author?”, flag it as a team conversation, not a
+metadata fix.</p>
+<hr>
+<br><h3 id="adding-citation-file-headingInstructor3">
+<a href="adding-citation-file.html#headingInstructor3">YAML recovery path</a><a class="anchor" aria-label="anchor" href="#adding-citation-file-headingInstructor3"></a>
+</h3>
+<p>If more than a few learners hit YAML indentation errors, switch the
+whole room to cffinit rather than debugging individual whitespace
+mistakes. The goal is citation metadata, not YAML mastery. cffinit
+validates as they type and produces a file they can paste.</p>
+<hr>
+<br><h3 id="adding-citation-file-headingInstructor4">
+<a href="adding-citation-file.html#headingInstructor4">Predict, then reveal</a><a class="anchor" aria-label="anchor" href="#adding-citation-file-headingInstructor4"></a>
+</h3>
+<p>Before learners refresh GitHub after committing
+<code>CITATION.cff</code>, ask them to predict what GitHub will add.
+Then reveal the “Cite this repository” panel. This keeps GitHub’s helper
+behavior visible as a platform pattern rather than a surprise, and sets
+up the “GitHub recognizes certain filenames” idea later.</p>
 <hr>
 <br></section><section id="making-software-citable"><h2 class="section-heading"><a href="making-software-citable.html">Making Your Software Citable</a></h2>
 <hr class="half-width">
@@ -753,7 +820,36 @@ software starts accruing countable citations, the currency their review
 committees already understand.</p>
 <hr>
 <br><h3 id="making-software-citable-headingInstructor2">
-<a href="making-software-citable.html#headingInstructor2">Instructor Note</a><a class="anchor" aria-label="anchor" href="#making-software-citable-headingInstructor2"></a>
+<a href="making-software-citable.html#headingInstructor2">Say this out loud before you screen share</a><a class="anchor" aria-label="anchor" href="#making-software-citable-headingInstructor2"></a>
+</h3>
+<p>Use <code>sandbox.zenodo.org</code>, not production Zenodo. Real
+Zenodo records and DOIs are persistent and cannot be deleted, so they
+are not appropriate for practice. Say it before you share your screen,
+and have helpers watch for learners who land on <code>zenodo.org</code>
+by habit.</p>
+<hr>
+<br><h3 id="making-software-citable-headingInstructor3">
+<a href="making-software-citable.html#headingInstructor3">Do not rush the snapshot idea</a><a class="anchor" aria-label="anchor" href="#making-software-citable-headingInstructor3"></a>
+</h3>
+<p>This point is subtle and important, so slow down. Say: “GitHub is the
+live working copy; Zenodo archived what existed at release time.” Then
+ask a learner to restate, in their own words, the difference between a
+post-release GitHub edit and the already-archived release snapshot. If
+they can restate it, they have the key mental model of the episode.</p>
+<hr>
+<br><h3 id="making-software-citable-headingInstructor4">
+<a href="making-software-citable.html#headingInstructor4">Debrief prompt for support-staff learners</a><a class="anchor" aria-label="anchor" href="#making-software-citable-headingInstructor4"></a>
+</h3>
+<p>Once the DOI appears, ask: “Which DOI would you tell the researcher
+to put in the methods section, the version DOI or the concept DOI, and
+why?” Expected answer: the <strong>version DOI</strong> for exact
+reproducibility (the state that produced the results); the
+<strong>concept DOI</strong> to refer to the project in general. This
+turns the mechanic into an advising decision they will actually be asked
+to make.</p>
+<hr>
+<br><h3 id="making-software-citable-headingInstructor5">
+<a href="making-software-citable.html#headingInstructor5">Instructor Note</a><a class="anchor" aria-label="anchor" href="#making-software-citable-headingInstructor5"></a>
 </h3>
 <p><strong>Critical:</strong> Ensure learners use
 <strong>sandbox.zenodo.org</strong>. Real DOIs cannot be deleted.</p>
@@ -761,7 +857,17 @@ committees already understand.</p>
 <br></section><section id="improving-metadata-discoverability"><h2 class="section-heading"><a href="improving-metadata-discoverability.html">Improving Metadata and Discoverability</a></h2>
 <hr class="half-width">
 <h3 id="improving-metadata-discoverability-headingInstructor1">
-<a href="improving-metadata-discoverability.html#headingInstructor1">Instructor Note</a><a class="anchor" aria-label="anchor" href="#improving-metadata-discoverability-headingInstructor1"></a>
+<a href="improving-metadata-discoverability.html#headingInstructor1">Pacing: what is hands-on if you are short on time</a><a class="anchor" aria-label="anchor" href="#improving-metadata-discoverability-headingInstructor1"></a>
+</h3>
+<p>Make <strong>README improvements and GitHub topics</strong> the
+hands-on work here. Treat <code>.zenodo.json</code>, Software Heritage,
+<code>CONTRIBUTING.md</code>, and <code>CODE_OF_CONDUCT.md</code> as
+instructor demo or optional reading. In a half-day workshop, do not make
+every extension a hands-on task; it is the fastest way to run out of
+time before the wrap-up.</p>
+<hr>
+<br><h3 id="improving-metadata-discoverability-headingInstructor2">
+<a href="improving-metadata-discoverability.html#headingInstructor2">Instructor Note</a><a class="anchor" aria-label="anchor" href="#improving-metadata-discoverability-headingInstructor2"></a>
 </h3>
 <p>Encourage learners to compare well-described repositories with sparse
 ones.<br>
@@ -775,10 +881,28 @@ mechanism of discovery. The pitch to the researcher is blunt: the work
 is finished, and five minutes of description determines whether anyone
 ever finds it.</p>
 <hr>
+<br><h3 id="improving-metadata-discoverability-headingInstructor3">
+<a href="improving-metadata-discoverability.html#headingInstructor3">Frame .zenodo.json as advanced</a><a class="anchor" aria-label="anchor" href="#improving-metadata-discoverability-headingInstructor3"></a>
+</h3>
+<p>Do not present <code>.zenodo.json</code> as required for all
+projects. Frame it as an advanced override, used only when Zenodo
+metadata needs more control than <code>CITATION.cff</code> provides.
+Most learners should leave with <code>CITATION.cff</code> as their one
+citation file.</p>
+<hr>
 <br></section><section id="managing-environments-pixi"><h2 class="section-heading"><a href="managing-environments-pixi.html">Managing Reproducible Environments with pixi</a></h2>
 <hr class="half-width">
 <h3 id="managing-environments-pixi-headingInstructor1">
-<a href="managing-environments-pixi.html#headingInstructor1">Teaching this optional episode</a><a class="anchor" aria-label="anchor" href="#managing-environments-pixi-headingInstructor1"></a>
+<a href="managing-environments-pixi.html#headingInstructor1">Take a hard fork here</a><a class="anchor" aria-label="anchor" href="#managing-environments-pixi-headingInstructor1"></a>
+</h3>
+<p>Citation-focused learners are done with the core lesson after the
+metadata episode; send them off or into a break. Only full-track
+learners continue, and they need a local clone and pixi installed. Do
+not make the whole room troubleshoot installations. State clearly who
+this episode is for before anyone opens a terminal.</p>
+<hr>
+<br><h3 id="managing-environments-pixi-headingInstructor2">
+<a href="managing-environments-pixi.html#headingInstructor2">Teaching this optional episode</a><a class="anchor" aria-label="anchor" href="#managing-environments-pixi-headingInstructor2"></a>
 </h3>
 <p>This episode is last in the lesson order and is the only one that
 leaves the browser: it needs pixi and a terminal on the learner’s own
@@ -804,6 +928,15 @@ question “is there a record of what this needs to run” belongs in the
 consultation checklist even if the mechanics get referred to research
 computing.</p>
 <hr>
+<br><h3 id="managing-environments-pixi-headingInstructor3">
+<a href="managing-environments-pixi.html#headingInstructor3">Assign a helper to install issues</a><a class="anchor" aria-label="anchor" href="#managing-environments-pixi-headingInstructor3"></a>
+</h3>
+<p>If you are teaching the full track, assign one helper to pixi install
+and PATH problems. The lead instructor should keep moving with the
+concept demo and not stop the main room for individual terminal errors.
+Installation issues are the single most likely time-sink in this
+episode.</p>
+<hr>
 <br></section><section id="wrap-up-reflect"><h2 class="section-heading"><a href="wrap-up-reflect.html">Wrap-Up and Reflection</a></h2>
 <hr class="half-width">
 <h3 id="wrap-up-reflect-headingInstructor1">
@@ -819,6 +952,15 @@ researchers, it is a repeatable habit that costs under an hour per
 project: every future paper’s code can either be a dead URL in five
 years or a citable, findable output on your record, and the difference
 is the checklist you now hold.</p>
+<hr>
+<br><h3 id="wrap-up-reflect-headingInstructor2">
+<a href="wrap-up-reflect.html#headingInstructor2">Make it a local service map</a><a class="anchor" aria-label="anchor" href="#wrap-up-reflect-headingInstructor2"></a>
+</h3>
+<p>Have each support-staff learner write down one campus referral they
+still need to identify after the workshop: Tech Transfer, research
+computing, the data repository, information security, the grants office,
+or scholarly communications. Naming a real gap turns the demo into a
+local service map they can actually use on Monday.</p>
 <hr>
 <br></section></section>
 </div>
