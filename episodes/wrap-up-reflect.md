@@ -1,7 +1,7 @@
 ---
 title: "Wrap-Up and Reflection"
-teaching: 4
-exercises: 13
+teaching: 8
+exercises: 12
 ---
 
 :::::::::::::::::::::::::::::::::::::: questions
@@ -19,6 +19,10 @@ exercises: 13
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
+## Curation Work, Not Code Work
+
+The repository this lesson started with was fragile in a specific, diagnosable way: no rights statement, no citation record, no version anyone could pin, no description a search could find. Each episode added one piece of scholarly infrastructure, and none of it required writing code. That is the pattern worth carrying out of the room: making software citable and discoverable is curation work, and curation work is what this audience already does for a living.
+
 ## Your FAIR4RS Checklist
 
 Congratulations! You've transformed fragile research software into a FAIR software project.
@@ -27,26 +31,26 @@ Congratulations! You've transformed fragile research software into a FAIR softwa
 
 ✅ **F - Findable:** Added DOI, CITATION.cff, rich metadata
 ✅ **A - Accessible:** Public GitHub, archived on Zenodo
-✅ **I - Interoperable:** Standard formats (YAML, CFF), documented dependencies (pixi.toml)
+✅ **I - Interoperable:** Standard formats (YAML, CFF), documented dependencies (`requirements.txt`, or `pixi.toml` on the full track)
 ✅ **R - Reusable:** LICENSE (BSD-3), README with setup, environment reproducibility
 
 ### From Fragile to FAIR
 
-**Before (Branch: 01-start):**
+**Before (`main`, starting state):**
 
 - ❌ No LICENSE
-- ❌ No environment
 - ❌ No citation
 - ❌ No DOI
+- ❌ Minimal README
 
-**After (Branch: 06-metadata):**
+**After (`after-metadata`):**
 
 - ✅ LICENSE (BSD-3)
-- ✅ Environment (pixi.toml)
 - ✅ CITATION.cff
 - ✅ DOI from Zenodo
 - ✅ README with documentation
 - ✅ Community health files
+- ✅ Reproducible environment *(optional pixi episode, on `optional-pixi`)*
 
 Your software is now **citable, discoverable, and reusable**.
 
@@ -60,19 +64,16 @@ Use this time to reflect on what you've learned and decide on one action you'll 
 
 Give learners a few minutes of quiet reflection, then facilitate a group discussion. Invite volunteers to share a step they plan to take next.
 
+**Closing pitch worth saying out loud:** for instructors, the deliverable is not the demo repo, it is a service, a consultation format and a referral map usable the week you get home. For researchers, it is a repeatable habit that costs under an hour per project: every future paper's code can either be a dead URL in five years or a citable, findable output on your record, and the difference is the checklist you now hold.
+
 ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
-::::::::::::::::::::::::::::::::::::: challenge
+::::::::::::::::::::::::::::::::::::: discussion
 
-## Challenge 1: Choose Your Next Step
+## Discussion: Choose Your Next Step
 
-Which of the practices from today’s session will you apply to a current or future project?
+Which of the practices from today’s session will you apply to a current or future project? Share your pick with the group: making a repo public, adding a license, archiving on Zenodo, writing a README, creating a CITATION file, or something else.
 
-:::::::::::::::::::::::: solution
-
-Answers may vary: making a repo public, adding a license, archiving on Zenodo, writing a README, creating a CITATION file, etc.
-
-:::::::::::::::::::::::::::::::::
 :::::::::::::::::::::::::::::::::
 
 ::::::::::::::::::::::::::::::::: challenge
@@ -98,7 +99,7 @@ Examples:
 
 If you came to this lesson to support researchers rather than to publish your own code, your "next step" is a service, not a single repo. Two things make that practical.
 
-**A 5-minute consultation checklist.** When a researcher brings you a repository, walk it in this order and name the one highest-value fix:
+**A 5-minute consultation checklist.** When a researcher brings you a repository, walk it in this order and name the one highest-value fix. It works for the same reason a reference interview works: a practiced sequence of questions that turns a vague ask into a concrete next step.
 
 - [ ] **License** present, and ownership question asked? (Refer to Tech Transfer if unclear.)
 - [ ] **CITATION.cff** present and rendering GitHub's "Cite this repository" panel?
@@ -106,7 +107,7 @@ If you came to this lesson to support researchers rather than to publish your ow
 - [ ] **README** that a stranger understands in 30 seconds?
 - [ ] **Metadata**: description, ORCIDs, keywords, related works?
 
-**A campus referral map.** You are the router, not the single point of expertise. Know who owns each escalation before you need them:
+**A campus referral map.** You are the router, not the whole network. A liaison librarian does not answer every question; they know where every question goes. Know who owns each escalation before you need them:
 
 - **Ownership / IP / commercialization** → Technology Transfer / IP office
 - **Sensitive or restricted data in a repo** → research compliance / IRB / data governance

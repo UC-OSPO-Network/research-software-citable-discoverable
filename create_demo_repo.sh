@@ -1,28 +1,34 @@
 #!/bin/bash
 set -e
 
-# ====================================================================================== 
+# ======================================================================================
 #  RESEARCH SOFTWARE DEMO REPO GENERATOR (FOR INSTRUCTORS)
-# ====================================================================================== 
+# ======================================================================================
 #  Usage:
 #     bash create_demo_repo.sh
 #
 #  Description:
-#     This script generates a Git repository named 'software-demo' with a commit history
-#     that matches the progression of the "Sharing Research Software" lesson.
+#     Generates a Git repository named 'software-demo' for the "Sharing Research
+#     Software" lesson, in its GitHub-native (fork + web) form.
 #
-#     It creates branches for each stage (e.g., '02-license', '04-citation') so you
-#     can easily checkout specific states for live demos or screenshotting.
+#     - `main` is the STARTING STATE that learners fork: a bare project with no
+#       license, citation file, release, or metadata.
+#     - A chain of view-only REFERENCE BRANCHES shows the target state after each
+#       episode, so learners can check their work in the browser:
+#
+#         main → after-license → after-citation → after-release → after-metadata
+#
+#     - `optional-pixi` branches off `after-metadata` and is the ONLY branch that
+#       contains pixi files. Nothing in the main chain depends on pixi.
 #
 #  INSTRUCTOR PREPARATION:
 #     1. Move this script OUTSIDE your lesson repo (e.g. to ~/projects/).
 #     2. Run the script: bash create_demo_repo.sh
-#     3. (Optional) Create a repo on GitHub and push all branches/tags using the 
-#        commands printed at the end of this script.
+#     3. Push all branches and tags to GitHub (commands printed at the end).
 #
 #  WARNING:
 #     Do NOT run this script inside an existing Git repository.
-# ====================================================================================== 
+# ======================================================================================
 
 # --- SAFETY CHECK: Ensure we aren't creating a nested repo ---
 if git rev-parse --is-inside-work-tree >/dev/null 2>&1; then
@@ -38,23 +44,22 @@ if git rev-parse --is-inside-work-tree >/dev/null 2>&1; then
     fi
 fi
 
-# Name of the folder/repo to be created
 REPO_NAME="software-demo"
+UPSTREAM="UC-OSPO-Network/software-demo"
 
-# --- HELPER FUNCTION: checkpoint ---
-checkpoint() {
+# --- HELPER: start a new reference branch off the current one and commit a state ---
+stage() {
     local BRANCH_NAME=$1
     local MSG=$2
-    
-    echo "--> Committing state: $BRANCH_NAME"
+    echo "--> Building reference branch: $BRANCH_NAME"
+    git checkout -b "$BRANCH_NAME" --quiet
     git add .
     git commit -m "$MSG" --quiet
-    git branch "$BRANCH_NAME"
 }
 
-# ====================================================================================== 
-#  EPISODE 1: SHARING RESEARCH SOFTWARE (The Setup)
-# ====================================================================================== 
+# ======================================================================================
+#  main — THE STARTING STATE (what learners fork)
+# ======================================================================================
 echo "Creating directory $REPO_NAME..."
 mkdir -p "$REPO_NAME/src"
 cd "$REPO_NAME"
@@ -64,35 +69,49 @@ git config user.name "Researcher"
 git config user.email "researcher@example.org"
 git config commit.gpgsign false
 git config init.defaultBranch main
+git checkout -b main --quiet 2>/dev/null || git branch -m main
 
-echo "# Biodiversity Analysis Toolkit
+cat <<'EOF' > README.md
+# Biodiversity Analysis Toolkit
 
 Analysis tools for biodiversity research data.
-" > README.md
 
-echo "# environment configuration
-[env]
-python = '3.9'
-" > environment.toml
+> **Note for learners:** this is the *starting state* for the
+> "Sharing Research Software" lesson. It intentionally has no license,
+> citation file, release, or metadata. You'll add those over the course of
+> the lesson. To see the finished version, switch to the `after-metadata`
+> branch in the branch dropdown.
+EOF
 
-echo "import numpy as np
+cat <<'EOF' > requirements.txt
+numpy
+EOF
+
+cat <<'EOF' > src/analysis.py
+import numpy as np
+
 
 def analyze_data():
     data = np.random.normal(0, 1, 1000)
     print(f'Mean: {np.mean(data)}')
     print(f'Std: {np.std(data)}')
 
+
 if __name__ == '__main__':
     analyze_data()
-" > src/analysis.py
+EOF
 
-checkpoint "01-start" "Initial commit: basic project structure"
+git add .
+git commit -m "Initial project: analysis script, README, and requirements" --quiet
+echo "--> main is at the starting state"
 
+# ======================================================================================
+#  after-license — Episode 2: add a LICENSE
+# ======================================================================================
+git checkout main --quiet
+git checkout -b after-license --quiet
 
-# ====================================================================================== 
-#  EPISODE 2: CHOOSING AN OPEN-SOURCE LICENSE
-# ====================================================================================== 
-cat <<EOF > LICENSE
+cat <<'EOF' > LICENSE
 BSD 3-Clause License
 
 Copyright (c) 2026, The Regents of the University of California
@@ -124,55 +143,21 @@ OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 EOF
 
-echo "
+cat <<'EOF' >> README.md
+
 ## License
 
 This project is licensed under the BSD 3-Clause License - see the [LICENSE](LICENSE) file for details.
-" >> README.md
-
-checkpoint "02-license" "Add BSD 3-Clause License and update README"
-
-
-# ====================================================================================== 
-#  EPISODE 3: MANAGING ENVIRONMENTS WITH PIXI
-# ====================================================================================== 
-cat <<EOF > pixi.toml
-[project]
-name = "biodiversity-analysis-toolkit"
-version = "0.1.0"
-description = "Analysis tools for biodiversity research data"
-authors = [
-    "Tim Dennis <tdennis@library.ucla.edu>",
-    "Leigh Phan <leighphan@library.ucla.edu>",
-    "Reid Otsuji <rotsuji@ucsd.edu>",
-    "Karla Padilla <kpadilla@ucsd.edu>"
-]
-channels = ["conda-forge"]
-platforms = ["osx-arm64", "linux-64", "win-64", "osx-64"]
-
-[tasks]
-
-[dependencies]
-python = "*"
-numpy = "*"
-r = "*"
-r-dplyr = "*"
 EOF
 
-touch pixi.lock
-echo ".pixi
-*.pyc
-__pycache__
-" > .gitignore
-echo "pixi.lock merge=ours
-" > .gitattributes
-
-checkpoint "03-pixi" "Initialize pixi environment and add dependencies"
-
+git add .
+git commit -m "Add BSD 3-Clause license and README license section" --quiet
 
 # ======================================================================================
-#  EPISODE 4: ADDING A CITATION.CFF FILE
+#  after-citation — Episode 3: add CITATION.cff
 # ======================================================================================
+git checkout -b after-citation --quiet
+
 cat <<EOF > CITATION.cff
 cff-version: 1.2.0
 title: "Biodiversity Analysis Toolkit"
@@ -191,34 +176,65 @@ authors:
     given-names: "Karla"
 version: "0.1.0"
 date-released: 2026-02-01
-url: "https://github.com/jt14den/software-demo"
+url: "https://github.com/$UPSTREAM"
 EOF
 
-checkpoint "04-citation" "Add CITATION.cff"
-
-
-# ======================================================================================
-#  EPISODE 5: MAKING YOUR SOFTWARE CITABLE (RELEASES)
-# ======================================================================================
-echo "--> Creating release tag: v0.1.0"
-git tag -a v0.1.0 -m "Release v0.1.0: Initial public version
-
-This release includes:
-- BSD 3-Clause License
-- Reproducible environment (pixi)
-- CITATION.cff for academic credit
-- Complete documentation
-
-Ready for Zenodo archival and DOI minting."
-
-git branch "05-release"
-
+git add .
+git commit -m "Add CITATION.cff" --quiet
 
 # ======================================================================================
-#  EPISODE 6: IMPROVING METADATA & DISCOVERABILITY (OSPO Alignment)
+#  after-release — Episode 4: release v0.1.0 + Zenodo DOI (badge + cff doi)
 # ======================================================================================
+git checkout -b after-release --quiet
 
-# Add .zenodo.json for rich metadata
+# Add a DOI badge to the top of the README (placeholder points at Zenodo Sandbox).
+cat <<'EOF' > README.md
+# Biodiversity Analysis Toolkit
+
+[![DOI](https://sandbox.zenodo.org/badge/DOI/10.5072/zenodo.123456.svg)](https://doi.org/10.5072/zenodo.123456)
+
+Analysis tools for biodiversity research data.
+
+> **Note:** the DOI above points to Zenodo Sandbox for teaching purposes.
+
+## License
+
+This project is licensed under the BSD 3-Clause License - see the [LICENSE](LICENSE) file for details.
+EOF
+
+# Record the DOI in CITATION.cff
+cat <<EOF > CITATION.cff
+cff-version: 1.2.0
+title: "Biodiversity Analysis Toolkit"
+message: "If you use this software, please cite it as below."
+authors:
+  - family-names: "Dennis"
+    given-names: "Tim"
+    orcid: "https://orcid.org/0000-0001-6632-3812"
+  - family-names: "Phan"
+    given-names: "Leigh"
+    orcid: "https://orcid.org/0000-0002-8605-1444"
+  - family-names: "Otsuji"
+    given-names: "Reid"
+    orcid: "https://orcid.org/0000-0002-1842-0295"
+  - family-names: "Padilla"
+    given-names: "Karla"
+version: "0.1.0"
+doi: 10.5072/zenodo.123456
+date-released: 2026-02-01
+url: "https://github.com/$UPSTREAM"
+repository-code: "https://github.com/$UPSTREAM"
+EOF
+
+git add .
+git commit -m "Record Zenodo DOI for the v0.1.0 release" --quiet
+git tag -a v0.1.0 -m "Release v0.1.0: first citable version (LICENSE + CITATION.cff + DOI)"
+
+# ======================================================================================
+#  after-metadata — Episode 5: full metadata + community docs (THE FINISHED REPO)
+# ======================================================================================
+git checkout -b after-metadata --quiet
+
 cat <<EOF > .zenodo.json
 {
   "title": "Biodiversity Analysis Toolkit",
@@ -276,7 +292,7 @@ Since this is a very small project there are just a few kinds of contributions w
 ## Pull Request Lifecycle
 
 1. **Fork and Clone** the repo.
-2. Create a branch from \`main\`.
+2. Create a branch from `main`.
 3. Submit your pull request when you have a working implementation.
 4. We prefer **small, focused pull requests**.
 
@@ -285,7 +301,7 @@ Since this is a very small project there are just a few kinds of contributions w
 Please read and abide by our [Code of Conduct](./CODE_OF_CONDUCT.md).
 EOF
 
-cat <<EOF > CODE_OF_CONDUCT.md
+cat <<'EOF' > CODE_OF_CONDUCT.md
 # CODE OF CONDUCT
 
 ## Our Pledge
@@ -309,29 +325,32 @@ Analysis tools for biodiversity research data. This project demonstrates reprodu
 
 ## Features
 
-- **Reproducible Environment**: Uses [pixi](https://pixi.sh) for cross-platform dependency management
-- **Citable**: Includes CITATION.cff and DOI via Zenodo
+- **Citable**: Includes CITATION.cff and a DOI via Zenodo
 - **Open Source**: Licensed under BSD 3-Clause
+- **Documented**: README, contributing guide, and code of conduct
 
 ## Getting Started
 
 ### Prerequisites
 
-- [pixi](https://pixi.sh) (includes Python and all dependencies)
+- Python 3.9+
 
 ### Installation & Usage
 
 1. Clone the repository:
    \`\`\`bash
-   git clone https://github.com/jt14den/software-demo.git
+   git clone https://github.com/$UPSTREAM.git
    cd software-demo
    \`\`\`
 
 2. Install dependencies and run the analysis:
    \`\`\`bash
-   pixi install
-   pixi run python src/analysis.py
+   pip install -r requirements.txt
+   python src/analysis.py
    \`\`\`
+
+> Want a fully reproducible, cross-platform environment (Python + R with a lockfile)?
+> See the optional pixi setup on the \`optional-pixi\` branch.
 
 ## Contributing
 
@@ -384,8 +403,8 @@ authors:
 version: "0.1.0"
 doi: 10.5072/zenodo.123456
 date-released: 2026-02-01
-url: "https://github.com/jt14den/software-demo"
-repository-code: "https://github.com/jt14den/software-demo"
+url: "https://github.com/$UPSTREAM"
+repository-code: "https://github.com/$UPSTREAM"
 keywords:
   - biodiversity
   - research-software
@@ -397,91 +416,117 @@ abstract: "Analysis tools for biodiversity research data. Demonstrates reproduci
 license: BSD-3-Clause
 EOF
 
-checkpoint "06-metadata" "Improve metadata: aligned README, CONTRIBUTING, and CoC"
+git add .
+git commit -m "Improve metadata and add community docs (README, CONTRIBUTING, CoC, .zenodo.json)" --quiet
 
+# ======================================================================================
+#  optional-pixi — OPTIONAL episode: reproducible environment with pixi
+#  (branches off after-metadata; the ONLY branch with pixi files)
+# ======================================================================================
+git checkout -b optional-pixi --quiet
 
-# ====================================================================================== 
+cat <<EOF > pixi.toml
+[project]
+name = "biodiversity-analysis-toolkit"
+version = "0.1.0"
+description = "Analysis tools for biodiversity research data"
+authors = [
+    "Tim Dennis <tdennis@library.ucla.edu>",
+    "Leigh Phan <leighphan@library.ucla.edu>",
+    "Reid Otsuji <rotsuji@ucsd.edu>",
+    "Karla Padilla <kpadilla@ucsd.edu>"
+]
+channels = ["conda-forge"]
+platforms = ["osx-arm64", "linux-64", "win-64", "osx-64"]
+
+[tasks]
+
+[dependencies]
+python = "*"
+numpy = "*"
+r = "*"
+r-dplyr = "*"
+EOF
+
+touch pixi.lock
+cat <<'EOF' > .gitignore
+.pixi
+*.pyc
+__pycache__
+EOF
+cat <<'EOF' > .gitattributes
+pixi.lock merge=ours
+EOF
+
+cat <<'EOF' >> README.md
+
+## Reproducible environment (pixi)
+
+This branch adds a [pixi](https://pixi.sh) environment so the project runs identically
+across machines (Python and R, pinned by a lockfile):
+
+```bash
+pixi install
+pixi run python src/analysis.py
+```
+EOF
+
+git add .
+git commit -m "Add optional pixi environment (pixi.toml, lockfile, gitignore/attributes)" --quiet
+
+# --- Leave the working tree on main (the starting state learners fork) ---
+git checkout main --quiet
+
+# ======================================================================================
 #  CONCLUSION & INSTRUCTIONS
-# ====================================================================================== 
-
+# ======================================================================================
 echo ""
 echo "========================================================="
 echo "✅  Demo Repository Created Successfully!"
 echo "    Location: $(pwd)"
+echo "    Checked out: main (starting state)"
 echo "========================================================="
 echo ""
-echo "HOW TO USE DURING THE LESSON:"
+echo "REFERENCE BRANCHES (view-only answer keys):"
 echo "---------------------------------------------------------"
-echo "You can move through the lesson stages using 'git checkout':"
-echo "  git checkout 01-start     # Initial state (Slide 3)"
-echo "  git checkout 02-license   # Added License (Slide 6)"
-echo "  git checkout 03-pixi      # Added Environment (Slide 9)"
-echo "  git checkout 04-citation  # Added Citation (Slide 12)"
-echo "  git checkout 05-release   # Tagged v0.1.0 (Slide 15)"
-echo "  git checkout 06-metadata  # Final OSPO state (Slide 19)"
+echo "  main            # starting state (what learners fork)"
+echo "  after-license   # + LICENSE"
+echo "  after-citation  # + CITATION.cff"
+echo "  after-release   # + DOI badge/cff, tag v0.1.0"
+echo "  after-metadata  # finished repo (README, CONTRIBUTING, CoC, .zenodo.json)"
+echo "  optional-pixi   # optional pixi episode (off after-metadata)"
 echo ""
 echo "HOW TO PUSH TO GITHUB:"
 echo "---------------------------------------------------------"
-echo "1. Create a NEW empty repo at https://github.com/new"
-echo "   Name: software-demo"
-echo "   Description: Demo repository for UC Love Data Week 2026"
-echo "   (Keep it PUBLIC)"
+echo "1. Create a NEW empty PUBLIC repo named 'software-demo' under the"
+echo "   UC-OSPO-Network org: https://github.com/organizations/UC-OSPO-Network/repositories/new"
+echo "   (No README/license/gitignore — this repo already has them.)"
 echo ""
-echo "2. Push from $(pwd):"
+echo "2. Push all branches and tags from $(pwd):"
 echo ""
-echo "   git remote add origin https://github.com/jt14den/software-demo.git"
+echo "   git remote add origin https://github.com/$UPSTREAM.git"
 echo "   git push -u origin --all"
 echo "   git push -u origin --tags"
 echo ""
-echo "========================================================="
-echo "HOW TO GET A ZENODO SANDBOX DOI (For Teaching):"
-echo "========================================================="
-echo ""
-echo "IMPORTANT: Use Zenodo SANDBOX for demo repositories!"
-echo ""
-echo "Step 1: Create Zenodo Sandbox Account"
-echo "  - Go to: https://sandbox.zenodo.org"
-echo "  - Sign up with GitHub OAuth (or create account)"
-echo ""
-echo "Step 2: Link GitHub Repository"
-echo "  - In Zenodo Sandbox: Settings → GitHub"
-echo "  - Click 'Connect' and authorize"
-echo "  - Find 'software-demo' and flip the toggle ON"
-echo ""
-echo "Step 3: Create a GitHub Release"
-echo "  - Go to: https://github.com/jt14den/software-demo/releases"
-echo "  - Click 'Draft a new release'"
-echo "  - Choose tag: v0.1.0 (already created)"
-echo "  - Title: 'Release v0.1.0'"
-echo "  - Click 'Publish release'"
-echo ""
-echo "Step 4: Get Your Sandbox DOI"
-echo "  - Zenodo Sandbox automatically creates a record"
-echo "  - Go to: https://sandbox.zenodo.org/me/uploads"
-echo "  - Find your record, get DOI (format: 10.5072/zenodo.XXXXX)"
-echo ""
-echo "Step 5: Update Your Repository"
-echo "  - Copy the real sandbox DOI"
-echo "  - Update CITATION.cff (replace 10.5072/zenodo.123456)"
-echo "  - Update README.md badge URL"
-echo "  - Commit and push changes"
-echo ""
-echo "SAMPLE DOI FORMAT:"
-echo "  Sandbox: 10.5072/zenodo.XXXXX"
-echo "  Production (real): 10.5281/zenodo.XXXXX"
+echo "3. On GitHub, confirm the default branch is 'main'."
 echo ""
 echo "========================================================="
-echo "QUICK REFERENCE:"
+echo "ZENODO SANDBOX DOI (for teaching):"
 echo "========================================================="
-echo "Demo repo: https://github.com/jt14den/software-demo"
-echo "Zenodo Sandbox: https://sandbox.zenodo.org"
-echo "Zenodo Production: https://zenodo.org (don't use for demos!)"
+echo "IMPORTANT: use Zenodo SANDBOX for demo repositories."
+echo ""
+echo "  1. Sign in at https://sandbox.zenodo.org with GitHub."
+echo "  2. Settings → GitHub → toggle 'software-demo' ON."
+echo "  3. On GitHub: Releases → Draft a new release → tag v0.1.0 → Publish."
+echo "  4. Zenodo mints a sandbox DOI (format 10.5072/zenodo.XXXXX)."
+echo "  5. Replace the placeholder 10.5072/zenodo.123456 in the README badge"
+echo "     and CITATION.cff on the after-release / after-metadata branches if"
+echo "     you want the real DOI to resolve during the workshop."
 echo ""
 echo "========================================================="
 echo "INSTRUCTOR NOTE:"
 echo "========================================================="
-echo "- Share the GitHub URL with learners"
-echo "- Show the Zenodo linking process during Slide 15"
-echo "- The placeholder DOI (10.5072/zenodo.123456) works for slides"
-echo "- Update with real sandbox DOI before workshop if time permits"
+echo "- Learners FORK $UPSTREAM (main only) and work in the browser."
+echo "- The after-* branches stay upstream as view-only reference states."
+echo "- Only the optional pixi episode needs a local install."
 echo "========================================================="

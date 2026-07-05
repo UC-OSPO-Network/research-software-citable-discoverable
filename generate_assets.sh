@@ -1,6 +1,6 @@
 #!/bin/bash
 REPO_PATH="/Users/timdennis/projects/carpentries/software-demo"
-ASSETS_DIR="$(pwd)/slide_assets"
+ASSETS_DIR="$(pwd)/dev/slide_assets"
 
 cd "$REPO_PATH"
 

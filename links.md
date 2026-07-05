@@ -1,10 +1,22 @@
-<!-- 
-Place links that you need to refer to multiple times across pages here. Delete
-any links that you are not going to use. 
- -->
+<!--
+Shared link definitions, available to every episode in the lesson. The Workbench
+makes these keys usable from any .md file, so a URL used on multiple pages is
+defined here ONCE. Reference them in an episode with:
 
-[pandoc]: https://pandoc.org/MANUAL.html
-[r-markdown]: https://rmarkdown.rstudio.com/
-[rstudio]: https://www.rstudio.com/
-[carpentries-workbench]: https://carpentries.github.io/sandpaper-docs/
+    [display text][key]     e.g.  [UC OSPO License Guide][uc-license-guide]
+    [key][]                 uses the key itself as the link text
 
+Add a link here once it is used on 2+ pages, then update it in this one place.
+Note: this only affects markdown links [text](url); it does not apply to URLs
+inside code blocks or to autolinks written as <https://example.org>.
+-->
+
+<!-- UC OSPO / UC resources -->
+[uc-license-guide]: https://ucospo.net/oss-resources/template-guides/license-guide/
+[uc-oss-chart]: https://security.ucop.edu/resources/open-source-software-licensing.html
+[uc-templates]: https://github.com/UC-OSPO-Network/templates
+
+<!-- General open-source references -->
+[choosealicense]: https://choosealicense.com/
+[awesome-readme]: https://github.com/matiassingers/awesome-readme
+[contributor-covenant]: https://www.contributor-covenant.org/
