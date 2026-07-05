@@ -180,11 +180,11 @@ Zenodo detects the release, downloads and archives a snapshot of the repository 
 
 ![In Zenodo Sandbox under **Settings → GitHub**, find your repository and flip its switch to ON so Zenodo archives each new release.](fig/zenodo-github-toggle.png){alt="Zenodo Sandbox GitHub repositories list with the software-demo row highlighted and its toggle switched ON."}
 
-**Step 3: Create GitHub Release (tag v1.0.0)**
+**Step 3: Create GitHub Release (tag v0.1.0)**
 
 - Go to your GitHub repository
 - Click **Releases → Draft a new release**
-- Create a tag: `v1.0.0`
+- Create a tag: `v0.1.0`
 - Add release notes describing what's in this version
 - Click **Publish release**
 
