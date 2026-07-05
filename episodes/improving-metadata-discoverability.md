@@ -198,6 +198,27 @@ A `CHANGELOG.md` documents what changed between versions. This helps users under
 
 Adding these files to your repository root helps GitHub display a "Community Standards" checklist in your insights, signaling that your project is professionally managed and ready for collaboration.
 
+::::::::::::::::::::::::::::::::::::: callout
+
+### GitHub recognizes certain filenames
+
+You have now seen this pattern several times: name a file the way GitHub expects and the platform does more than store text. It may offer a template, add a link to the sidebar, tick an item on the community checklist, or route issues, security reports, and citations. A few worth knowing:
+
+| File (in the repo root, unless noted) | What GitHub does |
+|---|---|
+| `README.md` | Renders as the repository's landing page |
+| `LICENSE` | Offers a license-template picker; shows the detected license |
+| `CITATION.cff` | Adds the "Cite this repository" link with ready-made APA/BibTeX |
+| `CODE_OF_CONDUCT.md` | Offers a code-of-conduct template; counts toward the community profile |
+| `CONTRIBUTING.md` | Links contributor guidelines when someone opens an issue or PR |
+| `SUPPORT.md` | Points people to your support channels from the new-issue screen |
+| `SECURITY.md` | Becomes the security policy; "report a vulnerability here, not in a public issue" |
+| `.github/ISSUE_TEMPLATE/*.yml` | Turns "New issue" into a structured intake form |
+
+Two caveats worth passing on in a consultation: most of this only appears **after you commit the file to the default branch**, and an organization's policies can disable or constrain some features. GitHub also changes these helpers over time, so teach the *pattern* ("the filename is a signal") rather than the exact button.
+
+::::::::::::::::::::::::::::::::::::::::::::::::
+
 ---
 
 ## Institutional Repositories: Dataverse, Dryad, and Zenodo
@@ -231,6 +252,14 @@ When you deposit software on Zenodo, the record flows into:
 - **Domain repositories** that harvest DOIs
 
 What this means practically: the metadata you put into your Zenodo record is the metadata that librarians and discovery systems see. Thin metadata (no description, no keywords, no author ORCIDs) limits findability even if the DOI is valid.
+
+::::::::::::::::::::::::::::::::::::: caution
+
+### `.zenodo.json` overrides `CITATION.cff`
+
+If a repository contains a `.zenodo.json` file, Zenodo uses **that** file for the metadata of a GitHub-archived release and ignores `CITATION.cff`. The two files can drift apart, so if you add a `.zenodo.json` (some projects do, for richer Zenodo fields), keep the authors, title, and keywords consistent with your `CITATION.cff`, or you will publish two different citation records for the same software.
+
+::::::::::::::::::::::::::::::::::::::::::::::::
 
 Add or refine:
 

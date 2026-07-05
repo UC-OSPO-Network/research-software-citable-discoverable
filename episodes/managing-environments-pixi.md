@@ -87,9 +87,9 @@ numpy = "1.24.3"
 
 **Benefits:**
 
-- ✅ Exact versions locked
-- ✅ Same environment everywhere
-- ✅ Reproducible in 5 years
+- ✅ Exact resolved versions recorded
+- ✅ Much closer to the same environment across machines
+- ✅ A durable record of what you actually ran
 
 ## What Environment Management Captures
 
@@ -108,7 +108,7 @@ Environment management reduces this friction because it captures:
 
 - **Cross-platform:** Works on macOS, Linux, Windows
 - **Fast:** Faster than Conda
-- **Automatic lockfiles:** Creates `pixi.lock` automatically, guaranteeing everyone runs the exact same versions of every package
+- **Automatic lockfiles:** Creates `pixi.lock` automatically, recording the exact resolved versions of every package so others can rebuild the same environment
 - **Multi-language:** Supports Python, R, and more
 
 **FAIR Connection:** Standard formats + clear dependencies = Interoperable & Reusable software
@@ -211,7 +211,7 @@ r-dplyr = "1.2.0"
 + 47 other dependencies
 ```
 
-This lockfile guarantees **byte-for-byte reproducibility**.
+This lockfile records the exact resolved versions and per-platform builds, so anyone can rebuild the same environment. It greatly improves reproducibility, though it cannot guarantee that every package will still be available, or behave identically, on every future platform.
 
 ---
 

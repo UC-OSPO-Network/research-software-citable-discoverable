@@ -17,6 +17,7 @@ exercises: 7
 - Explain why research software is often uncredited, unfindable, and at risk of loss
 - Explain how FAIR4RS principles apply to research software
 - Identify the key components that make software citable and discoverable
+- Given a repository, name the single highest-value next fix for its citation, licensing, or discoverability
 - **Supporting others:** explain to a researcher, in their terms, why these practices are worth the effort
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
@@ -154,7 +155,7 @@ The solution is to apply **FAIR Principles for Research Software (FAIR4RS)**:
 **A - Accessible:** Retrievable via standard protocols
 → Public GitHub, archived on Zenodo
 
-**I - Interoperable:** Exchanges data with other tools
+**I - Interoperable:** Uses standard metadata formats and documented dependencies so people and tools can interpret the software
 → Standard formats, documented dependencies
 
 **R - Reusable:** Can be executed AND modified
@@ -274,6 +275,8 @@ Starting from the bare `main` state in your fork, you'll progressively add each 
 - **Episode 7:** Wrap-up and reflection
 
 Each episode adds one piece to your fork's `main` branch. View-only reference branches ([`after-license`][branch-after-license], [`after-citation`][branch-after-citation], [`after-release`][branch-after-release], [`after-metadata`][branch-after-metadata]) let you check your work at any point.
+
+**What's hands-on vs. what's a tour.** The core, do-it-yourself path is short: **add a LICENSE, add a CITATION.cff, create a release with a Zenodo DOI, and improve the README and topics.** Other things you'll meet along the way, such as Software Heritage, `.zenodo.json`, `CONTRIBUTING.md` and `CODE_OF_CONDUCT.md`, and the optional pixi environment episode, are worth knowing about but are extensions: read or watch them, and add them later when a project needs them.
 
 ::::::::::::::::::::::::::::::::::::: keypoints
 

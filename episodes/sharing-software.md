@@ -51,6 +51,22 @@ Use **progressive disclosure**: show only the top-level file listing first, then
 
 ## The Starting Point
 
+::::::::::::::::::::::::::::::::::::: prereq
+
+### Before you begin: fork the demo repository
+
+Every hands-on step happens in **your own fork**, not the shared demo repo.
+
+1. Open <https://github.com/UC-OSPO-Network/software-demo>.
+2. Click **Fork**, then **Create fork** (the defaults are fine; you only need the `main` branch).
+3. Confirm the top-left of the page now reads **`YOUR-USERNAME/software-demo`**, not `UC-OSPO-Network/software-demo`. That is where you will make every change.
+
+Use the `after-*` reference branches only to check your work, never to build on. Full setup details are on the [Setup page](../learners/setup.md).
+
+*If you are here as a researcher rather than to support others:* treat the demo fork as a practice run. The same steps and checklist transfer directly to your own repository.
+
+::::::::::::::::::::::::::::::::::::::::::::::::
+
 Open your fork and look at the **"before" state** on the `main` branch:
 
 ```bash
@@ -131,7 +147,7 @@ Full references available on the [Reference page](../learners/reference.md#refer
 
 ## Challenge 2: Inventory the Demo Repository
 
-Open the **software-demo** repository you downloaded.
+Open your fork of the **software-demo** repository on GitHub.
 
 Spend 2 minutes exploring, then answer:
 
