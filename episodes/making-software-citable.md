@@ -241,12 +241,13 @@ This point is subtle and important, so slow down. Say: "GitHub is the live worki
 
 ::::::::::::::::::::::::::::::::::::: callout
 
-### Practice safely, and watch org permissions
+### If Zenodo can't see your repository
 
-- **Sandbox DOIs are for practice only.** Do not put a `10.5072/...` sandbox DOI in a paper, grant report, production README, or a real `CITATION.cff`. Real Zenodo records (and their DOIs) are permanent and cannot be deleted.
-- **If Zenodo cannot see your repository:** it only lists repos you have admin rights on. For an organization repo, an org owner may need to approve Zenodo's access first. For the exercise, forking under your personal account avoids this entirely.
+Zenodo only lists repositories you have admin rights on. For an organization repo, an org owner may need to approve Zenodo's access first; for this exercise, forking under your personal account avoids the problem entirely. (Keep the sandbox rule in mind too: a `10.5072/...` sandbox DOI is for practice, never for a paper or a real `CITATION.cff`.)
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
+
+With the release published and the DOI minted, the citable-software chain is complete. Here is how the pieces you have added map onto FAIR:
 
 ::::::::::::::::::::::::::::::::::::: callout
 
@@ -261,20 +262,22 @@ This point is subtle and important, so slow down. Say: "GitHub is the live worki
 
 ::::::::::::::::::::::::::::::::::::: callout
 
-::::::::::::::::::::::::::::::::::::: callout
-
 ### Check your work
 
 Compare your fork against the [`after-release` reference branch][branch-after-release] on the [demo repository][demo-repo]. It shows the target state after this episode: a tagged release and a `CITATION.cff` updated with the DOI.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
-### Supporting others
+With the DOI minted, one practical question remains, and it is the one researchers will bring straight to you: *which* DOI do they actually cite?
 
-The question researchers actually bring you here is "which DOI do I put in my paper?" Zenodo mints two for every project, and the distinction is worth knowing cold. Librarians already have this distinction: it is the work versus the edition, "cite the exact edition you quoted" versus "refer to the work as a whole."
+### Supporting others: which DOI do I cite?
+
+Zenodo mints two DOIs for every project, and the distinction is worth knowing cold. Librarians already have it: it is the work versus the edition, "cite the exact edition you quoted" versus "refer to the work as a whole."
 
 - **Version DOI** points to one exact release. Cite this when the precise software state matters for reproducibility, such as the version that produced a paper's results.
 - **Concept DOI** points to the project across all versions and always resolves to the latest. Cite this when you want to refer to the software in general.
+
+A safe default to teach: cite the **version DOI** in a methods section, and use the **concept DOI** in a README or project page. And if a repository ever has both a `CITATION.cff` and a `.zenodo.json`, remember that Zenodo uses the `.zenodo.json` for the archived release metadata.
 
 ::::::::::::::::::::::::::::::::::::: instructor
 
@@ -284,11 +287,7 @@ Once the DOI appears, ask: "Which DOI would you tell the researcher to put in th
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
-A safe default to teach: cite the **version DOI** in a methods section, and use the **concept DOI** in a README or project page. Two more things worth flagging in a consultation: have people practice on **sandbox.zenodo.org** first, because real Zenodo records cannot be deleted; and if a repo has both a `CITATION.cff` and a `.zenodo.json`, Zenodo uses the `.zenodo.json` for the GitHub-archived release metadata.
-
-::::::::::::::::::::::::::::::::::::::::::::::::
-
-**Even if GitHub disappears, your DOI still works.** The GitHub-Zenodo link works like deposit: each release is archived at CERN, independent of GitHub's fate. The workshop can burn down; the deposited copy survives.
+Whichever DOI you cite, durability is the whole point: **even if GitHub disappears, your DOI still works.** The GitHub-Zenodo link works like a deposit, so each release is archived at CERN, independent of GitHub's fate. The workshop can burn down; the deposited copy survives.
 
 ::::::::::::::::::::::::::::::::::::: spoiler
 
@@ -319,12 +318,6 @@ repository-artifact: "swh:1:rel:22ece559cc7cc2364edc5e5593d63ae8bd229f9f"
 This approach is recommended in the 2026 *CODE Beyond FAIR* roadmap (Di Cosmo et al., *Scientific Data*).
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
-
-:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: instructor
-
-**Critical:** Ensure learners use **sandbox.zenodo.org**. Real DOIs cannot be deleted.
-
-::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
 ::::::::::::::::::::::::::::::::::::: challenge
 
