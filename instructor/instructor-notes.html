@@ -634,6 +634,7 @@ inside code blocks or to autolinks written as <https://example.org>.
 -->
 <!-- UC OSPO / UC resources -->
 <!-- General open-source references -->
+<!-- Demo repository and its view-only reference branches (the per-episode "answer keys") -->
 </section><section id="aggregate-instructor-notes"><section id="introduction"><h2 class="section-heading"><a href="introduction.html">Introduction: Software as a Citable Research Output</a></h2>
 <hr class="half-width">
 <h3 id="introduction-headingInstructor1">
@@ -678,11 +679,11 @@ web interface and learners mirror it in theirs.</p>
 the browser:</p>
 <ul>
 <li>
-<strong>Before</strong> — the <code>main</code> branch: a sparse,
-hard-to-reuse project</li>
+<strong>Before</strong> — the <a href="https://github.com/UC-OSPO-Network/software-demo/tree/main" class="external-link"><code>main</code>
+branch</a>: a sparse, hard-to-reuse project</li>
 <li>
-<strong>After</strong> — the <code>after-metadata</code> branch: a
-clear, licensed, citable, well-documented project</li>
+<strong>After</strong> — the <a href="https://github.com/UC-OSPO-Network/software-demo/tree/after-metadata" class="external-link"><code>after-metadata</code>
+branch</a>: a clear, licensed, citable, well-documented project</li>
 </ul>
 <p>Use <strong>progressive disclosure</strong>: show only the top-level
 file listing first, then open individual files as you discuss them. No
@@ -776,12 +777,13 @@ machine, plus a local clone of their fork. Because the rest of the
 lesson is browser-only, confirm during setup which learners are prepared
 for the full track. Anyone who only wants their code cited can stop
 after the metadata episode with a complete, citable repository.</p>
-<p>The <code>optional-pixi</code> reference branch builds on
-<code>after-metadata</code>, so it shows pixi added to an
-already-finished project. Have learners view it in the browser for the
-target <code>pixi.toml</code> and lockfile, then work along in their
-local clone. Nothing in the main project chain depends on pixi, so
-skipping this episode leaves no loose ends in anyone’s repository.</p>
+<p>The <a href="https://github.com/UC-OSPO-Network/software-demo/tree/optional-pixi" class="external-link"><code>optional-pixi</code>
+reference branch</a> builds on <a href="https://github.com/UC-OSPO-Network/software-demo/tree/after-metadata" class="external-link"><code>after-metadata</code></a>,
+so it shows pixi added to an already-finished project. Have learners
+view it in the browser for the target <code>pixi.toml</code> and
+lockfile, then work along in their local clone. Nothing in the main
+project chain depends on pixi, so skipping this episode leaves no loose
+ends in anyone’s repository.</p>
 <p><strong>Pixi not installed?</strong> Learners can follow the concepts
 without a working pixi installation. The key idea is that a lockfile
 pins exact dependency versions. That’s the transferable lesson, not the

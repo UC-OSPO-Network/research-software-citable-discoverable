@@ -501,7 +501,7 @@ this version?</li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <p>Useful release notes include:</p>
 <ul><li>what changed<br></li>
@@ -554,7 +554,7 @@ you?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <p>Zenodo detects the release, downloads and archives a snapshot of the
 repository at that tag, and mints a permanent DOI for it. The archived
@@ -570,21 +570,31 @@ version no longer depends on GitHub staying online.</p>
 </li>
 <li>Click “Log in with GitHub”</li>
 <li>Authorize Zenodo to access your repositories</li>
-</ul><p><strong>Step 2: Enable your repository (toggle ON)</strong></p>
+</ul><figure><img src="fig/zenodo-get-started.png" alt="Zenodo Sandbox 'Get started' panel showing three numbered steps: Flip the switch, Create a release, and Get the badge." class="figure mx-auto d-block"><div class="figcaption">Zenodo’s GitHub page walks you through the same
+three steps: flip the switch on a repository, create a release, and get
+a DOI badge.</div>
+</figure><p><strong>Step 2: Enable your repository (toggle ON)</strong></p>
 <ul><li>Go to <strong>Settings → GitHub</strong> in Zenodo Sandbox</li>
 <li>Find your repository in the list</li>
 <li>Toggle the switch to <strong>ON</strong> (green)</li>
 <li>This tells Zenodo to watch for new releases</li>
-</ul><p><strong>Step 3: Create GitHub Release (tag v1.0.0)</strong></p>
+</ul><figure><img src="fig/zenodo-github-toggle.png" alt="Zenodo Sandbox GitHub repositories list with the software-demo row highlighted and its toggle switched ON." class="figure mx-auto d-block"><div class="figcaption">In Zenodo Sandbox under <strong>Settings →
+GitHub</strong>, find your repository and flip its switch to ON so
+Zenodo archives each new release.</div>
+</figure><p><strong>Step 3: Create GitHub Release (tag v0.1.0)</strong></p>
 <ul><li>Go to your GitHub repository</li>
 <li>Click <strong>Releases → Draft a new release</strong>
 </li>
-<li>Create a tag: <code>v1.0.0</code>
+<li>Create a tag: <code>v0.1.0</code>
 </li>
 <li>Add release notes describing what’s in this version</li>
 <li>Click <strong>Publish release</strong>
 </li>
-</ul><p><strong>Step 4: Zenodo auto-archives and mints DOI</strong></p>
+</ul><figure><img src="fig/draft-a-release.png" alt="GitHub's Draft a new release form with the tag selector, release title field, and release notes editor highlighted and numbered one through three." class="figure mx-auto d-block"><div class="figcaption">On GitHub’s “Draft a new release” form: choose
+or create a tag such as <code>v0.1.0</code>, add a release title,
+describe what’s in the release, then click <strong>Publish
+release</strong> (below the fold).</div>
+</figure><p><strong>Step 4: Zenodo auto-archives and mints DOI</strong></p>
 <ul><li>Zenodo automatically detects your new release</li>
 <li>Creates an archived snapshot</li>
 <li>Assigns a permanent DOI</li>
@@ -622,14 +632,30 @@ setup</p>
 </div>
 </div>
 </div>
-<div id="supporting-others" class="callout">
+<div id="callout5" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
 <span class="callout-header">Callout</span>
-<div id="supporting-others" class="callout-inner">
-<h3 class="callout-title">Supporting others</h3>
+<div class="callout-inner">
 <div class="callout-content">
+<div id="check-your-work" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<span class="callout-header">Callout</span>
+<div id="check-your-work" class="callout-inner">
+<h3 class="callout-title">Check your work</h3>
+<div class="callout-content">
+<p>Compare your fork against the <a href="https://github.com/UC-OSPO-Network/software-demo/tree/after-release" class="external-link"><code>after-release</code>
+reference branch</a> on the <a href="https://github.com/UC-OSPO-Network/software-demo" class="external-link">demo
+repository</a>. It shows the target state after this episode: a tagged
+release and a <code>CITATION.cff</code> updated with the DOI.</p>
+</div>
+</div>
+</div>
+<div class="section level3">
+<h3 id="supporting-others">Supporting others<a class="anchor" aria-label="anchor" href="#supporting-others"></a></h3>
 <p>The question researchers actually bring you here is “which DOI do I
 put in my paper?” Zenodo mints two for every project, and the
 distinction is worth knowing cold. Librarians already have this
@@ -654,6 +680,7 @@ metadata.</p>
 </div>
 </div>
 </div>
+</div>
 <p><strong>Even if GitHub disappears, your DOI still works.</strong> The
 GitHub-Zenodo link works like deposit: each release is archived at CERN,
 independent of GitHub’s fate. The workshop can burn down; the deposited
@@ -663,7 +690,7 @@ copy survives.</p>
 <button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler1" aria-expanded="false" aria-controls="collapseSpoiler1">
   <h3 class="accordion-header" id="headingSpoiler1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> Going further: Software Heritage </h3>
 </button>
-<div id="collapseSpoiler1" class="accordion-collapse collapse" aria-labelledby="headingSpoiler1" data-bs-parent="#accordionSpoiler1">
+<div id="collapseSpoiler1" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler1" aria-labelledby="headingSpoiler1">
 <div class="accordion-body">
 <p>Zenodo archives a snapshot of your code at release time. <a href="https://www.softwareheritage.org/" class="external-link">Software Heritage</a> goes
 further: it continuously crawls GitHub, GitLab, and other forges and
@@ -716,7 +743,7 @@ rather than the whole project?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution3" aria-expanded="false" aria-controls="collapseSolution3">
   <h4 class="accordion-header" id="headingSolution3"> Show me the solution </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
 <div class="accordion-body">
 <p>Versioned DOIs:</p>
 <ul><li>support reproducibility by identifying an exact snapshot<br></li>
@@ -757,6 +784,7 @@ inside code blocks or to autolinks written as <https://example.org>.
 -->
 <!-- UC OSPO / UC resources -->
 <!-- General open-source references -->
+<!-- Demo repository and its view-only reference branches (the per-episode "answer keys") -->
 </div>
 </section></div> <!-- / div.lesson-content -->
     </main><!-- / main#main-content.main-content --><nav class="bottom-pagination mx-md-4" aria-label="Previous and Next Chapter Bottom"><div class="d-block d-sm-block d-md-none">
