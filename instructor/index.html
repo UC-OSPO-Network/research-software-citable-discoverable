@@ -334,19 +334,23 @@ Discoverable Research Software”: six hexagons in two groups. Blue
 (Discoverable): Metadata and Topics, README and Docs, and Public
 Archive.</div>
 </figure><section><h2 class="section-heading" id="about-this-lesson">About This Lesson<a class="anchor" aria-label="anchor" href="#about-this-lesson"></a></h2>
-<hr class="half-width"><p>This lesson teaches practical steps to make your software
-<strong>Findable, Accessible, Interoperable, and Reusable
-(FAIR)</strong>. You’ll learn high-impact, low-effort practices such as
-adding a CITATION.cff file, choosing an open-source license, minting a
-DOI, and improving metadata for discoverability, plus an optional
-episode on documenting dependencies with pixi.</p>
-<p>The lesson is intended for researchers who write code as part of
-their work but do not necessarily identify as software developers.
-Graduate students, research staff, and librarians who support research
-software will also find the material useful.</p>
-<p>Learners will make small, meaningful improvements to an existing
-GitHub repository and see how these practices increase attribution,
-transparency, and research impact.</p>
+<hr class="half-width"><p>This lesson teaches the practical steps that make research software
+<strong>citable, discoverable, and reusable</strong>: choosing an
+open-source license, adding a <code>CITATION.cff</code> file, minting a
+DOI with a versioned release, and improving the metadata that helps
+people find and credit the software. An optional final episode covers
+reproducible environments with pixi. Together these steps map to the
+FAIR principles for research software (FAIR4RS).</p>
+<p>It is written first for <strong>library, OSPO, and
+scholarly-communications staff</strong> and other research-support
+professionals who help researchers make software count as a scholarly
+output. Each episode also carries a “Supporting others” thread for that
+consulting work. Researchers who write code and want to make it citable
+themselves will find the same steps apply directly to their own
+repositories.</p>
+<p>Learners work in the browser, making small, high-value improvements
+to a real GitHub repository, and leave with both a citable project and a
+reusable way to advise others.</p>
 <div id="how-this-lesson-works" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
@@ -686,17 +690,17 @@ a local clone of your fork.</p>
 </button>
 </div>
 </nav><div id="nav-tabContent-1" class="tab-content">
-<div id="nav-tabpanel-1-Windows" class="tab-pane show active" role="tabpanel" aria-labelledby="nav-tab-1-Windows">
+<div id="nav-tabpanel-1-Windows" class="tab-pane show active" aria-labelledby="nav-tab-1-Windows" role="tabpanel">
 <p>Download and run <strong>Git for Windows</strong> from <a href="https://git-scm.com/downloads/win" class="external-link uri">https://git-scm.com/downloads/win</a> and accept the default
 options. This also installs <strong>Git Bash</strong>, a terminal you
 can use for the remaining steps.</p>
 </div>
-<div id="nav-tabpanel-1-macOS" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-1-macOS">
+<div id="nav-tabpanel-1-macOS" class="tab-pane" aria-labelledby="nav-tab-1-macOS" role="tabpanel">
 <p>Git is usually already installed. Open <strong>Terminal</strong> and
 run <code>git --version</code>. If you are prompted to install the
 Command Line Developer Tools, accept. Otherwise install it with <a href="https://brew.sh" class="external-link">Homebrew</a>: <code>brew install git</code>.</p>
 </div>
-<div id="nav-tabpanel-1-Linux" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-1-Linux">
+<div id="nav-tabpanel-1-Linux" class="tab-pane" aria-labelledby="nav-tab-1-Linux" role="tabpanel">
 <p>Git is usually already installed. If not, use your package manager,
 for example <code>sudo apt install git</code> (Debian/Ubuntu) or
 <code>sudo dnf install git</code> (Fedora).</p>
@@ -726,7 +730,7 @@ for example <code>sudo apt install git</code> (Debian/Ubuntu) or
 </button>
 </div>
 </nav><div id="nav-tabContent-2" class="tab-content">
-<div id="nav-tabpanel-2-Windows" class="tab-pane show active" role="tabpanel" aria-labelledby="nav-tab-2-Windows">
+<div id="nav-tabpanel-2-Windows" class="tab-pane show active" aria-labelledby="nav-tab-2-Windows" role="tabpanel">
 <p>In <strong>PowerShell</strong>, run:</p>
 <div class="codewrapper sourceCode" id="cb1">
 <h3 class="code-label">POWERSHELL<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -736,7 +740,7 @@ for example <code>sudo apt install git</code> (Debian/Ubuntu) or
 <p>Then close and reopen your terminal so <code>pixi</code> is on your
 PATH.</p>
 </div>
-<div id="nav-tabpanel-2-macOS" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-2-macOS">
+<div id="nav-tabpanel-2-macOS" class="tab-pane" aria-labelledby="nav-tab-2-macOS" role="tabpanel">
 <p>In <strong>Terminal</strong>, run:</p>
 <div class="codewrapper sourceCode" id="cb2">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -745,7 +749,7 @@ PATH.</p>
 </div>
 <p>Then close and reopen your terminal.</p>
 </div>
-<div id="nav-tabpanel-2-Linux" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-2-Linux">
+<div id="nav-tabpanel-2-Linux" class="tab-pane" aria-labelledby="nav-tab-2-Linux" role="tabpanel">
 <p>In a terminal, run:</p>
 <div class="codewrapper sourceCode" id="cb3">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
