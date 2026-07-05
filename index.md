@@ -12,11 +12,11 @@ style='padding: 2%; max-width: 760px'}
 
 ## About This Lesson
 
-This lesson teaches practical steps to make your software **Findable, Accessible, Interoperable, and Reusable (FAIR)**. You'll learn high-impact, low-effort practices such as adding a CITATION.cff file, choosing an open-source license, minting a DOI, and improving metadata for discoverability, plus an optional episode on documenting dependencies with pixi.
+This lesson teaches the practical steps that make research software **citable, discoverable, and reusable**: choosing an open-source license, adding a `CITATION.cff` file, minting a DOI with a versioned release, and improving the metadata that helps people find and credit the software. An optional final episode covers reproducible environments with pixi. Together these steps map to the FAIR principles for research software (FAIR4RS).
 
-The lesson is intended for researchers who write code as part of their work but do not necessarily identify as software developers. Graduate students, research staff, and librarians who support research software will also find the material useful.
+It is written first for **library, OSPO, and scholarly-communications staff** and other research-support professionals who help researchers make software count as a scholarly output. Each episode also carries a "Supporting others" thread for that consulting work. Researchers who write code and want to make it citable themselves will find the same steps apply directly to their own repositories.
 
-Learners will make small, meaningful improvements to an existing GitHub repository and see how these practices increase attribution, transparency, and research impact.
+Learners work in the browser, making small, high-value improvements to a real GitHub repository, and leave with both a citable project and a reusable way to advise others.
 
 ::::::::::::::::::::::::::::::::::::::::: callout
 
