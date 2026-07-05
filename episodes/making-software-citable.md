@@ -97,7 +97,7 @@ It is the snapshot that others can cite.
 4. Add release notes summarizing changes.  
 5. Publish the release.
 
-Your `CITATION.cff` file will automatically reference this tagged version unless you specify otherwise.
+Creating a release does not change your `CITATION.cff` file. GitHub builds the "Cite this repository" panel from the file on your default branch. After you publish a release, update the `version` and `date-released` fields in `CITATION.cff` if you want the citation to point at that specific release.
 
 ::::::::::::::::::::::::::::::::::::: callout
 
@@ -214,6 +214,23 @@ doi: 10.5281/zenodo.123456
 ```
 
 **Result:** You now have LICENSE, CITATION.cff, and DOI.
+
+::::::::::::::::::::::::::::::::::::: caution
+
+### What the DOI actually archived
+
+Zenodo archived the repository **as it existed the moment you clicked Publish release**. That snapshot is fixed. The `CITATION.cff` edit you just made in Step 6, and any later README or metadata changes, update the live GitHub repository and will be captured by your *next* release, not the one already archived. If you want the archived snapshot itself to contain the DOI, make a new release after updating the file.
+
+::::::::::::::::::::::::::::::::::::::::::::::::
+
+::::::::::::::::::::::::::::::::::::: callout
+
+### Practice safely, and watch org permissions
+
+- **Sandbox DOIs are for practice only.** Do not put a `10.5072/...` sandbox DOI in a paper, grant report, production README, or a real `CITATION.cff`. Real Zenodo records (and their DOIs) are permanent and cannot be deleted.
+- **If Zenodo cannot see your repository:** it only lists repos you have admin rights on. For an organization repo, an org owner may need to approve Zenodo's access first. For the exercise, forking under your personal account avoids this entirely.
+
+::::::::::::::::::::::::::::::::::::::::::::::::
 
 ::::::::::::::::::::::::::::::::::::: callout
 

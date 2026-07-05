@@ -90,8 +90,9 @@ In your fork of `software-demo`:
 1. Click **Add file → Create new file**.
 2. Name the file exactly `CITATION.cff` (it must live in the repository root, and the name is case-sensitive). As soon as you do, GitHub recognizes it and shows a banner with an **Insert example** button.
 3. Click **Insert example**. GitHub drops a valid, ready-to-edit template into the editor.
-4. Edit the placeholders: replace `YOUR_NAME_HERE`, add real **ORCIDs**, and set the `title`, `version`, `date-released`, and `url` to match your repository.
-5. Click **Commit changes…** and commit to your `main` branch.
+4. Edit the placeholders: replace `YOUR_NAME_HERE`, add real **ORCIDs**, and set the `title` and `url` to match your repository.
+5. **Delete the `doi` line** (you do not have a DOI yet, you will add it in the next episode). Delete `version` and `date-released` too if you have not made a release; otherwise set them to match.
+6. Click **Commit changes…** and commit to your `main` branch.
 
 ![Name a new file `CITATION.cff`, click **Insert example** to drop in GitHub's template, edit the placeholder names and ORCIDs, then commit to `main`.](fig/create-citation-cff.png){alt="GitHub's create-new-file editor with the filename CITATION.cff, the Insert example button, the template in the edit pane, and the Commit changes button all highlighted and numbered one through four."}
 
@@ -138,11 +139,12 @@ authors:
   - family-names: "Padilla"
     given-names: "Karla"
 version: "0.1.0"
-doi: 10.5072/zenodo.123456
 date-released: 2026-02-01
 url: "https://github.com/UC-OSPO-Network/software-demo"
 repository-code: "https://github.com/UC-OSPO-Network/software-demo"
 ```
+
+There is deliberately **no `doi` field yet**: you do not have one until you mint it in the next episode. Once you create a release and Zenodo assigns a DOI, you will come back and add a `doi:` line. If your project has no tagged version either, you can omit `version` and `date-released` for now and add them at release time.
 
 **Once you commit it to the default branch, GitHub adds a "Cite this repository" button automatically.**
 
@@ -216,6 +218,27 @@ After you commit the file, GitHub:
 ![Once `CITATION.cff` is on the default branch, GitHub adds a **Cite this repository** link to the About sidebar that opens ready-made APA and BibTeX citations.](fig/cite-this-repository.png){alt="A GitHub repository sidebar with the 'Cite this repository' link highlighted and its citation panel open, showing APA and BibTeX tabs."}
 
 This feature works even without a DOI.
+
+**Text-only check:** after you commit `CITATION.cff`, refresh the repository page. The About sidebar should now show a **"Cite this repository"** link.
+
+::::::::::::::::::::::::::::::::::::: challenge
+
+## Challenge: The button isn't showing
+
+A researcher tells you they added a `CITATION.cff` file but GitHub still isn't showing the "Cite this repository" link. Name the things you would check.
+
+:::::::::::::::::::::::: solution
+
+Check, in order:
+
+1. **Filename and location** — is it named exactly `CITATION.cff` (case-sensitive) and in the repository **root**, not a subfolder?
+2. **Branch** — is it committed to the **default branch**? GitHub only reads the file from the default branch.
+3. **Valid YAML** — does the file parse? A stray indentation or missing quote stops GitHub from rendering the panel. cffinit validates for you.
+
+This three-question triage is exactly the kind of quick diagnostic you will run in a consultation.
+
+:::::::::::::::::::::::::::::::::
+::::::::::::::::::::::::::::::::::::::::::::::::
 
 ::::::::::::::::::::::::::::::::::::: callout
 

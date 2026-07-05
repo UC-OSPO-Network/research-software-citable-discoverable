@@ -95,6 +95,12 @@ The UC system does **not recommend GPL 3.0** for university-owned software due t
 
 ## How to choose a license
 
+:::::::::::::::::::::::::::::::::::::::::::::::::::: instructor
+
+The decision guide below and the license references in this episode center UC policy and the UC OSPO guidance. For a non-UC workshop, swap in your own institution's license guidance and name the local office that answers ownership questions (usually a technology transfer or research office) in place of the UC pointers.
+
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
 Five "low-risk" licenses are suitable for most research projects. Here's a decision guide:
 
 ``` mermaid
@@ -203,13 +209,13 @@ We will add the BSD 3-Clause license to your demo repository:
 
 1. Navigate to your repository on GitHub.
 2. Click **Add file** → **Create new file**.
-3. Name it `LICENSE` (or `LICENSE.txt`).
+3. Name it exactly `LICENSE` (no file extension).
 4. Click **Choose a license template** and select **BSD 3-Clause License**.
 5. Update the copyright holder to reflect who owns the software. At UC campuses this is `The Regents of the University of California`; at other institutions check with your Tech Transfer office. *(If this is a personal project, use your own name.)*
 6. Update the year to 2026.
 7. Commit the file to your `main` branch.
 
-![Name the new file `LICENSE.md`, then click **Choose a license template** to insert the full BSD 3-Clause text.](fig/create-new-file.png){alt="GitHub's create-new-file page in the software-demo repository, with the filename field set to LICENSE.md and the 'Choose a license template' button both highlighted."}
+![Name the new file `LICENSE`, then click **Choose a license template** to insert the full BSD 3-Clause text.](fig/create-new-file.png){alt="GitHub's create-new-file page in the software-demo repository, with the filename field set to LICENSE and the 'Choose a license template' button both highlighted."}
 
 **Verify:** Does your repository now display the "BSD-3-Clause" license badge in the sidebar?
 
@@ -224,7 +230,7 @@ Copyright (c) 2026, The Regents of the University of California
 All rights reserved.
 ```
 
-If the badge doesn't appear, ensure the file is in the root directory and named exactly `LICENSE` or `LICENSE.txt`.
+If the badge doesn't appear, ensure the file is in the root directory and named exactly `LICENSE`.
 
 :::::::::::::::::::::::::::::::::
 ::::::::::::::::::::::::::::::::

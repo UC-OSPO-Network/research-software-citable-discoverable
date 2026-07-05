@@ -232,6 +232,14 @@ When you deposit software on Zenodo, the record flows into:
 
 What this means practically: the metadata you put into your Zenodo record is the metadata that librarians and discovery systems see. Thin metadata (no description, no keywords, no author ORCIDs) limits findability even if the DOI is valid.
 
+::::::::::::::::::::::::::::::::::::: caution
+
+### `.zenodo.json` overrides `CITATION.cff`
+
+If a repository contains a `.zenodo.json` file, Zenodo uses **that** file for the metadata of a GitHub-archived release and ignores `CITATION.cff`. The two files can drift apart, so if you add a `.zenodo.json` (some projects do, for richer Zenodo fields), keep the authors, title, and keywords consistent with your `CITATION.cff`, or you will publish two different citation records for the same software.
+
+::::::::::::::::::::::::::::::::::::::::::::::::
+
 Add or refine:
 
 - authors + ORCIDs  
