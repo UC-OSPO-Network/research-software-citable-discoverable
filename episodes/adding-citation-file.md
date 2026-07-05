@@ -83,6 +83,14 @@ If you have ever edited a repository record, filled in a Dublin Core field, or t
 
 You will do this entirely in GitHub's web interface, in your fork. No terminal required. GitHub has this built in: name a new file `CITATION.cff` and it hands you a starter template to edit.
 
+::::::::::::::::::::::::::::::::::::: instructor
+
+### Common stall: perfecting authorship
+
+Learners may try to perfect authorship, contributor roles, or author order. For the demo, use the provided values and keep moving. For real projects, authorship order is a PI/team decision; the consultant can explain the fields and options but should not decide credit. If someone asks "who counts as an author?", flag it as a team conversation, not a metadata fix.
+
+::::::::::::::::::::::::::::::::::::::::::::::::
+
 ### Create the file on GitHub
 
 In your fork of `software-demo`:
@@ -113,6 +121,14 @@ url: "https://github.com/YOUR-USERNAME/your-repository-name"
 ```
 
 ::::::::::::::::::::::::::::::::::::: callout
+
+::::::::::::::::::::::::::::::::::::: instructor
+
+### YAML recovery path
+
+If more than a few learners hit YAML indentation errors, switch the whole room to cffinit rather than debugging individual whitespace mistakes. The goal is citation metadata, not YAML mastery. cffinit validates as they type and produces a file they can paste.
+
+::::::::::::::::::::::::::::::::::::::::::::::::
 
 ### Prefer a guided form? Use cffinit
 
@@ -195,6 +211,14 @@ Leave out `preferred-citation` if you don't have a published article. You can ad
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 ::::::::::::::::::::::::::::::::::::: challenge
+
+::::::::::::::::::::::::::::::::::::: instructor
+
+### Predict, then reveal
+
+Before learners refresh GitHub after committing `CITATION.cff`, ask them to predict what GitHub will add. Then reveal the "Cite this repository" panel. This keeps GitHub's helper behavior visible as a platform pattern rather than a surprise, and sets up the "GitHub recognizes certain filenames" idea later.
+
+::::::::::::::::::::::::::::::::::::::::::::::::
 
 ### Predict: what will GitHub do?
 

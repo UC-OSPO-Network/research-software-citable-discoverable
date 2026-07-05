@@ -99,6 +99,8 @@ The UC system does **not recommend GPL 3.0** for university-owned software due t
 
 The decision guide below and the license references in this episode center UC policy and the UC OSPO guidance. For a non-UC workshop, swap in your own institution's license guidance and name the local office that answers ownership questions (usually a technology transfer or research office) in place of the UC pointers.
 
+**Timebox the license discussion.** The teaching target is not license philosophy; it is recognizing no-license risk, choosing a low-risk default for the demo, and knowing when to refer ownership or policy questions to Tech Transfer or the local equivalent. If the room starts debating MIT vs BSD, name the campus default and move on.
+
 ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
 Five "low-risk" licenses are suitable for most research projects. Here's a decision guide:
@@ -198,6 +200,14 @@ Refer rather than answer when:
 - Someone wants to **relicense or remove a license** on code that already has contributors.
 
 What you *can* own confidently: knowing your campus default (BSD-3-Clause at UC), knowing the approved-license list exists, and making sure the ownership question gets asked before code goes public. The most useful thing you do here is often a warm handoff, not a recommendation.
+
+::::::::::::::::::::::::::::::::::::::::::::::::
+
+::::::::::::::::::::::::::::::::::::: instructor
+
+### Expected UI state: the license template chooser
+
+When the filename is `LICENSE`, GitHub should offer a license template chooser ("Choose a license template"). If learners do not see it, check the filename, that they are creating the file in the repository root, and a browser refresh before troubleshooting anything more complex.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 

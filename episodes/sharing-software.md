@@ -67,6 +67,14 @@ Use the `after-*` reference branches only to check your work, never to build on.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
+::::::::::::::::::::::::::::::::::::: instructor
+
+### Confirm everyone is in their own fork
+
+Before learners begin, ask everyone to confirm the top-left repository path says `THEIR-USERNAME/software-demo`, not `UC-OSPO-Network/software-demo`. Have helpers check Zoom/chat/room for anyone still on the upstream repository. Do not continue until most learners are in their own fork.
+
+::::::::::::::::::::::::::::::::::::::::::::::::
+
 Open your fork and look at the **"before" state** on the `main` branch:
 
 ```bash
@@ -76,6 +84,14 @@ software-demo/
 └── src/
     └── analysis.py
 ```
+
+::::::::::::::::::::::::::::::::::::: instructor
+
+### First status check
+
+Ask learners to confirm they can see exactly `README.md`, `requirements.txt`, and `src/analysis.py` in their fork. This is the best early moment to catch learners who are on the wrong repository, wrong branch, or not signed in.
+
+::::::::::::::::::::::::::::::::::::::::::::::::
 
 This repository intentionally *lacks* many elements of good research software practice.  
 By the end of the lesson, it will include licensing, citation metadata, improved discoverability information, and versioning.
