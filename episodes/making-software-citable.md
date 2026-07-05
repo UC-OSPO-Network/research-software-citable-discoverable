@@ -188,8 +188,7 @@ Zenodo detects the release, downloads and archives a snapshot of the repository 
 - Add release notes describing what's in this version
 - Click **Publish release**
 
-<!-- TODO screenshot: GitHub "Draft a new release" form with tag v0.1.0, release title, and notes filled in. Save as fig/draft-a-release.png, then add:
-![Fill in a tag such as `v0.1.0`, add a title and release notes, then click **Publish release**.](fig/draft-a-release.png){alt="GitHub's Draft a new release form with a version tag, release title, and notes filled in."} -->
+![On GitHub's "Draft a new release" form: choose or create a tag such as `v0.1.0`, add a release title, describe what's in the release, then click **Publish release** (below the fold).](fig/draft-a-release.png){alt="GitHub's Draft a new release form with the tag selector, release title field, and release notes editor highlighted and numbered one through three."}
 
 
 **Step 4: Zenodo auto-archives and mints DOI**
