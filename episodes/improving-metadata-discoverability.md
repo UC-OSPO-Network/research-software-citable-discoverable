@@ -254,7 +254,7 @@ Some funders (NSF, NIH, Wellcome Trust) have specific deposit requirements. Chec
 
 When you deposit software on Zenodo, the record flows into:
 
-- **DataCite**: the DOI registration agency for research data and software; DataCite records are harvested by library catalogs, institutional discovery systems, and tools like [OpenAlex](https://openalex.org/) and [Scholix](http://www.scholix.org/)
+- **DataCite**: the DOI registration agency for research data and software; DataCite records are harvested by library catalogs, institutional discovery systems, and tools like [OpenAlex](https://openalex.org/) and [Scholix](https://www.scholix.org/)
 - **Google Scholar**: picks up Zenodo records with structured metadata
 - **Library catalogs**: many discovery layers (EBSCO, Ex Libris Primo, OCLC WorldCat) harvest DataCite metadata, meaning your software can appear in a library search alongside journal articles
 - **Domain repositories** that harvest DOIs
