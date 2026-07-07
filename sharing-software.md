@@ -20,7 +20,7 @@ exercises: 10
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
-## Introduction
+## Present, but not yet usable
 
 Every archivist knows the unprocessed accession: boxes that made it into the building but not into the collection, technically held, practically invisible. Most research software on GitHub is in exactly that state. It is public, which is not the same as shared. No license, no citation information, no description a stranger could act on. An open repository with none of those is like leaving the reading room unlocked and calling it access: people can technically get in, and nothing helps them once they do.
 
