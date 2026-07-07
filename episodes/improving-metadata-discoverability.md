@@ -20,7 +20,7 @@ exercises: 10
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
-## Introduction
+## Findability comes from description
 
 A Zenodo record with a bare title and no keywords is a catalog record with no subject headings: retrievable if you already know it exists, invisible if you don't. Most research software sits behind exactly that kind of record. This episode is the one where the lesson lands fully inside a library audience's expertise, because making things findable through description is what libraries do. The systems are GitHub topics, Zenodo fields, and a README instead of a catalog, but the judgment, what would a seeker search for and does this record contain it, is unchanged.
 
@@ -254,7 +254,7 @@ Some funders (NSF, NIH, Wellcome Trust) have specific deposit requirements. Chec
 
 When you deposit software on Zenodo, the record flows into:
 
-- **DataCite**: the DOI registration agency for research data and software; DataCite records are harvested by library catalogs, institutional discovery systems, and tools like [OpenAlex](https://openalex.org/) and [Scholix](http://www.scholix.org/)
+- **DataCite**: the DOI registration agency for research data and software; DataCite records are harvested by library catalogs, institutional discovery systems, and tools like [OpenAlex](https://openalex.org/) and [Scholix](https://www.scholix.org/)
 - **Google Scholar**: picks up Zenodo records with structured metadata
 - **Library catalogs**: many discovery layers (EBSCO, Ex Libris Primo, OCLC WorldCat) harvest DataCite metadata, meaning your software can appear in a library search alongside journal articles
 - **Domain repositories** that harvest DOIs
