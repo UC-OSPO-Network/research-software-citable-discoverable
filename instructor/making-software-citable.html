@@ -245,7 +245,7 @@
 
     <div id="flush-collapsecurrent" class="accordion-collapse collapse show" data-bs-parent="#accordionFlushcurrent">
       <div class="accordion-body">
-        <ul><li><a href="#introduction">Introduction</a></li>
+        <ul><li><a href="#why-a-repository-is-not-an-archive">Why a repository is not an archive</a></li>
 <li><a href="#what-makes-software-citable">What Makes Software Citable?</a></li>
 <li><a href="#create-a-release-in-github">Create a Release in GitHub</a></li>
 <li><a href="#minting-a-doi-with-zenodo-sandbox">Minting a DOI with Zenodo Sandbox</a></li>
@@ -340,7 +340,7 @@
       </div>
     </nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Making Your Software Citable</h1>
-        <p>Last updated on 2026-07-05 |
+        <p>Last updated on 2026-07-07 |
 
         <a href="https://github.com/UC-OSPO-Network/research-software-citable-discoverable/edit/main/episodes/making-software-citable.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -382,7 +382,7 @@ concept, belongs in a given citation.</li>
 </div>
 </div>
 </div>
-<section><h2 class="section-heading" id="introduction">Introduction<a class="anchor" aria-label="anchor" href="#introduction"></a></h2>
+<section><h2 class="section-heading" id="why-a-repository-is-not-an-archive">Why a repository is not an archive<a class="anchor" aria-label="anchor" href="#why-a-repository-is-not-an-archive"></a></h2>
 <hr class="half-width"><p>A GitHub repository is a workshop, not an archive. The code changes
 daily, the URL can break, and “the version we used” means nothing
 without a marker. This episode adds the two things scholarly
@@ -694,28 +694,26 @@ they can restate it, they have the key mental model of the episode.</p>
 </div>
 </div>
 </div>
-<div id="practice-safely-and-watch-org-permissions" class="callout">
+<div id="if-zenodo-cant-see-your-repository" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
 <span class="callout-header">Callout</span>
-<div id="practice-safely-and-watch-org-permissions" class="callout-inner">
-<h3 class="callout-title">Practice safely, and watch org
-permissions</h3>
+<div id="if-zenodo-cant-see-your-repository" class="callout-inner">
+<h3 class="callout-title">If Zenodo can’t see your repository</h3>
 <div class="callout-content">
-<ul><li>
-<strong>Sandbox DOIs are for practice only.</strong> Do not put a
-<code>10.5072/...</code> sandbox DOI in a paper, grant report,
-production README, or a real <code>CITATION.cff</code>. Real Zenodo
-records (and their DOIs) are permanent and cannot be deleted.</li>
-<li>
-<strong>If Zenodo cannot see your repository:</strong> it only lists
-repos you have admin rights on. For an organization repo, an org owner
-may need to approve Zenodo’s access first. For the exercise, forking
-under your personal account avoids this entirely.</li>
-</ul></div>
+<p>Zenodo only lists repositories you have admin rights on. For an
+organization repo, an org owner may need to approve Zenodo’s access
+first; for this exercise, forking under your personal account avoids the
+problem entirely. (Keep the sandbox rule in mind too: a
+<code>10.5072/...</code> sandbox DOI is for practice, never for a paper
+or a real <code>CITATION.cff</code>.)</p>
 </div>
 </div>
+</div>
+<p>With the release published and the DOI minted, the citable-software
+chain is complete. Here is how the pieces you have added map onto
+FAIR:</p>
 <div id="now-you-have-everything" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
@@ -724,21 +722,17 @@ under your personal account avoids this entirely.</li>
 <div id="now-you-have-everything" class="callout-inner">
 <h3 class="callout-title">Now You Have Everything</h3>
 <div class="callout-content">
-<p>✅ <strong>F - Findable:</strong> Added DOI, CITATION.cff, rich
-metadata ✅ <strong>A - Accessible:</strong> Public GitHub, archived on
-Zenodo ✅ <strong>I - Interoperable:</strong> Standard formats (YAML,
-CFF) ✅ <strong>R - Reusable:</strong> LICENSE (BSD-3), README with
-setup</p>
+<ul><li>✅ <strong>F - Findable:</strong> Added DOI, CITATION.cff, rich
+metadata</li>
+<li>✅ <strong>A - Accessible:</strong> Public GitHub, archived on
+Zenodo</li>
+<li>✅ <strong>I - Interoperable:</strong> Standard formats (YAML,
+CFF)</li>
+<li>✅ <strong>R - Reusable:</strong> LICENSE (BSD-3), README with
+setup</li>
+</ul></div>
 </div>
 </div>
-</div>
-<div id="callout6" class="callout">
-<div class="callout-square">
-<i class="callout-icon" data-feather="bell"></i>
-</div>
-<span class="callout-header">Callout</span>
-<div class="callout-inner">
-<div class="callout-content">
 <div id="check-your-work" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
@@ -754,13 +748,16 @@ release and a <code>CITATION.cff</code> updated with the DOI.</p>
 </div>
 </div>
 </div>
+<p>With the DOI minted, one practical question remains, and it is the
+one researchers will bring straight to you: <em>which</em> DOI do they
+actually cite?</p>
+</div>
 <div class="section level3">
-<h3 id="supporting-others">Supporting others<a class="anchor" aria-label="anchor" href="#supporting-others"></a></h3>
-<p>The question researchers actually bring you here is “which DOI do I
-put in my paper?” Zenodo mints two for every project, and the
-distinction is worth knowing cold. Librarians already have this
-distinction: it is the work versus the edition, “cite the exact edition
-you quoted” versus “refer to the work as a whole.”</p>
+<h3 id="supporting-others-which-doi-do-i-cite">Supporting others: which DOI do I cite?<a class="anchor" aria-label="anchor" href="#supporting-others-which-doi-do-i-cite"></a></h3>
+<p>Zenodo mints two DOIs for every project, and the distinction is worth
+knowing cold. Librarians already have it: it is the work versus the
+edition, “cite the exact edition you quoted” versus “refer to the work
+as a whole.”</p>
 <ul><li>
 <strong>Version DOI</strong> points to one exact release. Cite this
 when the precise software state matters for reproducibility, such as the
@@ -769,7 +766,13 @@ version that produced a paper’s results.</li>
 <strong>Concept DOI</strong> points to the project across all
 versions and always resolves to the latest. Cite this when you want to
 refer to the software in general.</li>
-</ul><div id="accordionInstructor4" class="accordion instructor-note accordion-flush">
+</ul><p>A safe default to teach: cite the <strong>version DOI</strong> in a
+methods section, and use the <strong>concept DOI</strong> in a README or
+project page. And if a repository ever has both a
+<code>CITATION.cff</code> and a <code>.zenodo.json</code>, remember that
+Zenodo uses the <code>.zenodo.json</code> for the archived release
+metadata.</p>
+<div id="accordionInstructor4" class="accordion instructor-note accordion-flush">
 <div class="accordion-item">
 <button class="accordion-button instructor-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInstructor4" aria-expanded="false" aria-controls="collapseInstructor4">
   <h3 class="accordion-header" id="headingInstructor4">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="edit-2"></i></div> Debrief prompt for support-staff learners </h3>
@@ -787,20 +790,9 @@ to make.</p>
 </div>
 </div>
 </div>
-<p>A safe default to teach: cite the <strong>version DOI</strong> in a
-methods section, and use the <strong>concept DOI</strong> in a README or
-project page. Two more things worth flagging in a consultation: have
-people practice on <strong>sandbox.zenodo.org</strong> first, because
-real Zenodo records cannot be deleted; and if a repo has both a
-<code>CITATION.cff</code> and a <code>.zenodo.json</code>, Zenodo uses
-the <code>.zenodo.json</code> for the GitHub-archived release
-metadata.</p>
-</div>
-</div>
-</div>
-</div>
-<p><strong>Even if GitHub disappears, your DOI still works.</strong> The
-GitHub-Zenodo link works like deposit: each release is archived at CERN,
+<p>Whichever DOI you cite, durability is the whole point: <strong>even
+if GitHub disappears, your DOI still works.</strong> The GitHub-Zenodo
+link works like a deposit, so each release is archived at CERN,
 independent of GitHub’s fate. The workshop can burn down; the deposited
 copy survives.</p>
 <div id="accordionSpoiler1" class="accordion spoiler-accordion accordion-flush">
@@ -837,19 +829,6 @@ to trigger immediate archival</li>
 </div>
 <p>This approach is recommended in the 2026 <em>CODE Beyond FAIR</em>
 roadmap (Di Cosmo et al., <em>Scientific Data</em>).</p>
-</div>
-</div>
-</div>
-</div>
-<div id="accordionInstructor5" class="accordion instructor-note accordion-flush">
-<div class="accordion-item">
-<button class="accordion-button instructor-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInstructor5" aria-expanded="false" aria-controls="collapseInstructor5">
-  <h3 class="accordion-header" id="headingInstructor5">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="edit-2"></i></div> Instructor Note </h3>
-</button>
-<div id="collapseInstructor5" class="accordion-collapse collapse" data-bs-parent="#accordionInstructor5" aria-labelledby="headingInstructor5">
-<div class="accordion-body">
-<p><strong>Critical:</strong> Ensure learners use
-<strong>sandbox.zenodo.org</strong>. Real DOIs cannot be deleted.</p>
 </div>
 </div>
 </div>
@@ -976,7 +955,7 @@ inside code blocks or to autolinks written as <https://example.org>.
   "url": "https://UC-OSPO-Network.github.io/research-software-citable-discoverable/instructor/making-software-citable.html",
   "identifier": "https://UC-OSPO-Network.github.io/research-software-citable-discoverable/instructor/making-software-citable.html",
   "dateCreated": "2025-12-06",
-  "dateModified": "2026-07-05",
+  "dateModified": "2026-07-07",
   "datePublished": "2026-07-07"
 }
 
