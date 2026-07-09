@@ -737,7 +737,7 @@ What’s missing, and what would a proper software citation look like?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p>The script should be citable as a distinct research output. Without
 citation metadata or a DOI, the software contribution goes unrecognized
@@ -778,7 +778,7 @@ reuse.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <p>Common gaps include:</p>
 <ul>
@@ -1056,7 +1056,7 @@ work first?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <p>Useful elements commonly include:</p>
 <ul>
@@ -1126,7 +1126,7 @@ GitHub.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <p>Learners may observe:</p>
 <ul>
@@ -1182,7 +1182,7 @@ inside code blocks or to autolinks written as <https://example.org>.
 <!-- Demo repository and its view-only reference branches (the per-episode "answer keys") -->
 </section></section><section id="aio-open-source-license"><p>Content from <a href="open-source-license.html">Choosing an Open-Source License</a></p>
 <hr>
-<p>Last updated on 2026-07-05 |
+<p>Last updated on 2026-07-09 |
 
         <a href="https://github.com/UC-OSPO-Network/research-software-citable-discoverable/edit/main/episodes/open-source-license.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -1337,6 +1337,10 @@ Tech Transfer office about GPL 2.0 or alternatives.</p>
 <p>Five “low-risk” licenses are suitable for most research projects.
 Here’s a decision guide:</p>
 <pre class="mermaid"><code>graph TD
+    accTitle: License decision flowchart
+    accDescr {
+        Decision tree for choosing an open source license, starting from whether the project has special requirements, branching to BSD 3-Clause, MIT, Apache 2.0, ECL 2.0, or GPL depending on the need, and ending with a check with the campus Tech Transfer Office.
+    }
     Start[Starting a new UC research software project?] --&gt; Check{Do you have&lt;br/&gt;special requirements?}
 
     Check --&gt;|No special needs| BSD[Use BSD 3-Clause&lt;br/&gt;✓ Common research default&lt;br/&gt;✓ Simple and protective&lt;br/&gt;✓ Widely compatible]
@@ -1359,13 +1363,22 @@ Here’s a decision guide:</p>
     GPL2 --&gt; TTO
     GPL3 --&gt; TTO
 
-    style BSD fill:#90EE90
-    style MIT fill:#90EE90
-    style Apache fill:#90EE90
-    style ECL fill:#90EE90
-    style GPL2 fill:#FFFF99
-    style GPL3 fill:#FFB6C6
-    style TTO fill:#87CEEB</code></pre>
+    style Start fill:#f5f5f5,stroke:#333,color:#000
+    style Check fill:#f5f5f5,stroke:#333,color:#000
+    style Copyleft fill:#f5f5f5,stroke:#333,color:#000
+    style BSD fill:#90EE90,stroke:#333,color:#000
+    style MIT fill:#90EE90,stroke:#333,color:#000
+    style Apache fill:#90EE90,stroke:#333,color:#000
+    style ECL fill:#90EE90,stroke:#333,color:#000
+    style GPL2 fill:#FFFF99,stroke:#333,color:#000
+    style GPL3 fill:#FFB6C6,stroke:#333,color:#000
+    style TTO fill:#87CEEB,stroke:#333,color:#000</code></pre>
+<style>
+/* The site's global `p { color: ... }` rule overrides Mermaid's per-node
+   text color in both themes; force the label paragraphs to inherit the
+   color Mermaid already set on their parent .nodeLabel span instead. */
+.mermaid .nodeLabel p { color: inherit !important; }
+</style>
 <div class="section level3">
 <h3 id="quick-reference">Quick reference<a class="anchor" aria-label="anchor" href="#quick-reference"></a>
 </h3>
@@ -1421,7 +1434,7 @@ resources.</strong></p>
 <button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler1" aria-expanded="false" aria-controls="collapseSpoiler1">
   <h3 class="accordion-header" id="headingSpoiler1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> What about data and documentation? </h3>
 </button>
-<div id="collapseSpoiler1" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler1" aria-labelledby="headingSpoiler1">
+<div id="collapseSpoiler1" class="accordion-collapse collapse" aria-labelledby="headingSpoiler1" data-bs-parent="#accordionSpoiler1">
 <div class="accordion-body">
 <p>Software licenses (BSD, MIT, Apache) are written for <em>executable
 code</em>. If your repository also contains datasets, figures, or
@@ -1555,7 +1568,7 @@ click <strong>Choose a license template</strong> to insert the full BSD
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p>GitHub automatically detects the <code>LICENSE</code> file and
 displays it in the sidebar. Your file should look like this:</p>
@@ -1625,7 +1638,7 @@ with collaborators.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <p><strong>Scenario 1:</strong> BSD 3-Clause (UC’s default
 recommendation, maximum flexibility and adoption)</p>
@@ -2017,7 +2030,7 @@ repository’s GitHub page?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <p>GitHub parses the file and adds a <strong>“Cite this
 repository”</strong> button to the sidebar, offering ready-made
@@ -2063,7 +2076,7 @@ things you would check.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <p>Check, in order:</p>
 <ol style="list-style-type: decimal">
@@ -2134,7 +2147,7 @@ lesson).</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution3" aria-expanded="false" aria-controls="collapseSolution3">
   <h4 class="accordion-header" id="headingSolution3"> Show me the solution </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
 <div class="accordion-body">
 <p>Typical missing pieces include:</p>
 <ul>
@@ -2170,7 +2183,7 @@ lesson).</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution4" aria-expanded="false" aria-controls="collapseSolution4">
   <h4 class="accordion-header" id="headingSolution4"> Show me the solution </h4>
 </button>
-<div id="collapseSolution4" class="accordion-collapse collapse" aria-labelledby="headingSolution4" data-bs-parent="#accordionSolution4">
+<div id="collapseSolution4" class="accordion-collapse collapse" data-bs-parent="#accordionSolution4" aria-labelledby="headingSolution4">
 <div class="accordion-body">
 <p>A valid minimal example:</p>
 <div class="codewrapper sourceCode" id="cb4">
@@ -2219,7 +2232,7 @@ software that produced a specific paper’s results?</li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution5" aria-expanded="false" aria-controls="collapseSolution5">
   <h4 class="accordion-header" id="headingSolution5"> Show me the solution </h4>
 </button>
-<div id="collapseSolution5" class="accordion-collapse collapse" aria-labelledby="headingSolution5" data-bs-parent="#accordionSolution5">
+<div id="collapseSolution5" class="accordion-collapse collapse" data-bs-parent="#accordionSolution5" aria-labelledby="headingSolution5">
 <div class="accordion-body">
 <p>A <code>CITATION.cff</code> makes software citable <em>in
 principle</em>, but the citation is not yet <strong>durable</strong> or
@@ -2480,7 +2493,7 @@ this version?</li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p>Useful release notes include:</p>
 <ul>
@@ -2541,7 +2554,7 @@ you?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <p>Zenodo detects the release, downloads and archives a snapshot of the
 repository at that tag, and mints a permanent DOI for it. The archived
@@ -2729,7 +2742,7 @@ copy survives.</p>
 <button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler1" aria-expanded="false" aria-controls="collapseSpoiler1">
   <h3 class="accordion-header" id="headingSpoiler1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> Going further: Software Heritage </h3>
 </button>
-<div id="collapseSpoiler1" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler1" aria-labelledby="headingSpoiler1">
+<div id="collapseSpoiler1" class="accordion-collapse collapse" aria-labelledby="headingSpoiler1" data-bs-parent="#accordionSpoiler1">
 <div class="accordion-body">
 <p>Zenodo archives a snapshot of your code at release time. <a href="https://www.softwareheritage.org/" class="external-link">Software Heritage</a> goes
 further: it continuously crawls GitHub, GitLab, and other forges and
@@ -2783,7 +2796,7 @@ rather than the whole project?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution3" aria-expanded="false" aria-controls="collapseSolution3">
   <h4 class="accordion-header" id="headingSolution3"> Show me the solution </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
 <div class="accordion-body">
 <p>Versioned DOIs:</p>
 <ul>
@@ -3395,7 +3408,7 @@ discoverability.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p>Examples:</p>
 <ul>
@@ -3431,7 +3444,7 @@ metadata:</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <ol style="list-style-type: decimal">
 <li>Open your Zenodo record.<br>
@@ -3483,7 +3496,7 @@ active D. Rename the repository to something shorter and catchier</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution3" aria-expanded="false" aria-controls="collapseSolution3">
   <h4 class="accordion-header" id="headingSolution3"> Show me the solution </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
 <div class="accordion-body">
 <p><strong>B.</strong> Discovery happens through <em>description</em>,
 not access level or activity. Topics, keywords, and descriptions are
@@ -4149,7 +4162,7 @@ software more FAIR.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p>Examples:</p>
 <ul>
@@ -4254,7 +4267,7 @@ to hand to a colleague.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <p>There is no single right answer; the artifact is the point. A strong
 playbook names real contacts (not just “Tech Transfer” but the office
@@ -4442,8 +4455,8 @@ inside code blocks or to autolinks written as <https://example.org>.
   "url": "https://UC-OSPO-Network.github.io/research-software-citable-discoverable/aio.html",
   "identifier": "https://UC-OSPO-Network.github.io/research-software-citable-discoverable/aio.html",
   "dateCreated": "2025-12-06",
-  "dateModified": "2026-07-07",
-  "datePublished": "2026-07-07"
+  "dateModified": "2026-07-09",
+  "datePublished": "2026-07-09"
 }
 
   </script><script>

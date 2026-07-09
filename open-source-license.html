@@ -341,7 +341,7 @@
       </div>
     </nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Choosing an Open-Source License</h1>
-        <p>Last updated on 2026-07-05 |
+        <p>Last updated on 2026-07-09 |
 
         <a href="https://github.com/UC-OSPO-Network/research-software-citable-discoverable/edit/main/episodes/open-source-license.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -488,6 +488,10 @@ Tech Transfer office about GPL 2.0 or alternatives.</p>
 <hr class="half-width"><p>Five “low-risk” licenses are suitable for most research projects.
 Here’s a decision guide:</p>
 <pre class="mermaid"><code>graph TD
+    accTitle: License decision flowchart
+    accDescr {
+        Decision tree for choosing an open source license, starting from whether the project has special requirements, branching to BSD 3-Clause, MIT, Apache 2.0, ECL 2.0, or GPL depending on the need, and ending with a check with the campus Tech Transfer Office.
+    }
     Start[Starting a new UC research software project?] --&gt; Check{Do you have&lt;br/&gt;special requirements?}
 
     Check --&gt;|No special needs| BSD[Use BSD 3-Clause&lt;br/&gt;✓ Common research default&lt;br/&gt;✓ Simple and protective&lt;br/&gt;✓ Widely compatible]
@@ -510,14 +514,22 @@ Here’s a decision guide:</p>
     GPL2 --&gt; TTO
     GPL3 --&gt; TTO
 
-    style BSD fill:#90EE90
-    style MIT fill:#90EE90
-    style Apache fill:#90EE90
-    style ECL fill:#90EE90
-    style GPL2 fill:#FFFF99
-    style GPL3 fill:#FFB6C6
-    style TTO fill:#87CEEB</code></pre>
-<div class="section level3">
+    style Start fill:#f5f5f5,stroke:#333,color:#000
+    style Check fill:#f5f5f5,stroke:#333,color:#000
+    style Copyleft fill:#f5f5f5,stroke:#333,color:#000
+    style BSD fill:#90EE90,stroke:#333,color:#000
+    style MIT fill:#90EE90,stroke:#333,color:#000
+    style Apache fill:#90EE90,stroke:#333,color:#000
+    style ECL fill:#90EE90,stroke:#333,color:#000
+    style GPL2 fill:#FFFF99,stroke:#333,color:#000
+    style GPL3 fill:#FFB6C6,stroke:#333,color:#000
+    style TTO fill:#87CEEB,stroke:#333,color:#000</code></pre>
+<style>
+/* The site's global `p { color: ... }` rule overrides Mermaid's per-node
+   text color in both themes; force the label paragraphs to inherit the
+   color Mermaid already set on their parent .nodeLabel span instead. */
+.mermaid .nodeLabel p { color: inherit !important; }
+</style><div class="section level3">
 <h3 id="quick-reference">Quick reference<a class="anchor" aria-label="anchor" href="#quick-reference"></a></h3>
 <table style="width:100%;" class="table"><colgroup><col width="21%"><col width="36%"><col width="32%"><col width="9%"></colgroup><thead><tr><th>Your need</th>
 <th>Recommended license</th>
@@ -551,7 +563,7 @@ resources.</strong></p>
 <button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler1" aria-expanded="false" aria-controls="collapseSpoiler1">
   <h3 class="accordion-header" id="headingSpoiler1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> What about data and documentation? </h3>
 </button>
-<div id="collapseSpoiler1" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler1" aria-labelledby="headingSpoiler1">
+<div id="collapseSpoiler1" class="accordion-collapse collapse" aria-labelledby="headingSpoiler1" data-bs-parent="#accordionSpoiler1">
 <div class="accordion-body">
 <p>Software licenses (BSD, MIT, Apache) are written for <em>executable
 code</em>. If your repository also contains datasets, figures, or
@@ -677,7 +689,7 @@ click <strong>Choose a license template</strong> to insert the full BSD
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p>GitHub automatically detects the <code>LICENSE</code> file and
 displays it in the sidebar. Your file should look like this:</p>
@@ -745,7 +757,7 @@ with collaborators.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <p><strong>Scenario 1:</strong> BSD 3-Clause (UC’s default
 recommendation, maximum flexibility and adoption)</p>
@@ -857,8 +869,8 @@ inside code blocks or to autolinks written as <https://example.org>.
   "url": "https://UC-OSPO-Network.github.io/research-software-citable-discoverable/open-source-license.html",
   "identifier": "https://UC-OSPO-Network.github.io/research-software-citable-discoverable/open-source-license.html",
   "dateCreated": "2025-12-06",
-  "dateModified": "2026-07-05",
-  "datePublished": "2026-07-07"
+  "dateModified": "2026-07-09",
+  "datePublished": "2026-07-09"
 }
 
   </script><script>
