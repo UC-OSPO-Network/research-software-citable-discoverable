@@ -107,6 +107,10 @@ Five "low-risk" licenses are suitable for most research projects. Here's a decis
 
 ``` mermaid
 graph TD
+    accTitle: License decision flowchart
+    accDescr {
+        Decision tree for choosing an open source license, starting from whether the project has special requirements, branching to BSD 3-Clause, MIT, Apache 2.0, ECL 2.0, or GPL depending on the need, and ending with a check with the campus Tech Transfer Office.
+    }
     Start[Starting a new UC research software project?] --> Check{Do you have<br/>special requirements?}
     
     Check -->|No special needs| BSD[Use BSD 3-Clause<br/>✓ Common research default<br/>✓ Simple and protective<br/>✓ Widely compatible]
@@ -129,14 +133,24 @@ graph TD
     GPL2 --> TTO
     GPL3 --> TTO
     
-    style BSD fill:#90EE90
-    style MIT fill:#90EE90
-    style Apache fill:#90EE90
-    style ECL fill:#90EE90
-    style GPL2 fill:#FFFF99
-    style GPL3 fill:#FFB6C6
-    style TTO fill:#87CEEB
+    style Start fill:#f5f5f5,stroke:#333,color:#000
+    style Check fill:#f5f5f5,stroke:#333,color:#000
+    style Copyleft fill:#f5f5f5,stroke:#333,color:#000
+    style BSD fill:#90EE90,stroke:#333,color:#000
+    style MIT fill:#90EE90,stroke:#333,color:#000
+    style Apache fill:#90EE90,stroke:#333,color:#000
+    style ECL fill:#90EE90,stroke:#333,color:#000
+    style GPL2 fill:#FFFF99,stroke:#333,color:#000
+    style GPL3 fill:#FFB6C6,stroke:#333,color:#000
+    style TTO fill:#87CEEB,stroke:#333,color:#000
 ```
+
+<style>
+/* The site's global `p { color: ... }` rule overrides Mermaid's per-node
+   text color in both themes; force the label paragraphs to inherit the
+   color Mermaid already set on their parent .nodeLabel span instead. */
+.mermaid .nodeLabel p { color: inherit !important; }
+</style>
 
 ### Quick reference
 
