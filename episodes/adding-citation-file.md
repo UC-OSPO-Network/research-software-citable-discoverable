@@ -243,6 +243,14 @@ After you commit the file, GitHub:
 
 This feature works even without a DOI.
 
+::::::::::::::::::::::::::::::::::::: callout
+
+### The button's citation is missing one thing: version
+
+GitHub's "Cite this repository" panel builds its citation from `CITATION.cff`, but the generated text does not include the `version` field even when it's present in the file. If someone copies the button's citation as-is, it won't specify which release they used. Tell whoever is citing your software to add the version by hand, or point them at the human-readable citation you keep in the README (see below), which you control completely.
+
+::::::::::::::::::::::::::::::::::::::::::::::::
+
 **Text-only check:** after you commit `CITATION.cff`, refresh the repository page. The About sidebar should now show a **"Cite this repository"** link.
 
 ::::::::::::::::::::::::::::::::::::: challenge
@@ -348,6 +356,8 @@ A `CITATION.cff` makes software citable *in principle*, but the citation is not 
 - It does not **pin the exact snapshot** behind a published result, so a reader cannot reliably reproduce or verify what was used.
 
 The fix is a **tagged release archived to a repository like Zenodo**, which mints a **DOI**: a persistent identifier for an *immutable* snapshot. The DOI is what connects the software into the scholarly credit and indexing apparatus (DataCite, ORCID, library catalogs) and lets a citation resolve to one exact version, permanently. Put another way: `CITATION.cff` says *how* to cite the software; a release and DOI give the citation something durable *to point at*. That is the next episode.
+
+**One more gap `CITATION.cff` alone doesn't close: a human has to find it.** Not everyone who wants to cite your software will know to look for a machine-readable file or click "Cite this repository." Add a plain, human-readable citation to your README too, in whatever format your field expects, alongside the CFF file rather than instead of it (see [peerj.com/articles/cs-86](https://peerj.com/articles/cs-86/) for why both matter).
 
 :::::::::::::::::::::::::::::::::
 :::::::::::::::::::::::::::::::::
