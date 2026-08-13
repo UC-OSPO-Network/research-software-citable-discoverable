@@ -4,6 +4,24 @@ teaching: 20
 exercises: 10
 ---
 
+:::::::::::::::::::::::::::::::::::::: questions
+
+- Why do software projects need well defined environments?
+- How can `pixi` help learners run the same code the developer used?
+- How does environment management improve the reproducibility and citability of research software?
+
+::::::::::::::::::::::::::::::::::::::::::::::::
+
+::::::::::::::::::::::::::::::::::::: objectives
+
+- Explain why environment definition is central to reproducible research.
+- Create a minimal `pixi.toml` file for a project.
+- Use `pixi` to run Python or R code inside a clean, isolated environment.
+- Describe how environment files support FAIR software and citation practices.
+- **Supporting others:** recommend an environment tool that fits a researcher's stack rather than defaulting to one.
+
+::::::::::::::::::::::::::::::::::::::::::::::::
+
 ::::::::::::::::::::::::::::::::::::: callout
 
 ### Optional Episode
@@ -21,41 +39,6 @@ Citation-focused learners are done with the core lesson after the metadata episo
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 **Other environment tools:** `conda`, `mamba`, `pip`/`venv`, and `renv` (for R) all serve the same purpose. The concepts here apply to any environment manager; pixi is used because it handles Python, R, and other languages with a single tool and generates an automatic lockfile.
-
-::::::::::::::::::::::::::::::::::::::::::::::::
-
-::::::::::::::::::::::::::::::::::::: callout
-
-### Why pixi and not uv?
-
-`uv` has grown fast and is a strong choice for pure-Python projects. We looked at it and talked with the community before choosing `pixi` for this lesson:
-
-- **Multi-language reach.** Many research groups mix Python with R or other languages in the same project. pixi manages all of them from one `pixi.toml`; `uv` covers Python only.
-- **Manifest-plus-lockfile paradigm.** `pixi.toml` + `pixi.lock` follows the same declarative-manifest-plus-lockfile pattern Python packaging itself has converged on with `pyproject.toml`, so the mental model transfers.
-- **Community-governed package ecosystem.** pixi draws on conda-forge, a community-governed package channel, rather than a single company's index.
-- **Carpentries alignment.** pixi already has its own Carpentries Incubator lesson ([`pixi-introduction`](https://github.com/carpentries-incubator/pixi-introduction)), which helps learners who take multiple workshops.
-
-**Update, March 2026:** OpenAI acquired Astral, the company behind `uv`, Ruff, and ty. `uv` and Ruff stay open source under their existing licenses, so nothing already written breaks, but there is no independent foundation or steward for the project; its roadmap now runs through a single acquirer. That is exactly the kind of single-vendor dependency the community-governed point above is about, and it is now a documented event rather than a hypothetical.
-
-This is a fast-moving space. Treat this as our current read, not a permanent verdict — revisit it if the landscape shifts again.
-
-::::::::::::::::::::::::::::::::::::::::::::::::
-
-:::::::::::::::::::::::::::::::::::::: questions
-
-- Why do software projects need well defined environments?
-- How can `pixi` help learners run the same code the developer used?
-- How does environment management improve the reproducibility and citability of research software?
-
-::::::::::::::::::::::::::::::::::::::::::::::::
-
-::::::::::::::::::::::::::::::::::::: objectives
-
-- Explain why environment definition is central to reproducible research.
-- Create a minimal `pixi.toml` file for a project.
-- Use `pixi` to run Python or R code inside a clean, isolated environment.
-- Describe how environment files support FAIR software and citation practices.
-- **Supporting others:** recommend an environment tool that fits a researcher's stack rather than defaulting to one.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -134,7 +117,7 @@ Environment management reduces this friction because it captures:
 - **Cross-platform:** Works on macOS, Linux, Windows
 - **Fast:** Faster than Conda
 - **Automatic lockfiles:** Creates `pixi.lock` automatically, recording the exact resolved versions of every package so others can rebuild the same environment
-- **Multi-language:** Supports Python, R, and more
+- **Multi-language:** Supports Python, R, and more — also the main reason we didn't use `uv`, which is Python-only
 - **More secure than a loose `requirements.txt`:** a `requirements.txt` typically pins version ranges (`numpy>=1.24`); `pixi.lock` pins the exact resolved version and build of every dependency, including transitive ones, so what you install is provably what was tested — not whatever happens to satisfy the range on install day
 
 **FAIR Connection:** Standard formats + clear dependencies = Interoperable & Reusable software
@@ -144,6 +127,19 @@ Environment management reduces this friction because it captures:
 ### A licensing trap pixi avoids by default
 
 Anaconda's `defaults` channel requires a paid license for commercial use at organizations over 200 employees, UC included, and Anaconda has sent enforcement letters to institutions it considers out of compliance. It is easy to pull packages from `defaults` without realizing it if you install plain Anaconda or Miniconda and never change the channel. `conda-forge`, the channel `pixi` uses out of the box, is community-maintained and free for all use, including commercial. Using `pixi` (or `conda`/`mamba` explicitly pointed at `conda-forge`) sidesteps this risk instead of requiring learners to remember to configure it.
+
+::::::::::::::::::::::::::::::::::::::::::::::::
+
+::::::::::::::::::::::::::::::::::::: callout
+
+### Why not `uv`?
+
+`uv` has grown fast and is a strong choice for pure-Python projects, and we looked at it before choosing pixi. Two points beyond the multi-language gap above:
+
+- **Manifest-plus-lockfile paradigm.** `pixi.toml` + `pixi.lock` follows the same declarative-manifest-plus-lockfile pattern Python packaging itself has converged on with `pyproject.toml`, so the mental model transfers. Carpentries also has its own Incubator lesson on the tool ([`pixi-introduction`](https://github.com/carpentries-incubator/pixi-introduction)) if you want to go deeper than this episode does.
+- **Governance.** `uv` is built by a single company, Astral, which OpenAI acquired in March 2026. `uv` and its sibling tools (Ruff, ty) stay open source under their existing licenses, so nothing already written breaks, but there is no independent foundation or steward — the roadmap now runs through one acquirer. `pixi`'s conda-forge ecosystem, the same one that sidesteps the licensing trap above, is community-governed instead.
+
+This is a fast-moving space. Treat this as our current read, not a permanent verdict — revisit it if the landscape shifts again.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
