@@ -173,12 +173,14 @@ Beyond technical metadata, files that describe *how* to interact with your proje
 GitHub looks for these files:
 
 ### CONTRIBUTING.md → How to contribute
-The `CONTRIBUTING.md` file is the first place new contributors look to see if a project is open to participation. Following a contributing guide template (the [UC OSPO Contributing Guide](https://ucospo.net/oss-resources/template-guides/contributing-guide/) *(UC-specific)* is one good example) ensures you cover essential ground:
+A `CONTRIBUTING.md` file is worth adding **if you want contributions** — it's the first place people look to see if a project is open to participation. It is not a universal best practice; plenty of solid research software has no active contributor pipeline, and an empty invitation you can't support creates more work than it saves. If you do add one, following a contributing guide template (the [UC OSPO Contributing Guide](https://ucospo.net/oss-resources/template-guides/contributing-guide/) *(UC-specific)* is one good example) ensures you cover essential ground:
 
 - **Welcome Statement**: Explicitly inviting others to join
 - **Ways to Contribute**: Identifying non-code contributions (e.g., documentation, testing, issues)
 - **Setup Instructions**: How to get the project running locally
 - **Pull Request Lifecycle**: What happens after a contribution is submitted
+
+If you're not looking for contributors right now, say so directly instead of leaving the file out entirely — it still tells people what to expect. A line as simple as "I'm not looking for contributors right now, please just create an issue" or "I'm no longer maintaining this repository, please just fork it" is a complete, honest CONTRIBUTING.md.
 
 ### CODE_OF_CONDUCT.md → Behavioral standards
 A `CODE_OF_CONDUCT.md` establishes behavioral expectations and ensures a safe, inclusive environment for all researchers. The standard choice is the [Contributor Covenant][contributor-covenant], widely adopted across open-source projects. *(See also: [UC OSPO Code of Conduct Guide](https://ucospo.net/oss-resources/template-guides/code-of-conduct-guide/) *(UC-specific)*)*
@@ -247,6 +249,14 @@ For software, **Zenodo is the recommended deposit location** because:
 If your institution requires or prefers a local IR (Dataverse instance, DSpace, etc.), you can deposit there *in addition* to Zenodo, not instead of it. Use the Zenodo DOI as the persistent identifier in your CITATION.cff, and note the institutional deposit in your README or Zenodo metadata as a related work.
 
 Some funders (NSF, NIH, Wellcome Trust) have specific deposit requirements. Check your award terms before deciding where the authoritative copy lives.
+
+::::::::::::::::::::::::::::::::::::::::::::::::
+
+::::::::::::::::::::::::::::::::::::: callout
+
+### UC-specific: Dryad and Zenodo already talk to each other
+
+All UC campuses have a premium Dryad subscription. If you deposit a study's data in Dryad, Dryad prompts you to also deposit the associated code in Zenodo, and the two deposits automatically cross-reference each other. If your project already has a Dryad data deposit, check there first before setting up the Zenodo link manually.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -352,8 +362,11 @@ After generating a DOI in the earlier episode, expand its metadata:
 A researcher's tool has been public on GitHub for a year, but no one outside their lab has ever found it. The repository has a one-line README, no topics, and a Zenodo deposit with only a title. Which **single** change will do the most to make the software discoverable?
 
 A. Add collaborators so the repository is "more public"
+
 B. Add descriptive GitHub topics, plus matching keywords and a description on the Zenodo record
+
 C. Push more frequent commits so the repository looks active
+
 D. Rename the repository to something shorter and catchier
 
 :::::::::::::::::::::::: solution

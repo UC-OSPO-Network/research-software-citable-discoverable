@@ -111,6 +111,8 @@ You might wonder why we chose `v0.1.0`. This follows **Semantic Versioning** (`M
 
 Starting with `0.x.x` indicates your software is in initial development and the API is not yet stable.
 
+**If a project doesn't use semantic versioning at all,** the README should instruct users to cite the commit hash instead of a version number, so the exact state of the code that produced a result can still be pinned down (Katz et al., 2019: <https://arxiv.org/abs/1905.08674>).
+
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 ::::::::::::::::::::::::::::::::::::: challenge
@@ -316,6 +318,18 @@ repository-artifact: "swh:1:rel:22ece559cc7cc2364edc5e5593d63ae8bd229f9f"
 ```
 
 This approach is recommended in the 2026 *CODE Beyond FAIR* roadmap (Di Cosmo et al., *Scientific Data*).
+
+::::::::::::::::::::::::::::::::::::::::::::::::
+
+::::::::::::::::::::::::::::::::::::: spoiler
+
+### Going further: FORCE11 Software Citation resources
+
+The FORCE11 Software Citation Working Group produced practical checklists and a deeper look at implementation challenges, useful if you're setting up citation practices for a whole lab or department rather than one repository:
+
+- Chue Hong, N. P., Allen, A., Gonzalez-Beltran, A., et al. (2019). *Software Citation Checklist for Authors* (0.9.0). Zenodo. <https://doi.org/10.5281/zenodo.3479199>
+- Chue Hong, N. P., Allen, A., Gonzalez-Beltran, A., et al. (2019). *Software Citation Checklist for Developers*. Zenodo. <https://doi.org/10.5281/zenodo.3479198>
+- Katz, D. S., Bouquin, D., Chue Hong, N. P., et al. (2019). *Software citation implementation challenges*. arXiv. <https://doi.org/10.48550/arXiv.1905.08674>
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
