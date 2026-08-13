@@ -318,7 +318,7 @@
       </div>
     </nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Reference</h1>
-        <p>Last updated on 2026-07-05 |
+        <p>Last updated on 2026-08-13 |
 
         <a href="https://github.com/UC-OSPO-Network/research-software-citable-discoverable/edit/main/learners/reference.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -361,6 +361,14 @@ are: <strong>C</strong>ollaborate, <strong>O</strong>pen,
 <strong>D</strong>ocument, <strong>E</strong>xecute. Recommends Software
 Heritage archiving alongside DOI-based citation.
 </dd>
+<dt>Copier</dt>
+<dd>
+A template engine for scaffolding a new repository from a reusable
+project template (tests, CI, documentation, licensing, community files)
+and reapplying template updates to existing repos later. Used by
+research-software templates such as the Netherlands eScience Center’s
+Python template.
+</dd>
 <dt>DataCite</dt>
 <dd>
 The DOI registration agency for research data and software. When you
@@ -400,12 +408,26 @@ exact version of every dependency, including transitive dependencies. A
 lockfile enables byte-for-byte environment reproducibility across
 machines and time.
 </dd>
+<dt>OpenSSF Scorecard</dt>
+<dd>
+A tool from the Open Source Security Foundation that scores a repository
+against security and maintenance best practices — CI presence, code
+review requirements, pinned dependencies, and more. Runnable locally or
+as a GitHub Action; a common signal for assessing whether a project is
+safe to build on.
+</dd>
 <dt>ORCID</dt>
 <dd>
 Open Researcher and Contributor ID. A persistent identifier for
 individual researchers, analogous to a DOI for people. Including ORCIDs
 in <code>CITATION.cff</code> and Zenodo metadata ensures author credit
 is unambiguous regardless of name changes or institutional affiliations.
+</dd>
+<dt>OSV-Scanner</dt>
+<dd>
+A command-line tool from Google’s Open Source Vulnerabilities (OSV)
+project that scans a repository’s dependency lockfiles and manifests for
+known security vulnerabilities.
 </dd>
 <dt>pixi</dt>
 <dd>
@@ -414,6 +436,12 @@ other languages. Uses <code>pixi.toml</code> to declare dependencies and
 generates a <code>pixi.lock</code> file for reproducibility. See also:
 conda, mamba, pip/venv, renv (R).
 </dd>
+<dt>pre-commit</dt>
+<dd>
+A framework for managing and running git hooks (formatting, linting,
+secret scanning) across multiple languages from a single
+<code>.pre-commit-config.yaml</code> file per repository.
+</dd>
 <dt>Research software</dt>
 <dd>
 Software created or used in a research context — including analysis
@@ -421,6 +449,13 @@ scripts, data processing pipelines, simulation models, and tools that
 support research workflows. Distinct from general-purpose software in
 that it is often created by researchers rather than professional
 software developers, and its outputs are part of the scientific record.
+</dd>
+<dt>REUSE</dt>
+<dd>
+A specification and command-line tool (<code>reuse lint</code>) from the
+Free Software Foundation Europe for machine-readable license and
+copyright compliance, based on SPDX identifiers. Catches missing or
+inconsistent license headers.
 </dd>
 <dt>Semantic versioning (SemVer)</dt>
 <dd>
@@ -553,6 +588,21 @@ Driven Development</a> — Tom Preston-Werner</li>
 </li>
 </ul></div>
 <div class="section level3">
+<h3 id="project-health-security">Project Health &amp; Security<a class="anchor" aria-label="anchor" href="#project-health-security"></a></h3>
+<ul><li>OpenSSF Scorecard: <a href="https://securityscorecards.dev/" class="external-link uri">https://securityscorecards.dev/</a>
+</li>
+<li>REUSE: <a href="https://reuse.software/" class="external-link uri">https://reuse.software/</a>
+</li>
+<li>pre-commit: <a href="https://pre-commit.com/" class="external-link uri">https://pre-commit.com/</a>
+</li>
+<li>OSV-Scanner: <a href="https://google.github.io/osv-scanner/" class="external-link uri">https://google.github.io/osv-scanner/</a>
+</li>
+<li>Copier (research-software template engine): <a href="https://copier.readthedocs.io/" class="external-link uri">https://copier.readthedocs.io/</a>
+</li>
+<li>NLeSC Python template (example Copier template): <a href="https://github.com/NLeSC/python-template" class="external-link uri">https://github.com/NLeSC/python-template</a>
+</li>
+</ul></div>
+<div class="section level3">
 <h3 id="metadata-and-discoverability">Metadata and Discoverability<a class="anchor" aria-label="anchor" href="#metadata-and-discoverability"></a></h3>
 <ul><li>DataCite Metadata Schema: <a href="https://schema.datacite.org/" class="external-link uri">https://schema.datacite.org/</a>
 </li>
@@ -639,8 +689,8 @@ inside code blocks or to autolinks written as <https://example.org>.
   "url": "https://UC-OSPO-Network.github.io/research-software-citable-discoverable/instructor/reference.html",
   "identifier": "https://UC-OSPO-Network.github.io/research-software-citable-discoverable/instructor/reference.html",
   "dateCreated": "2025-12-06",
-  "dateModified": "2026-07-05",
-  "datePublished": "2026-08-11"
+  "dateModified": "2026-08-13",
+  "datePublished": "2026-08-13"
 }
 
   </script><script>
