@@ -24,6 +24,23 @@ Citation-focused learners are done with the core lesson after the metadata episo
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
+::::::::::::::::::::::::::::::::::::: callout
+
+### Why pixi and not uv?
+
+`uv` has grown fast and is a strong choice for pure-Python projects. We looked at it and talked with the community before choosing `pixi` for this lesson:
+
+- **Multi-language reach.** Many research groups mix Python with R or other languages in the same project. pixi manages all of them from one `pixi.toml`; `uv` covers Python only.
+- **Manifest-plus-lockfile paradigm.** `pixi.toml` + `pixi.lock` follows the same declarative-manifest-plus-lockfile pattern Python packaging itself has converged on with `pyproject.toml`, so the mental model transfers.
+- **Community-governed package ecosystem.** pixi draws on conda-forge, a community-governed package channel, rather than a single company's index.
+- **Carpentries alignment.** pixi already has its own Carpentries Incubator lesson ([`pixi-introduction`](https://github.com/carpentries-incubator/pixi-introduction)), which helps learners who take multiple workshops.
+
+**Update, March 2026:** OpenAI acquired Astral, the company behind `uv`, Ruff, and ty. `uv` and Ruff stay open source under their existing licenses, so nothing already written breaks, but there is no independent foundation or steward for the project; its roadmap now runs through a single acquirer. That is exactly the kind of single-vendor dependency the community-governed point above is about, and it is now a documented event rather than a hypothetical.
+
+This is a fast-moving space. Treat this as our current read, not a permanent verdict — revisit it if the landscape shifts again.
+
+::::::::::::::::::::::::::::::::::::::::::::::::
+
 :::::::::::::::::::::::::::::::::::::: questions
 
 - Why do software projects need well defined environments?
