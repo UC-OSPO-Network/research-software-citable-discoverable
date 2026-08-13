@@ -340,7 +340,7 @@
       </div>
     </nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Adding a CITATION.cff File</h1>
-        <p>Last updated on 2026-07-07 |
+        <p>Last updated on 2026-08-13 |
 
         <a href="https://github.com/UC-OSPO-Network/research-software-citable-discoverable/edit/main/episodes/adding-citation-file.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -644,7 +644,7 @@ repository’s GitHub page?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <p>GitHub parses the file and adds a <strong>“Cite this
 repository”</strong> button to the sidebar, offering ready-made
@@ -664,6 +664,25 @@ is required for this to appear.</p>
 branch, GitHub adds a <strong>Cite this repository</strong> link to the
 About sidebar that opens ready-made APA and BibTeX citations.</div>
 </figure><p>This feature works even without a DOI.</p>
+<div id="the-buttons-citation-is-missing-one-thing-version" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<span class="callout-header">Callout</span>
+<div id="the-buttons-citation-is-missing-one-thing-version" class="callout-inner">
+<h3 class="callout-title">The button’s citation is missing one thing:
+version</h3>
+<div class="callout-content">
+<p>GitHub’s “Cite this repository” panel builds its citation from
+<code>CITATION.cff</code>, but the generated text does not include the
+<code>version</code> field even when it’s present in the file. If
+someone copies the button’s citation as-is, it won’t specify which
+release they used. Tell whoever is citing your software to add the
+version by hand, or point them at the human-readable citation you keep
+in the README (see below), which you control completely.</p>
+</div>
+</div>
+</div>
 <p><strong>Text-only check:</strong> after you commit
 <code>CITATION.cff</code>, refresh the repository page. The About
 sidebar should now show a <strong>“Cite this repository”</strong>
@@ -687,7 +706,7 @@ things you would check.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <p>Check, in order:</p>
 <ol style="list-style-type: decimal"><li>
@@ -752,7 +771,7 @@ lesson).</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution3" aria-expanded="false" aria-controls="collapseSolution3">
   <h4 class="accordion-header" id="headingSolution3"> Show me the solution </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
 <div class="accordion-body">
 <p>Typical missing pieces include:</p>
 <ul><li>ORCID IDs</li>
@@ -784,7 +803,7 @@ lesson).</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution4" aria-expanded="false" aria-controls="collapseSolution4">
   <h4 class="accordion-header" id="headingSolution4"> Show me the solution </h4>
 </button>
-<div id="collapseSolution4" class="accordion-collapse collapse" aria-labelledby="headingSolution4" data-bs-parent="#accordionSolution4">
+<div id="collapseSolution4" class="accordion-collapse collapse" data-bs-parent="#accordionSolution4" aria-labelledby="headingSolution4">
 <div class="accordion-body">
 <p>A valid minimal example:</p>
 <div class="codewrapper sourceCode" id="cb4">
@@ -831,7 +850,7 @@ software that produced a specific paper’s results?</li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution5" aria-expanded="false" aria-controls="collapseSolution5">
   <h4 class="accordion-header" id="headingSolution5"> Show me the solution </h4>
 </button>
-<div id="collapseSolution5" class="accordion-collapse collapse" aria-labelledby="headingSolution5" data-bs-parent="#accordionSolution5">
+<div id="collapseSolution5" class="accordion-collapse collapse" data-bs-parent="#accordionSolution5" aria-labelledby="headingSolution5">
 <div class="accordion-body">
 <p>A <code>CITATION.cff</code> makes software citable <em>in
 principle</em>, but the citation is not yet <strong>durable</strong> or
@@ -851,6 +870,13 @@ ORCID, library catalogs) and lets a citation resolve to one exact
 version, permanently. Put another way: <code>CITATION.cff</code> says
 <em>how</em> to cite the software; a release and DOI give the citation
 something durable <em>to point at</em>. That is the next episode.</p>
+<p><strong>One more gap <code>CITATION.cff</code> alone doesn’t close: a
+human has to find it.</strong> Not everyone who wants to cite your
+software will know to look for a machine-readable file or click “Cite
+this repository.” Add a plain, human-readable citation to your README
+too, in whatever format your field expects, alongside the CFF file
+rather than instead of it (see <a href="https://peerj.com/articles/cs-86/" class="external-link">peerj.com/articles/cs-86</a>
+for why both matter).</p>
 </div>
 </div>
 </div>
@@ -949,7 +975,7 @@ inside code blocks or to autolinks written as <https://example.org>.
   "url": "https://UC-OSPO-Network.github.io/research-software-citable-discoverable/adding-citation-file.html",
   "identifier": "https://UC-OSPO-Network.github.io/research-software-citable-discoverable/adding-citation-file.html",
   "dateCreated": "2025-12-06",
-  "dateModified": "2026-07-07",
+  "dateModified": "2026-08-13",
   "datePublished": "2026-08-13"
 }
 
