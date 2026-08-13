@@ -163,6 +163,7 @@ Citable and discoverable is the foundation, not the finish line. Once a project 
 - **CITATION.cff Helper**: <https://citation-file-format.github.io/cff-initializer-javascript/>
 - **Zenodo**: <https://zenodo.org>
 - **Pixi**: <https://pixi.sh>
+- **Pixi, in more depth**: Carpentries Incubator's [Introduction to Pixi](https://carpentries-incubator.github.io/pixi-introduction/) lesson covers manifest/lockfile semantics, multi-platform workspaces, and backwards compatibility beyond what this optional episode has room for
 - **Choose a License**: <https://choosealicense.com>
 - **OpenSSF Scorecard**: <https://securityscorecards.dev/>
 - **REUSE**: <https://reuse.software/>
