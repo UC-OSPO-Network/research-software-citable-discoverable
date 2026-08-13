@@ -150,7 +150,7 @@ There is no single right answer; the artifact is the point. A strong playbook na
 
 ### Going further: the next layer
 
-Citable and discoverable is the foundation, not the finish line. Once a project has a license, a citation file, and a DOI, the next questions are about *project health*: is it secure, maintained, and safe to build on? [OpenSSF Scorecards](https://securityscorecards.dev/) scores a repository against those practices and is becoming a common signal across the open-source ecosystem, though it is a separate skill from what we covered here. On the credit side, the [FORCE11 Software Citation Principles](https://doi.org/10.7717/peerj-cs.86) are the standard the `CITATION.cff` work in this lesson rests on. Both are good next stops for anyone building out an academic OSPO's teaching.
+Citable and discoverable is the foundation, not the finish line. Once a project has a license, a citation file, and a DOI, the next questions are about *project health*: is it secure, maintained, and safe to build on? [OpenSSF Scorecards](https://securityscorecards.dev/) scores a repository against those practices and is becoming a common signal across the open-source ecosystem, and [REUSE](https://reuse.software/) does the same specifically for license and copyright compliance — both are a separate skill from what we covered here. On the credit side, the [FORCE11 Software Citation Principles](https://doi.org/10.7717/peerj-cs.86) are the standard the `CITATION.cff` work in this lesson rests on. All three are good next stops for anyone building out an academic OSPO's teaching.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -164,6 +164,11 @@ Citable and discoverable is the foundation, not the finish line. Once a project 
 - **Zenodo**: <https://zenodo.org>
 - **Pixi**: <https://pixi.sh>
 - **Choose a License**: <https://choosealicense.com>
+- **OpenSSF Scorecard**: <https://securityscorecards.dev/>
+- **REUSE**: <https://reuse.software/>
+- **pre-commit**: <https://pre-commit.com/>
+- **OSV-Scanner**: <https://google.github.io/osv-scanner/>
+- **Copier**: <https://copier.readthedocs.io/>
 
 ### UC-Specific Resources *(for UC campus learners)*
 - **UC OSS Chart**: <https://security.ucop.edu/files/documents/resources/oss-chart.pdf>
