@@ -88,7 +88,7 @@ A URL is a shelf location, not a catalog record. Citing code this way is like ci
 
 ### The right way
 
-> Dennis, T. (2025). *Biodiversity Analysis Toolkit* (v0.1.0). Zenodo. https://doi.org/10.5281/zenodo.123456
+> Dennis, T., Phan, L., Otsuji, R., & Padilla, K. (2026). *Biodiversity Analysis Toolkit* (v0.1.0). Zenodo. https://doi.org/10.5281/zenodo.123456
 
 **Why this works:**
 
