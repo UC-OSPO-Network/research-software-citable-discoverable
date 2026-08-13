@@ -357,6 +357,40 @@
 
         
 
+<div class="overview card">
+<h2 class="card-header">Overview</h2>
+<div class="row g-0">
+<div class="col-md-4">
+<div class="card-body">
+<div class="inner">
+<h3 class="card-title">Questions</h3>
+<ul><li>Why do software projects need well defined environments?</li>
+<li>How can <code>pixi</code> help learners run the same code the
+developer used?</li>
+<li>How does environment management improve the reproducibility and
+citability of research software?</li>
+</ul></div>
+</div>
+</div>
+<div class="col-md-8">
+<div class="card-body">
+<div class="inner bordered">
+<h3 class="card-title">Objectives</h3>
+<ul><li>Explain why environment definition is central to reproducible
+research.</li>
+<li>Create a minimal <code>pixi.toml</code> file for a project.</li>
+<li>Use <code>pixi</code> to run Python or R code inside a clean,
+isolated environment.</li>
+<li>Describe how environment files support FAIR software and citation
+practices.</li>
+<li>
+<strong>Supporting others:</strong> recommend an environment tool
+that fits a researcher’s stack rather than defaulting to one.</li>
+</ul></div>
+</div>
+</div>
+</div>
+</div>
 <div id="optional-episode" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
@@ -398,83 +432,6 @@ this episode is for before anyone opens a terminal.</p>
 apply to any environment manager; pixi is used because it handles
 Python, R, and other languages with a single tool and generates an
 automatic lockfile.</p>
-</div>
-</div>
-</div>
-<div id="why-pixi-and-not-uv" class="callout">
-<div class="callout-square">
-<i class="callout-icon" data-feather="bell"></i>
-</div>
-<span class="callout-header">Callout</span>
-<div id="why-pixi-and-not-uv" class="callout-inner">
-<h3 class="callout-title">Why pixi and not uv?</h3>
-<div class="callout-content">
-<p><code>uv</code> has grown fast and is a strong choice for pure-Python
-projects. We looked at it and talked with the community before choosing
-<code>pixi</code> for this lesson:</p>
-<ul><li>
-<strong>Multi-language reach.</strong> Many research groups mix
-Python with R or other languages in the same project. pixi manages all
-of them from one <code>pixi.toml</code>; <code>uv</code> covers Python
-only.</li>
-<li>
-<strong>Manifest-plus-lockfile paradigm.</strong>
-<code>pixi.toml</code> + <code>pixi.lock</code> follows the same
-declarative-manifest-plus-lockfile pattern Python packaging itself has
-converged on with <code>pyproject.toml</code>, so the mental model
-transfers.</li>
-<li>
-<strong>Community-governed package ecosystem.</strong> pixi draws on
-conda-forge, a community-governed package channel, rather than a single
-company’s index.</li>
-<li>
-<strong>Carpentries alignment.</strong> pixi already has its own
-Carpentries Incubator lesson (<a href="https://github.com/carpentries-incubator/pixi-introduction" class="external-link"><code>pixi-introduction</code></a>),
-which helps learners who take multiple workshops.</li>
-</ul><p><strong>Update, March 2026:</strong> OpenAI acquired Astral, the
-company behind <code>uv</code>, Ruff, and ty. <code>uv</code> and Ruff
-stay open source under their existing licenses, so nothing already
-written breaks, but there is no independent foundation or steward for
-the project; its roadmap now runs through a single acquirer. That is
-exactly the kind of single-vendor dependency the community-governed
-point above is about, and it is now a documented event rather than a
-hypothetical.</p>
-<p>This is a fast-moving space. Treat this as our current read, not a
-permanent verdict — revisit it if the landscape shifts again.</p>
-</div>
-</div>
-</div>
-<div class="overview card">
-<h2 class="card-header">Overview</h2>
-<div class="row g-0">
-<div class="col-md-4">
-<div class="card-body">
-<div class="inner">
-<h3 class="card-title">Questions</h3>
-<ul><li>Why do software projects need well defined environments?</li>
-<li>How can <code>pixi</code> help learners run the same code the
-developer used?</li>
-<li>How does environment management improve the reproducibility and
-citability of research software?</li>
-</ul></div>
-</div>
-</div>
-<div class="col-md-8">
-<div class="card-body">
-<div class="inner bordered">
-<h3 class="card-title">Objectives</h3>
-<ul><li>Explain why environment definition is central to reproducible
-research.</li>
-<li>Create a minimal <code>pixi.toml</code> file for a project.</li>
-<li>Use <code>pixi</code> to run Python or R code inside a clean,
-isolated environment.</li>
-<li>Describe how environment files support FAIR software and citation
-practices.</li>
-<li>
-<strong>Supporting others:</strong> recommend an environment tool
-that fits a researcher’s stack rather than defaulting to one.</li>
-</ul></div>
-</div>
 </div>
 </div>
 </div>
@@ -583,7 +540,8 @@ because it is:</p>
 automatically, recording the exact resolved versions of every package so
 others can rebuild the same environment</li>
 <li>
-<strong>Multi-language:</strong> Supports Python, R, and more</li>
+<strong>Multi-language:</strong> Supports Python, R, and more — also
+the main reason we didn’t use <code>uv</code>, which is Python-only</li>
 <li>
 <strong>More secure than a loose
 <code>requirements.txt</code>:</strong> a <code>requirements.txt</code>
@@ -613,6 +571,37 @@ for all use, including commercial. Using <code>pixi</code> (or
 <code>conda</code>/<code>mamba</code> explicitly pointed at
 <code>conda-forge</code>) sidesteps this risk instead of requiring
 learners to remember to configure it.</p>
+</div>
+</div>
+</div>
+<div id="why-not-uv" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<span class="callout-header">Callout</span>
+<div id="why-not-uv" class="callout-inner">
+<h3 class="callout-title">Why not <code>uv</code>?</h3>
+<div class="callout-content">
+<p><code>uv</code> has grown fast and is a strong choice for pure-Python
+projects, and we looked at it before choosing pixi. Two points beyond
+the multi-language gap above:</p>
+<ul><li>
+<strong>Manifest-plus-lockfile paradigm.</strong>
+<code>pixi.toml</code> + <code>pixi.lock</code> follows the same
+declarative-manifest-plus-lockfile pattern Python packaging itself has
+converged on with <code>pyproject.toml</code>, so the mental model
+transfers. Carpentries also has its own Incubator lesson on the tool (<a href="https://github.com/carpentries-incubator/pixi-introduction" class="external-link"><code>pixi-introduction</code></a>)
+if you want to go deeper than this episode does.</li>
+<li>
+<strong>Governance.</strong> <code>uv</code> is built by a single
+company, Astral, which OpenAI acquired in March 2026. <code>uv</code>
+and its sibling tools (Ruff, ty) stay open source under their existing
+licenses, so nothing already written breaks, but there is no independent
+foundation or steward — the roadmap now runs through one acquirer.
+<code>pixi</code>’s conda-forge ecosystem, the same one that sidesteps
+the licensing trap above, is community-governed instead.</li>
+</ul><p>This is a fast-moving space. Treat this as our current read, not a
+permanent verdict — revisit it if the landscape shifts again.</p>
 </div>
 </div>
 </div>
