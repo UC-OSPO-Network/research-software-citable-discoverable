@@ -343,7 +343,7 @@
       </div>
     </nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Managing Reproducible Environments with pixi</h1>
-        <p>Last updated on 2026-07-05 |
+        <p>Last updated on 2026-08-13 |
 
         <a href="https://github.com/UC-OSPO-Network/research-software-citable-discoverable/edit/main/episodes/managing-environments-pixi.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -381,6 +381,49 @@ full track before installing anything.</p>
 apply to any environment manager; pixi is used because it handles
 Python, R, and other languages with a single tool and generates an
 automatic lockfile.</p>
+</div>
+</div>
+</div>
+<div id="why-pixi-and-not-uv" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<span class="callout-header">Callout</span>
+<div id="why-pixi-and-not-uv" class="callout-inner">
+<h3 class="callout-title">Why pixi and not uv?</h3>
+<div class="callout-content">
+<p><code>uv</code> has grown fast and is a strong choice for pure-Python
+projects. We looked at it and talked with the community before choosing
+<code>pixi</code> for this lesson:</p>
+<ul><li>
+<strong>Multi-language reach.</strong> Many research groups mix
+Python with R or other languages in the same project. pixi manages all
+of them from one <code>pixi.toml</code>; <code>uv</code> covers Python
+only.</li>
+<li>
+<strong>Manifest-plus-lockfile paradigm.</strong>
+<code>pixi.toml</code> + <code>pixi.lock</code> follows the same
+declarative-manifest-plus-lockfile pattern Python packaging itself has
+converged on with <code>pyproject.toml</code>, so the mental model
+transfers.</li>
+<li>
+<strong>Community-governed package ecosystem.</strong> pixi draws on
+conda-forge, a community-governed package channel, rather than a single
+company’s index.</li>
+<li>
+<strong>Carpentries alignment.</strong> pixi already has its own
+Carpentries Incubator lesson (<a href="https://github.com/carpentries-incubator/pixi-introduction" class="external-link"><code>pixi-introduction</code></a>),
+which helps learners who take multiple workshops.</li>
+</ul><p><strong>Update, March 2026:</strong> OpenAI acquired Astral, the
+company behind <code>uv</code>, Ruff, and ty. <code>uv</code> and Ruff
+stay open source under their existing licenses, so nothing already
+written breaks, but there is no independent foundation or steward for
+the project; its roadmap now runs through a single acquirer. That is
+exactly the kind of single-vendor dependency the community-governed
+point above is about, and it is now a documented event rather than a
+hypothetical.</p>
+<p>This is a fast-moving space. Treat this as our current read, not a
+permanent verdict — revisit it if the landscape shifts again.</p>
 </div>
 </div>
 </div>
@@ -491,8 +534,38 @@ automatically, recording the exact resolved versions of every package so
 others can rebuild the same environment</li>
 <li>
 <strong>Multi-language:</strong> Supports Python, R, and more</li>
+<li>
+<strong>More secure than a loose
+<code>requirements.txt</code>:</strong> a <code>requirements.txt</code>
+typically pins version ranges (<code>numpy&gt;=1.24</code>);
+<code>pixi.lock</code> pins the exact resolved version and build of
+every dependency, including transitive ones, so what you install is
+provably what was tested — not whatever happens to satisfy the range on
+install day</li>
 </ul><p><strong>FAIR Connection:</strong> Standard formats + clear
 dependencies = Interoperable &amp; Reusable software</p>
+<div id="a-licensing-trap-pixi-avoids-by-default" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<span class="callout-header">Callout</span>
+<div id="a-licensing-trap-pixi-avoids-by-default" class="callout-inner">
+<h3 class="callout-title">A licensing trap pixi avoids by default</h3>
+<div class="callout-content">
+<p>Anaconda’s <code>defaults</code> channel requires a paid license for
+commercial use at organizations over 200 employees, UC included, and
+Anaconda has sent enforcement letters to institutions it considers out
+of compliance. It is easy to pull packages from <code>defaults</code>
+without realizing it if you install plain Anaconda or Miniconda and
+never change the channel. <code>conda-forge</code>, the channel
+<code>pixi</code> uses out of the box, is community-maintained and free
+for all use, including commercial. Using <code>pixi</code> (or
+<code>conda</code>/<code>mamba</code> explicitly pointed at
+<code>conda-forge</code>) sidesteps this risk instead of requiring
+learners to remember to configure it.</p>
+</div>
+</div>
+</div>
 <hr></section><section><h2 class="section-heading" id="installing-pixi">Installing pixi<a class="anchor" aria-label="anchor" href="#installing-pixi"></a></h2>
 <hr class="half-width"><p>Full installation docs: <a href="https://pixi.sh" class="external-link uri">https://pixi.sh</a></p>
 <p>Common installation for macOS or Linux:</p>
@@ -538,7 +611,7 @@ folder <code>.pixi/</code> containing thousands of environment files.
 You <strong>never</strong> want to commit this folder to GitHub. It is
 large, platform-specific, and can be regenerated by anyone using your
 <code>pixi.lock</code> file.</p>
-<p><strong>Always check your <code>.gitignore</code></strong> to ensure
+<p><strong>Always update your <code>.gitignore</code></strong> to ensure
 generated files (like <code>.DS_Store</code>, <code>__pycache__</code>,
 or data outputs) are not accidentally shared.</p>
 <p>Add Python:</p>
@@ -617,6 +690,7 @@ still be available, or behave identically, on every future platform.</p>
 by <code>pixi.toml</code>.</p>
 <p>This makes it easier for others to test, cite, extend, and build upon
 your work.</p>
+
 <hr></section><section><h2 class="section-heading" id="how-environments-support-citation-and-reuse">How Environments Support Citation and Reuse<a class="anchor" aria-label="anchor" href="#how-environments-support-citation-and-reuse"></a></h2>
 <hr class="half-width"><p>A reusable research software project contains not only code, but:</p>
 <ul><li>licensing<br></li>
@@ -634,10 +708,10 @@ Interoperable, Reusable)</li>
 <ul><li><p>the <code>pixi.toml</code> file<br></p></li>
 <li>
 <p>instructions such as:</p>
-<div class="codewrapper sourceCode" id="cb12">
+<div class="codewrapper sourceCode" id="cb14">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb12-1"><a href="#cb12-1" tabindex="-1" aria-label="code-block-12-1"></a><span class="ex">pixi</span> run python script.py</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb14-1"><a href="#cb14-1" tabindex="-1" aria-label="code-block-14-1"></a><span class="ex">pixi</span> run python script.py</span></code></pre>
 </div>
 </li>
 </ul><div id="supporting-others" class="callout">
@@ -697,16 +771,16 @@ on any one manager installing cleanly on every laptop.</p>
 </button>
 <div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
-<div class="codewrapper sourceCode" id="cb13">
+<div class="codewrapper sourceCode" id="cb15">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb13-1"><a href="#cb13-1" tabindex="-1" aria-label="code-block-13-1"></a><span class="ex">pixi</span> add pandas</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb15-1"><a href="#cb15-1" tabindex="-1" aria-label="code-block-15-1"></a><span class="ex">pixi</span> add pandas</span></code></pre>
 </div>
 <p>or:</p>
-<div class="codewrapper sourceCode" id="cb14">
+<div class="codewrapper sourceCode" id="cb16">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb14-1"><a href="#cb14-1" tabindex="-1" aria-label="code-block-14-1"></a><span class="ex">pixi</span> add r-ggplot2</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb16-1"><a href="#cb16-1" tabindex="-1" aria-label="code-block-16-1"></a><span class="ex">pixi</span> add r-ggplot2</span></code></pre>
 </div>
 <p>You should see the new package listed under
 <code>[project.dependencies]</code> in your <code>pixi.toml</code>.</p>
@@ -843,7 +917,7 @@ inside code blocks or to autolinks written as <https://example.org>.
   "url": "https://UC-OSPO-Network.github.io/research-software-citable-discoverable/managing-environments-pixi.html",
   "identifier": "https://UC-OSPO-Network.github.io/research-software-citable-discoverable/managing-environments-pixi.html",
   "dateCreated": "2025-12-06",
-  "dateModified": "2026-07-05",
+  "dateModified": "2026-08-13",
   "datePublished": "2026-08-13"
 }
 

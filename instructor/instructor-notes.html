@@ -931,6 +931,32 @@ concept demo and not stop the main room for individual terminal errors.
 Installation issues are the single most likely time-sink in this
 episode.</p>
 <hr>
+<br><h3 id="managing-environments-pixi-headingInstructor4">
+<a href="managing-environments-pixi.html#headingInstructor4">Demo: prove the environment is actually isolated</a><a class="anchor" aria-label="anchor" href="#managing-environments-pixi-headingInstructor4"></a>
+</h3>
+<p>Learners often take “isolated environment” on faith. Make it visible
+instead of just asserting it. With <code>numpy</code> added to the
+project:</p>
+<div class="codewrapper sourceCode" id="cb12">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb12-1"><a href="#cb12-1" tabindex="-1" aria-label="code-block-12-1"></a><span class="ex">python3</span> <span class="at">-c</span> <span class="st">"import numpy"</span></span></code></pre>
+</div>
+<p>Run outside the environment, this fails (or silently uses a
+different, unrecorded system copy) unless <code>numpy</code> happens to
+be installed globally. Then run the same import through pixi:</p>
+<div class="codewrapper sourceCode" id="cb13">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb13-1"><a href="#cb13-1" tabindex="-1" aria-label="code-block-13-1"></a><span class="ex">pixi</span> run python3 <span class="at">-c</span> <span class="st">"import numpy; print(numpy.__version__)"</span></span></code></pre>
+</div>
+<p>This succeeds and prints the exact version pinned in
+<code>pixi.lock</code>. The point to land: packages installed via
+<code>pixi add</code> do not leak into your system Python, and your
+system Python’s packages do not leak into the pixi environment either.
+That isolation, not just the lockfile, is what makes “works on my
+machine” catchable before it ships.</p>
+<hr>
 <br></section><section id="wrap-up-reflect"><h2 class="section-heading"><a href="wrap-up-reflect.html">Wrap-Up and Reflection</a></h2>
 <hr class="half-width">
 <h3 id="wrap-up-reflect-headingInstructor1">
