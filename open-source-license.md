@@ -1,7 +1,7 @@
 ---
 title: "Choosing an Open-Source License"
-teaching: 20
-exercises: 15
+teaching: 18
+exercises: 12
 ---
 
 :::::::::::::::::::::::::::::::::::::: questions
@@ -16,21 +16,23 @@ exercises: 15
 
 * Explain why unlicensed software is not legally reusable
 * Describe the main categories of open-source licenses
-* Choose an appropriate license for a UC research project, using UC resources
+* Choose an appropriate license for a UC research project or using UC resources
 * Add a license file to a GitHub repository
 * **Supporting others:** decide when a licensing question is yours to answer and when to refer it to Tech Transfer / IP
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
+## Disclaimer
+This workshop is not meant to provide legal advice or replace consulting with an attorney. The information contained herein is provided for informational purposes only, and should not be construed as legal advice on any subject matter. The contents of this episode contains general information and may not reflect current legal developments or address your situation. If you require legal advice, please consult with your attorney. No attorney-client relationship is created between you and the authors/presenter of this episode or University of California.
 
 ## Why licensing matters
 
 Here is the counterintuitive fact this episode turns on: code posted publicly on GitHub with no license is not open. Copyright attaches automatically, so "no license" means "all rights reserved," and anyone who reuses that code is technically infringing. The visible repo is an invitation nobody can legally accept. A license file is one small text file, usually chosen from a short approved list, and it is the difference between "look but don't touch" and actually reusable.
 
-Clear licensing tells others what they can and cannot do with your code, which is the minimum needed for open, reproducible research. The [UC OSPO License Guide][uc-license-guide] covers UC institutional requirements.
+Clear licensing tells others what they can and cannot do with your code, which is the minimum needed for open, reproducible research.
 
 ::::::::::::::::::::::::::::::::::::: callout
 
-### An orphan work with a live author
+### An unclaimed work with a live author
 
 Every librarian has met this object: the digitized photograph with no rights information, the orphan work nobody can clear. It sits in the collection, findable and useless, because no one can say yes to reuse. An unlicensed repo is the software version of an orphan work, except the author is right there and could fix it in five minutes.
 
@@ -48,26 +50,49 @@ Or put it in circulation terms: unlicensed public code is a volume you can see i
 
 ### Institutional Context: Who Owns Your Software?
 
-At most universities, software created using institutional resources is owned by the institution, not the individual researcher. Before releasing code under an open-source license, check with your **Technology Transfer or Intellectual Property office**. They will verify ownership, funding requirements, and any third-party restrictions.
+At most universities, software created using institutional resources or created as part of research is owned by the institution, not the individual researcher. Before releasing code under an open-source license, check with your **Technology Transfer or Intellectual Property office**. They will verify ownership, funding requirements, and any third-party restrictions.
 
-**If you are at a UC campus:** software is typically owned by *The Regents of the University of California*. Your campus Tech Transfer office can help you select from the [UC-approved license list][uc-oss-chart]. *(UC-specific)*
+**If you are at a UC campus:** software is typically owned by *The Regents of the University of California*. The UC Copyright policy can be found at ____https://copyright.universityofcalifornia.edu or google UC Copyright. The policy governs copyright ownership.  Prior to release contact your campus Tech Transfer office to verify ownership, funding requirements, and any third-party restrictions.
 
+The TTO or UC OSPO Network can help you select from the [UC-approved license list][uc-oss-chart] provided the TTO can cleared your code for release. The chart can be found at: https://security.ucop.edu/files/documents/resources/oss-chart.pdf. *(UC-specific)*
+
+ The [UC OSPO License Guide][uc-license-guide] covers UC institutional requirements.  
+ 
 **At other institutions:** check with your research computing, library, or legal office. Most will have a similar process and a list of preferred licenses.
 
 ::::::::::::::::::::::::::::::::
 
+::::::::::::::::::::::::::::: challenge
+## Challenge: True or False
+
+[Myth or Fact] If you post your code publicly on the internet, it automatically becomes Open Source. 
+[Myth or Fact] An open source license is essentially a legal “permission slip” from the creator. 
+[Myth or Fact] An open source license means I am giving away my ownership of the code.
+
+:::::::::::::::::::::::: solution
+[Myth or Fact] If you post your code publicly on the internet, it automatically becomes Open Source.   FALSE/MYTH
+[Myth or Fact] An open source license is essentially a legal “permission slip” from the creator.  TRUE/FACT
+[Myth or Fact] An open source license means I am giving away my ownership of the code. FALSE/MYTH
+
+:::::::::::::::::::::::::::::::::
+::::::::::::::::::::::::::::::::
+
 ## Understanding license categories
 
-Learners often fear a wall of legal text here, but the real decision is usually binary. Open-source licenses fall into two broad groups, and for most research code the whole choice takes less time than choosing a journal.
+Open-source licenses fall into two broad groups; within those groups, there are some gradation.  Once you understand licenses choosing a license becomes easier.
+
+Two categories are:
+    Permissive licenses
+    Copyleft licenses
 
 ### Permissive licenses
+Easy to comply with
+These allow broad reuse with minimal restrictions. Anyone can freely copy, modify, or redistribute the code. They are common in research because they're simple and maximize flexibility. Think of them as roughly a CC BY for code: "reuse this, just keep my name on it.”
 
-**Examples: BSD, MIT, Apache 2.0**
-
-These allow broad reuse with minimal restrictions.
-Anyone can copy, modify, or redistribute the code.
-They are common in research because they're simple and maximize flexibility.
-Think of them as roughly a CC BY for code: "reuse this, just keep my name on it."
+Examples:  **BSD and MIT**
+Note:  There are different flavors of BSD: 
+2-Clause and 3-Clause 
+3-Clause includes a clause that explicitly states no endorsement or use of the licensor’s name. It is recommended by UC
 
 **BSD licenses are a common first choice at many research institutions** because they:
 
@@ -77,7 +102,30 @@ Think of them as roughly a CC BY for code: "reuse this, just keep my name on it.
 * integrate well with most other licenses
 * have minimal restrictions
 
+::::::::::::::::::::::::::::::: caution
+Special case: Apache and BSD + Patent
+Both are considered Permissive licenses; BUT they contain explicit patent grants.
+
+The UC and many corporations are wary about patent grants as these patents grants can inadvertently reach into their patent portfolio and cover a patent from another campus or lab/research team.
+
+For this reach releasing code under the Apache and BSD + Patent is disfavored.
+:::::::::::::::::::::::::::::::
+
 ### Copyleft licenses
+Copyleft are also known as viral or reciprocal licenses.  The UC OSS Chart uses the term hereditary.
+
+These require that derivative works also remain open source by requiring that derivative works must be licensed under the same copyleft license as the original work.
+
+This protects openness across the lifecycle of a project.
+
+### What is a derivative can be ambiguous and legal question.
+Strong copyleft define derivative works broadly, so linking can creative a derivative work 
+Weak copyleft usually allow 
+some exception that allows some  combination with your work and the original work without triggering the copyleft ; or
+ limit derivative works to modifications to files of the original work.  
+
+Strong copyleft: GPL and AGPL
+Weak copyleft: LGPL, MPL, EPL
 
 **Example: GPL 2.0**
 
@@ -87,9 +135,9 @@ They add one condition to the permissive deal: "and anything you build from it m
 
 ::::::::::::::::::::::::::::::: caution
 
-### Note on GPL 3.0
+### Version 3 of GPL, AGPL, LGPL 
 
-The UC system does **not recommend GPL 3.0** for university-owned software due to patent provisions that may conflict with UC policies. If you need copyleft protection, consult your campus Tech Transfer office about GPL 2.0 or alternatives.
+The UC system does **not recommend version 3.0 of GPL, AGPL, and LGPL** for university-owned software due to patent provisions that may conflict with UC policies. If you need copyleft protection, consult your campus Tech Transfer office about GPL 2.0 or alternatives.
 
 ::::::::::::::::::::::::::::::::
 
@@ -158,12 +206,11 @@ graph TD
 |-----------|-------------------|-----------------|-----|
 | Default / most projects | BSD 3-Clause | `BSD-3-Clause` | Common default at research institutions |
 | Simplest possible | MIT | `MIT` | Minimal text, very popular |
-| Industry collaboration | Apache 2.0 | `Apache-2.0` | Explicit patent terms |
-| Educational focus | ECL 2.0 | `ECL-2.0` | Education-specific variant |
+| Educational focus | ---- | ----- | Education-specific variant |
 
 The **SPDX identifier** is the short, machine-readable code used by GitHub, Zenodo, and your `CITATION.cff` file to communicate your license automatically. When GitHub shows a license badge in the sidebar, it's reading the SPDX identifier.
 
-**Always consult your institution's Tech Transfer or IP office before releasing software created with institutional resources.**
+**Always consult your institution's Tech Transfer or IP office before releasing software created with institutional resources, part of your research, grant funding, multiple institutions, industry partner**
 
 ::::::::::::::::::::::::::::::::::::: spoiler
 
@@ -197,7 +244,7 @@ Most research repositories don't need this, but if you're sharing a dataset alon
 * [ChooseALicense.com][choosealicense] – Compare features across all common licenses.
 * [SPDX License List](https://spdx.org/licenses/) – Authoritative registry of license identifiers used in CITATION.cff and package metadata.
 * [UC OSPO License Guide][uc-license-guide] *(UC-specific)* – UC institutional requirements and templates.
-* [UC OSS Chart and Companion Guide][uc-oss-chart] *(UC-specific)* – UC-approved "low-risk" license list.
+* [UC OSS Chart and Companion Guide][uc-oss-chart] *(UC-specific)* – UC-approved "low-risk" license list. https://security.ucop.edu/files/documents/resources/oss-chart.pdf
 
 :::::::::::::::::::::::::::::::::
 
@@ -210,7 +257,7 @@ Licensing is the step where advising and *deciding* must stay separate. You can 
 Refer rather than answer when:
 
 - **Ownership is unclear** (institutional resources, grant funding, multiple institutions, industry partners). This goes to Tech Transfer / IP, not the service desk.
-- The repo pulls in **third-party code or data** with its own license terms that might conflict.
+- The repo pulls in **third-party code or data** with its own license terms that might conflict. This is VERY IMPORTANT.  Package managers, docker containers, build tools can add libraries or other code to your code. You need to ensure that this additional code does not have a conflicting license.  No copyleft in permissively licensed product. No unlicensed code.  No Apache in version 2 of GPL variants.  
 - Someone wants to **relicense or remove a license** on code that already has contributors.
 
 What you *can* own confidently: knowing your campus default (BSD-3-Clause at UC), knowing the approved-license list exists, and making sure the ownership question gets asked before code goes public. The most useful thing you do here is often a warm handoff, not a recommendation.
@@ -288,7 +335,7 @@ Which license would you recommend for each UC research scenario?
 
 **Scenario 1:** A Python package for ecological data analysis. You want maximum adoption across academia and industry.
 
-**Scenario 2:** A data visualization tool developed with a biotech partner who may commercialize derivatives.
+**Scenario 2:** A data visualization tool that you only want other researchers to use.
 
 **Scenario 3:** A simple utility script you're sharing with collaborators.
 
@@ -296,7 +343,7 @@ Which license would you recommend for each UC research scenario?
 
 **Scenario 1:** BSD 3-Clause (UC's default recommendation, maximum flexibility and adoption)
 
-**Scenario 2:** Apache 2.0 (explicit patent protection important for industry partnerships)
+**Scenario 2:** Talk to TTO or OSPO Network to find a public source license with restrictions permitting only non-commercial/educational/research use.
 
 **Scenario 3:** Either BSD 3-Clause or MIT (both work well for simple sharing; BSD preferred by UC)
 
@@ -313,8 +360,8 @@ In this episode, you added a BSD license to a repository following UC recommenda
 ::::::::::::::: keypoints
 
 * Without a license, software is legally restricted and not reusable
-* BSD 3-Clause is a common default at research institutions; MIT and Apache 2.0 are strong alternatives
-* Permissive licenses (BSD, MIT, Apache 2.0) maximize flexibility and adoption
+* BSD 3-Clause is a common default at research institutions; MIT is a strong alternatives
+* Permissive licenses (BSD, MIT) maximize flexibility and adoption
 * Always consult your institution's Tech Transfer or IP office before releasing institutionally-owned software
 * GitHub makes adding standard licenses straightforward
 
