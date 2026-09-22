@@ -134,6 +134,7 @@ This protects openness across the lifecycle of a project.
 * Strong copyleft (like GPL and AGPL) define derivative works broadly, so linking can creative a derivative work 
 
 * Weak copyleft (like LGPL, MPL, EPL) usually:
+  
 **  provide an exception that allows certain combinations with your work and the original work without triggering the copyleft provision; or
 **  limit derivative works to modifications to files of the original work.  
 
