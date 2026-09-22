@@ -84,18 +84,21 @@ The TTO or UC OSPO Network can help you select from the [UC-approved license lis
 Open-source licenses fall into two broad groups; within those groups, there are some gradation.  Once you understand licenses choosing a license becomes easier.
 
 Two categories are:
-    Permissive licenses
-    Copyleft licenses
+   * Permissive licenses
+   * Copyleft licenses
 
 ### Permissive licenses
 
-Easy to comply with
-These allow broad reuse with minimal restrictions. Anyone can freely copy, modify, or redistribute the code. They are common in research because they're simple and maximize flexibility. Think of them as roughly a CC BY for code: "reuse this, just keep my name on it.”
+* Easy to comply with
+* These allow broad reuse with minimal restrictions. 
+* Anyone can freely copy, modify, or redistribute the code. 
+* They are common in research because they're simple and maximize flexibility. 
+* Think of them as roughly a CC BY for code: "reuse this, just keep my name on it.”
 
 Examples:  **BSD and MIT**
-Note:  There are different flavors of BSD: 
-2-Clause and 3-Clause 
-3-Clause includes a clause that explicitly states no endorsement or use of the licensor’s name. It is recommended by UC
+* Note:  There are different flavors of BSD: 
+* 2-Clause and 3-Clause 
+* 3-Clause includes a clause that explicitly states no endorsement or use of the licensor’s name. It is recommended by UC
 
 **BSD licenses are a common first choice at many research institutions** because they:
 
@@ -125,19 +128,15 @@ These require that derivative works also remain open source by requiring that de
 This protects openness across the lifecycle of a project.
 
 ### What is a derivative can be ambiguous and legal question.
-Strong copyleft define derivative works broadly, so linking can creative a derivative work 
-Weak copyleft usually allow 
-some exception that allows some  combination with your work and the original work without triggering the copyleft ; or
- limit derivative works to modifications to files of the original work.  
+* Strong copyleft define derivative works broadly, so linking can creative a derivative work 
+* Weak copyleft usually:
+*      provide an exception that allows certain combinations with your work and the original work without triggering the copyleft provision; or
+ *     limit derivative works to modifications to files of the original work.  
 
-Strong copyleft: GPL and AGPL
-Weak copyleft: LGPL, MPL, EPL
+* Strong copyleft: GPL and AGPL
+* Weak copyleft: LGPL, MPL, EPL
 
 **Example: GPL 2.0**
-
-These require that derivative works also remain open-source.
-This protects openness across the lifecycle of a project.
-They add one condition to the permissive deal: "and anything you build from it must stay open too."
 
 ::::::::::::::::::::::::::::::: caution
 
