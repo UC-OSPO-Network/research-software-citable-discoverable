@@ -550,17 +550,11 @@ license as the original work.</p>
 <h3 id="what-is-a-derivative-can-be-ambiguous-and-legal-question-">What is a derivative can be ambiguous and legal question.<a class="anchor" aria-label="anchor" href="#what-is-a-derivative-can-be-ambiguous-and-legal-question-"></a></h3>
 <ul><li><p>Strong copyleft (like GPL and AGPL) define derivative works
 broadly, so linking can creative a derivative work</p></li>
-<li><p>Weak copyleft (*like LGPL, MPL, EPL) usually:</p></li>
-<li><div class="codewrapper sourceCode" id="cb1">
-<h3 class="code-label">SH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="sourceCode sh" tabindex="0"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" tabindex="-1" aria-label="code-block-1-1"></a> <span class="ex">provide</span> an exception that allows certain combinations with your work and the original work without triggering the copyleft provision<span class="kw">;</span> <span class="ex">or</span></span></code></pre>
-</div></li>
-<li><div class="codewrapper sourceCode" id="cb2">
-<h3 class="code-label">SH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="sourceCode sh" tabindex="0"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" tabindex="-1" aria-label="code-block-2-1"></a><span class="ex">limit</span> derivative works to modifications to files of the original work.  </span></code></pre>
-</div></li>
+<li><p>Weak copyleft (like LGPL, MPL, EPL) usually: ** provide an
+exception that allows certain combinations with your work and the
+original work without triggering the copyleft provision; or ** limit
+derivative works to modifications to files of the original
+work.</p></li>
 </ul><p><strong>Example: GPL 2.0</strong></p>
 <div id="version-3-of-gpl-agpl-lgpl" class="callout caution">
 <div class="callout-square">
@@ -675,12 +669,12 @@ attribution.</p>
 </ul><p>You can note this split in your README and in
 <code>CITATION.cff</code> under the <code>license</code> field, which
 accepts a list:</p>
-<div class="codewrapper sourceCode" id="cb4">
+<div class="codewrapper sourceCode" id="cb2">
 <h3 class="code-label">YAML<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode yaml" tabindex="0"><code class="sourceCode yaml"><span id="cb4-1"><a href="#cb4-1" tabindex="-1" aria-label="code-block-4-1"></a><span class="fu">license</span><span class="kw">:</span></span>
-<span id="cb4-2"><a href="#cb4-2" tabindex="-1" aria-label="code-block-4-2"></a><span class="at">  </span><span class="kw">-</span><span class="at"> BSD-3-Clause</span></span>
-<span id="cb4-3"><a href="#cb4-3" tabindex="-1" aria-label="code-block-4-3"></a><span class="at">  </span><span class="kw">-</span><span class="at"> CC-BY-4.0</span></span></code></pre>
+<pre class="sourceCode yaml" tabindex="0"><code class="sourceCode yaml"><span id="cb2-1"><a href="#cb2-1" tabindex="-1" aria-label="code-block-2-1"></a><span class="fu">license</span><span class="kw">:</span></span>
+<span id="cb2-2"><a href="#cb2-2" tabindex="-1" aria-label="code-block-2-2"></a><span class="at">  </span><span class="kw">-</span><span class="at"> BSD-3-Clause</span></span>
+<span id="cb2-3"><a href="#cb2-3" tabindex="-1" aria-label="code-block-2-3"></a><span class="at">  </span><span class="kw">-</span><span class="at"> CC-BY-4.0</span></span></code></pre>
 </div>
 <p>Most research repositories don’t need this, but if you’re sharing a
 dataset alongside code, it’s worth thinking through.</p>
@@ -821,12 +815,12 @@ sidebar.</p>
 <hr class="half-width"><p>After adding a LICENSE file, reference it in your README so users
 immediately understand usage terms.</p>
 <p>Add this section near the top of your README:</p>
-<div class="codewrapper sourceCode" id="cb6">
+<div class="codewrapper sourceCode" id="cb4">
 <h3 class="code-label">MARKDOWN<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode markdown" tabindex="0"><code class="sourceCode markdown"><span id="cb6-1"><a href="#cb6-1" tabindex="-1" aria-label="code-block-6-1"></a><span class="fu">## License</span></span>
-<span id="cb6-2"><a href="#cb6-2" tabindex="-1" aria-label="code-block-6-2"></a></span>
-<span id="cb6-3"><a href="#cb6-3" tabindex="-1" aria-label="code-block-6-3"></a>This project is licensed under the BSD 3-Clause License - see the <span class="co">[</span><span class="ot">LICENSE</span><span class="co">](LICENSE)</span> file for details.</span></code></pre>
+<pre class="sourceCode markdown" tabindex="0"><code class="sourceCode markdown"><span id="cb4-1"><a href="#cb4-1" tabindex="-1" aria-label="code-block-4-1"></a><span class="fu">## License</span></span>
+<span id="cb4-2"><a href="#cb4-2" tabindex="-1" aria-label="code-block-4-2"></a></span>
+<span id="cb4-3"><a href="#cb4-3" tabindex="-1" aria-label="code-block-4-3"></a>This project is licensed under the BSD 3-Clause License - see the <span class="co">[</span><span class="ot">LICENSE</span><span class="co">](LICENSE)</span> file for details.</span></code></pre>
 </div>
 <p><strong>Why this matters:</strong> Users reading your README on
 platforms other than GitHub (Zenodo, email, exported PDFs) will see your
