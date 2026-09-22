@@ -123,9 +123,9 @@ For this reach releasing code under the Apache and BSD + Patent is disfavored.
 :::::::::::::::::::::::::::::::
 
 ### Copyleft licenses
-Copyleft are also known as viral or reciprocal licenses.  The UC OSS Chart uses the term hereditary.
+Copyleft are also known as viral or reciprocal licenses. The UC OSS Chart uses the term hereditary.
 
-These require that derivative works also remain open source by requiring that derivative works must be licensed under the same copyleft license as the original work.
+These require that derivative works also remain open source. This is accomplished by requiring that derivative works must be licensed under the same copyleft license as the original work.
 
 This protects openness across the lifecycle of a project.
 
