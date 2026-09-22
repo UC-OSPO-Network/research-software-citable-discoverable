@@ -63,6 +63,7 @@ The TTO or UC OSPO Network can help you select from the [UC-approved license lis
 ::::::::::::::::::::::::::::::::
 
 ::::::::::::::::::::::::::::: challenge
+
 ## Challenge: True or False
 
 [Myth or Fact] If you post your code publicly on the internet, it automatically becomes Open Source. 
@@ -75,6 +76,7 @@ The TTO or UC OSPO Network can help you select from the [UC-approved license lis
 [Myth or Fact] An open source license means I am giving away my ownership of the code. FALSE/MYTH
 
 :::::::::::::::::::::::::::::::::
+
 ::::::::::::::::::::::::::::::::
 
 ## Understanding license categories
@@ -86,6 +88,7 @@ Two categories are:
     Copyleft licenses
 
 ### Permissive licenses
+
 Easy to comply with
 These allow broad reuse with minimal restrictions. Anyone can freely copy, modify, or redistribute the code. They are common in research because they're simple and maximize flexibility. Think of them as roughly a CC BY for code: "reuse this, just keep my name on it.”
 
@@ -103,12 +106,15 @@ Note:  There are different flavors of BSD:
 * have minimal restrictions
 
 ::::::::::::::::::::::::::::::: caution
+
 Special case: Apache and BSD + Patent
+
 Both are considered Permissive licenses; BUT they contain explicit patent grants.
 
 The UC and many corporations are wary about patent grants as these patents grants can inadvertently reach into their patent portfolio and cover a patent from another campus or lab/research team.
 
 For this reach releasing code under the Apache and BSD + Patent is disfavored.
+
 :::::::::::::::::::::::::::::::
 
 ### Copyleft licenses
