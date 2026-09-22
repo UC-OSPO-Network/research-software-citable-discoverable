@@ -21,11 +21,13 @@ inside code blocks or to autolinks written as <https://example.org>.
 [awesome-readme]: https://github.com/matiassingers/awesome-readme
 [contributor-covenant]: https://www.contributor-covenant.org/
 
-<!-- Demo repository and its view-only reference branches (the per-episode "answer keys") -->
+<!-- Demo repository and its view-only reference branches (the per-episode "answer keys").
+Branches are numbered to match the episode they correspond to and sort correctly
+in the GitHub branch dropdown (02-add-license, 03-add-citation, ...). -->
 [demo-repo]: https://github.com/UC-OSPO-Network/software-demo
 [branch-main]: https://github.com/UC-OSPO-Network/software-demo/tree/main
-[branch-after-license]: https://github.com/UC-OSPO-Network/software-demo/tree/after-license
-[branch-after-citation]: https://github.com/UC-OSPO-Network/software-demo/tree/after-citation
-[branch-after-release]: https://github.com/UC-OSPO-Network/software-demo/tree/after-release
-[branch-after-metadata]: https://github.com/UC-OSPO-Network/software-demo/tree/after-metadata
-[branch-optional-pixi]: https://github.com/UC-OSPO-Network/software-demo/tree/optional-pixi
+[branch-license]: https://github.com/UC-OSPO-Network/software-demo/tree/02-add-license
+[branch-citation]: https://github.com/UC-OSPO-Network/software-demo/tree/03-add-citation
+[branch-release]: https://github.com/UC-OSPO-Network/software-demo/tree/04-create-release
+[branch-metadata]: https://github.com/UC-OSPO-Network/software-demo/tree/05-add-metadata
+[branch-pixi]: https://github.com/UC-OSPO-Network/software-demo/tree/06-optional-pixi

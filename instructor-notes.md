@@ -86,15 +86,17 @@ The upstream repository maintains view-only **reference branches** that show the
 | Reference branch | State it shows |
 |---|---|
 | `main` | starting state (what everyone forks) |
-| `after-license` | after Episode 2 (license added) |
-| `after-citation` | after Episode 3 (CITATION.cff added) |
-| `after-release` | after Episode 4 (release + DOI) |
-| `after-metadata` | after Episode 5 (full metadata, the finished repo) |
-| `optional-pixi` | the optional pixi episode (branches off `after-metadata`) |
+| `02-add-license` | after Episode 2 (license added) |
+| `03-add-citation` | after Episode 3 (CITATION.cff added) |
+| `04-create-release` | after Episode 4 (release + DOI) |
+| `05-add-metadata` | after Episode 5 (full metadata, the finished repo) |
+| `06-optional-pixi` | the optional pixi episode (branches off `05-add-metadata`) |
+
+Branches are numbered to match their episode, so they sort in teaching order in GitHub's branch dropdown instead of alphabetically.
 
 **Why there's no per-episode "check out this branch" step anymore.** In the old command-line version, learners `git checkout`ed a branch to teleport their working state forward when they fell behind. The web workflow has no equivalent, and it doesn't need one: each episode adds an **independent** file (license, then citation, then release, then metadata), so a learner who misses one is never *blocked*, just less complete. To catch up, they open the relevant upstream reference branch and copy the missing file into their own `main`. Point this out once, early, then let the reference branches sit in the background.
 
-**Pixi is out of the main chain.** Unlike the old demo repo, the `after-*` branches contain **no** pixi files. Pixi lives only on `optional-pixi`, which branches off `after-metadata`. So learners on the citation-focused track never see stray `pixi.toml`/`pixi.lock` files, and there's nothing to explain away.
+**Pixi is out of the main chain.** Unlike the old demo repo, the `02`-`05` branches contain **no** pixi files. Pixi lives only on `06-optional-pixi`, which branches off `05-add-metadata`. So learners on the citation-focused track never see stray `pixi.toml`/`pixi.lock` files, and there's nothing to explain away.
 
 ---
 

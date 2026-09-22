@@ -170,7 +170,7 @@ If your software does not yet have version tags, you may omit the `version` fiel
 
 ### Check your work
 
-Compare your fork against the [`after-citation` reference branch][branch-after-citation] on the [demo repository][demo-repo]. It shows the target state after this episode: a `CITATION.cff` in the root and a "Cite this repository" button in the sidebar.
+Compare your fork against the [`03-add-citation` reference branch][branch-citation] on the [demo repository][demo-repo]. It shows the target state after this episode: a `CITATION.cff` in the root and a "Cite this repository" button in the sidebar.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 

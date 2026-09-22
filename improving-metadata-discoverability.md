@@ -117,7 +117,7 @@ A script.
 No description. No instructions. No citation. Unusable.
 ```
 
-**✅ After ([`after-metadata`][branch-after-metadata])**
+**✅ After ([`05-add-metadata`][branch-metadata])**
 
 ````markdown
 # Biodiversity Analysis Toolkit

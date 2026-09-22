@@ -46,14 +46,14 @@ Congratulations! You've transformed fragile research software into a FAIR softwa
 - ❌ No DOI
 - ❌ Minimal README
 
-**After ([`after-metadata`][branch-after-metadata]):**
+**After ([`05-add-metadata`][branch-metadata]):**
 
 - ✅ LICENSE (BSD-3)
 - ✅ CITATION.cff
 - ✅ DOI from Zenodo
 - ✅ README with documentation
 - ✅ Community health files
-- ✅ Reproducible environment *(optional pixi episode, on [`optional-pixi`][branch-optional-pixi])*
+- ✅ Reproducible environment *(optional pixi episode, on [`06-optional-pixi`][branch-pixi])*
 
 Your software is now **citable, discoverable, and reusable**.
 

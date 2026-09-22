@@ -194,9 +194,9 @@ Open your fork of the demo repository. Its `main` branch is the starting state:
 - ❌ Minimal README
 - ❌ No community or metadata files
 
-### The "After" State (`after-metadata`)
+### The "After" State (`05-add-metadata`)
 
-In the branch dropdown, switch to the [`after-metadata` reference branch][branch-after-metadata] to see the finished repository:
+In the branch dropdown, switch to the [`05-add-metadata` reference branch][branch-metadata] to see the finished repository:
 
 - ✅ **LICENSE** (BSD-3-Clause)
 - ✅ **CITATION.cff** (citation metadata)
@@ -206,7 +206,7 @@ In the branch dropdown, switch to the [`after-metadata` reference branch][branch
 - ✅ **.zenodo.json** (Zenodo metadata)
 - ✅ DOI badge in README
 
-A documented, reproducible **environment** is the one FAIR piece not shown here. It's covered in the optional pixi episode and lives on the [`optional-pixi` branch][branch-optional-pixi].
+A documented, reproducible **environment** is the one FAIR piece not shown here. It's covered in the optional pixi episode and lives on the [`06-optional-pixi` branch][branch-pixi].
 
 **This is what makes software Findable, Accessible, Interoperable, and Reusable.**
 
@@ -282,7 +282,7 @@ Starting from the bare `main` state in your fork, you'll progressively add each 
 - **Episode 6:** Managing environments with pixi *(optional, requires a local install)*
 - **Episode 7:** Wrap-up and reflection
 
-Each episode adds one piece to your fork's `main` branch. View-only reference branches ([`after-license`][branch-after-license], [`after-citation`][branch-after-citation], [`after-release`][branch-after-release], [`after-metadata`][branch-after-metadata]) let you check your work at any point.
+Each episode adds one piece to your fork's `main` branch. View-only reference branches ([`02-add-license`][branch-license], [`03-add-citation`][branch-citation], [`04-create-release`][branch-release], [`05-add-metadata`][branch-metadata]) let you check your work at any point.
 
 **What's hands-on vs. what's a tour.** The core, do-it-yourself path is short: **add a LICENSE, add a CITATION.cff, create a release with a Zenodo DOI, and improve the README and topics.** Other things you'll meet along the way, such as Software Heritage, `.zenodo.json`, `CONTRIBUTING.md` and `CODE_OF_CONDUCT.md`, and the optional pixi environment episode, are worth knowing about but are extensions: read or watch them, and add them later when a project needs them.
 

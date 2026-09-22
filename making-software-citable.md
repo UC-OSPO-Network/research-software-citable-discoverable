@@ -266,7 +266,7 @@ With the release published and the DOI minted, the citable-software chain is com
 
 ### Check your work
 
-Compare your fork against the [`after-release` reference branch][branch-after-release] on the [demo repository][demo-repo]. It shows the target state after this episode: a tagged release and a `CITATION.cff` updated with the DOI.
+Compare your fork against the [`04-create-release` reference branch][branch-release] on the [demo repository][demo-repo]. It shows the target state after this episode: a tagged release and a `CITATION.cff` updated with the DOI.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 

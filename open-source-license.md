@@ -316,7 +316,7 @@ If the badge doesn't appear, ensure the file is in the root directory and named 
 
 ### Check your work
 
-Compare your fork against the [`after-license` reference branch][branch-after-license] on the [demo repository][demo-repo]. It shows the target state after this episode: a `LICENSE` file in the root and the BSD-3-Clause badge in the sidebar.
+Compare your fork against the [`02-add-license` reference branch][branch-license] on the [demo repository][demo-repo]. It shows the target state after this episode: a `LICENSE` file in the root and the BSD-3-Clause badge in the sidebar.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 

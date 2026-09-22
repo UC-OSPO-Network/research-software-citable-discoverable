@@ -40,11 +40,11 @@ The **upstream** repository (`UC-OSPO-Network/software-demo`) keeps view-only **
 | Branch | Shows the repo after… |
 |---|---|
 | `main` | the starting state (what you fork) |
-| `after-license` | Episode 2, license added |
-| `after-citation` | Episode 3, CITATION.cff added |
-| `after-release` | Episode 4, release + DOI |
-| `after-metadata` | Episode 5, full metadata (the finished repo) |
-| `optional-pixi` | the optional pixi episode |
+| `02-add-license` | Episode 2, license added |
+| `03-add-citation` | Episode 3, CITATION.cff added |
+| `04-create-release` | Episode 4, release + DOI |
+| `05-add-metadata` | Episode 5, full metadata (the finished repo) |
+| `06-optional-pixi` | the optional pixi episode |
 
 If you fall behind or want to compare, open the upstream repo, switch to the matching branch in the branch dropdown, and look at the files. Because each episode adds an **independent** piece, falling behind never blocks you: you can copy a file you missed from its reference branch. You never edit the reference branches; they are an answer key.
 

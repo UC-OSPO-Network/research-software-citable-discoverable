@@ -24,7 +24,7 @@ Learners work in the browser, making small, high-value improvements to a real Gi
 
 You'll work in your web browser, in your **own fork** of a small demo repository. Each episode adds one piece to your fork: a license, a citation file, a release with a DOI, then richer metadata. By the end you'll have a complete, citable repository you built yourself.
 
-The upstream repository maintains a set of view-only **reference branches** (`after-license`, `after-citation`, `after-release`, `after-metadata`) that show the target state after each episode. If you fall behind or want to check your work, open the matching branch in GitHub's branch dropdown and compare.
+The upstream repository maintains a set of view-only **reference branches** (`02-add-license`, `03-add-citation`, `04-create-release`, `05-add-metadata`) that show the target state after each episode. If you fall behind or want to check your work, open the matching branch in GitHub's branch dropdown and compare.
 
 The only episode that needs software installed on your computer is the **optional** pixi episode at the end. Everything else runs in the browser. See [Setup](learners/setup.md) to get ready.
 
