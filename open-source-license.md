@@ -129,9 +129,9 @@ These require that derivative works also remain open source by requiring that de
 
 This protects openness across the lifecycle of a project.
 
-### What is a derivative can be ambiguous and legal question.
+## What is a derivative can be ambiguous and legal question.
 
-* Strong copyleft (like GPL and AGPL) define derivative works broadly, so linking can creative a derivative work 
+* Strong copyleft (like GPL and AGPL) define derivative works broadly, so linking can create a derivative work 
 
 * Weak copyleft (like LGPL, MPL, EPL) usually:
   
