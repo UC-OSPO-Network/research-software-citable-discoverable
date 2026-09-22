@@ -131,14 +131,11 @@ This protects openness across the lifecycle of a project.
 
 ### What is a derivative can be ambiguous and legal question.
 
-* Strong copyleft define derivative works broadly, so linking can creative a derivative work 
+* Strong copyleft (like GPL and AGPL) define derivative works broadly, so linking can creative a derivative work 
 
-* Weak copyleft usually:
+* Weak copyleft (*like LGPL, MPL, EPL) usually:
 *      provide an exception that allows certain combinations with your work and the original work without triggering the copyleft provision; or
 *     limit derivative works to modifications to files of the original work.  
-
-* Strong copyleft: GPL and AGPL
-* Weak copyleft: LGPL, MPL, EPL
 
 **Example: GPL 2.0**
 
