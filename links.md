@@ -31,3 +31,5 @@ in the GitHub branch dropdown (02-add-license, 03-add-citation, ...). -->
 [branch-release]: https://github.com/UC-OSPO-Network/software-demo/tree/04-create-release
 [branch-metadata]: https://github.com/UC-OSPO-Network/software-demo/tree/05-add-metadata
 [branch-pixi]: https://github.com/UC-OSPO-Network/software-demo/tree/06-optional-pixi
+
+[schindler-softwarekg]: https://doi.org/10.7717/peerj-cs.835

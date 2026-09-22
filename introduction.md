@@ -59,7 +59,7 @@ Every specialized term in this lesson — bus factor, FAIR4RS, DOI, CFF, ORCID, 
 
 ### How common is this?
 
-A 2021 analysis found that over **48% of research articles** mention software, but consistent sharing and citation remains the exception. Most of that software is either unavailable, uncredited, or impossible to reproduce.
+A study of 3.2 million PubMed Central articles found that **59.5% mention software**, but in 2020 only about **38% gave enough detail to uniquely identify** the software they used ([Schindler et al., 2022][schindler-softwarekg]). Most research software goes uncredited, and much of it can't be reproduced.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -88,7 +88,7 @@ A URL is a shelf location, not a catalog record. Citing code this way is like ci
 
 ### The right way
 
-> Phan, L., Padilla, K., Otsuji, R., & Dennis, T. (2026). *Biodiversity Analysis Toolkit* (v0.1.0). Zenodo. https://doi.org/10.5281/zenodo.123456
+> Dennis, T., Phan, L., Otsuji, R., & Padilla, K. (2026). *Biodiversity Analysis Toolkit* (v0.1.0). Zenodo. https://doi.org/10.5281/zenodo.123456
 
 **Why this works:**
 

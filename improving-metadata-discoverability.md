@@ -75,7 +75,7 @@ You may add these in multiple places, but they should remain consistent. This is
 
 GitHub uses structured metadata to improve search ranking and cross-repository linking.
 
-**Add these items in `Settings → General → Topics`:**
+**On your repository's front page, click the gear icon next to About, then add these in the Topics field:**
 
 - discipline tags (e.g., `geospatial`, `text-mining`, `materials-science`)
 - methodological tags (`simulation`, `visualization`, `machine-learning`)
