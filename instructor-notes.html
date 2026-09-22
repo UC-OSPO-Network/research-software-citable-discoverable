@@ -561,28 +561,31 @@ aid.</p>
 <td>starting state (what everyone forks)</td>
 </tr>
 <tr>
-<td><code>after-license</code></td>
+<td><code>02-add-license</code></td>
 <td>after Episode 2 (license added)</td>
 </tr>
 <tr>
-<td><code>after-citation</code></td>
+<td><code>03-add-citation</code></td>
 <td>after Episode 3 (CITATION.cff added)</td>
 </tr>
 <tr>
-<td><code>after-release</code></td>
+<td><code>04-create-release</code></td>
 <td>after Episode 4 (release + DOI)</td>
 </tr>
 <tr>
-<td><code>after-metadata</code></td>
+<td><code>05-add-metadata</code></td>
 <td>after Episode 5 (full metadata, the finished repo)</td>
 </tr>
 <tr>
-<td><code>optional-pixi</code></td>
+<td><code>06-optional-pixi</code></td>
 <td>the optional pixi episode (branches off
-<code>after-metadata</code>)</td>
+<code>05-add-metadata</code>)</td>
 </tr>
 </tbody>
 </table>
+<p>Branches are numbered to match their episode, so they sort in
+teaching order in GitHub’s branch dropdown instead of
+alphabetically.</p>
 <p><strong>Why there’s no per-episode “check out this branch” step
 anymore.</strong> In the old command-line version, learners
 <code>git checkout</code>ed a branch to teleport their working state
@@ -594,9 +597,10 @@ up, they open the relevant upstream reference branch and copy the
 missing file into their own <code>main</code>. Point this out once,
 early, then let the reference branches sit in the background.</p>
 <p><strong>Pixi is out of the main chain.</strong> Unlike the old demo
-repo, the <code>after-*</code> branches contain <strong>no</strong> pixi
-files. Pixi lives only on <code>optional-pixi</code>, which branches off
-<code>after-metadata</code>. So learners on the citation-focused track
+repo, the <code>02</code>-<code>05</code> branches contain
+<strong>no</strong> pixi files. Pixi lives only on
+<code>06-optional-pixi</code>, which branches off
+<code>05-add-metadata</code>. So learners on the citation-focused track
 never see stray <code>pixi.toml</code>/<code>pixi.lock</code> files, and
 there’s nothing to explain away.</p>
 <hr></section><section><h2 class="section-heading" id="common-sticking-points">Common Sticking Points<a class="anchor" aria-label="anchor" href="#common-sticking-points"></a>
@@ -634,7 +638,9 @@ inside code blocks or to autolinks written as <https://example.org>.
 -->
 <!-- UC OSPO / UC resources -->
 <!-- General open-source references -->
-<!-- Demo repository and its view-only reference branches (the per-episode "answer keys") -->
+<!-- Demo repository and its view-only reference branches (the per-episode "answer keys").
+Branches are numbered to match the episode they correspond to and sort correctly
+in the GitHub branch dropdown (02-add-license, 03-add-citation, ...). -->
 </section><section id="aggregate-instructor-notes"></section>
 </div>
     </main>

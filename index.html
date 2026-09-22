@@ -364,9 +364,9 @@ license, a citation file, a release with a DOI, then richer metadata. By
 the end you’ll have a complete, citable repository you built
 yourself.</p>
 <p>The upstream repository maintains a set of view-only
-<strong>reference branches</strong> (<code>after-license</code>,
-<code>after-citation</code>, <code>after-release</code>,
-<code>after-metadata</code>) that show the target state after each
+<strong>reference branches</strong> (<code>02-add-license</code>,
+<code>03-add-citation</code>, <code>04-create-release</code>,
+<code>05-add-metadata</code>) that show the target state after each
 episode. If you fall behind or want to check your work, open the
 matching branch in GitHub’s branch dropdown and compare.</p>
 <p>The only episode that needs software installed on your computer is
@@ -446,7 +446,9 @@ inside code blocks or to autolinks written as <https://example.org>.
 -->
 <!-- UC OSPO / UC resources -->
 <!-- General open-source references -->
-<!-- Demo repository and its view-only reference branches (the per-episode "answer keys") -->
+<!-- Demo repository and its view-only reference branches (the per-episode "answer keys").
+Branches are numbered to match the episode they correspond to and sort correctly
+in the GitHub branch dropdown (02-add-license, 03-add-citation, ...). -->
 </section><section id="setup"><p>This lesson runs almost entirely in your <strong>web
 browser</strong>. For most of it you need nothing more than a
 <strong>GitHub account</strong>. Only the optional final episode
@@ -506,15 +508,15 @@ each episode:</p>
 <th>Shows the repo after…</th>
 </tr></thead><tbody><tr><td><code>main</code></td>
 <td>the starting state (what you fork)</td>
-</tr><tr><td><code>after-license</code></td>
+</tr><tr><td><code>02-add-license</code></td>
 <td>Episode 2, license added</td>
-</tr><tr><td><code>after-citation</code></td>
+</tr><tr><td><code>03-add-citation</code></td>
 <td>Episode 3, CITATION.cff added</td>
-</tr><tr><td><code>after-release</code></td>
+</tr><tr><td><code>04-create-release</code></td>
 <td>Episode 4, release + DOI</td>
-</tr><tr><td><code>after-metadata</code></td>
+</tr><tr><td><code>05-add-metadata</code></td>
 <td>Episode 5, full metadata (the finished repo)</td>
-</tr><tr><td><code>optional-pixi</code></td>
+</tr><tr><td><code>06-optional-pixi</code></td>
 <td>the optional pixi episode</td>
 </tr></tbody></table><p>If you fall behind or want to compare, open the upstream repo, switch
 to the matching branch in the branch dropdown, and look at the files.
@@ -572,17 +574,17 @@ a local clone of your fork.</p>
 </button>
 </div>
 </nav><div id="nav-tabContent-1" class="tab-content">
-<div id="nav-tabpanel-1-Windows" class="tab-pane show active" aria-labelledby="nav-tab-1-Windows" role="tabpanel">
+<div id="nav-tabpanel-1-Windows" class="tab-pane show active" role="tabpanel" aria-labelledby="nav-tab-1-Windows">
 <p>Download and run <strong>Git for Windows</strong> from <a href="https://git-scm.com/downloads/win" class="external-link uri">https://git-scm.com/downloads/win</a> and accept the default
 options. This also installs <strong>Git Bash</strong>, a terminal you
 can use for the remaining steps.</p>
 </div>
-<div id="nav-tabpanel-1-macOS" class="tab-pane" aria-labelledby="nav-tab-1-macOS" role="tabpanel">
+<div id="nav-tabpanel-1-macOS" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-1-macOS">
 <p>Git is usually already installed. Open <strong>Terminal</strong> and
 run <code>git --version</code>. If you are prompted to install the
 Command Line Developer Tools, accept. Otherwise install it with <a href="https://brew.sh" class="external-link">Homebrew</a>: <code>brew install git</code>.</p>
 </div>
-<div id="nav-tabpanel-1-Linux" class="tab-pane" aria-labelledby="nav-tab-1-Linux" role="tabpanel">
+<div id="nav-tabpanel-1-Linux" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-1-Linux">
 <p>Git is usually already installed. If not, use your package manager,
 for example <code>sudo apt install git</code> (Debian/Ubuntu) or
 <code>sudo dnf install git</code> (Fedora).</p>
@@ -612,7 +614,7 @@ for example <code>sudo apt install git</code> (Debian/Ubuntu) or
 </button>
 </div>
 </nav><div id="nav-tabContent-2" class="tab-content">
-<div id="nav-tabpanel-2-Windows" class="tab-pane show active" aria-labelledby="nav-tab-2-Windows" role="tabpanel">
+<div id="nav-tabpanel-2-Windows" class="tab-pane show active" role="tabpanel" aria-labelledby="nav-tab-2-Windows">
 <p>In <strong>PowerShell</strong>, run:</p>
 <div class="codewrapper sourceCode" id="cb1">
 <h3 class="code-label">POWERSHELL<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -622,7 +624,7 @@ for example <code>sudo apt install git</code> (Debian/Ubuntu) or
 <p>Then close and reopen your terminal so <code>pixi</code> is on your
 PATH.</p>
 </div>
-<div id="nav-tabpanel-2-macOS" class="tab-pane" aria-labelledby="nav-tab-2-macOS" role="tabpanel">
+<div id="nav-tabpanel-2-macOS" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-2-macOS">
 <p>In <strong>Terminal</strong>, run:</p>
 <div class="codewrapper sourceCode" id="cb2">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -631,7 +633,7 @@ PATH.</p>
 </div>
 <p>Then close and reopen your terminal.</p>
 </div>
-<div id="nav-tabpanel-2-Linux" class="tab-pane" aria-labelledby="nav-tab-2-Linux" role="tabpanel">
+<div id="nav-tabpanel-2-Linux" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-2-Linux">
 <p>In a terminal, run:</p>
 <div class="codewrapper sourceCode" id="cb3">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -692,7 +694,9 @@ inside code blocks or to autolinks written as <https://example.org>.
 -->
 <!-- UC OSPO / UC resources -->
 <!-- General open-source references -->
-<!-- Demo repository and its view-only reference branches (the per-episode "answer keys") -->
+<!-- Demo repository and its view-only reference branches (the per-episode "answer keys").
+Branches are numbered to match the episode they correspond to and sort correctly
+in the GitHub branch dropdown (02-add-license, 03-add-citation, ...). -->
 </div>
 </section></section></main><nav class="bottom-pagination mx-md-4" aria-label="Next Chapter"><!-- content for small screens --><div class="d-block d-sm-block d-md-none">
         <a class="chapter-link float-end" href="introduction.html" rel="next">Next<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
