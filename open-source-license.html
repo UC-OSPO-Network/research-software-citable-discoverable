@@ -227,7 +227,8 @@
 
     <div id="flush-collapsecurrent" class="accordion-collapse collapse show" data-bs-parent="#accordionFlushcurrent">
       <div class="accordion-body">
-        <ul><li><a href="#why-licensing-matters">Why licensing matters</a></li>
+        <ul><li><a href="#disclaimer">Disclaimer</a></li>
+<li><a href="#why-licensing-matters">Why licensing matters</a></li>
 <li><a href="#understanding-license-categories">Understanding license categories</a></li>
 <li><a href="#how-to-choose-a-license">How to choose a license</a></li>
 <li><a href="#communicating-your-license">Communicating your license</a></li>
@@ -341,7 +342,7 @@
       </div>
     </nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Choosing an Open-Source License</h1>
-        <p>Last updated on 2026-09-21 |
+        <p>Last updated on 2026-09-22 |
 
         <a href="https://github.com/UC-OSPO-Network/research-software-citable-discoverable/edit/main/episodes/open-source-license.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -372,7 +373,7 @@
 <h3 class="card-title">Objectives</h3>
 <ul><li>Explain why unlicensed software is not legally reusable</li>
 <li>Describe the main categories of open-source licenses</li>
-<li>Choose an appropriate license for a UC research project, using UC
+<li>Choose an appropriate license for a UC research project or using UC
 resources</li>
 <li>Add a license file to a GitHub repository</li>
 <li>
@@ -383,7 +384,17 @@ is yours to answer and when to refer it to Tech Transfer / IP</li>
 </div>
 </div>
 </div>
-<section><h2 class="section-heading" id="why-licensing-matters">Why licensing matters<a class="anchor" aria-label="anchor" href="#why-licensing-matters"></a></h2>
+<section><h2 class="section-heading" id="disclaimer">Disclaimer<a class="anchor" aria-label="anchor" href="#disclaimer"></a></h2>
+<hr class="half-width"><p>This workshop is not meant to provide legal advice or replace
+consulting with an attorney. The information contained herein is
+provided for informational purposes only, and should not be construed as
+legal advice on any subject matter. The contents of this episode
+contains general information and may not reflect current legal
+developments or address your situation. If you require legal advice,
+please consult with your attorney. No attorney-client relationship is
+created between you and the authors/presenter of this episode or
+University of California.</p>
+</section><section><h2 class="section-heading" id="why-licensing-matters">Why licensing matters<a class="anchor" aria-label="anchor" href="#why-licensing-matters"></a></h2>
 <hr class="half-width"><p>Here is the counterintuitive fact this episode turns on: code posted
 publicly on GitHub with no license is not open. Copyright attaches
 automatically, so “no license” means “all rights reserved,” and anyone
@@ -392,16 +403,14 @@ invitation nobody can legally accept. A license file is one small text
 file, usually chosen from a short approved list, and it is the
 difference between “look but don’t touch” and actually reusable.</p>
 <p>Clear licensing tells others what they can and cannot do with your
-code, which is the minimum needed for open, reproducible research. The
-<a href="https://ucospo.net/oss-resources/template-guides/license-guide/" class="external-link">UC
-OSPO License Guide</a> covers UC institutional requirements.</p>
-<div id="an-orphan-work-with-a-live-author" class="callout">
+code, which is the minimum needed for open, reproducible research.</p>
+<div id="an-unclaimed-work-with-a-live-author" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
 <span class="callout-header">Callout</span>
-<div id="an-orphan-work-with-a-live-author" class="callout-inner">
-<h3 class="callout-title">An orphan work with a live author</h3>
+<div id="an-unclaimed-work-with-a-live-author" class="callout-inner">
+<h3 class="callout-title">An unclaimed work with a live author</h3>
 <div class="callout-content">
 <p>Every librarian has met this object: the digitized photograph with no
 rights information, the orphan work nobody can clear. It sits in the
@@ -426,33 +435,77 @@ matters for research.</p>
 Software?</h3>
 <div class="callout-content">
 <p>At most universities, software created using institutional resources
-is owned by the institution, not the individual researcher. Before
-releasing code under an open-source license, check with your
-<strong>Technology Transfer or Intellectual Property office</strong>.
-They will verify ownership, funding requirements, and any third-party
-restrictions.</p>
+or created as part of research is owned by the institution, not the
+individual researcher. Before releasing code under an open-source
+license, check with your <strong>Technology Transfer or Intellectual
+Property office</strong>. They will verify ownership, funding
+requirements, and any third-party restrictions.</p>
 <p><strong>If you are at a UC campus:</strong> software is typically
-owned by <em>The Regents of the University of California</em>. Your
-campus Tech Transfer office can help you select from the <a href="https://security.ucop.edu/resources/open-source-software-licensing.html" class="external-link">UC-approved
-license list</a>. <em>(UC-specific)</em></p>
+owned by <em>The Regents of the University of California</em>. The UC
+Copyright policy can be found at ____<a href="https://copyright.universityofcalifornia.edu" class="external-link uri">https://copyright.universityofcalifornia.edu</a> or google
+UC Copyright. The policy governs copyright ownership. Prior to release
+contact your campus Tech Transfer office to verify ownership, funding
+requirements, and any third-party restrictions.</p>
+<p>The TTO or UC OSPO Network can help you select from the <a href="https://security.ucop.edu/resources/open-source-software-licensing.html" class="external-link">UC-approved
+license list</a> provided the TTO can cleared your code for release. The
+chart can be found at: <a href="https://security.ucop.edu/files/documents/resources/oss-chart.pdf" class="external-link uri">https://security.ucop.edu/files/documents/resources/oss-chart.pdf</a>.
+<em>(UC-specific)</em></p>
+<p>The <a href="https://ucospo.net/oss-resources/template-guides/license-guide/" class="external-link">UC
+OSPO License Guide</a> covers UC institutional requirements.</p>
 <p><strong>At other institutions:</strong> check with your research
 computing, library, or legal office. Most will have a similar process
 and a list of preferred licenses.</p>
 </div>
 </div>
 </div>
+<div id="challenge-true-or-false" class="callout challenge">
+<div class="callout-square">
+<i class="callout-icon" data-feather="zap"></i>
+</div>
+<span class="callout-header">Challenge</span>
+<div id="challenge-true-or-false" class="callout-inner">
+<h3 class="callout-title">Challenge: True or False</h3>
+<div class="callout-content">
+<p>[Myth or Fact] If you post your code publicly on the internet, it
+automatically becomes Open Source. [Myth or Fact] An open source license
+is essentially a legal “permission slip” from the creator. [Myth or
+Fact] An open source license means I am giving away my ownership of the
+code.</p>
+</div>
+</div>
+</div>
+<div id="accordionSolution1" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
+  <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
+</button>
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div class="accordion-body">
+<p>[Myth or Fact] If you post your code publicly on the internet, it
+automatically becomes Open Source. FALSE/MYTH [Myth or Fact] An open
+source license is essentially a legal “permission slip” from the
+creator. TRUE/FACT [Myth or Fact] An open source license means I am
+giving away my ownership of the code. FALSE/MYTH</p>
+</div>
+</div>
+</div>
+</div>
 </section><section><h2 class="section-heading" id="understanding-license-categories">Understanding license categories<a class="anchor" aria-label="anchor" href="#understanding-license-categories"></a></h2>
-<hr class="half-width"><p>Learners often fear a wall of legal text here, but the real decision
-is usually binary. Open-source licenses fall into two broad groups, and
-for most research code the whole choice takes less time than choosing a
-journal.</p>
+<hr class="half-width"><p>Open-source licenses fall into two broad groups; within those groups,
+there are some gradation. Once you understand licenses choosing a
+license becomes easier.</p>
+<p>Two categories are: Permissive licenses Copyleft licenses</p>
 <div class="section level3">
 <h3 id="permissive-licenses">Permissive licenses<a class="anchor" aria-label="anchor" href="#permissive-licenses"></a></h3>
-<p><strong>Examples: BSD, MIT, Apache 2.0</strong></p>
-<p>These allow broad reuse with minimal restrictions. Anyone can copy,
-modify, or redistribute the code. They are common in research because
-they’re simple and maximize flexibility. Think of them as roughly a CC
-BY for code: “reuse this, just keep my name on it.”</p>
+<p>Easy to comply with These allow broad reuse with minimal
+restrictions. Anyone can freely copy, modify, or redistribute the code.
+They are common in research because they’re simple and maximize
+flexibility. Think of them as roughly a CC BY for code: “reuse this,
+just keep my name on it.”</p>
+<p>Examples: <strong>BSD and MIT</strong> Note: There are different
+flavors of BSD: 2-Clause and 3-Clause 3-Clause includes a clause that
+explicitly states no endorsement or use of the licensor’s name. It is
+recommended by UC</p>
 <p><strong>BSD licenses are a common first choice at many research
 institutions</strong> because they:</p>
 <ul><li>originated at UC Berkeley</li>
@@ -460,26 +513,59 @@ institutions</strong> because they:</p>
 <li>protect both the institution and authors</li>
 <li>integrate well with most other licenses</li>
 <li>have minimal restrictions</li>
-</ul></div>
+</ul><div id="caution2" class="callout caution">
+<div class="callout-square">
+<i class="callout-icon" data-feather="alert-triangle"></i>
+</div>
+<span class="callout-header">Caution</span>
+<div class="callout-inner">
+<div class="callout-content">
+<p>Special case: Apache and BSD + Patent Both are considered Permissive
+licenses; BUT they contain explicit patent grants.</p>
+<p>The UC and many corporations are wary about patent grants as these
+patents grants can inadvertently reach into their patent portfolio and
+cover a patent from another campus or lab/research team.</p>
+<p>For this reach releasing code under the Apache and BSD + Patent is
+disfavored.</p>
+</div>
+</div>
+</div>
+</div>
 <div class="section level3">
 <h3 id="copyleft-licenses">Copyleft licenses<a class="anchor" aria-label="anchor" href="#copyleft-licenses"></a></h3>
+<p>Copyleft are also known as viral or reciprocal licenses. The UC OSS
+Chart uses the term hereditary.</p>
+<p>These require that derivative works also remain open source by
+requiring that derivative works must be licensed under the same copyleft
+license as the original work.</p>
+<p>This protects openness across the lifecycle of a project.</p>
+</div>
+<div class="section level3">
+<h3 id="what-is-a-derivative-can-be-ambiguous-and-legal-question-">What is a derivative can be ambiguous and legal question.<a class="anchor" aria-label="anchor" href="#what-is-a-derivative-can-be-ambiguous-and-legal-question-"></a></h3>
+<p>Strong copyleft define derivative works broadly, so linking can
+creative a derivative work Weak copyleft usually allow some exception
+that allows some combination with your work and the original work
+without triggering the copyleft ; or limit derivative works to
+modifications to files of the original work.</p>
+<p>Strong copyleft: GPL and AGPL Weak copyleft: LGPL, MPL, EPL</p>
 <p><strong>Example: GPL 2.0</strong></p>
 <p>These require that derivative works also remain open-source. This
 protects openness across the lifecycle of a project. They add one
 condition to the permissive deal: “and anything you build from it must
 stay open too.”</p>
-<div id="note-on-gpl-3.0" class="callout caution">
+<div id="version-3-of-gpl-agpl-lgpl" class="callout caution">
 <div class="callout-square">
 <i class="callout-icon" data-feather="alert-triangle"></i>
 </div>
 <span class="callout-header">Caution</span>
-<div id="note-on-gpl-3.0" class="callout-inner">
-<h3 class="callout-title">Note on GPL 3.0</h3>
+<div id="version-3-of-gpl-agpl-lgpl" class="callout-inner">
+<h3 class="callout-title">Version 3 of GPL, AGPL, LGPL</h3>
 <div class="callout-content">
-<p>The UC system does <strong>not recommend GPL 3.0</strong> for
-university-owned software due to patent provisions that may conflict
-with UC policies. If you need copyleft protection, consult your campus
-Tech Transfer office about GPL 2.0 or alternatives.</p>
+<p>The UC system does <strong>not recommend version 3.0 of GPL, AGPL,
+and LGPL</strong> for university-owned software due to patent provisions
+that may conflict with UC policies. If you need copyleft protection,
+consult your campus Tech Transfer office about GPL 2.0 or
+alternatives.</p>
 </div>
 </div>
 </div>
@@ -543,27 +629,24 @@ Here’s a decision guide:</p>
 <td>MIT</td>
 <td><code>MIT</code></td>
 <td>Minimal text, very popular</td>
-</tr><tr><td>Industry collaboration</td>
-<td>Apache 2.0</td>
-<td><code>Apache-2.0</code></td>
-<td>Explicit patent terms</td>
 </tr><tr><td>Educational focus</td>
-<td>ECL 2.0</td>
-<td><code>ECL-2.0</code></td>
+<td>—-</td>
+<td>—–</td>
 <td>Education-specific variant</td>
 </tr></tbody></table><p>The <strong>SPDX identifier</strong> is the short, machine-readable
 code used by GitHub, Zenodo, and your <code>CITATION.cff</code> file to
 communicate your license automatically. When GitHub shows a license
 badge in the sidebar, it’s reading the SPDX identifier.</p>
 <p><strong>Always consult your institution’s Tech Transfer or IP office
-before releasing software created with institutional
-resources.</strong></p>
+before releasing software created with institutional resources, part of
+your research, grant funding, multiple institutions, industry
+partner</strong></p>
 <div id="accordionSpoiler1" class="accordion spoiler-accordion accordion-flush">
 <div class="accordion-item">
 <button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler1" aria-expanded="false" aria-controls="collapseSpoiler1">
   <h3 class="accordion-header" id="headingSpoiler1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> What about data and documentation? </h3>
 </button>
-<div id="collapseSpoiler1" class="accordion-collapse collapse" aria-labelledby="headingSpoiler1" data-bs-parent="#accordionSpoiler1">
+<div id="collapseSpoiler1" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler1" aria-labelledby="headingSpoiler1">
 <div class="accordion-body">
 <p>Software licenses (BSD, MIT, Apache) are written for <em>executable
 code</em>. If your repository also contains datasets, figures, or
@@ -618,7 +701,8 @@ requirements and templates.</li>
 <li>
 <a href="https://security.ucop.edu/resources/open-source-software-licensing.html" class="external-link">UC
 OSS Chart and Companion Guide</a> <em>(UC-specific)</em> – UC-approved
-“low-risk” license list.</li>
+“low-risk” license list. <a href="https://security.ucop.edu/files/documents/resources/oss-chart.pdf" class="external-link uri">https://security.ucop.edu/files/documents/resources/oss-chart.pdf</a>
+</li>
 </ul></div>
 </div>
 </div>
@@ -640,7 +724,11 @@ the office that determines who owns the code.</p>
 grant funding, multiple institutions, industry partners). This goes to
 Tech Transfer / IP, not the service desk.</li>
 <li>The repo pulls in <strong>third-party code or data</strong> with its
-own license terms that might conflict.</li>
+own license terms that might conflict. This is VERY IMPORTANT. Package
+managers, docker containers, build tools can add libraries or other code
+to your code. You need to ensure that this additional code does not have
+a conflicting license. No copyleft in permissively licensed product. No
+unlicensed code. No Apache in version 2 of GPL variants.<br></li>
 <li>Someone wants to <strong>relicense or remove a license</strong> on
 code that already has contributors.</li>
 </ul><p>What you <em>can</em> own confidently: knowing your campus default
@@ -684,12 +772,12 @@ click <strong>Choose a license template</strong> to insert the full BSD
 </div>
 </div>
 </div>
-<div id="accordionSolution1" class="accordion challenge-accordion accordion-flush">
+<div id="accordionSolution2" class="accordion challenge-accordion accordion-flush">
 <div class="accordion-item">
-<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
-  <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
+  <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <p>GitHub automatically detects the <code>LICENSE</code> file and
 displays it in the sidebar. Your file should look like this:</p>
@@ -745,24 +833,25 @@ license terms even without GitHub’s automatic detection.</p>
 <p>Which license would you recommend for each UC research scenario?</p>
 <p><strong>Scenario 1:</strong> A Python package for ecological data
 analysis. You want maximum adoption across academia and industry.</p>
-<p><strong>Scenario 2:</strong> A data visualization tool developed with
-a biotech partner who may commercialize derivatives.</p>
+<p><strong>Scenario 2:</strong> A data visualization tool that you only
+want other researchers to use.</p>
 <p><strong>Scenario 3:</strong> A simple utility script you’re sharing
 with collaborators.</p>
 </div>
 </div>
 </div>
-<div id="accordionSolution2" class="accordion challenge-accordion accordion-flush">
+<div id="accordionSolution3" class="accordion challenge-accordion accordion-flush">
 <div class="accordion-item">
-<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
-  <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution3" aria-expanded="false" aria-controls="collapseSolution3">
+  <h4 class="accordion-header" id="headingSolution3"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
 <div class="accordion-body">
 <p><strong>Scenario 1:</strong> BSD 3-Clause (UC’s default
 recommendation, maximum flexibility and adoption)</p>
-<p><strong>Scenario 2:</strong> Apache 2.0 (explicit patent protection
-important for industry partnerships)</p>
+<p><strong>Scenario 2:</strong> Talk to TTO or OSPO Network to find a
+public source license with restrictions permitting only
+non-commercial/educational/research use.</p>
 <p><strong>Scenario 3:</strong> Either BSD 3-Clause or MIT (both work
 well for simple sharing; BSD preferred by UC)</p>
 <p>In all cases, verify with your campus Tech Transfer office before
@@ -784,9 +873,9 @@ repository following UC recommendations.</p>
 <div class="callout-content">
 <ul><li>Without a license, software is legally restricted and not
 reusable</li>
-<li>BSD 3-Clause is a common default at research institutions; MIT and
-Apache 2.0 are strong alternatives</li>
-<li>Permissive licenses (BSD, MIT, Apache 2.0) maximize flexibility and
+<li>BSD 3-Clause is a common default at research institutions; MIT is a
+strong alternatives</li>
+<li>Permissive licenses (BSD, MIT) maximize flexibility and
 adoption</li>
 <li>Always consult your institution’s Tech Transfer or IP office before
 releasing institutionally-owned software</li>
@@ -869,8 +958,8 @@ inside code blocks or to autolinks written as <https://example.org>.
   "url": "https://UC-OSPO-Network.github.io/research-software-citable-discoverable/open-source-license.html",
   "identifier": "https://UC-OSPO-Network.github.io/research-software-citable-discoverable/open-source-license.html",
   "dateCreated": "2025-12-06",
-  "dateModified": "2026-09-21",
-  "datePublished": "2026-09-21"
+  "dateModified": "2026-09-22",
+  "datePublished": "2026-09-22"
 }
 
   </script><script>
