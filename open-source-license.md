@@ -137,8 +137,6 @@ This protects openness across the lifecycle of a project.
 **  provide an exception that allows certain combinations with your work and the original work without triggering the copyleft provision; or
 **  limit derivative works to modifications to files of the original work.  
 
-**Example: GPL 2.0**
-
 ::::::::::::::::::::::::::::::: caution
 
 ### Version 3 of GPL, AGPL, LGPL 
