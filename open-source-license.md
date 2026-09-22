@@ -56,7 +56,7 @@ At most universities, software created using institutional resources or created 
 
 The TTO or UC OSPO Network can help you select from the [UC-approved license list][uc-oss-chart] provided the TTO can cleared your code for release. The chart can be found at: https://security.ucop.edu/files/documents/resources/oss-chart.pdf. *(UC-specific)*
 
- The [UC OSPO License Guide][uc-license-guide] covers UC institutional requirements.  
+The [UC OSPO License Guide][uc-license-guide] covers UC institutional requirements.  
  
 **At other institutions:** check with your research computing, library, or legal office. Most will have a similar process and a list of preferred licenses.
 
@@ -66,14 +66,14 @@ The TTO or UC OSPO Network can help you select from the [UC-approved license lis
 
 ## Challenge: True or False
 
-[Myth or Fact] If you post your code publicly on the internet, it automatically becomes Open Source. 
-[Myth or Fact] An open source license is essentially a legal “permission slip” from the creator. 
-[Myth or Fact] An open source license means I am giving away my ownership of the code.
+* [Myth or Fact] If you post your code publicly on the internet, it automatically becomes Open Source. 
+* [Myth or Fact] An open source license is essentially a legal “permission slip” from the creator. 
+* [Myth or Fact] An open source license means I am giving away my ownership of the code.
 
 :::::::::::::::::::::::: solution
-[Myth or Fact] If you post your code publicly on the internet, it automatically becomes Open Source.   FALSE/MYTH
-[Myth or Fact] An open source license is essentially a legal “permission slip” from the creator.  TRUE/FACT
-[Myth or Fact] An open source license means I am giving away my ownership of the code. FALSE/MYTH
+* [Myth or Fact] If you post your code publicly on the internet, it automatically becomes Open Source.   FALSE/MYTH
+* [Myth or Fact] An open source license is essentially a legal “permission slip” from the creator.  TRUE/FACT
+* [Myth or Fact] An open source license means I am giving away my ownership of the code. FALSE/MYTH
 
 :::::::::::::::::::::::::::::::::
 
@@ -81,11 +81,11 @@ The TTO or UC OSPO Network can help you select from the [UC-approved license lis
 
 ## Understanding license categories
 
-Open-source licenses fall into two broad groups; within those groups, there are some gradation.  Once you understand licenses choosing a license becomes easier.
+Open-source licenses fall into two broad groups; within those groups, there is some gradation.  Once you understand licenses choosing a license becomes easier.
 
-Two categories are:
-   * Permissive licenses
-   * Copyleft licenses
+The two categories are:
+* Permissive licenses
+* Copyleft licenses
 
 ### Permissive licenses
 
@@ -96,7 +96,9 @@ Two categories are:
 * Think of them as roughly a CC BY for code: "reuse this, just keep my name on it.”
 
 Examples:  **BSD and MIT**
-* Note:  There are different flavors of BSD: 
+
+Note:  There are different flavors of BSD: 
+
 * 2-Clause and 3-Clause 
 * 3-Clause includes a clause that explicitly states no endorsement or use of the licensor’s name. It is recommended by UC
 
@@ -128,10 +130,12 @@ These require that derivative works also remain open source by requiring that de
 This protects openness across the lifecycle of a project.
 
 ### What is a derivative can be ambiguous and legal question.
+
 * Strong copyleft define derivative works broadly, so linking can creative a derivative work 
+
 * Weak copyleft usually:
 *      provide an exception that allows certain combinations with your work and the original work without triggering the copyleft provision; or
- *     limit derivative works to modifications to files of the original work.  
+*     limit derivative works to modifications to files of the original work.  
 
 * Strong copyleft: GPL and AGPL
 * Weak copyleft: LGPL, MPL, EPL
