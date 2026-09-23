@@ -67,24 +67,9 @@ UC's [open source software risk chart][uc-oss-chart-pdf] rates BSD, the license 
 
 Full chart (PDF): <https://security.ucop.edu/files/documents/resources/oss-chart.pdf>
 
-::::::::::::::::::::::::::::::::::::: spoiler
-
-### UC license risk chart: a short guide
-
-UC's chart gives each license one of three ratings: **low**, **moderate**, or **high risk**. The rating is about how likely that license is to conflict with UC policy.
-
-Table: UC's risk ratings for common open source licenses, simplified
-
-| UC rating | Licenses | In plain terms |
-|---|---|---|
-| Low risk | BSD, MIT, Apache 1.x, GPL 2.x and LGPL 2.x (not "any later version"), ECL 2.0 | Generally fine to use and to share, inside or outside UC |
-| Moderate risk | Apache 2.0, Eclipse (EPL) 1.0/2.0, MPL 2.0 | Fine to use inside UC with a notice. Sharing modified code outside UC needs a closer look. |
-| High risk | GPL 3.0, LGPL 3.0, AGPL 3.0 | Fine to use inside UC with a notice. Sharing outside UC is rarely approved. |
-| Not rated | Any other license | Ask your campus licensing office |
-
 A rating isn't an approval. It tells you how quick the approval conversation is likely to be, not whether a license suits your project. For new code created at UC, start with your campus licensing office. A few licenses have exceptions for specific situations; see the [full chart][uc-oss-chart-pdf] and its [companion guide][uc-oss-companion] for those.
 
-::::::::::::::::::::::::::::::::::::::::::::::::
+
 
 ::::::::::::::::::::::::::::::::::::: instructor
 
