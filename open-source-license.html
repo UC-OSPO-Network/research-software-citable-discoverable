@@ -447,10 +447,9 @@ Copyright policy can be found at ____<a href="https://copyright.universityofcali
 UC Copyright. The policy governs copyright ownership. Prior to release
 contact your campus Tech Transfer office to verify ownership, funding
 requirements, and any third-party restrictions.</p>
-<p>The TTO or UC OSPO Network can help you select from the <a href="https://security.ucop.edu/resources/open-source-software-licensing.html" class="external-link">UC-approved
-license list</a> provided the TTO can cleared your code for release. The
-chart can be found at: <a href="https://security.ucop.edu/files/documents/resources/oss-chart.pdf" class="external-link uri">https://security.ucop.edu/files/documents/resources/oss-chart.pdf</a>.
-<em>(UC-specific)</em></p>
+<p>Once the TTO has cleared your code for release, the TTO or the UC
+OSPO Network can help you choose a license. UC’s risk chart, below,
+shows how UC rates the common ones. <em>(UC-specific)</em></p>
 <p>The <a href="https://ucospo.net/oss-resources/template-guides/license-guide/" class="external-link">UC
 OSPO License Guide</a> covers UC institutional requirements.</p>
 <p><strong>At other institutions:</strong> check with your research
@@ -459,6 +458,48 @@ and a list of preferred licenses.</p>
 </div>
 </div>
 </div>
+<p>UC’s <a href="https://security.ucop.edu/files/documents/resources/oss-chart.pdf" class="external-link">open
+source software risk chart</a> rates BSD, the license used in this
+exercise, low in every scenario it lists. A low rating does not approve
+the release of a particular project. Before licensing Regents-owned
+software, follow your campus’s process for approval by the appropriate
+delegated authority. <em>(UC-specific)</em></p>
+<p>Full chart (PDF): <a href="https://security.ucop.edu/files/documents/resources/oss-chart.pdf" class="external-link uri">https://security.ucop.edu/files/documents/resources/oss-chart.pdf</a></p>
+<div id="accordionSpoiler1" class="accordion spoiler-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler1" aria-expanded="false" aria-controls="collapseSpoiler1">
+  <h3 class="accordion-header" id="headingSpoiler1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> UC license risk chart: a short guide </h3>
+</button>
+<div id="collapseSpoiler1" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler1" aria-labelledby="headingSpoiler1">
+<div class="accordion-body">
+<table class="table"><caption>Selected ratings from UC’s open source software chart</caption>
+<colgroup><col width="50%"><col width="50%"></colgroup><thead><tr><th>Licenses</th>
+<th>What the UC chart says</th>
+</tr></thead><tbody><tr><td>BSD, MIT, Apache 1.x, GPL 1.x/2.x and LGPL 2.x (not “any later
+version”), ECL 2.0</td>
+<td>Low in every listed scenario. Keep required notices and follow the
+license terms.</td>
+</tr><tr><td>Apache 2.0, Eclipse 1.0/2.0, MPL 2.0</td>
+<td>Sharing changes beyond bug fixes outside UC is moderate. MPL is also
+moderate for function calls only, and its internal-modification entry is
+low for bug fixes only. Internal use needs UC’s Internal Use
+Notice.</td>
+</tr><tr><td>AGPL 3.0, GPL 3.0, LGPL 3.0</td>
+<td>Most distribution outside UC is high. AGPL’s function-calls-only
+entry is moderate. Internal use is low with an Internal Use Notice.</td>
+</tr><tr><td>Other OSS licenses</td>
+<td>Contact your campus licensing office.</td>
+</tr></tbody></table><p>The colors rate the risk of conflicting with UC policy, not whether a
+license suits your project, and they don’t settle ownership, sponsor, or
+patent questions. For new code created at UC, UC’s own decision
+flowchart goes straight to your campus licensing office. See the <a href="https://security.ucop.edu/files/documents/resources/oss-chart.pdf" class="external-link">full
+chart</a> and its <a href="https://security.ucop.edu/files/documents/resources/oss-chart-companion.pdf" class="external-link">companion
+guide</a> when a specific scenario matters.</p>
+</div>
+</div>
+</div>
+</div>
+
 <div id="challenge-true-or-false" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
@@ -481,7 +522,7 @@ ownership of the code.</li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <ul><li>[Myth or Fact] If you post your code publicly on the internet, it
 automatically becomes Open Source. FALSE/MYTH</li>
@@ -639,12 +680,12 @@ badge in the sidebar, it’s reading the SPDX identifier.</p>
 before releasing software created with institutional resources, part of
 your research, grant funding, multiple institutions, industry
 partner</strong></p>
-<div id="accordionSpoiler1" class="accordion spoiler-accordion accordion-flush">
+<div id="accordionSpoiler2" class="accordion spoiler-accordion accordion-flush">
 <div class="accordion-item">
-<button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler1" aria-expanded="false" aria-controls="collapseSpoiler1">
-  <h3 class="accordion-header" id="headingSpoiler1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> What about data and documentation? </h3>
+<button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler2" aria-expanded="false" aria-controls="collapseSpoiler2">
+  <h3 class="accordion-header" id="headingSpoiler2">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> What about data and documentation? </h3>
 </button>
-<div id="collapseSpoiler1" class="accordion-collapse collapse" aria-labelledby="headingSpoiler1" data-bs-parent="#accordionSpoiler1">
+<div id="collapseSpoiler2" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler2" aria-labelledby="headingSpoiler2">
 <div class="accordion-body">
 <p>Software licenses (BSD, MIT, Apache) are written for <em>executable
 code</em>. If your repository also contains datasets, figures, or
@@ -698,8 +739,8 @@ OSPO License Guide</a> <em>(UC-specific)</em> – UC institutional
 requirements and templates.</li>
 <li>
 <a href="https://security.ucop.edu/resources/open-source-software-licensing.html" class="external-link">UC
-OSS Chart and Companion Guide</a> <em>(UC-specific)</em> – UC-approved
-“low-risk” license list. <a href="https://security.ucop.edu/files/documents/resources/oss-chart.pdf" class="external-link uri">https://security.ucop.edu/files/documents/resources/oss-chart.pdf</a>
+OSS Chart and Companion Guide</a> <em>(UC-specific)</em> – UC’s license
+risk ratings for common open source licenses. <a href="https://security.ucop.edu/files/documents/resources/oss-chart.pdf" class="external-link uri">https://security.ucop.edu/files/documents/resources/oss-chart.pdf</a>
 </li>
 </ul></div>
 </div>
@@ -775,7 +816,7 @@ click <strong>Choose a license template</strong> to insert the full BSD
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <p>GitHub automatically detects the <code>LICENSE</code> file and
 displays it in the sidebar. Your file should look like this:</p>
@@ -843,7 +884,7 @@ with collaborators.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution3" aria-expanded="false" aria-controls="collapseSolution3">
   <h4 class="accordion-header" id="headingSolution3"> Show me the solution </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
 <div class="accordion-body">
 <p><strong>Scenario 1:</strong> BSD 3-Clause (UC’s default
 recommendation, maximum flexibility and adoption)</p>
