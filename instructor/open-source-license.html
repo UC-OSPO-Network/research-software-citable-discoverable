@@ -684,7 +684,7 @@ Here’s a decision guide:</p>
 <pre class="mermaid"><code>graph TD
     accTitle: License decision flowchart
     accDescr {
-        Decision tree for choosing an open source license, starting from whether the project has special requirements, branching to BSD 3-Clause, MIT, ECL 2.0, or GPL depending on the need; industry partnerships or patent concerns go straight to the campus Tech Transfer Office, and every path ends with a check there.
+        Decision tree for choosing an open source license, starting from whether the project has special requirements, branching to BSD 3-Clause, MIT, non commercial use license, or GPL depending on the need; industry partnerships or patent concerns go straight to the campus Tech Transfer Office, and every path ends with a check there.
     }
     Start[Starting a new UC research software project?] --&gt; Check{Do you have&lt;br/&gt;special requirements?}
 
@@ -692,7 +692,7 @@ Here’s a decision guide:</p>
 
     Check --&gt;|Need simpler text| MIT[Use MIT License&lt;br/&gt;✓ Nearly identical to BSD&lt;br/&gt;✓ Shorter, easier to read&lt;br/&gt;✓ Very popular]
 
-    Check --&gt;|Educational focus| ECL[Consider ECL 2.0&lt;br/&gt;✓ Education-specific variant&lt;br/&gt;✓ Based on Apache 2.0]
+    Check --&gt;|Educational focus| Talk to TTO&lt;br/&gt;✓ Education-specific license&lt;br/&gt;✓ Requires TTO approval]
 
     BSD --&gt; TTO[Verify with campus&lt;br/&gt;Tech Transfer Office]
     Check --&gt;|Industry partnership&lt;br/&gt;or patent concerns| TTO
@@ -735,9 +735,9 @@ Here’s a decision guide:</p>
 <td><code>MIT</code></td>
 <td>Minimal text, very popular</td>
 </tr><tr><td>Educational focus</td>
-<td>ECL 2.0</td>
-<td><code>ECL-2.0</code></td>
-<td>Education-specific variant of Apache 2.0</td>
+<td>Discuss with TTO</td>
+<td>—-</td>
+<td>—</td>
 </tr></tbody></table><p>The <strong>SPDX identifier</strong> is the short, machine-readable
 code used by GitHub, Zenodo, and your <code>CITATION.cff</code> file to
 communicate your license automatically. When GitHub shows a license
