@@ -178,7 +178,7 @@ Five "low-risk" licenses are suitable for most research projects. Here's a decis
 graph TD
     accTitle: License decision flowchart
     accDescr {
-        Decision tree for choosing an open source license, starting from whether the project has special requirements, branching to BSD 3-Clause, MIT, non commercial use license, or GPL depending on the need; industry partnerships or patent concerns go straight to the campus Tech Transfer Office, and every path ends with a check there.
+        Decision tree for choosing an open source license, starting from whether the project has special requirements, branching to BSD 3-Clause, MIT, a Tech Transfer conversation about an education-specific license, or GPL depending on the need; industry partnerships or patent concerns go straight to the campus Tech Transfer Office, and every path ends with a check there.
     }
     Start[Starting a new UC research software project?] --> Check{Do you have<br/>special requirements?}
     
@@ -186,12 +186,12 @@ graph TD
     
     Check -->|Need simpler text| MIT[Use MIT License<br/>✓ Nearly identical to BSD<br/>✓ Shorter, easier to read<br/>✓ Very popular]
     
-    Check -->|Educational focus| Talk to TTO<br/>✓ Education-specific license<br/>✓ Requires TTO approval]
+    Check -->|Educational focus| EDU[Talk to TTO<br/>✓ Education-specific license<br/>✓ Requires TTO approval]
     
     BSD --> TTO[Verify with campus<br/>Tech Transfer Office]
     Check -->|Industry partnership<br/>or patent concerns| TTO
     MIT --> TTO
-    ECL --> TTO
+    EDU --> TTO
     
     Check -->|Need copyleft| Copyleft{GPL version?}
     Copyleft -->|GPL 2.0| GPL2[May be acceptable<br/>Consult Tech Transfer]
@@ -205,7 +205,7 @@ graph TD
     style Copyleft fill:#f5f5f5,stroke:#333,color:#000
     style BSD fill:#90EE90,stroke:#333,color:#000
     style MIT fill:#90EE90,stroke:#333,color:#000
-    style ECL fill:#90EE90,stroke:#333,color:#000
+    style EDU fill:#FFFF99,stroke:#333,color:#000
     style GPL2 fill:#FFFF99,stroke:#333,color:#000
     style GPL3 fill:#FFB6C6,stroke:#333,color:#000
     style TTO fill:#87CEEB,stroke:#333,color:#000
@@ -224,7 +224,7 @@ graph TD
 |-----------|-------------------|-----------------|-----|
 | Default / most projects | BSD 3-Clause | `BSD-3-Clause` | Common default at research institutions |
 | Simplest possible | MIT | `MIT` | Minimal text, very popular |
-| Educational focus | Discuss with TTO | ---- | --- |
+| Educational focus | Discuss with TTO | n/a | Education-specific license; requires TTO approval |
 
 The **SPDX identifier** is the short, machine-readable code used by GitHub, Zenodo, and your `CITATION.cff` file to communicate your license automatically. When GitHub shows a license badge in the sidebar, it's reading the SPDX identifier.
 
