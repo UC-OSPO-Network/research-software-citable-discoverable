@@ -69,7 +69,7 @@ Full chart (PDF): <https://security.ucop.edu/files/documents/resources/oss-chart
 
 A rating isn't an approval. It tells you how quick the approval conversation is likely to be, not whether a license suits your project. For new code created at UC, start with your campus licensing office. A few licenses have exceptions for specific situations; see the [full chart][uc-oss-chart-pdf] and its [companion guide][uc-oss-companion] for those.
 
-::::::::::::::::::::::::::::::::::::::::::::::::
+
 
 ::::::::::::::::::::::::::::::::::::: instructor
 
