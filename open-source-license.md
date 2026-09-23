@@ -193,7 +193,7 @@ Five "low-risk" licenses are suitable for most research projects. Here's a decis
 graph TD
     accTitle: License decision flowchart
     accDescr {
-        Decision tree for choosing an open source license, starting from whether the project has special requirements, branching to BSD 3-Clause, MIT, ECL 2.0, or GPL depending on the need; industry partnerships or patent concerns go straight to the campus Tech Transfer Office, and every path ends with a check there.
+        Decision tree for choosing an open source license, starting from whether the project has special requirements, branching to BSD 3-Clause, MIT, non commercial use license, or GPL depending on the need; industry partnerships or patent concerns go straight to the campus Tech Transfer Office, and every path ends with a check there.
     }
     Start[Starting a new UC research software project?] --> Check{Do you have<br/>special requirements?}
     
@@ -201,7 +201,7 @@ graph TD
     
     Check -->|Need simpler text| MIT[Use MIT License<br/>✓ Nearly identical to BSD<br/>✓ Shorter, easier to read<br/>✓ Very popular]
     
-    Check -->|Educational focus| ECL[Consider ECL 2.0<br/>✓ Education-specific variant<br/>✓ Based on Apache 2.0]
+    Check -->|Educational focus| Talk to TTO<br/>✓ Education-specific license<br/>✓ Requires TTO approval]
     
     BSD --> TTO[Verify with campus<br/>Tech Transfer Office]
     Check -->|Industry partnership<br/>or patent concerns| TTO
@@ -239,7 +239,7 @@ graph TD
 |-----------|-------------------|-----------------|-----|
 | Default / most projects | BSD 3-Clause | `BSD-3-Clause` | Common default at research institutions |
 | Simplest possible | MIT | `MIT` | Minimal text, very popular |
-| Educational focus | ECL 2.0 | `ECL-2.0` | Education-specific variant of Apache 2.0 |
+| Educational focus | Discuss with TTO | ---- | --- |
 
 The **SPDX identifier** is the short, machine-readable code used by GitHub, Zenodo, and your `CITATION.cff` file to communicate your license automatically. When GitHub shows a license badge in the sidebar, it's reading the SPDX identifier.
 
