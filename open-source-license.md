@@ -54,13 +54,40 @@ At most universities, software created using institutional resources or created 
 
 **If you are at a UC campus:** software is typically owned by *The Regents of the University of California*. The UC Copyright policy can be found at ____https://copyright.universityofcalifornia.edu or google UC Copyright. The policy governs copyright ownership.  Prior to release contact your campus Tech Transfer office to verify ownership, funding requirements, and any third-party restrictions.
 
-The TTO or UC OSPO Network can help you select from the [UC-approved license list][uc-oss-chart] provided the TTO can cleared your code for release. The chart can be found at: https://security.ucop.edu/files/documents/resources/oss-chart.pdf. *(UC-specific)*
+Once the TTO has cleared your code for release, the TTO or the UC OSPO Network can help you choose a license. UC's risk chart, below, shows how UC rates the common ones. *(UC-specific)*
 
 The [UC OSPO License Guide][uc-license-guide] covers UC institutional requirements.  
  
 **At other institutions:** check with your research computing, library, or legal office. Most will have a similar process and a list of preferred licenses.
 
 ::::::::::::::::::::::::::::::::
+
+UC's [open source software risk chart][uc-oss-chart-pdf] rates BSD, the license used in this exercise, low in every scenario it lists. A low rating does not approve the release of a particular project. Before licensing Regents-owned software, follow your campus's process for approval by the appropriate delegated authority. *(UC-specific)*
+
+Full chart (PDF): <https://security.ucop.edu/files/documents/resources/oss-chart.pdf>
+
+::::::::::::::::::::::::::::::::::::: spoiler
+
+### UC license risk chart: a short guide
+
+Table: Selected ratings from UC's open source software chart
+
+| Licenses | What the UC chart says |
+|---|---|
+| BSD, MIT, Apache 1.x, GPL 1.x/2.x and LGPL 2.x (not "any later version"), ECL 2.0 | Low in every listed scenario. Keep required notices and follow the license terms. |
+| Apache 2.0, Eclipse 1.0/2.0, MPL 2.0 | Sharing changes beyond bug fixes outside UC is moderate. MPL is also moderate for function calls only, and its internal-modification entry is low for bug fixes only. Internal use needs UC's Internal Use Notice. |
+| AGPL 3.0, GPL 3.0, LGPL 3.0 | Most distribution outside UC is high. AGPL's function-calls-only entry is moderate. Internal use is low with an Internal Use Notice. |
+| Other OSS licenses | Contact your campus licensing office. |
+
+The colors rate the risk of conflicting with UC policy, not whether a license suits your project, and they don't settle ownership, sponsor, or patent questions. For new code created at UC, UC's own decision flowchart goes straight to your campus licensing office. See the [full chart][uc-oss-chart-pdf] and its [companion guide][uc-oss-companion] when a specific scenario matters.
+
+::::::::::::::::::::::::::::::::::::::::::::::::
+
+::::::::::::::::::::::::::::::::::::: instructor
+
+Say out loud that the risk chart is UC guidance. Learners from other institutions should ask their own tech transfer or research office, which will have its own process. If someone asks "BSD is green, so can I release now?", the answer is no: a green rating makes the approval conversation short, it doesn't replace it.
+
+::::::::::::::::::::::::::::::::::::::::::::::::
 
 ::::::::::::::::::::::::::::: challenge
 
@@ -246,7 +273,7 @@ Most research repositories don't need this, but if you're sharing a dataset alon
 * [ChooseALicense.com][choosealicense] – Compare features across all common licenses.
 * [SPDX License List](https://spdx.org/licenses/) – Authoritative registry of license identifiers used in CITATION.cff and package metadata.
 * [UC OSPO License Guide][uc-license-guide] *(UC-specific)* – UC institutional requirements and templates.
-* [UC OSS Chart and Companion Guide][uc-oss-chart] *(UC-specific)* – UC-approved "low-risk" license list. https://security.ucop.edu/files/documents/resources/oss-chart.pdf
+* [UC OSS Chart and Companion Guide][uc-oss-chart] *(UC-specific)* – UC's license risk ratings for common open source licenses. https://security.ucop.edu/files/documents/resources/oss-chart.pdf
 
 :::::::::::::::::::::::::::::::::
 

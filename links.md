@@ -14,6 +14,8 @@ inside code blocks or to autolinks written as <https://example.org>.
 <!-- UC OSPO / UC resources -->
 [uc-license-guide]: https://ucospo.net/oss-resources/template-guides/license-guide/
 [uc-oss-chart]: https://security.ucop.edu/resources/open-source-software-licensing.html
+[uc-oss-chart-pdf]: https://security.ucop.edu/files/documents/resources/oss-chart.pdf
+[uc-oss-companion]: https://security.ucop.edu/files/documents/resources/oss-chart-companion.pdf
 [uc-templates]: https://github.com/UC-OSPO-Network/templates
 
 <!-- General open-source references -->
