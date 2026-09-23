@@ -162,7 +162,7 @@ Five "low-risk" licenses are suitable for most research projects. Here's a decis
 graph TD
     accTitle: License decision flowchart
     accDescr {
-        Decision tree for choosing an open source license, starting from whether the project has special requirements, branching to BSD 3-Clause, MIT, Apache 2.0, ECL 2.0, or GPL depending on the need, and ending with a check with the campus Tech Transfer Office.
+        Decision tree for choosing an open source license, starting from whether the project has special requirements, branching to BSD 3-Clause, MIT, ECL 2.0, or GPL depending on the need; industry partnerships or patent concerns go straight to the campus Tech Transfer Office, and every path ends with a check there.
     }
     Start[Starting a new UC research software project?] --> Check{Do you have<br/>special requirements?}
     
@@ -170,13 +170,11 @@ graph TD
     
     Check -->|Need simpler text| MIT[Use MIT License<br/>✓ Nearly identical to BSD<br/>✓ Shorter, easier to read<br/>✓ Very popular]
     
-    Check -->|Industry partnership<br/>or patent concerns| Apache[Use Apache 2.0<br/>✓ Explicit patent protection<br/>✓ Detailed contribution terms<br/>✓ Industry-friendly]
-    
     Check -->|Educational focus| ECL[Consider ECL 2.0<br/>✓ Education-specific variant<br/>✓ Based on Apache 2.0]
     
     BSD --> TTO[Verify with campus<br/>Tech Transfer Office]
+    Check -->|Industry partnership<br/>or patent concerns| TTO
     MIT --> TTO
-    Apache --> TTO
     ECL --> TTO
     
     Check -->|Need copyleft| Copyleft{GPL version?}
@@ -191,7 +189,6 @@ graph TD
     style Copyleft fill:#f5f5f5,stroke:#333,color:#000
     style BSD fill:#90EE90,stroke:#333,color:#000
     style MIT fill:#90EE90,stroke:#333,color:#000
-    style Apache fill:#90EE90,stroke:#333,color:#000
     style ECL fill:#90EE90,stroke:#333,color:#000
     style GPL2 fill:#FFFF99,stroke:#333,color:#000
     style GPL3 fill:#FFB6C6,stroke:#333,color:#000
