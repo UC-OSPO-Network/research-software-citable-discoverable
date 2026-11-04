@@ -340,7 +340,7 @@
       </div>
     </nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Making Your Software Citable</h1>
-        <p>Last updated on 2026-09-22 |
+        <p>Last updated on 2026-11-04 |
 
         <a href="https://github.com/UC-OSPO-Network/research-software-citable-discoverable/edit/main/episodes/making-software-citable.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -526,8 +526,9 @@ software’s evolution.</p>
 </div>
 </section><section><h2 class="section-heading" id="minting-a-doi-with-zenodo-sandbox">Minting a DOI with Zenodo Sandbox<a class="anchor" aria-label="anchor" href="#minting-a-doi-with-zenodo-sandbox"></a></h2>
 <hr class="half-width"><p>To practice minting a DOI without polluting the permanent scholarly
-record, we will use <strong>Zenodo Sandbox</strong>. It works exactly
-like the real Zenodo but is for testing.</p>
+record, we will use <strong>Zenodo Sandbox</strong>. It walks you
+through the same steps as the real Zenodo, but it is a test site, with a
+few differences worth knowing before you start.</p>
 <div id="practice-on-the-sandbox-not-real-zenodo" class="callout caution">
 <div class="callout-square">
 <i class="callout-icon" data-feather="alert-triangle"></i>
@@ -543,6 +544,47 @@ on the scholarly record.</p>
 </div>
 </div>
 </div>
+<div id="what-to-expect-from-zenodo-sandbox" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<span class="callout-header">Callout</span>
+<div id="what-to-expect-from-zenodo-sandbox" class="callout-inner">
+<h3 class="callout-title">What to expect from Zenodo Sandbox</h3>
+<div class="callout-content">
+<p>The Sandbox is a practice space, not a smaller copy of Zenodo. Expect
+a few rough edges:</p>
+<ul><li>
+<strong>It needs its own login.</strong> Your zenodo.org account
+does not carry over. Log in to the Sandbox with GitHub.</li>
+<li>
+<strong>Its DOIs do not resolve.</strong> Sandbox DOIs start with
+<code>10.5072</code>, a test prefix that is not registered with
+DataCite, so <code>https://doi.org/10.5072/...</code> leads to an error
+page. Link to the Sandbox record page instead
+(<code>https://sandbox.zenodo.org/records/...</code>).</li>
+<li>
+<strong>Records may not last.</strong> Zenodo says the Sandbox “can
+be cleaned at any time.” Treat your practice record as disposable.</li>
+<li>
+<strong>It can be slow, or miss a release.</strong> Archiving
+usually takes a minute or two, but the Sandbox is sometimes slow or
+down, and the GitHub connection occasionally misses a release, on real
+Zenodo too.</li>
+</ul><p><strong>If your release does not show up in Zenodo:</strong></p>
+<ol style="list-style-type: decimal"><li>Wait a few minutes and refresh the Sandbox <strong>Settings →
+GitHub</strong> page.</li>
+<li>Check that the toggle for your repository is <strong>ON</strong>. If
+you turned it on <em>after</em> publishing the release, Zenodo did not
+see that release.</li>
+<li>Publish a new release (for example <code>v0.1.1</code>). Zenodo only
+archives releases published while the toggle is on.</li>
+<li>Still nothing? Follow along on the instructor’s screen. The concepts
+matter more than having your own record today.</li>
+</ol></div>
+</div>
+</div>
+
 <div id="predict-what-happens-when-you-publish" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
@@ -605,24 +647,36 @@ release</strong> (below the fold).</div>
 </figure><p><strong>Step 4: Zenodo auto-archives and mints DOI</strong></p>
 <ul><li>Zenodo automatically detects your new release</li>
 <li>Creates an archived snapshot</li>
-<li>Assigns a permanent DOI</li>
-<li>Wait a few minutes for processing</li>
+<li>Assigns a DOI (on real Zenodo it is permanent; in the Sandbox it
+starts with <code>10.5072</code> and is for practice)</li>
+<li>Wait a few minutes for processing. Nothing after five minutes? See
+“What to expect from Zenodo Sandbox” above</li>
 </ul><p><strong>Step 5: Add DOI badge to your README</strong></p>
-<ul><li>Copy the DOI badge from your Zenodo record</li>
-<li>Add it to the top of your README:</li>
+<ul><li>Copy the DOI badge Markdown from your Sandbox record page (the DOI
+badge on the right side of the record)</li>
+<li>Add it to the top of your README. A Sandbox badge looks like this;
+note that it links to the Sandbox record, because Sandbox DOIs do not
+resolve on doi.org:</li>
 </ul><div class="codewrapper sourceCode" id="cb1">
 <h3 class="code-label">MARKDOWN<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode markdown" tabindex="0"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" tabindex="-1" aria-label="code-block-1-1"></a><span class="co">[</span><span class="al">![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.123456.svg)</span><span class="co">](https://doi.org/10.5281/zenodo.123456)</span></span></code></pre>
+<pre class="sourceCode markdown" tabindex="0"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" tabindex="-1" aria-label="code-block-1-1"></a><span class="co">[</span><span class="al">![DOI](https://sandbox.zenodo.org/badge/DOI/10.5072/zenodo.123456.svg)</span><span class="co">](https://sandbox.zenodo.org/records/123456)</span></span></code></pre>
 </div>
-<p><strong>Step 6: Update your CFF file with your DOI</strong></p>
+<ul><li>On real Zenodo the badge uses your <code>10.5281</code> DOI and
+links to <code>https://doi.org/10.5281/zenodo.123456</code>
+</li>
+</ul><p><strong>Step 6: Update your CFF file with your DOI</strong></p>
 <ul><li>Add the DOI to your <code>CITATION.cff</code>:</li>
 </ul><div class="codewrapper sourceCode" id="cb2">
 <h3 class="code-label">YAML<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode yaml" tabindex="0"><code class="sourceCode yaml"><span id="cb2-1"><a href="#cb2-1" tabindex="-1" aria-label="code-block-2-1"></a><span class="fu">doi</span><span class="kw">:</span><span class="at"> 10.5281/zenodo.123456</span></span></code></pre>
+<pre class="sourceCode yaml" tabindex="0"><code class="sourceCode yaml"><span id="cb2-1"><a href="#cb2-1" tabindex="-1" aria-label="code-block-2-1"></a><span class="fu">doi</span><span class="kw">:</span><span class="at"> 10.5072/zenodo.123456</span></span></code></pre>
 </div>
-<p><strong>Result:</strong> You now have LICENSE, CITATION.cff, and
+<ul><li>This is fine in your practice fork. For real software, the
+<code>doi</code> comes from a real Zenodo deposit and starts with
+<code>10.5281</code>
+</li>
+</ul><p><strong>Result:</strong> You now have LICENSE, CITATION.cff, and
 DOI.</p>
 <div id="what-the-doi-actually-archived" class="callout caution">
 <div class="callout-square">
@@ -656,7 +710,8 @@ organization repo, an org owner may need to approve Zenodo’s access
 first; for this exercise, forking under your personal account avoids the
 problem entirely. (Keep the sandbox rule in mind too: a
 <code>10.5072/...</code> sandbox DOI is for practice, never for a paper
-or a real <code>CITATION.cff</code>.)</p>
+or for the <code>CITATION.cff</code> of software you are actually
+releasing.)</p>
 </div>
 </div>
 </div>
@@ -913,8 +968,8 @@ in the GitHub branch dropdown (02-add-license, 03-add-citation, ...). -->
   "url": "https://UC-OSPO-Network.github.io/research-software-citable-discoverable/making-software-citable.html",
   "identifier": "https://UC-OSPO-Network.github.io/research-software-citable-discoverable/making-software-citable.html",
   "dateCreated": "2025-12-06",
-  "dateModified": "2026-09-22",
-  "datePublished": "2026-11-03"
+  "dateModified": "2026-11-04",
+  "datePublished": "2026-11-04"
 }
 
   </script><script>
