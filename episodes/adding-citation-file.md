@@ -81,7 +81,12 @@ If you have ever edited a repository record, filled in a Dublin Core field, or t
 
 ## How to Create a CITATION.cff File
 
-You will do this entirely in GitHub's web interface, in your fork. No terminal required. GitHub has this built in: name a new file `CITATION.cff` and it hands you a starter template to edit.
+You will do this entirely in the browser, in your fork. No terminal required. There are two good ways to write the file, and either one is fine:
+
+- **Option A: GitHub's template.** Name a new file `CITATION.cff` and GitHub offers a starter template to edit. Quickest if you are comfortable editing a few lines of YAML.
+- **Option B: the cffinit form.** Fill in a web form that checks your entries as you go, then paste the result into GitHub. The safer choice if YAML is new to you, or if the file has many authors.
+
+Both end the same way: a `CITATION.cff` in the root of your repository, committed to `main`.
 
 ::::::::::::::::::::::::::::::::::::: instructor
 
@@ -91,7 +96,7 @@ Learners may try to perfect authorship, contributor roles, or author order. For 
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
-### Create the file on GitHub
+### Option A: Create the file from GitHub's template
 
 In your fork of `software-demo`:
 
@@ -120,21 +125,27 @@ date-released: 2026-07-05
 url: "https://github.com/YOUR-USERNAME/your-repository-name"
 ```
 
-::::::::::::::::::::::::::::::::::::: callout
-
 ::::::::::::::::::::::::::::::::::::: instructor
 
 ### YAML recovery path
 
-If more than a few learners hit YAML indentation errors, switch the whole room to cffinit rather than debugging individual whitespace mistakes. The goal is citation metadata, not YAML mastery. cffinit validates as they type and produces a file they can paste.
+If more than a few learners hit YAML indentation errors, switch the whole room to Option B rather than debugging individual whitespace mistakes. The goal is citation metadata, not YAML mastery. You can also teach Option B from the start: it works well as the main demo.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
-### Prefer a guided form? Use cffinit
+### Option B: Fill in the cffinit form
 
-[**cffinit**](https://citation-file-format.github.io/cffinit/) is a web wizard that walks you field by field and validates as you type. It is worth using when your metadata is more involved: many authors, a `preferred-citation` for an associated paper, keywords, or a license you want recorded precisely. Fill out the form, copy the generated file, and paste it into the same `CITATION.cff` you create on GitHub. More on the format: <https://citation-file-format.github.io/>.
+[**cffinit**](https://citation-file-format.github.io/cffinit/) is a free web form from the Citation File Format project. It walks you through the file one screen at a time and flags mistakes as you type, so you never touch the YAML directly.
 
-::::::::::::::::::::::::::::::::::::::::::::::::
+1. Open <https://citation-file-format.github.io/cffinit/> and click **Create**.
+2. **Start:** choose **Software**, enter the title (`Biodiversity Analysis Toolkit`), and leave the message blank to use the default.
+3. **Authors:** add each author. Add ORCIDs if you have them.
+4. **Identifiers:** skip for now. You will add a DOI in the next episode.
+5. Click **Finish** to jump to the end. The remaining screens (abstract, keywords, license, version) are optional; come back to them any time.
+6. Copy the file: click **Copy to clipboard** on the preview, or **Download**.
+7. Back on GitHub, in your fork: **Add file → Create new file**, name it exactly `CITATION.cff`, paste, and click **Commit changes…** to `main`.
+
+cffinit also pays off when a file gets complicated: many authors, a `preferred-citation` for an associated paper, keywords, or a license you want recorded precisely. More on the format: <https://citation-file-format.github.io/>.
 
 A finished file looks like this:
 
@@ -316,7 +327,7 @@ Typical missing pieces include:
 
 Steps:
 
-1. Create CITATION.cff.
+1. Create CITATION.cff, with GitHub's template (Option A) or the cffinit form (Option B).
 2. Add at least: title, author(s), and message.
 3. Commit and refresh to see GitHub’s citation panel.
 
