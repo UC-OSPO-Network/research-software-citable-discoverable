@@ -148,13 +148,41 @@ Use `sandbox.zenodo.org`, not production Zenodo. Real Zenodo records and DOIs ar
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
-To practice minting a DOI without polluting the permanent scholarly record, we will use **Zenodo Sandbox**. It works exactly like the real Zenodo but is for testing.
+To practice minting a DOI without polluting the permanent scholarly record, we will use **Zenodo Sandbox**. It walks you through the same steps as the real Zenodo, but it is a test site, with a few differences worth knowing before you start.
 
 ::::::::::::::::::::::::::::::::::::: caution
 
 ### Practice on the sandbox, not real Zenodo
 
 Real Zenodo records are permanent: a published DOI cannot be deleted. Use <https://sandbox.zenodo.org> for this exercise, and switch to real Zenodo only when you are depositing software you actually want on the scholarly record.
+
+::::::::::::::::::::::::::::::::::::::::::::::::
+
+::::::::::::::::::::::::::::::::::::: callout
+
+### What to expect from Zenodo Sandbox
+
+The Sandbox is a practice space, not a smaller copy of Zenodo. Expect a few rough edges:
+
+- **It needs its own login.** Your zenodo.org account does not carry over. Log in to the Sandbox with GitHub.
+- **Its DOIs do not resolve.** Sandbox DOIs start with `10.5072`, a test prefix that is not registered with DataCite, so `https://doi.org/10.5072/...` leads to an error page. Link to the Sandbox record page instead (`https://sandbox.zenodo.org/records/...`).
+- **Records may not last.** Zenodo says the Sandbox "can be cleaned at any time." Treat your practice record as disposable.
+- **It can be slow, or miss a release.** Archiving usually takes a minute or two, but the Sandbox is sometimes slow or down, and the GitHub connection occasionally misses a release, on real Zenodo too.
+
+**If your release does not show up in Zenodo:**
+
+1. Wait a few minutes and refresh the Sandbox **Settings → GitHub** page.
+2. Check that the toggle for your repository is **ON**. If you turned it on *after* publishing the release, Zenodo did not see that release.
+3. Publish a new release (for example `v0.1.1`). Zenodo only archives releases published while the toggle is on.
+4. Still nothing? Follow along on the instructor's screen. The concepts matter more than having your own record today.
+
+::::::::::::::::::::::::::::::::::::::::::::::::
+
+::::::::::::::::::::::::::::::::::::: instructor
+
+### Have a fallback ready
+
+Before the workshop, prepare your own fork with a release already archived in the Sandbox. If the Sandbox is slow or down, or a learner's release never arrives, demo from that prepared repo and keep moving; the metadata episode can use it too. Check <https://sandbox.zenodo.org> the morning of the workshop.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -205,23 +233,25 @@ Zenodo detects the release, downloads and archives a snapshot of the repository 
 
 - Zenodo automatically detects your new release
 - Creates an archived snapshot
-- Assigns a permanent DOI
-- Wait a few minutes for processing
+- Assigns a DOI (on real Zenodo it is permanent; in the Sandbox it starts with `10.5072` and is for practice)
+- Wait a few minutes for processing. Nothing after five minutes? See "What to expect from Zenodo Sandbox" above
 
 **Step 5: Add DOI badge to your README**
 
-- Copy the DOI badge from your Zenodo record
-- Add it to the top of your README:
+- Copy the DOI badge Markdown from your Sandbox record page (the DOI badge on the right side of the record)
+- Add it to the top of your README. A Sandbox badge looks like this; note that it links to the Sandbox record, because Sandbox DOIs do not resolve on doi.org:
 ```markdown
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.123456.svg)](https://doi.org/10.5281/zenodo.123456)
+[![DOI](https://sandbox.zenodo.org/badge/DOI/10.5072/zenodo.123456.svg)](https://sandbox.zenodo.org/records/123456)
 ```
+- On real Zenodo the badge uses your `10.5281` DOI and links to `https://doi.org/10.5281/zenodo.123456`
 
 **Step 6: Update your CFF file with your DOI**
 
 - Add the DOI to your `CITATION.cff`:
 ```yaml
-doi: 10.5281/zenodo.123456
+doi: 10.5072/zenodo.123456
 ```
+- This is fine in your practice fork. For real software, the `doi` comes from a real Zenodo deposit and starts with `10.5281`
 
 **Result:** You now have LICENSE, CITATION.cff, and DOI.
 
@@ -245,7 +275,7 @@ This point is subtle and important, so slow down. Say: "GitHub is the live worki
 
 ### If Zenodo can't see your repository
 
-Zenodo only lists repositories you have admin rights on. For an organization repo, an org owner may need to approve Zenodo's access first; for this exercise, forking under your personal account avoids the problem entirely. (Keep the sandbox rule in mind too: a `10.5072/...` sandbox DOI is for practice, never for a paper or a real `CITATION.cff`.)
+Zenodo only lists repositories you have admin rights on. For an organization repo, an org owner may need to approve Zenodo's access first; for this exercise, forking under your personal account avoids the problem entirely. (Keep the sandbox rule in mind too: a `10.5072/...` sandbox DOI is for practice, never for a paper or for the `CITATION.cff` of software you are actually releasing.)
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
