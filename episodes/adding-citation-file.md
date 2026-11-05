@@ -386,7 +386,7 @@ Typical missing pieces include:
 
 Steps:
 
-1. Create CITATION.cff.
+1. Create CITATION.cff, with GitHub's template (Option A) or the cffinit form (Option B).
 2. Add at least: title, author(s), and message.
 3. Commit and refresh to see GitHub’s citation panel.
 
