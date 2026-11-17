@@ -103,13 +103,15 @@ It walks you through the metadata field by field and validates as you type. Keep
 4. **Message**: **leave this box empty.** The grey text reading *"Personalized message. Leave blank to use default"* is just a placeholder, so there's nothing to keep or replace. Leave it blank and cffinit writes the standard sentence: `If you use this software, please cite it using the metadata from this file.`
 5. Skip **version**, **date-released** and **doi**. You don't have a release or a DOI yet. Those come in the next episode.
 
+![cffinit's first step, **Basic information**. The title is filled in, the message box is left blank, and the CITATION.cff preview on the right already shows the default message and `type: software`. The warning about minimum fields goes away once you add an author.](fig/cffinit-basic-information.png){alt="The cffinit web form on its Basic information step. On the left, a list of steps from Basic Information to Finish. In the middle, Software is selected as the type of work, the title field reads software-demo, and the message field shows only its grey placeholder text. On the right, a CITATION.cff preview panel with a copy icon, a warning that the file needs at least one author, and a Download button."}
+
 ::::::::::::::::::::::::::::::::::::: callout
 
 ### Getting the file out of cffinit
 
 The **Finish** step offers **Download** and **Reset form**, and no copy button.
 
-If you'd rather copy the text than download a file, click **Open CFF Preview** at the top right. The preview panel has **Copy to clipboard**, and it's there on every step, so you don't have to wait for the end.
+If you'd rather copy the text than download a file, use the CFF preview panel. On a wide window it's already open on the right; on a narrower one, click **Open CFF Preview** at the top right. The preview panel has a copy button (labelled **Copy to clipboard** on a narrow window, just a copy icon on a wide one), and it's there on every step, so you don't have to wait for the end.
 
 Either route works: download the file and upload it to GitHub, or copy the text and paste it in.
 
@@ -201,7 +203,6 @@ authors:
 version: "0.1.0"
 date-released: 2026-02-01
 url: "https://github.com/UC-OSPO-Network/software-demo"
-repository-code: "https://github.com/UC-OSPO-Network/software-demo"
 ```
 
 There is deliberately **no `doi` field yet**: you do not have one until you mint it in the next episode. Once you create a release and Zenodo assigns a DOI, you will come back and add a `doi:` line. If your project has no tagged version either, you can omit `version` and `date-released` for now and add them at release time.
@@ -222,10 +223,11 @@ To reach it:
 
 Or go straight to the file: <https://github.com/UC-OSPO-Network/software-demo/blob/03-add-citation/CITATION.cff>
 
-**Your file won't match it exactly, and it shouldn't!** Expect three differences:
+**Your file won't match it exactly, and it shouldn't!** Expect four differences:
 
 - **Different authors.** The key lists the lesson authors; yours lists you.
 - **Different `message` wording.** cffinit's default sentence isn't the same as the key's. Either one's fine.
+- **Yours has `type: software`; the key doesn't.** cffinit adds it for you. It's correct, and the key just leaves it out.
 - **The key has `version` and `date-released`; yours doesn't.** That's your bridge to the next episode, where those fields arrive with your first release.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
