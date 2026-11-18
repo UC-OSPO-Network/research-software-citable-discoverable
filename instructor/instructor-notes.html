@@ -798,15 +798,24 @@ asks “who counts as an author?”, flag it as a team conversation, not a
 metadata fix.</p>
 <hr>
 <br><h3 id="adding-citation-file-headingInstructor3">
-<a href="adding-citation-file.html#headingInstructor3">YAML recovery path</a><a class="anchor" aria-label="anchor" href="#adding-citation-file-headingInstructor3"></a>
+<a href="adding-citation-file.html#headingInstructor3">If the room gets stuck</a><a class="anchor" aria-label="anchor" href="#adding-citation-file-headingInstructor3"></a>
 </h3>
-<p>If more than a few learners hit YAML indentation errors, switch the
-whole room to Option B rather than debugging individual whitespace
-mistakes. The goal is citation metadata, not YAML mastery. You can also
-teach Option B from the start: it works well as the main demo.</p>
+<p>cffinit is the default path precisely because it validates as
+learners type, so YAML indentation errors should be rare. If someone’s
+hand-edited a file and broken it, send them back to cffinit to rebuild
+it. Debugging whitespace in the GitHub editor eats time the room doesn’t
+have. The goal is citation metadata, not YAML mastery.</p>
 <hr>
 <br><h3 id="adding-citation-file-headingInstructor4">
-<a href="adding-citation-file.html#headingInstructor4">Predict, then reveal</a><a class="anchor" aria-label="anchor" href="#adding-citation-file-headingInstructor4"></a>
+<a href="adding-citation-file.html#headingInstructor4">Instructor Note</a><a class="anchor" aria-label="anchor" href="#adding-citation-file-headingInstructor4"></a>
+</h3>
+<p>The reference branches don’t share history with <code>main</code>, so
+a GitHub compare view has no merge base to work from and will mislead
+anyone who tries one. Keep learners on the branch-dropdown route above
+and skip compare URLs entirely.</p>
+<hr>
+<br><h3 id="adding-citation-file-headingInstructor5">
+<a href="adding-citation-file.html#headingInstructor5">Predict, then reveal</a><a class="anchor" aria-label="anchor" href="#adding-citation-file-headingInstructor5"></a>
 </h3>
 <p>Before learners refresh GitHub after committing
 <code>CITATION.cff</code>, ask them to predict what GitHub will add.
@@ -1058,8 +1067,8 @@ local service map they can actually use on Monday.</p>
   "url": "https://UC-OSPO-Network.github.io/research-software-citable-discoverable/instructor/instructor-notes.html",
   "identifier": "https://UC-OSPO-Network.github.io/research-software-citable-discoverable/instructor/instructor-notes.html",
   "dateCreated": "2025-12-06",
-  "dateModified": "2026-11-17",
-  "datePublished": "2026-11-17"
+  "dateModified": "2026-11-18",
+  "datePublished": "2026-11-18"
 }
 
   </script><script>

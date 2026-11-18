@@ -340,7 +340,7 @@
       </div>
     </nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Adding a CITATION.cff File</h1>
-        <p>Last updated on 2026-11-04 |
+        <p>Last updated on 2026-11-18 |
 
         <a href="https://github.com/UC-OSPO-Network/research-software-citable-discoverable/edit/main/episodes/adding-citation-file.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -450,45 +450,136 @@ never does.</p>
 </div>
 </div>
 </section><section><h2 class="section-heading" id="how-to-create-a-citation-cff-file">How to Create a CITATION.cff File<a class="anchor" aria-label="anchor" href="#how-to-create-a-citation-cff-file"></a></h2>
-<hr class="half-width"><p>You will do this entirely in the browser, in your fork. No terminal
-required. There are two good ways to write the file, and either one is
-fine:</p>
-<ul><li>
-<strong>Option A: GitHub’s template.</strong> Name a new file
-<code>CITATION.cff</code> and GitHub offers a starter template to edit.
-Quickest if you are comfortable editing a few lines of YAML.</li>
-<li>
-<strong>Option B: the cffinit form.</strong> Fill in a web form that
-checks your entries as you go, then paste the result into GitHub. The
-safer choice if YAML is new to you, or if the file has many
-authors.</li>
-</ul><p>Both end the same way: a <code>CITATION.cff</code> in the root of
-your repository, committed to <code>main</code>.</p>
+<hr class="half-width"><p>You’ll do this entirely in your browser, in your fork. No terminal
+required! There are two routes: <strong>cffinit</strong>, a guided web
+form that validates as you type, and GitHub’s own starter template. We
+use cffinit, because it catches mistakes before they reach the file and
+prompts you for fields the template leaves out.</p>
 
 <div class="section level3">
-<h3 id="option-a-create-the-file-from-githubs-template">Option A: Create the file from GitHub’s template<a class="anchor" aria-label="anchor" href="#option-a-create-the-file-from-githubs-template"></a></h3>
-<p>In your fork of <code>software-demo</code>:</p>
-<ol style="list-style-type: decimal"><li>Click <strong>Add file → Create new file</strong>.</li>
-<li>Name the file exactly <code>CITATION.cff</code> (it must live in the
-repository root, and the name is case-sensitive). As soon as you do,
-GitHub recognizes it and shows a banner with an <strong>Insert
-example</strong> button.</li>
-<li>Click <strong>Insert example</strong>. GitHub drops a valid,
-ready-to-edit template into the editor.</li>
-<li>Edit the placeholders: replace <code>YOUR_NAME_HERE</code>, add real
-<strong>ORCIDs</strong>, and set the <code>title</code> and
-<code>url</code> to match your repository.</li>
+<h3 id="build-the-file-with-cffinit">Build the file with cffinit<a class="anchor" aria-label="anchor" href="#build-the-file-with-cffinit"></a></h3>
+<p>Open <strong>cffinit</strong> in a new tab: <a href="https://citation-file-format.github.io/cffinit/" class="external-link uri">https://citation-file-format.github.io/cffinit/</a></p>
+<p>It walks you through the metadata field by field and validates as you
+type. Keep the tab open, or bookmark it. You’ll come back to it whenever
+a file needs changing.</p>
+<ol style="list-style-type: decimal"><li>Fill in the required fields: <strong>title</strong>,
+<strong>authors</strong>, and <strong>message</strong>.</li>
 <li>
-<strong>Delete the <code>doi</code> line</strong> (you do not have a
-DOI yet, you will add it in the next episode). Delete
-<code>version</code> and <code>date-released</code> too if you have not
-made a release; otherwise set them to match.</li>
+<strong>Title</strong>: use your repository’s name.</li>
+<li>
+<strong>Authors</strong>: give each person’s given and family names,
+plus an ORCID if they have one. Use a real ORCID or leave the field
+empty. A placeholder ORCID of all zeros will fail validation when you
+archive the release in a later episode, and that’s a frustrating place
+to find out.</li>
+<li>
+<strong>Message</strong>: <strong>leave this box empty.</strong> The
+grey text reading <em>“Personalized message. Leave blank to use
+default”</em> is just a placeholder, so there’s nothing to keep or
+replace. Leave it blank and cffinit writes the standard sentence:
+<code>If you use this software, please cite it using the metadata from this file.</code>
+</li>
+<li>Skip <strong>version</strong>, <strong>date-released</strong> and
+<strong>doi</strong>. You don’t have a release or a DOI yet. Those come
+in the next episode.</li>
+</ol><figure><img src="fig/cffinit-basic-information.png" alt="The cffinit web form on its Basic information step. On the left, a list of steps from Basic Information to Finish. In the middle, Software is selected as the type of work, the title field reads software-demo, and the message field shows only its grey placeholder text. On the right, a CITATION.cff preview panel with a copy icon, a warning that the file needs at least one author, and a Download button." class="figure mx-auto d-block"><div class="figcaption">cffinit’s first step, <strong>Basic
+information</strong>. The title is filled in, the message box is left
+blank, and the CITATION.cff preview on the right already shows the
+default message and <code>type: software</code>. The warning about
+minimum fields goes away once you add an author.</div>
+</figure><div id="getting-the-file-out-of-cffinit" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<span class="callout-header">Callout</span>
+<div id="getting-the-file-out-of-cffinit" class="callout-inner">
+<h3 class="callout-title">Getting the file out of cffinit</h3>
+<div class="callout-content">
+<p>The <strong>Finish</strong> step offers <strong>Download</strong> and
+<strong>Reset form</strong>, and no copy button.</p>
+<p>If you’d rather copy the text than download a file, use the CFF
+preview panel. On a wide window it’s already open on the right; on a
+narrower one, click <strong>Open CFF Preview</strong> at the top right.
+The preview panel has a copy button (labelled <strong>Copy to
+clipboard</strong> on a narrow window, just a copy icon on a wide one),
+and it’s there on every step, so you don’t have to wait for the end.</p>
+<p>Either route works: download the file and upload it to GitHub, or
+copy the text and paste it in.</p>
+</div>
+</div>
+</div>
+<div id="preferred-citation-isnt-on-the-form" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<span class="callout-header">Callout</span>
+<div id="preferred-citation-isnt-on-the-form" class="callout-inner">
+<h3 class="callout-title">
+<code>preferred-citation</code> isn’t on the
+form</h3>
+<div class="callout-content">
+<p>cffinit says so itself: <em>“The CFF schema supports more fields than
+this form implements, for instance preferred-citation, or
+references.”</em></p>
+<p>If you need it, add it as raw YAML in the <strong>Extra CFF
+Fields</strong> step, or paste it into the file after you’ve created it.
+See <a href="#linking-to-a-published-paper">Linking to a published
+paper</a> below.</p>
+</div>
+</div>
+</div>
+<div id="when-the-metadata-is-more-complicated" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<span class="callout-header">Callout</span>
+<div id="when-the-metadata-is-more-complicated" class="callout-inner">
+<h3 class="callout-title">When the metadata is more complicated</h3>
+<div class="callout-content">
+<p>Real projects often need more than the demo does: a long author list,
+an institution as an author, a paper researchers should cite instead of
+the code, or related identifiers. The <a href="https://github.com/citation-file-format/citation-file-format/blob/main/schema-guide.md" class="external-link">CFF
+schema guide</a> documents every field, with examples. It’s the same
+reference cffinit’s own help links to. Start with these sections:</p>
+<ul><li>
+<a href="https://github.com/citation-file-format/citation-file-format/blob/main/schema-guide.md#authors" class="external-link"><code>authors</code></a>,
+for long author lists</li>
+<li>
+<a href="https://github.com/citation-file-format/citation-file-format/blob/main/schema-guide.md#definitionsentity" class="external-link"><code>definitions.entity</code></a>,
+for an institution, lab, or team as an author</li>
+<li>
+<a href="https://github.com/citation-file-format/citation-file-format/blob/main/schema-guide.md#preferred-citation" class="external-link"><code>preferred-citation</code></a>,
+for pointing citers at a paper</li>
+</ul></div>
+</div>
+</div>
+</div>
+<div class="section level3">
+<h3 id="add-the-file-to-your-fork">Add the file to your fork<a class="anchor" aria-label="anchor" href="#add-the-file-to-your-fork"></a></h3>
+<p>In your fork of <code>software-demo</code>:</p>
+<ol style="list-style-type: decimal"><li>Click the <strong><code>+</code></strong> button, the small plus
+immediately to the left of the green <strong>Code</strong> button, then
+<strong>Create new file</strong>. (GitHub used to label this button “Add
+file”. Now it’s just the icon.)</li>
+<li>Name the file exactly <code>CITATION.cff</code>. It must live in the
+repository root, and the name is case-sensitive.</li>
+<li>Paste in the file you built in cffinit. If you downloaded it
+instead, use <strong><code>+</code> → Upload files</strong> and drop it
+in.</li>
 <li>Click <strong>Commit changes…</strong> and commit to your
 <code>main</code> branch.</li>
-</ol><figure><img src="fig/create-citation-cff.png" alt="GitHub's create-new-file editor with the filename CITATION.cff, the Insert example button, the template in the edit pane, and the Commit changes button all highlighted and numbered one through four." class="figure mx-auto d-block"><div class="figcaption">Name a new file <code>CITATION.cff</code>, click
-<strong>Insert example</strong> to drop in GitHub’s template, edit the
-placeholder names and ORCIDs, then commit to <code>main</code>.</div>
-</figure><p>The inserted template looks like this before you edit it:</p>
+</ol><div id="alternative-githubs-built-in-template" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<span class="callout-header">Callout</span>
+<div id="alternative-githubs-built-in-template" class="callout-inner">
+<h3 class="callout-title">Alternative: GitHub’s built-in template</h3>
+<div class="callout-content">
+<p>GitHub recognizes the filename on its own. When you name a new file
+<code>CITATION.cff</code>, a banner appears with an <strong>Insert
+example</strong> button that drops a starter template into the
+editor:</p>
 <div class="codewrapper sourceCode" id="cb1">
 <h3 class="code-label">YAML<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -504,38 +595,21 @@ placeholder names and ORCIDs, then commit to <code>main</code>.</div>
 <span id="cb1-10"><a href="#cb1-10" tabindex="-1" aria-label="code-block-1-10"></a><span class="fu">date-released</span><span class="kw">:</span><span class="at"> 2026-07-05</span></span>
 <span id="cb1-11"><a href="#cb1-11" tabindex="-1" aria-label="code-block-1-11"></a><span class="fu">url</span><span class="kw">:</span><span class="at"> </span><span class="st">"https://github.com/YOUR-USERNAME/your-repository-name"</span></span></code></pre>
 </div>
-
+<p>Edit the placeholders, then <strong>delete the <code>doi</code>,
+<code>version</code> and <code>date-released</code> lines</strong>
+unless you already have a release. This route doesn’t validate as you
+go, so a stray indent will quietly stop GitHub from rendering the
+citation panel.</p>
+<figure><img src="fig/create-citation-cff.png" alt="GitHub's create-new-file editor with the filename CITATION.cff, the Insert example button, the template in the edit pane, and the Commit changes button all highlighted and numbered one through four." class="figure mx-auto d-block"><div class="figcaption">Naming a new file <code>CITATION.cff</code>
+makes GitHub offer an <strong>Insert example</strong> button, which
+drops its template into the edit pane ready to overwrite before you
+commit.</div>
+</figure></div>
 </div>
-<div class="section level3">
-<h3 id="option-b-fill-in-the-cffinit-form">Option B: Fill in the cffinit form<a class="anchor" aria-label="anchor" href="#option-b-fill-in-the-cffinit-form"></a></h3>
-<p><a href="https://citation-file-format.github.io/cffinit/" class="external-link"><strong>cffinit</strong></a>
-is a free web form from the Citation File Format project. It walks you
-through the file one screen at a time and flags mistakes as you type, so
-you never touch the YAML directly.</p>
-<ol style="list-style-type: decimal"><li>Open <a href="https://citation-file-format.github.io/cffinit/" class="external-link uri">https://citation-file-format.github.io/cffinit/</a> and
-click <strong>Create</strong>.</li>
-<li>
-<strong>Start:</strong> choose <strong>Software</strong>, enter the
-title (<code>Biodiversity Analysis Toolkit</code>), and leave the
-message blank to use the default.</li>
-<li>
-<strong>Authors:</strong> add each author. Add ORCIDs if you have
-them.</li>
-<li>
-<strong>Identifiers:</strong> skip for now. You will add a DOI in
-the next episode.</li>
-<li>Click <strong>Finish</strong> to jump to the end. The remaining
-screens (abstract, keywords, license, version) are optional; come back
-to them any time.</li>
-<li>Copy the file: click <strong>Copy to clipboard</strong> on the
-preview, or <strong>Download</strong>.</li>
-<li>Back on GitHub, in your fork: <strong>Add file → Create new
-file</strong>, name it exactly <code>CITATION.cff</code>, paste, and
-click <strong>Commit changes…</strong> to <code>main</code>.</li>
-</ol><p>cffinit also pays off when a file gets complicated: many authors, a
-<code>preferred-citation</code> for an associated paper, keywords, or a
-license you want recorded precisely. More on the format: <a href="https://citation-file-format.github.io/" class="external-link uri">https://citation-file-format.github.io/</a>.</p>
-<p>A finished file looks like this:</p>
+</div>
+<p>A finished file looks like this. This is the answer key from the <a href="https://github.com/UC-OSPO-Network/software-demo/tree/03-add-citation" class="external-link"><code>03-add-citation</code>
+reference branch</a>, so it’s what you’ll be comparing against at the
+end of the episode:</p>
 <div class="codewrapper sourceCode" id="cb2">
 <h3 class="code-label">YAML<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -556,8 +630,7 @@ license you want recorded precisely. More on the format: <a href="https://citati
 <span id="cb2-15"><a href="#cb2-15" tabindex="-1" aria-label="code-block-2-15"></a><span class="at">    </span><span class="fu">given-names</span><span class="kw">:</span><span class="at"> </span><span class="st">"Karla"</span></span>
 <span id="cb2-16"><a href="#cb2-16" tabindex="-1" aria-label="code-block-2-16"></a><span class="fu">version</span><span class="kw">:</span><span class="at"> </span><span class="st">"0.1.0"</span></span>
 <span id="cb2-17"><a href="#cb2-17" tabindex="-1" aria-label="code-block-2-17"></a><span class="fu">date-released</span><span class="kw">:</span><span class="at"> 2026-02-01</span></span>
-<span id="cb2-18"><a href="#cb2-18" tabindex="-1" aria-label="code-block-2-18"></a><span class="fu">url</span><span class="kw">:</span><span class="at"> </span><span class="st">"https://github.com/UC-OSPO-Network/software-demo"</span></span>
-<span id="cb2-19"><a href="#cb2-19" tabindex="-1" aria-label="code-block-2-19"></a><span class="fu">repository-code</span><span class="kw">:</span><span class="at"> </span><span class="st">"https://github.com/UC-OSPO-Network/software-demo"</span></span></code></pre>
+<span id="cb2-18"><a href="#cb2-18" tabindex="-1" aria-label="code-block-2-18"></a><span class="fu">url</span><span class="kw">:</span><span class="at"> </span><span class="st">"https://github.com/UC-OSPO-Network/software-demo"</span></span></code></pre>
 </div>
 <p>There is deliberately <strong>no <code>doi</code> field yet</strong>:
 you do not have one until you mint it in the next episode. Once you
@@ -567,8 +640,6 @@ you can omit <code>version</code> and <code>date-released</code> for now
 and add them at release time.</p>
 <p><strong>Once you commit it to the default branch, GitHub adds a “Cite
 this repository” button automatically.</strong></p>
-<p>If your software does not yet have version tags, you may omit the
-<code>version</code> field until Episode 4 when you create releases.</p>
 <div id="check-your-work" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
@@ -577,14 +648,54 @@ this repository” button automatically.</strong></p>
 <div id="check-your-work" class="callout-inner">
 <h3 class="callout-title">Check your work</h3>
 <div class="callout-content">
-<p>Compare your fork against the <a href="https://github.com/UC-OSPO-Network/software-demo/tree/03-add-citation" class="external-link"><code>03-add-citation</code>
-reference branch</a> on the <a href="https://github.com/UC-OSPO-Network/software-demo" class="external-link">demo
-repository</a>. It shows the target state after this episode: a
-<code>CITATION.cff</code> in the root and a “Cite this repository”
-button in the sidebar.</p>
+<p>The answer key lives on the demo repository, and your fork doesn’t
+have it. The setup instructions told you to keep <strong>“Copy the main
+branch only”</strong> checked, so you only copied <code>main</code>.</p>
+<p>To reach it:</p>
+<ol style="list-style-type: decimal"><li>Go to the <a href="https://github.com/UC-OSPO-Network/software-demo" class="external-link">demo
+repository</a>.</li>
+<li>Open the branch dropdown (it reads <strong>main</strong>) and choose
+<strong><code>03-add-citation</code></strong>.</li>
+<li>Open <code>CITATION.cff</code>.</li>
+</ol><p>Or go straight to the file: <a href="https://github.com/UC-OSPO-Network/software-demo/blob/03-add-citation/CITATION.cff" class="external-link uri">https://github.com/UC-OSPO-Network/software-demo/blob/03-add-citation/CITATION.cff</a></p>
+<p><strong>Your file won’t match it exactly, and it shouldn’t!</strong>
+Expect four differences:</p>
+<ul><li>
+<strong>Different authors.</strong> The key lists the lesson
+authors; yours lists you.</li>
+<li>
+<strong>Different <code>message</code> wording.</strong> cffinit’s
+default sentence isn’t the same as the key’s. Either one’s fine.</li>
+<li>
+<strong>Yours has <code>type: software</code>; the key
+doesn’t.</strong> cffinit adds it for you. It’s correct, and the key
+just leaves it out.</li>
+<li>
+<strong>The key has <code>version</code> and
+<code>date-released</code>; yours doesn’t.</strong> That’s your bridge
+to the next episode, where those fields arrive with your first
+release.</li>
+</ul></div>
+</div>
+</div>
+<div id="ignore-the-1-commit-ahead-banner" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<span class="callout-header">Callout</span>
+<div id="ignore-the-1-commit-ahead-banner" class="callout-inner">
+<h3 class="callout-title">Ignore the “1 commit ahead” banner</h3>
+<div class="callout-content">
+<p>After you commit, your fork shows a banner reading <strong>“This
+branch is 1 commit ahead of
+UC-OSPO-Network/software-demo:main.”</strong> It looks like the
+comparison link you want, but it compares your fork against the demo’s
+<code>main</code> and just shows your own commit back to you. It isn’t
+the answer key. Use the navigation above instead.</p>
 </div>
 </div>
 </div>
+
 </div>
 </section><section><h2 class="section-heading" id="linking-to-a-published-paper">Linking to a published paper<a class="anchor" aria-label="anchor" href="#linking-to-a-published-paper"></a></h2>
 <hr class="half-width"><p>Many researchers want users to cite a journal article
@@ -664,7 +775,7 @@ repository’s GitHub page?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p>GitHub parses the file and adds a <strong>“Cite this
 repository”</strong> button to the sidebar, offering ready-made
@@ -675,7 +786,7 @@ is required for this to appear.</p>
 </div>
 </div>
 <div class="section level3">
-<h3 id="step-3-commit-and-refresh">Step 3: Commit and refresh<a class="anchor" aria-label="anchor" href="#step-3-commit-and-refresh"></a></h3>
+<h3 id="what-github-does-when-you-commit">What GitHub does when you commit<a class="anchor" aria-label="anchor" href="#what-github-does-when-you-commit"></a></h3>
 <p>After you commit the file, GitHub:</p>
 <ul><li>parses and validates it</li>
 <li>displays a “Cite this repository” panel</li>
@@ -726,7 +837,7 @@ things you would check.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <p>Check, in order:</p>
 <ol style="list-style-type: decimal"><li>
@@ -791,7 +902,7 @@ lesson).</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution3" aria-expanded="false" aria-controls="collapseSolution3">
   <h4 class="accordion-header" id="headingSolution3"> Show me the solution </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
 <div class="accordion-body">
 <p>Typical missing pieces include:</p>
 <ul><li>ORCID IDs</li>
@@ -824,7 +935,7 @@ cffinit form (Option B).</li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution4" aria-expanded="false" aria-controls="collapseSolution4">
   <h4 class="accordion-header" id="headingSolution4"> Show me the solution </h4>
 </button>
-<div id="collapseSolution4" class="accordion-collapse collapse" data-bs-parent="#accordionSolution4" aria-labelledby="headingSolution4">
+<div id="collapseSolution4" class="accordion-collapse collapse" aria-labelledby="headingSolution4" data-bs-parent="#accordionSolution4">
 <div class="accordion-body">
 <p>A valid minimal example:</p>
 <div class="codewrapper sourceCode" id="cb4">
@@ -871,7 +982,7 @@ software that produced a specific paper’s results?</li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution5" aria-expanded="false" aria-controls="collapseSolution5">
   <h4 class="accordion-header" id="headingSolution5"> Show me the solution </h4>
 </button>
-<div id="collapseSolution5" class="accordion-collapse collapse" data-bs-parent="#accordionSolution5" aria-labelledby="headingSolution5">
+<div id="collapseSolution5" class="accordion-collapse collapse" aria-labelledby="headingSolution5" data-bs-parent="#accordionSolution5">
 <div class="accordion-body">
 <p>A <code>CITATION.cff</code> makes software citable <em>in
 principle</em>, but the citation is not yet <strong>durable</strong> or
@@ -998,8 +1109,8 @@ in the GitHub branch dropdown (02-add-license, 03-add-citation, ...). -->
   "url": "https://UC-OSPO-Network.github.io/research-software-citable-discoverable/adding-citation-file.html",
   "identifier": "https://UC-OSPO-Network.github.io/research-software-citable-discoverable/adding-citation-file.html",
   "dateCreated": "2025-12-06",
-  "dateModified": "2026-11-04",
-  "datePublished": "2026-11-17"
+  "dateModified": "2026-11-18",
+  "datePublished": "2026-11-18"
 }
 
   </script><script>
