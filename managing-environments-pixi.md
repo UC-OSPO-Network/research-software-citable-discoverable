@@ -220,7 +220,7 @@ Here's what the file looks like (this will be automatically created for you):
 
 ```toml
 [workspace]
-authors = ["Leigh Phan <leighphan@ucla.edu>"]
+authors = ["FirstName LastName <example@email.com>"]
 channels = ["conda-forge"]
 name = "myproject"
 platforms = ["osx-arm64"]
